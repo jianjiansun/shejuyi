@@ -10,7 +10,7 @@
 <div class = "headLogin">
     <div class = "container">
         <div class = "left changeBan">
-            <a href = "javascript:;" id = "cityChoose" class = "region">北京</a>
+            <a href = "javascript:;" id = "cityChoose" class = "region">{$city}</a>
             <a href="">社会组织版</a>
             <a class = "on" href="">社区版</a>
         </div>
@@ -32,7 +32,7 @@
             </div>
             <ul class = "mainNav col-md-5">
                 <li>
-                    <a class = "" href="__CONTROLLER__/send_project">发布项目</a>
+                    <a class = "" href="deliver.html">发布项目</a>
                 </li>
                 <li>
                     <a class = "" href="">我的机构</a>
@@ -200,4 +200,44 @@
 
 </body>
 <script src = "__PUBLIC__/Home/js/cityBoxShow.js"></script>
+
+<script>
+
+    $.post("__CONTROLLER__/getprojectlist/page/1", function (data) {
+        var html = "";
+
+        console.log(data.data[0]);
+         for(var i = 0; i < data.data.length ; i ++) {
+                html += '<li class="col-md-6 column">' +
+                     '<p class = "where">' +
+                     '<span class = "region region1">'+ data.data[i].sjy_community_project_title +'</span>' +
+                     '</p>' +
+                     '<div class="col-md-6 column" style = "padding: 0;">' +
+                     '<img  src="'+ data.data[i].project_image_path +'" alt="" >' +
+                     '</div>' +
+                     '<div class="col-md-6 column house-list-info">' +
+                     '<p class = "where">' +
+                     '<span  class = "sp2 sp">项目发布方</span>' +
+                     '<span class = "region">'+  data.data[i].community_info.sjy_community_name +'</span>' +
+                     '</p>' +
+                     '<p class = "where">' +
+                     '<span  class = "sp3 sp">服务对象</span>' +
+                     '<span class = "region">'+  data.data[i].sjy_community_project_service_area +'</span>' +
+                     '</p>' +
+                     '<div class = "type">' +
+                     '<span class = "iconfont">&#xe61f;</span>' +
+                     '<span>'+  data.data[i].address.sjy_community_province_name +'</span>-<span>'+  data.data[i].address.sjy_community_area_name +'</span>-<span>'+  data.data[i].address.sjy_community_street_name +'</span>' +
+                     '</div>' +
+                     '</div>' +
+                     '</li>';
+         }
+        $("#projectList").html(html);
+
+     });
+
+
+
+</script>
+
+
 </html>

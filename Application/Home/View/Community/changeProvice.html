@@ -5,9 +5,9 @@
         <h2 class = "left">选择城市</h2>
         <div class = "right cityItem">
             <span class = "hotCity"> 热门城市 : </span>
-            <a href="javascript:;">北京</a>
+            <a href="javascript:;" data-id = "110000">北京</a>
             <a href="javascript:;">上海</a>
-            <a href="javascript:;">天津</a>
+            <a href="javascript:;" data-id = "120000">天津</a>
             <a href="javascript:;">杭州</a>
         </div>
     </div>
@@ -19,7 +19,7 @@
                 <li>
                     <span class = "letterItem">B</span>
                     <div class = "cityItem">
-                        <a href="javascript:;">北京</a>
+                        <a href="javascript:;" data-id = "110000">北京</a>
                     </div>
                 </li>
                 <li>
@@ -97,7 +97,7 @@
                 <li>
                     <span class = "letterItem">T</span>
                     <div class = "cityItem">
-                        <a href="javascript:;">天津</a>
+                        <a href="javascript:;" data-id = "120000">天津</a>
                     </div>
                 </li>
                 <li>
@@ -140,19 +140,49 @@
 
     });
 
-
     $(".province-switch .cityShow a").click(function(){
-        console.log("ok");
+        //console.log("ok");
         var txt = $(this).html();
 
+       var cityid = $(this).attr("data-id");
+        //console.log(cityid);
 
         sessionStorage.setItem("city", txt);
 
         $("#cityChoose").html(txt);
 
-
         $(".shadeBox").css("display", "none");
         $("#showCityBox").css("display", "none");
+
+
+        $.ajax({
+            url: "__CONTROLLER__/setcity",
+            type: "POST",
+            data: {
+                cityid : cityid
+            },
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+                if(data.state == 1)
+                {
+                    window.location.reload(true)
+                }
+            },
+            async:false
+        });
+        return false;
+
+
+
     });
+
+
+
+
+
+
+
+
 
 </script>
