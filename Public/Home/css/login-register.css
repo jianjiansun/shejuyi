@@ -1,0 +1,279 @@
+#header_container {
+    min-width: 960px;
+    background: url(../imgs/banner.png) no-repeat;
+    background-size: cover;
+}
+#logo {
+    height: 85px;
+    width: 960px;
+    margin: 0 auto;
+}
+#logo #home {
+    width: 360px;
+    height: 85px;
+    overflow: hidden;
+    float: left;
+    font-size: 0;
+    line-height: 0;
+    margin-top: 30px;
+}
+.sign {
+    line-height: 1.5;
+}
+.loginWrap {
+    height: 414px;
+}
+.loginWrap {
+    margin-top: 50px;
+}
+.loginWrap {
+    margin: 100px auto;
+    line-height: 1.5;
+    width: 965px;
+    margin-bottom: 0;
+}
+
+.loginBoardWrap {
+    width: 960px;
+    position: relative;
+}
+.loginImage {
+    width: 960px;
+    height: 360px;
+    position: absolute;
+}
+
+.loginWrap .loginBord {
+    width: 300px;
+}
+.loginWrap .loginBord {
+    top: -10px;
+}
+.loginWrap .loginBord {
+    border: 0;
+}
+.loginWrap .loginBord {
+    -webkit-box-shadow: 0 0 4px rgba(0,0,0,.075);
+    box-shadow: 0 0 4px rgba(0,0,0,.075);
+    background: rgba(255,255,255,.85);
+    border: 1px solid #ededed;
+    position: absolute;
+    min-height: 400px;
+    padding: 0 23px;
+    width: 350px;
+    color: #333;
+    top: -80px;
+    right: 0;
+}
+.loginBord .loginTit {
+    margin-bottom: 15px;
+    line-height: 60px;
+    *zoom: 1;
+}
+.loginTit .tosignup {
+    color: #969696;
+    float: right;
+}
+.loginTit h1 {
+    font-weight: 400;
+    font-size: 20px;
+    color: #e31256;
+}
+.sign h1 {
+    font-family: "Microsoft YaHei","微软雅黑","黑体";
+}
+.loginTit h1 {
+    font-weight: 400;
+    font-size: 20px;
+    color: #e31256;
+    line-height: 60px;
+}
+.sign input {
+    vertical-align: middle;
+}
+.textbox_ui input {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid #CFCFCF;
+    background-color: #fff;
+    vertical-align: middle;
+    padding: 10px 8px;
+    line-height: 1.5;
+    font-size: 14px;
+    outline: 0;
+    height: auto;
+    width: 284px;
+}
+.loginWrap .textbox_ui {
+    margin-bottom: 26px;
+}
+.sign .textbox_ui {
+    position: relative;
+    *zoom: 1;
+}
+.sign .textbox_ui span{
+    margin-left: 12px;
+    position: absolute;
+    line-height: 43px;
+}
+.textbox_ui {
+    height: 44px;
+}
+
+#username, #login_password, #dynamic_mobile {
+    padding-left: 38px;
+    width: 252px;
+}
+.user input {
+    background-position: 5px 0;
+}
+.user input, .pass input {
+    padding-left: 38px;
+    width: 262px;
+}
+.textbox_ui input {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid #CFCFCF;
+    background-color: #fff;
+    vertical-align: middle;
+    padding: 10px 8px;
+    line-height: 1.5;
+    font-size: 14px;
+    outline: 0;
+    height: auto;
+    width: 284px;
+}
+.sign .dynamic_pass_wrap {
+    margin-top: 10px;
+}
+.sign .act, .sign .line {
+    font-size: 12px;
+    margin: 30px 0;
+    clear: both;
+    color: #333;
+}
+.dynamic_pass_wrap {
+    height: 44px;
+    margin-top: 10px;
+    margin-bottom: 28px;
+}
+.loginWrap .dynamic_pass_wrap .textbox_ui {
+    display: inline-block;
+    margin-bottom: 0;
+    *display: inline;
+    *zoom: 1;
+}
+.dynamic_pass input {
+    width: 126px;
+    display: inline-block;
+    text-indent: 32px;
+}
+.phonecode {
+    width: 130px;
+}
+.phonecode {
+    background: #fcfcfc;
+    background: -webkit-gradient(linear,left top,left bottom,from(#fcfcfc),to(#f2f2f2));
+    background: -webkit-linear-gradient(top,#fcfcfc,#f2f2f2);
+    background: -moz-linear-gradient(top,#fcfcfc,#f2f2f2);
+    background: -o-linear-gradient(top,#fcfcfc,#f2f2f2);
+    background: linear-gradient(to bottom,#fcfcfc,#f2f2f2);
+    border: 1px solid #d9d9d9;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0 8px;
+    display: inline-block;
+    line-height: 41px;
+    height: 41px;
+    font-weight: 700;
+    color: #666;
+    margin-left: 10px;
+    text-align: center;
+    width: 140px;
+    position: absolute;
+}
+
+.sign input {
+    vertical-align: middle;
+}
+.submit_btn.loginbtn[type="submit"] {
+    border: 1px solid #F9477A;
+    display: inline-block;
+    font-family: inherit;
+    word-break: keep-all;
+    background: #F8296D;
+    white-space: nowrap;
+    font-weight: 400;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0 30px;
+    height: 40px;
+    color: #fff;
+    border: 0;
+}
+.textbox_ui .focus_text {
+    word-break: keep-all;
+    white-space: nowrap;
+    margin-top: 4px;
+    color: #999;
+    top: 100%;
+    left: 0;
+}
+.focus_text {
+    position: absolute;
+    line-height: 1.5;
+    /*display: none;*/
+}
+.textbox_ui .safe {
+    position: relative;
+    line-height: 20px;
+    /*display: none;*/
+}
+.pw_level {
+    float: left;
+    border-right: 1px solid #fff;
+    width: 100px;
+    height: 20px;
+    text-align: center;
+    color: #fff;
+    background: #D0CECC;
+}
+.sign .line {
+    height: 44px;
+}
+.verityWrap input {
+    width: 138px;
+}
+.loginWrap .verityWrap .textbox_ui {
+    display: inline-block;
+    margin-bottom: 0;
+    *display: inline;
+    *zoom: 1;
+}
+.submit_btn{
+    border: 1px solid #F9477A;
+    display: inline-block;
+    font-family: inherit;
+    word-break: keep-all;
+    background: #F8296D;
+    white-space: nowrap;
+    font-weight: 400;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0 30px;
+    height: 40px;
+    color: #fff;
+    border: 0;
+}
+.submit_btn:hover{
+    border-color: #c81f52;
+    background: #e5406f;
+
+}

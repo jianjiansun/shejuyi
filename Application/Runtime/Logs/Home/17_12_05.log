@@ -1,0 +1,2770 @@
+[ 2017-12-05T10:01:42+08:00 ] 61.50.127.238 /shejuyi/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.043631s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000663s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000797s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000218s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.157478s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.157518s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000132s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000151s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000443s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000470s ]
+
+[ 2017-12-05T10:02:05+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/login/type/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.043648s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000446s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.063914s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.063999s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.069294s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.069379s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000138s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000159s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000350s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000370s ]
+
+[ 2017-12-05T10:02:06+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000484s ]
+
+[ 2017-12-05T10:02:18+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000389s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000331s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_community_login_id` = '13820962107' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.1495s ]
+
+[ 2017-12-05T10:02:23+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.028379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.028421s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_community_login_id` = '13820962107' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T10:02:29+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.062866s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.062942s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_community_login_id` = '13820962107' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.0569s ]
+
+[ 2017-12-05T10:02:30+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000263s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000286s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_community_login_id` = '13820962107' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T10:02:31+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000200s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000369s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_community_login_id` = '13820962107' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T10:02:36+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/login/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000271s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.100622s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.190051s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.190076s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000152s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000206s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000384s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000413s ]
+
+[ 2017-12-05T10:02:46+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000329s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T10:07:50+08:00 ] 61.50.127.238 /shejuyi/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000208s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000184s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.198877s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.198902s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000129s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000399s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000424s ]
+
+[ 2017-12-05T10:07:59+08:00 ] 61.50.127.238 /shejuyi/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000210s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000291s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000119s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.214060s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.214118s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000149s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000178s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000399s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000426s ]
+
+[ 2017-12-05T10:08:02+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/login/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000219s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000400s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000430s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.145110s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.145145s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000463s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000497s ]
+
+[ 2017-12-05T10:08:05+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000263s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000287s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-12-05T10:08:06+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Origanization/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000210s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000251s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000276s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 44 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = 120000 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/OriganizationController.class.php 第 96 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000154s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000220s ]
+NOTIC: [8] Undefined variable: info /xiaoheiwu/shejuyi/Application/Runtime/Cache/Home/902041a5b34c13ce8e049e37450c1bab.php 第 214 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.156974s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.157017s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000224s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000433s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000459s ]
+
+[ 2017-12-05T10:08:07+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Origanization/getprojectlist?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000211s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000268s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000307s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = 120000 LIMIT 1   [ RunTime:0.0002s ]
+SQL: select sjy_community_project_info.*,sjy_community_base_info.sjy_community_name from sjy_community_position_info inner join sjy_community_project_info on sjy_community_position_info.sjy_community_id=sjy_community_project_info.sjy_community_id inner join sjy_community_base_info on sjy_community_position_info.sjy_community_id=sjy_community_base_info.sjy_id where sjy_community_position_info.sjy_community_city=120000 limit 0,4 [ RunTime:0.0004s ]
+SQL: select count(*) as num from sjy_community_position_info inner join sjy_community_project_info on sjy_community_position_info.sjy_community_id=sjy_community_project_info.sjy_community_id inner join sjy_community_base_info on sjy_community_position_info.sjy_community_id=sjy_community_base_info.sjy_id where sjy_community_position_info.sjy_community_city=120000 [ RunTime:0.0002s ]
+
+[ 2017-12-05T10:08:07+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Origanization/chooserole
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.213173s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.213239s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000174s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000194s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000363s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000385s ]
+
+[ 2017-12-05T10:08:19+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Origanization/setcity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000403s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000515s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.129090s ]
+
+[ 2017-12-05T10:08:20+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Origanization/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.036484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.036553s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 44 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/OriganizationController.class.php 第 96 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000161s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000214s ]
+NOTIC: [8] Undefined variable: info /xiaoheiwu/shejuyi/Application/Runtime/Cache/Home/902041a5b34c13ce8e049e37450c1bab.php 第 214 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.176490s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.176525s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000132s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000151s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000404s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000433s ]
+
+[ 2017-12-05T10:08:21+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Origanization/getprojectlist?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000221s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000395s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0002s ]
+SQL: select sjy_community_project_info.*,sjy_community_base_info.sjy_community_name from sjy_community_position_info inner join sjy_community_project_info on sjy_community_position_info.sjy_community_id=sjy_community_project_info.sjy_community_id inner join sjy_community_base_info on sjy_community_position_info.sjy_community_id=sjy_community_base_info.sjy_id where sjy_community_position_info.sjy_community_city=110000 limit 0,4 [ RunTime:0.0004s ]
+SQL: select count(*) as num from sjy_community_position_info inner join sjy_community_project_info on sjy_community_position_info.sjy_community_id=sjy_community_project_info.sjy_community_id inner join sjy_community_base_info on sjy_community_position_info.sjy_community_id=sjy_community_base_info.sjy_id where sjy_community_position_info.sjy_community_city=110000 [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sjy_community_project_image` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sjy_community_project_image` WHERE `sjy_community_project_id` = 31 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_community_position_info` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sjy_community_position_info` WHERE `sjy_community_id` = '12' LIMIT 1   [ RunTime:0.0626s ]
+
+[ 2017-12-05T10:08:21+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Origanization/chooserole
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000205s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004329s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.147962s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.147998s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000130s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000364s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000385s ]
+
+[ 2017-12-05T10:08:32+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/login/type/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000427s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000340s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000365s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.184845s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.184904s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000181s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000201s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000392s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000421s ]
+
+[ 2017-12-05T10:08:33+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000324s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000446s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000484s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_community_login_id` = '' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_community_login_id` = '' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T10:08:34+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Community/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.028485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.028540s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0009s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 27 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: sjy_community_user_role_name /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 54 行.
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 27 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 74 行.
+NOTIC: [8] Undefined index: sjy_community_user_role_name /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 130 行.
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 27 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_type` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sjy_origanization_type`  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0007s ]
+SQL: SELECT `sjy_origanization_id`,sjy_origanization_area_name as area FROM `sjy_origanization_position_info` WHERE `sjy_origanization_city` = '110000'  [ RunTime:0.0439s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 13 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `sjy_origanization_type_name` FROM `sjy_origanization_type` WHERE `sjy_id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_image` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sjy_origanization_image` WHERE `sjy_origanization_code` = '13' LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `sjy_origanization_type_name` FROM `sjy_origanization_type` WHERE `sjy_id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_image` WHERE `sjy_origanization_code` = '14' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 174 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+NOTIC: [8] Undefined variable: info /xiaoheiwu/shejuyi/Application/Runtime/Cache/Home/a694fdae0bac13e1b11b112467ce4577.php 第 230 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.148442s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.148464s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000120s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000139s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000379s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000404s ]
+
+[ 2017-12-05T10:08:35+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Community/getprojectlist?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000201s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000273s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0439s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 27 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: sjy_community_user_role_name /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 54 行.
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 27 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 74 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0004s ]
+SQL: SELECT `sjy_origanization_id` FROM `sjy_origanization_position_info` WHERE `sjy_origanization_city` = '110000'  [ RunTime:0.1046s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_project_info` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `sjy_origanization_project_info` WHERE `sjy_origanization_id` IN ('13','14') ORDER BY `sjy_origanization_project_send_time` desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '14' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_project_image` [ RunTime:0.0004s ]
+SQL: SELECT `sjy_origanization_project_image` FROM `sjy_origanization_project_image` WHERE `sjy_origanization_project_id` = 50 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '14' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `sjy_origanization_project_image` FROM `sjy_origanization_project_image` WHERE `sjy_origanization_project_id` = 49 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '14' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `sjy_origanization_project_image` FROM `sjy_origanization_project_image` WHERE `sjy_origanization_project_id` = 47 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '14' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `sjy_origanization_project_image` FROM `sjy_origanization_project_image` WHERE `sjy_origanization_project_id` = 46 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-12-05T10:08:35+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Community/chooserole
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0009s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 27 LIMIT 1   [ RunTime:0.0631s ]
+NOTIC: [8] Undefined index: sjy_community_user_role_name /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 54 行.
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 27 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 74 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.105449s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.105478s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000158s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000214s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000430s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000458s ]
+
+[ 2017-12-05T10:09:09+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Community/getprojectlist?page=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000205s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000399s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0009s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 27 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: sjy_community_user_role_name /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 54 行.
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 27 LIMIT 1   [ RunTime:0.1046s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 74 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0005s ]
+SQL: SELECT `sjy_origanization_id` FROM `sjy_origanization_position_info` WHERE `sjy_origanization_city` = '110000'  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_project_info` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sjy_origanization_project_info` WHERE `sjy_origanization_id` IN ('13','14') ORDER BY `sjy_origanization_project_send_time` desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '14' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_project_image` [ RunTime:0.0004s ]
+SQL: SELECT `sjy_origanization_project_image` FROM `sjy_origanization_project_image` WHERE `sjy_origanization_project_id` = 45 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '14' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `sjy_origanization_project_image` FROM `sjy_origanization_project_image` WHERE `sjy_origanization_project_id` = 44 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '14' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `sjy_origanization_project_image` FROM `sjy_origanization_project_image` WHERE `sjy_origanization_project_id` = 43 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '14' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `sjy_origanization_project_image` FROM `sjy_origanization_project_image` WHERE `sjy_origanization_project_id` = 42 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-12-05T10:09:18+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Community/getprojectlist?page=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000359s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0010s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 27 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: sjy_community_user_role_name /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 54 行.
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 27 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.1318s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 74 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0007s ]
+SQL: SELECT `sjy_origanization_id` FROM `sjy_origanization_position_info` WHERE `sjy_origanization_city` = '110000'  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_project_info` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sjy_origanization_project_info` WHERE `sjy_origanization_id` IN ('13','14') ORDER BY `sjy_origanization_project_send_time` desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '14' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_project_image` [ RunTime:0.0004s ]
+SQL: SELECT `sjy_origanization_project_image` FROM `sjy_origanization_project_image` WHERE `sjy_origanization_project_id` = 41 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 13 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '13' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `sjy_origanization_project_image` FROM `sjy_origanization_project_image` WHERE `sjy_origanization_project_id` = 40 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 13 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '13' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `sjy_origanization_project_image` FROM `sjy_origanization_project_image` WHERE `sjy_origanization_project_id` = 39 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-12-05T10:13:58+08:00 ] 61.50.127.238 /shejuyi/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000256s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000280s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.135406s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.135431s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000094s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000112s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000354s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000380s ]
+
+[ 2017-12-05T10:30:22+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Community/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000265s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000288s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0010s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 27 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: sjy_community_user_role_name /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 54 行.
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 27 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 74 行.
+NOTIC: [8] Undefined index: sjy_community_user_role_name /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 130 行.
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 27 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_type` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sjy_origanization_type`  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0005s ]
+SQL: SELECT `sjy_origanization_id`,sjy_origanization_area_name as area FROM `sjy_origanization_position_info` WHERE `sjy_origanization_city` = '110000'  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 13 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `sjy_origanization_type_name` FROM `sjy_origanization_type` WHERE `sjy_id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_image` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sjy_origanization_image` WHERE `sjy_origanization_code` = '13' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `sjy_origanization_type_name` FROM `sjy_origanization_type` WHERE `sjy_id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sjy_origanization_image` WHERE `sjy_origanization_code` = '14' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 174 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000160s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000215s ]
+NOTIC: [8] Undefined variable: info /xiaoheiwu/shejuyi/Application/Runtime/Cache/Home/a694fdae0bac13e1b11b112467ce4577.php 第 230 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.183883s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.183920s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000150s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000208s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000391s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000416s ]
+
+[ 2017-12-05T10:30:23+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Community/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000400s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0010s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 27 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: sjy_community_user_role_name /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 54 行.
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 27 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 74 行.
+NOTIC: [8] Undefined index: sjy_community_user_role_name /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 130 行.
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 27 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_type` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sjy_origanization_type`  [ RunTime:0.0433s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0007s ]
+SQL: SELECT `sjy_origanization_id`,sjy_origanization_area_name as area FROM `sjy_origanization_position_info` WHERE `sjy_origanization_city` = '110000'  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 13 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `sjy_origanization_type_name` FROM `sjy_origanization_type` WHERE `sjy_id` = 2 LIMIT 1   [ RunTime:0.0284s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_image` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `sjy_origanization_image` WHERE `sjy_origanization_code` = '13' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `sjy_origanization_type_name` FROM `sjy_origanization_type` WHERE `sjy_id` = 2 LIMIT 1   [ RunTime:0.1384s ]
+SQL: SELECT * FROM `sjy_origanization_image` WHERE `sjy_origanization_code` = '14' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 174 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000174s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000214s ]
+NOTIC: [8] Undefined variable: info /xiaoheiwu/shejuyi/Application/Runtime/Cache/Home/a694fdae0bac13e1b11b112467ce4577.php 第 230 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006480s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006501s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000095s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000119s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000428s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000453s ]
+
+[ 2017-12-05T10:30:24+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Community/getprojectlist?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000271s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000294s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0010s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 27 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: sjy_community_user_role_name /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 54 行.
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 27 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0503s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 74 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0006s ]
+SQL: SELECT `sjy_origanization_id` FROM `sjy_origanization_position_info` WHERE `sjy_origanization_city` = '110000'  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_project_info` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `sjy_origanization_project_info` WHERE `sjy_origanization_id` IN ('13','14') ORDER BY `sjy_origanization_project_send_time` desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0358s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '14' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_project_image` [ RunTime:0.0026s ]
+SQL: SELECT `sjy_origanization_project_image` FROM `sjy_origanization_project_image` WHERE `sjy_origanization_project_id` = 50 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '14' LIMIT 1   [ RunTime:0.1108s ]
+SQL: SELECT `sjy_origanization_project_image` FROM `sjy_origanization_project_image` WHERE `sjy_origanization_project_id` = 49 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '14' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `sjy_origanization_project_image` FROM `sjy_origanization_project_image` WHERE `sjy_origanization_project_id` = 47 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '14' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `sjy_origanization_project_image` FROM `sjy_origanization_project_image` WHERE `sjy_origanization_project_id` = 46 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-12-05T10:30:24+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Community/chooserole
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000311s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0009s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 27 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Undefined index: sjy_community_user_role_name /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 54 行.
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 27 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 74 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056886s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056911s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000131s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002395s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002426s ]
+
+[ 2017-12-05T10:32:33+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/login/type/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000314s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000449s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048492s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048517s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000122s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.043626s ]
+INFO: [ app_end ] --END-- [ RunTime:0.043686s ]
+
+[ 2017-12-05T10:32:34+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Community/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000210s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.036658s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.036715s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0010s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 27 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: sjy_community_user_role_name /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 54 行.
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 27 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 74 行.
+NOTIC: [8] Undefined index: sjy_community_user_role_name /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 130 行.
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 27 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_type` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sjy_origanization_type`  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0004s ]
+SQL: SELECT `sjy_origanization_id`,sjy_origanization_area_name as area FROM `sjy_origanization_position_info` WHERE `sjy_origanization_city` = '110000'  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 13 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `sjy_origanization_type_name` FROM `sjy_origanization_type` WHERE `sjy_id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_image` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sjy_origanization_image` WHERE `sjy_origanization_code` = '13' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `sjy_origanization_type_name` FROM `sjy_origanization_type` WHERE `sjy_id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sjy_origanization_image` WHERE `sjy_origanization_code` = '14' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 174 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000176s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000238s ]
+NOTIC: [8] Undefined variable: info /xiaoheiwu/shejuyi/Application/Runtime/Cache/Home/a694fdae0bac13e1b11b112467ce4577.php 第 230 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.145326s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.145364s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000139s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000159s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000428s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000456s ]
+
+[ 2017-12-05T10:32:35+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Community/getprojectlist?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000204s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.040415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.040467s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0009s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 27 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: sjy_community_user_role_name /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 54 行.
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 27 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 74 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0004s ]
+SQL: SELECT `sjy_origanization_id` FROM `sjy_origanization_position_info` WHERE `sjy_origanization_city` = '110000'  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_project_info` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sjy_origanization_project_info` WHERE `sjy_origanization_id` IN ('13','14') ORDER BY `sjy_origanization_project_send_time` desc  [ RunTime:0.0369s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '14' LIMIT 1   [ RunTime:0.0505s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_project_image` [ RunTime:0.0009s ]
+SQL: SELECT `sjy_origanization_project_image` FROM `sjy_origanization_project_image` WHERE `sjy_origanization_project_id` = 50 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '14' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `sjy_origanization_project_image` FROM `sjy_origanization_project_image` WHERE `sjy_origanization_project_id` = 49 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '14' LIMIT 1   [ RunTime:0.1403s ]
+SQL: SELECT `sjy_origanization_project_image` FROM `sjy_origanization_project_image` WHERE `sjy_origanization_project_id` = 47 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '14' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `sjy_origanization_project_image` FROM `sjy_origanization_project_image` WHERE `sjy_origanization_project_id` = 46 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-12-05T10:32:35+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Community/chooserole
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002326s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0009s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 27 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: sjy_community_user_role_name /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 54 行.
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 27 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 74 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000062s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003341s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003367s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000091s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000109s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000306s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000327s ]
+
+[ 2017-12-05T10:32:44+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/login/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000270s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000100s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.141554s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.141578s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000100s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000354s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000378s ]
+
+[ 2017-12-05T10:32:46+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000216s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000246s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000271s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '' LIMIT 1   [ RunTime:0.0433s ]
+
+[ 2017-12-05T10:32:46+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Origanization/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000262s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000291s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 44 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/OriganizationController.class.php 第 96 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000166s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000225s ]
+NOTIC: [8] Undefined variable: info /xiaoheiwu/shejuyi/Application/Runtime/Cache/Home/902041a5b34c13ce8e049e37450c1bab.php 第 214 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042473s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042496s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.043286s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.043347s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000600s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000704s ]
+
+[ 2017-12-05T10:32:47+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Origanization/getprojectlist?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000494s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000545s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0002s ]
+SQL: select sjy_community_project_info.*,sjy_community_base_info.sjy_community_name from sjy_community_position_info inner join sjy_community_project_info on sjy_community_position_info.sjy_community_id=sjy_community_project_info.sjy_community_id inner join sjy_community_base_info on sjy_community_position_info.sjy_community_id=sjy_community_base_info.sjy_id where sjy_community_position_info.sjy_community_city=110000 limit 0,4 [ RunTime:0.0004s ]
+SQL: select count(*) as num from sjy_community_position_info inner join sjy_community_project_info on sjy_community_position_info.sjy_community_id=sjy_community_project_info.sjy_community_id inner join sjy_community_base_info on sjy_community_position_info.sjy_community_id=sjy_community_base_info.sjy_id where sjy_community_position_info.sjy_community_city=110000 [ RunTime:0.0371s ]
+SQL: SHOW COLUMNS FROM `sjy_community_project_image` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `sjy_community_project_image` WHERE `sjy_community_project_id` = 31 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_community_position_info` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sjy_community_position_info` WHERE `sjy_community_id` = '12' LIMIT 1   [ RunTime:0.1400s ]
+
+[ 2017-12-05T10:32:47+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Origanization/chooserole
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000073s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003287s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003322s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000096s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000118s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000325s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000347s ]
+
+[ 2017-12-05T10:33:13+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Origanization/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000249s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000273s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 44 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.1008s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/OriganizationController.class.php 第 96 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000167s ]
+NOTIC: [8] Undefined variable: info /xiaoheiwu/shejuyi/Application/Runtime/Cache/Home/902041a5b34c13ce8e049e37450c1bab.php 第 214 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006234s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006257s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000104s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000123s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.137556s ]
+INFO: [ app_end ] --END-- [ RunTime:0.137615s ]
+
+[ 2017-12-05T10:33:13+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Origanization/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000390s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.104094s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.104149s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 44 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/OriganizationController.class.php 第 96 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000154s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000203s ]
+NOTIC: [8] Undefined variable: info /xiaoheiwu/shejuyi/Application/Runtime/Cache/Home/902041a5b34c13ce8e049e37450c1bab.php 第 214 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.242428s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.242451s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000119s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000137s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000416s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000442s ]
+
+[ 2017-12-05T10:33:14+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Origanization/chooserole
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000205s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000273s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.100567s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.100670s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.125309s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.125343s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000158s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000179s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000343s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000364s ]
+
+[ 2017-12-05T10:33:14+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Origanization/getprojectlist?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000195s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000272s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000301s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0002s ]
+SQL: select sjy_community_project_info.*,sjy_community_base_info.sjy_community_name from sjy_community_position_info inner join sjy_community_project_info on sjy_community_position_info.sjy_community_id=sjy_community_project_info.sjy_community_id inner join sjy_community_base_info on sjy_community_position_info.sjy_community_id=sjy_community_base_info.sjy_id where sjy_community_position_info.sjy_community_city=110000 limit 0,4 [ RunTime:0.0005s ]
+SQL: select count(*) as num from sjy_community_position_info inner join sjy_community_project_info on sjy_community_position_info.sjy_community_id=sjy_community_project_info.sjy_community_id inner join sjy_community_base_info on sjy_community_position_info.sjy_community_id=sjy_community_base_info.sjy_id where sjy_community_position_info.sjy_community_city=110000 [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sjy_community_project_image` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sjy_community_project_image` WHERE `sjy_community_project_id` = 31 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_community_position_info` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sjy_community_position_info` WHERE `sjy_community_id` = '12' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-12-05T10:37:26+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Origanization/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000209s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000262s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000288s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 44 LIMIT 1   [ RunTime:0.0438s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/OriganizationController.class.php 第 96 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000188s ]
+NOTIC: [8] Undefined variable: info /xiaoheiwu/shejuyi/Application/Runtime/Cache/Home/902041a5b34c13ce8e049e37450c1bab.php 第 214 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.137252s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.137275s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000364s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000389s ]
+
+[ 2017-12-05T10:37:27+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Origanization/chooserole
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000344s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.190805s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.190845s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000128s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000407s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000428s ]
+
+[ 2017-12-05T10:37:27+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Origanization/getprojectlist?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.108508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.108558s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0002s ]
+SQL: select sjy_community_project_info.*,sjy_community_base_info.sjy_community_name from sjy_community_position_info inner join sjy_community_project_info on sjy_community_position_info.sjy_community_id=sjy_community_project_info.sjy_community_id inner join sjy_community_base_info on sjy_community_position_info.sjy_community_id=sjy_community_base_info.sjy_id where sjy_community_position_info.sjy_community_city=110000 limit 0,4 [ RunTime:0.0004s ]
+SQL: select count(*) as num from sjy_community_position_info inner join sjy_community_project_info on sjy_community_position_info.sjy_community_id=sjy_community_project_info.sjy_community_id inner join sjy_community_base_info on sjy_community_position_info.sjy_community_id=sjy_community_base_info.sjy_id where sjy_community_position_info.sjy_community_city=110000 [ RunTime:0.0565s ]
+SQL: SHOW COLUMNS FROM `sjy_community_project_image` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `sjy_community_project_image` WHERE `sjy_community_project_id` = 31 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_community_position_info` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sjy_community_position_info` WHERE `sjy_community_id` = '12' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-12-05T10:57:06+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000269s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000294s ]
+
+[ 2017-12-05T10:57:28+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin&type=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000219s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000256s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000279s ]
+ERR: 非法操作:dologin&type=2
+
+[ 2017-12-05T10:58:14+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin&type:2&13820962107&550504
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000282s ]
+ERR: 非法操作:dologin&type:2&13820962107&550504
+
+[ 2017-12-05T11:13:52+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Origanization/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000273s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000298s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 44 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0293s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/OriganizationController.class.php 第 96 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+NOTIC: [8] Undefined variable: info /xiaoheiwu/shejuyi/Application/Runtime/Cache/Home/902041a5b34c13ce8e049e37450c1bab.php 第 214 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.121417s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.121441s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000165s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000184s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000352s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000377s ]
+
+[ 2017-12-05T11:13:53+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Origanization/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000222s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002322s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 44 LIMIT 1   [ RunTime:0.0284s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.1271s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/OriganizationController.class.php 第 96 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000168s ]
+NOTIC: [8] Undefined variable: info /xiaoheiwu/shejuyi/Application/Runtime/Cache/Home/902041a5b34c13ce8e049e37450c1bab.php 第 214 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005874s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049120s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000277s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000422s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000448s ]
+
+[ 2017-12-05T11:13:54+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Origanization/getprojectlist?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000198s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000244s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000268s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0026s ]
+SQL: select sjy_community_project_info.*,sjy_community_base_info.sjy_community_name from sjy_community_position_info inner join sjy_community_project_info on sjy_community_position_info.sjy_community_id=sjy_community_project_info.sjy_community_id inner join sjy_community_base_info on sjy_community_position_info.sjy_community_id=sjy_community_base_info.sjy_id where sjy_community_position_info.sjy_community_city=110000 limit 0,4 [ RunTime:0.0005s ]
+SQL: select count(*) as num from sjy_community_position_info inner join sjy_community_project_info on sjy_community_position_info.sjy_community_id=sjy_community_project_info.sjy_community_id inner join sjy_community_base_info on sjy_community_position_info.sjy_community_id=sjy_community_base_info.sjy_id where sjy_community_position_info.sjy_community_city=110000 [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sjy_community_project_image` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sjy_community_project_image` WHERE `sjy_community_project_id` = 31 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_community_position_info` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sjy_community_position_info` WHERE `sjy_community_id` = '12' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-12-05T11:13:54+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Origanization/chooserole
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000271s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000294s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000069s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005305s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005336s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.063525s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.063570s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000423s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000447s ]
+
+[ 2017-12-05T11:13:54+08:00 ] 120.92.11.189 /shejuyi/index.php/Home/Origanization/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000265s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000288s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = null LIMIT 1   [ RunTime:0.0597s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = 120000 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/OriganizationController.class.php 第 96 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000150s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+NOTIC: [8] Undefined variable: info /xiaoheiwu/shejuyi/Application/Runtime/Cache/Home/902041a5b34c13ce8e049e37450c1bab.php 第 214 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.070741s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070781s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.100663s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.100724s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000517s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000545s ]
+
+[ 2017-12-05T11:15:01+08:00 ] 120.204.17.68 /shejuyi/index.php/Home/Origanization/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000206s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000273s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000297s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = null LIMIT 1   [ RunTime:0.0566s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = 120000 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/OriganizationController.class.php 第 96 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000151s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000210s ]
+NOTIC: [8] Undefined variable: info /xiaoheiwu/shejuyi/Application/Runtime/Cache/Home/902041a5b34c13ce8e049e37450c1bab.php 第 214 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.070415s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070437s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000124s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.108294s ]
+INFO: [ app_end ] --END-- [ RunTime:0.108354s ]
+
+[ 2017-12-05T11:22:44+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Origanization/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000259s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000285s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 44 LIMIT 1   [ RunTime:0.0508s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/OriganizationController.class.php 第 96 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000147s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000230s ]
+NOTIC: [8] Undefined variable: info /xiaoheiwu/shejuyi/Application/Runtime/Cache/Home/902041a5b34c13ce8e049e37450c1bab.php 第 214 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.138766s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.138790s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000123s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000400s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000427s ]
+
+[ 2017-12-05T11:22:45+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Origanization/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000200s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000245s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.028373s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 44 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/OriganizationController.class.php 第 96 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000154s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000214s ]
+NOTIC: [8] Undefined variable: info /xiaoheiwu/shejuyi/Application/Runtime/Cache/Home/902041a5b34c13ce8e049e37450c1bab.php 第 214 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.185615s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.185637s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000138s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000157s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000368s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000393s ]
+
+[ 2017-12-05T11:22:45+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Origanization/chooserole
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000260s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000284s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000100s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003264s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003303s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000090s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000109s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.036718s ]
+INFO: [ app_end ] --END-- [ RunTime:0.036777s ]
+
+[ 2017-12-05T11:22:46+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Origanization/getprojectlist?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000199s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000257s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000281s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0507s ]
+SQL: select sjy_community_project_info.*,sjy_community_base_info.sjy_community_name from sjy_community_position_info inner join sjy_community_project_info on sjy_community_position_info.sjy_community_id=sjy_community_project_info.sjy_community_id inner join sjy_community_base_info on sjy_community_position_info.sjy_community_id=sjy_community_base_info.sjy_id where sjy_community_position_info.sjy_community_city=110000 limit 0,4 [ RunTime:0.0005s ]
+SQL: select count(*) as num from sjy_community_position_info inner join sjy_community_project_info on sjy_community_position_info.sjy_community_id=sjy_community_project_info.sjy_community_id inner join sjy_community_base_info on sjy_community_position_info.sjy_community_id=sjy_community_base_info.sjy_id where sjy_community_position_info.sjy_community_city=110000 [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sjy_community_project_image` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_community_project_image` WHERE `sjy_community_project_id` = 31 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sjy_community_position_info` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sjy_community_position_info` WHERE `sjy_community_id` = '12' LIMIT 1   [ RunTime:0.0622s ]
+
+[ 2017-12-05T11:35:56+08:00 ] 121.69.35.250 /shejuyi/index.php/home/Logon/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000214s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000323s ]
+ERR: 无法加载控制器:Logon
+
+[ 2017-12-05T11:36:29+08:00 ] 121.69.35.250 /shejuyi/index.php/home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000565s ]
+
+[ 2017-12-05T11:37:04+08:00 ] 121.69.35.250 /shejuyi/index.php/home/Loginnew/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000207s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000314s ]
+ERR: 无法加载控制器:Loginnew
+
+[ 2017-12-05T11:37:15+08:00 ] 121.69.35.250 /shejuyi/index.php/home/Loginnew/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000389s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000338s ]
+ERR: 无法加载控制器:Loginnew
+
+[ 2017-12-05T11:37:51+08:00 ] 121.69.35.250 /shejuyi/index.php/home/Logins/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003352s ]
+ERR: 无法加载控制器:Logins
+
+[ 2017-12-05T11:39:28+08:00 ] 121.69.35.250 /shejuyi/index.php/home/logins/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000489s ]
+ERR: 无法加载控制器:Logins
+
+[ 2017-12-05T11:39:34+08:00 ] 121.69.35.250 /shejuyi/index.php/home/logins/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000249s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000273s ]
+ERR: 无法加载控制器:Logins
+
+[ 2017-12-05T11:39:37+08:00 ] 121.69.35.250 /shejuyi/index.php/home/login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000403s ]
+
+[ 2017-12-05T11:39:49+08:00 ] 121.69.35.250 /shejuyi/index.php/Home/logins/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000413s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000331s ]
+ERR: 无法加载控制器:Logins
+
+[ 2017-12-05T11:39:53+08:00 ] 121.69.35.250 /shejuyi/index.php/Home/login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000244s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000267s ]
+
+[ 2017-12-05T11:40:29+08:00 ] 121.69.35.250 /shejuyi/index.php/Home/login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000259s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000284s ]
+
+[ 2017-12-05T11:40:40+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Origanization/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000292s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 44 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0285s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/OriganizationController.class.php 第 96 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000167s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000264s ]
+NOTIC: [8] Undefined variable: info /xiaoheiwu/shejuyi/Application/Runtime/Cache/Home/902041a5b34c13ce8e049e37450c1bab.php 第 214 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.135211s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.135239s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000182s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000209s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000503s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000537s ]
+
+[ 2017-12-05T11:40:41+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Origanization/getprojectlist?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000283s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000278s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0002s ]
+SQL: select sjy_community_project_info.*,sjy_community_base_info.sjy_community_name from sjy_community_position_info inner join sjy_community_project_info on sjy_community_position_info.sjy_community_id=sjy_community_project_info.sjy_community_id inner join sjy_community_base_info on sjy_community_position_info.sjy_community_id=sjy_community_base_info.sjy_id where sjy_community_position_info.sjy_community_city=110000 limit 0,4 [ RunTime:0.0004s ]
+SQL: select count(*) as num from sjy_community_position_info inner join sjy_community_project_info on sjy_community_position_info.sjy_community_id=sjy_community_project_info.sjy_community_id inner join sjy_community_base_info on sjy_community_position_info.sjy_community_id=sjy_community_base_info.sjy_id where sjy_community_position_info.sjy_community_city=110000 [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sjy_community_project_image` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sjy_community_project_image` WHERE `sjy_community_project_id` = 31 LIMIT 1   [ RunTime:0.0282s ]
+SQL: SHOW COLUMNS FROM `sjy_community_position_info` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `sjy_community_position_info` WHERE `sjy_community_id` = '12' LIMIT 1   [ RunTime:0.0562s ]
+
+[ 2017-12-05T11:40:41+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Origanization/chooserole
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000210s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000299s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005818s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005860s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000103s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000130s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.085025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.085082s ]
+
+[ 2017-12-05T11:40:46+08:00 ] 121.69.35.250 /shejuyi/index.php/Home/login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000201s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.036606s ]
+
+[ 2017-12-05T11:42:17+08:00 ] 121.69.35.250 /shejuyi/index.php/Home/login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000289s ]
+
+[ 2017-12-05T11:45:01+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Community/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000503s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+NOTIC: [8] Undefined index: sjy_community_user_community_code /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 111 行.
+NOTIC: [8] Undefined index: sjy_community_user_role /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 126 行.
+NOTIC: [8] Undefined index: sjy_community_user_role_name /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 130 行.
+NOTIC: [8] Undefined index: sjy_community_login_id /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 44 LIMIT 1   [ RunTime:0.1392s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_type` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `sjy_origanization_type`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0006s ]
+SQL: SELECT `sjy_origanization_id`,sjy_origanization_area_name as area FROM `sjy_origanization_position_info` WHERE `sjy_origanization_city` = '110000'  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 13 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `sjy_origanization_type_name` FROM `sjy_origanization_type` WHERE `sjy_id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_image` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_image` WHERE `sjy_origanization_code` = '13' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `sjy_origanization_type_name` FROM `sjy_origanization_type` WHERE `sjy_id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_image` WHERE `sjy_origanization_code` = '14' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 174 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000155s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000213s ]
+NOTIC: [8] Undefined index: sjy_community_user_image /xiaoheiwu/shejuyi/Application/Runtime/Cache/Home/a694fdae0bac13e1b11b112467ce4577.php 第 60 行.
+NOTIC: [8] Undefined variable: info /xiaoheiwu/shejuyi/Application/Runtime/Cache/Home/a694fdae0bac13e1b11b112467ce4577.php 第 230 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.182341s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.182368s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000123s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000412s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000438s ]
+
+[ 2017-12-05T11:45:01+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Community/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000451s ]
+NOTIC: [8] Undefined index: sjy_community_user_community_code /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 111 行.
+NOTIC: [8] Undefined index: sjy_community_user_role /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 126 行.
+NOTIC: [8] Undefined index: sjy_community_user_role_name /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 130 行.
+NOTIC: [8] Undefined index: sjy_community_login_id /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 44 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_type` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sjy_origanization_type`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0006s ]
+SQL: SELECT `sjy_origanization_id`,sjy_origanization_area_name as area FROM `sjy_origanization_position_info` WHERE `sjy_origanization_city` = '110000'  [ RunTime:0.0065s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 13 LIMIT 1   [ RunTime:0.0626s ]
+SQL: SELECT `sjy_origanization_type_name` FROM `sjy_origanization_type` WHERE `sjy_id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_image` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sjy_origanization_image` WHERE `sjy_origanization_code` = '13' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `sjy_origanization_type_name` FROM `sjy_origanization_type` WHERE `sjy_id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sjy_origanization_image` WHERE `sjy_origanization_code` = '14' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 174 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000159s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000233s ]
+NOTIC: [8] Undefined index: sjy_community_user_image /xiaoheiwu/shejuyi/Application/Runtime/Cache/Home/a694fdae0bac13e1b11b112467ce4577.php 第 60 行.
+NOTIC: [8] Undefined variable: info /xiaoheiwu/shejuyi/Application/Runtime/Cache/Home/a694fdae0bac13e1b11b112467ce4577.php 第 230 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.156441s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.156479s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000206s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000505s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000533s ]
+
+[ 2017-12-05T11:45:02+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Community/getprojectlist?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000222s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000281s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0008s ]
+SQL: SELECT `sjy_origanization_id` FROM `sjy_origanization_position_info` WHERE `sjy_origanization_city` = '110000'  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_project_info` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sjy_origanization_project_info` WHERE `sjy_origanization_id` IN ('13','14') ORDER BY `sjy_origanization_project_send_time` desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '14' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_project_image` [ RunTime:0.0004s ]
+SQL: SELECT `sjy_origanization_project_image` FROM `sjy_origanization_project_image` WHERE `sjy_origanization_project_id` = 50 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '14' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `sjy_origanization_project_image` FROM `sjy_origanization_project_image` WHERE `sjy_origanization_project_id` = 49 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '14' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `sjy_origanization_project_image` FROM `sjy_origanization_project_image` WHERE `sjy_origanization_project_id` = 47 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '14' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `sjy_origanization_project_image` FROM `sjy_origanization_project_image` WHERE `sjy_origanization_project_id` = 46 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-12-05T11:45:02+08:00 ] 61.50.127.238 /shejuyi/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000523s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000311s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032608s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032670s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000145s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000164s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.117071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.117137s ]
+
+[ 2017-12-05T11:45:02+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Community/chooserole
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000220s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000245s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000269s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.203572s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.203598s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000093s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000319s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000341s ]
+
+[ 2017-12-05T11:47:00+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Community/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000555s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000617s ]
+NOTIC: [8] Undefined index: sjy_community_user_community_code /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 111 行.
+NOTIC: [8] Undefined index: sjy_community_user_role /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 126 行.
+NOTIC: [8] Undefined index: sjy_community_user_role_name /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 130 行.
+NOTIC: [8] Undefined index: sjy_community_login_id /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 130 行.
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 44 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_type` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sjy_origanization_type`  [ RunTime:0.0365s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0005s ]
+SQL: SELECT `sjy_origanization_id`,sjy_origanization_area_name as area FROM `sjy_origanization_position_info` WHERE `sjy_origanization_city` = '110000'  [ RunTime:0.0564s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 13 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `sjy_origanization_type_name` FROM `sjy_origanization_type` WHERE `sjy_id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_image` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sjy_origanization_image` WHERE `sjy_origanization_code` = '13' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `sjy_origanization_type_name` FROM `sjy_origanization_type` WHERE `sjy_id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sjy_origanization_image` WHERE `sjy_origanization_code` = '14' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: isidentify /xiaoheiwu/shejuyi/Application/Home/Controller/CommunityController.class.php 第 174 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000155s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000208s ]
+NOTIC: [8] Undefined index: sjy_community_user_image /xiaoheiwu/shejuyi/Application/Runtime/Cache/Home/a694fdae0bac13e1b11b112467ce4577.php 第 60 行.
+NOTIC: [8] Undefined variable: info /xiaoheiwu/shejuyi/Application/Runtime/Cache/Home/a694fdae0bac13e1b11b112467ce4577.php 第 230 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.082711s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.082742s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000141s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.100729s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000668s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000708s ]
+
+[ 2017-12-05T11:47:01+08:00 ] 61.50.127.238 /shejuyi/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000272s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000299s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.102428s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.102459s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000128s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000438s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000467s ]
+
+[ 2017-12-05T11:47:01+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Community/getprojectlist?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000291s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0008s ]
+SQL: SELECT `sjy_origanization_id` FROM `sjy_origanization_position_info` WHERE `sjy_origanization_city` = '110000'  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_project_info` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sjy_origanization_project_info` WHERE `sjy_origanization_id` IN ('13','14') ORDER BY `sjy_origanization_project_send_time` desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '14' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_project_image` [ RunTime:0.0004s ]
+SQL: SELECT `sjy_origanization_project_image` FROM `sjy_origanization_project_image` WHERE `sjy_origanization_project_id` = 50 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '14' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `sjy_origanization_project_image` FROM `sjy_origanization_project_image` WHERE `sjy_origanization_project_id` = 49 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '14' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `sjy_origanization_project_image` FROM `sjy_origanization_project_image` WHERE `sjy_origanization_project_id` = 47 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 14 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '14' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `sjy_origanization_project_image` FROM `sjy_origanization_project_image` WHERE `sjy_origanization_project_id` = 46 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-12-05T11:47:02+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Community/chooserole
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000308s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000127s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.118688s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.118725s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000166s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000196s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000484s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000520s ]
+
+[ 2017-12-05T11:51:36+08:00 ] 121.69.35.250 /shejuyi/index.php/Home/login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000266s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000290s ]
+
+[ 2017-12-05T12:28:28+08:00 ] 121.69.35.250 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000206s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000282s ]
+
+[ 2017-12-05T12:44:48+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000262s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000287s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_community_login_id` = '13820962107' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T12:44:49+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000301s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_community_login_id` = '13820962107' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T12:45:53+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000333s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_community_login_id` = '13820962107' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T12:49:12+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000205s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000251s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000277s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_community_login_id` = '13820962107' LIMIT 1   [ RunTime:0.0436s ]
+
+[ 2017-12-05T12:49:37+08:00 ] 121.69.35.250 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000278s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '15620608137' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.1339s ]
+
+[ 2017-12-05T12:51:28+08:00 ] 121.69.35.250 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000285s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000268s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000306s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13866703633' LIMIT 1   [ RunTime:0.0005s ]
+SQL: INSERT INTO `sjy_origanization_user_info` (`sjy_origanization_login_id`,`password`,`sjy_origanization_user_image`,`sjy_origanization_user_register_time`) VALUES ('13866703633','e10adc3949ba59abbe56e057f20f883e','/Uploads/touxiang/moren.png','2017-12-05 12:51:28') [ RunTime:0.0677s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13866703633' LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2017-12-05T12:54:48+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000205s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000275s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_community_login_id` = '13820962107' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T12:54:53+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000280s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_community_login_id` = '13820962107' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T12:54:54+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000305s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_community_login_id` = '13820962107' LIMIT 1   [ RunTime:0.0569s ]
+
+[ 2017-12-05T12:54:55+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000199s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000277s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000307s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_community_login_id` = '13820962107' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T12:54:56+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000331s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_community_login_id` = '13820962107' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T12:56:37+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000259s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000285s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_community_login_id` = '13820962107' LIMIT 1   [ RunTime:0.0437s ]
+
+[ 2017-12-05T12:57:12+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000355s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_community_login_id` = '13820962107' LIMIT 1   [ RunTime:0.1128s ]
+
+[ 2017-12-05T12:58:05+08:00 ] 121.69.35.250 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000279s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000305s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13866703633' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T12:58:08+08:00 ] 121.69.35.250 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.056663s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.056727s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13866703633' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T12:58:09+08:00 ] 121.69.35.250 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.028464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.028523s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13866703633' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T12:58:09+08:00 ] 121.69.35.250 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000350s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000377s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13866703633' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T12:58:13+08:00 ] 121.69.35.250 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000217s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000318s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13866703633' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.0282s ]
+
+[ 2017-12-05T12:58:17+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000266s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000294s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T12:58:18+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000204s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000306s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-12-05T12:58:18+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000486s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000515s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T12:58:19+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000380s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' LIMIT 1   [ RunTime:0.0438s ]
+
+[ 2017-12-05T12:58:19+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000273s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000299s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T12:58:20+08:00 ] 121.69.35.250 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000206s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000248s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000273s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13866703633' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.1517s ]
+
+[ 2017-12-05T12:58:55+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000283s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T12:58:59+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000314s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' LIMIT 1   [ RunTime:0.1016s ]
+
+[ 2017-12-05T13:01:00+08:00 ] 121.69.35.250 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000465s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.028584s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13866703633' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.0362s ]
+
+[ 2017-12-05T14:34:31+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister?callback=jQuery11240777604095625533_1512455578675&type=1&phone=15201176732&password=550504&repassword=550504&_=1512455578676
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000248s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000272s ]
+
+[ 2017-12-05T14:34:32+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister?callback=jQuery11240777604095625533_1512455578675&type=1&phone=15201176732&password=550504&repassword=550504&_=1512455578677
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000358s ]
+
+[ 2017-12-05T14:37:44+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000266s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000292s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T14:52:22+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister?callback=cb&type=1&phone=13820962107&password=123456&repassword=123456&_=1512456707685
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000248s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000272s ]
+
+[ 2017-12-05T14:52:23+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister?callback=cb&type=1&phone=13820962107&password=123456&repassword=123456&_=1512456707686
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000216s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.039045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.039102s ]
+
+[ 2017-12-05T15:01:39+08:00 ] 121.69.35.250 /shejuyi/index.php/home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.052593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.052647s ]
+
+[ 2017-12-05T15:02:46+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000312s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000265s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000289s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' LIMIT 1   [ RunTime:0.0385s ]
+
+[ 2017-12-05T15:04:02+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000316s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' LIMIT 1   [ RunTime:0.1312s ]
+
+[ 2017-12-05T15:04:28+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000311s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T15:05:15+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2017-12-05T15:07:18+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000310s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T15:07:28+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000268s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000294s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '15201176732' LIMIT 1   [ RunTime:0.1010s ]
+
+[ 2017-12-05T15:07:28+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000209s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000249s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000274s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '15201176732' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T15:07:29+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000204s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000248s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000273s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '15201176732' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T15:07:29+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000219s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000272s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000297s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '15201176732' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-12-05T15:09:44+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000430s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' LIMIT 1   [ RunTime:0.0437s ]
+SQL: INSERT INTO `sjy_origanization_user_info` (`sjy_origanization_login_id`,`password`,`sjy_origanization_user_image`,`sjy_origanization_user_register_time`) VALUES ('13820962107','e10adc3949ba59abbe56e057f20f883e','/Uploads/touxiang/moren.png','2017-12-05 15:09:44') [ RunTime:0.3093s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2017-12-05T15:10:10+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.028348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.028387s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T15:10:30+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T15:10:38+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000209s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000252s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000277s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.0517s ]
+
+[ 2017-12-05T15:10:39+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000270s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000296s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.1042s ]
+
+[ 2017-12-05T15:10:39+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000263s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000289s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T15:10:39+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000260s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000285s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-12-05T15:10:40+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000424s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.043556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.043619s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.0438s ]
+
+[ 2017-12-05T15:10:40+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.036576s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000536s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T15:10:41+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000350s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000380s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.1477s ]
+
+[ 2017-12-05T15:10:41+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000270s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000295s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.0434s ]
+
+[ 2017-12-05T15:10:41+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000214s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000278s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000336s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T15:10:42+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000214s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.022583s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.022644s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.0500s ]
+
+[ 2017-12-05T15:10:42+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.036480s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000415s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0702s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T15:10:43+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000320s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.0569s ]
+
+[ 2017-12-05T15:11:17+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000205s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000300s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.0439s ]
+
+[ 2017-12-05T15:11:22+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000301s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0294s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T15:11:29+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000277s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T15:11:29+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000207s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000274s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.1011s ]
+
+[ 2017-12-05T15:11:30+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000300s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T15:11:49+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000377s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000328s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T15:13:18+08:00 ] 121.69.35.250 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000321s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0294s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13866703633' LIMIT 1   [ RunTime:0.0004s ]
+SQL: INSERT INTO `sjy_origanization_user_info` (`sjy_origanization_login_id`,`password`,`sjy_origanization_user_image`,`sjy_origanization_user_register_time`) VALUES ('13866703633','e10adc3949ba59abbe56e057f20f883e','/Uploads/touxiang/moren.png','2017-12-05 15:13:18') [ RunTime:0.2255s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13866703633' LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2017-12-05T15:13:52+08:00 ] 121.69.35.250 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000206s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.036537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.036600s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0506s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13866703633' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T15:14:10+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000221s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000283s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T15:17:04+08:00 ] 121.69.35.250 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000206s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000246s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000271s ]
+
+[ 2017-12-05T15:17:30+08:00 ] 61.50.127.238 /shejuyi/index.php/home/Login/doregister
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000207s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000257s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000282s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' LIMIT 1   [ RunTime:0.1404s ]
+
+[ 2017-12-05T15:17:41+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000260s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000285s ]
+
+[ 2017-12-05T15:17:42+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000220s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000301s ]
+
+[ 2017-12-05T15:17:43+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.028469s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+
+[ 2017-12-05T15:17:43+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000541s ]
+
+[ 2017-12-05T15:17:43+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000356s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000388s ]
+
+[ 2017-12-05T15:17:44+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000318s ]
+
+[ 2017-12-05T15:17:44+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004443s ]
+
+[ 2017-12-05T15:17:44+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.155340s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000332s ]
+
+[ 2017-12-05T15:17:45+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000310s ]
+
+[ 2017-12-05T15:18:11+08:00 ] 121.69.35.250 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000292s ]
+
+[ 2017-12-05T15:20:26+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000279s ]
+
+[ 2017-12-05T15:20:28+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000315s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+
+[ 2017-12-05T15:20:29+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000406s ]
+
+[ 2017-12-05T15:20:29+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000210s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000272s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000299s ]
+
+[ 2017-12-05T15:20:29+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000200s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000420s ]
+
+[ 2017-12-05T15:20:29+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000263s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000289s ]
+
+[ 2017-12-05T15:21:49+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000218s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000454s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = '123456' LIMIT 1   [ RunTime:0.1336s ]
+
+[ 2017-12-05T15:21:50+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000252s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000277s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0369s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = '123456' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-12-05T15:22:04+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000363s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000415s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = '123456' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T15:22:05+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000324s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = '123456' LIMIT 1   [ RunTime:0.1018s ]
+
+[ 2017-12-05T15:22:05+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000217s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000249s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000276s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = '123456' LIMIT 1   [ RunTime:0.0284s ]
+
+[ 2017-12-05T15:22:05+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000200s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000276s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = '123456' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-12-05T15:22:38+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000471s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = '123456' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T15:23:39+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000201s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.028492s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.028550s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = '123456' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T15:23:40+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000200s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.062555s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.062625s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = '123456' LIMIT 1   [ RunTime:0.0286s ]
+
+[ 2017-12-05T15:23:41+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000204s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000315s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = '123456' LIMIT 1   [ RunTime:0.0436s ]
+
+[ 2017-12-05T15:23:41+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000198s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000273s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = '123456' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T15:24:34+08:00 ] 121.69.35.250 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000211s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000293s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13866703633' AND `password` = '123456' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-12-05T15:25:22+08:00 ] 121.69.35.250 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000209s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000278s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13866703633' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13866703633' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-12-05T15:25:57+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000248s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000273s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.0437s ]
+
+[ 2017-12-05T15:25:59+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000200s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000271s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000296s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = 'd41d8cd98f00b204e9800998ecf8427e' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-12-05T15:26:12+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000206s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000248s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000273s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0289s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' LIMIT 1   [ RunTime:0.0438s ]
+
+[ 2017-12-05T15:48:01+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000203s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000249s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000274s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-12-05T16:20:19+08:00 ] 61.50.127.238 /shejuyi/index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.109897s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.109959s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.1312s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '13820962107' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-12-05T17:20:02+08:00 ] 61.50.127.238 /shejuyi/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000245s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000268s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000106s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000167s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.192950s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.192974s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000133s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000151s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000399s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000425s ]
+

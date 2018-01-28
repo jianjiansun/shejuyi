@@ -1,0 +1,29 @@
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="__PUBLIC__/Home/webuploader/MyWebUpload.js"></script>
+</head>
+<body>
+<br />
+<span style='color:red;font-size:12px;margin-left:80px;'>*只能是pdf，doc，docx文件(不超过2M)</span>
+<script>
+    $(function () {
+        $("#uploader").powerWebUpload({auto: false,fileNumLimit:1,fileSingleSizeLimit:2*1024*1024});
+    })
+    function GetFiles1() {
+        var data = $("#uploader").GetFilesAddress();
+        alert(data[0])
+    }
+</script>
+<input type="hidden" name="community_id" value="{$community_id}">
+<input type="hidden" name="project_id" value="{$project_id}">
+<div id="uploader" style="margin-left:100px;margin-top:30px;"></div>
+<!-- <input type="button" value="1111"  onclick="GetFiles1()"/> -->
+<!-- <div id="uploader2" style="margin-left:10px"></div>
+<input type="button" value="22222" onclick="GetFiles2()" /> -->
+</body>
+</html>
+

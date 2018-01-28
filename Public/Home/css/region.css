@@ -1,0 +1,324 @@
+.search{
+    margin: 0 auto;
+    width: 790px;
+}
+.searchHouseCondition{
+    margin-top: 35px;
+}
+.searchHouseCondition dl{
+    margin-bottom: 10px;
+}
+.searchHouseCondition dt{
+    height: 27px;
+    line-height: 27px;
+    font-size: 12px;
+    margin-right: 6px;
+    font-weight: 700;
+}
+.searchHouseCondition .option-list{
+    margin-left: 60px;
+    margin-top: -26px;
+}
+.searchHouseCondition .option-list a{
+    padding: 0 8.5px;
+    display: inline-block;
+    color: #333;
+    height: 27px;
+    line-height: 27px;
+    font-size: 14px
+}
+.searchHouseCondition .option-list {
+    padding: 0 8.5px;
+    display: inline-block;
+    color: #333;
+    height: 27px;
+    line-height: 30px;
+    font-size: 14px;
+
+}
+.searchHouseCondition .option-list a input[type="checkbox"]{
+    border: 1px solid #eeeeee;
+    vertical-align: middle;
+    margin: 0;
+}
+
+
+.searchHouseCondition .option-list a.on{
+    color: #008fff;
+    font-weight: 900;
+}
+.searchHouseCondition .option-list .custom input{
+    display: inline-block;
+    border: 1px solid #eee;
+    width: 50px;
+    padding: 2px 1px;
+    text-align: center;
+    color: #333;
+    height: 20px;
+    line-height: 18px;
+    font-size: 12px;
+    margin-right: 8px;
+    margin-left: 8px;
+}
+.house-list{
+    min-height: 700px;
+}
+.house-list li{
+    height: 214px;
+    border-bottom: 1px solid #cccccc;
+    position: relative;
+    -webkit-transition: all .15s ease-in-out;
+    -moz-transition: all .15s ease-in-out;
+    -o-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    padding-bottom: 35px;
+    margin-bottom: 35px;
+}
+.house-list-info{
+    padding-top: 18px;
+    padding-left: 0px;
+}
+.house-list-info h2{
+    margin-bottom: 18px;
+}
+
+.house-list-info h2 a{
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    max-width: 400px;
+    padding-right: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    color: #333;
+    font-size: 20px;
+    font-weight: 700;
+    vertical-align: middle;
+}
+.house-list-info h2 .regTag{
+    position: relative;
+    display: inline-block;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.house-list-info h2 .regTag .triangle{
+    position: absolute;
+    right: 0;
+    height: 0;
+    width: 0;
+    border: #007AFF solid 12px;
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+
+}
+.house-list-info h2 .regTag .text{
+    color: white;
+    height: 24px;
+    display: inline-block;
+    line-height: 24px;
+    background-color: #007AFF;
+    padding: 0 7px;
+    margin-right: 24px;
+    vertical-align: top !important;
+
+}
+.house-list-info h2 .regTag .point{
+    position: absolute;
+    display: inline-block;
+    height: 24px;
+    width: 12px;
+    line-height: 24px;
+    top: 0;
+    right: 16px;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+
+}
+.house-list-info .where{
+    color: #333;
+    width: 100%;
+    line-height: 1;
+    margin-bottom: 14px;
+    font-size: 14px;
+}
+.house-list-info .where .region{
+    padding: 2px 0;
+    color: #666;
+
+}
+
+.house-list-info .area{
+    margin-bottom: 17px;
+}
+.house-list-info .area .sp1{
+
+}
+.house-list-info .area .sp2{
+    color: #333;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.house-list-info .type{
+    width: 192px;
+    height: 34px;
+    background-color: #33BE85;
+    line-height: 34px;
+    color: #ffffff;
+}
+.house-list-info .type span{
+    padding-left: 8px;
+    font-size: 12px;
+    line-height: 22px;
+    display: inline-block;
+}
+.house-list-info .type .onsold{
+    border-color: #e2d197;
+    color: #e2d197;
+}
+.house-list-info .type .live{
+    border-color: #85c6dc;
+    color: #85c6dc;
+
+}
+.house-list-info .type .allFive{
+    border-color: #e29c97;
+    color: #e29c97;
+}
+.house-list-price .price{
+    color: #333;
+    padding-top: 70px;
+}
+.house-list-price .price .detailBtn{
+    padding: 3px 12px;
+    font-size: 16px;
+    color: #ffffff;
+    background: #222222;
+    display: block;
+    text-align: center;
+    margin-top: 26px;
+}
+.house-list-price .price .detailBtn:hover{
+    background: #007AFF;
+}
+
+.house-list-price .price .span3{
+
+}
+.buildImg img{
+    width: 100%;
+    margin-top: 12px;
+}
+
+/*分页插件样式    到时候要拷走的*/
+.tcdPageCode{padding: 15px 30px;text-align: left;color: #ccc;text-align:center;}
+.tcdPageCode a{height: 30px;
+    padding: 0 12px;
+    margin-left: 5px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #b0b4b9;
+    overflow: hidden;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #555;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    vertical-align: middle;}
+.tcdPageCode span{
+    margin: 0 8px 0 13px;
+    height: 30px;
+    padding: 0 12px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #b0b4b9;
+    overflow: hidden;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #555;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    vertical-align: middle;
+}
+.tcdPageCode a:hover{text-decoration: none;border: 1px solid #777;}
+.tcdPageCode span.current{
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: default;
+    background-color: #ff6a26 !important;
+    color: white;
+    border-color: #ff6a26;
+}
+.tcdPageCode span.disabled{	display: inline-block;
+    margin: 0 8px 0 13px;
+    height: 30px;
+    padding: 0 12px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #b0b4b9;	color: #aaa;vertical-align: middle;
+}
+.program-box{
+    border: 1px solid #eee;
+    padding: 0;
+}
+.programTit{
+    height: 70px;
+    background-color: #007AFF;
+    padding-left: 20px;
+    line-height: 70px;
+    color: #ffffff;
+}
+.programTit .tit-p1{
+    font-size: 20px;
+    color: #ffffff;
+}
+.programTit .tit-p1 span{
+    margin-left: 10px;
+    font-size: 14px;
+    padding: 1px 8px;
+    border:1px solid #007AFF;
+    display: inline-block;
+    color: #007AFF;
+    font-weight: 200;
+    vertical-align: top;
+    margin-bottom: 10px;
+}
+.programTit .tit-p2 span{
+    vertical-align: middle;
+}
+.paddingBox{
+    padding: 20px 30px;
+    border: 1px solid #cccccc;
+}
+.paddingBox dl{
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #cccccc;
+}
+.paddingBox dt{
+    font-size: 14px;
+    color: #333333;
+    font-weight:900;
+
+}
+.paddingBox dd{
+     font-size: 14px;
+ }
+.paddingBox dd span{
+    font-size: 20px;
+    color: #007AFF;
+    font-weight: 900;
+}
+.remid{
+    padding-left: 20px;
+    margin-bottom: -28px;
+    color:#5b5b5b;
+}

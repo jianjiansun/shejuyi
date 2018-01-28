@@ -1,0 +1,158 @@
+.testifyBox{
+    width: 900px;
+    margin: 0 auto;
+    border:1px solid #eeeeee;
+    position: relative;
+
+}
+.testifyBox  .oneTalk {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+.testifyBox  .oneTalk a{
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #5bc0de;
+    color: #ffffff;
+    border-radius: 4px;
+}
+.testifyBox h2{
+    width: 100%;
+    background-color: #222222;
+    color: #ffffff;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    font-size: 24px;
+
+}
+.testUl{
+}
+.testUl select {
+    border: 1px solid #ccc;
+    width: 126px;
+    height: 32px;
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+.testUl li p{
+    color: rgb(63, 63, 63);
+    line-height: 22px;
+}
+.testUl li input{
+    margin-top: 6px;
+    margin-bottom: 10px;
+    width: 340px;
+    height: 32px;
+    text-indent: 6px;
+    border:1px solid #ccc;
+}
+.testUl li input[type = radio]{
+    width: 10px;
+    vertical-align: middle;
+}
+.testUl li i{
+    margin-left: 12px;
+    color: #007AFF;
+    font-style: normal;
+}
+.testUl li span{
+    vertical-align: top;
+    font-size: 24px;
+    color: red;
+}
+.peopleInfo.testUl li{
+    margin-bottom: 20px;
+}
+.peopleInfo.testUl li p{
+    line-height: 32px;
+}
+
+.peopleInfo.testUl li p span{
+    margin-right: 30px;
+    margin-left: 12px;
+    vertical-align: top;
+    margin-top: -10px;
+    line-height: 32px;
+}
+
+.testImg{
+    width: 240px;
+    height: 210px;
+    font-size: 34px;
+    text-align: center;
+    line-height: 240px;
+    color: #ddd;
+}
+.uploadBtn{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.uploadImg{
+    width: 240px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    background-color: #009688;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    color: #ffffff;
+}
+.uploadBtn input[type = file]{
+    width: 240px;
+    height: 34px;
+    position: absolute;
+    top:2px;
+    opacity: 0;
+}
+.submitBox{
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 40px;
+
+}
+.submitBox input{
+    display: inline-block;
+    margin: 0 auto;
+    padding: 10px 120px!important;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background: #009688;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+
+}
+.description{
+    padding: 64px;
+    padding-top: 0;
+}
+.description span{
+    font-size: 12px;
+    color: #999;
+    float: right;
+}
+.description .content{
+    margin-top: 10px;
+    padding: 10px;
+    height: 200px;
+    border: 1px solid #cccccc;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+    word-wrap: break-word;
+}
+.testImg img{
+    width: 240px;
+    height: 210px;
+    border: 1px solid #cccccc;
+}
+
+.detailImg img{
+    width: 100%;
+}
+

@@ -1,0 +1,6 @@
+[ 2017-11-28T14:57:45+08:00 ] 121.69.35.250 /shejuyi/index.php/index.php/Home/Login/login/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000300s ]
+ERR: 无法加载模块:Index.php
+
