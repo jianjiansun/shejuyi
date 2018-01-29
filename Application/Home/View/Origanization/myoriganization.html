@@ -231,53 +231,12 @@
 
     $.post("__MODULE__/Community/getoriganizationinfo", function (data) {
 
-        var html = '';
-        html =  '<div class="layui-form-item">\n' +
-                '<label class="layui-form-label">机构名称</label>\n' +
-                '<div class="layui-input-block">\n' +
-                '<input name="origanization_name" disabled="disabled" required="" value="'+ data.sjy_origanization_name+'"  placeholder="请输机构名字" autocomplete="off" class="layui-input" type="text">\n' +
-                '<a class="iconfont">&#xe600;</a>\n' +
-                '</div>\n' +
-                '</div>\n' +
-                '<div class="layui-form-item">\n' +
-                '<label class="layui-form-label">机构地址</label>\n' +
-                '<div class="layui-input-block changeAddress">\n' +
-                '<div  id="demo" style = "margin-bottom: 10px;">\n' +
-                '<p>\n' +
-                '<select name="province">'+ data.address_info.sjy_origanization_province_name +'</select>\n' +
-                '<select name="city">'+ data.address_info.sjy_origanization_city_name +'</select>\n' +
-                '<select name="area">'+ data.address_info.sjy_origanization_area_name +'</select>\n' +
-                '</p>\n' +
-                '</div>\n' +
-                '<div id="show"></div>\n' +
-                '</div>\n' +
-                '</div>\n' +
-                '<div class="layui-form-item">\n' +
-                '<label class="layui-form-label">详细地址</label>\n' +
-                '<div class="layui-input-block">\n' +
-                '<input name="address" disabled="disabled" value="'+ data.address_info.sjy_origanization_address +'" required="" placeholder="请输入机构地址" autocomplete="off" class="layui-input" type="text">\n' +
-                '<a class="iconfont" >&#xe600;</a>\n' +
-                '</div>\n' +
-                '</div>\n' +
-                '<div class="layui-form-item">\n' +
-                '<label class="layui-form-label">固定电话</label>\n' +
-                '<input name = "tel_code" value="'+data.sjy_origanization_phone.split("-")[0]+'" class="layui-input landlinePhoneNum" type="text" style="width: 42px;margin-right: 4px;" >'+
-                '<input name="phone" value="'+ data.sjy_origanization_phone.split("-")[1] +'" required="" placeholder="请输入固定电话号" autocomplete="off" class="layui-input landlinePhoneNum" type="text" style = "width: 355px;">\n' +
-                '<a class="iconfont">&#xe600;</a>\n' +
-                '<div class="id-remider">\n' +
-                '<p class = "remider"></p>\n' +
-                '</div>\n' +
-                '</div>\n' +
-                '</div>\n' +
-                '<div class="layui-form-item layui-form-text">\n' +
-                '<label class="layui-form-label">机构简介</label>\n' +
-                '<div class="layui-input-block">\n' +
-                '<textarea id = "textareaIntro" placeholder="'+ data.sjy_origanization_introduce +'" class="layui-textarea"></textarea>\n' +
-                '</div>\n' +
-                '</div>'
-
-        $("#myForm").html(html);
-
+        $("input[name=origanization_name]").val(data.sjy_origanization_name);
+        $('input[name=address]').val(data.address_info.sjy_origanization_address);
+        $('input[name=tel_code]').val(data.sjy_origanization_phone.split("-")[0]);
+        $('input[name=phone]').val(data.sjy_origanization_phone.split("-")[1]);
+        $('#textareaIntro').val(data.sjy_origanization_introduce);
+        $('#demo').citys({code:data.address_info.sjy_origanization_area});
     });
 
 
@@ -383,7 +342,7 @@
 
 
 
-    $('#demo').citys({code:350206});
+    // $('#demo').citys({code:350206});
 
     $(".basic-information .layui-input-block .iconfont").on("click", function () {
         $(this).prev("input").removeAttr("disabled").css("border", "1px solid #bbb");
