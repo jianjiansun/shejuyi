@@ -10,7 +10,7 @@ class CommunityController extends BaseController {
         //社会组织列表
         public function getoriganizationlist()
         {
-           $page = I('get.page');  //当前页码数
+           $page = I('get.page')==""?1:I('get.page');  //当前页码数
            $start = ($page-1)*10;  //开始页码数
            $city = session('cityid');  //城市
            if($city==null)
@@ -24,6 +24,7 @@ class CommunityController extends BaseController {
            {
               $ids[] = $value['sjy_origanization_id'];
            }
+           // var_dump($ids);die;
            if(!empty($ids)){
            		$origanization_info = M('origanization_base_info')->where(array('sjy_origanization_id'=>array('in',$ids)))->limit($start,10)->select();
               //社会组织地址信息
@@ -46,7 +47,7 @@ class CommunityController extends BaseController {
            $this->ajaxReturn($res);  //执行返回 
         }
         //显示社区认证页面
-        public function communityIdenty()
+        public function communityIdentify()
         {
             //根据ip地址查询区号
             // $url = 'http://pv.sohu.com/cityjson?ie=utf-8';
@@ -64,7 +65,7 @@ class CommunityController extends BaseController {
         }
 
         //执行社区认证
-        public function doCommunityIdenty()
+        public function doCommunityIdentify()
         {
             $community_name = I("post.community_name"); //社区名字
             $province = I("post.province");             //社区所在省份编号
@@ -626,19 +627,23 @@ class CommunityController extends BaseController {
         //查看社会组织主页
         public function displayoriganizationhome()
         {
-            $this->assign();
+            $id = I('get.id'); //社会组织id
+            $this->assign("id",$id);
+            $this->display();
         }
         //获得社会组织信息接口
         public function getoriganizationinfo()
         {
-            //社会组织信息
-            $id = session()['userInfo']['sjy_origanization_user_origanization_code'];
+            //社会组织信息  判断从哪里查看社会组织信息。自己查看自己的，不用id，其他人查看得传id
+            $getId = I('get.id')?I('get.id'):null;
+            $id = session('userInfo')['sjy_origanization_user_origanization_code'];
+            $id = $getId?$getId:$id;
             //查询社会组织信息
             $origanization_info = M('origanization_base_info')->where(array('sjy_id'=>$id))->find();
             //社区地址信息
             $origanization_info['address_info'] = M('origanization_position_info')->where(array('sjy_origanization_id'=>$id))->find();
             //社区展示图片
-            $origanization_images = M("origanization_images")->where(array("sjy_origanization_code"=>$community_info['sjy_origanization_code']))->getField('sjy_origanization_images');
+            $origanization_images = M("origanization_images")->where(array("sjy_origanization_code"=>$origanization_info['sjy_origanization_code']))->getField('sjy_origanization_images');
             $origanization_info['origanization_images'] = $origanization_images;
             $this->ajaxReturn($origanization_info);
         }

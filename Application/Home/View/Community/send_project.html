@@ -1,10 +1,15 @@
+
     <link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
     <link rel="stylesheet" href="__PUBLIC__/Home/css/deliver.css">
     <link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
     <link rel="stylesheet" href="__PUBLIC__/Home/css/modules/laydate/default/laydate.css">
     <link rel="stylesheet" href="__PUBLIC__/Home/css/modules/layer/default/layer.css">
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/webuploader.css">
+
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/demo.css">
+
+
+
     <script src = "__PUBLIC__/Home/js/laydate.js"></script>
     <script src = "__PUBLIC__/Home/js/layer.js"></script>
 
@@ -19,7 +24,7 @@
     </div>
     <div class="right person">
         <div class="dropdown pull-right">
-            <a href="#" data-toggle="dropdown" class="dropdown-toggle"><img src="__PUBLIC__/Home/imgs/personDl.jpg" alt=""></a>
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle"><img src="../imgs/personDl.jpg" alt=""></a>
             <ul class="dropdown-menu">
                <li>
                    <a href="#">账号设置</a>
@@ -62,7 +67,7 @@
             </div>
             <div class="form-group">
                 <label for="name">项目预算</label>
-                <input name = "plan_money" type="text" id="" value = "">
+                <input name = "plan_money" type="text" id="" value = ""  onKeyUp="value=value.replace(/[^\d]/g,'')" > <span>万元</span>
             </div>
             <div class="form-group">
                 <label for="name">项目书征集周期</label>
@@ -151,7 +156,7 @@
     $("#deliverBtn").click(function () {
 
         var project_name = $("input[name='project_name']").val();
-        var server_area = $(".serverArea").text();
+        var server_area = $(".serverArea").val();
         var start_time = $("input[name='start_time']").val();
         var plan_money = $("input[name='plan_money']").val();
 
@@ -212,12 +217,24 @@
         }
 
 
+
+        // if( business_licence_img.indexOf('data:image/jpeg;base64,') == -1){
+        //     layer.msg('请上传营业执照');
+        //     return false;
+        // }
+        // if( logo_img.indexOf('data:image/jpeg;base64,') == -1){
+        //     layer.msg('请上传组织logo');
+        //     return false;
+        // }
+
+
+
         $.ajax({
             url: "__CONTROLLER__/doSendProject",
             type: "POST",
             data: {
                 project_name : project_name,
-                server_area : 3,
+                server_area : server_area,
                 demand_describe : demand_describe,
                 collect_start_time : collect_start_time,
                 plan_money:plan_money,
@@ -229,7 +246,7 @@
                 console.log(data);
                 if(data.state == 1)
                 {
-                    window.location.href = "__CONTROLLER__/index"
+                    window.location.href = "__CONTROLLER__/"
                 }
             },
             async:false

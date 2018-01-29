@@ -327,7 +327,7 @@
 <!--<script src = "../js/slider.js"></script>-->
 <script>
 
-    $.post("http://120.24.242.45/shejuyi/index.php/Home/Origanizationback/getprojectlist/page/1", function (data) {
+    $.post("__CONTROLLER__/getprojectlist/page/1", function (data) {
         var html = "";
 
         console.log(data.data[0]);

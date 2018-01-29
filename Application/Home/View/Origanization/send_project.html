@@ -19,7 +19,7 @@
     </div>
     <div class="right person">
         <div class="dropdown pull-right">
-            <a href="#" data-toggle="dropdown" class="dropdown-toggle"><img src="../imgs/personDl.jpg" alt=""></a>
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle"><img src="__PUBLIC__/Home/imgs/personDl.jpg" alt=""></a>
             <ul class="dropdown-menu">
                <li>
                    <a href="#">账号设置</a>
@@ -115,7 +115,7 @@
     </div>
 </div>
 </body>
-<script src="../js/extend-webuploader.js" type="text/javascript"></script>
+<script src="__PUBLIC__/Home/js/extend-webuploader.js" type="text/javascript"></script>
 <script>
 
     //执行一个laydate实例
@@ -151,14 +151,14 @@
     $("#deliverBtn").click(function () {
 
         var project_name = $("input[name='project_name']").val();
-        var server_area = $(".serverArea").text();
+        var server_area = $(".serverArea").val();
         var start_time = $("input[name='start_time']").val();
         var plan_money = $("input[name='plan_money']").val();
 
         var collect_start_time = $("input[name='collect_start_time']").val();
         var demand_describe = $("#formTextarea").val();
 
-        var community_project_images = [];
+        var origanization_project_images = [];
 
 
 
@@ -168,7 +168,7 @@
 
            var imgSrc = $(".filelist li img").attr("src");
 
-            community_project_images.push(imgSrc);
+            origanization_project_images.push(imgSrc);
 
         }
 
@@ -182,7 +182,7 @@
         console.log(plan_money);
         console.log(collect_start_time);
         console.log(demand_describe);
-        console.log(community_project_images);
+        console.log(origanization_project_images);
 
 
 
@@ -213,35 +213,27 @@
 
 
 
-        if( business_licence_img.indexOf('data:image/jpeg;base64,') == -1){
-            layer.msg('请上传营业执照');
-            return false;
-        }
-        if( logo_img.indexOf('data:image/jpeg;base64,') == -1){
-            layer.msg('请上传组织logo');
-            return false;
-        }
-
+       
 
 
         $.ajax({
-            url: "http://120.24.242.45/shejuyi/index.php/Home/Communityback/doSendProject",
+            url: "__CONTROLLER__/doSendProject",
             type: "POST",
             data: {
                 project_name : project_name,
-                server_area : 3,
+                server_area : server_area,
                 demand_describe : demand_describe,
                 collect_start_time : collect_start_time,
                 plan_money:plan_money,
                 start_time : start_time,
-                community_project_images : community_project_images
+                origanization_project_images : origanization_project_images
             },
             dataType: "json",
             success: function (data) {
                 console.log(data);
                 if(data.state == 1)
                 {
-                    window.location.href = "main.html"
+                    window.location.href = "__CONTROLLER__/"
                 }
             },
             async:false
