@@ -535,7 +535,11 @@
 	    public function getcommunityinfo()
 	    {
 	    	//社区信息
-	    	$id = I("get.id");
+	    	$id = I("get.id")?I("get.id"):null;
+	    	if(empty($id))
+	    	{
+	    		$id = session('userInfo')['sjy_community_user_community_code'];
+	    	}
 
 	    	  //查询社区信息
 	        $community_info = M('community_base_info')->where(array('sjy_id'=>$id))->find();

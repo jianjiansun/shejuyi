@@ -998,6 +998,11 @@ class CommunityController extends BaseController {
             }
 
         }
+        //显示个人信息
+        public function personinfo()
+        {
+            $this->display();
+        }
         //获得个人信息接口
         public function getpersoninfo()
         {

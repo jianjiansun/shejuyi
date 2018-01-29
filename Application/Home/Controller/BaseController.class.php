@@ -28,7 +28,9 @@
                     $this->islogin = 1;   //已登录
 
                     if(session('figure') == 2)
-                    {                       
+                    {     
+                            $userInfo = M('community_user_info')->where(array('sjy_id'=>session('userInfo')['sjy_id']))->find();
+                            session('userInfo',$userInfo);                
                             //查询该用户是否认证
                             $this->isidentify = session("userInfo")["sjy_community_user_isidentify"];  //是否认证
                             $this->user_image = session("userInfo")['sjy_community_user_image'];       //用户图片
@@ -56,7 +58,8 @@
                     //社会组织登录
                     if(session('figure') == 1)
                     {
-
+                           $userInfo = M('origanization_user_info')->where(array('sjy_id'=>session('userInfo')['sjy_id']))->find();
+                           session('userInfo',$userInfo);
                            //查询该用户是否认证
 
                             $this->isidentify = session("userInfo")["sjy_origanization_user_isidentify"];  //是否认证
@@ -95,7 +98,7 @@
                     $this->assign('role',$this->role); //角色
                     $this->assign('isidentify',$this->isidentify); //是否认证
                     $this->assign('ismanger',$this->ismanger);  //是否是管理员
-                    $this->assign('user_image',$user_image);  //用户头像
+                    $this->assign('user_image',$this->user_image);  //用户头像
                     $this->assign('code',$this->code);   //用户所属编号
 
             }else{
