@@ -198,7 +198,7 @@
     var regPhone = /^1[3|4|5|8][0-9]\d{4,8}$/;
     var regPassword = /^[A-Za-z0-9]{6,20}$/;
     $("#login-btn2").click(function () {
-
+       
         if( ! regPhone.test($("#username2").val()) ){
             $("#login2 .remider").html("请输入有效的手机号码");
             return false;

@@ -40,7 +40,7 @@
                 <div class="col-md-2 column  perperson">
                     <h2>个人信息</h2>
                     <div>
-                        <img id = "userImg" src="__PUBLIC__/Home/imgs/personDl.jpg" alt="  ">
+                        <img id = "userImg" src="{$user_image}" alt="  ">
                         <!--用户图片更换-->
                         <div class = "cropImgBox"  ontouchstart="">
                             <div class="cover-wrap">
@@ -64,10 +64,10 @@
                         </li>
 
                         <li>
-                            <a href="__CONTROLLER__/personinfo">账号设置</a>
+                            <a href="__CONTROLLER__/personInfo">账号设置</a>
                         </li>
                         <li>
-                            <a class = "on" href="__CONTROLLER__/mycommunity">我的社区</a>
+                            <a class = "on" href="__CONTROLLER__/myCommunity">我的社区</a>
                         </li>
                         <li>
                             <a href="personal4.html">我的项目</a>
@@ -221,7 +221,7 @@
 
     //初始化信息显示
     $.ajax({
-        url: "__MODULE__/Origanization/getcommunityinfo",
+        url: "__CONTROLLER__/getCommunityInfo",
         type: "POST",
         data: {},
         dataType: "json",
@@ -263,7 +263,7 @@
             $("#userImg").attr("src", dataURL);
 
             $.ajax({
-                url: "http://120.24.242.45/shejuyi/index.php/Home/Communityback/douploadtouxiang",
+                url: "__CONTROLLER__/douploadtouxiang",
                 type: "POST",
                 data: {
                     img: dataURL
@@ -274,6 +274,8 @@
                     {
                         layer.msg('修改成功');
                         console.log(data.url)
+                    }else{
+                        layer.msg(data.errorInfo);
                     }
                 },
                 async:false
@@ -332,7 +334,7 @@
 
 
         $.ajax({
-            url: "http://120.24.242.45/shejuyi/index.php/Home/Communityback/updateCommunityInfo",
+            url: "__CONTROLLER__/updateCommunityInfo",
             type: "POST",
             data: {
                 community_name : community_name,
@@ -352,7 +354,21 @@
         return false;
     });
 
-
+    $.ajax({
+      url: "__CONTROLLER__/getcommunityimgs",
+      type: "get",
+      data:{},
+      dataType:"json",
+      success:function(data)
+      {
+        if(data)
+        {
+          $("#imghead").attr('src',data);
+        }else{
+          $("#imghead").attr('src','__PUBLIC__/Home/imgs/a11.png')
+        }
+      }
+    })
     $("#sureBtn3").click(function () {
 
         var file = $("#imghead").attr("src");
@@ -360,7 +376,7 @@
         console.log(file);
 
         $.ajax({
-            url: "http://120.24.242.45/shejuyi/index.php/Home/Communityback/uploadcommunityimgs",
+            url: "__CONTROLLER__/uploadcommunityimgs",
             type: "POST",
             data: {
                 file : file
@@ -383,7 +399,7 @@
 
     /*社会组织员工管理  */
     $.ajax({
-        url: "http://120.24.242.45/shejuyi/index.php/Home/Communityback/getStaffList",
+        url: "__CONTROLLER__/getStaffList",
         type: "get",
         data: {
             page : 1

@@ -24,7 +24,7 @@
     <div class = "container">
         <div class = "left changeBan logoPer">
             <a href="main.html">
-                <img src="{$user_image}" alt="">
+                <img src="__PUBLIC__/Home/imgs/logo.png" alt="">
                 <span>社居易</span>
             </a>
         </div>
@@ -42,7 +42,7 @@
                 <div class="col-md-2 column  perperson">
                     <h2>个人信息</h2>
                     <div>
-                        <img id = "userImg" src="__PUBLIC__/Home/imgs/personDl.jpg" alt="  ">
+                        <img id = "userImg" src="{$user_image}" alt="  ">
                         <!--用户图片更换-->
                         <div class = "cropImgBox"  ontouchstart="">
                             <div class="cover-wrap">
@@ -229,7 +229,7 @@
 <script>
 
 
-    $.post("__MODULE__/Community/getoriganizationinfo", function (data) {
+    $.post("__CONTROLLER__/getOriganizationInfo", function (data) {
 
         $("input[name=origanization_name]").val(data.sjy_origanization_name);
         $('input[name=address]').val(data.address_info.sjy_origanization_address);

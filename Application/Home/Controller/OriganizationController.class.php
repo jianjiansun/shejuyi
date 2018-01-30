@@ -481,26 +481,7 @@
                   $this->ajaxReturn(array('state'=>0,'errorInfo'=>'城市设置失败，请重新设置'));
                }
 	    }
-	    //展示社区项目详情页
-	    public function displaycommunityproject()
-	    {
-	    	$this->display();
-	    }
-	    //获得社区项目详情接口
-	    public function getcommunityproject()
-	    {
-	    	//项目id
-	    	$id = I("get.id"); 
-	    	$origanization_info = "";
-	    	//查询项目详情
-	    	$projectinfo = M("community_project_info")->where(array("sjy_id"=>$id))->find();
-	    	//社区地址信息
-	    	$projectinfo['address'] = M('community_position_info')->where(array("sjy_community_id"=>$projectinfo['sjy_community_id']))->find(); 
-            //项目图片
-		    $projectinfo['project_image'] = M('community_project_image')->where(array('sjy_community_project_id'=>$id))->select();
-		    
-	 		$this->ajaxReturn($projectinfo);
-	    }
+	  
 	    //社区项目进度接口 进度图片
 	    public function getcommunityprojectrate()
 	    {
@@ -525,55 +506,6 @@
        	    	$rateinfo = array();
        	    }
             $this->ajaxReturn($rateinfo);
-	    }
-	    //展示社区主页
-	    public function displaycommunityhome()
-	    {
-	    	$this->display();
-	    }
-	    //获得社区信息接口
-	    public function getcommunityinfo()
-	    {
-	    	//社区信息
-	    	$id = I("get.id")?I("get.id"):null;
-	    	if(empty($id))
-	    	{
-	    		$id = session('userInfo')['sjy_community_user_community_code'];
-	    	}
-
-	    	  //查询社区信息
-	        $community_info = M('community_base_info')->where(array('sjy_id'=>$id))->find();
-	        //社区地址信息
-	        $community_info['address_info'] = M('community_position_info')->where(array('sjy_community_id'=>$id))->find();
-	    	//社区展示图片
-	    	$community_images = M("community_images")->where(array("sjy_community_code"=>$community_info['sjy_community_code']))->getField('sjy_community_images');
-            $community_info['community_images'] = $community_images;
-	    	$this->ajaxReturn($community_info);
-	    }
-	    //查看社区正在招标的项目
-	    public  function  getcommunitytenderproject()
-	    {
-	    	$page = I('get.page')==null?1:I('get.page'); //页码 默认第一页    
-            //分页 每页15条
-            $id = I('get.id');  //社区id
-
-	    	$limit = 15;
-	    	//每页开始下标
-	    	$start = ($page-1)*$limit; 
-	    	$limit = $start.",".$limit;
-        	//status=0 招标截止时间大于当前时间 正在招标中
-	    	$project_info = M('community_project_info')->where(array("sjy_community_id"=>$id,"sjy_community_project_state"=>0,"sjy_community_project_collect_end_time"=>array("gt",date("Y-m-d H:i:s"))))->limit($limit)->select();
-	    	//项目主图
-	    	foreach($project_info as $key=>$value)
-	    	{
-	    		$main_image = M('community_project_image')->where(array('sjy_community_project_id'=>$value['sjy_id']))->getField('sjy_community_project_image');
-	    		$project_info[$key]['project_images'] = $main_image; 
-	    	}
-	    	$pages = M('community_project_info')->where(array("sjy_community_id"=>$id,"sjy_community_project_status"=>0,"sjy_community_project_collect_end_time"=>array("gt",date("Y-m-d H:i:s"))))->count();
-	    	 //返回数据
-            $res['pages'] = ceil($pages/15); //总页码数
-	        $res['data'] = $project_info;  //项目信息
-	    	$this->ajaxReturn($res);
 	    }
         //查看社区正在进行的项目
         public function getcommunityingproject()
@@ -889,7 +821,7 @@
 		        $this->ajaxReturn($res);   
             }
         //账号设置页面
-        public function personinfo()
+        public function personInfo()
         {
         	$this->display();
         }
@@ -1008,10 +940,25 @@
 	    }
 
 	    //我的机构
-	    public function myoriganization()
+	    public function myOriganization()
 	    {
 	    	$this->display();
 	    }
+	    //获得社会组织信息接口
+        public function getOriganizationInfo()
+        {
+            //社会组织信息  判断从哪里查看社会组织信息。自己查看自己的，不用id，其他人查看得传id
+            $id = session('userInfo')['sjy_origanization_user_origanization_code'];
+
+            //查询社会组织信息
+            $origanization_info = M('origanization_base_info')->where(array('sjy_id'=>$id))->find();
+            //社区地址信息
+            $origanization_info['address_info'] = M('origanization_position_info')->where(array('sjy_origanization_id'=>$id))->find();
+            //社区展示图片
+            $origanization_images = M("origanization_images")->where(array("sjy_origanization_code"=>$origanization_info['sjy_origanization_code']))->getField('sjy_origanization_images');
+            $origanization_info['origanization_images'] = $origanization_images;
+            $this->ajaxReturn($origanization_info);
+        }
 	    //获取员工列表
 	    public function getStaffList()
 	    {
@@ -1429,12 +1376,14 @@
 		}
 		header("Location:".__MODULE__."/Community/index");
 	   }
-	   //注销
-           public function logout()
-	   {
-		session('userInfo',null);
-	        header("Location:/shejuyi");
-	   }
+	    //注销
+        public function logout()
+	    {
+			session('userInfo',null);
+			session('figure',null);
+			session('city',null);
+	        header("Location:/");
+	    }
           //同意做项目
            public function agreenproject()
 	  {

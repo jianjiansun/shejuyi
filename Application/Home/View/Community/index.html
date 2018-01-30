@@ -208,7 +208,7 @@
 
         console.log(data.data[0]);
          for(var i = 0; i < data.data.length ; i ++) {
-                    var href = '/Home/Community/displayoriganizationhome/id/'+data.data[i].sjy_id;
+                    var href = '__MODULE__/Home/displayOriganizationHome/id/'+data.data[i].sjy_id;
                     html+=  '<li>'+
                             '<a href="'+href+'">'+
                             '<div class="col-md-4 column" >'+

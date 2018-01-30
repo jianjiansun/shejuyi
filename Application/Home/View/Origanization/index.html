@@ -17,8 +17,8 @@
     <div class="right person">
         <div class="dropdown pull-right">
             <a href="#" data-toggle="dropdown" class="dropdown-toggle">
-                <img src="__PUBLIC__/Home/imgs/personDl.jpg" alt="">
-                <span>zhangsan</span>
+                <img src="{$user_image}" alt="">
+                <span>{$showname}</span>
             </a>
             <ul class="dropdown-menu personalMenu">
                 <li>
@@ -38,7 +38,7 @@
                 </li>
 
                 <li>
-                    <a href="#">注销</a>
+                    <a href="__CONTROLLER__/logout">注销</a>
                 </li>
             </ul>
         </div>
@@ -138,9 +138,6 @@
                         <img  src="__PUBLIC__/Home/imgs/shequ2.jpg" alt="" >
                     </div>
                     <div class="col-md-6 column house-list-info">
-                        <!-- <p class = "where">
-                             <span class = "region region1">夕阳红社区养老服务</span>
-                         </p>-->
                         <p class = "where">
                             <span  class = "sp2 sp">项目发布方</span>
                             <span class = "region">如意社区</span>
@@ -155,7 +152,29 @@
                         </div>
                     </div>
                 </a>
-
+            </li>
+           <!--  <li class="col-md-6 column">
+                 <p class = "where">
+                        <span class = "region region1">夕阳红社区养老服务</span>
+                 </p>
+                <div class="col-md-6 column" style = "padding: 0;">
+                    <img  src="__PUBLIC__/Home/imgs/shequ2.jpg" alt="" >
+                </div>
+                <div class="col-md-6 column house-list-info">
+                 
+                    <p class = "where">
+                        <span  class = "sp2 sp">项目发布方</span>
+                        <span class = "region">如意社区</span>
+                    </p>
+                    <p class = "where">
+                        <span  class = "sp3 sp">服务对象</span>
+                        <span class = "region">老年人</span>
+                    </p>
+                    <div class = "type">
+                        <span class = "iconfont">&#xe61f;</span>
+                        <span>北京市</span>-<span>通州区</span>-<span>永顺</span>
+                    </div>
+                </div>
             </li>
             <li class="col-md-6 column">
                  <p class = "where">
@@ -165,34 +184,7 @@
                     <img  src="__PUBLIC__/Home/imgs/shequ2.jpg" alt="" >
                 </div>
                 <div class="col-md-6 column house-list-info">
-                   <!-- <p class = "where">
-                        <span class = "region region1">夕阳红社区养老服务</span>
-                    </p>-->
-                    <p class = "where">
-                        <span  class = "sp2 sp">项目发布方</span>
-                        <span class = "region">如意社区</span>
-                    </p>
-                    <p class = "where">
-                        <span  class = "sp3 sp">服务对象</span>
-                        <span class = "region">老年人</span>
-                    </p>
-                    <div class = "type">
-                        <span class = "iconfont">&#xe61f;</span>
-                        <span>北京市</span>-<span>通州区</span>-<span>永顺</span>
-                    </div>
-                </div>
-            </li>
-            <li class="col-md-6 column">
-                 <p class = "where">
-                        <span class = "region region1">夕阳红社区养老服务</span>
-                 </p>
-                <div class="col-md-6 column" style = "padding: 0;">
-                    <img  src="__PUBLIC__/Home/imgs/shequ2.jpg" alt="" >
-                </div>
-                <div class="col-md-6 column house-list-info">
-                   <!-- <p class = "where">
-                        <span class = "region region1">夕阳红社区养老服务</span>
-                    </p>-->
+                  
                     <p class = "where">
                         <span  class = "sp2 sp">项目发布方</span>
                         <span class = "region">如意社区</span>
@@ -215,9 +207,7 @@
                     <img  src="__PUBLIC__/Home/imgs/shequ2.jpg" alt="">
                 </div>
                 <div class="col-md-6 column house-list-info">
-                   <!-- <p class = "where">
-                        <span class = "region region1">夕阳红社区养老服务</span>
-                    </p>-->
+                  
                     <p class = "where">
                         <span  class = "sp2 sp">项目发布方</span>
                         <span class = "region">如意社区</span>
@@ -240,9 +230,7 @@
                     <img  src="__PUBLIC__/Home/imgs/shequ2.jpg" alt="">
                 </div>
                 <div class="col-md-6 column house-list-info">
-                   <!-- <p class = "where">
-                        <span class = "region region1">夕阳红社区养老服务</span>
-                    </p>-->
+                 
                     <p class = "where">
                         <span  class = "sp2 sp">项目发布方</span>
                         <span class = "region">如意社区</span>
@@ -265,9 +253,7 @@
                     <img  src="__PUBLIC__/Home/imgs/shequ2.jpg" alt="">
                 </div>
                 <div class="col-md-6 column house-list-info">
-                   <!-- <p class = "where">
-                        <span class = "region region1">夕阳红社区养老服务</span>
-                    </p>-->
+                  
                     <p class = "where">
                         <span  class = "sp2 sp">项目发布方</span>
                         <span class = "region">如意社区</span>
@@ -281,7 +267,7 @@
                         <span>北京市</span>-<span>通州区</span>-<span>永顺</span>
                     </div>
                 </div>
-            </li>
+            </li> -->
         </ul>
     </div>
     <div class = "col-md-3 program-box">
@@ -333,6 +319,7 @@
         console.log(data.data[0]);
         for(var i = 0; i < data.data.length ; i ++) {
             html += '<li class="col-md-6 column">' +
+                    '<a href="__MODULE__/Project/displayCommunityProject?id='+data.data[i].sjy_id+'">'+
                     '<p class = "where">' +
                     '<span class = "region region1">'+ data.data[i].sjy_community_project_title +'</span>' +
                     '</p>' +
@@ -353,6 +340,7 @@
                     '<span>'+  data.data[i].address.sjy_community_province_name +'</span>-<span>'+  data.data[i].address.sjy_community_area_name +'</span>-<span>'+  data.data[i].address.sjy_community_street_name +'</span>' +
                     '</div>' +
                     '</div>' +
+                    '</a>'+
                     '</li>';
         }
         $("#projectList").html(html);

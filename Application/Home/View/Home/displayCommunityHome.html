@@ -1,8 +1,11 @@
 
     <link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
     <link rel="stylesheet" href="__PUBLIC__/Home/css/testfy.css">
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/chooseCity.css">
     <link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
     <link rel="stylesheet" href="__PUBLIC__/Home/css/detail.css">
+    <script src = "__PUBLIC__/Home/js/jquery-1.12.4.js"></script>
+    <script src = "__PUBLIC__/Home/js/bootstrap.js"></script>
     <script src = "__PUBLIC__/Home/js/jquery.page.js"></script>
     <script src = "__PUBLIC__/Home/js/upLoadImg.js"></script>
 
@@ -44,7 +47,7 @@
     <div class="detailBox">
         <div class = "detail-bottom">
             <div class = "col-md-1 orLogoBox">
-                <img class = "orLogo" src="" alt="">
+                <img class = "orLogo" src="__PUBLIC__/Home/imgs/or4.jpg" alt="">
             </div>
             <div class = "col-md-7 community-tit">
                 <h3></h3>
@@ -70,7 +73,7 @@
             <div class = "detail-detail">
                  <div class = "box box1" style = "display: block;">
                      <div class = "detail-item">
-                         <span>机构简介</span>
+                         <span>社区简介</span>
                          <p></p>
                      </div>
                      <div class = "detail-item">
@@ -78,10 +81,10 @@
                          <p class = "left" style = "line-height:  30px;"></p>
                      </div>
 
-                    <!--  <div class = "detail-item">
+                     <div class = "detail-item">
                          <span  class = "left">机构主任</span>
                          <p class = "left" style = "line-height:  30px;"></p>
-                     </div> -->
+                     </div>
                      <div class = "detail-item">
                          <span  class = "left">机构地址</span>
                          <p  class = "left" style = "line-height:  30px;"></p>
@@ -91,8 +94,8 @@
                          <p  class = "left" style = "line-height:  30px;"></p>
                      </div>
                      <div class = "detail-item">
-                         <span  class = "left">团队风采</span>
-                         <p><img class = "orDetail-img" src="" alt=""></p>
+                         <span  class = "left">社区风采</span>
+                         <p></p>
                      </div>
                  </div>
 
@@ -409,51 +412,48 @@
         $(".detail-detail .box4").css("display", "block");
     });
 
-    $.post("__CONTROLLER__/getoriganizationinfo?id={$id}", function (data) {
+    $.post("__CONTROLLER__/getCommunityInfo?id={$id}", function (data) {
 
-        var img = '<img class = "orLogo" src="'+ data.sjy_origanization_logo_img_path +'" alt="">';
+        var img = '<img class = "orLogo" src="'+ data.sjy_community_logo_img_path +'" alt="">';
         $(".orLogoBox").html(img);
 
         var tit  = "";
-        tit += '<h3>'+ data.sjy_origanization_name +'</h3>';
+        tit += '<h3>'+ data.sjy_community_name +'</h3>';
 
         $(".community-tit").html(tit);
 
         var html = "";
         console.log(data);
         html += '<div class = "detail-item">' +
-                '<span>机构简介</span>' +
-                '<p>'+ data.sjy_origanization_introduce +'</p>' +
+                '<span>社区简介</span>' +
+                '<p>'+ data.sjy_community_introduce +'</p>' +
                 '</div>' +
                 '<div class = "detail-item">' +
-                '<span class = "left">服务领域</span>' +
-                '<p class = "left" style = "line-height:  30px;">'+ data.sjy_origanization_type_name+'</p>' +
-                '</div>' +
-                '<div class = "detail-item">' +
-                '<span  class = "left">机构地址</span>' +
-                '<p  class = "left" style = "line-height:  30px;">'+ data.address_info.sjy_origanization_city_name + data.address_info.sjy_origanization_area_name+data.address_info.sjy_origanization_address+'</p>' +
+                '<span  class = "left">社区地址</span>' +
+                '<p  class = "left" style = "line-height:  30px;">'+ data.address_info.sjy_community_city_name + data.address_info.sjy_community_area_name + data.address_info.sjy_community_street_name+data.address_info.sjy_community_address +'</p>' +
                 '</div>' +
                 '<div class = "detail-item">' +
                 '<span  class = "left">联系方式</span>' +
-                '<p  class = "left" style = "line-height:  30px;">'+ data.sjy_origanization_phone +'</p>' +
+                '<p  class = "left" style = "line-height:  30px;">'+ data.sjy_community_phone +'</p>' +
                 '</div>' +
                 '<div class = "detail-item">' +
-                '<span  class = "left">团队风采</span>' +
-                '<p><img class = "orDetail-img" src="'+ data.origanization_images+'" alt=""></p>' +
+                '<span  class = "left">社区风采</span>' +
+                '<p><img class = "orDetail-img" src="'+ data.community_images+'" alt=""></p>' +
                 '</div>';
 
         $(".box1").html(html);
 
     });
 
-    $.post("http://120.24.242.45/shejuyi/index.php/Home/Origanizationback/getcommunitytenderproject?id=26", function (data) {
+    $.post("__MODULE__/Project/getCommunityTenderProject?id={$id}", function (data) {
 
         var html = "";
         console.log(data);
         for( var i = 0; i < data.data.length; i++){
             html += '<li class = "clearfix pro-li">' +
+                    '<a href="__MODULE__/Project/displayCommunityProject/id/'+data.data[i].sjy_id+'">'+
                     '<div class = "left leftImg">' +
-                    '<img src="http://120.24.242.45/shejuyi'+ data.data[i].project_images +'" alt="">' +
+                    '<img src="'+ data.data[i].project_images +'" alt="">' +
                     '</div>' +
                     '<div class = "left leftCon">' +
                     '<dl>' +
@@ -476,6 +476,7 @@
                     '<dd>'+ data.data[i].sjy_community_project_service_area +'</dd>' +
                     '</dl>' +
                     '</div>' +
+                    '</a>'+
                     '</li>';
         }
 
@@ -528,7 +529,7 @@
         for( var i = 0; i < data.data.length; i++){
             html += '<li class = "clearfix pro-li">' +
                     '<div class = "left leftImg">' +
-                    '<img src="'+ data.data[i].project_images +'" alt="">' +
+                    '<img src="http://120.24.242.45/shejuyi'+ data.data[i].project_images +'" alt="">' +
                     '</div>' +
                     '<div class = "left leftCon">' +
                     '<dl>' +

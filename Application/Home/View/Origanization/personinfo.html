@@ -57,10 +57,10 @@
                         </li>
 
                         <li>
-                            <a class = "on" href="__CONTROLLER__/personinfo">账号设置</a>
+                            <a class = "on" href="__CONTROLLER__/personInfo">账号设置</a>
                         </li>
                         <li>
-                            <a href="__CONTROLLER__/myoriganization">我的机构</a>
+                            <a href="__CONTROLLER__/myOriganization">我的机构</a>
                         </li>
                         <li>
                             <a href="personal4.html">我的项目</a>
@@ -117,7 +117,7 @@
                                     <div class="layui-form-item">
                                         <label class="layui-form-label">所在机构</label>
                                         <div class="layui-input-block">
-                                            <input required="" disabled="disabled" value="" class="layui-input" type="text">
+                                            <input name='origanization_name' required="" disabled="disabled" value="" class="layui-input" type="text">
                                            <!-- <a class="iconfont" lay-event="edit">&#xe600;</a>-->
 
                                         </div>
@@ -153,53 +153,11 @@ $.ajax({
         data: {},
         dataType: "json",
         success: function (data) {
-            console.log(data);
-            
-            var html = '';
-            
-        
-            html += '<div class="layui-form-item">' +
-                    '<label class="layui-form-label">姓名</label>\n' +
-                    '<div class="layui-input-block">\n' +
-                    '<input name="realname" value="'+ data.sjy_origanization_user_real_name +'" disabled="disabled" class="layui-input" type="text">\n' +
-                    '</div>\n' +
-                    '</div>\n' +
-                    '<div class="layui-form-item">\n' +
-                    '<label class="layui-form-label">手机号</label>\n' +
-                    '<div class="layui-input-block">\n' +
-                    '<input name="phone" value="'+ data.sjy_origanization_login_id +'" disabled="disabled" class="layui-input testPhoneNum" type="text">\n' +
-                    '<a class="iconfont">&#xe600;</a>\n' +
-                    '<div class="id-remider">\n' +
-                    '<p class = "remider"></p>\n' +
-                    '</div>\n' +
-                    '</div>\n' +
-                    '</div>\n' +
-                    '<div class="layui-form-item">\n' +
-                    '<label class="layui-form-label">微信号</label>\n' +
-                    '<div class="layui-input-block">\n' +
-                    '<input name="wechat" value="'+ data.sjy_origanization_user_wechat +'" disabled="disabled" class="layui-input" type="text">\n' +
-                    '<a class="iconfont">&#xe600;</a>\n' +
-                    '</div>\n' +
-                    '</div>\n' +
-                    '<div class="layui-form-item">\n' +
-                    '<label class="layui-form-label">邮箱</label>\n' +
-                    '<div class="layui-input-block">\n' +
-                    '<input name="email" value="'+ data.sjy_origanization_user_email +'" disabled="disabled" class="layui-input testMailBox" type="text">\n' +
-                    '<a class="iconfont">&#xe600;</a>\n' +
-                    '<div class="id-remider">\n' +
-                    '<p class = "remider"></p>\n' +
-                    '</div>\n' +
-                    '</div>\n' +
-                    '</div>\n' +
-                    '<div class="layui-form-item">\n' +
-                    '<label class="layui-form-label">所在机构</label>\n' +
-                    '<div class="layui-input-block">\n' +
-                    '<input required="" disabled="disabled" value="'+ data.sjy_origanization_name +'" class="layui-input" type="text">\n' +
-                    '</div>\n' +
-                    '</div>';
-       
-            $("#myForm").html(html);
-
+            $('input[name=realname]').val(data.sjy_origanization_user_real_name);
+            $('input[name=phone]').val(data.sjy_origanization_login_id);
+            $('input[name=wechat]').val(data.sjy_origanization_user_wechat);
+            $('input[name=email]').val(data.sjy_origanization_user_email);
+            $('input[name=origanization_name]').val(data.sjy_origanization_name);
         },
         async:false
     });

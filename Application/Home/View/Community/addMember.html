@@ -48,7 +48,7 @@
         var phone = $(".searchBox").val();
         console.log(phone);
         $.ajax({
-            url: "http://120.24.242.45/shejuyi/index.php/Home/Communityback/searchNameByPhone",
+            url: "__CONTROLLER__/searchNameByPhone",
             type: "POST",
             data: {
                 phone : phone
@@ -67,7 +67,7 @@
                 if(data.state == 1) {
                     var html = '';
                     html += '<div class = "exitMember">' +
-                            '<img src="http://120.24.242.45/shejuyi'+ data.image +'" alt="">' +
+                            '<img src="'+ data.image +'" alt="">' +
                             '<p>'+ data.name +'</p>' +
                             '</div>';
                     $(".InfoBox").html(html);
@@ -103,7 +103,7 @@
         console.log(phone);
 
         $.ajax({
-            url: "http://120.24.242.45/shejuyi/index.php/Home/Communityback/doAddStaff",
+            url: "__CONTROLLER__/doAddStaff",
             type: "POST",
             data: {
                 phone : phone
