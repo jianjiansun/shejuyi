@@ -1,0 +1,259 @@
+[ 2018-01-30T22:38:47+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000438s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000509s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000572s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000148s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000259s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011999s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012119s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000341s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000394s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000981s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001102s ]
+
+[ 2018-01-30T22:38:53+08:00 ] 127.0.0.1 /index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000290s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000492s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0728s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_community_login_id` = '15620608137' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0789s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_community_login_id` = '15620608137' LIMIT 1   [ RunTime:0.0443s ]
+
+[ 2018-01-30T22:38:53+08:00 ] 127.0.0.1 /index.php/Home/Community/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000522s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0485s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0668s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0827s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0758s ]
+NOTIC: [8] Undefined variable: islogin D:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000164s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011704s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011788s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000503s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000581s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000801s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000898s ]
+
+[ 2018-01-30T22:38:55+08:00 ] 127.0.0.1 /index.php/Home/Community/getoriganizationlist/page/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000564s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000959s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001084s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0770s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0825s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.3897s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.1033s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0461s ]
+NOTIC: [8] Undefined variable: islogin D:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0749s ]
+SQL: SELECT `sjy_origanization_id` FROM `sjy_origanization_position_info` WHERE `sjy_origanization_city` = '120000'  [ RunTime:0.0553s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0481s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` LIMIT 0,10   [ RunTime:0.0728s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '23' LIMIT 1   [ RunTime:0.1099s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_origanization_base_info` LIMIT 1   [ RunTime:0.0488s ]
+
+[ 2018-01-30T22:39:09+08:00 ] 127.0.0.1 /index.php/Home/Community/mycommunity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000452s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000516s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0772s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0575s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0636s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0826s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0681s ]
+NOTIC: [8] Undefined variable: islogin D:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010156s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010238s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000403s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000899s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000993s ]
+
+[ 2018-01-30T22:39:10+08:00 ] 127.0.0.1 /index.php/Home/Community/getCommunityInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001111s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001792s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001937s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0694s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0697s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0694s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0562s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0534s ]
+NOTIC: [8] Undefined variable: islogin D:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_community_base_info` [ RunTime:0.0757s ]
+SQL: SELECT * FROM `sjy_community_base_info` WHERE `sjy_id` = 29 LIMIT 1   [ RunTime:0.1183s ]
+SQL: SHOW COLUMNS FROM `sjy_community_position_info` [ RunTime:0.0516s ]
+SQL: SELECT * FROM `sjy_community_position_info` WHERE `sjy_community_id` = '29' LIMIT 1   [ RunTime:0.0887s ]
+SQL: SHOW COLUMNS FROM `sjy_community_images` [ RunTime:0.0731s ]
+SQL: SELECT `sjy_community_images` FROM `sjy_community_images` WHERE `sjy_community_code` = '29' LIMIT 1   [ RunTime:0.0880s ]
+
+[ 2018-01-30T22:39:11+08:00 ] 127.0.0.1 /index.php/Home/Community/getcommunityimgs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000460s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000527s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0767s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0563s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0935s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0568s ]
+NOTIC: [8] Undefined variable: islogin D:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_community_images` [ RunTime:0.1059s ]
+SQL: SELECT `sjy_community_images` FROM `sjy_community_images` WHERE `sjy_community_code` = '29' LIMIT 1   [ RunTime:0.0578s ]
+
+[ 2018-01-30T22:39:12+08:00 ] 127.0.0.1 /index.php/Home/Community/getStaffList?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000480s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002156s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002368s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0740s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.1335s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0443s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0580s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0671s ]
+NOTIC: [8] Undefined variable: islogin D:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SELECT `sjy_community_login_id`,`sjy_community_user_wechat`,`sjy_community_user_real_name`,`sjy_community_user_email` FROM `sjy_community_user_info` WHERE `sjy_community_user_community_code` = '29' LIMIT 0,15   [ RunTime:0.0450s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_community_user_info` WHERE `sjy_community_user_community_code` = '29' LIMIT 1   [ RunTime:0.0653s ]
+
+[ 2018-01-30T22:39:14+08:00 ] 127.0.0.1 /index.php/Home/Project/communityProjectManger
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000771s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000884s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0661s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0618s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0786s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0798s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0714s ]
+NOTIC: [8] Undefined variable: islogin D:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000295s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000422s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022692s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022949s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001151s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001319s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001325s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001633s ]
+
+[ 2018-01-30T22:40:51+08:00 ] 127.0.0.1 /index.php/Home/Project/communityProjectManger
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001038s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000620s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000708s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0764s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0662s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0445s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0654s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0569s ]
+NOTIC: [8] Undefined variable: islogin D:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000191s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000301s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010385s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010504s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001171s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001306s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001341s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001509s ]
+
+[ 2018-01-30T22:42:28+08:00 ] 127.0.0.1 /index.php/Home/Project/communityProjectManger
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000700s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001136s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001270s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0672s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0784s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0775s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0726s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0522s ]
+NOTIC: [8] Undefined variable: islogin D:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000338s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000554s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016624s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016771s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000757s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000990s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001119s ]
+
+[ 2018-01-30T22:45:34+08:00 ] 127.0.0.1 /index.php/Home/Project/communityProjectManger
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000339s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000565s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0654s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0566s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0578s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0734s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0602s ]
+NOTIC: [8] Undefined variable: islogin D:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000180s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000377s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009580s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009674s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000397s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000906s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001004s ]
+
