@@ -77,6 +77,11 @@
         {
         	$this->display();
         }
+        //社会组织项目管理
+        public function origanizationProjectManger()
+        {
+        	$this->display();
+        }
         
 
 	}
