@@ -1,33 +1,51 @@
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EasyLife</title>
+    <link rel="stylesheet" href="/Public/Home/css/bootstrap.css">
+    <link rel="stylesheet" href="/Public/Home/css/common.css">
+    <link rel="stylesheet" href="/Public/Home/css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+    <script src="/Public/Home/js/jquery-1.12.4.js"></script>
+    <script src="/Public/Home/js/bootstrap.js"></script>
+    <script src = "/Public/Home/js/autoResizeImage.js"></script>
 
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/chooseCity.css">
-  
-    <script src = "__PUBLIC__/Home/js/layui.js"></script>
-    <script src = "__PUBLIC__/Home/js/layui.all.js"></script>
-    <script src = "__PUBLIC__/Home/js/upLoadImgBig.js"></script>
 
+    <link rel="stylesheet" href="/Public/Home/css/region.css">
+    <link rel="stylesheet" href="/Public/Home/css/layui.css">
+    <link rel="stylesheet" href="/Public/Home/css/page2.css">
 
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/hammer.js" type="text/javascript" charset="utf-8"></script>
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src = "/Public/Home/street/jquery.citys.js"></script>
+    <script src = "/Public/Home/js/layui.js"></script>
+    <script src = "/Public/Home/js/layui.all.js"></script>
+    <script src = "/Public/Home/js/upLoadImgBig.js"></script>
 
-
+    <script src="/Public/Home/js/plugins/cover_js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/Public/Home/js/plugins/cover_js/hammer.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/Public/Home/js/plugins/cover_js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/Public/Home/js/plugins/cover_js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
 
 </head>
 <body>
+
 <div class="shadeBox" style = "display: none;"></div>
-<div id = "showCityBox" class = "province-switch" style = "display: none;"></div>
+<div id = "showCityBox" class = "province-switch" style = "display: none;">
+</div>
+
 <div class = "headLogin">
     <div class = "container">
         <div class = "left changeBan logoPer">
-            <img src="__PUBLIC__/Home/imgs/logo.png" alt="">
-            <span>社居易</span>
+            <a href="main.html">
+                <img src="/Public/Home/imgs/logo.png" alt="">
+                <span>社居易</span>
+            </a>
         </div>
         <div class="right person">
-           <!--<img src="__PUBLIC__/Home/imgs/personDl.jpg" alt="">-->
+           <!--<img src="/Public/Home/imgs/personDl.jpg" alt="">-->
         </div>
     </div>
 </div>
@@ -40,7 +58,7 @@
                 <div class="col-md-2 column  perperson">
                     <h2>个人信息</h2>
                     <div>
-                        <img id = "userImg" src="{$user_image}" alt="  ">
+                        <img id = "userImg" src="<?php echo ($user_image); ?>" alt="  ">
                         <!--用户图片更换-->
                         <div class = "cropImgBox"  ontouchstart="">
                             <div class="cover-wrap">
@@ -60,17 +78,17 @@
 
                     <ul class="person-ul">
                         <li>
-                            <a href="__CONTROLLER__/communityIdentify">认证状态</a>
+                            <a href="/index.php/Home/Origanization/origanizationIdentify">认证状态</a>
                         </li>
 
                         <li>
-                            <a href="__CONTROLLER__/personInfo">账号设置</a>
+                             <a href="/index.php/Home/Origanization/personinfo">账号设置</a>
                         </li>
                         <li>
-                            <a class = "on" href="__CONTROLLER__/myCommunity">我的社区</a>
+                           <a class="on" href="/index.php/Home/Origanization/myoriganization">我的机构</a>
                         </li>
                         <li>
-                            <a href="__MODULE__/Project/communityProjectManger">我的项目</a>
+                            <a href="personal4.html">我的项目</a>
                         </li>
                         <li>
                             <a href="">我的消息</a>
@@ -78,7 +96,7 @@
                     </ul>
                 </div>
                 <div class="col-md-10 column perperson-con" style = "background: #FFFFFF;">
-                    <div class="layui-tab layui-tab-brief" >
+                    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
                         <ul class="layui-tab-title">
                             <li class="layui-this"  lay-id="a">基本信息</li>
                             <li  lay-id="b">员工管理</li>
@@ -88,24 +106,40 @@
 
                             <div class="layui-tab-item layui-show">
                                 <!--社会组织 —— 我的机构 —— 基本信息-->
-                                <form class="layui-form layui-form-pane basic-information" action="">
+                                <form id = "myForm" class="layui-form layui-form-pane basic-information" action="">
                                     <div class="layui-form-item">
-                                        <label class="layui-form-label">社区名称</label>
+                                        <label class="layui-form-label">机构名称</label>
                                         <div class="layui-input-block">
-                                            <input name="community_name" disabled="disabled" required="" value=""  placeholder="请输机构名字" autocomplete="off" class="layui-input" type="text">
+                                            <input name="origanization_name" disabled="disabled" required="" value=""  placeholder="请输机构名字" autocomplete="off" class="layui-input" type="text">
                                             <a class="iconfont">&#xe600;</a>
                                         </div>
                                     </div>
                                     <div class="layui-form-item">
-                                        <label class="layui-form-label">社区地址</label>
+                                        <label class="layui-form-label">机构地址</label>
+                                        <div class="layui-input-block changeAddress">
+                                            <div  id="demo" style = "margin-bottom: 10px;">
+                                                <p>
+                                                    <select name="province"></select>
+                                                    <select name="city"></select>
+                                                    <select name="area"></select>
+                                                </p>
+                                            </div>
+
+                                            <div id="show"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">详细地址</label>
                                         <div class="layui-input-block">
                                             <input name="address" disabled="disabled" value="" required="" placeholder="请输入机构地址" autocomplete="off" class="layui-input" type="text">
-                                            <!--<a class="iconfont" lay-event="edit">&#xe600;</a>-->
+                                            <a class="iconfont" >&#xe600;</a>
                                         </div>
                                     </div>
                                     <div class="layui-form-item">
                                         <label class="layui-form-label">固定电话</label>
                                         <div class="layui-input-block">
+
                                             <input name = "tel_code" value="" class="layui-input landlinePhoneNum" type="text" style="width: 42px;margin-right: 4px;" >
                                             <input name="phone" value="" required="" placeholder="请输入固定电话号" autocomplete="off" class="layui-input landlinePhoneNum" type="text" style = "width: 355px;">
                                             <a class="iconfont">&#xe600;</a>
@@ -115,14 +149,14 @@
                                         </div>
                                     </div>
                                     <div class="layui-form-item layui-form-text">
-                                        <label class="layui-form-label">社区简介</label>
+                                        <label class="layui-form-label">机构简介</label>
                                         <div class="layui-input-block">
-                                            <textarea placeholder="请输入内容" id = "textareaIntro" class="layui-textarea"></textarea>
+                                            <textarea id = "textareaIntro" placeholder="请输入内容" class="layui-textarea"></textarea>
                                         </div>
                                     </div>
                                 </form>
 
-                                <div class="sure"><a href = "javascript:;" id = "sureBtn1" class="layui-btn">确定</a></div>
+                                <div class="sure"><a class="layui-btn" href = "javascript:;" id = "sureBtn1">确定</a></div>
 
                             </div>
 
@@ -132,8 +166,9 @@
                                     <a class = "addMember" href="javascript:;">添加社工</a>
                                     <table class="layui-table" >
                                         <colgroup>
-                                            <col width="100">
+                                            <!-- <col width="100">
                                             <col width="200">
+                                            <col width="200"> -->
                                             <col width="200">
                                             <col width="200">
                                             <col width="200">
@@ -146,36 +181,28 @@
                                             <th>姓名</th>
                                             <th>手机号</th>
                                             <th>邮箱</th>
+                                            <th>微信号</th>
                                             <th>操作</th>
                                         </tr>
                                         </thead>
                                         <tbody id = "tableBody">
-                                        <tr>
-                                            <td>1</td>
-                                            <td>2016-11-29</td>
-                                            <td>人生就像是一场修行</td>
+                                       <!--  <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
                                             <td></td>
                                             <td>
                                                 <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
-                                                <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
-                                                <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+                                                <a class="layui-btn layui-btn-xs">编辑</a>
+                                                <a class="layui-btn layui-btn-danger layui-btn-xs" >删除</a>
                                             </td>
 
-                                        </tr>
-                                        <tr>
-                                            <td>10</td>
-                                            <td>2016-11-28</td>
-                                            <td>于千万年之中，时间的无涯的荒野里…</td>
-                                            <td></td>
-                                            <td>
-                                                <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
-                                                <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
-                                                <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
-                                            </td>
-                                        </tr>
+                                        </tr> -->
                                         </tbody>
                                     </table>
                                 </div>
+
+                                <div class = "pagination" id="pagination1"></div>
                             </div>
                             <div class="layui-tab-item">
                                 <!--社会组织 —— 我的机构 —— 机构风采-->
@@ -184,7 +211,7 @@
                                         <section class=" img-section">
                                             <p class="up-p">机构风采：<span class="up-span">上传一张图片</span></p>
                                             <div id="preview" class = "testImg">
-                                                <img id="imghead"  border=0 src='__PUBLIC__/Home/imgs/a11.png'>
+                                                <img id="imghead"  border=0 src='/Public/Home/imgs/a11.png'>
                                             </div>
 
                                             <div class = "uploadBtn">
@@ -214,26 +241,64 @@
     </div>
 </div>
 </body>
-<script src = "__PUBLIC__/Home/js/cityBoxShow.js"></script>
-
-
+<script src = "/Public/Home/js/cityBoxShow.js"></script>
 <script>
 
-    //初始化信息显示
-    $.ajax({
-        url: "__CONTROLLER__/getCommunityInfo",
-        type: "POST",
-        data: {},
-        dataType: "json",
-        success: function (data) {
-           $('input[name=community_name]').val(data.sjy_community_name);
-           $('input[name=address]').val(data.address_info.sjy_community_city_name+data.address_info.sjy_community_area_name+data.address_info.sjy_community_street_name+data.address_info.sjy_community_address);
-           $('input[name=tel_code]').val(data.sjy_community_phone.split('-')[0]);
-           $('input[name=phone]').val(data.sjy_community_phone.split('-')[1]);
-           $('#textareaIntro').val(data.sjy_community_introduce)
-        },
-        async:false
+
+    $.post("/index.php/Home/Origanization/getOriganizationInfo", function (data) {
+
+        $("input[name=origanization_name]").val(data.sjy_origanization_name);
+        $('input[name=address]').val(data.address_info.sjy_origanization_address);
+        $('input[name=tel_code]').val(data.sjy_origanization_phone.split("-")[0]);
+        $('input[name=phone]').val(data.sjy_origanization_phone.split("-")[1]);
+        $('#textareaIntro').val(data.sjy_origanization_introduce);
+        $('#demo').citys({code:data.address_info.sjy_origanization_area});
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /*个人图片的切换*/
     //上传封面
     //document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
@@ -260,10 +325,13 @@
             $('#view').css('background-size','100% 100%');
 
 
+            console.log(dataURL);
+
             $("#userImg").attr("src", dataURL);
 
+
             $.ajax({
-                url: "__CONTROLLER__/douploadtouxiang",
+                url: "/index.php/Home/Origanization/douploadtouxiang",
                 type: "POST",
                 data: {
                     img: dataURL
@@ -274,13 +342,13 @@
                     {
                         layer.msg('修改成功');
                         console.log(data.url)
-                    }else{
-                        layer.msg(data.errorInfo);
                     }
                 },
                 async:false
             });
             return false;
+
+
 
         }
     });
@@ -288,6 +356,9 @@
 
 
 
+
+
+    // $('#demo').citys({code:350206});
 
     $(".basic-information .layui-input-block .iconfont").on("click", function () {
         $(this).prev("input").removeAttr("disabled").css("border", "1px solid #bbb");
@@ -318,26 +389,39 @@
     $("#sureBtn1").click(function () {
 
 
-        var community_name = $("input[name='community_name']").val();
+        var origanization_name = $("input[name='origanization_name']").val();
+        var province = $("select[name='province']")[0].value;
+        var city = $("select[name='city']")[0].value;
+        var area = $("select[name='area']")[0].value;
+        var address = $("input[name='address']").val();
         var tel_code = $("input[name='tel_code']").val();
         var phone = $("input[name='phone']").val();
         var introduce = $("#textareaIntro").val();
 
+
+       /* console.log(origanization_name);
+        console.log(province);
+        console.log(city);
+        console.log(area);
+        console.log(address);
         console.log(tel_code);
         console.log(phone);
-        console.log(introduce);
+        console.log(introduce);*/
 
-        if( community_name == ""){
-            layer.msg('请填写社区名');
+        if( origanization_name == ""){
+            layer.msg('请填写社会组织名');
             return false;
         }
 
-
         $.ajax({
-            url: "__CONTROLLER__/updateCommunityInfo",
+            url: "/index.php/Home/Origanization/updateOriganizationInfo",
             type: "POST",
             data: {
-                community_name : community_name,
+                origanization_name : origanization_name,
+                province : province,
+                city : city,
+                area : area,
+                address : address,
                 tel_code : tel_code,
                 phone : phone,
                 introduce : introduce
@@ -348,14 +432,16 @@
                 if(data.state == 1) {
                     layer.msg('修改成功');
                 }
+
             },
             async:false
         });
         return false;
+
     });
 
     $.ajax({
-      url: "__CONTROLLER__/getcommunityimgs",
+      url: "/index.php/Home/Origanization/getoriganizationimgs",
       type: "get",
       data:{},
       dataType:"json",
@@ -365,24 +451,25 @@
         {
           $("#imghead").attr('src',data);
         }else{
-          $("#imghead").attr('src','__PUBLIC__/Home/imgs/a11.png')
+          $("#imghead").attr('src','/Public/Home/imgs/a11.png')
         }
       }
     })
     $("#sureBtn3").click(function () {
 
         var file = $("#imghead").attr("src");
-
         console.log(file);
 
         $.ajax({
-            url: "__CONTROLLER__/uploadcommunityimgs",
+            url: "/index.php/Home/Origanization/uploadoriganizationimgs",
             type: "POST",
             data: {
                 file : file
             },
             dataType: "json",
             success: function (data) {
+
+               // console.log(data);
 
                 if(data.state == 1) {
                     layer.msg('上传成功');
@@ -397,9 +484,35 @@
 
 
 
+
+
+    layui.use(['laypage', 'layer'], function(){
+        var laypage = layui.laypage
+                ,layer = layui.layer;
+
+        //执行一个laypage实例
+        laypage.render({
+            elem: 'pagination'
+            ,count: 70 //数据总数，从服务端得到
+            ,jump: function(obj, first){
+                //obj包含了当前分页的所有参数，比如：
+                //console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
+               // console.log(obj.limit); //得到每页显示的条数
+                //console.log("page");
+
+                //首次不执行
+                if(!first){
+                    //do something
+                }
+            }
+        });
+    });
+
+
+
     /*社会组织员工管理  */
     $.ajax({
-        url: "__CONTROLLER__/getStaffList",
+        url: "/index.php/Home/Origanization/getStaffList",
         type: "get",
         data: {
             page : 1
@@ -412,17 +525,18 @@
             for(var i = 0; i < data.data.length; i ++) {
 
                 html += '<tr>' +
-                        '<td>'+ data.data[i].sjy_community_user_real_name +'</td>' +
-                        '<td class = "sjy_community_login_id">'+ data.data[i].sjy_community_login_id+'</td>' +
-                        '<td>'+ data.data[i].sjy_community_user_email +'</td>' +
+                        '<td>'+ data.data[i].sjy_origanization_user_real_name +'</td>' +
+                        '<td class = "sjy_origanization_login_id">'+ data.data[i].sjy_origanization_login_id +'</td>' +
+                        '<td>'+ data.data[i].sjy_origanization_user_email +'</td>' +
+                        '<td>'+ data.data[i].sjy_origanization_user_wechat +'</td>' +
                         '<td>' +
-                        '<a class="layui-btn layui-btn-primary layui-btn-xs">查看</a>' +
+                        // '<a class="layui-btn layui-btn-primary layui-btn-xs">查看</a>' +
                         '<a class="layui-btn layui-btn-xs">编辑</a>' +
                         '<a class="layui-btn layui-btn-danger layui-btn-xs deleteEmployees" href = "javascript:;">删除</a>' +
                         '</td>' +
                         '</tr>';
 
-                //  console.log(i);
+              //  console.log(i);
 
             }
 
@@ -432,13 +546,13 @@
 
                 //console.log( $(this).parents("tr") );
 
-                var phone =   $(this).parents("tr").children(".sjy_community_login_id").text();
-                //  console.log(phone);
+               var phone =   $(this).parents("tr").children(".sjy_origanization_login_id").text();
+              //  console.log(phone);
 
                 $(this).parents("tr").remove();
 
                 $.ajax({
-                    url: "http://120.24.242.45/shejuyi/index.php/Home/Communityback/delStaff",
+                    url: "/index.php/Home/Origanization/delStaff",
                     type: "POST",
                     data: {
                         phone : phone
@@ -460,6 +574,16 @@
         },
         async:false
     });
+
+
+
+
+
+
+
+
+
+
 
 
 

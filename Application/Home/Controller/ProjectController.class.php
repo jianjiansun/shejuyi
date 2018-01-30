@@ -72,6 +72,12 @@
             $projectinfo['project_image'] = M('origanization_project_image')->where(array('sjy_origanization_project_id'=>$id))->select();
             $this->ajaxReturn($projectinfo);
         }
+        //社区项目管理页面展示
+        public function communityProjectManger()
+        {
+        	$this->display();
+        }
+        
 
 	}
 ?>

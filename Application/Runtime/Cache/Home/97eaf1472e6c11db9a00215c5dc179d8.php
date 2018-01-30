@@ -1,18 +1,34 @@
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EasyLife</title>
+    <link rel="stylesheet" href="/Public/Home/css/bootstrap.css">
+    <link rel="stylesheet" href="/Public/Home/css/common.css">
+    <link rel="stylesheet" href="/Public/Home/css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+    <script src="/Public/Home/js/jquery-1.12.4.js"></script>
+    <script src="/Public/Home/js/bootstrap.js"></script>
+    <script src = "/Public/Home/js/autoResizeImage.js"></script>
 
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/chooseCity.css">
+
+    <link rel="stylesheet" href="/Public/Home/css/region.css">
+    <link rel="stylesheet" href="/Public/Home/css/layui.css">
+    <link rel="stylesheet" href="/Public/Home/css/page2.css">
+    <link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
   
-    <script src = "__PUBLIC__/Home/js/layui.js"></script>
-    <script src = "__PUBLIC__/Home/js/layui.all.js"></script>
-    <script src = "__PUBLIC__/Home/js/upLoadImgBig.js"></script>
+    <script src = "/Public/Home/js/layui.js"></script>
+    <script src = "/Public/Home/js/layui.all.js"></script>
+    <script src = "/Public/Home/js/upLoadImgBig.js"></script>
 
 
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/hammer.js" type="text/javascript" charset="utf-8"></script>
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/Public/Home/js/plugins/cover_js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/Public/Home/js/plugins/cover_js/hammer.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/Public/Home/js/plugins/cover_js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/Public/Home/js/plugins/cover_js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
 
 
 
@@ -23,11 +39,11 @@
 <div class = "headLogin">
     <div class = "container">
         <div class = "left changeBan logoPer">
-            <img src="__PUBLIC__/Home/imgs/logo.png" alt="">
+            <img src="/Public/Home/imgs/logo.png" alt="">
             <span>社居易</span>
         </div>
         <div class="right person">
-           <!--<img src="__PUBLIC__/Home/imgs/personDl.jpg" alt="">-->
+           <!--<img src="/Public/Home/imgs/personDl.jpg" alt="">-->
         </div>
     </div>
 </div>
@@ -40,7 +56,7 @@
                 <div class="col-md-2 column  perperson">
                     <h2>个人信息</h2>
                     <div>
-                        <img id = "userImg" src="{$user_image}" alt="  ">
+                        <img id = "userImg" src="<?php echo ($user_image); ?>" alt="  ">
                         <!--用户图片更换-->
                         <div class = "cropImgBox"  ontouchstart="">
                             <div class="cover-wrap">
@@ -60,17 +76,17 @@
 
                     <ul class="person-ul">
                         <li>
-                            <a href="__CONTROLLER__/communityIdentify">认证状态</a>
+                            <a href="/index.php/Home/Community/communityIdentify">认证状态</a>
                         </li>
 
                         <li>
-                            <a href="__CONTROLLER__/personInfo">账号设置</a>
+                            <a href="/index.php/Home/Community/personInfo">账号设置</a>
                         </li>
                         <li>
-                            <a class = "on" href="__CONTROLLER__/myCommunity">我的社区</a>
+                            <a class = "on" href="/index.php/Home/Community/myCommunity">我的社区</a>
                         </li>
                         <li>
-                            <a href="__MODULE__/Project/communityProjectManger">我的项目</a>
+                            <a href="personal4.html">我的项目</a>
                         </li>
                         <li>
                             <a href="">我的消息</a>
@@ -184,7 +200,7 @@
                                         <section class=" img-section">
                                             <p class="up-p">机构风采：<span class="up-span">上传一张图片</span></p>
                                             <div id="preview" class = "testImg">
-                                                <img id="imghead"  border=0 src='__PUBLIC__/Home/imgs/a11.png'>
+                                                <img id="imghead"  border=0 src='/Public/Home/imgs/a11.png'>
                                             </div>
 
                                             <div class = "uploadBtn">
@@ -214,14 +230,14 @@
     </div>
 </div>
 </body>
-<script src = "__PUBLIC__/Home/js/cityBoxShow.js"></script>
+<script src = "/Public/Home/js/cityBoxShow.js"></script>
 
 
 <script>
 
     //初始化信息显示
     $.ajax({
-        url: "__CONTROLLER__/getCommunityInfo",
+        url: "/index.php/Home/Community/getCommunityInfo",
         type: "POST",
         data: {},
         dataType: "json",
@@ -263,7 +279,7 @@
             $("#userImg").attr("src", dataURL);
 
             $.ajax({
-                url: "__CONTROLLER__/douploadtouxiang",
+                url: "/index.php/Home/Community/douploadtouxiang",
                 type: "POST",
                 data: {
                     img: dataURL
@@ -334,7 +350,7 @@
 
 
         $.ajax({
-            url: "__CONTROLLER__/updateCommunityInfo",
+            url: "/index.php/Home/Community/updateCommunityInfo",
             type: "POST",
             data: {
                 community_name : community_name,
@@ -355,7 +371,7 @@
     });
 
     $.ajax({
-      url: "__CONTROLLER__/getcommunityimgs",
+      url: "/index.php/Home/Community/getcommunityimgs",
       type: "get",
       data:{},
       dataType:"json",
@@ -365,7 +381,7 @@
         {
           $("#imghead").attr('src',data);
         }else{
-          $("#imghead").attr('src','__PUBLIC__/Home/imgs/a11.png')
+          $("#imghead").attr('src','/Public/Home/imgs/a11.png')
         }
       }
     })
@@ -376,7 +392,7 @@
         console.log(file);
 
         $.ajax({
-            url: "__CONTROLLER__/uploadcommunityimgs",
+            url: "/index.php/Home/Community/uploadcommunityimgs",
             type: "POST",
             data: {
                 file : file
@@ -399,7 +415,7 @@
 
     /*社会组织员工管理  */
     $.ajax({
-        url: "__CONTROLLER__/getStaffList",
+        url: "/index.php/Home/Community/getStaffList",
         type: "get",
         data: {
             page : 1
