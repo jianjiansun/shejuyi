@@ -227,7 +227,8 @@
         		$this->ajaxReturn($res);
         	}else{
         		//执行项目书发送
-        		$this->file_upload($project_id,$project_info);
+        		$val = $this->file_upload($project_id,$project_info);
+        		$this->ajaxReturn($val);
         	}
         }
         //检测该机构是否可以投递该项目
@@ -308,6 +309,8 @@
 	    	$origanization_id = session("userInfo")["sjy_origanization_user_origanization_code"];
 	    	//将信息插入sjy_project表  首先去找有没有该条记录，有并且status=1，则不操作sjy_project表 除此之外则操作该表
 	    	$isupload = M("project")->where(array("project_id"=>$project_id,"community_id"=>$community_id,"origanization_id"=>$origanization_id))->find();
+	    	$model = new Model();
+            $model->startTrans();
 	    	//需要新增 之前没有项目联系过
 	    	if(empty($isupload))
 	    	{
@@ -317,7 +320,7 @@
 		    	$data['status'] = 1;  //已经发送项目书
 	    		$res = M("project")->add($data);
 	    	}else{
-	    		
+	    		$res = true;
 	    	}
 	    	//将信息插入项目书表
 	    	$param['sjy_project_id'] = $project_id;
@@ -329,7 +332,16 @@
             $param['project_book_send_people'] = session('userInfo')['sjy_origanization_user_real_name'];  //项目书发送者
             $param['project_book_send_people_id'] = session('userInfo')['sjy_id'];  //发送者id            
 	    	$val = M('project_book')->add($param);
-	    	$this->ajaxReturn(array("state"=>1,"errorInfo"=>"发送成功"));
+		    if ($res&&$val){
+			    // 提交事务
+			    $model->commit(); 
+			    return array("state"=>1,"errorInfo"=>"发送成功"));
+			}else{
+			    // 事务回滚
+			    $model->rollback(); 
+			    return array("state"=>7,"errorInfo"=>"系统错误,请重试"));
+			}
+	    	
 	    }
 	}
 ?>
