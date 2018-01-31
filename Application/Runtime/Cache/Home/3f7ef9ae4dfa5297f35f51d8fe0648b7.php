@@ -1,26 +1,42 @@
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EasyLife</title>
+    <link rel="stylesheet" href="/Public/Home/css/bootstrap.css">
+    <link rel="stylesheet" href="/Public/Home/css/common.css">
+    <link rel="stylesheet" href="/Public/Home/css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+    <script src="/Public/Home/js/jquery-1.12.4.js"></script>
+    <script src="/Public/Home/js/bootstrap.js"></script>
+    <script src = "/Public/Home/js/autoResizeImage.js"></script>
 
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
+
+    <link rel="stylesheet" href="/Public/Home/css/region.css">
+    <link rel="stylesheet" href="/Public/Home/css/layui.css">
+    <link rel="stylesheet" href="/Public/Home/css/page2.css">
    
-    <script src = "__PUBLIC__/Home/js/layui.js"></script>
-    <script src = "__PUBLIC__/Home/js/layui.all.js"></script>
+    <script src = "/Public/Home/js/layui.js"></script>
+    <script src = "/Public/Home/js/layui.all.js"></script>
 
 
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/hammer.js" type="text/javascript" charset="utf-8"></script>
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/Public/Home/js/plugins/cover_js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/Public/Home/js/plugins/cover_js/hammer.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/Public/Home/js/plugins/cover_js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/Public/Home/js/plugins/cover_js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <div class = "headLogin">
     <div class = "container">
         <div class = "left changeBan logoPer">
-            <img src="__PUBLIC__/Home/imgs/logo.png" alt="">
+            <img src="/Public/Home/imgs/logo.png" alt="">
             <span>社居易</span>
         </div>
         <div class="right person">
-           <!-- <img src="__PUBLIC__/Home/imgs/personDl.jpg" alt="">-->
+           <!-- <img src="/Public/Home/imgs/personDl.jpg" alt="">-->
         </div>
     </div>
 </div>
@@ -33,7 +49,7 @@
                 <div class="col-md-2 column  perperson">
                     <h2>个人信息</h2>
                     <div>
-                        <img id = "userImg" src="{$user_image}" alt="  ">
+                        <img id = "userImg" src="<?php echo ($user_image); ?>" alt="  ">
                         <!--用户图片更换-->
                         <div class = "cropImgBox"  ontouchstart="">
                             <div class="cover-wrap">
@@ -53,17 +69,17 @@
 
                     <ul class="person-ul">
                         <li>
-                            <a href="__MODULE__/Origanization/origanizationIdentify">认证状态</a>
+                            <a href="/index.php/Home/Origanization/origanizationIdentify">认证状态</a>
                         </li>
 
                         <li>
-                            <a href="__MODULE__/Origanization/personInfo">账号设置</a>
+                            <a href="/index.php/Home/Origanization/personInfo">账号设置</a>
                         </li>
                         <li>
-                            <a href="__MODULE__/Origanization/myOriganization">我的机构</a>
+                            <a href="/index.php/Home/Origanization/myOriganization">我的机构</a>
                         </li>
                         <li>
-                            <a  class = "on" href="__MODULE__/Project/origanizationProjectManger">我的项目</a>
+                            <a  class = "on" href="/index.php/Home/Project/origanizationProjectManger">我的项目</a>
                         </li>
                         <li>
                             <a href="">我的消息</a>
@@ -493,7 +509,7 @@
             $("#userImg").attr("src", dataURL);
 
             $.ajax({
-                url: "__MODULE__/Origanization/douploadtouxiang",
+                url: "/index.php/Home/Origanization/douploadtouxiang",
                 type: "POST",
                 data: {
                     img: dataURL

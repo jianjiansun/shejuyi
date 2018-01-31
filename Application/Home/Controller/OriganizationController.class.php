@@ -1302,30 +1302,6 @@
                 $res['count'] = count($project_book);
                 $this->ajaxReturn($res);
             }
-            //待批复的项目 社区同意 社会组织选择同意或拒绝
-            public function waitdelproject()
-            {
-              // status 2
-              $origanization_id = session('userInfo')['sjy_origanization_user_origanization_code'];
-              $info = M('project')->where(array('origanization_id'=>$origanization_id,'status'=>2))->select();
-              $i = 0;
-              foreach($info as $key=>$value)
-              {
-                $i++;
-                $info[$key]['id'] = $i;
-                //项目信息
-                $tmp = M('community_project_info')->where(array('sjy_id'=>$value['project_id']))->find();
-                $info[$key]['project_name']= $tmp['sjy_community_project_title'];
-                $info[$key]['community_name']= M('community_base_info')->where(array('sjy_id'=>$value['community_id']))->getField('sjy_community_name');
-                $info[$key]['collect_times'] = $tmp['sjy_community_project_collect_start_time'].'~'.$tmp['sjy_community_project_collect_end_time'];
-                $info[$key]['project_times'] = $tmp['sjy_community_project_start_time'].'~'.$tmp['sjy_community_project_end_time'];
-              }
-              $res['data'] = $info;
-              $res['code'] = 0;
-              $res['msg'] = '';
-              $res['count'] = count($info);
-              $this->ajaxReturn($res);
-            }
 	   
 	        //下载项目书
 	    public function dodownprojectbook()
@@ -1356,26 +1332,6 @@
 	    	
   			  
 	    }
-	    //切换到社区版
-	   public function changetocommunity()
-	   {
-		//取出登录手机号
-		$user_login_id = session('userInfo')['sjy_origanization_login_id'];
-		//注销当前社会组织账号
-	        session('userInfo',null);
-		//根据手机号查询该用户是否在社区用户列表
-		$res = M('community_user_info')->where(array('sjy_community_login_id'=>$user_login_id))->find();
-	        if(empty($res))
-		{
-		    $data = array('sjy_community_login_id'=>$user_login_id);
-		    $val = M('community_user_info')->add($data);
-		    $info = M('community_user_info')->where(array('sjy_community_login_id'=>$user_login_id))->find();
-		    session('userInfo',$info);
-		}else{
-		    session('userInfo',$res);
-		}
-		header("Location:".__MODULE__."/Community/index");
-	   }
 	    //注销
         public function logout()
 	    {
@@ -1408,50 +1364,6 @@
 		 $this->ajaxReturn(1); 
              }	
           }
-	  //社会组织拒绝
-         public function refuseproject()
-	 {
-	    $project_id = I('post.id');
-            //更新项目状态
-            $data['status'] = -3; //社会组织拒绝项目
-            $res = M('project')->where(array('sjy_id'=>$project_id))->save($data);
-            if($res)
-	    {
-                $this->ajaxReturn(1);
-            }
-         }
-         //正在进行的项目
-         public function ingproject()
-         {
-	     // status 10-98
-            $origanization_id = session('userInfo')['sjy_origanization_user_origanization_code'];
-            $info = M('project')->where(array('origanization_id'=>$origanization_id,'status'=>array('between',[10,98])))->select();
-            $i = 0;
-            foreach($info as $key=>$value)
-            {
-                //项目信息
-                $i++;
-                $info[$key]['id'] = $i;
-                $tmp = M('community_project_info')->where(array('sjy_id'=>$value['project_id']))->find();
-                $info[$key]['project_title'] = $tmp['sjy_community_project_title'];
-                $info[$key]['project_times'] = $tmp['sjy_community_project_start_time'].'~'.$tmp['sjy_community_project_end_time'];
-                $info[$key]['community_name'] = M('community_base_info')->where(array('sjy_id'=>$value['community_id']))->getField('sjy_community_name');
-            }
-            $res['data'] = $info;
-            $res['code'] = 0;
-            $res['msg'] = '';
-            $res['count'] = count($info);
-            $this->ajaxReturn($res);
-           
-         }
-         //编辑项目进度
-        public function editprojectrate()
-        {
-                $project_id = I('get.project_id');
-                $this->assign("project_id",$project_id);
-    
-		$this->display();
-        }
 	    //增加项目进度
         public function doaddprojectrate()
         {
@@ -1495,58 +1407,6 @@
             $res = M('project')->where(array('sjy_id'=>$id))->save(array('status'=>99,'project_apply_end_time'=>$date));
             $this->ajaxReturn(1);
         } 
-        //已经结束的项目
-        public function endproject()
-        {
-            $origanization_id  = session('userInfo')['sjy_origanization_user_origanization_code'];
-            //查找已完成的项目
-            $endproject = M('project')->where(array('origanization_id'=>$origanization_id,'status'=>100))->select();
-            //查询项目信息和社区信息
-           $i = 0;
-           foreach($endproject as $key=>$value)
-           {
-               //项目信息
-                 $i++;
-                $tmp=M('community_project_info')->find($value['project_id']);  //项目信息
-             $endproject[$key]['ID'] = $i;
- 
-             $endproject[$key]['sjy_community_project_title']= $tmp['sjy_community_project_title'];
-             $endproject[$key]['sjy_community_project_service_area']= $tmp['sjy_community_project_service_area'];
-             
-              $endproject[$key]['sjy_community_name'] = M('community_base_info')->where(array('sjy_id'=>$value['community_id']))->getField('sjy_community_name');
-
-           }
-            $data['data'] = $endproject;
-           $data['code'] = 0;
-           $data['msg'] = '';
-           $data['count'] = count($endproject);
-           $this->ajaxReturn($data);
-
-        }
-        //结项目申请的项目
-        public  function waitendproject()
-        {
-         //status 99            
-         $origanization_id  = session('userInfo')['sjy_origanization_user_origanization_code'];
-         //查找已完成的项目
-         $info = M('project')->where(array('origanization_id'=>$origanization_id,'status'=>99))->select();
-         $i = 0;
-         foreach($info as $key=>$value)
-         {
-             $i++;
-             $info[$key]['id'] = $i;
-             //项目信息
-             $tmp = M('community_project_info')->find($value['project_id']);
-             $info[$key]['project_title'] = $tmp['sjy_community_project_title'];
-             $info[$key]['community_name'] = M('community_base_info')->where(array('sjy_id'=>$value['community_id']))->getField('sjy_community_name');
-             
-         }
-         $res['data'] = $info;
-         $res['code'] = 0;
-         $res['msg'] = '';
-         $res['count'] = count($info);
-         $this->ajaxReturn($res);
-        }
         //身份证号是否重复
         public function checkidnumber($idnumber)
         {

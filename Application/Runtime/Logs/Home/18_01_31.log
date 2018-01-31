@@ -1,0 +1,2321 @@
+[ 2018-01-31T09:21:26+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-31T09:21:32+08:00 ] 127.0.0.1 /index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0980s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '15620608137' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0800s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '15620608137' LIMIT 1   [ RunTime:0.0930s ]
+
+[ 2018-01-31T09:21:32+08:00 ] 127.0.0.1 /index.php/Home/Origanization/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0840s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0910s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0580s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0840s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-01-31T09:21:34+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getprojectlist/page/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0540s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0620s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0640s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0640s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_community_project_info` [ RunTime:0.0660s ]
+SQL: SELECT * FROM `sjy_community_project_info` WHERE `cityid` = 110000 LIMIT 0,10   [ RunTime:0.0580s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_community_project_info` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0500s ]
+
+[ 2018-01-31T09:21:37+08:00 ] 127.0.0.1 /index.php/Home/Origanization/changeProvice.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0600s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0570s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0500s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0580s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-31T09:21:40+08:00 ] 127.0.0.1 /index.php/Home/Origanization/setcity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0670s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0720s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0790s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0770s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+
+[ 2018-01-31T09:21:41+08:00 ] 127.0.0.1 /index.php/Home/Origanization/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0500s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0720s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0470s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0630s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-31T09:21:42+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getprojectlist/page/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0670s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0830s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.1350s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0960s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_community_project_info` [ RunTime:0.0620s ]
+SQL: SELECT * FROM `sjy_community_project_info` WHERE `cityid` = 120000 LIMIT 0,10   [ RunTime:0.0690s ]
+SQL: SHOW COLUMNS FROM `sjy_community_base_info` [ RunTime:0.0810s ]
+SQL: SELECT * FROM `sjy_community_base_info` WHERE `sjy_id` = 29 LIMIT 1   [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `sjy_community_position_info` [ RunTime:0.0730s ]
+SQL: SELECT * FROM `sjy_community_position_info` WHERE `sjy_community_id` = '29' LIMIT 1   [ RunTime:0.0610s ]
+SQL: SHOW COLUMNS FROM `sjy_community_project_image` [ RunTime:0.0570s ]
+SQL: SELECT `sjy_community_project_image` FROM `sjy_community_project_image` WHERE `sjy_community_project_id` = 40 LIMIT 1   [ RunTime:0.0660s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_community_project_info` WHERE `cityid` = 120000 LIMIT 1   [ RunTime:0.0720s ]
+
+[ 2018-01-31T09:21:49+08:00 ] 127.0.0.1 /index.php/Home/Origanization/origanizationIdentify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0590s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0810s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0990s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0580s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SELECT `phonecode` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0860s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_type` [ RunTime:0.0700s ]
+SQL: SELECT * FROM `sjy_origanization_type`  [ RunTime:0.0680s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-31T09:21:52+08:00 ] 127.0.0.1 /index.php/Home/Origanization/personInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.1270s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0700s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0640s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0700s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-31T09:21:53+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getpersoninfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0560s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0560s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0720s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0640s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0890s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0600s ]
+SQL: SELECT `sjy_origanization_name` FROM `sjy_origanization_base_info` WHERE `sjy_id` = 23 LIMIT 1   [ RunTime:0.0550s ]
+
+[ 2018-01-31T09:21:56+08:00 ] 127.0.0.1 /index.php/Home/Origanization/myOriganization
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0470s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0740s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0710s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0510s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-31T09:21:57+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getOriganizationInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0670s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0870s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0590s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0800s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0730s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 23 LIMIT 1   [ RunTime:0.0730s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0890s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '23' LIMIT 1   [ RunTime:0.0870s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_images` [ RunTime:0.0790s ]
+SQL: SELECT `sjy_origanization_images` FROM `sjy_origanization_images` WHERE `sjy_origanization_code` = '23' LIMIT 1   [ RunTime:0.0660s ]
+
+[ 2018-01-31T09:21:58+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getoriganizationimgs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0890s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0780s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0640s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0700s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_images` [ RunTime:0.0570s ]
+SQL: SELECT `sjy_origanization_images` FROM `sjy_origanization_images` WHERE `sjy_origanization_code` = '23' LIMIT 1   [ RunTime:0.0710s ]
+
+[ 2018-01-31T09:21:59+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getStaffList?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0750s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0730s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0860s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0660s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SELECT `sjy_origanization_login_id`,`sjy_origanization_user_wechat`,`sjy_origanization_user_real_name`,`sjy_origanization_user_email` FROM `sjy_origanization_user_info` WHERE `sjy_origanization_user_origanization_code` = '23' LIMIT 0,15   [ RunTime:0.0840s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_origanization_user_info` WHERE `sjy_origanization_user_origanization_code` = '23' LIMIT 1   [ RunTime:0.0740s ]
+
+[ 2018-01-31T09:24:05+08:00 ] 127.0.0.1 /index.php/Home/Project/origanizationProjectManger
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0820s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0670s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0550s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0720s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-31T09:24:30+08:00 ] 127.0.0.1 /index.php/Home/Origanization/myOriganization
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0720s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0690s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0630s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0810s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-31T09:24:31+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getOriganizationInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0750s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0710s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0680s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0500s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0820s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 23 LIMIT 1   [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0650s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '23' LIMIT 1   [ RunTime:0.0790s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_images` [ RunTime:0.0570s ]
+SQL: SELECT `sjy_origanization_images` FROM `sjy_origanization_images` WHERE `sjy_origanization_code` = '23' LIMIT 1   [ RunTime:0.0870s ]
+
+[ 2018-01-31T09:24:32+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getoriganizationimgs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.014000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0730s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0700s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0560s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0620s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_images` [ RunTime:0.0820s ]
+SQL: SELECT `sjy_origanization_images` FROM `sjy_origanization_images` WHERE `sjy_origanization_code` = '23' LIMIT 1   [ RunTime:0.0640s ]
+
+[ 2018-01-31T09:24:32+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getStaffList?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0660s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0490s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0710s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0710s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SELECT `sjy_origanization_login_id`,`sjy_origanization_user_wechat`,`sjy_origanization_user_real_name`,`sjy_origanization_user_email` FROM `sjy_origanization_user_info` WHERE `sjy_origanization_user_origanization_code` = '23' LIMIT 0,15   [ RunTime:0.0510s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_origanization_user_info` WHERE `sjy_origanization_user_origanization_code` = '23' LIMIT 1   [ RunTime:0.0650s ]
+
+[ 2018-01-31T09:26:29+08:00 ] 127.0.0.1 /index.php/Home/Project/origanizationProjectManger
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0660s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0500s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0480s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0880s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-01-31T10:21:04+08:00 ] 127.0.0.1 /index.php/Home/Project/origanizationProjectManger
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0520s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0720s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0640s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0870s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-01-31T10:54:18+08:00 ] 127.0.0.1 /index.php/Home/Project/origanizationProjectManger
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.1170s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0730s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0670s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0790s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-01-31T11:36:53+08:00 ] 127.0.0.1 /index.php/Home/Project/origanizationProjectManger
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0500s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0800s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0710s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0940s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-31T11:37:03+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getOriganizationInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.1020s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0490s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0490s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0610s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0560s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 23 LIMIT 1   [ RunTime:0.0820s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0640s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '23' LIMIT 1   [ RunTime:0.0710s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_images` [ RunTime:0.0810s ]
+SQL: SELECT `sjy_origanization_images` FROM `sjy_origanization_images` WHERE `sjy_origanization_code` = '23' LIMIT 1   [ RunTime:0.0740s ]
+
+[ 2018-01-31T11:37:04+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getoriganizationimgs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0760s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0820s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0650s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_images` [ RunTime:0.0660s ]
+SQL: SELECT `sjy_origanization_images` FROM `sjy_origanization_images` WHERE `sjy_origanization_code` = '23' LIMIT 1   [ RunTime:0.0690s ]
+
+[ 2018-01-31T11:37:05+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getStaffList?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0670s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0720s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0710s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0720s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SELECT `sjy_origanization_login_id`,`sjy_origanization_user_wechat`,`sjy_origanization_user_real_name`,`sjy_origanization_user_email` FROM `sjy_origanization_user_info` WHERE `sjy_origanization_user_origanization_code` = '23' LIMIT 0,15   [ RunTime:0.1000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_origanization_user_info` WHERE `sjy_origanization_user_origanization_code` = '23' LIMIT 1   [ RunTime:0.0660s ]
+
+[ 2018-01-31T11:53:40+08:00 ] 127.0.0.1 /index.php/Home/Origanization/origanizationIdentify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0590s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0780s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0570s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0850s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SELECT `phonecode` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0710s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_type` [ RunTime:0.0660s ]
+SQL: SELECT * FROM `sjy_origanization_type`  [ RunTime:0.0550s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-31T11:53:43+08:00 ] 127.0.0.1 /index.php/Home/Origanization/personInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0640s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0570s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0820s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0780s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-31T11:53:45+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getpersoninfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0880s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0730s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0860s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.3400s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0860s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0920s ]
+SQL: SELECT `sjy_origanization_name` FROM `sjy_origanization_base_info` WHERE `sjy_id` = 23 LIMIT 1   [ RunTime:0.0810s ]
+
+[ 2018-01-31T11:59:55+08:00 ] 127.0.0.1 /index.php/Home/Origanization/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0650s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0620s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0570s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+ERR: 非法操作:main
+
+[ 2018-01-31T11:59:58+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getpersoninfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0600s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0860s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0730s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0750s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0580s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0670s ]
+SQL: SELECT `sjy_origanization_name` FROM `sjy_origanization_base_info` WHERE `sjy_id` = 23 LIMIT 1   [ RunTime:0.0740s ]
+
+[ 2018-01-31T12:00:25+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getOriganizationInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0730s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0870s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0800s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0560s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0670s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 23 LIMIT 1   [ RunTime:0.0700s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0810s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '23' LIMIT 1   [ RunTime:0.0820s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_images` [ RunTime:0.0850s ]
+SQL: SELECT `sjy_origanization_images` FROM `sjy_origanization_images` WHERE `sjy_origanization_code` = '23' LIMIT 1   [ RunTime:0.0790s ]
+
+[ 2018-01-31T12:00:26+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getStaffList?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0580s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0790s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0610s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0690s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SELECT `sjy_origanization_login_id`,`sjy_origanization_user_wechat`,`sjy_origanization_user_real_name`,`sjy_origanization_user_email` FROM `sjy_origanization_user_info` WHERE `sjy_origanization_user_origanization_code` = '23' LIMIT 0,15   [ RunTime:0.0640s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_origanization_user_info` WHERE `sjy_origanization_user_origanization_code` = '23' LIMIT 1   [ RunTime:0.0640s ]
+
+[ 2018-01-31T12:00:26+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getoriganizationimgs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0750s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0840s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0710s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0880s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_images` [ RunTime:0.0720s ]
+SQL: SELECT `sjy_origanization_images` FROM `sjy_origanization_images` WHERE `sjy_origanization_code` = '23' LIMIT 1   [ RunTime:0.0700s ]
+
+[ 2018-01-31T12:00:28+08:00 ] 127.0.0.1 /index.php/Home/Origanization/myOriganization
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0720s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0620s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0590s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0710s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-31T12:00:29+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getOriganizationInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0750s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0740s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0770s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0720s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0820s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 23 LIMIT 1   [ RunTime:0.0780s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0590s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '23' LIMIT 1   [ RunTime:0.0720s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_images` [ RunTime:0.0750s ]
+SQL: SELECT `sjy_origanization_images` FROM `sjy_origanization_images` WHERE `sjy_origanization_code` = '23' LIMIT 1   [ RunTime:0.0790s ]
+
+[ 2018-01-31T12:00:30+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getoriganizationimgs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0950s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0580s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0720s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_images` [ RunTime:0.0700s ]
+SQL: SELECT `sjy_origanization_images` FROM `sjy_origanization_images` WHERE `sjy_origanization_code` = '23' LIMIT 1   [ RunTime:0.0800s ]
+
+[ 2018-01-31T12:00:31+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getStaffList?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0900s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0740s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0740s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0860s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SELECT `sjy_origanization_login_id`,`sjy_origanization_user_wechat`,`sjy_origanization_user_real_name`,`sjy_origanization_user_email` FROM `sjy_origanization_user_info` WHERE `sjy_origanization_user_origanization_code` = '23' LIMIT 0,15   [ RunTime:0.0730s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_origanization_user_info` WHERE `sjy_origanization_user_origanization_code` = '23' LIMIT 1   [ RunTime:0.0480s ]
+
+[ 2018-01-31T12:00:42+08:00 ] 127.0.0.1 /index.php/Home/Origanization/updateOriganizationInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0840s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0780s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0720s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0660s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 23 LIMIT 1   [ RunTime:0.0520s ]
+SQL: UPDATE `sjy_origanization_base_info` SET `sjy_origanization_introduce`='天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心' WHERE `sjy_id` = 23 [ RunTime:1.0670s ]
+SQL: SHOW COLUMNS FROM `sjy_provinces` [ RunTime:0.0570s ]
+SQL: SELECT `province` FROM `sjy_provinces` WHERE `provinceid` = '120000' LIMIT 1   [ RunTime:0.0730s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0700s ]
+SQL: SHOW COLUMNS FROM `sjy_areas` [ RunTime:0.0510s ]
+SQL: SELECT `area` FROM `sjy_areas` WHERE `areaid` = '120105' LIMIT 1   [ RunTime:0.0710s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0650s ]
+SQL: UPDATE `sjy_origanization_position_info` SET `sjy_origanization_province`='120000',`sjy_origanization_province_name`='天津市',`sjy_origanization_city`='120000',`sjy_origanization_city_name`='天津市',`sjy_origanization_area`='120105',`sjy_origanization_area_name`='河北区',`sjy_origanization_address`='天津城建大学' WHERE `sjy_origanization_id` = '23' [ RunTime:0.3750s ]
+
+[ 2018-01-31T12:00:46+08:00 ] 127.0.0.1 /index.php/Home/Origanization/myoriganization
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0740s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0710s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0800s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0620s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-31T12:00:47+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getOriganizationInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0520s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0720s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0550s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0650s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0730s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 23 LIMIT 1   [ RunTime:0.0560s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0570s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '23' LIMIT 1   [ RunTime:0.0700s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_images` [ RunTime:0.0790s ]
+SQL: SELECT `sjy_origanization_images` FROM `sjy_origanization_images` WHERE `sjy_origanization_code` = '23' LIMIT 1   [ RunTime:0.0710s ]
+
+[ 2018-01-31T12:00:48+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getoriganizationimgs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0570s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0870s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0540s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0730s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_images` [ RunTime:0.0480s ]
+SQL: SELECT `sjy_origanization_images` FROM `sjy_origanization_images` WHERE `sjy_origanization_code` = '23' LIMIT 1   [ RunTime:0.0850s ]
+
+[ 2018-01-31T12:00:49+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getStaffList?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0750s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0490s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.1010s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.1220s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SELECT `sjy_origanization_login_id`,`sjy_origanization_user_wechat`,`sjy_origanization_user_real_name`,`sjy_origanization_user_email` FROM `sjy_origanization_user_info` WHERE `sjy_origanization_user_origanization_code` = '23' LIMIT 0,15   [ RunTime:0.0550s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_origanization_user_info` WHERE `sjy_origanization_user_origanization_code` = '23' LIMIT 1   [ RunTime:0.0570s ]
+
+[ 2018-01-31T12:01:21+08:00 ] 127.0.0.1 /index.php/Home/Origanization/updateOriganizationInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0720s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0630s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0740s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0540s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0630s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 23 LIMIT 1   [ RunTime:0.0660s ]
+SQL: UPDATE `sjy_origanization_base_info` SET `sjy_origanization_introduce`='天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城' WHERE `sjy_id` = 23 [ RunTime:0.4620s ]
+SQL: SHOW COLUMNS FROM `sjy_provinces` [ RunTime:0.0860s ]
+SQL: SELECT `province` FROM `sjy_provinces` WHERE `provinceid` = '120000' LIMIT 1   [ RunTime:0.0720s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `sjy_areas` [ RunTime:0.0960s ]
+SQL: SELECT `area` FROM `sjy_areas` WHERE `areaid` = '120105' LIMIT 1   [ RunTime:0.0700s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0730s ]
+SQL: UPDATE `sjy_origanization_position_info` SET `sjy_origanization_province`='120000',`sjy_origanization_province_name`='天津市',`sjy_origanization_city`='120000',`sjy_origanization_city_name`='天津市',`sjy_origanization_area`='120105',`sjy_origanization_area_name`='河北区',`sjy_origanization_address`='天津城建大学' WHERE `sjy_origanization_id` = '23' [ RunTime:0.4230s ]
+
+[ 2018-01-31T12:01:32+08:00 ] 127.0.0.1 /index.php/Home/Origanization/updateOriganizationInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0720s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0480s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0700s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0640s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0570s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 23 LIMIT 1   [ RunTime:0.0730s ]
+SQL: UPDATE `sjy_origanization_base_info` SET `sjy_origanization_introduce`='天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城' WHERE `sjy_id` = 23 [ RunTime:0.4080s ]
+SQL: SHOW COLUMNS FROM `sjy_provinces` [ RunTime:0.0730s ]
+SQL: SELECT `province` FROM `sjy_provinces` WHERE `provinceid` = '120000' LIMIT 1   [ RunTime:0.0800s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `sjy_areas` [ RunTime:0.0590s ]
+SQL: SELECT `area` FROM `sjy_areas` WHERE `areaid` = '120105' LIMIT 1   [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0890s ]
+SQL: UPDATE `sjy_origanization_position_info` SET `sjy_origanization_province`='120000',`sjy_origanization_province_name`='天津市',`sjy_origanization_city`='120000',`sjy_origanization_city_name`='天津市',`sjy_origanization_area`='120105',`sjy_origanization_area_name`='河北区',`sjy_origanization_address`='天津城建大学' WHERE `sjy_origanization_id` = '23' [ RunTime:0.3320s ]
+
+[ 2018-01-31T12:02:23+08:00 ] 127.0.0.1 /index.php/Home/Origanization/myoriganization
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0740s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.1210s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0830s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0750s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-31T12:02:24+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getOriganizationInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0640s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0870s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0690s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.1170s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0800s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 23 LIMIT 1   [ RunTime:0.1690s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0690s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '23' LIMIT 1   [ RunTime:0.0560s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_images` [ RunTime:0.1180s ]
+SQL: SELECT `sjy_origanization_images` FROM `sjy_origanization_images` WHERE `sjy_origanization_code` = '23' LIMIT 1   [ RunTime:0.0690s ]
+
+[ 2018-01-31T12:02:25+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getoriganizationimgs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.1370s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0830s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0920s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0520s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_images` [ RunTime:0.1080s ]
+SQL: SELECT `sjy_origanization_images` FROM `sjy_origanization_images` WHERE `sjy_origanization_code` = '23' LIMIT 1   [ RunTime:0.0840s ]
+
+[ 2018-01-31T12:02:26+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getStaffList?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0520s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.1100s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0870s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.1120s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SELECT `sjy_origanization_login_id`,`sjy_origanization_user_wechat`,`sjy_origanization_user_real_name`,`sjy_origanization_user_email` FROM `sjy_origanization_user_info` WHERE `sjy_origanization_user_origanization_code` = '23' LIMIT 0,15   [ RunTime:0.0830s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_origanization_user_info` WHERE `sjy_origanization_user_origanization_code` = '23' LIMIT 1   [ RunTime:0.0450s ]
+
+[ 2018-01-31T12:02:35+08:00 ] 127.0.0.1 /index.php/Home/Origanization/updateOriganizationInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0910s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0710s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0630s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0560s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0760s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 23 LIMIT 1   [ RunTime:0.0720s ]
+SQL: UPDATE `sjy_origanization_base_info` SET `sjy_origanization_introduce`='天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城建大学心理健康指导中心天津城' WHERE `sjy_id` = 23 [ RunTime:0.4360s ]
+SQL: SHOW COLUMNS FROM `sjy_provinces` [ RunTime:0.0650s ]
+SQL: SELECT `province` FROM `sjy_provinces` WHERE `provinceid` = '120000' LIMIT 1   [ RunTime:0.0670s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0500s ]
+SQL: SHOW COLUMNS FROM `sjy_areas` [ RunTime:0.0650s ]
+SQL: SELECT `area` FROM `sjy_areas` WHERE `areaid` = '120105' LIMIT 1   [ RunTime:0.0630s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0630s ]
+SQL: UPDATE `sjy_origanization_position_info` SET `sjy_origanization_province`='120000',`sjy_origanization_province_name`='天津市',`sjy_origanization_city`='120000',`sjy_origanization_city_name`='天津市',`sjy_origanization_area`='120105',`sjy_origanization_area_name`='河北区',`sjy_origanization_address`='天津城建大学' WHERE `sjy_origanization_id` = '23' [ RunTime:0.4480s ]
+
+[ 2018-01-31T12:02:38+08:00 ] 127.0.0.1 /index.php/Home/Origanization/myoriganization
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0780s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0500s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0760s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0510s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-31T12:02:40+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getOriganizationInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0610s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0680s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0710s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0710s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0860s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 23 LIMIT 1   [ RunTime:0.0690s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0710s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '23' LIMIT 1   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_images` [ RunTime:0.0570s ]
+SQL: SELECT `sjy_origanization_images` FROM `sjy_origanization_images` WHERE `sjy_origanization_code` = '23' LIMIT 1   [ RunTime:0.0940s ]
+
+[ 2018-01-31T12:02:40+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getoriganizationimgs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0550s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0550s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0640s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0790s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_images` [ RunTime:0.0500s ]
+SQL: SELECT `sjy_origanization_images` FROM `sjy_origanization_images` WHERE `sjy_origanization_code` = '23' LIMIT 1   [ RunTime:0.0860s ]
+
+[ 2018-01-31T12:02:42+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getStaffList?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0500s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0690s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0530s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0800s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SELECT `sjy_origanization_login_id`,`sjy_origanization_user_wechat`,`sjy_origanization_user_real_name`,`sjy_origanization_user_email` FROM `sjy_origanization_user_info` WHERE `sjy_origanization_user_origanization_code` = '23' LIMIT 0,15   [ RunTime:0.0960s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_origanization_user_info` WHERE `sjy_origanization_user_origanization_code` = '23' LIMIT 1   [ RunTime:0.3480s ]
+
+[ 2018-01-31T13:24:39+08:00 ] 127.0.0.1 /index.php/Home/Project/origanizationProjectManger
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0940s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0800s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0800s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0880s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-31T13:34:07+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getOriganizationInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0620s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0710s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0640s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0570s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0570s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 23 LIMIT 1   [ RunTime:0.0910s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0640s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '23' LIMIT 1   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_images` [ RunTime:0.0720s ]
+SQL: SELECT `sjy_origanization_images` FROM `sjy_origanization_images` WHERE `sjy_origanization_code` = '23' LIMIT 1   [ RunTime:0.0510s ]
+
+[ 2018-01-31T13:34:08+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getoriganizationimgs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0670s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0690s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0650s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0660s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_images` [ RunTime:0.0610s ]
+SQL: SELECT `sjy_origanization_images` FROM `sjy_origanization_images` WHERE `sjy_origanization_code` = '23' LIMIT 1   [ RunTime:0.0720s ]
+
+[ 2018-01-31T13:34:09+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getStaffList?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0800s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0700s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0570s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SELECT `sjy_origanization_login_id`,`sjy_origanization_user_wechat`,`sjy_origanization_user_real_name`,`sjy_origanization_user_email` FROM `sjy_origanization_user_info` WHERE `sjy_origanization_user_origanization_code` = '23' LIMIT 0,15   [ RunTime:0.0670s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_origanization_user_info` WHERE `sjy_origanization_user_origanization_code` = '23' LIMIT 1   [ RunTime:0.0630s ]
+
+[ 2018-01-31T13:34:11+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-31T13:34:18+08:00 ] 127.0.0.1 /index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0740s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '15620608137' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0810s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '15620608137' LIMIT 1   [ RunTime:0.0800s ]
+
+[ 2018-01-31T13:34:19+08:00 ] 127.0.0.1 /index.php/Home/Origanization/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0800s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0790s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0800s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0640s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-31T13:34:20+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getprojectlist/page/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0660s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0660s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0780s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0720s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_community_project_info` [ RunTime:0.0590s ]
+SQL: SELECT * FROM `sjy_community_project_info` WHERE `cityid` = 120000 LIMIT 0,10   [ RunTime:0.0500s ]
+SQL: SHOW COLUMNS FROM `sjy_community_base_info` [ RunTime:0.0550s ]
+SQL: SELECT * FROM `sjy_community_base_info` WHERE `sjy_id` = 29 LIMIT 1   [ RunTime:0.0720s ]
+SQL: SHOW COLUMNS FROM `sjy_community_position_info` [ RunTime:0.0530s ]
+SQL: SELECT * FROM `sjy_community_position_info` WHERE `sjy_community_id` = '29' LIMIT 1   [ RunTime:0.0660s ]
+SQL: SHOW COLUMNS FROM `sjy_community_project_image` [ RunTime:0.0740s ]
+SQL: SELECT `sjy_community_project_image` FROM `sjy_community_project_image` WHERE `sjy_community_project_id` = 40 LIMIT 1   [ RunTime:0.0780s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_community_project_info` WHERE `cityid` = 120000 LIMIT 1   [ RunTime:0.3340s ]
+
+[ 2018-01-31T13:36:00+08:00 ] 127.0.0.1 /index.php/Home/Origanization/personinfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0810s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0560s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0560s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0460s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-31T13:36:01+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getpersoninfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0690s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0530s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0740s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0660s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0840s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0670s ]
+SQL: SELECT `sjy_origanization_name` FROM `sjy_origanization_base_info` WHERE `sjy_id` = 23 LIMIT 1   [ RunTime:0.0780s ]
+
+[ 2018-01-31T13:36:04+08:00 ] 127.0.0.1 /index.php/Home/Origanization/origanizationIdentify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.2220s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0530s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0560s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0720s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SELECT `phonecode` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0720s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_type` [ RunTime:0.0710s ]
+SQL: SELECT * FROM `sjy_origanization_type`  [ RunTime:0.0560s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-31T13:36:06+08:00 ] 127.0.0.1 /index.php/Home/Origanization/personInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0790s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0700s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0820s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0710s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-31T13:36:07+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getpersoninfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0910s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0710s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0500s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0560s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0660s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0640s ]
+SQL: SELECT `sjy_origanization_name` FROM `sjy_origanization_base_info` WHERE `sjy_id` = 23 LIMIT 1   [ RunTime:0.0690s ]
+
+[ 2018-01-31T13:36:12+08:00 ] 127.0.0.1 /index.php/Home/Origanization/myOriganization
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0920s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0640s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0710s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-31T13:36:13+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getOriganizationInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0510s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0890s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0870s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0700s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0580s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 23 LIMIT 1   [ RunTime:0.0530s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0640s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '23' LIMIT 1   [ RunTime:0.0700s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_images` [ RunTime:0.0630s ]
+SQL: SELECT `sjy_origanization_images` FROM `sjy_origanization_images` WHERE `sjy_origanization_code` = '23' LIMIT 1   [ RunTime:0.0840s ]
+
+[ 2018-01-31T13:36:14+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getStaffList?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0950s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0620s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0700s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SELECT `sjy_origanization_login_id`,`sjy_origanization_user_wechat`,`sjy_origanization_user_real_name`,`sjy_origanization_user_email` FROM `sjy_origanization_user_info` WHERE `sjy_origanization_user_origanization_code` = '23' LIMIT 0,15   [ RunTime:0.0550s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_origanization_user_info` WHERE `sjy_origanization_user_origanization_code` = '23' LIMIT 1   [ RunTime:0.0640s ]
+
+[ 2018-01-31T13:36:15+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getoriganizationimgs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0850s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0800s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0540s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0640s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_images` [ RunTime:0.0740s ]
+SQL: SELECT `sjy_origanization_images` FROM `sjy_origanization_images` WHERE `sjy_origanization_code` = '23' LIMIT 1   [ RunTime:0.0730s ]
+
+[ 2018-01-31T13:36:24+08:00 ] 127.0.0.1 /index.php/Home/Origanization/addMember.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0590s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0770s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0720s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-31T13:36:24+08:00 ] 127.0.0.1 /index.php/Home/imgs/personDl.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-31T13:36:28+08:00 ] 127.0.0.1 /index.php/Home/Origanization/myOriganization
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0680s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0740s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0630s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-01-31T13:36:29+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getOriganizationInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0890s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.2670s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0510s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0510s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0610s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 23 LIMIT 1   [ RunTime:0.0720s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0630s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '23' LIMIT 1   [ RunTime:0.0510s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_images` [ RunTime:0.0650s ]
+SQL: SELECT `sjy_origanization_images` FROM `sjy_origanization_images` WHERE `sjy_origanization_code` = '23' LIMIT 1   [ RunTime:0.0620s ]
+
+[ 2018-01-31T13:36:30+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getoriganizationimgs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0660s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0850s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0720s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0580s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_images` [ RunTime:0.0700s ]
+SQL: SELECT `sjy_origanization_images` FROM `sjy_origanization_images` WHERE `sjy_origanization_code` = '23' LIMIT 1   [ RunTime:0.0560s ]
+
+[ 2018-01-31T13:36:31+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getStaffList?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0910s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0710s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0700s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0790s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SELECT `sjy_origanization_login_id`,`sjy_origanization_user_wechat`,`sjy_origanization_user_real_name`,`sjy_origanization_user_email` FROM `sjy_origanization_user_info` WHERE `sjy_origanization_user_origanization_code` = '23' LIMIT 0,15   [ RunTime:0.0560s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_origanization_user_info` WHERE `sjy_origanization_user_origanization_code` = '23' LIMIT 1   [ RunTime:0.0650s ]
+
+[ 2018-01-31T13:36:41+08:00 ] 127.0.0.1 /index.php/Home/Project/origanizationProjectManger
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0820s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0720s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0560s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-31T15:04:22+08:00 ] 127.0.0.1 /index.php/Home/Origanization/origanizationIdentify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.1160s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0820s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0570s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0780s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SELECT `phonecode` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_type` [ RunTime:0.0570s ]
+SQL: SELECT * FROM `sjy_origanization_type`  [ RunTime:0.0730s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-31T15:04:26+08:00 ] 127.0.0.1 /index.php/Home/Origanization/personInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0810s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0820s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0780s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0870s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-01-31T15:04:27+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getpersoninfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0730s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0560s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0790s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0500s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0880s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0710s ]
+SQL: SELECT `sjy_origanization_name` FROM `sjy_origanization_base_info` WHERE `sjy_id` = 23 LIMIT 1   [ RunTime:0.0840s ]
+
+[ 2018-01-31T15:04:29+08:00 ] 127.0.0.1 /index.php/Home/Origanization/myOriganization
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0500s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0510s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0770s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0480s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-31T15:04:30+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getOriganizationInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0830s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0790s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0780s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0800s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0750s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 23 LIMIT 1   [ RunTime:0.0860s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0730s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '23' LIMIT 1   [ RunTime:0.0880s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_images` [ RunTime:0.0460s ]
+SQL: SELECT `sjy_origanization_images` FROM `sjy_origanization_images` WHERE `sjy_origanization_code` = '23' LIMIT 1   [ RunTime:0.0790s ]
+
+[ 2018-01-31T15:04:31+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getoriganizationimgs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0740s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0550s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0870s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0880s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_images` [ RunTime:0.0600s ]
+SQL: SELECT `sjy_origanization_images` FROM `sjy_origanization_images` WHERE `sjy_origanization_code` = '23' LIMIT 1   [ RunTime:0.0680s ]
+
+[ 2018-01-31T15:04:32+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getStaffList?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0580s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0510s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0640s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0630s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SELECT `sjy_origanization_login_id`,`sjy_origanization_user_wechat`,`sjy_origanization_user_real_name`,`sjy_origanization_user_email` FROM `sjy_origanization_user_info` WHERE `sjy_origanization_user_origanization_code` = '23' LIMIT 0,15   [ RunTime:0.0740s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_origanization_user_info` WHERE `sjy_origanization_user_origanization_code` = '23' LIMIT 1   [ RunTime:0.0640s ]
+
+[ 2018-01-31T15:04:37+08:00 ] 127.0.0.1 /index.php/Home/Origanization/origanizationIdentify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0750s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0500s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0720s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0850s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SELECT `phonecode` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0850s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_type` [ RunTime:0.0780s ]
+SQL: SELECT * FROM `sjy_origanization_type`  [ RunTime:0.0810s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-31T15:11:29+08:00 ] 127.0.0.1 /index.php/Home/Origanization/personInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.1070s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.3490s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0470s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0510s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-31T15:11:31+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getpersoninfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0970s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0880s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.1040s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0860s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0700s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0720s ]
+SQL: SELECT `sjy_origanization_name` FROM `sjy_origanization_base_info` WHERE `sjy_id` = 23 LIMIT 1   [ RunTime:0.0620s ]
+
+[ 2018-01-31T15:11:38+08:00 ] 127.0.0.1 /index.php/Home/Origanization/myOriganization
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0740s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0650s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0770s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-31T15:11:39+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getOriganizationInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0540s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0790s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0720s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0660s ]
+SQL: SELECT * FROM `sjy_origanization_base_info` WHERE `sjy_id` = 23 LIMIT 1   [ RunTime:0.0670s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0640s ]
+SQL: SELECT * FROM `sjy_origanization_position_info` WHERE `sjy_origanization_id` = '23' LIMIT 1   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_images` [ RunTime:0.0810s ]
+SQL: SELECT `sjy_origanization_images` FROM `sjy_origanization_images` WHERE `sjy_origanization_code` = '23' LIMIT 1   [ RunTime:0.0700s ]
+
+[ 2018-01-31T15:11:40+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getoriganizationimgs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0740s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0800s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0860s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0710s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_images` [ RunTime:0.0570s ]
+SQL: SELECT `sjy_origanization_images` FROM `sjy_origanization_images` WHERE `sjy_origanization_code` = '23' LIMIT 1   [ RunTime:0.0510s ]
+
+[ 2018-01-31T15:11:41+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getStaffList?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.1560s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0720s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0640s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0880s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SELECT `sjy_origanization_login_id`,`sjy_origanization_user_wechat`,`sjy_origanization_user_real_name`,`sjy_origanization_user_email` FROM `sjy_origanization_user_info` WHERE `sjy_origanization_user_origanization_code` = '23' LIMIT 0,15   [ RunTime:0.0810s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_origanization_user_info` WHERE `sjy_origanization_user_origanization_code` = '23' LIMIT 1   [ RunTime:0.0780s ]
+
+[ 2018-01-31T15:11:44+08:00 ] 127.0.0.1 /index.php/Home/Origanization/personinfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0520s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0820s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0730s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-31T15:11:45+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getpersoninfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0720s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.3680s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.3940s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0640s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0810s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0900s ]
+SQL: SELECT `sjy_origanization_name` FROM `sjy_origanization_base_info` WHERE `sjy_id` = 23 LIMIT 1   [ RunTime:0.0730s ]
+
+[ 2018-01-31T15:28:11+08:00 ] 127.0.0.1 /index.php/Home/Project/origanizationProjectManger
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0790s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0750s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0750s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0720s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-31T15:51:54+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-31T15:52:15+08:00 ] 127.0.0.1 /index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0740s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '15620608137' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0700s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '15620608137' LIMIT 1   [ RunTime:0.0640s ]
+
+[ 2018-01-31T15:52:16+08:00 ] 127.0.0.1 /index.php/Home/Origanization/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0660s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0800s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0780s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0800s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-31T15:52:18+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getprojectlist/page/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0820s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0860s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0640s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0800s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_community_project_info` [ RunTime:0.0570s ]
+SQL: SELECT * FROM `sjy_community_project_info` WHERE `cityid` = 120000 LIMIT 0,10   [ RunTime:0.0720s ]
+SQL: SHOW COLUMNS FROM `sjy_community_base_info` [ RunTime:0.0560s ]
+SQL: SELECT * FROM `sjy_community_base_info` WHERE `sjy_id` = 29 LIMIT 1   [ RunTime:0.0720s ]
+SQL: SHOW COLUMNS FROM `sjy_community_position_info` [ RunTime:0.0710s ]
+SQL: SELECT * FROM `sjy_community_position_info` WHERE `sjy_community_id` = '29' LIMIT 1   [ RunTime:0.0520s ]
+SQL: SHOW COLUMNS FROM `sjy_community_project_image` [ RunTime:0.0700s ]
+SQL: SELECT `sjy_community_project_image` FROM `sjy_community_project_image` WHERE `sjy_community_project_id` = 40 LIMIT 1   [ RunTime:0.0780s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_community_project_info` WHERE `cityid` = 120000 LIMIT 1   [ RunTime:0.0630s ]
+
+[ 2018-01-31T15:52:35+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-31T15:52:49+08:00 ] 127.0.0.1 /index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0600s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '15620608137' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0710s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_login_id` = '15620608137' LIMIT 1   [ RunTime:0.0720s ]
+
+[ 2018-01-31T15:52:49+08:00 ] 127.0.0.1 /index.php/Home/Origanization/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0520s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0660s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0640s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0620s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-31T15:52:50+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getprojectlist/page/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0660s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0810s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0530s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0500s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_community_project_info` [ RunTime:0.0680s ]
+SQL: SELECT * FROM `sjy_community_project_info` WHERE `cityid` = 110000 LIMIT 0,10   [ RunTime:0.0490s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_community_project_info` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0550s ]
+
+[ 2018-01-31T15:52:57+08:00 ] 127.0.0.1 /index.php/Home/Origanization/changeProvice.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0500s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0500s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0510s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0750s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-31T15:52:59+08:00 ] 127.0.0.1 /index.php/Home/Origanization/setcity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0580s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0850s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0720s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+
+[ 2018-01-31T15:52:59+08:00 ] 127.0.0.1 /index.php/Home/Origanization/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0510s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0620s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0580s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0730s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-31T15:53:00+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getprojectlist/page/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0730s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0700s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.1160s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0650s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_community_project_info` [ RunTime:0.1140s ]
+SQL: SELECT * FROM `sjy_community_project_info` WHERE `cityid` = 110000 LIMIT 0,10   [ RunTime:0.0740s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_community_project_info` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0750s ]
+
+[ 2018-01-31T15:53:06+08:00 ] 127.0.0.1 /index.php/Home/Origanization/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0470s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0550s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0650s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0800s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-31T15:53:07+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getprojectlist/page/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0810s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0660s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0730s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0860s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_community_project_info` [ RunTime:0.0520s ]
+SQL: SELECT * FROM `sjy_community_project_info` WHERE `cityid` = 120000 LIMIT 0,10   [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `sjy_community_base_info` [ RunTime:0.0480s ]
+SQL: SELECT * FROM `sjy_community_base_info` WHERE `sjy_id` = 29 LIMIT 1   [ RunTime:0.0790s ]
+SQL: SHOW COLUMNS FROM `sjy_community_position_info` [ RunTime:0.0460s ]
+SQL: SELECT * FROM `sjy_community_position_info` WHERE `sjy_community_id` = '29' LIMIT 1   [ RunTime:0.0820s ]
+SQL: SHOW COLUMNS FROM `sjy_community_project_image` [ RunTime:0.0770s ]
+SQL: SELECT `sjy_community_project_image` FROM `sjy_community_project_image` WHERE `sjy_community_project_id` = 40 LIMIT 1   [ RunTime:0.0550s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_community_project_info` WHERE `cityid` = 120000 LIMIT 1   [ RunTime:0.0440s ]
+
+[ 2018-01-31T15:53:09+08:00 ] 127.0.0.1 /index.php/Home/Origanization/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0740s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0710s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0540s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0730s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-01-31T15:53:10+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getprojectlist/page/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0730s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0790s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0980s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0650s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_community_project_info` [ RunTime:0.0720s ]
+SQL: SELECT * FROM `sjy_community_project_info` WHERE `cityid` = 120000 LIMIT 0,10   [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `sjy_community_base_info` [ RunTime:0.0580s ]
+SQL: SELECT * FROM `sjy_community_base_info` WHERE `sjy_id` = 29 LIMIT 1   [ RunTime:0.0780s ]
+SQL: SHOW COLUMNS FROM `sjy_community_position_info` [ RunTime:0.0720s ]
+SQL: SELECT * FROM `sjy_community_position_info` WHERE `sjy_community_id` = '29' LIMIT 1   [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `sjy_community_project_image` [ RunTime:0.0790s ]
+SQL: SELECT `sjy_community_project_image` FROM `sjy_community_project_image` WHERE `sjy_community_project_id` = 40 LIMIT 1   [ RunTime:0.0890s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_community_project_info` WHERE `cityid` = 120000 LIMIT 1   [ RunTime:0.0640s ]
+
+[ 2018-01-31T15:53:14+08:00 ] 127.0.0.1 /index.php/Home/Origanization/personinfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0650s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0880s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0830s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.1080s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-31T15:53:15+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getpersoninfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.1090s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.1100s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0580s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0760s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0840s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0850s ]
+SQL: SELECT `sjy_origanization_name` FROM `sjy_origanization_base_info` WHERE `sjy_id` = 23 LIMIT 1   [ RunTime:0.0550s ]
+
+[ 2018-01-31T15:53:26+08:00 ] 127.0.0.1 /index.php/Home/Origanization/douploadtouxiang
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0900s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0710s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0770s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SELECT `sjy_origanization_user_image` FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0760s ]
+SQL: UPDATE `sjy_origanization_user_info` SET `sjy_origanization_user_image`='/Uploads/origanization/touxiang/20180131/1517385206.jpeg' WHERE `sjy_id` = 75 [ RunTime:0.3770s ]
+
+[ 2018-01-31T15:53:31+08:00 ] 127.0.0.1 /index.php/Home/Origanization/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0580s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0700s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0470s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0560s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-31T15:53:32+08:00 ] 127.0.0.1 /index.php/Home/Origanization/getprojectlist/page/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0660s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0650s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0560s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_community_project_info` [ RunTime:0.0660s ]
+SQL: SELECT * FROM `sjy_community_project_info` WHERE `cityid` = 110000 LIMIT 0,10   [ RunTime:0.0570s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_community_project_info` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0620s ]
+
