@@ -763,63 +763,6 @@
             }
 
         }
-
-	
-	    
-            //显示上传项目书画面
-            public function showsendprojectbook()
-           {
-               $community_id = I('get.community_id');
-               $project_id = I('get.project_id');
-                             
-               $this->assign('community_id',$community_id);
-               $this->assign('project_id',$project_id);
-               $this->display();
-           }
-            //查找邀请我的项目
-            public function invateme()
-            {
-                  //查询邀请我的项目
-                  $i = 0;
-                  $project = M("project")->where(array("origanization_id"=>session("userInfo")['sjy_origanization_user_origanization_code'],"status"=>0))->select();
-                  foreach($project as $key=>$value)
-                  {
-                       //项目信息
-                       $i++;
-                       $project[$key]['id'] = $i;
-                       $tmp = M('community_project_info')->where(array('sjy_id'=>$value['project_id']))->find();
-                       $project[$key]['project_name'] = $tmp['sjy_community_project_title'];
-                       $project[$key]['project_service_area'] = $tmp['sjy_community_project_service_area'];
-                       $project[$key]['collect_times'] = $tmp['sjy_community_project_collect_start_time'].'~'.$tmp['sjy_community_project_collect_end_time'];
-                       $project[$key]['project_times'] = $tmp['sjy_community_project_start_time'].'~'.$tmp['sjy_community_project_end_time'];
-                       
-                       $project[$key]['community_name'] = M('community_base_info')->where(array('sjy_id'=>$value['community_id']))->getField('sjy_community_name');
-                  }
-                  $ret['data'] = $project;
-                  $ret['code'] = 0;
-                  $ret['msg'] = '';
-                  $ret['count'] = count($project);
-                  $this->ajaxReturn($ret);
-
-            }
-            //我发送的项目
-            public function mysendproject()
-            {
-               $i = 0;
-               $my_send_project = M("origanization_project_info")->where(array('sjy_origanization_id'=>session('userInfo')['sjy_origanization_user_origanization_code']))->select();
-                foreach($my_send_project as $key=>$value) {
-                    $i++;
-                    $my_send_project[$key]['id'] = $i;
-                    $my_send_project[$key]['send_time'] = $value['sjy_origanization_project_send_time'];//项目发送时间
-                    $my_send_project[$key]['operator'] = $value['sjy_origanization_project_send_operator']; //发布者
-                    $my_send_project[$key]['sjy_project_times'] = $value['sjy_origanization_project_start_time'] . '~' . $value['sjy_origanization_project_end_time'];
-                }
-					$res['data'] = $my_send_project;
-					$res['code'] = 0;
-					$res['msg'] = '';
-					$res['count'] = count($my_send_project);
-		        $this->ajaxReturn($res);   
-            }
         //账号设置页面
         public function personInfo()
         {
@@ -1065,89 +1008,6 @@
 	    	$this->ajaxReturn(array("state"=>$state,'errorInfo'=>$errorInfo,"user_info"=>$user_info));
 	        
 	    }
-
-	    //拒绝发送项目书
-	    public function refuse_send()
-	    {
-	    	$id = I("post.id");
-	    	$res = M("project")->where(array("sjy_id"=>$id))->save(array("status"=>-2));   //将状态修改为社会组织拒绝
-	    	$this->ajaxReturn(1);
-	    }
-            //已经发送项目书的
-            public function alreadysendprojectbook()
-            {
-              $origanization_id = session('userInfo')['sjy_origanization_user_origanization_code'];
-              $info = M('project')->where(array('origanization_id'=>$origanization_id,'status'=>1))->select();
-              
-              //项目信息
-              $i = 0;
-              foreach($info as $key=>$value)
-              {
-                   $i++;
-                   $info[$key]['id'] = $i;
-                   $tmp = M('community_project_info')->where(array('sjy_id'=>$value['project_id']))->find();
-                   $info[$key]['project_name'] = $tmp['sjy_community_project_title'];
-                   $info[$key]['community_name'] = M('community_base_info')->where(array('sjy_id'=>$value['community_id']))->getField('sjy_community_name');
-                   $info[$key]['collect_times']= $tmp['sjy_community_project_collect_start_time'].'~'.$tmp['sjy_community_project_collect_end_time'];
-                   $info[$key]['project_times'] = $tmp['sjy_community_project_start_time'].'~'.$tmp['sjy_community_project_end_time'];
-                   
-              }
-              $res['data'] = $info;
-              $res['code'] = 0;
-              $res['msg'] = '';
-              $res['count'] = count($info);
-              $this->ajaxReturn($res);
-            }
-	    //社会组织发项目上传项目图片
-            public function add_project_image()
-            {
-               
-               // $index = array('a','b','c','d','e');
-                $base64= I('post.file');
-                //存入apcu
-                if(empty(session('send_project_data')))
-                {
-                  
-                  session('send_project_data',array($base64));
-                  $i = 0;
-                }else{
-                   $i = count(session('send_project_data'));
-                   $data = session('send_project_data');
-                   array_push($data,$base64);
-                   
-                   session('send_project_data',$data);
-                }
-               
-               $ret['error'] = 0;
-               $ret['imgid']= $i;
-               $this-> ajaxReturn($ret);
-            }	
-	    
-	    //清除项目照片id
-	    
-	      //编辑项目
-	    public function editProject()
-	    {
-	    	//项目id
-	    	$project_id = I("get.id");  //项目id
-	    	//查询项目信息
-	    	$project_info = M("origanization_project_info")->find($project_id);
-	    	//查询项目图片
-	    	$project_imgs = M("origanization_project_image")->where(array("sjy_origanization_project_id"=>$project_id))->select();
-		foreach($project_imgs as $key=>$value)
-		{
-			$project_imgs[$key]['sjy_id'] = $value['sjy_id'].'o';
-		}
-		
-	    	$service_object = M("service_object")->select();
-	    	// var_dump($service_object);die;
-	    	$time = $project_info['sjy_origanization_project_start_time']." "."~"." ".$project_info['sjy_origanization_project_end_time'];
-	    	$this->assign("time",$time);
-	    	$this->assign("service_object",$service_object);
-	    	$this->assign("project_imgs",$project_imgs);
-	    	$this->assign("project_info",$project_info);
-	    	$this->display();
-	    }
 	   //执行项目插入
 	    public function doeditproject()
 	    {
@@ -1255,54 +1115,8 @@
 
 			$this->ajaxReturn($ret);
 	    }
-	    //删除项目
-	    //删除项目
-	    public function delproject()
-	    {
-	    	$id = I("post.id"); //项目id
-	    	//删除项目
-	    	$res1 = M("origanization_project_info")->where(array("sjy_id"=>$id))->delete();
-	    	//删除图片
-	    	$imginfo = M("origanization_project_image")->where(array("sjy_origanization_project_id"=>$id))->select();
-	    	foreach($imginfo as $key=>$value)
-		    	{
-			    	//判断图片是否存在 存在删除
-			    	if(file_exists(".".$value['sjy_origanization_project_image']))
-					{
-						//检查是否有该文件夹，如果没有就创建，并给予最高权限
-						 unlink(".".$value['sjy_origanization_project_image']);
-						 //删除数据库
-						 M("origanization_project_image")->where(array("sjy_id"=>$value['sjy_id']))->delete();
-					}
-				}
-			$this->ajaxReturn(1);
-	    }
-	      //下载项目书
-	    public function downloadprojectbook()
-	    {
-	    	//项目id
-	    	$project_id = I("get.project_id");
-            $this->assign('project_id',$project_id);
-	    	$this->display();
-	    }
-            public function downloadbooklist()
-            {
-                $project_id = I('get.project_id');//项目id
-                $origanization_id = session("userInfo")['sjy_origanization_user_origanization_code'];
-                $project_book = M("project_book")->where(array("sjy_project_id"=>$project_id,"sjy_origanization_id"=>$origanization_id))->select();
-                $i = 0;
-                foreach($project_book as $key=>$value)
-                {
-                   $i++;
-                   $project_book[$key]['id'] = $i;
-                }
-                $res['data'] = $project_book;
-                $res['code'] = 0;
-                $res['msg'] = '';
-                $res['count'] = count($project_book);
-                $this->ajaxReturn($res);
-            }
-	   
+	    
+	  
 	        //下载项目书
 	    public function dodownprojectbook()
 	    {
@@ -1340,30 +1154,6 @@
 			session('city',null);
 	        header("Location:/");
 	    }
-          //同意做项目
-           public function agreenproject()
-	  {
-	     $id = I('post.id'); //project表sjy_id
-	     $project_id = I('post.project_id'); //项目真正id
-             //更新项目状态
-             $data['status'] = 10;  //开始做项目
-             $data['project_start_time'] = date('Y-m-d H:i:s',time());  //项目开始时间
-             $data['project_start_people'] = session('userInfo')['sjy_origanization_user_real_name']; //同意人
-             $data['project_start_people_id'] = session('userInfo')['sjy_id'];  //同意人id
-             $res = M('project')->where(array('sjy_id'=>$id))->save($data);
-             //更新进度表 插入第一个信息
-             $rate['sjy_projectrate_title']= '项目开始';
-             $rate['sjy_project_id']= $project_id;
-             $rate['sjy_project_rate_con']='开始做项目';
-             $rate['create_time'] = date('Y-m-d H:i:s');
-             $rate['sjy_origanization_id'] = session('userInfo')['sjy_origanization_user_origanization_code'];
-             $val = M('projectrate')->add($rate);
-
-	     if($res)
-	     {
-		 $this->ajaxReturn(1); 
-             }	
-          }
 	    //增加项目进度
         public function doaddprojectrate()
         {
@@ -1421,6 +1211,7 @@
         		return true;   //没有找到相同身份证号的
         	}
         }
+       
        
 	
 	}

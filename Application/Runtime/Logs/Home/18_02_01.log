@@ -1,0 +1,441 @@
+[ 2018-02-01T09:59:50+08:00 ] 127.0.0.1 /index.php/Home/Test/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: syntax error, unexpected '?>', expecting function (T_FUNCTION)
+
+[ 2018-02-01T10:00:14+08:00 ] 127.0.0.1 /index.php/Home/Test/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-02-01T10:00:50+08:00 ] 127.0.0.1 /index.php/Home/Test/file_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-02-01T10:01:39+08:00 ] 127.0.0.1 /index.php/Home/Test/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-02-01T10:01:51+08:00 ] 127.0.0.1 /index.php/Home/Test/file_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-02-01T10:07:20+08:00 ] 127.0.0.1 /index.php/Home/Test/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-02-01T10:07:34+08:00 ] 127.0.0.1 /index.php/Home/Test/file_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-02-01T10:09:15+08:00 ] 127.0.0.1 /index.php/Home/Test/file_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-02-01T10:09:19+08:00 ] 127.0.0.1 /index.php/Home/Test/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-02-01T10:09:35+08:00 ] 127.0.0.1 /index.php/Home/Test/file_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-02-01T10:15:55+08:00 ] 127.0.0.1 /index.php/Home/Test/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2018-02-01T10:16:15+08:00 ] 127.0.0.1 /index.php/Home/Test/haha
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-02-01T11:09:08+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-02-01T11:09:15+08:00 ] 127.0.0.1 /index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0590s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_community_login_id` = '15620608137' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0540s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_community_login_id` = '15620608137' LIMIT 1   [ RunTime:0.0790s ]
+
+[ 2018-02-01T11:09:17+08:00 ] 127.0.0.1 /index.php/Home/Community/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0710s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0590s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.1020s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0650s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.8880s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-02-01T11:09:19+08:00 ] 127.0.0.1 /index.php/Home/Community/getoriganizationlist/page/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0730s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0770s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.3220s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0940s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0540s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0820s ]
+SQL: SELECT `sjy_origanization_id` FROM `sjy_origanization_position_info` WHERE `sjy_origanization_city` = 110000  [ RunTime:0.0800s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.1070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_origanization_base_info` LIMIT 1   [ RunTime:0.0740s ]
+
+[ 2018-02-01T11:09:25+08:00 ] 127.0.0.1 /index.php/Home/Community/mycommunity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.1040s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0640s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0990s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0830s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.1020s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-02-01T11:09:27+08:00 ] 127.0.0.1 /index.php/Home/Community/getCommunityInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0850s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0760s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0890s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.3860s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0890s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_community_base_info` [ RunTime:0.0750s ]
+SQL: SELECT * FROM `sjy_community_base_info` WHERE `sjy_id` = 29 LIMIT 1   [ RunTime:0.0600s ]
+SQL: SHOW COLUMNS FROM `sjy_community_position_info` [ RunTime:0.1200s ]
+SQL: SELECT * FROM `sjy_community_position_info` WHERE `sjy_community_id` = '29' LIMIT 1   [ RunTime:0.0800s ]
+SQL: SHOW COLUMNS FROM `sjy_community_images` [ RunTime:0.0720s ]
+SQL: SELECT `sjy_community_images` FROM `sjy_community_images` WHERE `sjy_community_code` = '29' LIMIT 1   [ RunTime:0.0650s ]
+
+[ 2018-02-01T11:09:29+08:00 ] 127.0.0.1 /index.php/Home/Community/getcommunityimgs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.1230s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.1480s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.1400s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0790s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0930s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SHOW COLUMNS FROM `sjy_community_images` [ RunTime:0.4020s ]
+SQL: SELECT `sjy_community_images` FROM `sjy_community_images` WHERE `sjy_community_code` = '29' LIMIT 1   [ RunTime:0.1080s ]
+
+[ 2018-02-01T11:09:30+08:00 ] 127.0.0.1 /index.php/Home/Community/getStaffList?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.1840s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.3260s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0750s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0740s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0900s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+SQL: SELECT `sjy_community_login_id`,`sjy_community_user_wechat`,`sjy_community_user_real_name`,`sjy_community_user_email` FROM `sjy_community_user_info` WHERE `sjy_community_user_community_code` = '29' LIMIT 0,15   [ RunTime:0.0780s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_community_user_info` WHERE `sjy_community_user_community_code` = '29' LIMIT 1   [ RunTime:0.0690s ]
+
+[ 2018-02-01T11:09:32+08:00 ] 127.0.0.1 /index.php/Home/Project/communityProjectManger
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: syntax error, unexpected ')', expecting ';'
+
+[ 2018-02-01T11:09:58+08:00 ] 127.0.0.1 /index.php/Home/Project/communityProjectManger
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: syntax error, unexpected ')', expecting ';'
+
+[ 2018-02-01T11:10:00+08:00 ] 127.0.0.1 /index.php/Home/Project/communityProjectManger
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: syntax error, unexpected ')', expecting ';'
+
+[ 2018-02-01T11:10:51+08:00 ] 127.0.0.1 /index.php/Home/Project/communityProjectManger
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: syntax error, unexpected ';', expecting ')'
+
+[ 2018-02-01T11:11:05+08:00 ] 127.0.0.1 /index.php/Home/Project/communityProjectManger
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: syntax error, unexpected ')', expecting ';'
+
+[ 2018-02-01T11:11:43+08:00 ] 127.0.0.1 /index.php/Home/Project/communityProjectManger
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-02-01T11:12:02+08:00 ] 127.0.0.1 /index.php/Home/Project/communityProjectManger
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0580s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0780s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0580s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0450s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-02-01T11:12:44+08:00 ] 127.0.0.1 /index.php/Home/Project/communityProjectManger
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: syntax error, unexpected ')', expecting ';'
+
+[ 2018-02-01T11:13:01+08:00 ] 127.0.0.1 /index.php/Home/Project/communityProjectManger
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: syntax error, unexpected ')', expecting ';'
+
+[ 2018-02-01T11:13:10+08:00 ] 127.0.0.1 /index.php/Home/Project/communityProjectManger
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-02-01T11:15:28+08:00 ] 127.0.0.1 /index.php/Home/Project/communityProjectManger
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0740s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0730s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0490s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0800s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0590s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+

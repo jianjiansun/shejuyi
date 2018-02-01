@@ -72,11 +72,9 @@
             $projectinfo['project_image'] = M('origanization_project_image')->where(array('sjy_origanization_project_id'=>$id))->select();
             $this->ajaxReturn($projectinfo);
         }
-        //社区项目管理页面展示
-        public function communityProjectManger()
-        {
-        	$this->display();
-        }
+       
+
+
         //社会组织项目管理
         public function origanizationProjectManger()
         {
@@ -114,7 +112,7 @@
 
 
         //投标中
-        public function sendProjectBook()
+        public function alreadySendProject()
         {
         	//状态正在竞标 未中标
         	//社会组织id
@@ -292,10 +290,10 @@
 		    $info   =   $upload->upload();
                             
 		    if(!$info) {// 上传错误提示错误信息
-		        $this->ajaxReturn($upload->getError());
+                return array("state"=>7,"errorInfo"=>$upload->getError());
 		    }
 			$filename = $info["file"]['name'];
-	    	//文件大小检测
+	    	//路劲
 			$path = "/Uploads/project_book/".$info["file"]['savepath'].$info["file"]['savename'];
 	    	//社区id'
 	    	$community_id = $project_info['sjy_community_id'];
@@ -323,25 +321,208 @@
 	    		$res = true;
 	    	}
 	    	//将信息插入项目书表
-	    	$param['sjy_project_id'] = $project_id;
-	    	$param['sjy_origanization_id'] = $origanization_id;
-	    	$param['sjy_community_id'] = $community_id;
-	    	$param['sjy_project_book_send_time'] = $time;
-	    	$param['sjy_project_path'] = $path;
-	    	$param['sjy_project_book_name'] = $filename;
+	    	$param['sjy_project_id'] = $project_id;     //项目id
+	    	$param['sjy_origanization_id'] = $origanization_id;   //社会组织id
+	    	$param['sjy_community_id'] = $community_id;           //社区id
+	    	$param['sjy_project_book_send_time'] = $time;         //项目书发送时间
+	    	$param['sjy_project_path'] = $path;                   //项目书路径
+	    	$param['sjy_project_book_name'] = $filename;          //项目书名字
             $param['project_book_send_people'] = session('userInfo')['sjy_origanization_user_real_name'];  //项目书发送者
             $param['project_book_send_people_id'] = session('userInfo')['sjy_id'];  //发送者id            
 	    	$val = M('project_book')->add($param);
 		    if ($res&&$val){
 			    // 提交事务
 			    $model->commit(); 
-			    return array("state"=>1,"errorInfo"=>"发送成功"));
+			    return array("state"=>1,"errorInfo"=>"发送成功");
 			}else{
 			    // 事务回滚
 			    $model->rollback(); 
-			    return array("state"=>7,"errorInfo"=>"系统错误,请重试"));
+			    return array("state"=>8,"errorInfo"=>"系统错误,请重试");
 			}
 	    	
 	    }
+
+
+        //社区项目管理页面展示
+        public function communityProjectManger()
+        {
+            $this->display();
+        }
+
+        //社区正在招标中的项目
+        public function communityTenderProject()
+        {
+            //在招标周期 且sjy_community_project_status=0的项目
+            //社区id
+            $community_code = session('userInfo')['sjy_community_user_community_code'];
+            //正在征集中
+            $data = array(
+                  "sjy_community_project_status"=>0;
+                  "sjy_community_project_collect_start_time"=>array('lt',date('Y-m-d',time())),
+                  'sjy_community_project_start_time'=>array('gt',date('Y-m-d',time())) 
+            );
+            $info = M('community_project')->where($data)->select();
+            $this->ajaxReturn($info);
+        }
+        //意向机构，已经发送项目书的
+        public function  intentOriganization()
+        {
+            $project_id = I('get.id'); //项目id
+            //社区id
+            $community_id = session('userInfo')['sjy_community_user_community_code'];
+            //根据项目id和社区id查询已经投递项目书的机构
+            $data = array(
+                   "community_id"=>$project_id,
+                   'project_id'=>$project_id,
+                   'status'=>1
+            )
+            $info = M('project')->where($data)->select();
+            //查询社会组织信息
+            foreach($info as $key=>$value)
+            {
+                  $origanization_info = M('origanization_base_info')->where(array('sjy_id'=>$value['origanization_id']))->find();
+                  $info[$key]['origanization_info'] = $origanization_info;                
+            }
+            $this->ajaxReturn($info);
+        }
+        //查询意向机构发送的项目书
+        public function projectBookList()
+        {
+            $origanization_id = I('get.origanization_id') //社会组织id
+            $project_id = I('post.project_id');  //项目id
+            $community_id = session('userInfo')['sjy_community_user_community_code'];//社区id
+            //查询项目书列表
+            $data = array(
+                  'sjy_project_id'=>$project_id,
+                  'sjy_origanization_id'=>$origanization_id,
+                  'sjy_community_id'=>$community_id
+            );
+            $info = M('project_book')->where($data)->select();
+            $this->ajaxReturn($info);
+        }
+        //社区同意社会组织做该项目
+        public function agreeProject()
+        {
+            $project_id = I('post.project_id'); //项目id
+            $origanization_id = I('post.origanization_id'); //社会组织id
+            $community_id = session('userInfo')['sjy_community_user_community_code'];  //社区id
+            //开启事务
+            $model = M();
+            $model->startTrans();
+
+            $where = array("project_id"=>$project_id,"community_id"=>$community_id,"origanization_id"=>$origanization_id,"status"=>1);
+            $data = array("status"=>2,'community_agreen_project_start_time'=>date('Y-m-d H:i:s',time()),'community_agreen_project_start_people'=>session('userInfo')['sjy_community_user_real_name']);
+            //修改sjy_project表
+            $res = M("project")->where($where)->save($data);
+            //修改sjy_community_project表
+            $where = array('sjy_id'=>$project_id);
+            $data = array('sjy_community_project_status'=>1);
+            $val = M("community_project_info")->where($where)->save($data);
+
+            if($res&&$val)
+            {
+               $model->commit();
+               $this->ajaxReturn(array('state'=>1,"errorInfo"=>""));    //社区同意开始做项目
+            }else{
+               $this->rollback();
+               $this->ajaxReturn(array('state'=>0,"errorInfo"=>"同意失败,请重试"));    
+            }
+        }
+        //社会组织主动点击开始项目 如果点击时间在原定项目周期之后，则该项目自动进入项目期
+        public function origanizationStartProject()
+        {
+            $project_id = I('post.project_id'); //项目id
+            $origanization_id = session('userInfo')['sjy_community_user_community_code'];
+            //开启事务
+            $model = M();
+            $model->startTrans();
+
+            //更新项目状态  sjy_project
+            $data['status'] = 10;  //开始做项目
+            $data['project_start_time'] = date('Y-m-d H:i:s',time());  //项目开始时间
+            $data['project_start_people'] = session('userInfo')['sjy_origanization_user_real_name']; //同意人
+            $data['project_start_people_id'] = session('userInfo')['sjy_id'];  //同意人id
+            $res = M('project')->where(array('sjy_id'=>$id))->save($data);
+
+            //更新sjy_community_project_info表
+            $data = array(
+                  "sjy_community_project_status"=>1,
+                  "sjy_community_project_origanization"=>$origanization_id;
+                  "sjy_community_project_origanization_name"=>M('origanization_base_info')->where(array('sjy_id'=>$origanization_id))->getField('sjy_origanization_name');
+            );
+            $val = M('community_project_info')->where(array('sjy_id'=>$project_id))->save($data);
+
+            //更新进度表 插入第一个信息
+            $rate['sjy_projectrate_title']= '项目开始';
+            $rate['sjy_project_id']= $project_id;
+            $rate['sjy_project_rate_con']='开始做项目';
+            $rate['create_time'] = date('Y-m-d H:i:s');
+            $rate['sjy_origanization_id'] = session('userInfo')['sjy_origanization_user_origanization_code'];
+            $rate['sjy_project_rate_write_people'] = session('userInfo')['sjy_origanization_user_real_name'];
+            $rate['sjy_project_rate_write_people_id'] = session('userInfo')['sjy_id'];
+            $rut = M('projectrate')->add($rate);
+
+            if($res&&$rut&&$val)
+            {
+                $model->commit();
+                $this->ajaxReturn(array('state'=>1,"errorInfo"=>""));    //社会组织手动同意开始做项目
+            }else{
+                $model->rollback();
+                $this->ajaxReturn(array('state'=>0,"errorInfo"=>"项目开始失败，请重试"));   
+            }
+            
+        }
+        //查询待社会组织开始的项目
+        public function waitOriganizationStart()
+        {
+            $community_id = session('userInfo')['sjy_community_user_community_code'];//社区id
+            $where = array(
+                'community_id'=>$origanization_id,
+                'status'=>2,
+            );
+            $info = M('project')->where($where)->select();
+            //查询项目信息
+            foreach($info as $key=>$value)
+            {
+                $project_info = M('community_project_info')->where(array('sjy_id'=>$value['project_id']))->find();
+                $info[$key]['project_info'] = $project_info;
+            }
+            $this->ajaxReturn($info);
+
+        }
+        //查询执行中项目
+        public function communityIngProject()
+        {
+            //社区id
+            $community_id = session('userInfo')['sjy_community_user_community_code'];
+            //查询该社区下正在进行的项目
+            $where = array(
+                   'sjy_community_project_status'=>1
+            );
+            $info = M('community_project_info')->where($where)->select();
+            $this->ajaxReturn($info);
+        }
+        //查询结项中的项目
+        public  function communityWaitCompleteProject()
+        {
+            //社区id
+            $community_id = session('userInfo')['sjy_community_user_community_code'];
+            $info = M('project')->where(array('status'=>99,'community_id'=>$community_id))->select();
+            //查询项目详情
+            foreach($info as $key=>$value)
+            {
+                $project_info = M('community_project_info')->where(array('sjy_id'=>$value['project_id']))->find();
+                $info[$key]['project_info'] = $project_info;
+            }
+            $this->ajaxReturn($info);
+        }
+        //查询已完成的项目
+        public function communityCompleteProject()
+        {
+             //社区id
+            $community_id = session('userInfo')['sjy_community_user_community_code'];
+            $info = M('community_project_info')->where(array('sjy_community_project_status'=>2))->select();
+            $this->ajaxReturn($info);
+        }
 	}
 ?>
