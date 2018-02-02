@@ -1,13 +1,29 @@
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EasyLife</title>
+    <link rel="stylesheet" href="/Public/Home/css/bootstrap.css">
+    <link rel="stylesheet" href="/Public/Home/css/common.css">
+    <link rel="stylesheet" href="/Public/Home/css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+    <script src="/Public/Home/js/jquery-1.12.4.js"></script>
+    <script src="/Public/Home/js/bootstrap.js"></script>
+    <script src = "/Public/Home/js/autoResizeImage.js"></script>
 
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/testfy.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/chooseCity.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/detail.css">
-    <script src = "__PUBLIC__/Home/js/jquery-1.12.4.js"></script>
-    <script src = "__PUBLIC__/Home/js/bootstrap.js"></script>
-    <script src = "__PUBLIC__/Home/js/jquery.page.js"></script>
-    <script src = "__PUBLIC__/Home/js/upLoadImg.js"></script>
+
+    <link rel="stylesheet" href="/Public/Home/css/region.css">
+    <link rel="stylesheet" href="/Public/Home/css/testfy.css">
+    <link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+    <link rel="stylesheet" href="/Public/Home/css/page2.css">
+    <link rel="stylesheet" href="/Public/Home/css/detail.css">
+    <script src = "/Public/Home/js/jquery-1.12.4.js"></script>
+    <script src = "/Public/Home/js/bootstrap.js"></script>
+    <script src = "/Public/Home/js/jquery.page.js"></script>
+    <script src = "/Public/Home/js/upLoadImg.js"></script>
 
 </head>
 <body>
@@ -17,12 +33,12 @@
 <div class = "headLogin">
     <div class = "container">
         <div class = "left changeBan">
-            <a href = "javascript:;" id = "cityChoose" class = "region">{$city}</a>
+            <a href = "javascript:;" id = "cityChoose" class = "region"><?php echo ($city); ?></a>
             <a class = "on"  href="">社会组织版</a>
             <a href="">社区版</a>
         </div>
         <div class="right person">
-            <img src="{$user_image}" alt="">
+            <img src="<?php echo ($user_image); ?>" alt="">
         </div>
     </div>
 </div>
@@ -30,7 +46,7 @@
     <div class = "container">
         <div class = "top">
             <div class = "logo  col-md-6">
-                <img src="__PUBLIC__/Home/imgs/logo.png" alt="">
+                <img src="/Public/Home/imgs/logo.png" alt="">
                 <span>社居易</span>
             </div>
             <div  class = "mainNav col-md-6">
@@ -47,7 +63,7 @@
     <div class="detailBox">
         <div class = "detail-bottom">
             <div class = "col-md-1 orLogoBox">
-                <img class = "orLogo" src="__PUBLIC__/Home/imgs/or4.jpg" alt="">
+                <img class = "orLogo" src="/Public/Home/imgs/or4.jpg" alt="">
             </div>
             <div class = "col-md-7 community-tit">
                 <h3>中国社区</h3>
@@ -97,7 +113,7 @@
                     <ul class = "clearfix">
                         <li class = "clearfix pro-li">
                             <div class = "left leftImg">
-                                <img src="__PUBLIC__/Home/imgs/shequ1.jpg" alt="">
+                                <img src="/Public/Home/imgs/shequ1.jpg" alt="">
                             </div>
                             <div class = "left leftCon">
                                 <dl>
@@ -121,7 +137,7 @@
                         </li>
                         <li class = "clearfix pro-li">
                             <div class = "left leftImg">
-                                <img src="__PUBLIC__/Home/imgs/shequ1.jpg" alt="">
+                                <img src="/Public/Home/imgs/shequ1.jpg" alt="">
                             </div>
                             <div class = "left leftCon">
                                 <dl>
@@ -152,7 +168,7 @@
                     <ul class = "clearfix">
                         <li class = "clearfix pro-li">
                             <div class = "left leftImg">
-                                <img src="__PUBLIC__/Home/imgs/shequ3.jpg" alt="">
+                                <img src="/Public/Home/imgs/shequ3.jpg" alt="">
                             </div>
                             <div class = "left leftCon">
                                 <dl>
@@ -177,7 +193,7 @@
 
                         <li class = "clearfix pro-li">
                             <div class = "left leftImg">
-                                <img src="__PUBLIC__/Home/imgs/shequ3.jpg" alt="">
+                                <img src="/Public/Home/imgs/shequ3.jpg" alt="">
                             </div>
                             <div class = "left leftCon">
                                 <dl>
@@ -201,7 +217,7 @@
                         </li>
                         <li class = "clearfix pro-li">
                             <div class = "left leftImg">
-                                <img src="__PUBLIC__/Home/imgs/shequ3.jpg" alt="">
+                                <img src="/Public/Home/imgs/shequ3.jpg" alt="">
                             </div>
                             <div class = "left leftCon">
                                 <dl>
@@ -245,14 +261,14 @@
                 <h3>最新项目</h3>
                 <ul class = "latest-ulbox clearfix">
                     <li class = "clearfix">
-                        <div class = "left left-img"><img src="__PUBLIC__/Home/imgs/shequ3.jpg" alt=""></div>
+                        <div class = "left left-img"><img src="/Public/Home/imgs/shequ3.jpg" alt=""></div>
                         <div class = "left right-detail">
                             <p class ="p1">“志愿青春，成长无虑”如意社区青少年服务项目</p>
                             <p class = "p2">2017-09-13 20:28</p>
                         </div>
                     </li>
                     <li class = "clearfix">
-                        <div class = "left left-img"><img src="__PUBLIC__/Home/imgs/shequ3.jpg" alt=""></div>
+                        <div class = "left left-img"><img src="/Public/Home/imgs/shequ3.jpg" alt=""></div>
                         <div class = "left right-detail">
                             <p class ="p1">“志愿青春，成长无虑”如意社区青少年服务项目</p>
                             <p class = "p2">2017-09-13 20:28</p>
@@ -260,7 +276,7 @@
                     </li>
 
                     <li class = "clearfix">
-                        <div class = "left left-img"><img src="__PUBLIC__/Home/imgs/shequ3.jpg" alt=""></div>
+                        <div class = "left left-img"><img src="/Public/Home/imgs/shequ3.jpg" alt=""></div>
                         <div class = "left right-detail">
                             <p class ="p1">“志愿青春，成长无虑”如意社区青少年服务项目</p>
                             <p class = "p2">2017-09-13 20:28</p>
@@ -288,7 +304,7 @@
     </div>
 </div>
 </body>
-<script src = "__PUBLIC__/Home/js/cityBoxShow.js"></script>
+<script src = "/Public/Home/js/cityBoxShow.js"></script>
 <script>
     $(".detail-nav li a").click(function () {
         $(this).addClass("on");
@@ -317,7 +333,7 @@
 
     });
 
-    $.post("__CONTROLLER__/getOriganizationInfo?id={$id}", function (data) {
+    $.post("/index.php/Home/Home/getOriganizationInfo?id=<?php echo ($id); ?>", function (data) {
 
         var img = '<img class = "orLogo" src="'+ data.sjy_origanization_logo_img_path +'" alt="">';
         $(".orLogoBox").html(img);
