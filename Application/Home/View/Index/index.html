@@ -30,8 +30,8 @@
 
                             <input type='hidden' value='2' />
                             <div class="form-group-border">
-                                <input type="text" class="form-input phoneNum" id="username" placeholder="请输入手机号">
-                                <input type="password" class="form-input pswNum" id="password" placeholder="请输入密码">
+                                <input type="text" class="form-input phoneNum" id="username" placeholder="请输入手机号" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
+                                <input type="password" class="form-input pswNum" id="password" placeholder="请输入密码" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
                             </div>
                             <div class="form-group">
                                 <p class = "remider"></p>
@@ -47,9 +47,9 @@
                         <form  class="form-horizontal" role="form">
                             <input type='hidden' value='2' />
                             <div class="form-group-border">
-                                <input type="text" class="form-input phoneNum" id="Rusername" placeholder="请输入手机号">
-                                <input type="password" class="form-input pswNum" id="Rpassword1" placeholder="请输入密码">
-                                <input type="password" class="form-input pswNum" id="Rpassword2" placeholder="请再次输入密码">
+                                <input type="text" class="form-input phoneNum" id="Rusername" placeholder="请输入手机号" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
+                                <input type="password" class="form-input pswNum" id="Rpassword1" placeholder="请输入密码" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
+                                <input type="password" class="form-input pswNum" id="Rpassword2" placeholder="请再次输入密码" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
                             </div>
                             <div class="form-group">
                                 <p class = "remider"></p>
@@ -68,19 +68,23 @@
 <script>
     var regPhone = /^1[3|4|5|8][0-9]\d{4,8}$/;
     var regPassword = /^[A-Za-z0-9]{6,20}$/;
+
+
+
+
     $("#login-btn").click(function () {
 
         if( ! regPhone.test($("#username").val()) ){
             $("#login .remider").html("请输入有效的手机号码");
             return false;
         }
-        if( ! regPassword.test($("#password").val()) ){
+        if( ! regPassword.test( $("#password").val() ) ){
             $("#login .remider").html("请输入正确密码");
             return false;
         }
         $.ajax({
             url : "__MODULE__/Login/dologin",
-            data: {type : 1, phone : $("#username").val() , password : $("#password").val()},
+            data: {type : 1, phone : $("#username").val(), password : $("#password").val()},
             type : "post",
             dataType : "json",
             success : function (data) {
@@ -107,7 +111,7 @@
             $("#register .remider").html("密码由6~20位数字或字母组成");
             return false;
         }
-        if( !($("#Rpassword1").val() == $("#Rpassword2").val()) ){
+        if( !($("#Rpassword1").val() == $("#Rpassword2")) ){
             $("#register .remider").html("两次输入密码不一致");
             return false;
         }
@@ -128,6 +132,7 @@
         return false;
     });
 </script>
+
 
 <!-- 模态框（Modal） -->
 <div class="modal fade" id="loginModel2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -159,8 +164,8 @@
 
                             <input type='hidden' value='2' />
                             <div class="form-group-border">
-                                <input type="text" class="form-input phoneNum" id="username2" placeholder="请输入手机号">
-                                <input type="password" class="form-input pswNum" id="password2" placeholder="请输入密码">
+                                <input type="text" class="form-input phoneNum" id="username2" placeholder="请输入手机号" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
+                                <input type="password" class="form-input pswNum" id="password2" placeholder="请输入密码" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
                             </div>
                             <div class="form-group">
                                 <p class = "remider"></p>
@@ -176,9 +181,9 @@
                         <form  class="form-horizontal" role="form">
                             <input type='hidden' value='2' />
                             <div class="form-group-border">
-                                <input type="text" class="form-input phoneNum" id="Rusername2" placeholder="请输入手机号">
-                                <input type="password" class="form-input pswNum" id="Rpassword21" placeholder="请输入密码">
-                                <input type="password" class="form-input pswNum" id="Rpassword22" placeholder="请再次输入密码">
+                                <input type="text" class="form-input phoneNum" id="Rusername2" placeholder="请输入手机号" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
+                                <input type="password" class="form-input pswNum" id="Rpassword21" placeholder="请输入密码" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" >
+                                <input type="password" class="form-input pswNum" id="Rpassword22" placeholder="请再次输入密码" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
                             </div>
                             <div class="form-group">
                                 <p class = "remider"></p>
@@ -236,7 +241,7 @@
             $("#register2 .remider").html("密码由6~20位数字或字母组成");
             return false;
         }
-        if( !($("#Rpassword21").val() == $("#Rpassword22").val()) ){
+        if( !($("#Rpassword21").val().replace(/(^\s*)|(\s*$)/g, "") == $("#Rpassword22").val()) ){
             $("#register2 .remider").html("两次输入密码不一致");
             return false;
         }
@@ -423,4 +428,3 @@
     </div>
 </div>
 </body>
-</html>
