@@ -357,7 +357,7 @@
             $community_code = session('userInfo')['sjy_community_user_community_code'];
             //正在征集中
             $data = array(
-                  "sjy_community_project_status"=>0;
+                  "sjy_community_project_status"=>0,
                   "sjy_community_project_collect_start_time"=>array('lt',date('Y-m-d',time())),
                   'sjy_community_project_start_time'=>array('gt',date('Y-m-d',time())) 
             );
@@ -375,7 +375,7 @@
                    "community_id"=>$project_id,
                    'project_id'=>$project_id,
                    'status'=>1
-            )
+            );
             $info = M('project')->where($data)->select();
             //查询社会组织信息
             foreach($info as $key=>$value)
@@ -388,7 +388,7 @@
         //查询意向机构发送的项目书
         public function projectBookList()
         {
-            $origanization_id = I('get.origanization_id') //社会组织id
+            $origanization_id = I('get.origanization_id'); //社会组织id
             $project_id = I('post.project_id');  //项目id
             $community_id = session('userInfo')['sjy_community_user_community_code'];//社区id
             //查询项目书列表
@@ -447,8 +447,8 @@
             //更新sjy_community_project_info表
             $data = array(
                   "sjy_community_project_status"=>1,
-                  "sjy_community_project_origanization"=>$origanization_id;
-                  "sjy_community_project_origanization_name"=>M('origanization_base_info')->where(array('sjy_id'=>$origanization_id))->getField('sjy_origanization_name');
+                  "sjy_community_project_origanization"=>$origanization_id,
+                  "sjy_community_project_origanization_name"=>M('origanization_base_info')->where(array('sjy_id'=>$origanization_id))->getField('sjy_origanization_name')
             );
             $val = M('community_project_info')->where(array('sjy_id'=>$project_id))->save($data);
 

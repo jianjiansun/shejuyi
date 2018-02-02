@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [ 2018-02-02T11:15:16+08:00 ] 127.0.0.1 /favicon.ico
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
@@ -808,3 +809,11 @@ INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000367s ]
 ERR: 无法加载模块:Public
 
+=======
+[ 2018-02-02T10:50:09+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Favicon
+
+>>>>>>> dc57428bb72f1382e791fc9f26686a4db7f7b935

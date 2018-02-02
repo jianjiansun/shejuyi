@@ -55,7 +55,10 @@
         <div class="col-md-12 column">
             <div class="row clearfix">
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> dc57428bb72f1382e791fc9f26686a4db7f7b935
                 <div class="col-md-2 column  perperson">
                     <h2>个人信息</h2>
                     <div>
@@ -96,11 +99,15 @@
                     </ul>
                 </div>
                 <div class="col-md-10 column perperson-con" style = "background: #FFFFFF;">
+<<<<<<< HEAD
 
                     <div class = "testfyed" >
                         <img src="/Public/Home/imgs/testfied.png" alt="">
                     </div>
                     <div class="layui-tab layui-tab-brief testfy" lay-filter="docDemoTabBrief">
+=======
+                    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+>>>>>>> dc57428bb72f1382e791fc9f26686a4db7f7b935
                         <ul class="layui-tab-title">
                             <li class="layui-this"  lay-id="a">社会组织认证</li>
                             <li  lay-id="b">社工认证</li>
@@ -269,6 +276,7 @@
 </div>
 </body>
 <script>
+<<<<<<< HEAD
     if("<?php echo ($isidentify); ?>"==1)
     {
         //认证
@@ -291,6 +299,8 @@
 
 
 
+=======
+>>>>>>> dc57428bb72f1382e791fc9f26686a4db7f7b935
     /*个人图片的切换*/
     //上传封面
     //document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
@@ -527,6 +537,7 @@
         });
         return false;
     });
+<<<<<<< HEAD
 
 
 
@@ -537,6 +548,8 @@
 
 
 
+=======
+>>>>>>> dc57428bb72f1382e791fc9f26686a4db7f7b935
 </script>
 
 </html>

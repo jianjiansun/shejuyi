@@ -32,7 +32,10 @@
 
     <div class="right person">
         <div class="dropdown pull-right">
+<<<<<<< HEAD
 
+=======
+>>>>>>> dc57428bb72f1382e791fc9f26686a4db7f7b935
             <a href="#" data-toggle="dropdown" class="dropdown-toggle">
                 <img src="<?php echo ($user_image); ?>" alt="">
                 <span><?php echo ($showname); ?></span>
@@ -146,7 +149,11 @@
         </ul>
         <div style="height: 0; clear: both;"></div>
         <ul class = "buildImg" id = "projectList">
+<<<<<<< HEAD
             <!--<li class="col-md-6 column">
+=======
+            <li class="col-md-6 column">
+>>>>>>> dc57428bb72f1382e791fc9f26686a4db7f7b935
                 <a href="detail1.html">
                     <p class = "where">
                         <span class = "region region1">夕阳红社区养老服务</span>
@@ -169,6 +176,7 @@
                         </div>
                     </div>
                 </a>
+<<<<<<< HEAD
             </li>-->
 
 
@@ -202,6 +210,124 @@
                 </div>-->
             </li>
 
+=======
+            </li>
+           <!--  <li class="col-md-6 column">
+                 <p class = "where">
+                        <span class = "region region1">夕阳红社区养老服务</span>
+                 </p>
+                <div class="col-md-6 column" style = "padding: 0;">
+                    <img  src="/Public/Home/imgs/shequ2.jpg" alt="" >
+                </div>
+                <div class="col-md-6 column house-list-info">
+                 
+                    <p class = "where">
+                        <span  class = "sp2 sp">项目发布方</span>
+                        <span class = "region">如意社区</span>
+                    </p>
+                    <p class = "where">
+                        <span  class = "sp3 sp">服务对象</span>
+                        <span class = "region">老年人</span>
+                    </p>
+                    <div class = "type">
+                        <span class = "iconfont">&#xe61f;</span>
+                        <span>北京市</span>-<span>通州区</span>-<span>永顺</span>
+                    </div>
+                </div>
+            </li>
+            <li class="col-md-6 column">
+                 <p class = "where">
+                        <span class = "region region1">夕阳红社区养老服务</span>
+                 </p>
+                <div class="col-md-6 column" style = "padding: 0;">
+                    <img  src="/Public/Home/imgs/shequ2.jpg" alt="" >
+                </div>
+                <div class="col-md-6 column house-list-info">
+                  
+                    <p class = "where">
+                        <span  class = "sp2 sp">项目发布方</span>
+                        <span class = "region">如意社区</span>
+                    </p>
+                    <p class = "where">
+                        <span  class = "sp3 sp">服务对象</span>
+                        <span class = "region">老年人</span>
+                    </p>
+                    <div class = "type">
+                        <span class = "iconfont">&#xe61f;</span>
+                        <span>北京市</span>-<span>通州区</span>-<span>永顺</span>
+                    </div>
+                </div>
+            </li>
+            <li class="col-md-6 column">
+                <p class = "where">
+                    <span class = "region region1">夕阳红社区养老服务</span>
+                </p>
+                <div class="col-md-6 column"  style = "padding: 0;">
+                    <img  src="/Public/Home/imgs/shequ2.jpg" alt="">
+                </div>
+                <div class="col-md-6 column house-list-info">
+                  
+                    <p class = "where">
+                        <span  class = "sp2 sp">项目发布方</span>
+                        <span class = "region">如意社区</span>
+                    </p>
+                    <p class = "where">
+                        <span  class = "sp3 sp">服务对象</span>
+                        <span class = "region">老年人</span>
+                    </p>
+                    <div class = "type">
+                        <span class = "iconfont">&#xe61f;</span>
+                        <span>北京市</span>-<span>通州区</span>-<span>永顺</span>
+                    </div>
+                </div>
+            </li>
+            <li class="col-md-6 column">
+                <p class = "where">
+                    <span class = "region region1">夕阳红社区养老服务</span>
+                </p>
+                <div class="col-md-6 column"  style = "padding: 0;">
+                    <img  src="/Public/Home/imgs/shequ2.jpg" alt="">
+                </div>
+                <div class="col-md-6 column house-list-info">
+                 
+                    <p class = "where">
+                        <span  class = "sp2 sp">项目发布方</span>
+                        <span class = "region">如意社区</span>
+                    </p>
+                    <p class = "where">
+                        <span  class = "sp3 sp">服务对象</span>
+                        <span class = "region">老年人</span>
+                    </p>
+                    <div class = "type">
+                        <span class = "iconfont">&#xe61f;</span>
+                        <span>北京市</span>-<span>通州区</span>-<span>永顺</span>
+                    </div>
+                </div>
+            </li>
+            <li class="col-md-6 column">
+                <p class = "where">
+                    <span class = "region region1">夕阳红社区养老服务</span>
+                </p>
+                <div class="col-md-6 column"  style = "padding: 0;">
+                    <img  src="/Public/Home/imgs/shequ2.jpg" alt="">
+                </div>
+                <div class="col-md-6 column house-list-info">
+                  
+                    <p class = "where">
+                        <span  class = "sp2 sp">项目发布方</span>
+                        <span class = "region">如意社区</span>
+                    </p>
+                    <p class = "where">
+                        <span  class = "sp3 sp">服务对象</span>
+                        <span class = "region">老年人</span>
+                    </p>
+                    <div class = "type">
+                        <span class = "iconfont">&#xe61f;</span>
+                        <span>北京市</span>-<span>通州区</span>-<span>永顺</span>
+                    </div>
+                </div>
+            </li> -->
+>>>>>>> dc57428bb72f1382e791fc9f26686a4db7f7b935
         </ul>
     </div>
     <div class = "col-md-3 program-box">
@@ -252,7 +378,11 @@
 
         console.log(data.data[0]);
         for(var i = 0; i < data.data.length ; i ++) {
+<<<<<<< HEAD
             html += '<li class="col-md-4 column">' +
+=======
+            html += '<li class="col-md-6 column">' +
+>>>>>>> dc57428bb72f1382e791fc9f26686a4db7f7b935
                     '<a href="/index.php/Home/Project/displayCommunityProject?id='+data.data[i].sjy_id+'">'+
                     '<p class = "where">' +
                     '<span class = "region region1">'+ data.data[i].sjy_community_project_title +'</span>' +
@@ -262,7 +392,11 @@
                     '</div>' +
                     '<div class="col-md-6 column house-list-info">' +
                     '<p class = "where">' +
+<<<<<<< HEAD
                     '<span  class = "sp2 sp">发布方</span>' +
+=======
+                    '<span  class = "sp2 sp">项目发布方</span>' +
+>>>>>>> dc57428bb72f1382e791fc9f26686a4db7f7b935
                     '<span class = "region">'+  data.data[i].community_info.sjy_community_name +'</span>' +
                     '</p>' +
                     '<p class = "where">' +
@@ -276,6 +410,7 @@
                     '</div>' +
                     '</a>'+
                     '</li>';
+<<<<<<< HEAD
 
             html+=  '<li>'+
                     '<a href="'+href+'">'+
@@ -307,6 +442,8 @@
 
 
 
+=======
+>>>>>>> dc57428bb72f1382e791fc9f26686a4db7f7b935
         }
         $("#projectList").html(html);
 
