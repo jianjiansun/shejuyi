@@ -1,5 +1,6 @@
 <?php
 	namespace Home\Controller;
+    header("Access-Control-Allow-Origin:*");
     use Think\Controller;
     class BaseController extends Controller 
     {

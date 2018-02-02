@@ -284,33 +284,36 @@
 
         console.log(data.data[0]);
          for(var i = 0; i < data.data.length ; i ++) {
-                    var href = '__MODULE__/Home/displayOriganizationHome/id/'+data.data[i].sjy_id;
-                    html+=  '<li>'+
-                            '<a href="'+href+'">'+
-                            '<div class="col-md-4 column" >'+
-                            '<img  src="'+data.data[i].sjy_origanization_logo_img_path+'" alt="" style = "height: 200px;width: 200px;border: 1px solid #cccccc;">'+
-                            '</div>'+
-                            '<div class="col-md-6 column house-list-info" style="padding-top: 56px;">'+
-                            '<p class = "where">'+
-                            '<span class = "region region1">'+data.data[i].sjy_origanization_name+'</span>'+
-                            '</p>'+
-                            '<p class = "where">'+
-                            '<span  class = "sp3 sp">服务领域</span>'+
-                            '<span class = "region">'+data.data[i].sjy_origanization_type_name+'</span>'+
-                            '</p>'+
-                            '<div class = "type">'+
-                            '<span class = "iconfont">&#xe61f;</span>'+
-                            '<span>'+data.data[i].address.sjy_origanization_city_name+'</span>-<span>'+data.data[i].address.sjy_origanization_area_name+'</span>'+
-                            '</div>'+
-                            '</div>'+
-                            '<div class="col-md-2 column house-list-price">'+
-                            '<div class = "price">'+
-                            '<a class= "detailBtn" href="">了解详情</a>'+
-                            '<a class= "detailBtn" href="">联系机构</a>'+
-                            '</div>'+
-                            '</div>'+
-                            '</a>'+
-                            '</li>';
+            var href = '__MODULE__/Home/displayOriganizationHome/id/'+data.data[i].sjy_id;
+
+
+             html+=  '<li>' +
+                     '<a href="'+href+'">'+
+                     '<div class="col-md-3 column" >' +
+                     '<img  src="'+data.data[i].sjy_origanization_logo_img_path+'" alt="" style = "height: 140px;width: 190px;border: 1px solid #cccccc;">' +
+                     '</div>' +
+                     '<div class="col-md-7 column house-list-info" style="padding-top: 10px;">' +
+                     '<p class = "projectTit">' +
+                     '<span class = "tit">'+data.data[i].sjy_origanization_name+'</span>' +
+                     '</p>' +
+                     '<p class = "where">' +
+                     '<span  class = "sp2 sp">发布方</span><i>|</i>' +
+                     '<span class = "region region1">'+data.data[i].sjy_origanization_type_name+'</span>' +
+                     '</p>' +
+                     '<p class = "where">' +
+                     '<span  class = "sp3 sp">服务对象</span><i>|</i>' +
+                     '<span class = "region">'+  data.data[i].sjy_community_project_service_area +'</span>' +
+                     '</p>' +
+                     '<div class = "type">' +
+                     '<span class = "iconfont">&#xe61f;</span>' +
+                     '<span>'+data.data[i].address.sjy_origanization_city_name+'</span>-<span>'+data.data[i].address.sjy_origanization_area_name+'</span>-<span>'+  data.data[i].address.sjy_community_street_name +'</span>' +
+                     '</div>' +
+                     '</div>' +
+                     '</a>'+
+                     '</li>';
+
+
+
          }
         $("#projectList").html(html);
 
