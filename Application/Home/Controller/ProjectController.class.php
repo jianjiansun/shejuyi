@@ -216,7 +216,7 @@
         	$project_id = I('get.id'); //项目id
         	//社会组织id
         	$origanization_code = session('userInfo')['sjy_origanization_user_origanization_code'];
-        	//项目信 息
+        	//项目信息
         	$project_info = M('community_project_info')->where(array('sjy_id'=>$project_id))->find();
         	//检测该项目是否可以投递
         	$res = $this->checkSendProjectBook($project_id,$project_info);
@@ -307,7 +307,7 @@
 	    	$origanization_id = session("userInfo")["sjy_origanization_user_origanization_code"];
 	    	//将信息插入sjy_project表  首先去找有没有该条记录，有并且status=1，则不操作sjy_project表 除此之外则操作该表
 	    	$isupload = M("project")->where(array("project_id"=>$project_id,"community_id"=>$community_id,"origanization_id"=>$origanization_id))->find();
-	    	$model = new Model();
+	    	$model = M();
             $model->startTrans();
 	    	//需要新增 之前没有项目联系过
 	    	if(empty($isupload))
@@ -316,9 +316,11 @@
 		    	$data["community_id"] = $community_id;
 		    	$data["origanization_id"] = $origanization_id;
 		    	$data['status'] = 1;  //已经发送项目书
+                $data['send_project_book_time'] = date('Y-m-d H:i:s',time());  //项目书最后发送时间
 	    		$res = M("project")->add($data);
 	    	}else{
-	    		$res = true;
+	    		//更新项目书发送时间 //最后时间
+                $res = M('project')->where(array("project_id"=>$project_id,"community_id"=>$community_id,"origanization_id"=>$origanization_id))->save(array("send_project_book_time"=>date('Y-m-d H:i:s',time())));
 	    	}
 	    	//将信息插入项目书表
 	    	$param['sjy_project_id'] = $project_id;     //项目id

@@ -1,6 +1,6 @@
 <?php
 	namespace Home\Controller;
-        header("Access-Control-Allow-Origin:*");
+    header("Access-Control-Allow-Origin:*");
 	use Think\Controller;
 	class LoginController extends Controller{
 		public function login()
