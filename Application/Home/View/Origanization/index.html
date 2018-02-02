@@ -178,12 +178,6 @@
                     </div>
 
                 </div>
-               <!-- <div class="col-md-2 column house-list-price">
-                    <div class = "price">
-                        <a class= "detailBtn" href="">了解详情</a>
-                        <a class= "detailBtn" href="">联系项目</a>
-                    </div>
-                </div>-->
             </li>
 
         </ul>
@@ -236,21 +230,21 @@
 
         console.log(data.data[0]);
         for(var i = 0; i < data.data.length ; i ++) {
-            html += '<li class="col-md-4 column">' +
+            html+=  '<li>' +
                     '<a href="__MODULE__/Project/displayCommunityProject?id='+data.data[i].sjy_id+'">'+
-                    '<p class = "where">' +
-                    '<span class = "region region1">'+ data.data[i].sjy_community_project_title +'</span>' +
-                    '</p>' +
-                    '<div class="col-md-6 column" style = "padding: 0;">' +
-                    '<img  src="'+ data.data[i].project_image_path +'" alt="" >' +
+                    '<div class="col-md-3 column" >' +
+                    '<img  src="'+ data.data[i].project_image_path +'" alt="" style = "height: 140px;width: 190px;border: 1px solid #cccccc;">' +
                     '</div>' +
-                    '<div class="col-md-6 column house-list-info">' +
-                    '<p class = "where">' +
-                    '<span  class = "sp2 sp">发布方</span>' +
-                    '<span class = "region">'+  data.data[i].community_info.sjy_community_name +'</span>' +
+                    '<div class="col-md-7 column house-list-info" style="padding-top: 10px;">' +
+                    '<p class = "projectTit">' +
+                    '<span class = "tit">'+ data.data[i].sjy_community_project_title +'</span>' +
                     '</p>' +
                     '<p class = "where">' +
-                    '<span  class = "sp3 sp">服务对象</span>' +
+                    '<span  class = "sp2 sp">发布方</span><i>|</i>' +
+                    '<span class = "region region1">'+  data.data[i].community_info.sjy_community_name +'</span>' +
+                    '</p>' +
+                    '<p class = "where">' +
+                    '<span  class = "sp3 sp">服务对象</span><i>|</i>' +
                     '<span class = "region">'+  data.data[i].sjy_community_project_service_area +'</span>' +
                     '</p>' +
                     '<div class = "type">' +
@@ -258,33 +252,6 @@
                     '<span>'+  data.data[i].address.sjy_community_province_name +'</span>-<span>'+  data.data[i].address.sjy_community_area_name +'</span>-<span>'+  data.data[i].address.sjy_community_street_name +'</span>' +
                     '</div>' +
                     '</div>' +
-                    '</a>'+
-                    '</li>';
-
-            html+=  '<li>'+
-                    '<a href="'+href+'">'+
-                    '<div class="col-md-4 column" >'+
-                    '<img  src="'+data.data[i].sjy_origanization_logo_img_path+'" alt="" style = "height: 200px;width: 200px;border: 1px solid #cccccc;">'+
-                    '</div>'+
-                    '<div class="col-md-6 column house-list-info" style="padding-top: 56px;">'+
-                    '<p class = "where">'+
-                    '<span class = "region region1">'+data.data[i].sjy_origanization_name+'</span>'+
-                    '</p>'+
-                    '<p class = "where">'+
-                    '<span  class = "sp3 sp">服务领域</span>'+
-                    '<span class = "region">'+data.data[i].sjy_origanization_type_name+'</span>'+
-                    '</p>'+
-                    '<div class = "type">'+
-                    '<span class = "iconfont">&#xe61f;</span>'+
-                    '<span>'+data.data[i].address.sjy_origanization_city_name+'</span>-<span>'+data.data[i].address.sjy_origanization_area_name+'</span>'+
-                    '</div>'+
-                    '</div>'+
-                    '<div class="col-md-2 column house-list-price">'+
-                    '<div class = "price">'+
-                    '<a class= "detailBtn" href="">了解详情</a>'+
-                    '<a class= "detailBtn" href="">联系机构</a>'+
-                    '</div>'+
-                    '</div>'+
                     '</a>'+
                     '</li>';
 
