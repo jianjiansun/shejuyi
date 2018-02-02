@@ -14,6 +14,13 @@
     margin-left: 20px;
     border-radius: 2px;
 }
+.projectTit .tit {
+    font-size: 20px;
+    color: #333;
+    line-height: 57px;
+    height: 50px;
+    display: inline-block;
+}
 .changeBan a{
     display: inline-block;
     padding: 0 20px;
@@ -33,31 +40,36 @@
     padding: 0!important;
 }
 .where .region1{
-    font-size: 22px;
-    font-weight: 900;
-    color: #666;
+   /* font-size: 18px;
+    font-weight: 900;*/
+    color: #333;
+}
+.where i{
+    margin-right: 6px;
+    color: #cccccc;
 }
 
 .where .region1{
-    font-weight: 900;
+ /*   font-weight: 900;*/
 }
 .where .sp{
     display: inline-block;
-    width: 86px;
+    width: 58px;
     height: 26px;
     line-height: 26px;
-    text-align: center;
-    background: #4890FF;
-    color: #ffffff;
+    color: #333;
     margin-right: 10px;
+    text-align: justify!important;
 }
 .where {
 }
 .where .sp1{
-    background: #4890FF;
+ /*   background: #4890FF;*/
 }
 .where .sp2{
-    background: #D1AE00;
+    /*background: #D1AE00;*/
+    letter-spacing: 5.3px;
+    text-align: justify;
 }
 .classNav{
     border:1px solid #cccccc;
@@ -140,15 +152,16 @@
     min-height:  700px;
     border: 1px solid #cccccc;
     background: #FFFFFF;
-    padding: 0;
+    padding: 0!important;
 }
 
 .perperson-con{
     background: #FFFFFF;
-    width: 80%;
+    width: 80%!important;
     margin-left: 32px;
     min-height: 700px;
     border: 1px solid #ccc;
+
 }
 
 .main-container{
@@ -493,6 +506,14 @@ html {
     padding: 56px;
     text-align: center;
 }
+
+.testfyed{
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+
+
 .addMemberBox .addTit{
     line-height: 32px;
     font-size: 14px;

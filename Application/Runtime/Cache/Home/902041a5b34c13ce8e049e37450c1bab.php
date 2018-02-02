@@ -1,5 +1,21 @@
-<link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EasyLife</title>
+    <link rel="stylesheet" href="/Public/Home/css/bootstrap.css">
+    <link rel="stylesheet" href="/Public/Home/css/common.css">
+    <link rel="stylesheet" href="/Public/Home/css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+    <script src="/Public/Home/js/jquery-1.12.4.js"></script>
+    <script src="/Public/Home/js/bootstrap.js"></script>
+    <script src = "/Public/Home/js/autoResizeImage.js"></script>
+
+<link rel="stylesheet" href="/Public/Home/css/region.css">
+<link rel="stylesheet" href="/Public/Home/css/page2.css">
 </head>
 
 <body>
@@ -9,7 +25,7 @@
 
 <div class = "headLogin">
     <div class = "left changeBan">
-        <a href = "javascript:;" id = "cityChoose" class = "region">{$city}</a>
+        <a href = "javascript:;" id = "cityChoose" class = "region"><?php echo ($city); ?></a>
         <a class = "on"  href="">社会组织版</a>
         <a href="">社区版</a>
     </div>
@@ -18,18 +34,18 @@
         <div class="dropdown pull-right">
 
             <a href="#" data-toggle="dropdown" class="dropdown-toggle">
-                <img src="{$user_image}" alt="">
-                <span>{$showname}</span>
+                <img src="<?php echo ($user_image); ?>" alt="">
+                <span><?php echo ($showname); ?></span>
             </a>
             <ul class="dropdown-menu personalMenu">
                 <li>
-                    <a href="__CONTROLLER__/origanizationIdentify">认证状态</a>
+                    <a href="/index.php/Home/Origanization/origanizationIdentify">认证状态</a>
                 </li>
                 <li>
-                    <a href="__CONTROLLER__/personinfo">账号设置</a>
+                    <a href="/index.php/Home/Origanization/personinfo">账号设置</a>
                 </li>
                 <li>
-                    <a href="__CONTROLLER__/myoriganization">我的机构</a>
+                    <a href="/index.php/Home/Origanization/myoriganization">我的机构</a>
                 </li>
                 <li>
                     <a href="personal4.html">我的项目</a>
@@ -39,7 +55,7 @@
                 </li>
 
                 <li>
-                    <a href="__CONTROLLER__/logout">注销</a>
+                    <a href="/index.php/Home/Origanization/logout">注销</a>
                 </li>
             </ul>
         </div>
@@ -50,7 +66,7 @@
     <div class = "container">
         <div class = "top">
             <div class = "logo  col-md-6">
-                <img src="__PUBLIC__/Home/imgs/logo.png" alt="">
+                <img src="/Public/Home/imgs/logo.png" alt="">
                 <span>社居易</span>
             </div>
             <div  class = "mainNav col-md-6">
@@ -75,9 +91,9 @@
         <div id="ifocus_pic">
             <div id="ifocus_piclist" style="left:0; top:0;">
                 <ul>
-                    <li><a href="#"><img src="__PUBLIC__/Home/imgs/zixun1.JPG" alt="" /></a></li>
-                    <li><a href="#"><img src="__PUBLIC__/Home/imgs/zixun2.JPG" alt="" /></a></li>
-                    <li><a href="#"><img src="__PUBLIC__/Home/imgs/zixun3.jpg" alt="" /></a></li>
+                    <li><a href="#"><img src="/Public/Home/imgs/zixun1.JPG" alt="" /></a></li>
+                    <li><a href="#"><img src="/Public/Home/imgs/zixun2.JPG" alt="" /></a></li>
+                    <li><a href="#"><img src="/Public/Home/imgs/zixun3.jpg" alt="" /></a></li>
                 </ul>
             </div>
             <div id="ifocus_opdiv"></div>
@@ -91,9 +107,9 @@
         </div>
         <div id="ifocus_btn">
             <ul>
-                <li class="current"><img src="__PUBLIC__/Home/imgs/zixun1.JPG" alt="" /></li>
-                <li class="normal"><img src="__PUBLIC__/Home/imgs/zixun2.JPG" alt="" /></li>
-                <li class="normal"><img src="__PUBLIC__/Home/imgs/zixun3.jpg" alt="" /></li>
+                <li class="current"><img src="/Public/Home/imgs/zixun1.JPG" alt="" /></li>
+                <li class="normal"><img src="/Public/Home/imgs/zixun2.JPG" alt="" /></li>
+                <li class="normal"><img src="/Public/Home/imgs/zixun3.jpg" alt="" /></li>
             </ul>
         </div>
     </div>
@@ -136,7 +152,7 @@
                         <span class = "region region1">夕阳红社区养老服务</span>
                     </p>
                     <div class="col-md-6 column" style = "padding: 0;">
-                        <img  src="__PUBLIC__/Home/imgs/shequ2.jpg" alt="" >
+                        <img  src="/Public/Home/imgs/shequ2.jpg" alt="" >
                     </div>
                     <div class="col-md-6 column house-list-info">
                         <p class = "where">
@@ -158,7 +174,7 @@
 
             <li>
                 <div class="col-md-3 column" >
-                    <img  src="__PUBLIC__/Home/imgs/shequ2.jpg" alt="" style = "height: 140px;width: 190px;border: 1px solid #cccccc;">
+                    <img  src="/Public/Home/imgs/shequ2.jpg" alt="" style = "height: 140px;width: 190px;border: 1px solid #cccccc;">
                 </div>
                 <div class="col-md-7 column house-list-info" style="padding-top: 10px;">
                     <p class = "projectTit">
@@ -173,7 +189,7 @@
                         <span class = "region">青少年</span>
                     </p>
                     <div class = "type">
-                        <span class = "iconfont">&#xe61f;</span>
+                        <span class = "iconfont">&#xe61f;</span> <i>|</i>
                         <span>北京市</span>-<span>通州区</span>-<span>永顺</span>
                     </div>
 
@@ -190,7 +206,7 @@
     </div>
     <div class = "col-md-3 program-box">
         <div  class= "publish-program">
-            <a class= "publish-btn" href="__CONTROLLER__/send_project">发布项目</a>
+            <a class= "publish-btn" href="/index.php/Home/Origanization/send_project">发布项目</a>
         </div>
         
         
@@ -225,19 +241,19 @@
 </div>
 
 </body>
-<script src = "__PUBLIC__/Home/js/cityBoxShow.js"></script>
+<script src = "/Public/Home/js/cityBoxShow.js"></script>
 
 <!-- 因为这个插件， 所以就不可以出来那个地址选择了 -->
 <!--<script src = "../js/slider.js"></script>-->
 <script>
 
-    $.post("__CONTROLLER__/getprojectlist/page/1", function (data) {
+    $.post("/index.php/Home/Origanization/getprojectlist/page/1", function (data) {
         var html = "";
 
         console.log(data.data[0]);
         for(var i = 0; i < data.data.length ; i ++) {
             html += '<li class="col-md-4 column">' +
-                    '<a href="__MODULE__/Project/displayCommunityProject?id='+data.data[i].sjy_id+'">'+
+                    '<a href="/index.php/Home/Project/displayCommunityProject?id='+data.data[i].sjy_id+'">'+
                     '<p class = "where">' +
                     '<span class = "region region1">'+ data.data[i].sjy_community_project_title +'</span>' +
                     '</p>' +

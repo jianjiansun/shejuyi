@@ -39,6 +39,7 @@
         <div class="col-md-12 column">
             <div class="row clearfix">
 
+
                 <div class="col-md-2 column  perperson">
                     <h2>个人信息</h2>
                     <div>
@@ -79,7 +80,11 @@
                     </ul>
                 </div>
                 <div class="col-md-10 column perperson-con" style = "background: #FFFFFF;">
-                    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+
+                    <div class = "testfyed" >
+                        <img src="__PUBLIC__/Home/imgs/testfied.png" alt="">
+                    </div>
+                    <div class="layui-tab layui-tab-brief testfy" lay-filter="docDemoTabBrief">
                         <ul class="layui-tab-title">
                             <li class="layui-this"  lay-id="a">社会组织认证</li>
                             <li  lay-id="b">社工认证</li>
@@ -250,6 +255,20 @@
 </div>
 </body>
 <script>
+    if("{$isidentify}"==1)
+    {
+        //认证
+        $(".testfyed").css("display" , "block");
+        $(".testfy").css("display" , "none");
+
+        
+    }else{
+        //没认证
+        $(".testfyed").css("display" , "none");
+        $(".testfy").css("display" , "block");
+    }
+
+
     /*个人图片的切换*/
     //上传封面
     //document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
@@ -486,6 +505,16 @@
         });
         return false;
     });
+
+
+
+
+
+
+
+
+
+
 </script>
 
 </html>
