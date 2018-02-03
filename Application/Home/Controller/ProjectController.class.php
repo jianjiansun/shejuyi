@@ -213,7 +213,7 @@
         //社会组织投递项目书
         public function sendProjectBook()
         {
-        	$project_id = I('get.id'); //项目id
+        	$project_id = I('get.project_id'); //项目id
         	//社会组织id
         	$origanization_code = session('userInfo')['sjy_origanization_user_origanization_code'];
         	//项目信息
@@ -232,6 +232,8 @@
         //检测该机构是否可以投递该项目
         public function checkSendProjectBook($project_id,$project_info)
         {
+            // $project_id = 40;
+            // $project_info = M('community_project_info')->where(array('sjy_id'=>40))->find();
         	$res['state'] = 1;
             $res['errorInfo'] = '';
         	$project_id = $project_id; //项目id
@@ -251,6 +253,7 @@
         			{
         				$res['state'] = 3;
         				$res['errorInfo'] = '该项目已过征集期，无法发送';
+
         				return $res;
         			}else if(time()<strtotime($project_info['sjy_community_project_collect_start_time'])){
         				$res['state'] = 4;
@@ -350,7 +353,56 @@
         {
             $this->display();
         }
+        //邀请社会组织发送项目
+        public function inviteOriganization()
+        {
+            //检测就该项目该社会组织是否已经发送项目书，是否已经邀请过
+            $project_id = I('post.project_id');  //社区项目id
+            //社区id
+            $community_id = session('userInfo')['sjy_community_user_community_code'];
+            //社会组织id
+            $origanization_id = I('post.origanization_id');
+            $where = array(
+                'project_id'=>$project_id,
+                'community_id'=>$community_id,
+                'origanization_id'=>$origanization_id,
+                'status'=>0
+            );
+            //是否邀请过
+            $res = M('Project')->where($where)->find();
+            if($res)
+            {
+                $this->ajaxReturn(array('state'=>2,'该项目已邀请过该机构'));
+            }
+            $where = array(
+                'project_id'=>$project_id,
+                'community_id'=>$community_id,
+                'origanization_id'=>$origanization_id,
+                'status'=>1
+            );
+            //是否已经发送项目书
+            $val = M('Project')->where($where)->find();
+            if($val)
+            {
+                $this->ajaxReturn(array('state'=>3,'该项目该机构已发送项目书'));
+            }
 
+            //将该项目信息插入sjy_project表
+            $data["project_id"] = $project_id;
+            $data["community_id"] = $community_id; 
+            $data["status"] = 0;   //社区发送项目邀请 邀请对方发项目书
+            $data['invitate_time'] = date('Y-m-d H:i:s',time());
+            $data["origanization_id"] = $origanization_id;
+            //插入sjy_project表
+            $ress = M("project")->add($data);
+            if($ress)
+            {
+                $this->ajaxReturn(array('state'=>1,'errorInfo'=>"邀请成功"));  //邀请成功
+            }else{
+                $this->ajaxReturn(array('state'=>4,'errorInfo'=>"邀请失败,请重试"));  //邀请成功
+            }
+               
+        }
         //社区正在招标中的项目
         public function communityTenderProject()
         {

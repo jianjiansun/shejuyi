@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d3f5bbe-c18f-4fc9-9b1b-335d24248adf" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/lay/modules/carousel.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/lay/modules/code.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/lay/modules/element.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/lay/modules/flow.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/lay/modules/form.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/lay/modules/jquery.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/lay/modules/laydate.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/lay/modules/layedit.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/lay/modules/layer.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/lay/modules/laypage.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/lay/modules/laytpl.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/lay/modules/mobile.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/lay/modules/table.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/lay/modules/tree.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/lay/modules/upload.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/lay/modules/util.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Application/Home/View/Project/displayCommunityProject.html" afterPath="$PROJECT_DIR$/Application/Home/View/Project/displayCommunityProject.html" />
-      <change beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/386a182d8683e59f8e1c3b5537aa7875.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/386a182d8683e59f8e1c3b5537aa7875.php" />
-      <change beforePath="$PROJECT_DIR$/Application/Runtime/Logs/Common/18_02_03.log" afterPath="$PROJECT_DIR$/Application/Runtime/Logs/Common/18_02_03.log" />
-      <change beforePath="$PROJECT_DIR$/Application/Runtime/Logs/Home/18_02_03.log" afterPath="$PROJECT_DIR$/Application/Runtime/Logs/Home/18_02_03.log" />
-      <change beforePath="$PROJECT_DIR$/Public/Home/css/deliver.css" afterPath="$PROJECT_DIR$/Public/Home/css/deliver.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -79,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="displayCommunityProject.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="displayCommunityProject.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/View/Project/displayCommunityProject.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+            <state relative-caret-position="63">
+              <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#4;n#body#0;n#!!top" expanded="true" />
@@ -99,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProjectController.class.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ProjectController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/Home/Controller/ProjectController.class.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="215" column="45" lean-forward="true" selection-start-line="215" selection-start-column="45" selection-end-line="215" selection-end-column="45" />
+              <caret line="215" column="45" lean-forward="false" selection-start-line="215" selection-start-column="45" selection-end-line="215" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -185,8 +164,8 @@
         <option value="$PROJECT_DIR$/Application/Home/View/Index/index.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Community/index.html" />
         <option value="$PROJECT_DIR$/Public/Home/css/deliver.css" />
-        <option value="$PROJECT_DIR$/Application/Home/Controller/ProjectController.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/View/Project/displayCommunityProject.html" />
+        <option value="$PROJECT_DIR$/Application/Home/Controller/ProjectController.class.php" />
       </list>
     </option>
   </component>
@@ -197,7 +176,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="291" />
     <option name="width" value="697" />
     <option name="height" value="735" />
@@ -380,16 +359,15 @@
       <workItem from="1515681855658" duration="205000" />
       <workItem from="1515817197320" duration="15051000" />
       <workItem from="1517541220182" duration="14886000" />
-      <workItem from="1517638282330" duration="8602000" />
+      <workItem from="1517638282330" duration="8876000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47567000" />
+    <option name="totallyTimeSpent" value="47841000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2373512" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -398,7 +376,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -777,18 +755,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/ProjectController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="215" column="45" lean-forward="true" selection-start-line="215" selection-start-column="45" selection-end-line="215" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Project/displayCommunityProject.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+        <state relative-caret-position="63">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#1;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#4;n#body#0;n#!!top" expanded="true" />
@@ -800,6 +770,14 @@
             <marker date="1517646898959" expanded="true" signature="17157:17176" ph="..." />
             <marker date="1517646898959" expanded="true" signature="17464:17483" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/ProjectController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="215" column="45" lean-forward="false" selection-start-line="215" selection-start-column="45" selection-end-line="215" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>
