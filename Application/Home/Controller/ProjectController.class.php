@@ -85,6 +85,10 @@
         //邀请我
         public function invite()
         {
+            $page = I('get.page'); //页面
+            $limit = 15;
+            $start = ($page-1)*$limit; //开始
+            $limit = $start.",".$limit;
         	//社会组织id
         	$origanization_code = session('userInfo')['sjy_origanization_user_origanization_code'];
             //查询sjy_project表，按照邀请时间倒序排列
@@ -92,7 +96,7 @@
             		"origanization_id"=>$origanization_code,
             		'status'=>0
             );
-        	$info = M('project')->where($where)->order('invitate_time desc')->select();
+        	$info = M('project')->where($where)->order('invitate_time desc')->limit($limit)->select();
         	//查询社会项目表，获得项目详情
         	foreach($info as $key=>$value)
         	{
@@ -114,6 +118,10 @@
         //投标中
         public function alreadySendProject()
         {
+            $page = I('get.page'); //页面
+            $limit = 15;
+            $start = ($page-1)*$limit; //开始
+            $limit = $start.",".$limit;
         	//状态正在竞标 未中标
         	//社会组织id
         	$origanization_code = session('userInfo')['sjy_origanization_user_origanization_code'];
@@ -123,7 +131,7 @@
             		'status'=>1
             );
             //按照投递时间倒序排列
-        	$info = M('project')->where($where)->order('send_project_book_time desc')->select();
+        	$info = M('project')->where($where)->order('send_project_book_time desc')->limit($limit)->select();
         	//查询项目详情
         	foreach($info as $key=>$value)
         	{
@@ -137,7 +145,13 @@
         		}
         		$info[$key]['project_detail'] = $project_info;
         	}
-        	$this->ajaxReturn($info);
+            $count = M('project')->where($where)->order('send_project_book_time desc')->count();
+            $pages = ceil($count)/$limit;
+            $res = array(
+                   'data'=>$info,
+                   'pages'=>$pages
+            );
+        	$this->ajaxReturn($res);
         }
 
 
@@ -214,6 +228,10 @@
         public function sendProjectBook()
         {
         	$project_id = I('get.project_id'); //项目id
+            if(empty($project_id))
+            {
+                $this->ajaxReturn('state'=>9,'errorInfo'=>"上传错误,请重试");
+            }
         	//社会组织id
         	$origanization_code = session('userInfo')['sjy_origanization_user_origanization_code'];
         	//项目信息
@@ -406,6 +424,10 @@
         //社区正在招标中的项目
         public function communityTenderProject()
         {
+            $page = I('get.page'); //页面
+            $limit = 15;
+            $start = ($page-1)*$limit; //开始
+            $limit = $start.",".$limit;
             //在招标周期 且sjy_community_project_status=0的项目
             //社区id
             $community_code = session('userInfo')['sjy_community_user_community_code'];
@@ -415,8 +437,14 @@
                   "sjy_community_project_collect_start_time"=>array('lt',date('Y-m-d',time())),
                   'sjy_community_project_start_time'=>array('gt',date('Y-m-d',time())) 
             );
-            $info = M('community_project')->where($data)->select();
-            $this->ajaxReturn($info);
+            $info = M('community_project_info')->where($data)->limit($limit)->select();
+            $count = M('community_project_info')->where($data)->count();
+            $pages = ceil($count/$limit);
+            $res = array(
+                   'data'=>$info,
+                   'pages'=>$pages
+            );
+            $this->ajaxReturn($res);
         }
         //意向机构，已经发送项目书的
         public function  intentOriganization()
