@@ -5,7 +5,7 @@ $(function () {
     console.log($("#cityChoose"));
 
     $("#cityChoose").click(function(){
-        $("#showCityBox").load("changeProvice.html").css("display", "block");
+        $("#showCityBox").load("/Home/Changeprovince/index").css("display", "block");
         $(".shadeBox").css("display", "block");
     });
 

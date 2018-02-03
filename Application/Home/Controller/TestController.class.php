@@ -9,7 +9,9 @@
        } 
        public function haha()
        {
-       		$this->file_upload();
+       	     var_dump($_FILES);
+       	     var_dump($_POST);
+       		// $this->file_upload();
        }
 	   //发送项目书
 	   public  function file_upload()

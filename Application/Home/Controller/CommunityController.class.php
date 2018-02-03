@@ -612,19 +612,7 @@ class CommunityController extends BaseController {
         $this->assign("project_info",$project_info);
         $this->display();
    }
-        //设置城市
-        public function setcity()
-        {
-            $cityid = I("post.cityid")?I('post.cityid'):0;
-             if($cityid)
-            {
-                 session("cityid",$cityid);
-                 $this->ajaxReturn(array('state'=>1,'errorInfo'=>''));
-            }else{
-                  $this->ajaxReturn(array('state'=>0,'errorInfo'=>'城市设置失败，请重新设置'));
-               }
-        }
-      
+       
        
         //查看社会组织正在进行的项目
         public function getoriganizationingproject()
@@ -702,82 +690,6 @@ class CommunityController extends BaseController {
            $this->ajaxReturn($ret);
 
         }
-        
-
-        //邀请社会组织做项目页面
-        public function invite_project()
-        {
-            $this->assign("origanization_id",I("get.origanization_id"));
-            $this->display();
-        }
-    //邀请列表
-    public function inviteprojectlist()
-    {
-        //接收参数  社会组织id 项目id
-        $sjy_community_code = session("userInfo")['sjy_community_user_community_code'];
-        $plan_project = M("community_project_info")->where(array("sjy_community_project_state"=>0,"sjy_community_code"=>$sjy_community_id,"sjy_community_project_collect_end_time"=>array("gt",date("Y-m-d H:i:s",time()))))->select();
-        //该项目状态不能为2或者[10,100]  10 社区同意  [10,100]已经开始做了或者已经结束了
-        $i = 0;
-        foreach($plan_project as $key=>$value)
-        {
-            
-
-            $out = M('project')->where(array('project_id'=>$value['sjy_id'],'status'=>array(array('between',[10,100]),'2','OR')))->find();
-            if(!empty($out))
-            {
-                unset($plan_project);
-                continue;
-            }
-            $i++;
-            $plan_project[$key]['id'] = $i;
-        }
-        $res['data'] = $plan_project;
-        $res['code'] = 0;
-        $res['msg'] = '';
-        $res['count'] = count($plan_project);
-        $this->ajaxReturn($res);
-    }
-
-    //执行邀请
-    public function do_invite_project()
-    {
-        $id = I("post.id"); //项目id  来自社区发布的项目
-        $origanization_id = I("post.origanization_id");  //社会组织id
-        $community_id = M("community_project_info")->where(array("sjy_id"=>$id))->getField("sjy_community_id");
-        //将该项目信息插入sjy_project表
-        //检查是否邀请过 或该机构已向社区发过项目书 则无需重复邀请
-        $val = M("project")->where(array("project_id"=>$id,"community_id"=>$community_id,"origanization_id"=>$origanization_id))->find();
-        if(empty($val))
-        {
-            $data["project_id"] = $id;
-            $data["community_id"] = $community_id; 
-            $data["status"] = 0;   //社区发送项目邀请 邀请对方发项目书
-            $data['invitate_time'] = date('Y-m-d H:i:s',time());
-            $data["origanization_id"] = $origanization_id;
-            //插入sjy_project表
-            $res = M("project")->add($data);
-            if($res)
-            {
-                $this->ajaxReturn(1);  //邀请成功
-            }
-        }else{
-            if($val['status'] == 0)
-            {
-                $this->ajaxReturn(2);    //该项目已经邀请过该机构,无需重复邀请
-            }
-            else if($val['status'] == 1)
-            {
-                $this->ajaxReturn(3);   //该机构已发项目书给您,无需再邀请
-            }else if($val['status'] == -1||$val['status'] == -2)
-            {
-                M("project")->where(array("project_id"=>$id,"community_id"=>$community_id,"origanization_id"=>$origanization_id))->save(array("status"=>0));   //再次邀请 邀请
-                $this->ajaxReturn(1);
-            }
-        }
-    }
-
-
-
     public function uploadCommunityImage()
     {
             //执行上传文件操作
