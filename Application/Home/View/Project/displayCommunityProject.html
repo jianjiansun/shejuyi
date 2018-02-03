@@ -1,13 +1,18 @@
-
+<head>
     <link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
     <link rel="stylesheet" href="__PUBLIC__/Home/css/testfy.css">
     <link rel="stylesheet" href="__PUBLIC__/Home/css/chooseCity.css">
     <link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
     <link rel="stylesheet" href="__PUBLIC__/Home/css/detail.css">
     <link rel="stylesheet" href="__PUBLIC__/Home/css/component.css">
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
 
     <script src = "__PUBLIC__/Home/js/jquery.page.js"></script>
     <script src = "__PUBLIC__/Home/js/upLoadImg.js"></script>
+    <script src = "__PUBLIC__/Home/js/layui.js"></script>
+
+
+
 
 </head>
 <body>
@@ -38,6 +43,7 @@
                     <input class="form-control" type="text" />
                     <button type="submit" class="btn btn-default iconfont">&#xe61a;</button>
                 </div>
+
             </div>
 
         </div>
@@ -52,11 +58,12 @@
                 <h3>“志愿青春，成长无虑”如意社区青少年服务项目</h3>
                 <p>致力于服务社区人民的一系活动</p>
             </div>
-            <div class = "col-md-4">
+            <div class = "col-md-4" >
+
+
             </div>
 
         </div>
-
     </div>
     <div class="">
         <div class = "col-md-8" style="padding: 0;">
@@ -65,6 +72,20 @@
                     <li><a class = "nav1 on" href="javascript:;">项目主页</a></li>
                     <li><a class = "nav2" href="javascript:;">项目进度</a></li>
                 </ul>
+
+                <button type="button" class="layui-btn" id="test1">
+                    <i class="layui-icon">&#xe67c;</i>上传文件
+                </button>
+
+                <button id="uploadPDF">上传文件</button>
+
+                <!--<form class = "deliverForm" action="__MODULE__/Project/sendProjectBook" enctype="multipart/form-data">
+
+                    <input type = 'hidden' name = 'project_id' value='{$id}' />
+                    <input class = "deliver-input" type="file" name = "project_id" value = "发送项目书"  accept=".xls,.doc,.docx,.txt,.pdf" >
+                    <div class = "deliveryPdf">发送项目书</div>
+                    <input type = 'submit' value='提交' />
+                </form>-->
             </div>
             <div class = "detail-detail">
                  <div class = "box box1" style = "display: block;">
@@ -314,8 +335,11 @@
 
     });
 
+    var project_id;
+
 
     $.post("__CONTROLLER__/getCommunityProject/id/{$id}", function (data) {
+        project_id = data.sjy_id;
 
         var tit  = "";
         tit += '<h3>'+ data.sjy_community_project_title +'</h3>';
@@ -367,6 +391,61 @@
 
     });
 
+    layui.use('upload', function(){
+
+        var upload = layui.upload;
+
+/*upload.render({
+            elem: '#c'
+            ,url: '__MODULE__/Project/sendProjectBook/project_id/22'
+            ,method : 'get'
+            // ,auto: true //选择文件后不自动上传
+            // ,bindAction: '#uploadPDf' //指向一个按钮触发上传
+            ,choose: function(obj){
+                //将每次选择的文件追加到文件队列
+                var files = obj.pushFile();
+
+                //预读本地文件，如果是多文件，则会遍历。(不支持ie8/9)
+                obj.preview(function(index, file, result){
+                    console.log(index); //得到文件索引
+                    console.log(file); //得到文件对象
+                    console.log(result); //得到文件base64编码，比如图片
+
+                    //这里还可以做一些 append 文件列表 DOM 的操作
+
+                    //obj.upload(index, file); //对上传失败的单个文件重新上传，一般在某个事件中使用
+                    //delete files[index]; //删除列表中对应的文件，一般在某个事件中使用
+                });
+            }
+        });*/
+
+
+
+        //执行实例
+        var upload = upload.render({
+            elem: '#test1' //绑定元素
+            ,url:'__MODULE__/Project/sendProjectBook/project_id/22'
+            ,exts: 'pdf|doc|docx'
+            ,auto: true
+            ,bindAction: '#uploadPDf'
+            ,done: function(res){
+                //上传完毕回调
+                if(res.state == 1)
+                {
+                    layer.msg("发送成功");
+                }
+            }
+            ,error: function(){
+                //请求异常回调
+            }
+        });
+
+
+    });
+
+
+
+
 
 
 
@@ -377,4 +456,3 @@
 
 
 </script>
-</html>
