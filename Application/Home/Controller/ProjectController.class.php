@@ -439,11 +439,12 @@
             );
             $info = M('community_project_info')->where($data)->limit($limit)->select();
             $count = M('community_project_info')->where($data)->count();
-            $pages = ceil($count/$limit);
+            $pages = ceil($count/15);
             $res = array(
                    'data'=>$info,
                    'pages'=>$pages
             );
+            // var_dump($res);die;
             $this->ajaxReturn($res);
         }
         //意向机构，已经发送项目书的

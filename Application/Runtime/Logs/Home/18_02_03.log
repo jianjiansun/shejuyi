@@ -83,3 +83,128 @@ ERR: 1064:You have an error in your SQL syntax; check the manual that correspond
 ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-15,15' at line 1
  [ SQL语句 ] : SELECT * FROM `sjy_community_project_info` WHERE `sjy_community_project_status` = 0 AND `sjy_community_project_collect_start_time` < '2018-02-03' AND `sjy_community_project_start_time` > '2018-02-03' LIMIT -15,15  
 
+[ 2018-02-03T17:45:23+08:00 ] 127.0.0.1 /index.php/Home/Project/communityTenderProject
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000554s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000691s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0799s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0872s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.1545s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.1401s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0719s ]
+NOTIC: [8] Undefined variable: islogin D:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_community_project_info` [ RunTime:0.0946s ]
+SQL: SELECT * FROM `sjy_community_project_info` WHERE `sjy_community_project_status` = 0 AND `sjy_community_project_collect_start_time` < '2018-02-03' AND `sjy_community_project_start_time` > '2018-02-03' LIMIT 0,15   [ RunTime:0.1343s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_community_project_info` WHERE `sjy_community_project_status` = 0 AND `sjy_community_project_collect_start_time` < '2018-02-03' AND `sjy_community_project_start_time` > '2018-02-03' LIMIT 1   [ RunTime:0.0880s ]
+NOTIC: [2] Division by zero D:\wamp64\www\shejuyi\Application\Home\Controller\ProjectController.class.php 第 442 行.
+
+[ 2018-02-03T17:45:28+08:00 ] 127.0.0.1 /index.php/Home/Project/communityTenderProject
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000417s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.1429s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0951s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0766s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0724s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0650s ]
+NOTIC: [8] Undefined variable: islogin D:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_community_project_info` [ RunTime:0.0920s ]
+SQL: SELECT * FROM `sjy_community_project_info` WHERE `sjy_community_project_status` = 0 AND `sjy_community_project_collect_start_time` < '2018-02-03' AND `sjy_community_project_start_time` > '2018-02-03' LIMIT 0,15   [ RunTime:0.0830s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_community_project_info` WHERE `sjy_community_project_status` = 0 AND `sjy_community_project_collect_start_time` < '2018-02-03' AND `sjy_community_project_start_time` > '2018-02-03' LIMIT 1   [ RunTime:0.0725s ]
+NOTIC: [2] Division by zero D:\wamp64\www\shejuyi\Application\Home\Controller\ProjectController.class.php 第 442 行.
+
+[ 2018-02-03T17:45:48+08:00 ] 127.0.0.1 /index.php/Home/Project/communityTenderProject
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000549s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000658s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0842s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.1048s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0769s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.1211s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0969s ]
+NOTIC: [8] Undefined variable: islogin D:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_community_project_info` [ RunTime:0.1174s ]
+SQL: SELECT * FROM `sjy_community_project_info` WHERE `sjy_community_project_status` = 0 AND `sjy_community_project_collect_start_time` < '2018-02-03' AND `sjy_community_project_start_time` > '2018-02-03' LIMIT 0,15   [ RunTime:0.1000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_community_project_info` WHERE `sjy_community_project_status` = 0 AND `sjy_community_project_collect_start_time` < '2018-02-03' AND `sjy_community_project_start_time` > '2018-02-03' LIMIT 1   [ RunTime:0.0649s ]
+NOTIC: [2] Division by zero D:\wamp64\www\shejuyi\Application\Home\Controller\ProjectController.class.php 第 442 行.
+
+[ 2018-02-03T17:47:03+08:00 ] 127.0.0.1 /index.php/Home/Project/communityTenderProject
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000614s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000721s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.1255s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.1353s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.1086s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.1831s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.1865s ]
+NOTIC: [8] Undefined variable: islogin D:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_community_project_info` [ RunTime:0.1681s ]
+SQL: SELECT * FROM `sjy_community_project_info` WHERE `sjy_community_project_status` = 0 AND `sjy_community_project_collect_start_time` < '2018-02-03' AND `sjy_community_project_start_time` > '2018-02-03' LIMIT 0,15   [ RunTime:0.1911s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_community_project_info` WHERE `sjy_community_project_status` = 0 AND `sjy_community_project_collect_start_time` < '2018-02-03' AND `sjy_community_project_start_time` > '2018-02-03' LIMIT 1   [ RunTime:0.0897s ]
+NOTIC: [2] Division by zero D:\wamp64\www\shejuyi\Application\Home\Controller\ProjectController.class.php 第 442 行.
+
+[ 2018-02-03T17:47:37+08:00 ] 127.0.0.1 /index.php/Home/Project/communityTenderProject
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000450s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000520s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.1127s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.1137s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0873s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0755s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0968s ]
+NOTIC: [8] Undefined variable: islogin D:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_community_project_info` [ RunTime:0.0730s ]
+SQL: SELECT * FROM `sjy_community_project_info` WHERE `sjy_community_project_status` = 0 AND `sjy_community_project_collect_start_time` < '2018-02-03' AND `sjy_community_project_start_time` > '2018-02-03' LIMIT 0,15   [ RunTime:0.0752s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_community_project_info` WHERE `sjy_community_project_status` = 0 AND `sjy_community_project_collect_start_time` < '2018-02-03' AND `sjy_community_project_start_time` > '2018-02-03' LIMIT 1   [ RunTime:0.6354s ]
+NOTIC: [2] Division by zero D:\wamp64\www\shejuyi\Application\Home\Controller\ProjectController.class.php 第 442 行.
+
+[ 2018-02-03T17:48:16+08:00 ] 127.0.0.1 /index.php/Home/Project/communityTenderProject
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000384s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000523s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0975s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.2537s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0942s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0822s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0922s ]
+NOTIC: [8] Undefined variable: islogin D:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_community_project_info` [ RunTime:0.0698s ]
+SQL: SELECT * FROM `sjy_community_project_info` WHERE `sjy_community_project_status` = 0 AND `sjy_community_project_collect_start_time` < '2018-02-03' AND `sjy_community_project_start_time` > '2018-02-03' LIMIT 0,15   [ RunTime:0.0815s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_community_project_info` WHERE `sjy_community_project_status` = 0 AND `sjy_community_project_collect_start_time` < '2018-02-03' AND `sjy_community_project_start_time` > '2018-02-03' LIMIT 1   [ RunTime:0.0827s ]
+NOTIC: [2] Division by zero D:\wamp64\www\shejuyi\Application\Home\Controller\ProjectController.class.php 第 442 行.
+
+[ 2018-02-03T17:49:11+08:00 ] 127.0.0.1 /index.php/Home/Project/communityTenderProject
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000312s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000410s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.1117s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.1870s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0936s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0970s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0900s ]
+NOTIC: [8] Undefined variable: islogin D:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_community_project_info` [ RunTime:0.1551s ]
+SQL: SELECT * FROM `sjy_community_project_info` WHERE `sjy_community_project_status` = 0 AND `sjy_community_project_collect_start_time` < '2018-02-03' AND `sjy_community_project_start_time` > '2018-02-03' LIMIT 0,15   [ RunTime:0.1197s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_community_project_info` WHERE `sjy_community_project_status` = 0 AND `sjy_community_project_collect_start_time` < '2018-02-03' AND `sjy_community_project_start_time` > '2018-02-03' LIMIT 1   [ RunTime:0.0729s ]
+
