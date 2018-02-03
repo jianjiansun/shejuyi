@@ -1,16 +1,32 @@
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/testfy.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/chooseCity.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/detail.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/deliver.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/component.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EasyLife</title>
+    <link rel="stylesheet" href="/Public/Home/css/bootstrap.css">
+    <link rel="stylesheet" href="/Public/Home/css/common.css">
+    <link rel="stylesheet" href="/Public/Home/css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+    <script src="/Public/Home/js/jquery-1.12.4.js"></script>
+    <script src="/Public/Home/js/bootstrap.js"></script>
+    <script src = "/Public/Home/js/autoResizeImage.js"></script>
 
-    <script src = "__PUBLIC__/Home/js/jquery.page.js"></script>
-    <script src = "__PUBLIC__/Home/js/upLoadImg.js"></script>
-    <script src = "__PUBLIC__/Home/js/layui.js"></script>
+<head>
+    <link rel="stylesheet" href="/Public/Home/css/region.css">
+    <link rel="stylesheet" href="/Public/Home/css/testfy.css">
+    <link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+    <link rel="stylesheet" href="/Public/Home/css/page2.css">
+    <link rel="stylesheet" href="/Public/Home/css/detail.css">
+    <link rel="stylesheet" href="/Public/Home/css/deliver.css">
+    <link rel="stylesheet" href="/Public/Home/css/component.css">
+    <link rel="stylesheet" href="/Public/Home/css/layui.css">
+
+    <script src = "/Public/Home/js/jquery.page.js"></script>
+    <script src = "/Public/Home/js/upLoadImg.js"></script>
+    <script src = "/Public/Home/js/layui.js"></script>
 
 
 
@@ -23,12 +39,12 @@
 <div class = "headLogin">
     <div class = "container">
         <div class = "left changeBan">
-            <a href = "javascript:;" id = "cityChoose" class = "region">{$city}</a>
+            <a href = "javascript:;" id = "cityChoose" class = "region"><?php echo ($city); ?></a>
             <a class = "on"  href="">社会组织版</a>
             <a href="">社区版</a>
         </div>
         <div class="right person">
-            <img src="{$user_image}" alt="">
+            <img src="<?php echo ($user_image); ?>" alt="">
         </div>
     </div>
 </div>
@@ -36,7 +52,7 @@
     <div class = "container">
         <div class = "top">
             <div class = "logo  col-md-6">
-                <img src="__PUBLIC__/Home/imgs/logo.png" alt="">
+                <img src="/Public/Home/imgs/logo.png" alt="">
                 <span>社居易</span>
             </div>
             <div  class = "mainNav col-md-6">
@@ -52,7 +68,7 @@
 </div>
 <div class = "container" style = "margin-bottom: 40px;">
     <div class="detailBox">
-        <img style = "width: 100%;height:  300px;" src="__PUBLIC__/Home/imgs/zixun1.JPG" alt="">
+        <img style = "width: 100%;height:  300px;" src="/Public/Home/imgs/zixun1.JPG" alt="">
         <div class = "detail-bottom">
 
             <div class = "col-md-8 community-tit">
@@ -80,9 +96,9 @@
                 </button>
 
 
-                <!--<form class = "deliverForm" action="__MODULE__/Project/sendProjectBook" enctype="multipart/form-data">
+                <!--<form class = "deliverForm" action="/index.php/Home/Project/sendProjectBook" enctype="multipart/form-data">
 
-                    <input type = 'hidden' name = 'project_id' value='{$id}' />
+                    <input type = 'hidden' name = 'project_id' value='<?php echo ($id); ?>' />
                     <input class = "deliver-input" type="file" name = "project_id" value = "发送项目书"  accept=".xls,.doc,.docx,.txt,.pdf" >
                     <div class = "deliveryPdf">发送项目书</div>
                     <input type = 'submit' value='提交' />
@@ -120,13 +136,13 @@
 
                      <div class = "detail-item">
                          <span  class = "left">项目图片</span>
-                         <p><img class = "orDetail-img" src="__PUBLIC__/Home/imgs/or-detail.jpg" alt=""></p>
+                         <p><img class = "orDetail-img" src="/Public/Home/imgs/or-detail.jpg" alt=""></p>
                      </div>
                  </div>
 
                 <div class = "box box2" style = "display: none;" >
                     <div>
-                        <img style = "width: 100%;" src="__PUBLIC__/Home/imgs/building.png" alt="">
+                        <img style = "width: 100%;" src="/Public/Home/imgs/building.png" alt="">
                     </div>
                     <div>
                         <ul class="cbp_tmtimeline">
@@ -269,14 +285,14 @@
                 <h3>最新项目</h3>
                 <ul class = "latest-ulbox clearfix">
                     <li class = "clearfix">
-                        <div class = "left left-img"><img src="__PUBLIC__/Home/imgs/shequ3.jpg" alt=""></div>
+                        <div class = "left left-img"><img src="/Public/Home/imgs/shequ3.jpg" alt=""></div>
                         <div class = "left right-detail">
                             <p class ="p1">“志愿青春，成长无虑”如意社区青少年服务项目</p>
                             <p class = "p2">2017-09-13 20:28</p>
                         </div>
                     </li>
                     <li class = "clearfix">
-                        <div class = "left left-img"><img src="__PUBLIC__/Home/imgs/shequ3.jpg" alt=""></div>
+                        <div class = "left left-img"><img src="/Public/Home/imgs/shequ3.jpg" alt=""></div>
                         <div class = "left right-detail">
                             <p class ="p1">“志愿青春，成长无虑”如意社区青少年服务项目</p>
                             <p class = "p2">2017-09-13 20:28</p>
@@ -284,7 +300,7 @@
                     </li>
 
                     <li class = "clearfix">
-                        <div class = "left left-img"><img src="__PUBLIC__/Home/imgs/shequ3.jpg" alt=""></div>
+                        <div class = "left left-img"><img src="/Public/Home/imgs/shequ3.jpg" alt=""></div>
                         <div class = "left right-detail">
                             <p class ="p1">“志愿青春，成长无虑”如意社区青少年服务项目</p>
                             <p class = "p2">2017-09-13 20:28</p>
@@ -314,7 +330,7 @@
     </div>
 </div>
 </body>
-<script src = "__PUBLIC__/Home/js/cityBoxShow.js"></script>
+<script src = "/Public/Home/js/cityBoxShow.js"></script>
 <script>
     $(".detail-nav li a").click(function () {
         $(this).addClass("on");
@@ -339,7 +355,7 @@
     var project_id;
 
 
-    $.post("__CONTROLLER__/getCommunityProject/id/{$id}", function (data) {
+    $.post("/index.php/Home/Project/getCommunityProject/id/<?php echo ($id); ?>", function (data) {
         project_id = data.sjy_id;
 
         var tit  = "";
@@ -352,7 +368,7 @@
         html += '<div class = "detail-item">' +
                 '<span class = "left">发布社区</span>' +
                 '<p class = "left" style = "line-height:  30px;">'+
-                '<a href="__MODULE__/Home/displayCommunityHome/id/'+data.sjy_community_id+'">'+data.sjy_community_name +'</a></p>' +
+                '<a href="/index.php/Home/Home/displayCommunityHome/id/'+data.sjy_community_id+'">'+data.sjy_community_name +'</a></p>' +
                 '</div>' +
                 '<div class = "detail-item">' +
                 '<span class = "left">服务领域</span>' +
@@ -401,7 +417,7 @@
             elem: '#test1' //绑定元素
             ,auto: false
             ,bindAction: '#uploadPDF'
-            ,url:"__MODULE__/Project/sendProjectBook/project_id/{$id}"
+            ,url:"/index.php/Home/Project/sendProjectBook/project_id/<?php echo ($id); ?>"
             ,exts: 'pdf|doc|docx'
             ,done: function(res){
                 //上传完毕回调

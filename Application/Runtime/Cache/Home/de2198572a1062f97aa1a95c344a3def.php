@@ -1,16 +1,32 @@
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EasyLife</title>
+    <link rel="stylesheet" href="/Public/Home/css/bootstrap.css">
+    <link rel="stylesheet" href="/Public/Home/css/common.css">
+    <link rel="stylesheet" href="/Public/Home/css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+    <script src="/Public/Home/js/jquery-1.12.4.js"></script>
+    <script src="/Public/Home/js/bootstrap.js"></script>
+    <script src = "/Public/Home/js/autoResizeImage.js"></script>
 
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
-    <script src = "__PUBLIC__/Home/js/jquery-1.12.4.js"></script>
-    <script src = "__PUBLIC__/Home/js/bootstrap.js"></script>
-    <script src = "__PUBLIC__/Home/js/layui.js"></script>
-    <script src = "__PUBLIC__/Home/js/layui.all.js"></script>
 
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/hammer.js" type="text/javascript" charset="utf-8"></script>
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="/Public/Home/css/region.css">
+    <link rel="stylesheet" href="/Public/Home/css/layui.css">
+    <link rel="stylesheet" href="/Public/Home/css/page2.css">
+    <script src = "/Public/Home/js/jquery-1.12.4.js"></script>
+    <script src = "/Public/Home/js/bootstrap.js"></script>
+    <script src = "/Public/Home/js/layui.js"></script>
+    <script src = "/Public/Home/js/layui.all.js"></script>
+
+    <script src="/Public/Home/js/plugins/cover_js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/Public/Home/js/plugins/cover_js/hammer.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/Public/Home/js/plugins/cover_js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/Public/Home/js/plugins/cover_js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
 
 
 </head>
@@ -19,12 +35,12 @@
     <div class = "container">
         <div class = "left changeBan logoPer">
             <a href="main.html">
-                <img src="__PUBLIC__/Home/imgs/logo.png" alt="">
+                <img src="/Public/Home/imgs/logo.png" alt="">
                 <span>社居易</span>
             </a>
         </div>
         <div class="right person">
-           <!-- <img src="__PUBLIC__/Home/imgs/personDl.jpg" alt="">-->
+           <!-- <img src="/Public/Home/imgs/personDl.jpg" alt="">-->
         </div>
     </div>
 </div>
@@ -37,7 +53,7 @@
                 <div class="col-md-2 column  perperson">
                     <h2>个人信息</h2>
                     <div>
-                        <img id = "userImg" src="{$user_image}" alt="  ">
+                        <img id = "userImg" src="<?php echo ($user_image); ?>" alt="  ">
                         <!--用户图片更换-->
                         <div class = "cropImgBox"  ontouchstart="">
                             <div class="cover-wrap">
@@ -57,17 +73,17 @@
 
                     <ul class="person-ul">
                         <li>
-                            <a href="__MODULE__/Community/communityIdentify">认证状态</a>
+                            <a href="/index.php/Home/Community/communityIdentify">认证状态</a>
                         </li>
 
                         <li>
-                            <a href="__MODULE__/Community/personInfo">账号设置</a>
+                            <a href="/index.php/Home/Community/personInfo">账号设置</a>
                         </li>
                         <li>
-                            <a href="__MODULE__/Community/myCommunity">我的社区</a>
+                            <a href="/index.php/Home/Community/myCommunity">我的社区</a>
                         </li>
                         <li>
-                            <a  class = "on" href="__MODULE__/Project/communityProjectManger">我的项目</a>
+                            <a  class = "on" href="/index.php/Home/Project/communityProjectManger">我的项目</a>
                         </li>
                         <li>
                             <a href="">我的消息</a>
@@ -90,6 +106,7 @@
                                 <div class="basic-information">
                                     <table class="layui-table">
                                         <colgroup>
+                                            <col width="100">
                                             <col width="200">
                                             <col width="200">
                                             <col width="200">
@@ -99,7 +116,7 @@
                                         </colgroup>
                                         <thead>
                                         <tr>
-
+                                            <th>序号</th>
                                             <th>项目名称</th>
                                             <th>发布人</th>
                                             <th>服务对象</th>
@@ -108,7 +125,7 @@
                                             <th>操作</th>
                                         </tr>
                                         </thead>
-                                        <tbody id = "tbody1">
+                                        <tbody>
                                         <tr>
                                             <td>1</td>
                                             <td>2016-11-29</td>
@@ -194,6 +211,7 @@
                                 <div class="basic-information">
                                     <table class="layui-table">
                                         <colgroup>
+                                            <col width="100">
                                             <col width="200">
                                             <col width="200">
                                             <col width="200">
@@ -203,6 +221,7 @@
                                         </colgroup>
                                         <thead>
                                         <tr>
+                                            <th>序号</th>
                                             <th>项目名称</th>
                                             <th>发布人</th>
                                             <th>执行机构</th>
@@ -211,7 +230,7 @@
                                             <th>操作</th>
                                         </tr>
                                         </thead>
-                                        <tbody id = "tBody">
+                                        <tbody>
                                         <tr>
                                             <td>1</td>
                                             <td>2016-11-29</td>
@@ -493,7 +512,7 @@
 
 
             $.ajax({
-                url: "__MODULE__/Origanization/douploadtouxiang",
+                url: "/index.php/Home/Origanization/douploadtouxiang",
                 type: "POST",
                 data: {
                     img: dataURL
@@ -515,42 +534,6 @@
         }
     });
     //clipArea.destroy();
-
-    $.post("__CONTROLLER__/communityTenderProject", function (data) {
-
-        var html = '';
-
-        html += '<tr>\n' +
-            '<td>'+  data.+'</td>\n' +
-            '<td>人生就像是一场修行</td>\n' +
-            '<td></td>\n' +
-            '<td>查看</td>\n' +
-            '\n' +
-            '</tr>';
-
-        $("#tbody1").html(html);
-
-
-
-
-    })
-
-    $.ajax({
-        url: "__MODULE__/Origanization/douploadtouxiang",
-        type: "POST",
-        data: {
-            img: dataURL
-        },
-        dataType: "json",
-        success: function (data) {
-            if(data.state == 1)
-            {
-                layer.msg('修改成功');
-                console.log(data.url)
-            }
-        },
-        async:false
-    });
 
 
 
@@ -672,7 +655,6 @@
         });
 
     });
-
 
 </script>
 

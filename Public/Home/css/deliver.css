@@ -53,5 +53,18 @@
     height: 126px!important;
 }
 
-.
+.deliverBox{
+    position: absolute;
+    right:100px;
+    top: 0;
+    width: 200px;
+    height: 42px!important;
+    line-height: 42px!important;
 
+}
+#uploadPDF{
+    position: absolute;
+    right: 0;
+    width: 100px;
+    height: 42px;
+}
