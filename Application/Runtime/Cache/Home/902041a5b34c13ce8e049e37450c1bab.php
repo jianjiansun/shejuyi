@@ -48,7 +48,7 @@
                     <a href="/index.php/Home/Origanization/myoriganization">我的机构</a>
                 </li>
                 <li>
-                    <a href="personal4.html">我的项目</a>
+                    <a href="/index.php/Home/Project/origanizationProjectManger">我的项目</a>
                 </li>
                 <li>
                     <a href="">我的消息</a>

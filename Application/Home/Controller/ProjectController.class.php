@@ -213,7 +213,7 @@
         //社会组织投递项目书
         public function sendProjectBook()
         {
-        	$project_id = I('post.project_id'); //项目id
+        	$project_id = I('get.project_id'); //项目id
         	//社会组织id
         	$origanization_code = session('userInfo')['sjy_origanization_user_origanization_code'];
         	//项目信息
