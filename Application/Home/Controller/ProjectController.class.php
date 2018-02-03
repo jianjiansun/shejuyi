@@ -230,7 +230,7 @@
         	$project_id = I('get.project_id'); //项目id
             if(empty($project_id))
             {
-                $this->ajaxReturn('state'=>9,'errorInfo'=>"上传错误,请重试");
+                $this->ajaxReturn(array('state'=>9,'errorInfo'=>"上传错误,请重试"));
             }
         	//社会组织id
         	$origanization_code = session('userInfo')['sjy_origanization_user_origanization_code'];
@@ -424,7 +424,7 @@
         //社区正在招标中的项目
         public function communityTenderProject()
         {
-            $page = I('get.page'); //页面
+            $page = I('get.page')?I('get.page'):1; //页面
             $limit = 15;
             $start = ($page-1)*$limit; //开始
             $limit = $start.",".$limit;
@@ -439,11 +439,12 @@
             );
             $info = M('community_project_info')->where($data)->limit($limit)->select();
             $count = M('community_project_info')->where($data)->count();
-            $pages = ceil($count/$limit);
+            $pages = ceil($count/15);
             $res = array(
                    'data'=>$info,
                    'pages'=>$pages
             );
+            // var_dump($res);die;
             $this->ajaxReturn($res);
         }
         //意向机构，已经发送项目书的

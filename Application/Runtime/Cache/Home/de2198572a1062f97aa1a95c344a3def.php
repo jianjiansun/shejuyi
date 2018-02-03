@@ -106,17 +106,16 @@
                                 <div class="basic-information">
                                     <table class="layui-table">
                                         <colgroup>
-                                            <col width="100">
                                             <col width="200">
                                             <col width="200">
                                             <col width="200">
-                                            <col width="200">
-                                            <col width="200">
-
+                                            <col width="160">
+                                            <col width="160">
+                                            <col width="140">
                                         </colgroup>
                                         <thead>
                                         <tr>
-                                            <th>序号</th>
+
                                             <th>项目名称</th>
                                             <th>发布人</th>
                                             <th>服务对象</th>
@@ -125,7 +124,7 @@
                                             <th>操作</th>
                                         </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody id = "tbody1">
                                         <tr>
                                             <td>1</td>
                                             <td>2016-11-29</td>
@@ -211,7 +210,6 @@
                                 <div class="basic-information">
                                     <table class="layui-table">
                                         <colgroup>
-                                            <col width="100">
                                             <col width="200">
                                             <col width="200">
                                             <col width="200">
@@ -221,7 +219,6 @@
                                         </colgroup>
                                         <thead>
                                         <tr>
-                                            <th>序号</th>
                                             <th>项目名称</th>
                                             <th>发布人</th>
                                             <th>执行机构</th>
@@ -230,7 +227,7 @@
                                             <th>操作</th>
                                         </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody id = "tBody">
                                         <tr>
                                             <td>1</td>
                                             <td>2016-11-29</td>
@@ -535,6 +532,46 @@
     });
     //clipArea.destroy();
 
+    $.post("/index.php/Home/Project/communityTenderProject", function (data) {
+
+        var html = '';
+        for(var i = 0; i < data.data.length; i++){
+            html += '<tr>\n' +
+                '<td>'+  data.data[i].sjy_community_project_title+'</td>\n' +
+                '<td>'+ data.data[i].sjy_community_project_send_prople_name +'</td>\n' +
+                '<td>'+ data.data[i].sjy_community_project_service_area +'</td>\n' +
+                '<td>'+ data.data[i].sjy_community_project_collect_start_time+'~<br>'+data.data[i].sjy_community_project_collect_end_time +'</td>\n' +
+                '<td>'+ data.data[i].sjy_community_project_start_time+'~<br>'+ data.data[i].sjy_community_project_end_time  +'</td>\n' +
+                '<td><a href="/index.php/Home/ProjectdisplayCommunityProject/project_id/'+data.data[i].sjy_id+'">查看</a><br><a href="">意向机构</a></td>\n' +
+                '\n' +
+                '</tr>';
+        }
+
+
+        $("#tbody1").html(html);
+
+
+
+
+    })
+
+    $.ajax({
+        url: "/index.php/Home/Origanization/douploadtouxiang",
+        type: "POST",
+        data: {
+            img: dataURL
+        },
+        dataType: "json",
+        success: function (data) {
+            if(data.state == 1)
+            {
+                layer.msg('修改成功');
+                console.log(data.url)
+            }
+        },
+        async:false
+    });
+
 
 
 
@@ -655,6 +692,7 @@
         });
 
     });
+
 
 </script>
 
