@@ -101,6 +101,7 @@
                     $this->assign('ismanger',$this->ismanger);  //是否是管理员
                     $this->assign('user_image',$this->user_image);  //用户头像
                     $this->assign('code',$this->code);   //用户所属编号
+                    $this->assign('figure',session('figure'));   //用户所属编号
 
             }else{
                 $this->redirect("/");

@@ -73,11 +73,12 @@
                     <li><a class = "nav1 on" href="javascript:;">项目主页</a></li>
                     <li><a class = "nav2" href="javascript:;">项目进度</a></li>
                 </ul>
-
-                <button type="button" class="layui-btn deliverBox" id="test1">
-                    <i class="layui-icon">&#xe67c;</i>发送项目书
-                    <button id="uploadPDF">上传</button>
-                </button>
+				<if condition='$figure eq 1'>
+	                <button type="button" class="layui-btn deliverBox" id="test1">
+	                    <i class="layui-icon">&#xe67c;</i>发送项目书
+	                    <button id="uploadPDF">上传</button>
+	                </button>
+                </if>
 
 
                 <!--<form class = "deliverForm" action="__MODULE__/Project/sendProjectBook" enctype="multipart/form-data">
