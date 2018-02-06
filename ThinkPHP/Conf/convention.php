@@ -164,4 +164,8 @@ return  array(
     'FILE_UPLOAD_TYPE'      =>  'Local',    // 文件上传方式
     'DATA_CRYPT_TYPE'       =>  'Think',    // 数据加密方式
 
+    //geetest验证码
+    'CAPTCHA_ID'            =>'cb210783fef9ba6502525687660cf369',
+    'PRIVATE_KEY'           => 'a5dfa330413f164dc2f4fa63823c3c1f'
+
 );
