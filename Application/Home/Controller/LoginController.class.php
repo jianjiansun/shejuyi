@@ -2,6 +2,7 @@
 	namespace Home\Controller;
     header("Access-Control-Allow-Origin:*");
 	use Think\Controller;
+    use Org\Geetest\Geetest;
 	class LoginController extends Controller{
 		public function login()
 		{
@@ -99,6 +100,13 @@
     	{
     		$ret['state'] = 0;
     		$ret['msg'] = '登录失败，请重试';
+            $verify = $this->reVerify(I('post.geetest_challenge'), I('post.geetest_validate'), I('post.geetest_seccode'));
+            if(!$verify)
+            {
+                $ret['state'] = -2;
+                $ret['msg'] = '验证失败,请重试';
+                $this->ajaxReturn($ret);
+            }
     		$phone = I("post.phone");  //手机号
     		$type = I("post.type");  //类型                 
     		$password = I("post.password");  //密码
@@ -181,6 +189,58 @@
     			return false;   //没查到
     		}
     	}
+
+        //geetest验证
+        public function verify()
+        {
+            $verify = new Geetest(C('CAPTCHA_ID'),C("PRIVATE_KEY"));
+
+            if(!isset($_SESSION['geetest_user_id'])){
+              $_SESSION['geetest_user_id']=uniqid();// 生成一个唯一ID
+            }
+            $data = array(
+                "geetest_user_id" => $_SESSION['geetest_user_id'], # 网站用户id
+                "client_type" => "web", #web:电脑上的浏览器；h5:手机上的浏览器，包括移动应用内完全内置的web_view；native：通过原生SDK植入APP应用的方式
+                "ip_address" => "127.0.0.1" # 请在此处传输用户请求验证时所携带的IP
+            );
+
+            $status = $verify->pre_process($data, 1);
+            $_SESSION['gtserver'] = $status;
+            $_SESSION['geetest_user_id'] = $data['geetest_user_id'];
+            echo $verify->get_response_str();
+        }
+        //二次验证
+        public function reVerify($geetest_challenge, $geetest_validate, $geetest_seccode)
+        {
+
+            //var_dump($geetest_challenge.'----'.$geetest_validate.'----'.$geetest_seccode);die;
+            $verify = new Geetest(C('CAPTCHA_ID'),C("PRIVATE_KEY"));
+  
+            // 比如你设置了一个验证码是否验证通过的标识
+            $code_flag=false;
+              
+            // 这里获取你之前设置的user_id，传送给极验服务器做校验
+            $user_id = $_SESSION['geetest_user_id'];
+            if ($_SESSION['gtserver'] == 1) {
+                $result = $verify->success_validate($geetest_challenge, $geetest_validate, $geetest_seccode, $user_id);
+                if ($result) {
+                    // 验证码验证成功
+                    $code_flag=true;
+               }
+            }else{
+               if ($verify->fail_validate($geetest_challenge,$geetest_validate,$geetest_seccode)) {
+                    // 验证码验证成功
+                    $code_flag=true;
+              }
+            }
+              
+            // 如果验证码验证成功，再进行其他校验
+            if($code_flag){
+               return true;
+            }else{
+               return false;
+            }
+        }
 
 	}
 ?>

@@ -7,7 +7,7 @@
  */
 namespace Org\Geetest;
 
-class GeetestLib {
+class Geetest {
     const GT_SDK_VERSION = 'php_3.0.0';
 
     public static $connectTimeout = 1;
