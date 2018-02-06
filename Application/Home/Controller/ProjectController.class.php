@@ -450,29 +450,41 @@
         //意向机构，已经发送项目书的
         public function  intentOriganization()
         {
+            $page = I('get.page')?I('get.page'):1; //页面
+            $limit = 15;
+            $start = ($page-1)*$limit; //开始
+            $limit = $start.",".$limit;
             $project_id = I('get.id'); //项目id
             //社区id
             $community_id = session('userInfo')['sjy_community_user_community_code'];
             //根据项目id和社区id查询已经投递项目书的机构
             $data = array(
-                   "community_id"=>$project_id,
+                   "community_id"=>$community_id,
                    'project_id'=>$project_id,
                    'status'=>1
             );
-            $info = M('project')->where($data)->select();
+            $info = M('project')->where($data)->limit($limit)->select();
             //查询社会组织信息
             foreach($info as $key=>$value)
             {
                   $origanization_info = M('origanization_base_info')->where(array('sjy_id'=>$value['origanization_id']))->find();
                   $info[$key]['origanization_info'] = $origanization_info;                
             }
-            $this->ajaxReturn($info);
+            $count = M('project')->where($data)->count();
+            $res['data'] = $info;
+            $res['pages'] = ceil($count/15);
+            $this->ajaxReturn($res);
         }
         //查询意向机构发送的项目书
         public function projectBookList()
         {
+            $page = I('get.page')?I('get.page'):1; //页面
+            $limit = 15;
+            $start = ($page-1)*$limit; //开始
+            $limit = $start.",".$limit;
+
             $origanization_id = I('get.origanization_id'); //社会组织id
-            $project_id = I('post.project_id');  //项目id
+            $project_id = I('get.project_id');  //项目id
             $community_id = session('userInfo')['sjy_community_user_community_code'];//社区id
             //查询项目书列表
             $data = array(
@@ -480,8 +492,11 @@
                   'sjy_origanization_id'=>$origanization_id,
                   'sjy_community_id'=>$community_id
             );
-            $info = M('project_book')->where($data)->select();
-            $this->ajaxReturn($info);
+            $info = M('project_book')->where($data)->limit($limit)->select();
+            $count = M('project_book')->where($data)->count();
+            $res['pages'] = ceil($count/15);
+            $res['data'] = $info;
+            $this->ajaxReturn($res);
         }
         //社区同意社会组织做该项目
         public function agreeProject()
@@ -606,6 +621,35 @@
             $community_id = session('userInfo')['sjy_community_user_community_code'];
             $info = M('community_project_info')->where(array('sjy_community_project_status'=>2))->select();
             $this->ajaxReturn($info);
+        }
+
+
+        //下载项目书
+        public function downloadProjectBook()
+        {
+            header("Content-type: text/html;charset=utf-8");
+            $project_book_id = I("get.id");  //项目书id
+            $down_info = M("project_book")->find($project_book_id);
+            $file_name=$down_info['sjy_project_book_name'];
+            //用以解决中文不能显示出来的问题 
+            $file_name = time().strrchr($file_name,".");
+            $file_path=".".$down_info['sjy_project_path'];
+            //首先要判断给定的文件存在与否 
+            if(!file_exists($file_path)){
+                echo "没有该文件文件";
+                return ;
+            }
+            $fp=fopen($file_path,"r");
+            $file_size=filesize($file_path);
+            //下载文件需要用到的头 
+            header("Content-type: application/octet-stream");
+            header("Accept-Ranges: bytes");
+            header("Accept-Length:".$file_size);
+            header("Content-Disposition: attachment; filename=".$file_name);
+            //向浏览器返回数据 
+            echo fread($fp,$file_size);
+            fclose($fp);
+            exit();
         }
 	}
 ?>

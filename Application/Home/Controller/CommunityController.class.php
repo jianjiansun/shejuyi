@@ -756,70 +756,8 @@ class CommunityController extends BaseController {
         $this->ajaxReturn($res);
     }
 
-      public function downprojectbook()
-    {
-        $id = I("get.id");
-        $this->assign("id",$id);
-        $this->display();
-    }  
+  
 
-    //下载项目书
-    public function showdownprojectbook()
-    {
-	 $page = I("get.page");  //页码
-        $limit = I("get.limit");
-        $limit = ($page-1).",".$limit;
-        //项目id
-         //项目id
-        $project_id = I("get.id");
-        
-        //根据项目id查询项目书
-        $project_book = M("project_book")->where(array("sjy_project_id"=>$project_id))->limit($limit)->select();
-        //查询发项目书的机构
-	 static $i=0;
-        foreach($project_book as $key=>$value)
-        {
-	     $i++;
-            $project_book[$key]['ID'] = $i;
-            $project_book[$key]['origanization_name'] = M("origanization_base_info")->where(array("sjy_id"=>$value['sjy_origanization_id']))->getField("sjy_origanization_name");
-        }
-         $res['code'] = 0;
-        $res['msg'] = '';
-        $res['count'] = count($project_book);
-        $res['data'] = $project_book;
-        $this->ajaxReturn($res);
-    }
-
-    //执行下载
-    public function download()
-    {
-        header("Content-type: text/html;charset=utf-8");
-                 $project_book_id = I("get.id");
-                 $down_info = M("project_book")->find($project_book_id);
-                         $file_name=$down_info['sjy_project_book_name'];
-                        //用以解决中文不能显示出来的问题 
-                         $file_name = time().strrchr($file_name,".");
-                         $file_path=".".$down_info['sjy_project_path'];
-                        //首先要判断给定的文件存在与否 
-                         if(!file_exists($file_path)){
-                         echo "没有该文件文件";
-                        return ;
-                        }
-                         $fp=fopen($file_path,"r");
-                        $file_size=filesize($file_path);
-                         //下载文件需要用到的头 
-                         header("Content-type: application/octet-stream");
-                        header("Accept-Ranges: bytes");
-                        header("Accept-Length:".$file_size);
-                        header("Content-Disposition: attachment; filename=".$file_name);
-                      //向浏览器返回数据 
-                        echo fread($fp,$file_size);
-                        fclose($fp);
-                        exit();
-
-           
-           
-    }
         //修改个人头像
         public function douploadtouxiang()
         {
