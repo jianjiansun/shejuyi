@@ -183,7 +183,8 @@
                             <div class="form-group-border">
                                 <input type="text" class="form-input phoneNum" id="username2" placeholder="请输入手机号" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
                                 <input type="password" class="form-input pswNum" id="password2" placeholder="请输入密码" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
-                            </div>
+                            </div><br />
+                            <div id="embed-captcha2"></div>
                             <div class="form-group">
                                 <p class = "remider"></p>
                             </div>
@@ -219,8 +220,14 @@
 <script>
     var regPhone = /^1[3|4|5|8][0-9]\d{4,8}$/;
     var regPassword = /^[A-Za-z0-9]{6,20}$/;
+    var handlerEmbed2 = function(captchaObj){
     $("#login-btn2").click(function () {
-       
+        var validate = captchaObj.getValidate();
+        if (!validate) {
+           $("#login2 .remider").html("请先完成验证");
+           return false;
+        }
+
         if( ! regPhone.test($("#username2").val()) ){
             $("#login2 .remider").html("请输入有效的手机号码");
             return false;
@@ -231,7 +238,15 @@
         }
         $.ajax({
             url : "__MODULE__/Login/dologin",
-            data: {type : 2, phone : $("#username2").val() , password : $("#password2").val()},
+            data: 
+                {
+                    type : 2, 
+                    phone : $("#username2").val() ,
+                    password : $("#password2").val(),
+                    geetest_challenge: validate.geetest_challenge,
+                    geetest_validate: validate.geetest_validate,
+                    geetest_seccode: validate.geetest_seccode
+                },
             type : "post",
             dataType : "json",
             success : function (data) {
@@ -247,6 +262,8 @@
         return false;
 
     });
+    captchaObj.appendTo("#embed-captcha2");
+}
 
     $("#register-btn2").click(function () {
 
@@ -449,29 +466,72 @@
 <script>
     
        
-        // 将验证码加到id为captcha的元素里，同时会有三个input的值：geetest_challenge, geetest_validate, geetest_seccode
-       
-       
-    $.ajax({
-        // 获取id，challenge，success（是否启用failback）
-        url: "__MODULE__/Login/verify?t=" + (new Date()).getTime(), // 加随机数防止缓存
-        type: "get",
-        dataType: "json",
-        success: function (data) {
-            console.log(data);
-            // 使用initGeetest接口
-            // 参数1：配置参数
-            // 参数2：回调，回调的第一个参数验证码对象，之后可以使用它做appendTo之类的事件
-            initGeetest({
-                gt: data.gt,
-                challenge: data.challenge,
-                new_captcha: data.new_captcha,
-                product: "embed", // 产品形式，包括：float，embed，popup。注意只对PC版验证码有效
-                offline: !data.success, // 表示用户后台检测极验服务器是否宕机，一般不需要关注
-                width:'100%'
-                // 更多配置参数请参见：http://www.geetest.com/install/sections/idx-client-sdk.html#config
-            }, handlerEmbed);
-        }
-    });
+    // 将验证码加到id为captcha的元素里，同时会有三个input的值：geetest_challenge, geetest_validate, geetest_seccode 
+    //社会工作者
+    var g = 0;  
+    $('#loginModel').on('show.bs.modal', function () {
+   
+    if(g==0)
+    {
+  
+            $.ajax({
+                // 获取id，challenge，success（是否启用failback）
+                url: "__MODULE__/Login/verify?t=" + (new Date()).getTime(), // 加随机数防止缓存
+                type: "get",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    // 使用initGeetest接口
+                    // 参数1：配置参数
+                    // 参数2：回调，回调的第一个参数验证码对象，之后可以使用它做appendTo之类的事件
+                    initGeetest({
+                        gt: data.gt,
+                        challenge: data.challenge,
+                        new_captcha: data.new_captcha,
+                        product: "embed", // 产品形式，包括：float，embed，popup。注意只对PC版验证码有效
+                        offline: !data.success, // 表示用户后台检测极验服务器是否宕机，一般不需要关注
+                        width:'100%'
+                        // 更多配置参数请参见：http://www.geetest.com/install/sections/idx-client-sdk.html#config
+                    }, handlerEmbed);
+                }
+            });
+    }
+    g++;
+
+})
+
+   //社区
+   // 将验证码加到id为captcha的元素里，同时会有三个input的值：geetest_challenge, geetest_validate, geetest_seccode 
+    var c = 0;  
+    $('#loginModel2').on('show.bs.modal', function () {
+   
+    if(c==0)
+    {
+  
+            $.ajax({
+                // 获取id，challenge，success（是否启用failback）
+                url: "__MODULE__/Login/verify?t=" + (new Date()).getTime(), // 加随机数防止缓存
+                type: "get",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    // 使用initGeetest接口
+                    // 参数1：配置参数
+                    // 参数2：回调，回调的第一个参数验证码对象，之后可以使用它做appendTo之类的事件
+                    initGeetest({
+                        gt: data.gt,
+                        challenge: data.challenge,
+                        new_captcha: data.new_captcha,
+                        product: "embed", // 产品形式，包括：float，embed，popup。注意只对PC版验证码有效
+                        offline: !data.success, // 表示用户后台检测极验服务器是否宕机，一般不需要关注
+                        width:'100%'
+                        // 更多配置参数请参见：http://www.geetest.com/install/sections/idx-client-sdk.html#config
+                    }, handlerEmbed2);
+                }
+            });
+    }
+    c++;
+
+})
 </script>
 
