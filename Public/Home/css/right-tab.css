@@ -51,6 +51,7 @@
     bottom:100px;*/
 }
 .sure-btn{
+    font-size: 16px;
     margin-left: 20px;
     width:240px;
     background: #EA6F5A;
@@ -62,4 +63,12 @@
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius:4px;
+}
+.see-project-book{
+    margin-left: 40px;
+    font-size: 14px;
+    color: #2b7fff;
+}
+.see-project-book.on {
+    color: #EA6F5A;;
 }
