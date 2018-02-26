@@ -32,7 +32,7 @@
 </div>
 
 
-<div class = "tab-right-bar" style = "display: none;">
+<div class = "tab-right-bar" style = "display: block;">
     <div class = "right-tab">
        <a href="javascript:;">意向 <br>机构</a>
         <!--   <a href="javascript:;">我的意向社区</a>-->
@@ -642,7 +642,10 @@
 
         $(".intention-organization").click(function () {
 
-            $(".tab-right-bar").css("display" , "block");
+            $(".tab-right-bar").animate({
+                right:'0px',
+
+            });
 
             $(".tab-right-bar").height($(window).height() );
             $(".right-tab-content").height($(window).height() -200);
@@ -693,7 +696,6 @@
                         }
 
                         $(".organize-proposal").html(html);
-
 
                     });
 
