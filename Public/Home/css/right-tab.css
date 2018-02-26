@@ -1,0 +1,65 @@
+.tab-right-bar {
+    position: fixed;
+    right: 0;
+    top:0;
+    width: 310px;
+    background: #FFFFFF;
+}
+.right-tab{
+    width: 35px;
+    float: left;
+    height: 100%;
+    background: #000;
+}
+.right-tab a{
+    color: #FFFFFF;
+    padding-left:6px;
+}
+.right-tab-content{
+    float: left;
+    width: 275px;
+    height: 100%;
+    background: #FFFFFF;
+}
+.organize-choose-tit{
+    font-size: 16px;
+    padding: 0 12px;
+    line-height: 44px;
+    background: #e6e6e6;
+    height: 44px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.agree-organization{
+    float: right;
+}
+.organize-proposal{
+    padding: 0  12px;
+}
+.proposal-detail{
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.proposal-detail .download-btn{
+    float: right;
+}
+.sure-btn-box{
+    border-top: 1px solid #e6e6e6;
+    padding-top: 20px;
+    width: 100%;
+  /*  position: absolute;
+    bottom:100px;*/
+}
+.sure-btn{
+    margin-left: 20px;
+    width:240px;
+    background: #EA6F5A;
+    color: #FFFFFF;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    text-align:center;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius:4px;
+}

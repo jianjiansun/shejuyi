@@ -1,131 +1,45 @@
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EasyLife</title>
+    <link rel="stylesheet" href="/Public/Home/css/bootstrap.css">
+    <link rel="stylesheet" href="/Public/Home/css/common.css">
+    <link rel="stylesheet" href="/Public/Home/css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+    <script src="/Public/Home/js/jquery-1.12.4.js"></script>
+    <script src="/Public/Home/js/bootstrap.js"></script>
+    <script src = "/Public/Home/js/autoResizeImage.js"></script>
 
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/right-tab.css">
 
-    <script src = "__PUBLIC__/Home/js/jquery-1.12.4.js"></script>
-    <script src = "__PUBLIC__/Home/js/bootstrap.js"></script>
-    <script src = "__PUBLIC__/Home/js/layui.js"></script>
-    <script src = "__PUBLIC__/Home/js/layui.all.js"></script>
-
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/hammer.js" type="text/javascript" charset="utf-8"></script>
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="/Public/Home/css/region.css">
+    <link rel="stylesheet" href="/Public/Home/css/layui.css">
+    <link rel="stylesheet" href="/Public/Home/css/page2.css">
+   
+    <script src = "/Public/Home/js/layui.js"></script>
+    <script src = "/Public/Home/js/layui.all.js"></script>
 
 
+    <script src="/Public/Home/js/plugins/cover_js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/Public/Home/js/plugins/cover_js/hammer.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/Public/Home/js/plugins/cover_js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/Public/Home/js/plugins/cover_js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <div class = "headLogin">
     <div class = "container">
         <div class = "left changeBan logoPer">
-            <a href="main.html">
-                <img src="__PUBLIC__/Home/imgs/logo.png" alt="">
-                <span>社居易</span>
-            </a>
+            <img src="/Public/Home/imgs/logo.png" alt="">
+            <span>社居易</span>
         </div>
         <div class="right person">
-           <!-- <img src="__PUBLIC__/Home/imgs/personDl.jpg" alt="">-->
+           <!-- <img src="/Public/Home/imgs/personDl.jpg" alt="">-->
         </div>
     </div>
 </div>
-
-
-<div class = "tab-right-bar" style = "display: none;">
-    <div class = "right-tab">
-       <a href="javascript:;">意向 <br>机构</a>
-        <!--   <a href="javascript:;">我的意向社区</a>-->
-    </div>
-    <div class = "right-tab-content">
-        <p></p>
-       <ul class = "choose-organize-box">
-           <li class = "choose-organize-item">
-               <div class = "organize-choose-tit">
-                   <span>机构A</span>
-                   <a class = "agree-organization" href="javascript:;">同意</a>
-               </div>
-               <div class = "organize-proposal">
-                   <p class = "proposal-detail">
-                       <span>项目书一</span>
-                       <a class = "download-btn" href="javascript:;">下载</a>
-                   </p>
-                   <p class = "proposal-detail">
-                       <span>项目书二</span>
-                       <a class = "download-btn" href="javascript:;">下载</a>
-                   </p>
-                   <p class = "proposal-detail">
-                       <span>项目书三</span>
-                       <a class = "download-btn" href="javascript:;">下载</a>
-                   </p>
-               </div>
-           </li>
-           <li class = "choose-organize-item">
-               <div class = "organize-choose-tit">
-                   <span>机构B</span>
-                   <a class = "agree-organization" href="javascript:;">同意</a>
-               </div>
-               <div class = "organize-proposal">
-                   <p class = "proposal-detail">
-                       <span>项目书一</span>
-                       <a class = "download-btn" href="javascript:;">下载</a>
-                   </p>
-                   <p class = "proposal-detail">
-                       <span>项目书二</span>
-                       <a class = "download-btn" href="javascript:;">下载</a>
-                   </p>
-                   <p class = "proposal-detail">
-                       <span>项目书三</span>
-                       <a class = "download-btn" href="javascript:;">下载</a>
-                   </p>
-               </div>
-           </li>
-           <li class = "choose-organize-item">
-               <div class = "organize-choose-tit">
-                   <span>机构C</span>
-                   <a class = "agree-organization" href="javascript:;"><input type="checkbox">同意</a>
-               </div>
-               <div class = "organize-proposal">
-                   <p class = "proposal-detail">
-                       <span>项目书一</span>
-                       <a class = "download-btn" href="http://127.0.0.1/index.php/Home/Project/downloadProjectBook/id/40">下载</a>
-                   </p>
-                   <p class = "proposal-detail">
-                       <span>项目书二</span>
-                       <a class = "download-btn" href="http://127.0.0.1/index.php/Home/Project/downloadProjectBook/id/40">下载</a>
-                   </p>
-                   <p class = "proposal-detail">
-                       <span>项目书三</span>
-                       <a class = "download-btn" href="http://127.0.0.1/index.php/Home/Project/downloadProjectBook/id/40">下载</a>
-                   </p>
-               </div>
-           </li>
-       </ul>
-        <div class = "sure-btn-box">
-            <a class="sure-btn" href="javascript:;">确定</a>
-            <p class = 'remider'> 注意: 确认所选机构就不能再改啦！</p>
-        </div>
-
-
-
-
-
-
-    </div>
-
-    <script>
-
-        $(".tab-right-bar").height($(window).height() );
-        $(".right-tab-content").height($(window).height() -200);
-        $(".sure-btn-box").height( 200);
-
-
-
-    </script>
-
-</div>
-
-
 
 <div class="container main-container">
     <div class="row clearfix">
@@ -135,7 +49,7 @@
                 <div class="col-md-2 column  perperson">
                     <h2>个人信息</h2>
                     <div>
-                        <img id = "userImg" src="{$user_image}" alt="  ">
+                        <img id = "userImg" src="<?php echo ($user_image); ?>" alt="  ">
                         <!--用户图片更换-->
                         <div class = "cropImgBox"  ontouchstart="">
                             <div class="cover-wrap">
@@ -155,17 +69,17 @@
 
                     <ul class="person-ul">
                         <li>
-                            <a href="__MODULE__/Community/communityIdentify">认证状态</a>
+                            <a href="/index.php/Home/Origanization/origanizationIdentify">认证状态</a>
                         </li>
 
                         <li>
-                            <a href="__MODULE__/Community/personInfo">账号设置</a>
+                            <a href="/index.php/Home/Origanization/personInfo">账号设置</a>
                         </li>
                         <li>
-                            <a href="__MODULE__/Community/myCommunity">我的社区</a>
+                            <a href="/index.php/Home/Origanization/myOriganization">我的机构</a>
                         </li>
                         <li>
-                            <a  class = "on" href="__MODULE__/Project/communityProjectManger">我的项目</a>
+                            <a  class = "on" href="/index.php/Home/Project/origanizationProjectManger">我的项目</a>
                         </li>
                         <li>
                             <a href="">我的消息</a>
@@ -175,10 +89,10 @@
                 <div class="col-md-10 column perperson-con" style = "background: #FFFFFF;">
                     <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
                         <ul class="layui-tab-title">
-                            <li class="layui-this"  lay-id="a">征集中</li>
-                            <li  lay-id="b">待开始</li>
-                            <li  lay-id="c">执行中</li>
-                            <li  lay-id="d">结项中</li>
+                            <li class="layui-this"  lay-id="a">邀请我</li>
+                            <li  lay-id="b">投标中</li>
+                            <li  lay-id="c">待开始</li>
+                            <li  lay-id="d">进行中</li>
                             <li  lay-id="e">已完成</li>
                         </ul>
                         <div class="layui-tab-content">
@@ -188,25 +102,27 @@
                                 <div class="basic-information">
                                     <table class="layui-table">
                                         <colgroup>
+                                            <col width="100">
                                             <col width="200">
                                             <col width="200">
                                             <col width="200">
-                                            <col width="160">
-                                            <col width="160">
-                                            <col width="140">
+                                            <col width="200">
+                                            <col width="200">
+                                            <col width="200">
+
                                         </colgroup>
                                         <thead>
                                         <tr>
-
                                             <th>项目名称</th>
-                                            <th>发布人</th>
+                                            <th>发布方</th>
                                             <th>服务对象</th>
+                                            <th>状态</th>
                                             <th>征集周期</th>
-                                            <th>执行时间</th>
+                                            <th>邀请时间</th>
                                             <th>操作</th>
                                         </tr>
                                         </thead>
-                                        <tbody id = "tbody1">
+                                        <tbody>
                                         <tr>
                                             <td>1</td>
                                             <td>2016-11-29</td>
@@ -214,8 +130,7 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td>意向机构 详情</td>
- 
+                                            <td>投递项目书 详情</td>
                                         </tr>
                                         <tr>
                                             <td>10</td>
@@ -224,7 +139,7 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td>意向机构 详情</td>
+                                            <td>投递项目书 详情</td>
                                         </tr>
                                         </tbody>
                                     </table>
@@ -253,11 +168,12 @@
                                         </colgroup>
                                         <thead>
                                         <tr>
-                                            <th>序号</th>
                                             <th>项目名称</th>
-                                            <th>发布人</th>
-                                            <th>执行机构</th>
+                                            <th>发布方</th>
+                                            <th>投标人</th>
                                             <th>服务对象</th>
+                                            <th>征集周期</th>
+                                            <th>状态</th>
                                             <th>操作</th>
                                         </tr>
                                         </thead>
@@ -268,7 +184,8 @@
                                             <td>人生就像是一场修行</td>
                                             <td></td>
                                             <td></td>
-                                            <td>查看</td>
+                                            <td></td>
+                                            <td>详情 项目书</td>
 
                                         </tr>
                                         <tr>
@@ -277,7 +194,8 @@
                                             <td>于千万年之中，时间的无涯的荒野里…</td>
                                             <td></td>
                                             <td></td>
-                                            <td>查看</td>
+                                            <td></td>
+                                            <td>详情 项目书</td>
                                         </tr>
                                         </tbody>
                                     </table>
@@ -292,6 +210,7 @@
                                 <div class="basic-information">
                                     <table class="layui-table">
                                         <colgroup>
+                                            <col width="100">
                                             <col width="200">
                                             <col width="200">
                                             <col width="200">
@@ -301,15 +220,16 @@
                                         </colgroup>
                                         <thead>
                                         <tr>
+                                            <th>序号</th>
                                             <th>项目名称</th>
-                                            <th>发布人</th>
-                                            <th>执行机构</th>
-                                            <th>服务对象</th>
-                                            <th>开始时间</th>
+                                            <th>发布方</th>
+                                            <th>投标人</th>
+                                            <th>项目周期</th>
+                                            <th>社区同意时间</th>
                                             <th>操作</th>
                                         </tr>
                                         </thead>
-                                        <tbody id = "tBody">
+                                        <tbody>
                                         <tr>
                                             <td>1</td>
                                             <td>2016-11-29</td>
@@ -317,7 +237,7 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td>进度 查看</td>
+                                            <td>开始 详情 项目书</td>
 
                                         </tr>
                                         <tr>
@@ -327,7 +247,7 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td>进度 查看</td>
+                                            <td>开始 详情 项目书</td>
                                         </tr>
                                         </tbody>
                                     </table>
@@ -354,9 +274,10 @@
                                         <tr>
                                             <th>序号</th>
                                             <th>项目名称</th>
-                                            <th>执行机构</th>
-                                            <th>服务对象</th>
-                                            <th>申请结项日期</th>
+                                            <th>发布方</th>
+                                            <th>投标人</th>
+                                            <th>项目周期</th>
+                                            <th>开始时间</th>
                                             <th>操作</th>
                                         </tr>
                                         </thead>
@@ -367,7 +288,8 @@
                                             <td>人生就像是一场修行</td>
                                             <td></td>
                                             <td></td>
-                                            <td>同意 拒绝 查看 进度</td>
+                                            <td></td>
+                                            <td>查看进度 添加进度 详情 项目书</td>
 
 
                                         </tr>
@@ -377,7 +299,8 @@
                                             <td>于千万年之中，时间的无涯的荒野里…</td>
                                             <td></td>
                                             <td></td>
-                                            <td>同意 拒绝 查看 进度</td>
+                                            <td></td>
+                                            <td>查看进度 添加进度 详情 项目书</td>
                                         </tr>
                                         </tbody>
                                     </table>
@@ -404,10 +327,10 @@
                                         <tr>
                                             <th>序号</th>
                                             <th>项目名称</th>
-                                            <th>执行机构</th>
-                                            <th>服务对象</th>
-                                            <th>实际周期</th>
+                                            <th>发布方</th>
+                                            <th>投标人</th>
                                             <th>要求周期</th>
+                                            <th>实际周期</th>
                                             <th>操作</th>
                                         </tr>
                                         </thead>
@@ -419,7 +342,7 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td></td>
+                                            <td>查看进度 详情 项目书</td>
 
 
                                         </tr>
@@ -430,7 +353,7 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td></td>
+                                            <td>查看进度 详情 项目书</td>
                                         </tr>
                                         </tbody>
                                     </table>
@@ -473,7 +396,7 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td>查看</td>
+                                            <td></td>
 
 
                                         </tr>
@@ -484,7 +407,7 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td>查看</td>
+                                            <td></td>
                                         </tr>
                                         </tbody>
                                     </table>
@@ -558,7 +481,6 @@
 </body>
 
 <script>
-
     /*个人图片的切换*/
     //上传封面
     //document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
@@ -584,14 +506,10 @@
             $('.cover-wrap').fadeOut();
             $('#view').css('background-size','100% 100%');
 
-
-            console.log(dataURL);
-
             $("#userImg").attr("src", dataURL);
 
-
             $.ajax({
-                url: "__MODULE__/Origanization/douploadtouxiang",
+                url: "/index.php/Home/Origanization/douploadtouxiang",
                 type: "POST",
                 data: {
                     img: dataURL
@@ -608,55 +526,10 @@
             });
             return false;
 
-
-
         }
     });
     //clipArea.destroy();
 
-    $.post("__CONTROLLER__/communityTenderProject", function (data) {
-
-        var html = '';
-        for(var i = 0; i < data.data.length; i++){
-            html += '<tr>\n' +
-                '<td>'+  data.data[i].sjy_community_project_title+'</td>\n' +
-                '<td>'+ data.data[i].sjy_community_project_send_prople_name +'</td>\n' +
-                '<td>'+ data.data[i].sjy_community_project_service_area +'</td>\n' +
-                '<td>'+ data.data[i].sjy_community_project_collect_start_time+'~<br>'+data.data[i].sjy_community_project_collect_end_time +'</td>\n' +
-                '<td>'+ data.data[i].sjy_community_project_start_time+'~<br>'+ data.data[i].sjy_community_project_end_time  +'</td>\n' +
-                '<td><a href="__CONTROLLER__/displayCommunityProject/id/'+data.data[i].sjy_id+'">查看</a><br><a class = "intention-organization" href="javascript:;">意向机构</a></td>\n' +
-                '\n' +
-                '</tr>';
-        }
-
-
-        $("#tbody1").html(html);
-        $(".intention-organization").click(function () {
-            $(".tab-right-bar").css("display" , "block");
-
-        })
-
-
-
-
-    });
-
-    $.ajax({
-        url: "__MODULE__/Origanization/douploadtouxiang",
-        type: "POST",
-        data: {
-            img: dataURL
-        },
-        dataType: "json",
-        success: function (data) {
-            if(data.state == 1)
-            {
-                layer.msg('修改成功');
-                console.log(data.url)
-            }
-        },
-        async:false
-    });
 
 
 
@@ -771,7 +644,6 @@
         });
 
     });
-
 
 </script>
 
