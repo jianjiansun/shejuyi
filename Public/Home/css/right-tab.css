@@ -4,6 +4,7 @@
     top:0;
     width: 310px;
     background: #FFFFFF;
+    z-index: 10000;
 }
 .right-tab{
     width: 35px;
@@ -22,18 +23,27 @@
     background: #FFFFFF;
 }
 .organize-choose-tit{
-    font-size: 16px;
+    font-size: 14px;
     padding: 0 12px;
     line-height: 44px;
     background: #e6e6e6;
     height: 44px;
     border-bottom: 1px solid #e6e6e6;
 }
+.organize-choose-tit > span{
+    color: #4890FF;
+    font-weight: 900;
+}
+.choose-organize-box{
+    overflow-y: auto;
+}
 .agree-organization{
     float: right;
+    font-size: 14px;
 }
 .organize-proposal{
     padding: 0  12px;
+
 }
 .proposal-detail{
     height: 40px;

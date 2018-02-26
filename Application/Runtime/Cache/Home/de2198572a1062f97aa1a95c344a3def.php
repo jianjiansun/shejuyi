@@ -50,7 +50,7 @@
 
 <div class = "tab-right-bar" style = "display: block;">
     <div class = "right-tab">
-       <a href="javascript:;">意向 <br>机构</a>
+       <a class = "close-tab-right" href="javascript:;">意向 <br>机构</a>
         <!--   <a href="javascript:;">我的意向社区</a>-->
     </div>
     <div class = "right-tab-content">
@@ -125,17 +125,12 @@
             <p class = 'remider'> 注意: 确认所选机构就不能再改啦！</p>
         </div>
 
-
-
-
-
-
     </div>
 
     <script>
 
         $(".tab-right-bar").height($(window).height() );
-        $(".right-tab-content").height($(window).height() -200);
+        $(".choose-organize-box").height($(window).height() -200);
         $(".sure-btn-box").height( 200);
 
         $(".organize-proposal").click(function () {
@@ -660,12 +655,17 @@
 
             $(".tab-right-bar").animate({
                 right:'0px',
-
             });
 
             $(".tab-right-bar").height($(window).height() );
             $(".right-tab-content").height($(window).height() -200);
             $(".sure-btn-box").height( 200);
+
+            $(".close-tab-right").click(function () {
+                $(".tab-right-bar").animate({
+                    right:'-320px'
+                });
+            });
 
 
             var id = $(this).attr("id");
