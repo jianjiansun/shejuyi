@@ -120,10 +120,6 @@
                </div>
            </li>
        </ul>
-        <div class = "sure-btn-box">
-            <a class="sure-btn" href="javascript:;">确定</a>
-            <p class = 'remider'> 注意: 确认所选机构就不能再改啦！</p>
-        </div>
 
     </div>
 
@@ -638,7 +634,7 @@
         var html = '';
         for(var i = 0; i < data.data.length; i++){
             html += '<tr>\n' +
-                '<td>'+  data.data[i].sjy_community_project_title+'</td>\n' +
+                '<td class = "proName">'+  data.data[i].sjy_community_project_title+'</td>\n' +
                 '<td>'+ data.data[i].sjy_community_project_send_prople_name +'</td>\n' +
                 '<td>'+ data.data[i].sjy_community_project_service_area +'</td>\n' +
                 '<td>'+ data.data[i].sjy_community_project_collect_start_time+'~<br>'+data.data[i].sjy_community_project_collect_end_time +'</td>\n' +
@@ -652,6 +648,11 @@
         $("#tbody1").html(html);
 
         $(".intention-organization").click(function () {
+
+            var projectId = $(this).attr("id");
+
+            var proName = $(this).parent().siblings('.proName').text();
+            console.log(proName + "proName");
 
             $(".tab-right-bar").animate({
                 right:'0px',
@@ -671,14 +672,13 @@
             var id = $(this).attr("id");
 
             $.post("/index.php/Home/Project/intentOriganization/id/" + id , function (data) {
-                console.log("intention or");
-                console.log( data);
+
                 var html = '';
 
                 for ( var i = 0; i < data.data.length; i ++){
                   html += '<li class = "choose-organize-item">' +
                           '<div class = "organize-choose-tit">' +
-                          '<span>'+ data.data[i].origanization_info.sjy_origanization_name  +'</span>' +
+                          '<span class = "intentionOrName">'+ data.data[i].origanization_info.sjy_origanization_name  +'</span>' +
                           '<a  class="see-project-book"  id = "'+ data.data[i].origanization_id +'" href="javascript:;">查看项目书</a>' +
                           '<a class = "agree-organization" href="javascript:;">同意</a>'+
                           '</div>' +
@@ -687,7 +687,67 @@
                           '</li>';
                 }
 
+
+
+
                 $(".choose-organize-box").html(html);
+
+
+                $(".agree-organization").click(function () {
+
+
+                    var organizationId = $(this).siblings('.see-project-book').attr('id');
+                    var orText = $(this).siblings('.intentionOrName').text();
+
+
+
+
+                    layer.open({
+                        content: '<p>你是否确定要</p><p class = "ortext">'+orText +'</p>执行<p class = "ProName">' + proName + '</p>'
+                        ,btn: ['确定', '取消']
+                        ,yes: function(){
+                            //按钮【按钮一】的回调
+
+                            $.post("/index.php/Home/Project/agreeProject",{ project_id: projectId, organization_id : organizationId  }, function(){
+
+                                if(data.state == 1){
+                                    element.tabChange('demo', 'b');
+                                }
+
+
+                            })
+
+
+                        }
+                        ,btn2: function(index, layero){
+                            //按钮【按钮二】的回调
+
+                            //return false 开启该代码可禁止点击该按钮关闭
+                        }
+                        ,cancel: function(){
+                            //右上角关闭回调
+
+                            //return false 开启该代码可禁止点击该按钮关闭
+                        }
+                    });
+
+
+                  /*  layer.confirm('<p>你是否确定要</p><p class = "ortext">'+orText +'</p>执行<p class = "ProName">' + proName + '</p>', function(index){
+                        //do something
+
+                        layer.close(index);
+                        yes : function () {
+
+                            $.post("/index.php/Home/Project/agreeProject", function(){
+
+                            })
+
+                        }
+
+
+                    });*/
+
+                });
 
                 $(".see-project-book").click(function () {
 
@@ -751,7 +811,7 @@
 
 
 
-    layui.use(['laypage', 'layer'], function(){
+    /*layui.use(['laypage', 'layer'], function(){
         var laypage = layui.laypage
                 ,layer = layui.layer;
 
@@ -821,6 +881,7 @@
                 }
             }
         });
+
         //执行一个laypage实例
         laypage.render({
             elem: 'pagination4'
@@ -861,7 +922,7 @@
             }
         });
 
-    });
+    });*/
 
 
 </script>
