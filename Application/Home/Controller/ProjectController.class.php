@@ -618,11 +618,13 @@
         public function waitOriganizationStart()
         {
             $community_id = session('userInfo')['sjy_community_user_community_code'];//社区id
+            // var_dump(session('userInfo'));die;
             $where = array(
-                'community_id'=>$communit_id,
+                'community_id'=>$community_id,
                 'status'=>2,
             );
             $info = M('project')->where($where)->select();
+            // var_dump($info);die;
             //查询项目信息
             foreach($info as $key=>$value)
             {

@@ -24,7 +24,7 @@ class CommunityController extends BaseController {
 
                             //更新项目状态  sjy_project
                             $data['status'] = 10;  //开始做项目
-                            $data['project_start_time'] = $value['sjy_community_project_start_time'];  //项目开始时间
+                            $data['community_agreen_project_start_time'] = $value['sjy_community_project_start_time'];  //项目开始时间
                             // $data['project_start_people'] = session('userInfo')['sjy_origanization_user_real_name']; //同意人
                             // $data['project_start_people_id'] = session('userInfo')['sjy_id'];  //同意人id
                             $res = M('project')->where(array('sjy_id'=>$value['sjy_id']))->save($data);
