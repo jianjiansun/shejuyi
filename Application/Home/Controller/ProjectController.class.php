@@ -509,7 +509,7 @@
             $model->startTrans();
 
             $where = array("project_id"=>$project_id,"community_id"=>$community_id,"origanization_id"=>$origanization_id,"status"=>1);
-            $data = array("status"=>2,'community_agreen_project_start_time'=>date('Y-m-d H:i:s',time()),'community_agreen_project_start_people'=>session('userInfo')['sjy_community_user_real_name']);
+            $data = array("status"=>2,'community_agreen_project_start_time'=>date('Y-m-d H:i:s',time()),'community_agreen_project_start_people_id'=>session('userInfo')['sjy_id'],'community_agreen_project_start_people'=>session('userInfo')['sjy_community_user_real_name']);
             //修改sjy_project表
             $res = M("project")->where($where)->save($data);
             //修改sjy_community_project表

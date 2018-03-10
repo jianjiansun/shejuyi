@@ -441,3 +441,17 @@ SQL: SELECT `sjy_origanization_id` FROM `sjy_origanization_position_info` WHERE 
 SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0566s ]
 SQL: SELECT COUNT(*) AS tp_count FROM `sjy_origanization_base_info` LIMIT 1   [ RunTime:0.0532s ]
 
+[ 2018-03-10T17:20:14+08:00 ] 127.0.0.1 /index.php/Home/Community/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001135s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000729s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000857s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0801s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0867s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 52 LIMIT 1   [ RunTime:0.0712s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0723s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0805s ]
+NOTIC: [8] Undefined variable: islogin D:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+
