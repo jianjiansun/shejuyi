@@ -241,7 +241,6 @@
 
                                     <table class="layui-table">
                                         <colgroup>
-                                            <col width="100">
                                             <col width="200">
                                             <col width="200">
                                             <col width="200">
@@ -252,7 +251,6 @@
                                         </colgroup>
                                         <thead>
                                         <tr>
-                                            <th>序号</th>
                                             <th>项目名称</th>
                                             <th>发布人</th>
                                             <th>执行机构</th>
@@ -260,7 +258,7 @@
                                             <th>操作</th>
                                         </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody id = "tbody2">
                                         <tr>
                                             <td>1</td>
                                             <td>2016-11-29</td>
@@ -612,6 +610,7 @@
         }
     });
     //clipArea.destroy();
+    /*111*/
 
     $.post("__CONTROLLER__/communityTenderProject", function (data) {
 
@@ -693,7 +692,7 @@
 
                             //按钮【按钮一】的回调
 
-                            $.post("__MODULE__/Project/agreeProject",{ project_id: projectId, origanization_id : organizationId  }, function(){
+                            $.post("__MODULE__/Project/agreeProject",{ project_id: projectId, origanization_id : organizationId  }, function(data){
 
                                 if(data.state == 1){
 
@@ -706,11 +705,6 @@
 
 
                         }
-                        ,btn2: function(index, layero){
-                            //按钮【按钮二】的回调
-
-                            //return false 开启该代码可禁止点击该按钮关闭
-                        }
                         ,cancel: function(){
                             //右上角关闭回调
 
@@ -722,6 +716,14 @@
 
 
                 });
+
+
+
+
+
+
+
+
 
                 $(".see-project-book").click(function () {
 
@@ -748,12 +750,6 @@
                         $(".organize-proposal").html(html);
 
                     });
-
-
-
-
-
-
                 });
 
                 
@@ -765,6 +761,32 @@
 
 
     });
+
+    /*222*/
+    $.get("__MODULE__/Project/waitOriganizationStart",  function(data){
+
+        console.log(data[0].project_info.sjy_community_name);
+
+        var html2 = '';
+
+        for(var i = 0 ; i < data.length; i++ ){
+
+            html2 += '<tr>\n' +
+                '<td>'+ data[i].project_info.sjy_community_name+'</td>\n' +
+                '<td>'+ data[i].project_info.sjy_community_project_send_prople_name +'</td>\n' +
+                '<td>'+ data[i].project_info.sjy_community_project_origanization_name	+'</td>\n' +
+                '<td>'+ data[i].project_info.sjy_community_project_service_area +'</td>\n' +
+                '<td>查看</td>\n' +
+                '</tr>';
+        }
+
+        $("#tbody2").html(html2);
+
+
+    });
+
+
+
 
     $.ajax({
         url: "__MODULE__/Origanization/douploadtouxiang",

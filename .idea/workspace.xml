@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d3f5bbe-c18f-4fc9-9b1b-335d24248adf" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Application/Home/View/Project/communityProjectManger.html" afterPath="$PROJECT_DIR$/Application/Home/View/Project/communityProjectManger.html" />
-      <change beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/de2198572a1062f97aa1a95c344a3def.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/de2198572a1062f97aa1a95c344a3def.php" />
-      <change beforePath="$PROJECT_DIR$/Application/Runtime/Logs/Common/18_03_10.log" afterPath="$PROJECT_DIR$/Application/Runtime/Logs/Common/18_03_10.log" />
       <change beforePath="$PROJECT_DIR$/Application/Runtime/Logs/Home/18_03_10.log" afterPath="$PROJECT_DIR$/Application/Runtime/Logs/Home/18_03_10.log" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,11 +37,10 @@
       <file leaf-file-name="communityProjectManger.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/Home/View/Project/communityProjectManger.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="700" column="54" lean-forward="true" selection-start-line="700" selection-start-column="54" selection-end-line="700" selection-end-column="54" />
+            <state relative-caret-position="221">
+              <caret line="779" column="24" lean-forward="true" selection-start-line="779" selection-start-column="24" selection-end-line="779" selection-end-column="24" />
               <folding>
-                <element signature="n#div#2;n#body#0;n#!!top" expanded="false" />
-                <marker date="1520677797802" expanded="true" signature="30626:30639" ph="..." />
+                <marker date="1520682467573" expanded="true" signature="30534:30547" ph="..." />
               </folding>
             </state>
           </provider>
@@ -52,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/Public/Home/css/page2.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
-              <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+              <caret line="40" column="22" lean-forward="false" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -265,15 +263,16 @@
       <workItem from="1518074433933" duration="5833000" />
       <workItem from="1518141881110" duration="597000" />
       <workItem from="1519608025690" duration="19943000" />
-      <workItem from="1520668267865" duration="9553000" />
+      <workItem from="1520668267865" duration="14132000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89186000" />
+    <option name="totallyTimeSpent" value="93765000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26785713" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -282,7 +281,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28336078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28336078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -681,18 +680,17 @@
     <entry file="file://$PROJECT_DIR$/Public/Home/css/page2.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
-          <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+          <caret line="40" column="22" lean-forward="false" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Project/communityProjectManger.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="700" column="54" lean-forward="true" selection-start-line="700" selection-start-column="54" selection-end-line="700" selection-end-column="54" />
+        <state relative-caret-position="221">
+          <caret line="779" column="24" lean-forward="true" selection-start-line="779" selection-start-column="24" selection-end-line="779" selection-end-column="24" />
           <folding>
-            <element signature="n#div#2;n#body#0;n#!!top" expanded="false" />
-            <marker date="1520677797802" expanded="true" signature="30626:30639" ph="..." />
+            <marker date="1520682467573" expanded="true" signature="30534:30547" ph="..." />
           </folding>
         </state>
       </provider>
