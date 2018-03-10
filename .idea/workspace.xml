@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d3f5bbe-c18f-4fc9-9b1b-335d24248adf" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Application/Home/View/Project/communityProjectManger.html" afterPath="$PROJECT_DIR$/Application/Home/View/Project/communityProjectManger.html" />
-      <change beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/8323f4f78f6d0964383715e3c9adc682.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/902041a5b34c13ce8e049e37450c1bab.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/a694fdae0bac13e1b11b112467ce4577.php" afterPath="" />
       <change beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/de2198572a1062f97aa1a95c344a3def.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/de2198572a1062f97aa1a95c344a3def.php" />
       <change beforePath="$PROJECT_DIR$/Application/Runtime/Logs/Common/18_03_10.log" afterPath="$PROJECT_DIR$/Application/Runtime/Logs/Common/18_03_10.log" />
       <change beforePath="$PROJECT_DIR$/Application/Runtime/Logs/Home/18_03_10.log" afterPath="$PROJECT_DIR$/Application/Runtime/Logs/Home/18_03_10.log" />
-      <change beforePath="$PROJECT_DIR$/Public/Home/css/page2.css" afterPath="$PROJECT_DIR$/Public/Home/css/page2.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,14 +35,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="communityProjectManger.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="communityProjectManger.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/Home/View/Project/communityProjectManger.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="682" column="74" lean-forward="false" selection-start-line="682" selection-start-column="74" selection-end-line="682" selection-end-column="74" />
+            <state relative-caret-position="255">
+              <caret line="698" column="36" lean-forward="false" selection-start-line="698" selection-start-column="36" selection-end-line="698" selection-end-column="36" />
               <folding>
                 <element signature="n#div#2;n#body#0;n#!!top" expanded="false" />
-                <marker date="1520674943596" expanded="true" signature="30626:30639" ph="..." />
+                <marker date="1520677795811" expanded="true" signature="30626:30639" ph="..." />
               </folding>
             </state>
           </provider>
@@ -57,22 +51,8 @@
       <file leaf-file-name="page2.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/Home/css/page2.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="26" column="14" lean-forward="false" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProjectController.class.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Application/Home/Controller/ProjectController.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3492">
-              <caret line="304" column="51" lean-forward="false" selection-start-line="304" selection-start-column="51" selection-end-line="304" selection-end-column="51" />
-              <caret line="305" column="57" lean-forward="false" selection-start-line="305" selection-start-column="57" selection-end-line="305" selection-end-column="57" />
-              <caret line="306" column="76" lean-forward="false" selection-start-line="306" selection-start-column="76" selection-end-line="306" selection-end-column="76" />
-              <caret line="307" column="76" lean-forward="false" selection-start-line="307" selection-start-column="76" selection-end-line="307" selection-end-column="76" />
-              <caret line="308" column="55" lean-forward="false" selection-start-line="308" selection-start-column="55" selection-end-line="308" selection-end-column="55" />
+            <state relative-caret-position="510">
+              <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -285,12 +265,12 @@
       <workItem from="1518074433933" duration="5833000" />
       <workItem from="1518141881110" duration="597000" />
       <workItem from="1519608025690" duration="19943000" />
-      <workItem from="1520668267865" duration="7118000" />
+      <workItem from="1520668267865" duration="9451000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86751000" />
+    <option name="totallyTimeSpent" value="89084000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -691,34 +671,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/ProjectController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="87" column="13" lean-forward="true" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Public/Home/css/page2.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="26" column="14" lean-forward="false" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+        <state relative-caret-position="510">
+          <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Project/communityProjectManger.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="682" column="74" lean-forward="false" selection-start-line="682" selection-start-column="74" selection-end-line="682" selection-end-column="74" />
+        <state relative-caret-position="255">
+          <caret line="698" column="36" lean-forward="false" selection-start-line="698" selection-start-column="36" selection-end-line="698" selection-end-column="36" />
           <folding>
             <element signature="n#div#2;n#body#0;n#!!top" expanded="false" />
-            <marker date="1520674943596" expanded="true" signature="30626:30639" ph="..." />
+            <marker date="1520677795811" expanded="true" signature="30626:30639" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/ProjectController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3492">
-          <caret line="304" column="51" lean-forward="false" selection-start-line="304" selection-start-column="51" selection-end-line="304" selection-end-column="51" />
-          <caret line="305" column="57" lean-forward="false" selection-start-line="305" selection-start-column="57" selection-end-line="305" selection-end-column="57" />
-          <caret line="306" column="76" lean-forward="false" selection-start-line="306" selection-start-column="76" selection-end-line="306" selection-end-column="76" />
-          <caret line="307" column="76" lean-forward="false" selection-start-line="307" selection-start-column="76" selection-end-line="307" selection-end-column="76" />
-          <caret line="308" column="55" lean-forward="false" selection-start-line="308" selection-start-column="55" selection-end-line="308" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>

@@ -706,12 +706,14 @@
                         content: '<p>你是否确定要</p><p class = "ortext">'+orText +'</p>执行<p class = "ProName">' + proName + '</p>'
                         ,btn: ['确定', '取消']
                         ,yes: function(){
+
                             //按钮【按钮一】的回调
 
-                            $.post("/index.php/Home/Project/agreeProject",{ project_id: projectId, organization_id : organizationId  }, function(){
+                            $.post("/index.php/Home/Project/agreeProject",{ project_id: projectId, origanization_id : organizationId  }, function(){
 
                                 if(data.state == 1){
-                                    element.tabChange('demo', 'b');
+                                    location.reload();
+                                    /*layer.close();*/
                                 }
 
 
@@ -732,20 +734,7 @@
                     });
 
 
-                  /*  layer.confirm('<p>你是否确定要</p><p class = "ortext">'+orText +'</p>执行<p class = "ProName">' + proName + '</p>', function(index){
-                        //do something
 
-                        layer.close(index);
-                        yes : function () {
-
-                            $.post("/index.php/Home/Project/agreeProject", function(){
-
-                            })
-
-                        }
-
-
-                    });*/
 
                 });
 
