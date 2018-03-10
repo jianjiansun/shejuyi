@@ -544,7 +544,6 @@
 
             //更新sjy_community_project_info表
             $data = array(
-                  "sjy_community_project_status"=>1,
                   "sjy_community_project_origanization"=>$origanization_id,
                   "sjy_community_project_origanization_name"=>M('origanization_base_info')->where(array('sjy_id'=>$origanization_id))->getField('sjy_origanization_name')
             );
@@ -575,7 +574,7 @@
         {
             $community_id = session('userInfo')['sjy_community_user_community_code'];//社区id
             $where = array(
-                'community_id'=>$origanization_id,
+                'community_id'=>$communit_id,
                 'status'=>2,
             );
             $info = M('project')->where($where)->select();
