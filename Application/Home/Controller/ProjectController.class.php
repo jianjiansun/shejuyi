@@ -622,8 +622,6 @@
             $info = M('community_project_info')->where(array('sjy_community_project_status'=>2))->select();
             $this->ajaxReturn($info);
         }
-
-
         //下载项目书
         public function downloadProjectBook()
         {
