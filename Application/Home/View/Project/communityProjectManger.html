@@ -104,10 +104,6 @@
                </div>
            </li>
        </ul>
-        <div class = "sure-btn-box">
-            <a class="sure-btn" href="javascript:;">确定</a>
-            <p class = 'remider'> 注意: 确认所选机构就不能再改啦！</p>
-        </div>
 
     </div>
 
@@ -245,7 +241,6 @@
 
                                     <table class="layui-table">
                                         <colgroup>
-                                            <col width="100">
                                             <col width="200">
                                             <col width="200">
                                             <col width="200">
@@ -256,7 +251,6 @@
                                         </colgroup>
                                         <thead>
                                         <tr>
-                                            <th>序号</th>
                                             <th>项目名称</th>
                                             <th>发布人</th>
                                             <th>执行机构</th>
@@ -264,7 +258,7 @@
                                             <th>操作</th>
                                         </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody id = "tbody2">
                                         <tr>
                                             <td>1</td>
                                             <td>2016-11-29</td>
@@ -616,13 +610,14 @@
         }
     });
     //clipArea.destroy();
+    /*111*/
 
     $.post("__CONTROLLER__/communityTenderProject", function (data) {
 
         var html = '';
         for(var i = 0; i < data.data.length; i++){
             html += '<tr>\n' +
-                '<td>'+  data.data[i].sjy_community_project_title+'</td>\n' +
+                '<td class = "proName">'+  data.data[i].sjy_community_project_title+'</td>\n' +
                 '<td>'+ data.data[i].sjy_community_project_send_prople_name +'</td>\n' +
                 '<td>'+ data.data[i].sjy_community_project_service_area +'</td>\n' +
                 '<td>'+ data.data[i].sjy_community_project_collect_start_time+'~<br>'+data.data[i].sjy_community_project_collect_end_time +'</td>\n' +
@@ -636,6 +631,11 @@
         $("#tbody1").html(html);
 
         $(".intention-organization").click(function () {
+
+            var projectId = $(this).attr("id");
+
+            var proName = $(this).parent().siblings('.proName').text();
+            console.log(proName + "proName");
 
             $(".tab-right-bar").animate({
                 right:'0px',
@@ -655,14 +655,13 @@
             var id = $(this).attr("id");
 
             $.post("__MODULE__/Project/intentOriganization/id/" + id , function (data) {
-                console.log("intention or");
-                console.log( data);
+
                 var html = '';
 
                 for ( var i = 0; i < data.data.length; i ++){
                   html += '<li class = "choose-organize-item">' +
                           '<div class = "organize-choose-tit">' +
-                          '<span>'+ data.data[i].origanization_info.sjy_origanization_name  +'</span>' +
+                          '<span class = "intentionOrName">'+ data.data[i].origanization_info.sjy_origanization_name  +'</span>' +
                           '<a  class="see-project-book"  id = "'+ data.data[i].origanization_id +'" href="javascript:;">查看项目书</a>' +
                           '<a class = "agree-organization" href="javascript:;">同意</a>'+
                           '</div>' +
@@ -671,7 +670,60 @@
                           '</li>';
                 }
 
+
+
+
                 $(".choose-organize-box").html(html);
+
+
+                $(".agree-organization").click(function () {
+
+
+                    var organizationId = $(this).siblings('.see-project-book').attr('id');
+                    var orText = $(this).siblings('.intentionOrName').text();
+
+
+
+
+                    layer.open({
+                        content: '<p>你是否确定要</p><p class = "ortext">'+orText +'</p>执行<p class = "ProName">' + proName + '</p>'
+                        ,btn: ['确定', '取消']
+                        ,yes: function(){
+
+                            //按钮【按钮一】的回调
+
+                            $.post("__MODULE__/Project/agreeProject",{ project_id: projectId, origanization_id : organizationId  }, function(data){
+
+                                if(data.state == 1){
+
+                                    location.reload();
+                                    /*layer.close();*/
+                                }
+
+
+                            })
+
+
+                        }
+                        ,cancel: function(){
+                            //右上角关闭回调
+
+                            //return false 开启该代码可禁止点击该按钮关闭
+                        }
+                    });
+
+
+
+
+                });
+
+
+
+
+
+
+
+
 
                 $(".see-project-book").click(function () {
 
@@ -698,12 +750,6 @@
                         $(".organize-proposal").html(html);
 
                     });
-
-
-
-
-
-
                 });
 
                 
@@ -715,6 +761,32 @@
 
 
     });
+
+    /*222*/
+    $.get("__MODULE__/Project/waitOriganizationStart",  function(data){
+
+        console.log(data[0].project_info.sjy_community_name);
+
+        var html2 = '';
+
+        for(var i = 0 ; i < data.length; i++ ){
+
+            html2 += '<tr>\n' +
+                '<td>'+ data[i].project_info.sjy_community_name+'</td>\n' +
+                '<td>'+ data[i].project_info.sjy_community_project_send_prople_name +'</td>\n' +
+                '<td>'+ data[i].project_info.sjy_community_project_origanization_name	+'</td>\n' +
+                '<td>'+ data[i].project_info.sjy_community_project_service_area +'</td>\n' +
+                '<td>查看</td>\n' +
+                '</tr>';
+        }
+
+        $("#tbody2").html(html2);
+
+
+    });
+
+
+
 
     $.ajax({
         url: "__MODULE__/Origanization/douploadtouxiang",
@@ -735,7 +807,7 @@
 
 
 
-    layui.use(['laypage', 'layer'], function(){
+    /*layui.use(['laypage', 'layer'], function(){
         var laypage = layui.laypage
                 ,layer = layui.layer;
 
@@ -805,6 +877,7 @@
                 }
             }
         });
+
         //执行一个laypage实例
         laypage.render({
             elem: 'pagination4'
@@ -845,7 +918,7 @@
             }
         });
 
-    });
+    });*/
 
 
 </script>

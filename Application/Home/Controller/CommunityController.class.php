@@ -3,6 +3,59 @@ namespace Home\Controller;
 use Home\Controller\BaseController;
 use Think\Controller;
 class CommunityController extends BaseController {
+       public function __construct()
+       {
+           //检测社区已经同意的项目，并且已经到项目开始日期，但是社会组织没有主动点击开始项目，默认将该项目开始
+           parent::__construct();
+           if(isset(session('userInfo')['sjy_community_user_community_code']))
+           {
+                $info = M('project')->where(array('status'=>2,'community_id'=>session('userInfo')['sjy_community_user_community_code']))->select();
+                foreach($info as $key=>$value)
+                {
+                    //查询社会组织没有主动点击开始项目
+                    $starttime = M('community_project_info')->where(array('sjy_id'=>$value['project_id']))->getField('sjy_community_project_start_time');
+                    //当前时间大于项目开始时间
+                    if(time()>=strtotime($starttime))
+                    {
+                        //将该项目改为社会组织同意（默认同意）
+                          //开启事务
+                            $model = M();
+                            $model->startTrans();
+
+                            //更新项目状态  sjy_project
+                            $data['status'] = 10;  //开始做项目
+                            $data['community_agreen_project_start_time'] = $value['sjy_community_project_start_time'];  //项目开始时间
+                            // $data['project_start_people'] = session('userInfo')['sjy_origanization_user_real_name']; //同意人
+                            // $data['project_start_people_id'] = session('userInfo')['sjy_id'];  //同意人id
+                            $res = M('project')->where(array('sjy_id'=>$value['sjy_id']))->save($data);
+
+                           //更新sjy_community_project_info表
+                            $data = array(
+                                    "sjy_community_project_origanization"=>$value['origanization_id'],
+                                    "sjy_community_project_origanization_name"=>M('origanization_base_info')->where(array('sjy_id'=>$value['origanization_id']))->getField('sjy_origanization_name')
+                            );
+                            $val = M('community_project_info')->where(array('sjy_id'=>$value['project_id']))->save($data);
+
+                            //更新进度表 插入第一个信息
+                            $rate['sjy_projectrate_title']= '项目开始';
+                            $rate['sjy_project_id']= $value['project_id'];
+                            $rate['sjy_project_rate_con']='开始做项目';
+                            $rate['create_time'] = date('Y-m-d H:i:s');
+                            $rate['sjy_origanization_id'] = $value['origanization_id'];
+                            // $rate['sjy_project_rate_write_people'] = session('userInfo')['sjy_origanization_user_real_name'];
+                            // $rate['sjy_project_rate_write_people_id'] = session('userInfo')['sjy_id'];
+                            $rut = M('projectrate')->add($rate);
+
+                            if($res&&$rut&&$val)
+                            {
+                                $model->commit();
+                            }else{
+                                $model->rollback(); 
+                            }
+                    }
+                }
+           }
+       }
     	//社会组织列表
         public function index(){
              $this->display();
