@@ -776,7 +776,7 @@
                 '<td>'+ data[i].project_info.sjy_community_project_send_prople_name +'</td>\n' +
                 '<td>'+ data[i].project_info.sjy_community_project_origanization_name	+'</td>\n' +
                 '<td>'+ data[i].project_info.sjy_community_project_service_area +'</td>\n' +
-                '<td>查看</td>\n' +
+                '<td><a href="__CONTROLLER__/displayCommunityProject/id/'+data[i].project_id+'">查看</a></td>\n' +
                 '</tr>';
         }
 
@@ -784,6 +784,18 @@
 
 
     });
+
+    /*加载element模块*/
+
+    layui.use('element', function(){
+        var element = layui.element;
+
+        //一些事件监听
+        element.on('tab(demo)', function(data){
+            console.log(data);
+        });
+    });
+
 
 
 

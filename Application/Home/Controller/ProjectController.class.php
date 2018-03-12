@@ -28,11 +28,11 @@
                           $res = M('project')->where(array('sjy_id'=>$info['sjy_id']))->save($data);
 
                          //更新sjy_community_project_info表
-                          $data = array(
-                                  "sjy_community_project_origanization"=>$info['origanization_id'],
-                                  "sjy_community_project_origanization_name"=>M('origanization_base_info')->where(array('sjy_id'=>$info['origanization_id']))->getField('sjy_origanization_name')
-                          );
-                          $val = M('community_project_info')->where(array('sjy_id'=>$id))->save($data);
+                          // $data = array(
+                          //         "sjy_community_project_origanization"=>$info['origanization_id'],
+                          //         "sjy_community_project_origanization_name"=>M('origanization_base_info')->where(array('sjy_id'=>$info['origanization_id']))->getField('sjy_origanization_name')
+                          // );
+                          // $val = M('community_project_info')->where(array('sjy_id'=>$id))->save($data);
 
                           //更新进度表 插入第一个信息
                           $rate['sjy_projectrate_title']= '项目开始';
@@ -44,7 +44,7 @@
                           // $rate['sjy_project_rate_write_people_id'] = session('userInfo')['sjy_id'];
                           $rut = M('projectrate')->add($rate);
 
-                          if($res&&$rut&&$val)
+                          if($res&&$rut)
                           {
                               $model->commit();
                           }else{
@@ -559,7 +559,13 @@
             $res = M("project")->where($where)->save($data);
             //修改sjy_community_project表
             $where = array('sjy_id'=>$project_id);
-            $data = array('sjy_community_project_status'=>1);
+            //更新sjy_community_project_info表
+                          $data = array(
+                                'sjy_community_project_status'=>1,
+                                "sjy_community_project_origanization"=>$origanization_id,
+                                "sjy_community_project_origanization_name"=>M('origanization_base_info')->where(array('sjy_id'=>$origanization_id))->getField('sjy_origanization_name')
+                          );
+
             $val = M("community_project_info")->where($where)->save($data);
 
             if($res&&$val)
@@ -588,11 +594,11 @@
             $res = M('project')->where(array('sjy_id'=>$id))->save($data);
 
             //更新sjy_community_project_info表
-            $data = array(
-                  "sjy_community_project_origanization"=>$origanization_id,
-                  "sjy_community_project_origanization_name"=>M('origanization_base_info')->where(array('sjy_id'=>$origanization_id))->getField('sjy_origanization_name')
-            );
-            $val = M('community_project_info')->where(array('sjy_id'=>$project_id))->save($data);
+            // $data = array(
+            //       "sjy_community_project_origanization"=>$origanization_id,
+            //       "sjy_community_project_origanization_name"=>M('origanization_base_info')->where(array('sjy_id'=>$origanization_id))->getField('sjy_origanization_name')
+            // );
+            // $val = M('community_project_info')->where(array('sjy_id'=>$project_id))->save($data);
 
             //更新进度表 插入第一个信息
             $rate['sjy_projectrate_title']= '项目开始';
@@ -604,7 +610,7 @@
             $rate['sjy_project_rate_write_people_id'] = session('userInfo')['sjy_id'];
             $rut = M('projectrate')->add($rate);
 
-            if($res&&$rut&&$val)
+            if($res&&$rut)
             {
                 $model->commit();
                 $this->ajaxReturn(array('state'=>1,"errorInfo"=>""));    //社会组织手动同意开始做项目
@@ -668,8 +674,6 @@
             $info = M('community_project_info')->where(array('sjy_community_project_status'=>2))->select();
             $this->ajaxReturn($info);
         }
-
-
         //下载项目书
         public function downloadProjectBook()
         {
