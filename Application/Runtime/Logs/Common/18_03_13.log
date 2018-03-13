@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 [ 2018-03-13T16:08:44+08:00 ] 127.0.0.1 /favicon.ico
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000385s ]
+=======
+[ 2018-03-13T15:57:12+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.019000s ]
+>>>>>>> e964e6a505ec1044b1a5e4ab8b3f15ef9570b5a5
 ERR: 无法加载模块:Favicon
 

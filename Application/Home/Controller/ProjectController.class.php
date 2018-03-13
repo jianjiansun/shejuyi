@@ -163,7 +163,7 @@
         //投标中
         public function alreadySendProject()
         {
-            $page = I('get.page'); //页面
+            $page = I('get.page')==null?1:I('get.page'); //页面
             $limit = 15;
             $start = ($page-1)*$limit; //开始
             $limit = $start.",".$limit;
@@ -177,6 +177,7 @@
             );
             //按照投递时间倒序排列
         	$info = M('project')->where($where)->order('send_project_book_time desc')->limit($limit)->select();
+
         	//查询项目详情
         	foreach($info as $key=>$value)
         	{
@@ -190,12 +191,13 @@
         		}
         		$info[$key]['project_detail'] = $project_info;
         	}
-            $count = M('project')->where($where)->order('send_project_book_time desc')->count();
-            $pages = ceil($count)/$limit;
+            $count = M('project')->where($where)->count();
+            $pages = ceil($count/15);
             $res = array(
                    'data'=>$info,
                    'pages'=>$pages
             );
+
         	$this->ajaxReturn($res);
         }
 

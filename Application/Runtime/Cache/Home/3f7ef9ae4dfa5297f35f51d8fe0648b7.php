@@ -1,26 +1,42 @@
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EasyLife</title>
+    <link rel="stylesheet" href="/Public/Home/css/bootstrap.css">
+    <link rel="stylesheet" href="/Public/Home/css/common.css">
+    <link rel="stylesheet" href="/Public/Home/css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+    <script src="/Public/Home/js/jquery-1.12.4.js"></script>
+    <script src="/Public/Home/js/bootstrap.js"></script>
+    <script src = "/Public/Home/js/autoResizeImage.js"></script>
 
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
+
+    <link rel="stylesheet" href="/Public/Home/css/region.css">
+    <link rel="stylesheet" href="/Public/Home/css/layui.css">
+    <link rel="stylesheet" href="/Public/Home/css/page2.css">
    
-    <script src = "__PUBLIC__/Home/js/layui.js"></script>
-    <script src = "__PUBLIC__/Home/js/layui.all.js"></script>
+    <script src = "/Public/Home/js/layui.js"></script>
+    <script src = "/Public/Home/js/layui.all.js"></script>
 
 
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/hammer.js" type="text/javascript" charset="utf-8"></script>
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/Public/Home/js/plugins/cover_js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/Public/Home/js/plugins/cover_js/hammer.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/Public/Home/js/plugins/cover_js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/Public/Home/js/plugins/cover_js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <div class = "headLogin">
     <div class = "container">
         <div class = "left changeBan logoPer">
-            <img src="__PUBLIC__/Home/imgs/logo.png" alt="">
+            <img src="/Public/Home/imgs/logo.png" alt="">
             <span>社居易</span>
         </div>
         <div class="right person">
-           <!-- <img src="__PUBLIC__/Home/imgs/personDl.jpg" alt="">-->
+           <!-- <img src="/Public/Home/imgs/personDl.jpg" alt="">-->
         </div>
     </div>
 </div>
@@ -33,7 +49,7 @@
                 <div class="col-md-2 column  perperson">
                     <h2>个人信息</h2>
                     <div>
-                        <img id = "userImg" src="{$user_image}" alt="  ">
+                        <img id = "userImg" src="<?php echo ($user_image); ?>" alt="  ">
                         <!--用户图片更换-->
                         <div class = "cropImgBox"  ontouchstart="">
                             <div class="cover-wrap">
@@ -53,17 +69,17 @@
 
                     <ul class="person-ul">
                         <li>
-                            <a href="__MODULE__/Origanization/origanizationIdentify">认证状态</a>
+                            <a href="/index.php/Home/Origanization/origanizationIdentify">认证状态</a>
                         </li>
 
                         <li>
-                            <a href="__MODULE__/Origanization/personInfo">账号设置</a>
+                            <a href="/index.php/Home/Origanization/personInfo">账号设置</a>
                         </li>
                         <li>
-                            <a href="__MODULE__/Origanization/myOriganization">我的机构</a>
+                            <a href="/index.php/Home/Origanization/myOriganization">我的机构</a>
                         </li>
                         <li>
-                            <a  class = "on" href="__MODULE__/Project/origanizationProjectManger">我的项目</a>
+                            <a  class = "on" href="/index.php/Home/Project/origanizationProjectManger">我的项目</a>
                         </li>
                         <li>
                             <a href="">我的消息</a>
@@ -74,8 +90,8 @@
                     <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
                         <ul class="layui-tab-title">
                             <li class="layui-this"  lay-id="a">邀请我</li>
-                            <li id = "biding" lay-id="b">投标中</li>
-                            <li id = "starting" lay-id="c">待开始</li>
+                            <li  lay-id="b">投标中</li>
+                            <li  lay-id="c">待开始</li>
                             <li  lay-id="d">进行中</li>
                             <li  lay-id="e">已完成</li>
                         </ul>
@@ -136,7 +152,7 @@
                             </div>
 
                             <div class="layui-tab-item">
-                                <!--社会组织 —— 我的项目 —— 投标中-->
+                                <!--社会组织 —— 我的项目 —— 已发送项目书-->
                                 <div class="basic-information">
 
                                     <table class="layui-table">
@@ -190,10 +206,11 @@
                                 <div class = "pagination" id="pagination1"></div>
                             </div>
                             <div class="layui-tab-item">
-                                <!--社会组织 —— 我的项目 —— 待开始-->
+                                <!--社会组织 —— 我的项目 —— 待批复-->
                                 <div class="basic-information">
-                                    <table class="layui-table" >
+                                    <table class="layui-table">
                                         <colgroup>
+                                            <col width="100">
                                             <col width="200">
                                             <col width="200">
                                             <col width="200">
@@ -203,6 +220,7 @@
                                         </colgroup>
                                         <thead>
                                         <tr>
+                                            <th>序号</th>
                                             <th>项目名称</th>
                                             <th>发布方</th>
                                             <th>投标人</th>
@@ -211,9 +229,9 @@
                                             <th>操作</th>
                                         </tr>
                                         </thead>
-                                        <tbody id = "tbody3">
+                                        <tbody>
                                         <tr>
-
+                                            <td>1</td>
                                             <td>2016-11-29</td>
                                             <td>人生就像是一场修行</td>
                                             <td></td>
@@ -223,6 +241,7 @@
 
                                         </tr>
                                         <tr>
+                                            <td>10</td>
                                             <td>2016-11-28</td>
                                             <td>于千万年之中，时间的无涯的荒野里…</td>
                                             <td></td>
@@ -490,7 +509,7 @@
             $("#userImg").attr("src", dataURL);
 
             $.ajax({
-                url: "__MODULE__/Origanization/douploadtouxiang",
+                url: "/index.php/Home/Origanization/douploadtouxiang",
                 type: "POST",
                 data: {
                     img: dataURL
@@ -510,57 +529,6 @@
         }
     });
     //clipArea.destroy();
-
-    /*2.投标中*/
-    $("#biding").click(function(){
-
-        $.post("__MODULE__/Project/waitStart", function (data) {
-            var html2 = '';
-
-            for(var i = 0; i < data.length; i++){
-                html2 += '<tr>' +
-                        '<td>'+ data[i].project_detail.sjy_community_project_title +'</td>' +
-                        '<td>'+ data[i].project_detail.sjy_community_project_send_prople_name+'</td>' +
-                        '<td>'+ data[i].community_agreen_project_start_people+'</td>' +
-                        '<td>'+ data[i].project_detail.sjy_community_project_start_time + ' ~<br>'+ data[i].project_detail.sjy_community_project_end_time +'</td>' +
-                        '<td>'+ data[i].community_agreen_project_start_time+'</td>' +
-                        '<td>开始 详情 项目书</td>' +
-                        '</tr>';
-            }
-
-            $("#tbody2").html(html3);
-
-        });
-
-    });
-
-
-
-
-    /*3.待开始*/
-    $("#starting").click(function () {
-
-        $.post("__MODULE__/Project/waitStart", function (data) {
-            var html3 = '';
-
-            for(var i = 0; i < data.length; i++){
-                html3 += '<tr>' +
-                        '<td>'+ data[i].project_detail.sjy_community_project_title +'</td>' +
-                        '<td>'+ data[i].project_detail.sjy_community_project_send_prople_name+'</td>' +
-                        '<td>'+ data[i].community_agreen_project_start_people+'</td>' +
-                        '<td>'+ data[i].project_detail.sjy_community_project_start_time + ' ~<br>'+ data[i].project_detail.sjy_community_project_end_time +'</td>' +
-                        '<td>'+ data[i].community_agreen_project_start_time+'</td>' +
-                        '<td>开始 详情 项目书</td>' +
-                        '</tr>';
-            }
-
-            $("#tbody3").html(html3);
-
-        });
-
-
-    });
-
 
 
 

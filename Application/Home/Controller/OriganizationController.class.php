@@ -17,7 +17,7 @@
 					 //当前时间大于项目开始时间
 					 if(time()>=strtotime($starttime))
 					 {
-						 //将该项目改为社会组织同意（默认同意）
+						   //将该项目改为社会组织同意（默认同意）
 						   //开启事务
 							 $model = M();
 							 $model->startTrans();
