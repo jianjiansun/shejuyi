@@ -3,10 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="3d3f5bbe-c18f-4fc9-9b1b-335d24248adf" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/Runtime/Logs/Common/18_03_13.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/Runtime/Logs/Home/18_03_13.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/902041a5b34c13ce8e049e37450c1bab.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/Runtime/Logs/Home/18_03_12.log" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Project/origanizationProjectManger.html" afterPath="$PROJECT_DIR$/Application/Home/View/Project/origanizationProjectManger.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/3f7ef9ae4dfa5297f35f51d8fe0648b7.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/3f7ef9ae4dfa5297f35f51d8fe0648b7.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Logs/Common/18_03_13.log" afterPath="$PROJECT_DIR$/Application/Runtime/Logs/Common/18_03_13.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Logs/Home/18_03_13.log" afterPath="$PROJECT_DIR$/Application/Runtime/Logs/Home/18_03_13.log" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,8 +43,8 @@
       <file leaf-file-name="communityProjectManger.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/View/Project/communityProjectManger.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4019">
-              <caret line="839" column="13" selection-start-line="839" selection-start-column="13" selection-end-line="839" selection-end-column="13" />
+            <state relative-caret-position="352">
+              <caret line="778" column="21" selection-start-line="778" selection-start-column="21" selection-end-line="778" selection-end-column="102" />
               <folding>
                 <marker date="1520848704031" expanded="true" signature="30534:30547" ph="..." />
               </folding>
@@ -52,8 +55,8 @@
       <file leaf-file-name="origanizationProjectManger.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/Home/View/Project/origanizationProjectManger.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="138" column="55" selection-start-line="138" selection-start-column="55" selection-end-line="138" selection-end-column="55" />
+            <state relative-caret-position="-190">
+              <caret line="514" column="27" selection-start-line="514" selection-start-column="27" selection-end-line="514" selection-end-column="27" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#!!top" expanded="false" />
               </folding>
@@ -375,12 +378,12 @@
       <workItem from="1520668267865" duration="14132000" />
       <workItem from="1520845636579" duration="3197000" />
       <workItem from="1520928004559" duration="617000" />
-      <workItem from="1520930217808" duration="3084000" />
+      <workItem from="1520930217808" duration="4763000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100663000" />
+    <option name="totallyTimeSpent" value="102342000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="0" />
@@ -751,8 +754,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Project/communityProjectManger.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4019">
-          <caret line="839" column="13" selection-start-line="839" selection-start-column="13" selection-end-line="839" selection-end-column="13" />
+        <state relative-caret-position="352">
+          <caret line="778" column="21" selection-start-line="778" selection-start-column="21" selection-end-line="778" selection-end-column="102" />
           <folding>
             <marker date="1520848704031" expanded="true" signature="30534:30547" ph="..." />
           </folding>
@@ -761,8 +764,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Project/origanizationProjectManger.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="138" column="55" selection-start-line="138" selection-start-column="55" selection-end-line="138" selection-end-column="55" />
+        <state relative-caret-position="-190">
+          <caret line="514" column="27" selection-start-line="514" selection-start-column="27" selection-end-line="514" selection-end-column="27" />
           <folding>
             <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#!!top" expanded="false" />
           </folding>

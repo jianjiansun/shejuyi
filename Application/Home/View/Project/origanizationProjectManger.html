@@ -141,7 +141,6 @@
 
                                     <table class="layui-table">
                                         <colgroup>
-                                            <col width="100">
                                             <col width="200">
                                             <col width="200">
                                             <col width="200">
@@ -152,7 +151,6 @@
                                         </colgroup>
                                         <thead>
                                         <tr>
-                                            <th>项目名称</th>
                                             <th>发布方</th>
                                             <th>投标人</th>
                                             <th>服务对象</th>
@@ -161,9 +159,9 @@
                                             <th>操作</th>
                                         </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody id = "tbody2">
                                         <tr>
-                                            <td>1</td>
+
                                             <td>2016-11-29</td>
                                             <td>人生就像是一场修行</td>
                                             <td></td>
@@ -173,7 +171,6 @@
 
                                         </tr>
                                         <tr>
-                                            <td>10</td>
                                             <td>2016-11-28</td>
                                             <td>于千万年之中，时间的无涯的荒野里…</td>
                                             <td></td>
@@ -514,21 +511,23 @@
     /*2.投标中*/
     $("#biding").click(function(){
 
-        $.post("__MODULE__/Project/waitStart", function (data) {
+        $.post("__MODULE__/Project/alreadySendProject", function (data) {
             var html2 = '';
 
-            for(var i = 0; i < data.length; i++){
+
+
+            for(var i = 0; i < data.data.length; i++){
                 html2 += '<tr>' +
-                        '<td>'+ data[i].project_detail.sjy_community_project_title +'</td>' +
-                        '<td>'+ data[i].project_detail.sjy_community_project_send_prople_name+'</td>' +
-                        '<td>'+ data[i].community_agreen_project_start_people+'</td>' +
-                        '<td>'+ data[i].project_detail.sjy_community_project_start_time + ' ~<br>'+ data[i].project_detail.sjy_community_project_end_time +'</td>' +
-                        '<td>'+ data[i].community_agreen_project_start_time+'</td>' +
-                        '<td>开始 详情 项目书</td>' +
+                        '<td>'+ data.data[i].project_detail.sjy_community_name +'</td>' +
+                        '<td>'+ data.data[i].project_detail.sjy_community_project_send_prople_name+'</td>' +
+                        '<td>'+ data.data[i].project_detail.sjy_community_project_service_area+'</td>' +
+                        '<td>'+ data.data[i].project_detail.sjy_community_project_collect_start_time + ' ~<br>'+ data.data[i].project_detail.sjy_community_project_collect_end_time +'</td>' +
+                        '<td>'+ data.data[i].status_desc+'</td>' +
+                        '<td><a href="__CONTROLLER__/displayCommunityProject/id/'+data.data[i].project_id+'">详情</a> 项目书</td>' +
                         '</tr>';
             }
 
-            $("#tbody2").html(html3);
+            $("#tbody2").html(html2);
 
         });
 
@@ -550,7 +549,7 @@
                         '<td>'+ data[i].community_agreen_project_start_people+'</td>' +
                         '<td>'+ data[i].project_detail.sjy_community_project_start_time + ' ~<br>'+ data[i].project_detail.sjy_community_project_end_time +'</td>' +
                         '<td>'+ data[i].community_agreen_project_start_time+'</td>' +
-                        '<td>开始 详情 项目书</td>' +
+                        '<td>开始 <a href="__CONTROLLER__/displayCommunityProject/id/'+data[i].project_id+'">详情</a>  项目书</td>' +
                         '</tr>';
             }
 
