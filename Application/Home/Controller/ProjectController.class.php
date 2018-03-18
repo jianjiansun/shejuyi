@@ -279,8 +279,6 @@
         	}
         	$this->ajaxReturn($info);
         }
-
-
         //社会组织投递项目书
         public function sendProjectBook()
         {
