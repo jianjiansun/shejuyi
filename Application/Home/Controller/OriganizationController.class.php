@@ -17,7 +17,7 @@
 					 //当前时间大于项目开始时间
 					 if(time()>=strtotime($starttime))
 					 {
-						 //将该项目改为社会组织同意（默认同意）
+						   //将该项目改为社会组织同意（默认同意）
 						   //开启事务
 							 $model = M();
 							 $model->startTrans();
@@ -30,11 +30,11 @@
 							 $res = M('project')->where(array('sjy_id'=>$value['sjy_id']))->save($data);
  
 							//更新sjy_community_project_info表
-							 $data = array(
-									 "sjy_community_project_origanization"=>$value['origanization_id'],
-									 "sjy_community_project_origanization_name"=>M('origanization_base_info')->where(array('sjy_id'=>$value['origanization_id']))->getField('sjy_origanization_name')
-							 );
-							 $val = M('community_project_info')->where(array('sjy_id'=>$value['project_id']))->save($data);
+							 // $data = array(
+								// 	 "sjy_community_project_origanization"=>$value['origanization_id'],
+								// 	 "sjy_community_project_origanization_name"=>M('origanization_base_info')->where(array('sjy_id'=>$value['origanization_id']))->getField('sjy_origanization_name')
+							 // );
+							 // $val = M('community_project_info')->where(array('sjy_id'=>$value['project_id']))->save($data);
  
 							 //更新进度表 插入第一个信息
 							 $rate['sjy_projectrate_title']= '项目开始';
@@ -46,7 +46,7 @@
 							 // $rate['sjy_project_rate_write_people_id'] = session('userInfo')['sjy_id'];
 							 $rut = M('projectrate')->add($rate);
  
-							 if($res&&$rut&&$val)
+							 if($res&&$rut)
 							 {
 								 $model->commit();
 							 }else{

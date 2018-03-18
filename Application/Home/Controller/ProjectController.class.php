@@ -28,11 +28,11 @@
                           $res = M('project')->where(array('sjy_id'=>$info['sjy_id']))->save($data);
 
                          //更新sjy_community_project_info表
-                          $data = array(
-                                  "sjy_community_project_origanization"=>$info['origanization_id'],
-                                  "sjy_community_project_origanization_name"=>M('origanization_base_info')->where(array('sjy_id'=>$info['origanization_id']))->getField('sjy_origanization_name')
-                          );
-                          $val = M('community_project_info')->where(array('sjy_id'=>$id))->save($data);
+                          // $data = array(
+                          //         "sjy_community_project_origanization"=>$info['origanization_id'],
+                          //         "sjy_community_project_origanization_name"=>M('origanization_base_info')->where(array('sjy_id'=>$info['origanization_id']))->getField('sjy_origanization_name')
+                          // );
+                          // $val = M('community_project_info')->where(array('sjy_id'=>$id))->save($data);
 
                           //更新进度表 插入第一个信息
                           $rate['sjy_projectrate_title']= '项目开始';
@@ -44,7 +44,7 @@
                           // $rate['sjy_project_rate_write_people_id'] = session('userInfo')['sjy_id'];
                           $rut = M('projectrate')->add($rate);
 
-                          if($res&&$rut&&$val)
+                          if($res&&$rut)
                           {
                               $model->commit();
                           }else{
@@ -163,7 +163,7 @@
         //投标中
         public function alreadySendProject()
         {
-            $page = I('get.page'); //页面
+            $page = I('get.page')==null?1:I('get.page'); //页面
             $limit = 15;
             $start = ($page-1)*$limit; //开始
             $limit = $start.",".$limit;
@@ -177,6 +177,7 @@
             );
             //按照投递时间倒序排列
         	$info = M('project')->where($where)->order('send_project_book_time desc')->limit($limit)->select();
+
         	//查询项目详情
         	foreach($info as $key=>$value)
         	{
@@ -190,12 +191,13 @@
         		}
         		$info[$key]['project_detail'] = $project_info;
         	}
-            $count = M('project')->where($where)->order('send_project_book_time desc')->count();
-            $pages = ceil($count)/$limit;
+            $count = M('project')->where($where)->count();
+            $pages = ceil($count/15);
             $res = array(
                    'data'=>$info,
                    'pages'=>$pages
             );
+
         	$this->ajaxReturn($res);
         }
 
@@ -559,7 +561,13 @@
             $res = M("project")->where($where)->save($data);
             //修改sjy_community_project表
             $where = array('sjy_id'=>$project_id);
-            $data = array('sjy_community_project_status'=>1);
+            //更新sjy_community_project_info表
+                          $data = array(
+                                'sjy_community_project_status'=>1,
+                                "sjy_community_project_origanization"=>$origanization_id,
+                                "sjy_community_project_origanization_name"=>M('origanization_base_info')->where(array('sjy_id'=>$origanization_id))->getField('sjy_origanization_name')
+                          );
+
             $val = M("community_project_info")->where($where)->save($data);
 
             if($res&&$val)
@@ -588,11 +596,11 @@
             $res = M('project')->where(array('sjy_id'=>$id))->save($data);
 
             //更新sjy_community_project_info表
-            $data = array(
-                  "sjy_community_project_origanization"=>$origanization_id,
-                  "sjy_community_project_origanization_name"=>M('origanization_base_info')->where(array('sjy_id'=>$origanization_id))->getField('sjy_origanization_name')
-            );
-            $val = M('community_project_info')->where(array('sjy_id'=>$project_id))->save($data);
+            // $data = array(
+            //       "sjy_community_project_origanization"=>$origanization_id,
+            //       "sjy_community_project_origanization_name"=>M('origanization_base_info')->where(array('sjy_id'=>$origanization_id))->getField('sjy_origanization_name')
+            // );
+            // $val = M('community_project_info')->where(array('sjy_id'=>$project_id))->save($data);
 
             //更新进度表 插入第一个信息
             $rate['sjy_projectrate_title']= '项目开始';
@@ -604,7 +612,7 @@
             $rate['sjy_project_rate_write_people_id'] = session('userInfo')['sjy_id'];
             $rut = M('projectrate')->add($rate);
 
-            if($res&&$rut&&$val)
+            if($res&&$rut)
             {
                 $model->commit();
                 $this->ajaxReturn(array('state'=>1,"errorInfo"=>""));    //社会组织手动同意开始做项目
@@ -668,8 +676,6 @@
             $info = M('community_project_info')->where(array('sjy_community_project_status'=>2))->select();
             $this->ajaxReturn($info);
         }
-
-
         //下载项目书
         public function downloadProjectBook()
         {
