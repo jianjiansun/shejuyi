@@ -1,28 +1,44 @@
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EasyLife</title>
+    <link rel="stylesheet" href="/Public/Home/css/bootstrap.css">
+    <link rel="stylesheet" href="/Public/Home/css/common.css">
+    <link rel="stylesheet" href="/Public/Home/css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+    <script src="/Public/Home/js/jquery-1.12.4.js"></script>
+    <script src="/Public/Home/js/bootstrap.js"></script>
+    <script src = "/Public/Home/js/autoResizeImage.js"></script>
 
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/right-tab.css">
+
+    <link rel="stylesheet" href="/Public/Home/css/region.css">
+    <link rel="stylesheet" href="/Public/Home/css/layui.css">
+    <link rel="stylesheet" href="/Public/Home/css/page2.css">
+    <link rel="stylesheet" href="/Public/Home/css/right-tab.css">
    
-    <script src = "__PUBLIC__/Home/js/layui.js"></script>
-    <script src = "__PUBLIC__/Home/js/layui.all.js"></script>
+    <script src = "/Public/Home/js/layui.js"></script>
+    <script src = "/Public/Home/js/layui.all.js"></script>
 
 
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/hammer.js" type="text/javascript" charset="utf-8"></script>
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/Public/Home/js/plugins/cover_js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/Public/Home/js/plugins/cover_js/hammer.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/Public/Home/js/plugins/cover_js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/Public/Home/js/plugins/cover_js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 
 <div class = "headLogin">
     <div class = "container">
         <div class = "left changeBan logoPer">
-            <img src="__PUBLIC__/Home/imgs/logo.png" alt="">
+            <img src="/Public/Home/imgs/logo.png" alt="">
             <span>社居易</span>
         </div>
         <div class="right person">
-           <!-- <img src="__PUBLIC__/Home/imgs/personDl.jpg" alt="">-->
+           <!-- <img src="/Public/Home/imgs/personDl.jpg" alt="">-->
         </div>
     </div>
 </div>
@@ -89,7 +105,7 @@
                 <div class="col-md-2 column  perperson">
                     <h2>个人信息</h2>
                     <div>
-                        <img id = "userImg" src="{$user_image}" alt="  ">
+                        <img id = "userImg" src="<?php echo ($user_image); ?>" alt="  ">
                         <!--用户图片更换-->
                         <div class = "cropImgBox"  ontouchstart="">
                             <div class="cover-wrap">
@@ -109,17 +125,17 @@
 
                     <ul class="person-ul">
                         <li>
-                            <a href="__MODULE__/Origanization/origanizationIdentify">认证状态</a>
+                            <a href="/index.php/Home/Origanization/origanizationIdentify">认证状态</a>
                         </li>
 
                         <li>
-                            <a href="__MODULE__/Origanization/personInfo">账号设置</a>
+                            <a href="/index.php/Home/Origanization/personInfo">账号设置</a>
                         </li>
                         <li>
-                            <a href="__MODULE__/Origanization/myOriganization">我的机构</a>
+                            <a href="/index.php/Home/Origanization/myOriganization">我的机构</a>
                         </li>
                         <li>
-                            <a  class = "on" href="__MODULE__/Project/origanizationProjectManger">我的项目</a>
+                            <a  class = "on" href="/index.php/Home/Project/origanizationProjectManger">我的项目</a>
                         </li>
                         <li>
                             <a href="">我的消息</a>
@@ -545,7 +561,7 @@
             $("#userImg").attr("src", dataURL);
 
             $.ajax({
-                url: "__MODULE__/Origanization/douploadtouxiang",
+                url: "/index.php/Home/Origanization/douploadtouxiang",
                 type: "POST",
                 data: {
                     img: dataURL
@@ -569,7 +585,7 @@
     /*2.投标中*/
     $("#biding").click(function(){
 
-        $.post("__MODULE__/Project/alreadySendProject", function (data) {
+        $.post("/index.php/Home/Project/alreadySendProject", function (data) {
             var html2 = '';
 
 
@@ -582,7 +598,7 @@
                         '<td>'+ data.data[i].project_detail.sjy_community_project_service_area+'</td>' +
                         '<td>'+ data.data[i].project_detail.sjy_community_project_collect_start_time + ' ~<br>'+ data.data[i].project_detail.sjy_community_project_collect_end_time +'</td>' +
                         '<td>'+ data.data[i].status_desc+'</td>' +
-                        '<td><a href="__CONTROLLER__/displayCommunityProject/id/'+data.data[i].project_id+'">详情</a> <a class = "projectBook" id = "'+ data.data[i].project_id +'" href="javascript:;">项目书</a></td>' +
+                        '<td><a href="/index.php/Home/Project/displayCommunityProject/id/'+data.data[i].project_id+'">详情</a> <a class = "projectBook" id = "'+ data.data[i].project_id +'" href="javascript:;">项目书</a></td>' +
                         '</tr>';
             }
 
@@ -615,7 +631,7 @@
                 var id = $(this).attr("id");
                 console.log(id);
 
-                $.post("__MODULE__/Project/origanizationGetProjectBookList/project_id/" + id , function (data) {
+                $.post("/index.php/Home/Project/origanizationGetProjectBookList/project_id/" + id , function (data) {
 
                     var html = '';
                     html += '<div class = "organize-choose-tit">\n' +
@@ -647,7 +663,7 @@
 
                         var book_id = $(this).attr("id");
 
-                       $.get("__MODULE__/Project/downloadProjectBook", {"id" : book_id},function(data){
+                       $.get("/index.php/Home/Project/downloadProjectBook", {"id" : book_id},function(data){
 
 
                        });
@@ -671,7 +687,7 @@
     /*3.待开始*/
     $("#starting").click(function () {
 
-        $.post("__MODULE__/Project/waitStart", function (data) {
+        $.post("/index.php/Home/Project/waitStart", function (data) {
             var html3 = '';
 
             for(var i = 0; i < data.length; i++){
@@ -681,7 +697,7 @@
                         '<td>'+ data[i].community_agreen_project_start_people+'</td>' +
                         '<td>'+ data[i].project_detail.sjy_community_project_start_time + ' ~<br>'+ data[i].project_detail.sjy_community_project_end_time +'</td>' +
                         '<td>'+ data[i].community_agreen_project_start_time+'</td>' +
-                        '<td>开始 <a href="__CONTROLLER__/displayCommunityProject/id/'+data[i].project_id+'">详情</a>  项目书</td>' +
+                        '<td>开始 <a href="/index.php/Home/Project/displayCommunityProject/id/'+data[i].project_id+'">详情</a>  项目书</td>' +
                         '</tr>';
             }
 
