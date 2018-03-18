@@ -591,7 +591,7 @@
         public function origanizationStartProject()
         {
             $project_id = I('post.project_id'); //项目id
-            $origanization_id = session('userInfo')['sjy_community_user_community_code'];
+            $origanization_id = session('userInfo')['sjy_origanization_user_origanization_code'];
             //开启事务
             $model = M();
             $model->startTrans();
