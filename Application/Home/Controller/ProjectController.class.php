@@ -591,7 +591,11 @@
         public function origanizationStartProject()
         {
             $project_id = I('post.project_id'); //项目id
+            $id = I('post.id'); //主键id project
+
             $origanization_id = session('userInfo')['sjy_origanization_user_origanization_code'];
+
+
             //开启事务
             $model = M();
             $model->startTrans();
@@ -601,6 +605,7 @@
             $data['project_start_time'] = date('Y-m-d H:i:s',time());  //项目开始时间
             $data['project_start_people'] = session('userInfo')['sjy_origanization_user_real_name']; //同意人
             $data['project_start_people_id'] = session('userInfo')['sjy_id'];  //同意人id
+
             $res = M('project')->where(array('sjy_id'=>$id))->save($data);
 
             //更新sjy_community_project_info表
@@ -626,7 +631,7 @@
                 $this->ajaxReturn(array('state'=>1,"errorInfo"=>""));    //社会组织手动同意开始做项目
             }else{
                 $model->rollback();
-                $this->ajaxReturn(array('state'=>0,"errorInfo"=>"项目开始失败，请重试"));   
+                $this->ajaxReturn(array('state'=>0,"errorInfo"=>"项目开始失败，请重试"));
             }
             
         }
