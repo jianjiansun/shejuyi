@@ -14,21 +14,22 @@
     <script src="/Public/Home/js/bootstrap.js"></script>
     <script src = "/Public/Home/js/autoResizeImage.js"></script>
 
-
 <link rel="stylesheet" href="/Public/Home/css/region.css">
 <link rel="stylesheet" href="/Public/Home/css/page2.css">
 </head>
+
 <body>
-<div class="shadeBox"></div>
+<div class="shadeBox" style = "display: none;"></div>
 <div id = "showCityBox" class = "province-switch" style = "display: none;">
 </div>
 
 <div class = "headLogin">
     <div class = "left changeBan">
         <a href = "javascript:;" id = "cityChoose" class = "region"><?php echo ($city); ?></a>
-        <a href="">社会组织版</a>
-        <a class = "on" href="">社区版</a>
+        <a class = "on"  href="">社会组织版</a>
+        <a href="">社区版</a>
     </div>
+
     <div class="right person">
         <div class="dropdown pull-right">
 
@@ -38,53 +39,29 @@
             </a>
             <ul class="dropdown-menu personalMenu">
                 <li>
-                    <a href="/index.php/Home/Community/communityIdentify">认证状态</a>
+                    <a href="/index.php/Home/Origanization/origanizationIdentify">认证状态</a>
                 </li>
                 <li>
-                    <a href="/index.php/Home/Community/personinfo">账号设置</a>
+                    <a href="/index.php/Home/Origanization/personinfo">账号设置</a>
                 </li>
                 <li>
-                    <a href="/index.php/Home/Community/mycommunity">我的社区</a>
+                    <a href="/index.php/Home/Origanization/myoriganization">我的机构</a>
                 </li>
                 <li>
-                    <a href="/index.php/Home/Project/communityProjectManger">我的项目</a>
+                    <a href="/index.php/Home/Project/origanizationProjectManger">我的项目</a>
                 </li>
                 <li>
                     <a href="">我的消息</a>
                 </li>
 
                 <li>
-                    <a href="/index.php/Home/Community/logout">注销</a>
+                    <a href="/index.php/Home/Origanization/logout">注销</a>
                 </li>
             </ul>
         </div>
-
-
     </div>
-
 </div>
 
-<!--<div class = "headNavBox">
-    <div class = "container">
-        <div class = "top">
-            <div class = "logo  col-md-7">
-                <img src="/Public/Home/imgs/logo.png" alt="">
-                <span>社居易</span>
-            </div>
-            <ul class = "mainNav col-md-5">
-                <li>
-                    <a class = "" href="/index.php/Home/Community/send_project">发布项目</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class = "container">
-        <div class = "search">
-            <input class="form-control" type="text" />
-            <button type="submit" class="btn btn-default">在线搜索</button>
-        </div>
-    </div>
-</div>-->
 <div class = "headNavBox">
     <div class = "container">
         <div class = "top">
@@ -104,6 +81,9 @@
     </div>
 
 </div>
+
+
+<!--轮播图-->
 
 
 <div class="container">
@@ -166,99 +146,64 @@
         </ul>
         <div style="height: 0; clear: both;"></div>
         <ul class = "buildImg" id = "projectList">
-            <!-- <li>
-                <div class="col-md-4 column" >
-                    <img  src="/Public/Home/imgs/she.jpg" alt="" style = "height: 200px;width: 200px;border: 1px solid #cccccc;">
-                </div>
-                <div class="col-md-6 column house-list-info" style="padding-top: 56px;">
+            <!--<li class="col-md-6 column">
+                <a href="detail1.html">
                     <p class = "where">
+                        <span class = "region region1">夕阳红社区养老服务</span>
+                    </p>
+                    <div class="col-md-6 column" style = "padding: 0;">
+                        <img  src="/Public/Home/imgs/shequ2.jpg" alt="" >
+                    </div>
+                    <div class="col-md-6 column house-list-info">
+                        <p class = "where">
+                            <span  class = "sp2 sp">项目发布方</span>
+                            <span class = "region">如意社区</span>
+                        </p>
+                        <p class = "where">
+                            <span  class = "sp3 sp">服务对象</span>
+                            <span class = "region">老年人</span>
+                        </p>
+                        <div class = "type">
+                            <span class = "iconfont">&#xe61f;</span>
+                            <span>北京市</span>-<span>通州区</span>-<span>永顺</span>
+                        </div>
+                    </div>
+                </a>
+            </li>-->
+
+
+            <li>
+                <div class="col-md-3 column" >
+                    <img  src="/Public/Home/imgs/shequ2.jpg" alt="" style = "height: 140px;width: 190px;border: 1px solid #cccccc;">
+                </div>
+                <div class="col-md-7 column house-list-info" style="padding-top: 10px;">
+                    <p class = "projectTit">
+                        <span class = "tit">夕阳红社区养老服务</span>
+                    </p>
+                    <p class = "where">
+                        <span  class = "sp2 sp">发布方</span><i>|</i>
                         <span class = "region region1">社居易社会组织</span>
                     </p>
                     <p class = "where">
-                        <span  class = "sp3 sp">服务领域</span>
+                        <span  class = "sp3 sp">服务领域</span><i>|</i>
                         <span class = "region">青少年</span>
                     </p>
                     <div class = "type">
                         <span class = "iconfont">&#xe61f;</span>
                         <span>北京市</span>-<span>通州区</span>-<span>永顺</span>
                     </div>
-                </div>
-                <div class="col-md-2 column house-list-price">
-                    <div class = "price">
-                        <a class= "detailBtn" href="">了解详情</a>
-                        <a class= "detailBtn" href="">联系项目</a>
-                    </div>
+
                 </div>
             </li>
-            <li>
-                <div class="col-md-4 column" >
-                    <img  src="/Public/Home/imgs/qimingxing.png" alt="" style = "height: 200px;width: 200px;border: 1px solid #cccccc;">
-                </div>
-                <div class="col-md-6 column house-list-info" style="padding-top: 56px;">
-                    <p class = "where">
-                        <span class = "region region1">启明星社会组织</span>
-                    </p>
-                    <p class = "where">
-                        <span  class = "sp3 sp">服务领域</span>
-                        <span class = "region">失业人员</span>
-                    </p>
-                    <div class = "type">
-                        <span class = "iconfont">&#xe61f;</span>
-                        <span>北京市</span>-<span>通州区</span>-<span>永顺</span>
-                    </div>
-                </div>
-                <div class="col-md-2 column house-list-price">
-                    <div class = "price">
-                        <a class= "detailBtn" href="">了解详情</a>
-                        <a class= "detailBtn" href="">联系项目</a>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="col-md-4 column" >
-                    <img  src="/Public/Home/imgs/lvnong.png" alt="" style = "height: 200px;width: 200px;border: 1px solid #cccccc;">
-                </div>
-                <div class="col-md-6 column house-list-info" style="padding-top: 56px;">
-                    <p class = "where">
-                        <span class = "region region1">绿农社会组织</span>
-                    </p>
-                    <p class = "where">
-                        <span  class = "sp3 sp">服务领域</span>
-                        <span class = "region">失业人员</span>
-                    </p>
-                    <div class = "type">
-                        <span class = "iconfont">&#xe61f;</span>
-                        <span>北京市</span>-<span>通州区</span>-<span>永顺</span>
-                    </div>
-                </div>
-                <div class="col-md-2 column house-list-price">
-                    <div class = "price">
-                        <a class= "detailBtn" href="">了解详情</a>
-                        <a class= "detailBtn" href="">联系项目</a>
-                    </div>
-                </div>
-            </li> -->
-
 
         </ul>
-
-        <ul class="pagination">
-            <li><a href="#">&laquo;</a></li>
-            <li class="active"><a href="#">1</a></li>
-            <li class="disabled"><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">&raquo;</a></li>
-        </ul>
-
     </div>
     <div class = "col-md-3 program-box">
         <div  class= "publish-program">
-            <a class= "publish-btn" href="/index.php/Home/Community/send_project">发布项目</a>
+            <a class= "publish-btn" href="/index.php/Home/Origanization/send_project">发布项目</a>
         </div>
-
-
+        
+        
         <div class= "programTit">
             <p class = "tit-p1">基本信息</p>
         </div>
@@ -271,7 +216,6 @@
                 <dt>入驻机构</dt>
                 <dd><span>123</span> 家</dd>
             </dl>
-
             <dl>
                 <dt>入驻社区</dt>
                 <dd><span>12344</span> 家</dd>
@@ -293,46 +237,57 @@
 </body>
 <script src = "/Public/Home/js/cityBoxShow.js"></script>
 
+<!-- 因为这个插件， 所以就不可以出来那个地址选择了 -->
+<!--<script src = "../js/slider.js"></script>-->
 <script>
 
-    $.post("/index.php/Home/Community/getoriganizationlist/page/1", function (data) {
+    $.post("/index.php/Home/Origanization/getprojectlist/page/1", function (data) {
         var html = "";
+
         console.log(data.data[0]);
-         for(var i = 0; i < data.data.length ; i ++) {
-            var href = '/index.php/Home/Home/displayOriganizationHome/id/'+data.data[i].sjy_id;
+        for(var i = 0; i < data.data.length ; i ++) {
+            html+=  '<li>' +
+                    '<a href="/index.php/Home/Project/displayCommunityProject?id='+data.data[i].sjy_id+'">'+
+                    '<div class="col-md-3 column" >' +
+                    '<img  src="'+ data.data[i].project_image_path +'" alt="" style = "height: 140px;width: 190px;border: 1px solid #cccccc;">' +
+                    '</div>' +
+                    '<div class="col-md-7 column house-list-info" style="padding-top: 10px;">' +
+                    '<p class = "projectTit">' +
+                    '<span class = "tit">'+ data.data[i].sjy_community_project_title +'</span>' +
+                    '</p>' +
+                    '<p class = "where">' +
+                    '<span  class = "sp2 sp">发布方</span><i>|</i>' +
+                    '<span class = "region region1">'+  data.data[i].community_info.sjy_community_name +'</span>' +
+                    '</p>' +
+                    '<p class = "where">' +
+                    '<span  class = "sp3 sp">服务对象</span><i>|</i>' +
+                    '<span class = "region">'+  data.data[i].sjy_community_project_service_area +'</span>' +
+                    '</p>' +
+                    '<div class = "type">' +
+                    '<span class = "iconfont">&#xe61f;</span>' +
+                    '<span>'+  data.data[i].address.sjy_community_province_name +'</span>-<span>'+  data.data[i].address.sjy_community_area_name +'</span>-<span>'+  data.data[i].address.sjy_community_street_name +'</span>' +
+                    '</div>' +
+                    '</div>' +
+                    '</a>'+
+                    '</li>';
 
 
-             html+=  '<li>' +
-                     '<a href="'+href+'">'+
-                     '<div class="col-md-3 column" >' +
-                     '<img  src="'+data.data[i].sjy_origanization_logo_img_path+'" alt="" style = "height: 140px;width: 190px;border: 1px solid #cccccc;">' +
-                     '</div>' +
-                     '<div class="col-md-7 column house-list-info" style="padding-top: 10px;">' +
-                     '<p class = "projectTit">' +
-                     '<span class = "tit">'+data.data[i].sjy_origanization_name+'</span>' +
-                     '</p>' +
-                     '<p class = "where">' +
-                     '<span  class = "sp3 sp">服务对象</span><i>|</i>' +
-                     '<span class = "region">'+  data.data[i].sjy_origanization_type_name +'</span>' +
-                     '</p>' +
-                     '<div class = "type">' +
-                     '<span class = "iconfont">&#xe61f;</span>' +
-                     '<span>'+data.data[i].address.sjy_origanization_city_name+'</span>-<span>'+data.data[i].address.sjy_origanization_area_name+'</span>' +
-                     '</div>' +
-                     '</div>' +
-                     '</a>'+
-                     '</li>';
-
-
-
-         }
+        }
         $("#projectList").html(html);
 
-     });
-
+    });
 
 
 </script>
+
+
+
+
+
+
+
+
+
 
 
 </html>

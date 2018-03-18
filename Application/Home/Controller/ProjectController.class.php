@@ -240,9 +240,11 @@
         public function ingProject()
         {
         	//社会组织id
-        	$origanization_code = session('userInfo')['sjy_origanization_user_origanization_code'];
+            $origanization_code = session('userInfo')['sjy_origanization_user_origanization_code'];
+            
         	//[10,99] 正在执行中 其中99提交结项目申请
-        	$info = M('project')->where(array('origanization_id'=>$origanization_id,'status'=>array('between',[10,99])))->order('project_start_time desc')->select();
+            $info = M('project')->where(array('origanization_id'=>$origanization_code,'status'=>array('between',[10,99])))->order('project_start_time desc')->select();
+            
         	//查询项目详情
         	foreach($info as $key=>$value)
         	{
