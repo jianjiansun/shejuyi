@@ -223,7 +223,17 @@
         	}
         	$this->ajaxReturn($info);
         }
-
+        //社会组织就某个项目发送的项目书列表
+        public function origanizationGetProjectBookList()
+        {
+            //社会组织id
+            $origanization_id = session('userInfo')['sjy_origanization_user_origanization_code'];
+            //项目id
+            $project_id = I('get.project_id');
+            //查询项目书
+            $info = M('project_book')->where(array('sjy_project_id'=>$project_id,'sjy_origanization_id'=>$origanization_id))->select();
+            $this->ajaxReturn($info);
+        }
 
 
         //正在执行中
