@@ -352,10 +352,58 @@
         		}
         	}
         }
+        //社会组织增加项目进度
+        public function addProjectRate()
+        {
+            $project_id = I('post.project_id'); //项目id
+            $rate_title = I('post.rate_title'); //进度标题
+            $rate_desc = I('post.rate_desc'); //进度详细内容
+            //插入项目图片
+            //base64数组
+            $base64_data = I('post.project_rate_images');
+            $imgs = array();
+            $filename = time();
+            foreach ($base64_data as $key => $value) {
+            $result = '';
+            $filename++;
+            $base64_image_content = $value;
+            if (preg_match('/^(data:\s*image\/(\w+);base64,)/', $base64_image_content, $result)){
+            $type = $result[2];
+            $new_file = "./Uploads/origanization/project_rate/".date('Ymd',time())."/";
+      
+                    if(!file_exists($new_file))
+                    {
+                            //检查是否有该文件夹，如果没有就创建，并给予最高权限
+                              mkdir($new_file, 0700);
+                     }
+                     $new_file = $new_file.$filename.".{$type}";
+                     if (file_put_contents($new_file, base64_decode(str_replace($result[1], '', $base64_image_content)))){
+                            $url = "/Uploads/origanization/project_rate/".date('Ymd',time())."/".$filename.".{$type}";
+                            $imgs[$key] = $url;
+                    }
+                 }
+            }
+            $rate_imgs = json_encode($imgs);
+            //执行新增
+            $data['sjy_projectrate_title'] = $rate_title;//进度标题
+            $data['sjy_project_rate_con'] = $rate_desc;//进度主要内容
+            $data['sjy_project_id'] = $project_id; //项目id
+            $data['create_time'] = date('Y-m-d H:i:s',time()); //创建时间
+            $data['sjy_origanization_id'] = session('userInfo')['sjy_origanization_user_origanization_code']; //社会组织id
+            $data['sjy_project_rate_write_people'] = session('userInfo')['sjy_origanization_user_real_name']; //进度发布者姓名
+            $data['sjy_project_rate_write_people_id'] = session('userInfo')['sjy_id'];//进度发布者id
 
+            $res = M('projectrate')->add($data);
 
+            if($res)
+            {
+                $this->ajaxReturn(array('errorInfo'=>'','state'=>1)); //成功
+            }else{
+                $this->ajaxReturn(array('errorInfo'=>'填写失败,请重试','state'=>0)); //失败
+            }
+        }
         //发送项目书
-	    function file_upload($project_id,$project_info)
+	    public function file_upload($project_id,$project_info)
 	    {
 	    	//执行上传文件前检测
 	    	//文件扩展名检测    
@@ -690,6 +738,13 @@
             $community_id = session('userInfo')['sjy_community_user_community_code'];
             $info = M('community_project_info')->where(array('sjy_community_project_status'=>2))->select();
             $this->ajaxReturn($info);
+        }
+        //查看项目进度
+        public function projectRate()
+        {
+            $project_id = I('get.project_id'); //项目id
+            $rate = M('projectrate')->where(array('sjy_project_id'=>$project_id))->select(); //项目进度
+            $this->ajaxReturn($rate);
         }
         //下载项目书
         public function downloadProjectBook()

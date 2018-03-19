@@ -1156,37 +1156,6 @@
 
 			$this->ajaxReturn($ret);
 	    }
-	    
-	  
-	        //下载项目书
-	    public function dodownprojectbook()
-	    {
-		 header("Content-type: text/html;charset=utf-8");
-	    	$project_book_id = I("get.id");
-	    	$down_info = M("project_book")->find($project_book_id); 
-			$file_name=$down_info['sjy_project_book_name']; 
-			//用以解决中文不能显示出来的问题 
-			$file_name = time().strrchr($file_name,"."); 
-			$file_path=".".$down_info['sjy_project_path']; 
-			//首先要判断给定的文件存在与否 
-			if(!file_exists($file_path)){ 
-			echo "没有该文件文件"; 
-			return ; 
-			} 
-			$fp=fopen($file_path,"r"); 
-			$file_size=filesize($file_path); 
-			//下载文件需要用到的头 
-			header("Content-type: application/octet-stream"); 
-			header("Accept-Ranges: bytes"); 
-			header("Accept-Length:".$file_size); 
-			header("Content-Disposition: attachment; filename=".$file_name); 
-			//向浏览器返回数据 
-			echo fread($fp,$file_size);
-			fclose($fp);
-			exit();
-	    	
-  			  
-	    }
 	    //注销
         public function logout()
 	    {
@@ -1195,38 +1164,6 @@
 			session('city',null);
 	        header("Location:/");
 	    }
-	    //增加项目进度
-        public function doaddprojectrate()
-        {
-         //进度标题
-         $title = I('post.title');
-         $con = I('post.con');
-         $project_id = I('post.project_id');
-         $time = date('Y-m-d H:i:s',time());
-         $origanization_id = session('userInfo')['sjy_origanization_user_origanization_code'];
-         $data['sjy_project_id']  = $project_id;
-         $data['sjy_project_rate_con'] = $con;
-         $data['create_time'] = $time;
-         $data['sjy_origanization_id'] = $origanization_id;
-         $data['sjy_projectrate_title']  = $title;
-         $res = M('projectrate')->add($data);
-         if($res)
-         {
-          $this->ajaxReturn(1);
-         }
-        }
-        //查询项目进度
-         public function projectrate()
-         {
-              $project_id = I('get.project_id');
-              $project_id_flag = I('get.project_id_flag'); //sjy_project 表主键id
-            
-              //查询项目进度
-              $projectrate = M('projectrate')->where(array('sjy_project_id'=>$project_id))->order(array('create_time'=>"desc"))->select();
-              $this->assign('projectrate',$projectrate);
-              $this->assign('project_id_flag',$project_id_flag);
-              $this->display();   
-         }
          //提交结项目申请
          public function submitproject()
         {
