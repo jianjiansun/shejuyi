@@ -76,6 +76,53 @@
 
 </div>
 
+<div class = "add-progress">
+    <div class = "right-tab">
+        <a class = "close-tab-right" href="javascript:;">项目进度</a>
+        <!--   <a href="javascript:;">我的意向社区</a>-->
+    </div>
+
+    <ul class="layui-timeline" style = "margin-top: 30px; width: 256px; margin-left: 40px;">
+        <li class="layui-timeline-item">
+            <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+            <div class="layui-timeline-content layui-text">
+                <h3 class="layui-timeline-title">8月18日</h3>
+                <p>
+                    layui 2.0 的一切准备工作似乎都已到位。发布之弦，一触即发。
+                    <br>不枉近百个日日夜夜与之为伴。因小而大，因弱而强。
+                    <br>无论它能走多远，抑或如何支撑？至少我曾倾注全心，无怨无悔 <i class="layui-icon"></i>
+                </p>
+            </div>
+        </li>
+        <li class="layui-timeline-item">
+            <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+            <div class="layui-timeline-content layui-text">
+                <h3 class="layui-timeline-title">8月16日</h3>
+                <p>杜甫的思想核心是儒家的仁政思想，他有“<em>致君尧舜上，再使风俗淳</em>”的宏伟抱负。个人最爱的名篇有：</p>
+                <ul>
+                    <li>《登高》</li>
+                    <li>《茅屋为秋风所破歌》</li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+
+    <script>
+
+        $(".add-progress").height($(window).height() );
+        $(".choose-organize-box").height($(window).height() -200);
+        $(".sure-btn-box").height( 200);
+
+        $(".organize-proposal").click(function () {
+            $(".organize-proposal").css("display", "block");
+        });
+
+
+
+
+    </script>
+</div>
+
 
 
 
@@ -814,16 +861,60 @@
                     '<td>'+ data[i].project_detail.sjy_community_name +'</td>' +
                     '<td>'+ data[i].project_detail.sjy_community_project_start_time + ' ~<br>'+data[i].project_detail.sjy_community_project_end_time +'</td>' +
                     '<td>'+ data[i].project_start_time +'</td>' +
-                    '<td><a href="__CONTROLLER__/displayCommunityProject/id/'+data[i].project_id+'">查看进度</a> <a href="__CONTROLLER__/displayCommunityProject/id/'+data[i].project_id+'">详情</a> <br><a class = "projectBook" id = "'+ data[i].project_id +'" href="javascript:;">项目书</a></td>' +
+                    '<td><a class = "progressStep" id = "'+ data[i].project_id +'" href="javascript:;">查看进度</a> <a href="__CONTROLLER__/displayCommunityProject/id/'+data[i].project_id+'">详情</a> <br><a class = "projectBook" id = "'+ data[i].project_id +'" href="javascript:;">项目书</a></td>' +
                     '</tr>';
             }
             $("#tbody4").html(html4);
 
+            /*查看进度*/
+            $(".progressStep").click(function () {
+
+                $(".add-progress").animate({
+                    right:'0px'
+                });
+
+                $(".progressStep").height($(window).height() );
+                $(".progressStep").height($(window).height() -200);
+                $(".sure-btn-box").height( 200);
+
+                $(".close-tab-right").click(function () {
+                    $(".add-progress").animate({
+                        right:'-320px'
+                    });
+                });
+
+                var project_id = $(this).attr("id");
+
+                $.get("__MODULE__/Project/projectRate" , {"project_id" : project_id}, function (data) {
+
+                    console.log(data);
+                    var text4 = '';
+
+                    for(var i = 0; i < data.length; i ++){
+                        text4 += '<li class="layui-timeline-item">\n' +
+                            '<i class="layui-icon layui-timeline-axis">&#xe63f;</i>\n' +
+                            '<div class="layui-timeline-content layui-text">\n' +
+                            '<h3 class="layui-timeline-title">'+ data[i].sjy_project_rate_con +'</h3>\n' +
+                            '<p>' +  data[i].create_time +'</p>' +
+                            '</div>\n' +
+                            '</li>';
+
+
+                    }
+
+                    $(".layui-timeline").html(text4);
+                });
+
+
+
+
+
+            });
+
+
+
+            /*项目书*/
             $(".projectBook").click(function () {
-
-
-
-
 
                 var proName = $(this).parent().siblings('.proName').text();
                 console.log(proName + "proName");

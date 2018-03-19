@@ -662,3 +662,19 @@ html {
     background-color: #F5F5F5;
     color:#ACA899;
 }
+
+.add-progress{
+    position: fixed;
+    right: -320px;
+    top: 0;
+    width: 310px;
+    background: #FFFFFF;
+    z-index: 10000;
+
+}
+layui-timeline{
+    position: relative;
+    padding-bottom: 20px!important;
+    left: 40px!important;
+    top: 26px!important;
+}
