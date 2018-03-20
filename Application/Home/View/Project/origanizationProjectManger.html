@@ -1,8 +1,14 @@
-
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/iconfont/iconfont.css">
     <link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
     <link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
     <link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
     <link rel="stylesheet" href="__PUBLIC__/Home/css/right-tab.css">
+
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/deliver.css">
+
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/webuploader.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/demo.css">
+
    
     <script src = "__PUBLIC__/Home/js/layui.js"></script>
     <script src = "__PUBLIC__/Home/js/layui.all.js"></script>
@@ -12,6 +18,10 @@
     <script src="__PUBLIC__/Home/js/plugins/cover_js/hammer.js" type="text/javascript" charset="utf-8"></script>
     <script src="__PUBLIC__/Home/js/plugins/cover_js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
     <script src="__PUBLIC__/Home/js/plugins/cover_js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <script type="text/javascript" src="__PUBLIC__/Home/js/webuploader.js"></script>
+
+
 </head>
 <body>
 
@@ -26,7 +36,7 @@
         </div>
     </div>
 </div>
-
+<!--4.3 项目书 -->
 <div class = "tab-right-bar" style = "display: block;">
     <div class = "right-tab">
         <a class = "close-tab-right" href="javascript:;">项目书</a>
@@ -76,6 +86,8 @@
 
 </div>
 
+<!--查看进度-->
+
 <div class = "add-progress">
     <div class = "right-tab">
         <a class = "close-tab-right" href="javascript:;">项目进度</a>
@@ -122,6 +134,50 @@
 
     </script>
 </div>
+
+<!-- 添加进度 -->
+<div class= "progressShader">
+    <div class = "addProgressBox">
+
+        <span class = "closeProgressBtn iconfont">&#xe60e;</span>
+
+        <h2>敬老服务</h2>
+        <div class="form-group">
+            <label>项目介绍</label>
+            <textarea id = "formTextarea" name = "demand_describe" class="form-control" rows="3" ></textarea>
+        </div>
+
+        <div class = "clearfix" style = "height: 200px; position: relative;">
+            <label >上传图片</label>
+            <div class="page-container">
+                <div id="uploader" class="wu-example">
+                    <div class="queueList">
+                        <div id="dndArea" class="placeholder">
+                            <div id="filePicker"></div>
+                        </div>
+                    </div>
+                    <div class="statusBar" style="display:none">
+                        <div class="progress">
+                            <span class="text">0%</span>
+                            <span class="percentage"></span>
+                        </div>
+                        <div class="info"></div>
+                        <div class="btns">
+                            <div id="filePicker2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "clearfix" style = "width: 100%;text-align: center;padding-top:100px;">
+            <a href = "javascript:;" id = "deliverBtn" type="submit" class="btn btn-default deliver-btn">提交</a>
+        </div>
+
+
+    </div>
+</div>
+
+
 
 
 
@@ -560,12 +616,13 @@
 </div>
 </body>
 
+
 <script>
     /*个人图片的切换*/
     //上传封面
     //document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
     var clipArea = new bjj.PhotoClip("#clipArea", {
-        size: [200, 200],// 截取框的宽和高组成的数组。默认值为[260,260]
+        size: [100, 100],// 截取框的宽和高组成的数组。默认值为[260,260]
         outputSize: [80, 80], // 输出图像的宽和高组成的数组。默认值为[0,0]，表示输出图像原始大小
         //outputType: "jpg", // 指定输出图片的类型，可选 "jpg" 和 "png" 两种种类型，默认为 "jpg"
         file: "#file", // 上传图片的<input type="file">控件的选择器或者DOM对象
@@ -609,6 +666,25 @@
         }
     });
     //clipArea.destroy();
+
+
+    /*跟进项目图片*/
+    window.webuploader = {
+        config:{
+            thumbWidth: 200, //缩略图宽度，可省略，默认为110
+            thumbHeight: 130, //缩略图高度，可省略，默认为110
+            wrapId: 'uploader' //必填
+        },
+        //处理客户端新文件上传时，需要调用后台处理的地址, 必填
+        uploadUrl: './fileupload.php',
+        //处理客户端原有文件更新时的后台处理地址，必填
+        updateUrl: './fileupdate.php',
+        //当客户端原有文件删除时的后台处理地址，必填
+        removeUrl: './filedel.php',
+        /* //初始化客户端上传文件，从后台获取文件的地址, 可选，当此参数为空时，默认已上传的文件为空
+         initUrl: './fileinit.php'*/
+    };
+
 
     /*2.投标中*/
     $("#biding").click(function(){
@@ -847,6 +923,8 @@
     });
 
 
+
+
     /*4. 进行中*/
     $("#going").click(function () {
 
@@ -861,12 +939,15 @@
                     '<td>'+ data[i].project_detail.sjy_community_name +'</td>' +
                     '<td>'+ data[i].project_detail.sjy_community_project_start_time + ' ~<br>'+data[i].project_detail.sjy_community_project_end_time +'</td>' +
                     '<td>'+ data[i].project_start_time +'</td>' +
-                    '<td><a class = "progressStep" id = "'+ data[i].project_id +'" href="javascript:;">查看进度</a> <a href="__CONTROLLER__/displayCommunityProject/id/'+data[i].project_id+'">详情</a> <br><a class = "projectBook" id = "'+ data[i].project_id +'" href="javascript:;">项目书</a></td>' +
+                    '<td><a class = "progressStep" id = "'+ data[i].project_id +'" href="javascript:;">查看进度</a> ' +
+                        '<a href="__CONTROLLER__/displayCommunityProject/id/'+data[i].project_id+'">详情</a> <br>' +
+                        '<a class = "addProgress" id = "'+ data[i].project_id +'" href="javascript:;">添加进度</a>   ' +
+                        '<a class = "projectBook" id = "'+ data[i].project_id +'" href="javascript:;">项目书</a></td>' +
                     '</tr>';
             }
             $("#tbody4").html(html4);
 
-            /*查看进度*/
+            /*4.1 查看进度*/
             $(".progressStep").click(function () {
 
                 $(".add-progress").animate({
@@ -899,7 +980,6 @@
                             '</div>\n' +
                             '</li>';
 
-
                     }
 
                     $(".layui-timeline").html(text4);
@@ -913,7 +993,7 @@
 
 
 
-            /*项目书*/
+            /*4.3 项目书*/
             $(".projectBook").click(function () {
 
                 var proName = $(this).parent().siblings('.proName').text();
@@ -978,11 +1058,26 @@
 
                 })
 
-            })
+            });
 
 
 
 
+
+            /*4.4 添加进度*/
+            $(".addProgress").click(function () {
+
+                $(".progressShader").css("display", "block");
+                $(".addProgressBox").css("display", "block");
+
+
+                $(".closeProgressBtn").click(function () {
+                    $(".progressShader").css("display", "none");
+                    $(".addProgressBox").css("display", "none");
+                });
+
+
+            });
 
         });
 
@@ -1111,5 +1206,6 @@
     });
 
 </script>
+<script src="__PUBLIC__/Home/js/extend-webuploader.js" type="text/javascript"></script>
 
 </html>
