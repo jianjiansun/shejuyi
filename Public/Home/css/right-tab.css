@@ -45,9 +45,15 @@
     padding: 0  12px;
 
 }
-.proposal-detail{
+p.proposal-detail{
     height: 40px;
     line-height: 40px;
+    border-bottom: 1px solid #e6e6e6;
+}
+div.proposal-detail{
+    padding: 10px;
+    height: 68px;
+    line-height: 26px;
     border-bottom: 1px solid #e6e6e6;
 }
 .proposal-detail .download-btn{

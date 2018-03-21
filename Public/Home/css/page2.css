@@ -688,17 +688,21 @@ html {
     display: none;
     background: rgba(0, 0, 0, 0.3);
 }
-
+.programDetailTit{
+    width: 300px;
+    height: 36px;
+    line-height: 36px;
+    text-indent: 12px;
+}
 
 .addProgressBox{
-    display: none;
     position: fixed;
     width: 1120px;
     padding: 30px;
-    height: 560px;
+    height: 600px;
     left: 50%;
     margin-left: -560px;
-    margin-top: -280px;
+    margin-top: -300px;
     border:1px solid #cccccc;
     top: 50%;
     z-index: 10000;
@@ -720,4 +724,21 @@ html {
 }
 .webuploader-element-invisible{
     z-index:100000!important;
+}
+#rt_rt_1c93no6ju1ot2o231u1iasd1uq31{
+    position: absolute;
+    top: 0px;
+    left: 442px;
+    width: 168px;
+    height: 44px;
+    overflow: hidden;
+    bottom: auto;
+    right: auto;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }

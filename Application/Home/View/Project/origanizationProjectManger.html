@@ -72,8 +72,8 @@
     <script>
 
         $(".tab-right-bar").height($(window).height() );
-        $(".choose-organize-box").height($(window).height() -200);
-        $(".sure-btn-box").height( 200);
+        $(".choose-organize-box").height($(window).height());
+
 
         $(".organize-proposal").click(function () {
             $(".organize-proposal").css("display", "block");
@@ -122,8 +122,7 @@
     <script>
 
         $(".add-progress").height($(window).height() );
-        $(".choose-organize-box").height($(window).height() -200);
-        $(".sure-btn-box").height( 200);
+        $(".choose-organize-box").height($(window).height());
 
         $(".organize-proposal").click(function () {
             $(".organize-proposal").css("display", "block");
@@ -142,6 +141,11 @@
         <span class = "closeProgressBtn iconfont">&#xe60e;</span>
 
         <h2>敬老服务</h2>
+        <div class="form-group">
+            <label>活动介绍</label>
+            <input class="programDetailTit" type="text">
+        </div>
+        
         <div class="form-group">
             <label>项目介绍</label>
             <textarea id = "formTextarea" name = "demand_describe" class="form-control" rows="3" ></textarea>
@@ -169,7 +173,7 @@
                 </div>
             </div>
         </div>
-        <div class = "clearfix" style = "width: 100%;text-align: center;padding-top:100px;">
+        <div class = "clearfix" style = "width: 100%;text-align: center;padding-top:80px;">
             <a href = "javascript:;" id = "deliverBtn" type="submit" class="btn btn-default deliver-btn">提交</a>
         </div>
 
@@ -667,8 +671,6 @@
     });
     //clipArea.destroy();
 
-
-    /*跟进项目图片*/
     window.webuploader = {
         config:{
             thumbWidth: 200, //缩略图宽度，可省略，默认为110
@@ -724,8 +726,7 @@
                 });
 
                 $(".tab-right-bar").height($(window).height() );
-                $(".right-tab-content").height($(window).height() -200);
-                $(".sure-btn-box").height( 200);
+                $(".right-tab-content").height($(window).height() );
 
                 $(".close-tab-right").click(function () {
                     $(".tab-right-bar").animate({
@@ -864,8 +865,7 @@
                 });
 
                 $(".tab-right-bar").height($(window).height() );
-                $(".right-tab-content").height($(window).height() -200);
-                $(".sure-btn-box").height( 200);
+                $(".right-tab-content").height($(window).height());
 
                 $(".close-tab-right").click(function () {
                     $(".tab-right-bar").animate({
@@ -890,13 +890,11 @@
                     for ( var i = 0; i < data.length; i ++){
 
                         html +='<li class = "choose-organize-item">\n' +
-                            '<p class = "proposal-detail">\n' +
+                            '<div class = "proposal-detail">\n' +
                             '<span>'+ data[i].sjy_project_book_name +'</span>\n <br>' +
-                            '</p>\n' +
-                            '<p class = "proposal-detail">\n' +
                             '<span>'+ data[i].sjy_project_book_send_time +'</span>\n' +
                             '<a class = "download-btn" id = "'+ data[i].sjy_id +'" href="'+ data[i].sjy_project_path +'">下载</a>\n' +
-                            '</p>\n' +
+                            '</div>\n' +
                             '</li>\n' ;
 
                     }
@@ -1004,8 +1002,7 @@
                 });
 
                 $(".tab-right-bar").height($(window).height() );
-                $(".right-tab-content").height($(window).height() -200);
-                $(".sure-btn-box").height( 200);
+                $(".right-tab-content").height($(window).height());
 
                 $(".close-tab-right").click(function () {
                     $(".tab-right-bar").animate({
@@ -1030,13 +1027,11 @@
                     for ( var i = 0; i < data.length; i ++){
 
                         html +='<li class = "choose-organize-item">\n' +
-                            '<p class = "proposal-detail">\n' +
+                            '<div class = "proposal-detail">\n' +
                             '<span>'+ data[i].sjy_project_book_name +'</span>\n <br>' +
-                            '</p>\n' +
-                            '<p class = "proposal-detail">\n' +
                             '<span>'+ data[i].sjy_project_book_send_time +'</span>\n' +
                             '<a class = "download-btn" id = "'+ data[i].sjy_id +'" href="'+ data[i].sjy_project_path +'">下载</a>\n' +
-                            '</p>\n' +
+                            '</div>\n' +
                             '</li>\n' ;
 
                     }
@@ -1068,13 +1063,54 @@
             $(".addProgress").click(function () {
 
                 $(".progressShader").css("display", "block");
-                $(".addProgressBox").css("display", "block");
-
 
                 $(".closeProgressBtn").click(function () {
                     $(".progressShader").css("display", "none");
-                    $(".addProgressBox").css("display", "none");
                 });
+
+                var project_id = $(this).attr("id");
+                var rate_title = $(".programDetailTit").val();
+                var rate_desc = $("#formTextarea").val();
+                var project_rate_images = [];
+
+
+
+                for( var i = 0; i < $(".filelist li").length; i++){
+
+                    /*  console.log($(".filelist li img").attr("src"));*/
+
+                    var imgSrc = $(".filelist li img").attr("src");
+
+                    project_rate_images.push(imgSrc);
+
+                }
+
+                if( rate_title == ""){
+                    layer.msg('请填写项目进度标题');
+                    return false;
+                }
+
+
+                if( rate_desc == ""){
+                    layer.msg('请填写项目进度描述');
+                    return false;
+                }
+
+
+
+
+
+                $.post("__MODULE__/Project/addProjectRate",{'project_id' : project_id , "rate_title": rate_title, "rate_desc": rate_desc ,"project_rate_images":project_rate_images },function (data) {
+
+                    if(data.status == 1){
+
+                        layer.msg('添加进度成功');
+                        window.location.href = "__CONTROLLER__/"
+                    }
+
+
+                } )
+
 
 
             });

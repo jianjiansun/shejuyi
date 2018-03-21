@@ -951,9 +951,9 @@
                 container.css({
                     position: 'absolute',
                     top: '0px',
-                    left: '0px',
-                    width: '1px',
-                    height: '1px',
+                    left: '442px',
+                    width: '168px',
+                    height: '44px',
                     overflow: 'hidden'
                 });
     
