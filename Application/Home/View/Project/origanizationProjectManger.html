@@ -94,7 +94,7 @@
         <!--   <a href="javascript:;">我的意向社区</a>-->
     </div>
 
-    <ul class="layui-timeline" style = "margin-top: 30px; width: 256px; margin-left: 40px;">
+    <ul class="layui-timeline" style = "width: 256px;">
         <li class="layui-timeline-item">
             <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
             <div class="layui-timeline-content layui-text">
@@ -1040,6 +1040,8 @@
 
 
 
+
+
                     $(".dowmload-btn").click(function(){
 
                         var book_id = $(this).attr("id");
@@ -1067,49 +1069,67 @@
                 $(".closeProgressBtn").click(function () {
                     $(".progressShader").css("display", "none");
                 });
-
                 var project_id = $(this).attr("id");
-                var rate_title = $(".programDetailTit").val();
-                var rate_desc = $("#formTextarea").val();
-                var project_rate_images = [];
+
+                $("#deliverBtn").click(function () {
 
 
 
-                for( var i = 0; i < $(".filelist li").length; i++){
-
-                    /*  console.log($(".filelist li img").attr("src"));*/
-
-                    var imgSrc = $(".filelist li img").attr("src");
-
-                    project_rate_images.push(imgSrc);
-
-                }
-
-                if( rate_title == ""){
-                    layer.msg('请填写项目进度标题');
-                    return false;
-                }
-
-
-                if( rate_desc == ""){
-                    layer.msg('请填写项目进度描述');
-                    return false;
-                }
+                    var rate_title = $(".programDetailTit").val();
+                    var rate_desc = $("#formTextarea").val();
+                    var project_rate_images = [];
 
 
 
 
 
-                $.post("__MODULE__/Project/addProjectRate",{'project_id' : project_id , "rate_title": rate_title, "rate_desc": rate_desc ,"project_rate_images":project_rate_images },function (data) {
 
-                    if(data.status == 1){
+                    for( var i = 0; i < $(".filelist li").length; i++){
 
-                        layer.msg('添加进度成功');
-                        window.location.href = "__CONTROLLER__/"
+                        /*  console.log($(".filelist li img").attr("src"));*/
+
+                        var imgSrc = $(".filelist li img").attr("src");
+
+                        project_rate_images.push(imgSrc);
+
+                    }
+
+                    if( rate_title == ""){
+                        layer.msg('请填写项目进度标题');
+                        return false;
                     }
 
 
-                } )
+                    if( rate_desc == ""){
+                        layer.msg('请填写项目进度描述');
+                        return false;
+                    }
+
+
+                    console.log(project_id);
+                    console.log(rate_title);
+                    console.log(rate_desc);
+                    console.log(project_rate_images);
+
+
+                    $.post("__MODULE__/Project/addProjectRate",{'project_id' : project_id , "rate_title": rate_title, "rate_desc": rate_desc ,"project_rate_images":project_rate_images },function (data) {
+
+                        if(data.state == 1){
+
+                            layer.msg('添加进度成功');
+                            window.location.href = "__MODULE__/Project/origanizationProjectManger"
+                        }
+
+
+                    } )
+
+
+
+
+
+                });
+
+
 
 
 
