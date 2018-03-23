@@ -1205,29 +1205,7 @@ class CommunityController extends BaseController {
        $this->assign('id',$id);
        $this->display();
      }
-     //执行项目批复
-    public function doreply()
-    {
-      $id = I('post.id');
-      $con = I('post.con');
-      $replyvalue = I('post.replyvalue');
-      //如果同意
-      if($replyvalue)
-      {
-         $data['con'] = $con;   //备注
-         $data['project_end_time']= date('Y-m-d H:i:s',time());//项目结束时间
-         $data['status'] = 100;//完成项目
-         $res = M('project')->where(array('sjy_id'=>$id))->save($data);
-         $this->ajaxReturn(1);   //同意1 拒绝 2 
-      }
-      else{
-      //如果拒绝
-        $data['con'] = $con;
-        $data['status'] = 98;  //退回
-        $res = M('project')->where(array('sjy_id'=>$id))->save($data);
-        $this->ajaxReturn(2);    //拒绝
-}
-    }
+  
  
  
   

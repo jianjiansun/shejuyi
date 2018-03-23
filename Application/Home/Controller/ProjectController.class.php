@@ -745,6 +745,27 @@
             }
             $this->ajaxReturn($info);
         }
+        //社区同意结项目，并给项目打分
+        public function agreenEndProject()
+        {
+              $id = I('post.project_id');  //id
+              $score = I('post.score');    //分数
+              
+             
+              $data['project_end_time']= date('Y-m-d H:i:s',time());//项目结束时间
+              $data['status'] = 100;//完成项目
+              $data['score'] = $score; //评分
+              $data['peoject_agreen_end_people_id'] = session('userInfo')['sjy_id'];
+              $res = M('project')->where(array('sjy_id'=>$id))->save($data);
+              
+              if($res)
+              {
+                 $this->ajaxReturn(array('state'=>1,'errorInfo'=>''));
+              }else{
+                 $this->ajaxReturn(array('state'=>0,'errorInfo'=>'请重试'));
+              }
+              
+        }
         //查询已完成的项目
         public function communityCompleteProject()
         {
