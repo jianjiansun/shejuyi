@@ -1164,17 +1164,7 @@
 			session('city',null);
 	        header("Location:/");
 	    }
-         //提交结项目申请
-         public function submitproject()
-        {
-            $id = I('post.id');  //结项目id
-            //将项目进度改为99
-            //申请时间
-            $date = date('Y-m-d H:i:s',time());
-            
-            $res = M('project')->where(array('sjy_id'=>$id))->save(array('status'=>99,'project_apply_end_time'=>$date));
-            $this->ajaxReturn(1);
-        } 
+       
         //身份证号是否重复
         public function checkidnumber($idnumber)
         {
