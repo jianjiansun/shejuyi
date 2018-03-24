@@ -82,6 +82,8 @@
 
 
 
+
+
     </script>
 
 </div>
@@ -933,15 +935,31 @@
             for(var i = 0; i < data.length; i++){
 
                 html4 += '<tr>' +
-                    '<td>'+ data[i].project_detail.sjy_community_project_title+'</td>' +
+                    '<td class = "project-title">'+ data[i].project_detail.sjy_community_project_title+'</td>' +
                     '<td>'+ data[i].project_detail.sjy_community_name +'</td>' +
                     '<td>'+ data[i].project_detail.sjy_community_project_start_time + ' ~<br>'+data[i].project_detail.sjy_community_project_end_time +'</td>' +
-                    '<td>'+ data[i].project_start_time +'</td>' +
-                    '<td><a class = "progressStep" id = "'+ data[i].project_id +'" href="javascript:;">查看进度</a> ' +
+                    '<td>'+ data[i].project_start_time +'</td>';
+
+
+                if(data[i].status >= 10 && data[i].status <= 98){
+                    html += '<td><a class = "progressStep" id = "'+ data[i].project_id +'" href="javascript:;">查看进度</a> ' +
                         '<a href="__CONTROLLER__/displayCommunityProject/id/'+data[i].project_id+'">详情</a> <br>' +
                         '<a class = "addProgress" id = "'+ data[i].project_id +'" href="javascript:;">添加进度</a>   ' +
-                        '<a class = "projectBook" id = "'+ data[i].project_id +'" href="javascript:;">项目书</a></td>' +
-                    '</tr>';
+                        '<a class = "projectBook" id = "'+ data[i].project_id +'" href="javascript:;">项目书</a>' +
+                        '<a class = "finishProject" id = "'+ data[i].project_id +'" href="javascript:;">结项目</a></td>' +
+                        '</tr>';
+
+                }else{
+                    html += '<td><a class = "progressStep" id = "'+ data[i].project_id +'" href="javascript:;">查看进度</a> ' +
+                        '<a href="__CONTROLLER__/displayCommunityProject/id/'+data[i].project_id+'">详情</a> <br>' +
+                        '<a class = "projectBook" id = "'+ data[i].project_id +'" href="javascript:;">项目书</a>' +
+                        '<a class = "finishProject" id = "'+ data[i].project_id +'" href="javascript:;">结项目</a></td>' +
+                        '</tr>';
+
+                }
+
+
+
             }
             $("#tbody4").html(html4);
 
@@ -1119,21 +1137,52 @@
                             layer.msg('添加进度成功');
                             window.location.href = "__MODULE__/Project/origanizationProjectManger"
                         }
-
-
-                    } )
-
-
-
-
-
+                    })
                 });
-
-
-
-
-
             });
+
+
+            /*4.5 结束项目*/
+            $(".finishProject").click(function () {
+
+                var project_title = $(this).parent().siblings('.project-title').text();
+
+                var project_id = $(this).attr("id");
+
+
+                layer.open({
+                    content: '<p>是否要结束项目</p><p class = "ortext">'+project_title +'</p>'
+                    ,btn: ['确定', '取消']
+                    ,yes: function(){
+
+                        //按钮【按钮一】的回调
+
+                        $.post("__MODULE__/Project/endProjectApply", {"project_id": project_id }, function (data) {
+
+                            if(data.state == 1){
+                                /*跳转到进行中*/
+
+                                layer.closeAll();
+
+
+                            }else{
+
+                                layer.msg(data.errorInfo);
+
+                            }
+
+                        });
+
+
+                    }
+                    ,cancel: function(){
+                        //右上角关闭回调
+
+                        //return false 开启该代码可禁止点击该按钮关闭
+                    }
+                });
+            })
+
 
         });
 
@@ -1260,6 +1309,10 @@
         });
 
     });
+
+
+
+
 
 </script>
 <script src="__PUBLIC__/Home/js/extend-webuploader.js" type="text/javascript"></script>
