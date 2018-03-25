@@ -242,12 +242,14 @@
                             <li id = "biding" lay-id="b">投标中</li>
                             <li id = "starting" lay-id="c">待开始</li>
                             <li id = "going" lay-id="d">进行中</li>
-                            <li  lay-id="e">已完成</li>
+                            <li id = "apllyFinishProject" lay-id="e">结项申请</li>
+                            <li id = "alreadyFinish" lay-id="f">已完成</li>
                         </ul>
                         <div class="layui-tab-content">
 
+                            <!--社会组织 —— 我的项目 —— 1 邀请我的-->
                             <div class="layui-tab-item layui-show">
-                                <!--社会组织 —— 我的项目 —— 邀请我的-->
+
                                 <div class="basic-information">
                                     <table class="layui-table">
                                         <colgroup>
@@ -300,8 +302,9 @@
                                 <div class = "pagination" id="pagination0"></div>
                             </div>
 
+                            <!--社会组织 —— 我的项目 —— 2 投标中-->
                             <div class="layui-tab-item">
-                                <!--社会组织 —— 我的项目 —— 投标中-->
+
                                 <div class="basic-information">
 
                                     <table class="layui-table">
@@ -353,8 +356,10 @@
                                 <!--分页-->
                                 <div class = "pagination" id="pagination1"></div>
                             </div>
+
+                            <!--社会组织 —— 我的项目 —— 3 待开始-->
                             <div class="layui-tab-item">
-                                <!--社会组织 —— 我的项目 —— 待开始-->
+
                                 <div class="basic-information">
                                     <table class="layui-table" >
                                         <colgroup>
@@ -402,8 +407,9 @@
                                 <div class = "pagination" id="pagination2"></div>
                             </div>
 
+                            <!--社会组织 —— 我的项目 —— 4 进行中 -->
                             <div class="layui-tab-item">
-                                <!--社会组织 —— 我的项目 —— 正在进行-->
+
                                 <div class="basic-information">
                                     <table class="layui-table">
                                         <colgroup>
@@ -452,13 +458,13 @@
                                 <div class = "pagination" id="pagination3"></div>
 
                             </div>
-
+                            <!--社会组织 —— 我的项目 —— 5 结项申请 -->
                             <div class="layui-tab-item">
-                                <!--社会组织 —— 我的项目 —— 待结项目-->
+
                                 <div class="basic-information">
                                     <table class="layui-table">
                                         <colgroup>
-                                            <col width="60">
+                                            <col width="200">
                                             <col width="200">
                                             <col width="200">
                                             <col width="200">
@@ -467,7 +473,60 @@
                                         </colgroup>
                                         <thead>
                                         <tr>
-                                            <th>序号</th>
+                                            <th>项目名称</th>
+                                            <th>发布方</th>
+                                            <th>项目周期</th>
+                                            <th>开始时间</th>
+                                            <th>申请结项时间</th>
+                                            <th>操作</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id = "tbody5">
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2016-11-29</td>
+                                            <td>人生就像是一场修行</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>查看进度 添加进度 详情 项目书</td>
+
+
+                                        </tr>
+                                        <tr>
+                                            <td>10</td>
+                                            <td>2016-11-28</td>
+                                            <td>于千万年之中，时间的无涯的荒野里…</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>查看进度 添加进度 详情 项目书</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!--分页-->
+                                <div class = "pagination" id="pagination5"></div>
+
+                            </div>
+
+
+                            <!--社会组织 —— 我的项目 —— 6 已完成-->
+                            <div class="layui-tab-item">
+
+                                <div class="basic-information">
+                                    <table class="layui-table">
+                                        <colgroup>
+                                            <col width="200">
+                                            <col width="200">
+                                            <col width="200">
+                                            <col width="200">
+                                            <col width="200">
+                                            <col width="200">
+                                        </colgroup>
+                                        <thead>
+                                        <tr>
                                             <th>项目名称</th>
                                             <th>发布方</th>
                                             <th>投标人</th>
@@ -476,7 +535,7 @@
                                             <th>操作</th>
                                         </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody id = "tbody6">
                                         <tr>
                                             <td>1</td>
                                             <td>2016-11-29</td>
@@ -505,104 +564,7 @@
                                 <div class = "pagination" id="pagination4"></div>
 
                             </div>
-                            <div class="layui-tab-item">
 
-                                <!--社会组织 —— 我的项目 —— 我发布的-->
-                                <div class="basic-information">
-                                    <table class="layui-table">
-                                        <colgroup>
-                                            <col width="80">
-                                            <col width="200">
-                                            <col width="200">
-                                            <col width="200">
-                                            <col width="200">
-                                            <col width="200">
-                                            <col width="200">
-                                        </colgroup>
-                                        <thead>
-                                        <tr>
-                                            <th>序号</th>
-                                            <th>项目名称</th>
-                                            <th>服务对象</th>
-                                            <th>项目周期</th>
-                                            <th>发布时间</th>
-                                            <th>发布者</th>
-                                            <th>操作</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>2016-11-29</td>
-                                            <td>人生就像是一场修行</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-
-
-                                        </tr>
-                                        <tr>
-                                            <td>10</td>
-                                            <td>2016-11-28</td>
-                                            <td>于千万年之中，时间的无涯的荒野里…</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-
-                                <!--分页-->
-                                <div class = "pagination" id="pagination5"></div>
-                            </div>
-                            <div class="layui-tab-item">
-
-                                <!--社会组织 —— 我的项目 —— 已完成的项目-->
-                                <div class="basic-information">
-                                    <table class="layui-table">
-                                        <colgroup>
-                                            <col width="80">
-                                            <col width="200">
-                                            <col width="200">
-                                            <col width="200">
-                                            <col width="200">
-                                            <col width="200">
-                                            <col width="200">
-                                        </colgroup>
-                                        <thead>
-                                        <tr>
-                                            <th>序号</th>
-                                            <th>项目名称</th>
-                                            <th>项目方</th>
-                                            <th>结项日期</th>
-                                            <th>操作</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>2016-11-29</td>
-                                            <td>人生就像是一场修行</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>10</td>
-                                            <td>2016-11-28</td>
-                                            <td>于千万年之中，时间的无涯的荒野里…</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-
-                                <!--分页-->
-                                <div class = "pagination" id="pagination6"></div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -946,14 +908,14 @@
                         '<a href="__CONTROLLER__/displayCommunityProject/id/'+data[i].project_id+'">详情</a> <br>' +
                         '<a class = "addProgress" id = "'+ data[i].project_id +'" href="javascript:;">添加进度</a>   ' +
                         '<a class = "projectBook" id = "'+ data[i].project_id +'" href="javascript:;">项目书</a><br>' +
-                        '<a class = "finishProject" id = "'+ data[i].project_id +'" href="javascript:;">结项目</a></td>' +
+                        '<a class = "finishProject" id = "'+ data[i].project_id +'"  data_id = "'+ data[i].sjy_id +'"  href="javascript:;">结项目</a></td>' +
                         '</tr>';
 
                 }else{
                     html4 += '<td><a class = "progressStep" id = "'+ data[i].project_id +'" href="javascript:;">查看进度</a> ' +
                         '<a href="__CONTROLLER__/displayCommunityProject/id/'+data[i].project_id+'">详情</a> <br>' +
                         '<a class = "projectBook" id = "'+ data[i].project_id +'" href="javascript:;">项目书</a>' +
-                        '<a class = "finishProject" id = "'+ data[i].project_id +'" href="javascript:;">结项目</a></td>' +
+                        '<a class = "finishProject" id = "'+ data[i].project_id +'"  data_id = "'+ data[i].sjy_id +'"  href="javascript:;">结项目</a></td>' +
                         '</tr>';
 
                 }
@@ -1092,7 +1054,6 @@
                 $("#deliverBtn").click(function () {
 
 
-
                     var rate_title = $(".programDetailTit").val();
                     var rate_desc = $("#formTextarea").val();
                     var project_rate_images = [];
@@ -1102,7 +1063,7 @@
 
 
 
-                    for( var i = 0; i < $(".filelist li").length; i++){
+                    for(var i = 0; i < $(".filelist li").length; i++){
 
                         /*  console.log($(".filelist li img").attr("src"));*/
 
@@ -1148,6 +1109,7 @@
                 var project_title = $(this).parent().siblings('.project-title').text();
 
                 var project_id = $(this).attr("id");
+                var sjy_id = $(this).attr("data_id");
 
 
                 layer.open({
@@ -1157,7 +1119,7 @@
 
                         //按钮【按钮一】的回调
 
-                        $.post("__MODULE__/Project/endProjectApply", {"project_id": project_id }, function (data) {
+                        $.post("__MODULE__/Project/endProjectApply", {"project_id": project_id , "id" : sjy_id }, function (data) {
 
                             if(data.state == 1){
                                 /*跳转到进行中*/
@@ -1189,8 +1151,285 @@
     });
 
 
+    /*5 .结项申请中 */
+    $("#apllyFinishProject").click(function () {
+        $.post("__MODULE__/Project/ingcommunityagreenend", function(data){
+
+            var html5 = '';
+
+            for(var i = 0; i < data.length; i++){
+
+                html5 += '<tr>' +
+                    '<td class = "project-title">'+ data[i].project_detail.sjy_community_project_title+'</td>' +
+                    '<td>'+ data[i].project_detail.sjy_community_name +'</td>' +
+                    '<td>'+ data[i].project_detail.sjy_community_project_start_time + ' ~<br>'+data[i].project_detail.sjy_community_project_end_time +'</td>' +
+                    '<td>'+ data[i].project_start_time +'</td>'+
+                    '<td>'+ data[i].project_apply_end_time +'</td>'+
+                    '<td><a class = "progressStep" id = "'+ data[i].project_id +'" href="javascript:;">查看进度</a> ' +
+                        '<a href="__CONTROLLER__/displayCommunityProject/id/'+data[i].project_id+'">详情</a> <br>' +
+                        '<a class = "projectBook" id = "'+ data[i].project_id +'" href="javascript:;">项目书</a><br>' +
+                        '</tr>';
 
 
+
+
+            }
+            $("#tbody5").html(html5);
+
+            /*5.1 查看进度*/
+            $(".progressStep").click(function () {
+
+                $(".add-progress").animate({
+                    right:'0px'
+                });
+
+                $(".progressStep").height($(window).height() );
+                $(".progressStep").height($(window).height() -200);
+                $(".sure-btn-box").height( 200);
+
+                $(".close-tab-right").click(function () {
+                    $(".add-progress").animate({
+                        right:'-320px'
+                    });
+                });
+
+                var project_id = $(this).attr("id");
+
+                $.get("__MODULE__/Project/projectRate" , {"project_id" : project_id}, function (data) {
+
+                    console.log(data);
+                    var text4 = '';
+
+                    for(var i = 0; i < data.length; i ++){
+                        text4 += '<li class="layui-timeline-item">\n' +
+                            '<i class="layui-icon layui-timeline-axis">&#xe63f;</i>\n' +
+                            '<div class="layui-timeline-content layui-text">\n' +
+                            '<h3 class="layui-timeline-title">'+ data[i].sjy_project_rate_con +'</h3>\n' +
+                            '<p>' +  data[i].create_time +'</p>' +
+                            '</div>\n' +
+                            '</li>';
+
+                    }
+
+                    $(".layui-timeline").html(text4);
+                });
+
+
+
+
+
+            });
+
+
+
+            /*5.3 项目书*/
+            $(".projectBook").click(function () {
+
+                var proName = $(this).parent().siblings('.proName').text();
+                console.log(proName + "proName");
+
+                $(".tab-right-bar").animate({
+                    right:'0px'
+                });
+
+                $(".tab-right-bar").height($(window).height() );
+                $(".right-tab-content").height($(window).height());
+
+                $(".close-tab-right").click(function () {
+                    $(".tab-right-bar").animate({
+                        right:'-320px'
+                    });
+                });
+
+
+                var id = $(this).attr("id");
+                console.log(id);
+
+                $.post("__MODULE__/Project/origanizationGetProjectBookList/project_id/" + id , function (data) {
+
+                    var html = '';
+                    html += '<div class = "organize-choose-tit">\n' +
+                        '<span>机构A</span>\n' +
+                        '<a class = "agree-organization" href="javascript:;">上传时间 <span></span></a>\n' +
+                        '</div>\n' ;
+
+                    console.log(data);
+
+                    for ( var i = 0; i < data.length; i ++){
+
+                        html +='<li class = "choose-organize-item">\n' +
+                            '<div class = "proposal-detail">\n' +
+                            '<span>'+ data[i].sjy_project_book_name +'</span>\n <br>' +
+                            '<span>'+ data[i].sjy_project_book_send_time +'</span>\n' +
+                            '<a class = "download-btn" id = "'+ data[i].sjy_id +'" href="'+ data[i].sjy_project_path +'">下载</a>\n' +
+                            '</div>\n' +
+                            '</li>\n' ;
+
+                    }
+
+                    $(".choose-organize-box").html(html);
+
+
+
+
+
+                    $(".dowmload-btn").click(function(){
+
+                        var book_id = $(this).attr("id");
+
+                        $.get("__MODULE__/Project/downloadProjectBook", {"id" : book_id},function(data){
+
+
+                        });
+                    });
+
+
+                })
+
+            });
+
+        });
+
+    });
+
+
+
+    /*6 . 已完成 */
+    $("#alreadyFinish").click(function () {
+        $.post("__MODULE__/Project/completeProject", function(data){
+
+            var html6 = '';
+
+            for(var i = 0; i < data.length; i++){
+                html6 += '<tr>' +
+                    '<td class = "project-title">'+ data[i].project_info.sjy_community_project_title+'</td>' +
+                    '<td>'+ data[i].project_info.sjy_community_name +'</td>' +
+                    '<td>'+ data[i].project_info.sjy_community_project_send_prople_name +'</td>' +
+                    '<td>'+ data[i].project_info.sjy_community_project_start_time + ' ~<br>'+data[i].project_info.sjy_community_project_end_time +'</td>' +
+                    '<td>'+ data[i].project_start_time + ' ~<br>'+data[i].project_end_time +'</td>' +
+                    '<td><a class = "progressStep" id = "'+ data[i].project_id +'" href="javascript:;">查看进度</a> ' +
+                    '<a href="__CONTROLLER__/displayCommunityProject/id/'+data[i].project_id+'">详情</a> <br>' +
+                    '<a class = "projectBook" id = "'+ data[i].project_id +'" href="javascript:;">项目书</a><br>' +
+                    '</tr>';
+            }
+
+            $("#tbody6").html(html6);
+
+            /*6.1 查看进度*/
+            $(".progressStep").click(function () {
+
+                $(".add-progress").animate({
+                    right:'0px'
+                });
+
+                $(".progressStep").height($(window).height() );
+                $(".progressStep").height($(window).height() -200);
+                $(".sure-btn-box").height( 200);
+
+                $(".close-tab-right").click(function () {
+                    $(".add-progress").animate({
+                        right:'-320px'
+                    });
+                });
+
+                var project_id = $(this).attr("id");
+
+                $.get("__MODULE__/Project/projectRate" , {"project_id" : project_id}, function (data) {
+
+                    console.log(data);
+                    var text4 = '';
+
+                    for(var i = 0; i < data.length; i ++){
+                        text4 += '<li class="layui-timeline-item">\n' +
+                            '<i class="layui-icon layui-timeline-axis">&#xe63f;</i>\n' +
+                            '<div class="layui-timeline-content layui-text">\n' +
+                            '<h3 class="layui-timeline-title">'+ data[i].sjy_project_rate_con +'</h3>\n' +
+                            '<p>' +  data[i].create_time +'</p>' +
+                            '</div>\n' +
+                            '</li>';
+
+                    }
+
+                    $(".layui-timeline").html(text4);
+                });
+
+
+
+
+
+            });
+
+
+
+            /*6.3 项目书*/
+            $(".projectBook").click(function () {
+
+                var proName = $(this).parent().siblings('.proName').text();
+                console.log(proName + "proName");
+
+                $(".tab-right-bar").animate({
+                    right:'0px'
+                });
+
+                $(".tab-right-bar").height($(window).height() );
+                $(".right-tab-content").height($(window).height());
+
+                $(".close-tab-right").click(function () {
+                    $(".tab-right-bar").animate({
+                        right:'-320px'
+                    });
+                });
+
+
+                var id = $(this).attr("id");
+                console.log(id);
+
+                $.post("__MODULE__/Project/origanizationGetProjectBookList/project_id/" + id , function (data) {
+
+                    var html = '';
+                    html += '<div class = "organize-choose-tit">\n' +
+                        '<span>机构A</span>\n' +
+                        '<a class = "agree-organization" href="javascript:;">上传时间 <span></span></a>\n' +
+                        '</div>\n' ;
+
+                    console.log(data);
+
+                    for ( var i = 0; i < data.length; i ++){
+
+                        html +='<li class = "choose-organize-item">\n' +
+                            '<div class = "proposal-detail">\n' +
+                            '<span>'+ data[i].sjy_project_book_name +'</span>\n <br>' +
+                            '<span>'+ data[i].sjy_project_book_send_time +'</span>\n' +
+                            '<a class = "download-btn" id = "'+ data[i].sjy_id +'" href="'+ data[i].sjy_project_path +'">下载</a>\n' +
+                            '</div>\n' +
+                            '</li>\n' ;
+
+                    }
+
+                    $(".choose-organize-box").html(html);
+
+
+
+
+
+                    $(".dowmload-btn").click(function(){
+
+                        var book_id = $(this).attr("id");
+
+                        $.get("__MODULE__/Project/downloadProjectBook", {"id" : book_id},function(data){
+
+
+                        });
+                    });
+
+
+                })
+
+            });
+
+        });
+
+    });
 
 
 
