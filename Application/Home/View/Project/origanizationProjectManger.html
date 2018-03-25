@@ -942,15 +942,15 @@
 
 
                 if(data[i].status >= 10 && data[i].status <= 98){
-                    html += '<td><a class = "progressStep" id = "'+ data[i].project_id +'" href="javascript:;">查看进度</a> ' +
+                    html4 += '<td><a class = "progressStep" id = "'+ data[i].project_id +'" href="javascript:;">查看进度</a> ' +
                         '<a href="__CONTROLLER__/displayCommunityProject/id/'+data[i].project_id+'">详情</a> <br>' +
                         '<a class = "addProgress" id = "'+ data[i].project_id +'" href="javascript:;">添加进度</a>   ' +
-                        '<a class = "projectBook" id = "'+ data[i].project_id +'" href="javascript:;">项目书</a>' +
+                        '<a class = "projectBook" id = "'+ data[i].project_id +'" href="javascript:;">项目书</a><br>' +
                         '<a class = "finishProject" id = "'+ data[i].project_id +'" href="javascript:;">结项目</a></td>' +
                         '</tr>';
 
                 }else{
-                    html += '<td><a class = "progressStep" id = "'+ data[i].project_id +'" href="javascript:;">查看进度</a> ' +
+                    html4 += '<td><a class = "progressStep" id = "'+ data[i].project_id +'" href="javascript:;">查看进度</a> ' +
                         '<a href="__CONTROLLER__/displayCommunityProject/id/'+data[i].project_id+'">详情</a> <br>' +
                         '<a class = "projectBook" id = "'+ data[i].project_id +'" href="javascript:;">项目书</a>' +
                         '<a class = "finishProject" id = "'+ data[i].project_id +'" href="javascript:;">结项目</a></td>' +
