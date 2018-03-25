@@ -271,7 +271,7 @@
             //修改状态
             $date = date('Y-m-d H:i:s',time());
             
-            $res = M('project')->where(array('sjy_id'=>$project_id))->save(array('status'=>99,'project_apply_end_time'=>$date,'project_applt_end_people_id'=>session('userInfo')['sjy_id']));
+            $res = M('project')->where(array('sjy_id'=>$project_id))->save(array('status'=>99,'project_apply_end_time'=>$date,'project_apply_end_people_id'=>session('userInfo')['sjy_id']));
             if($res)
             {
                 $thia->ajaxReturn(array('state'=>1,'errorInfo'=>''));
