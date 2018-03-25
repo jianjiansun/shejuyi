@@ -305,8 +305,9 @@
         	//社会组织id
         	$origanization_code = session('userInfo')['sjy_origanization_user_origanization_code'];
         	//已完成的项目
-        	$info = M('project')->where(array('origanization_id'=>$origanization_id,'status'=>100))->order('project_start_time desc')->select();
-        	//查询项目详情
+        	$info = M('project')->where(array('origanization_id'=>$origanization_code,'status'=>100))->order('project_start_time desc')->select();
+            // var_dump($info);die;
+            //查询项目详情
         	foreach($info as $key=>$value)
         	{
         		$project_info = M('community_project_info')->where(array('sjy_id'=>$value['project_id']))->find();
