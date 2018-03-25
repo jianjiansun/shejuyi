@@ -234,7 +234,7 @@
             $info = M('project_book')->where(array('sjy_project_id'=>$project_id,'sjy_origanization_id'=>$origanization_id))->select();
             $this->ajaxReturn($info);
         }
-
+        
 
         //正在执行中
         public function ingProject()
@@ -786,7 +786,7 @@
               $data['peoject_agreen_end_people_id'] = session('userInfo')['sjy_id'];
               $res = M('project')->where(array('sjy_id'=>$id))->save($data);
               //更改sjy_community_project表
-              $val = M('communit_project_info')->where(array('sjy_id'=>$project_id))->save(array('sjy_community_project_status'=>2));
+              $val = M('community_project_info')->where(array('sjy_id'=>$project_id))->save(array('sjy_community_project_status'=>2));
               if($res&&$val)
               {
                  $model->commit();
