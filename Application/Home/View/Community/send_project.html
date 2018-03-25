@@ -244,6 +244,9 @@
             dataType: "json",
             success: function (data) {
                 console.log(data);
+
+                layer.msg("")
+
                 if(data.state == 1)
                 {
                     window.location.href = "__CONTROLLER__/"
