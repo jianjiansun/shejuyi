@@ -263,6 +263,7 @@
         	}
         	$this->ajaxReturn($info);
         }
+        //社会组织结项申请中
         public function ingcommunityagreenend()
         {
             //社会组织id
@@ -745,7 +746,7 @@
             $community_id = session('userInfo')['sjy_community_user_community_code'];
             //查询该社区下正在进行的项目
             //[10,98] 正在执行中 其中99提交结项目申请
-            $info = M('project')->where(array('community_id'=>$community_id,'status'=>array('between',[10,99])))->order('project_start_time desc')->select();
+            $info = M('project')->where(array('community_id'=>$community_id,'status'=>array('between',[10,98])))->order('project_start_time desc')->select();
             //查询项目详情
              //查询项目详情
              foreach($info as $key=>$value)
