@@ -267,14 +267,16 @@
         //社会组织申请结项目
         public function endProjectApply()
         {
-            $project_id = I('post.project_id');
+            $project_id = I('post.project_id'); //项目id
+            $project_id = I('post.id');   //主键id sjy_project
             //修改状态
             $date = date('Y-m-d H:i:s',time());
             
-            $res = M('project')->where(array('sjy_id'=>$project_id))->save(array('status'=>99,'project_apply_end_time'=>$date,'project_apply_end_people_id'=>session('userInfo')['sjy_id']));
+            $res = M('project')->where(array('sjy_id'=>$id))->save(array('status'=>99,'project_apply_end_time'=>$date,'project_apply_end_people_id'=>session('userInfo')['sjy_id']));
+           
             if($res)
             {
-                $thia->ajaxReturn(array('state'=>1,'errorInfo'=>''));
+                $this->ajaxReturn(array('state'=>1,'errorInfo'=>''));
             }else{
                 $this->ajaxReturn(array('state'=>0,'errorInfo'=>'请重试'));
             }

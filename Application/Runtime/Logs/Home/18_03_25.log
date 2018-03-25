@@ -1,0 +1,30 @@
+[ 2018-03-25T15:14:08+08:00 ] 127.0.0.1 /index.php/Home/Project/endProjectApply
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000773s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001263s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001344s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0619s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0904s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0638s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0741s ]
+NOTIC: [8] Undefined variable: islogin D:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0745s ]
+SQL: UPDATE `sjy_project` SET `status`='99',`project_apply_end_time`='2018-03-25 15:14:08',`project_apply_end_people_id`='75' WHERE `sjy_id` = 40 [ RunTime:0.0783s ]
+
+[ 2018-03-25T15:14:16+08:00 ] 127.0.0.1 /index.php/Home/Project/endProjectApply
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000404s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0879s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 75 LIMIT 1   [ RunTime:0.0887s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0860s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0862s ]
+NOTIC: [8] Undefined variable: islogin D:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.1171s ]
+SQL: UPDATE `sjy_project` SET `status`='99',`project_apply_end_time`='2018-03-25 15:14:16',`project_apply_end_people_id`='75' WHERE `sjy_id` = 40 [ RunTime:0.0867s ]
+
