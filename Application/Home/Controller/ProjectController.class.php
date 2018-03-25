@@ -400,6 +400,7 @@
             $rate_imgs = json_encode($imgs);
             //执行新增
             $data['sjy_projectrate_title'] = $rate_title;//进度标题
+            $data['sjy_project_rate_image'] = $rate_imgs; //进度图片
             $data['sjy_project_rate_con'] = $rate_desc;//进度主要内容
             $data['sjy_project_id'] = $project_id; //项目id
             $data['create_time'] = date('Y-m-d H:i:s',time()); //创建时间
