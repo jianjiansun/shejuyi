@@ -243,7 +243,7 @@
             $origanization_code = session('userInfo')['sjy_origanization_user_origanization_code'];
             
         	//[10,99] 正在执行中 其中99提交结项目申请
-            $info = M('project')->where(array('origanization_id'=>$origanization_code,'status'=>array('between',[10,99])))->order('project_start_time desc')->select();
+            $info = M('project')->where(array('origanization_id'=>$origanization_code,'status'=>array('between',[10,98])))->order('project_start_time desc')->select();
             
         	//查询项目详情
         	foreach($info as $key=>$value)
@@ -263,7 +263,23 @@
         	}
         	$this->ajaxReturn($info);
         }
-
+        public function ingcommunityagreenend()
+        {
+            //社会组织id
+            $origanization_code = session('userInfo')['sjy_origanization_user_origanization_code'];
+            
+        	//[99] 正在执行中 其中99提交结项目申请
+            $info = M('project')->where(array('origanization_id'=>$origanization_code,'status'=>99))->order('project_start_time desc')->select();
+            
+        	//查询项目详情
+        	foreach($info as $key=>$value)
+        	{
+        		
+        		$project_info = M('community_project_info')->where(array('sjy_id'=>$value['project_id']))->find();
+        		$info[$key]['project_detail'] = $project_info;
+        	}
+        	$this->ajaxReturn($info);
+        }
         //社会组织申请结项目
         public function endProjectApply()
         {
