@@ -268,7 +268,7 @@
         public function endProjectApply()
         {
             $project_id = I('post.project_id'); //项目id
-            $project_id = I('post.id');   //主键id sjy_project
+            $id = I('post.id');   //主键id sjy_project
             //修改状态
             $date = date('Y-m-d H:i:s',time());
             
