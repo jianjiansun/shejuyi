@@ -725,10 +725,15 @@
             //社区id
             $community_id = session('userInfo')['sjy_community_user_community_code'];
             //查询该社区下正在进行的项目
-            $where = array(
-                   'sjy_community_project_status'=>1
-            );
-            $info = M('community_project_info')->where($where)->select();
+            //[10,98] 正在执行中 其中99提交结项目申请
+            $info = M('project')->where(array('community_id'=>$community_id,'status'=>array('between',[10,99])))->order('project_start_time desc')->select();
+            //查询项目详情
+             //查询项目详情
+             foreach($info as $key=>$value)
+             {
+                 $project_info = M('community_project_info')->where(array('sjy_id'=>$value['project_id']))->find();
+                 $info[$key]['project_info'] = $project_info;
+             }
             $this->ajaxReturn($info);
         }
         //查询结项中的项目
@@ -748,20 +753,26 @@
         //社区同意结项目，并给项目打分
         public function agreenEndProject()
         {
-              $id = I('post.project_id');  //id
+              $id = I('post.id');  //id 主见id(sjy_project表)
               $score = I('post.score');    //分数
-              
-             
+              $project_id = I('post.project_id'); //项目id
+              //开启事务
+              $model = M();
+              $model->startTrans();
+              //更改sjy_project表
               $data['project_end_time']= date('Y-m-d H:i:s',time());//项目结束时间
               $data['status'] = 100;//完成项目
               $data['score'] = $score; //评分
               $data['peoject_agreen_end_people_id'] = session('userInfo')['sjy_id'];
               $res = M('project')->where(array('sjy_id'=>$id))->save($data);
-              
-              if($res)
+              //更改sjy_community_project表
+              $val = M('communit_project_info')->where(array('sjy_id'=>$project_id))->save(array('sjy_community_project_status'=>2));
+              if($res&&$val)
               {
+                 $model->commit();
                  $this->ajaxReturn(array('state'=>1,'errorInfo'=>''));
               }else{
+                 $model->rollback();
                  $this->ajaxReturn(array('state'=>0,'errorInfo'=>'请重试'));
               }
               
