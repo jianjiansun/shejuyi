@@ -1,0 +1,897 @@
+[ 2018-03-25T17:47:24+08:00 ] 127.0.0.1 /index.php/Home/Origanization/logout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000716s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000997s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001091s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0896s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 79 LIMIT 1   [ RunTime:0.0757s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0551s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0827s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001467s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001538s ]
+
+[ 2018-03-25T17:47:24+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000552s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000828s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000891s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000256s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000352s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020221s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020308s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002030s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002122s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001308s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001729s ]
+
+[ 2018-03-25T17:47:29+08:00 ] 127.0.0.1 /index.php/Home/Login/verify?t=1521971249561
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000924s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001067s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001157s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003586s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003869s ]
+
+[ 2018-03-25T17:47:59+08:00 ] 127.0.0.1 /index.php/Home/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000429s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000727s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000783s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0913s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_community_login_id` = '13820962107' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0706s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_community_login_id` = '13820962107' LIMIT 1   [ RunTime:0.0679s ]
+
+[ 2018-03-25T17:48:00+08:00 ] 127.0.0.1 /index.php/Home/Community/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000586s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000917s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000985s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0724s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0602s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0612s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0779s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0779s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000181s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000273s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036478s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036637s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001770s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001840s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003181s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003337s ]
+
+[ 2018-03-25T17:48:01+08:00 ] 127.0.0.1 /index.php/Home/Community/getoriganizationlist/page/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000790s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001216s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001313s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0769s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0809s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0662s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0649s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0698s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0713s ]
+SQL: SELECT `sjy_origanization_id` FROM `sjy_origanization_position_info` WHERE `sjy_origanization_city` = '120000'  [ RunTime:0.0922s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0507s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_origanization_base_info` LIMIT 1   [ RunTime:0.0550s ]
+
+[ 2018-03-25T17:48:16+08:00 ] 127.0.0.1 /index.php/Home/Community/communityIdentify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000724s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001350s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0522s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0745s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0670s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0957s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0558s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SELECT `phonecode` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0552s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000395s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000522s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047148s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047381s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003974s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004124s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003187s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003419s ]
+
+[ 2018-03-25T17:48:41+08:00 ] 127.0.0.1 /index.php/Home/Community/getoriganizationlist/page/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002055s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001960s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002091s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0811s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.1515s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0695s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0973s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0520s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0947s ]
+SQL: SELECT `sjy_origanization_id` FROM `sjy_origanization_position_info` WHERE `sjy_origanization_city` = '120000'  [ RunTime:0.0772s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0570s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_origanization_base_info` LIMIT 1   [ RunTime:0.0941s ]
+
+[ 2018-03-25T17:50:13+08:00 ] 127.0.0.1 /index.php/Home/Community/communityIdentify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000922s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000989s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001064s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0587s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0910s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0735s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.1013s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0749s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SELECT `phonecode` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.1175s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000299s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000394s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047621s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047839s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002356s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002437s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003319s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003482s ]
+
+[ 2018-03-25T17:50:18+08:00 ] 127.0.0.1 /index.php/Home/Community/getoriganizationlist/page/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000684s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002997s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003133s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0824s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0573s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0701s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.1226s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.1154s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.1096s ]
+SQL: SELECT `sjy_origanization_id` FROM `sjy_origanization_position_info` WHERE `sjy_origanization_city` = '120000'  [ RunTime:0.0979s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0708s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_origanization_base_info` LIMIT 1   [ RunTime:0.0486s ]
+
+[ 2018-03-25T17:50:23+08:00 ] 127.0.0.1 /index.php/Home/Community/mycommunity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000589s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000738s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000799s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0801s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0499s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0632s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.1137s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0595s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000373s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000501s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044761s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044938s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002790s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002887s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004494s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004634s ]
+
+[ 2018-03-25T17:50:25+08:00 ] 127.0.0.1 /index.php/Home/Community/getCommunityInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000719s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000873s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000930s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0723s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0652s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0609s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0852s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0795s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_community_base_info` [ RunTime:0.0721s ]
+SQL: SELECT * FROM `sjy_community_base_info` WHERE `sjy_id` = null LIMIT 1   [ RunTime:0.0804s ]
+SQL: SHOW COLUMNS FROM `sjy_community_position_info` [ RunTime:0.0815s ]
+SQL: SELECT * FROM `sjy_community_position_info` WHERE `sjy_community_id` = null LIMIT 1   [ RunTime:0.0813s ]
+SQL: SHOW COLUMNS FROM `sjy_community_images` [ RunTime:0.0741s ]
+NOTIC: [8] Undefined index: sjy_community_code C:\xampp\htdocs\shejuyi\Application\Home\Controller\CommunityController.class.php 第 880 行.
+SQL: SELECT `sjy_community_images` FROM `sjy_community_images` WHERE `sjy_community_code` = null LIMIT 1   [ RunTime:0.0582s ]
+
+[ 2018-03-25T17:50:42+08:00 ] 127.0.0.1 /index.php/Home/Community/getoriganizationlist/page/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000667s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002084s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002192s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0823s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0854s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0727s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.1107s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0721s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0778s ]
+SQL: SELECT `sjy_origanization_id` FROM `sjy_origanization_position_info` WHERE `sjy_origanization_city` = '120000'  [ RunTime:0.0845s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0582s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_origanization_base_info` LIMIT 1   [ RunTime:0.0693s ]
+
+[ 2018-03-25T17:50:45+08:00 ] 127.0.0.1 /index.php/Home/Community/communityIdentify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000453s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001905s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002069s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0796s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0580s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0741s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0827s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0906s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SELECT `phonecode` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0655s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000316s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000419s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036700s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036877s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004059s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004148s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002084s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002212s ]
+
+[ 2018-03-25T17:50:48+08:00 ] 127.0.0.1 /index.php/Home/Community/getoriganizationlist/page/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000801s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002187s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0574s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0562s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0630s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0842s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0732s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0623s ]
+SQL: SELECT `sjy_origanization_id` FROM `sjy_origanization_position_info` WHERE `sjy_origanization_city` = '120000'  [ RunTime:0.0790s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0576s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_origanization_base_info` LIMIT 1   [ RunTime:0.0534s ]
+
+[ 2018-03-25T17:51:05+08:00 ] 127.0.0.1 /index.php/Home/Community/communityIdentify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000761s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000948s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001015s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.1188s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0551s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0641s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0634s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0543s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SELECT `phonecode` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0824s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000362s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000474s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029789s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002945s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003057s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001539s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001678s ]
+
+[ 2018-03-25T17:51:21+08:00 ] 127.0.0.1 /index.php/Home/Community/douploadtouxiang
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000839s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000898s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0938s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.1049s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0750s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0533s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0836s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SELECT `sjy_community_user_image` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0907s ]
+SQL: UPDATE `sjy_community_user_info` SET `sjy_community_user_image`='/Uploads/community/touxiang/20180325/1521971480.jpeg' WHERE `sjy_id` = 57 [ RunTime:0.3536s ]
+
+[ 2018-03-25T17:53:48+08:00 ] 127.0.0.1 /index.php/Home/Community/doCommunityIdentify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000644s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001215s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001269s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0791s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0823s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0918s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0859s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0673s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_community_base_info` [ RunTime:0.0868s ]
+SQL: SELECT * FROM `sjy_community_base_info` WHERE `sjy_community_name` = '西潞苑小区' LIMIT 1   [ RunTime:0.0645s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0567s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_user_id_card` = '140222199105171028' LIMIT 1   [ RunTime:0.0848s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_community_user_id_card` = '140222199105171028' LIMIT 1   [ RunTime:0.1572s ]
+SQL: SHOW COLUMNS FROM `sjy_streets` [ RunTime:0.0796s ]
+SQL: SELECT * FROM `sjy_streets` WHERE `streetid` = '110112005' LIMIT 1   [ RunTime:0.0933s ]
+SQL: INSERT INTO `sjy_streets` (`streetid`,`street`,`areaid`) VALUES ('110112005','永顺地区','110112') [ RunTime:0.0832s ]
+SQL: INSERT INTO `sjy_community_base_info` (`sjy_community_identify_img_path`,`sjy_community_logo_img_path`,`sjy_community_name`,`sjy_community_phone`,`sjy_community_isidentify`,`sjy_community_admin_id`,`sjy_community_register_time`) VALUES ('/Uploads/community/community_identify_img/20180325/1521971625.jpeg','/Uploads/community/logo_img/20180325/1521971625.png','西潞苑小区','010-22222222','1','57','2018-03-25 17:53:45') [ RunTime:0.0856s ]
+SQL: UPDATE `sjy_community_base_info` SET `sjy_community_code`='30' WHERE `sjy_id` = 30 [ RunTime:0.0823s ]
+SQL: SHOW COLUMNS FROM `sjy_provinces` [ RunTime:0.0499s ]
+SQL: SELECT `province` FROM `sjy_provinces` WHERE `provinceid` = '110000' LIMIT 1   [ RunTime:0.0700s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '110000' LIMIT 1   [ RunTime:0.0530s ]
+SQL: SHOW COLUMNS FROM `sjy_areas` [ RunTime:0.0868s ]
+SQL: SELECT `area` FROM `sjy_areas` WHERE `areaid` = '110112' LIMIT 1   [ RunTime:0.0473s ]
+SQL: SELECT `street` FROM `sjy_streets` WHERE `streetid` = '110112005' LIMIT 1   [ RunTime:0.0673s ]
+SQL: SHOW COLUMNS FROM `sjy_community_position_info` [ RunTime:0.0826s ]
+SQL: INSERT INTO `sjy_community_position_info` (`sjy_community_province`,`sjy_community_province_name`,`sjy_community_city`,`sjy_community_city_name`,`sjy_community_area`,`sjy_community_area_name`,`sjy_community_street`,`sjy_community_street_name`,`sjy_community_address`,`sjy_community_id`) VALUES ('110000','北京市','110000','北京市','110112','通州区','110112005','永顺地区','西潞园小区 69号楼4单元601','30') [ RunTime:0.3549s ]
+SQL: UPDATE `sjy_community_user_info` SET `sjy_community_user_real_name`='高学婷',`sjy_community_user_community_code`='30',`sjy_community_user_id_card`='140222199105171028',`sjy_community_user_role`='1',`sjy_community_user_isidentify`='1' WHERE `sjy_id` = 57 [ RunTime:0.3654s ]
+
+[ 2018-03-25T17:54:54+08:00 ] 127.0.0.1 /index.php/Home/Community/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000831s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001718s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001886s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0751s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0761s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0700s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.1316s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0828s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0750s ]
+SQL: SELECT * FROM `sjy_project` WHERE `status` = 2 AND `community_id` = 30  [ RunTime:0.7799s ]
+ERR: 非法操作:main
+
+[ 2018-03-25T17:55:33+08:00 ] 127.0.0.1 /index.php/Home/Community
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000442s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000821s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000882s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0813s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0639s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0851s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0743s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0744s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0531s ]
+SQL: SELECT * FROM `sjy_project` WHERE `status` = 2 AND `community_id` = 30  [ RunTime:0.0668s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000180s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000277s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018054s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018147s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001861s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001946s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001672s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001775s ]
+
+[ 2018-03-25T17:55:34+08:00 ] 127.0.0.1 /index.php/Home/Community/getoriganizationlist/page/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001166s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002483s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002634s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0632s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0811s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0856s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0722s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0786s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0688s ]
+SQL: SELECT * FROM `sjy_project` WHERE `status` = 2 AND `community_id` = 30  [ RunTime:0.1005s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0791s ]
+SQL: SELECT `sjy_origanization_id` FROM `sjy_origanization_position_info` WHERE `sjy_origanization_city` = '120000'  [ RunTime:0.0655s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0729s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_origanization_base_info` LIMIT 1   [ RunTime:0.0625s ]
+
+[ 2018-03-25T17:55:42+08:00 ] 127.0.0.1 /index.php/Home/Community/personinfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000568s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000791s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000846s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0734s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0868s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0855s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0684s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0858s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0735s ]
+SQL: SELECT * FROM `sjy_project` WHERE `status` = 2 AND `community_id` = 30  [ RunTime:0.0510s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000238s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000359s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039884s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040120s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003368s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003499s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005268s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005597s ]
+
+[ 2018-03-25T17:55:43+08:00 ] 127.0.0.1 /index.php/Home/Community/getPersonInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001374s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0733s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0873s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0757s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0775s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0856s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0718s ]
+SQL: SELECT * FROM `sjy_project` WHERE `status` = 2 AND `community_id` = 30  [ RunTime:0.0569s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0615s ]
+SQL: SHOW COLUMNS FROM `sjy_community_base_info` [ RunTime:0.0597s ]
+SQL: SELECT `sjy_community_name` FROM `sjy_community_base_info` WHERE `sjy_id` = 30 LIMIT 1   [ RunTime:0.0703s ]
+
+[ 2018-03-25T17:56:27+08:00 ] 127.0.0.1 /index.php/Home/Community/updatePersonInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000579s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000802s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000860s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0880s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0806s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0757s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0735s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0531s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0678s ]
+SQL: SELECT * FROM `sjy_project` WHERE `status` = 2 AND `community_id` = 30  [ RunTime:0.0691s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0663s ]
+SQL: UPDATE `sjy_community_user_info` SET `sjy_community_user_email`='1501723406@qq.com',`sjy_community_user_wechat`='15201176732' WHERE `sjy_id` = 57 [ RunTime:0.3837s ]
+
+[ 2018-03-25T17:56:35+08:00 ] 127.0.0.1 /index.php/Home/Community/myCommunity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000422s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001207s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0647s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0872s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0763s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0743s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0529s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0965s ]
+SQL: SELECT * FROM `sjy_project` WHERE `status` = 2 AND `community_id` = 30  [ RunTime:0.0736s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000263s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000373s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037028s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037245s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002203s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002294s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003303s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003438s ]
+
+[ 2018-03-25T17:56:37+08:00 ] 127.0.0.1 /index.php/Home/Community/getCommunityInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000980s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001146s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001235s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0657s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0697s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0684s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0590s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0780s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0538s ]
+SQL: SELECT * FROM `sjy_project` WHERE `status` = 2 AND `community_id` = 30  [ RunTime:0.0621s ]
+SQL: SHOW COLUMNS FROM `sjy_community_base_info` [ RunTime:0.0555s ]
+SQL: SELECT * FROM `sjy_community_base_info` WHERE `sjy_id` = 30 LIMIT 1   [ RunTime:0.0748s ]
+SQL: SHOW COLUMNS FROM `sjy_community_position_info` [ RunTime:0.0851s ]
+SQL: SELECT * FROM `sjy_community_position_info` WHERE `sjy_community_id` = '30' LIMIT 1   [ RunTime:0.0726s ]
+SQL: SHOW COLUMNS FROM `sjy_community_images` [ RunTime:0.0782s ]
+SQL: SELECT `sjy_community_images` FROM `sjy_community_images` WHERE `sjy_community_code` = '30' LIMIT 1   [ RunTime:0.0734s ]
+
+[ 2018-03-25T17:56:38+08:00 ] 127.0.0.1 /index.php/Home/Community/getcommunityimgs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000513s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001517s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0838s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.3057s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.2070s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0879s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0662s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0686s ]
+SQL: SELECT * FROM `sjy_project` WHERE `status` = 2 AND `community_id` = 30  [ RunTime:0.0489s ]
+SQL: SHOW COLUMNS FROM `sjy_community_images` [ RunTime:0.0745s ]
+SQL: SELECT `sjy_community_images` FROM `sjy_community_images` WHERE `sjy_community_code` = '30' LIMIT 1   [ RunTime:0.0507s ]
+
+[ 2018-03-25T17:56:39+08:00 ] 127.0.0.1 /index.php/Home/Community/getStaffList?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001649s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000824s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000885s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0806s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0641s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0618s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0810s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0950s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0552s ]
+SQL: SELECT * FROM `sjy_project` WHERE `status` = 2 AND `community_id` = 30  [ RunTime:0.0783s ]
+SQL: SELECT `sjy_community_login_id`,`sjy_community_user_wechat`,`sjy_community_user_real_name`,`sjy_community_user_email` FROM `sjy_community_user_info` WHERE `sjy_community_user_community_code` = '30' LIMIT 0,15   [ RunTime:0.0699s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_community_user_info` WHERE `sjy_community_user_community_code` = '30' LIMIT 1   [ RunTime:0.0768s ]
+
+[ 2018-03-25T17:57:50+08:00 ] 127.0.0.1 /index.php/Home/Community/updateCommunityInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000762s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001181s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001241s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0510s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0584s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0588s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0615s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0855s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0651s ]
+SQL: SELECT * FROM `sjy_project` WHERE `status` = 2 AND `community_id` = 30  [ RunTime:0.0757s ]
+SQL: SHOW COLUMNS FROM `sjy_community_base_info` [ RunTime:0.0515s ]
+SQL: SELECT * FROM `sjy_community_base_info` WHERE `sjy_id` = 30 LIMIT 1   [ RunTime:0.0508s ]
+SQL: UPDATE `sjy_community_base_info` SET `sjy_community_introduce`='这个社区很大， 然后，自从我们班过来自后， 门口多了很多去地铁的车。' WHERE `sjy_id` = 30 [ RunTime:0.3862s ]
+
+[ 2018-03-25T17:58:02+08:00 ] 127.0.0.1 /index.php/Home/Community/uploadcommunityimgs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000795s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000812s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000867s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0726s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0633s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0775s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0576s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0552s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0742s ]
+SQL: SELECT * FROM `sjy_project` WHERE `status` = 2 AND `community_id` = 30  [ RunTime:0.0702s ]
+SQL: SHOW COLUMNS FROM `sjy_community_images` [ RunTime:0.0872s ]
+SQL: SELECT * FROM `sjy_community_images` WHERE `sjy_community_code` = '30' LIMIT 1   [ RunTime:0.0776s ]
+SQL: INSERT INTO `sjy_community_images` (`sjy_community_code`,`sjy_community_images`) VALUES ('30','/Uploads/community/fengcai/20180325/1521971882.jpeg') [ RunTime:0.0621s ]
+
+[ 2018-03-25T17:58:10+08:00 ] 127.0.0.1 /index.php/Home/Project/communityProjectManger
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000573s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001565s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001694s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0748s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0790s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0530s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0872s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0649s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000440s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000510s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031256s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031388s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001308s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001358s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001621s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001752s ]
+
+[ 2018-03-25T17:58:11+08:00 ] 127.0.0.1 /index.php/Home/Project/communityTenderProject
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000739s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001244s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001349s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0880s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.1154s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.1909s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0688s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0807s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_community_project_info` [ RunTime:0.0892s ]
+SQL: SELECT * FROM `sjy_community_project_info` WHERE `sjy_community_project_status` = 0 AND `sjy_community_project_collect_start_time` < '2018-03-25' AND `sjy_community_project_start_time` > '2018-03-25' LIMIT 0,15   [ RunTime:0.0945s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_community_project_info` WHERE `sjy_community_project_status` = 0 AND `sjy_community_project_collect_start_time` < '2018-03-25' AND `sjy_community_project_start_time` > '2018-03-25' LIMIT 1   [ RunTime:0.0892s ]
+
+[ 2018-03-25T17:58:12+08:00 ] 127.0.0.1 /index.php/Home/Project/waitOriganizationStart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001335s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007635s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0821s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0820s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0673s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0611s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0592s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0909s ]
+SQL: SELECT * FROM `sjy_project` WHERE `community_id` = 30 AND `status` = 2  [ RunTime:0.0824s ]
+
+[ 2018-03-25T17:58:14+08:00 ] 127.0.0.1 /index.php/Home/Community/personInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000406s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000860s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000922s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.1409s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0526s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0770s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0476s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0461s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.1391s ]
+SQL: SELECT * FROM `sjy_project` WHERE `status` = 2 AND `community_id` = 30  [ RunTime:0.0610s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000176s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000264s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035086s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035302s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002463s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002574s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005471s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005628s ]
+
+[ 2018-03-25T17:58:15+08:00 ] 127.0.0.1 /index.php/Home/Community/getPersonInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000484s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000937s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001015s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.1436s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0558s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0466s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0830s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0662s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0672s ]
+SQL: SELECT * FROM `sjy_project` WHERE `status` = 2 AND `community_id` = 30  [ RunTime:0.0632s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0808s ]
+SQL: SHOW COLUMNS FROM `sjy_community_base_info` [ RunTime:0.0567s ]
+SQL: SELECT `sjy_community_name` FROM `sjy_community_base_info` WHERE `sjy_id` = 30 LIMIT 1   [ RunTime:0.0549s ]
+
+[ 2018-03-25T17:58:27+08:00 ] 127.0.0.1 /index.php/Home/Community
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000414s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000794s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000849s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0586s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0750s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0831s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0807s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0814s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0803s ]
+SQL: SELECT * FROM `sjy_project` WHERE `status` = 2 AND `community_id` = 30  [ RunTime:0.0750s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000220s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000335s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033348s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033610s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002798s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002929s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002600s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002725s ]
+
+[ 2018-03-25T17:58:28+08:00 ] 127.0.0.1 /index.php/Home/Community/getoriganizationlist/page/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000713s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001377s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0839s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0704s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0463s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0805s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0567s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0758s ]
+SQL: SELECT * FROM `sjy_project` WHERE `status` = 2 AND `community_id` = 30  [ RunTime:0.0823s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0902s ]
+SQL: SELECT `sjy_origanization_id` FROM `sjy_origanization_position_info` WHERE `sjy_origanization_city` = '120000'  [ RunTime:0.0580s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0580s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_origanization_base_info` LIMIT 1   [ RunTime:0.0710s ]
+
+[ 2018-03-25T17:58:31+08:00 ] 127.0.0.1 /index.php/Home/Community/send_project
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000679s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000938s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001004s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0680s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0801s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0458s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0659s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0863s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0747s ]
+SQL: SELECT * FROM `sjy_project` WHERE `status` = 2 AND `community_id` = 30  [ RunTime:0.0745s ]
+SQL: SHOW COLUMNS FROM `sjy_service_object` [ RunTime:0.1264s ]
+SQL: SELECT * FROM `sjy_service_object`  [ RunTime:0.1041s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000157s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000248s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044720s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044968s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002398s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002521s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003927s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004080s ]
+
+[ 2018-03-25T17:58:32+08:00 ] 127.0.0.1 /index.php/Home/imgs/personDl.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000484s ]
+
+[ 2018-03-25T18:02:04+08:00 ] 127.0.0.1 /index.php/Home/Community/doSendProject
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000442s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001124s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001174s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0827s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0761s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0624s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0559s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0919s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0690s ]
+SQL: SELECT * FROM `sjy_project` WHERE `status` = 2 AND `community_id` = 30  [ RunTime:0.0674s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0734s ]
+SQL: SHOW COLUMNS FROM `sjy_service_object` [ RunTime:0.0814s ]
+SQL: SELECT `service_object_name` FROM `sjy_service_object` WHERE `sjy_id` = 3 LIMIT 1   [ RunTime:0.0692s ]
+SQL: SHOW COLUMNS FROM `sjy_community_base_info` [ RunTime:0.0719s ]
+SQL: SELECT `sjy_community_name` FROM `sjy_community_base_info` WHERE `sjy_id` = 30 LIMIT 1   [ RunTime:0.0609s ]
+SQL: SHOW COLUMNS FROM `sjy_community_position_info` [ RunTime:0.0625s ]
+SQL: SELECT `sjy_community_city` FROM `sjy_community_position_info` WHERE `sjy_community_id` = '30' LIMIT 1   [ RunTime:0.0784s ]
+SQL: SELECT `sjy_community_city_name` FROM `sjy_community_position_info` WHERE `sjy_community_id` = '30' LIMIT 1   [ RunTime:0.0634s ]
+SQL: SHOW COLUMNS FROM `sjy_community_project_info` [ RunTime:0.0793s ]
+SQL: INSERT INTO `sjy_community_project_info` (`sjy_community_id`,`sjy_community_name`,`sjy_community_project_title`,`sjy_community_project_service_area`,`sjy_community_project_service_area_id`,`sjy_community_project_demand`,`sjy_community_project_collect_start_time`,`sjy_community_project_collect_end_time`,`sjy_community_project_start_time`,`sjy_community_project_end_time`,`sjy_community_project_plan_money`,`sjy_community_project_send_prople_id`,`sjy_community_project_send_prople_name`,`sjy_community_project_send_time`,`sjy_community_project_status`,`cityid`,`cityname`) VALUES ('30','西潞苑小区','月读书计划','青少年','3','吾问无为谓吾问无为谓无无无无无无无无无无无无无无无无无无无无无无无无无无无无无无','2018-04-01 ',' 2018-04-20','2018-04-25 ',' 2018-04-30','122','57','高学婷','2018-03-25 18:02:03','0','110000','北京市') [ RunTime:0.1960s ]
+SQL: SHOW COLUMNS FROM `sjy_community_project_image` [ RunTime:0.0730s ]
+SQL: INSERT INTO `sjy_community_project_image` (`sjy_community_project_image`,`sjy_community_project_id`) VALUES ('/Uploads/community/projectimg/20180325/1521972125.jpeg','41'),('/Uploads/community/projectimg/20180325/1521972126.jpeg','41'),('/Uploads/community/projectimg/20180325/1521972127.jpeg','41') [ RunTime:0.3920s ]
+
+[ 2018-03-25T18:02:05+08:00 ] 127.0.0.1 /index.php/Home/Community/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000682s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001057s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0764s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0563s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0610s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0924s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.1291s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0954s ]
+SQL: SELECT * FROM `sjy_project` WHERE `status` = 2 AND `community_id` = 30  [ RunTime:0.0862s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000255s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000430s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047160s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047404s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003587s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003765s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004971s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005236s ]
+
+[ 2018-03-25T18:02:07+08:00 ] 127.0.0.1 /index.php/Home/Community/getoriganizationlist/page/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001813s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002853s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003002s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0829s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0634s ]
+SQL: SELECT `sjy_community_user_community_code` FROM `sjy_community_user_info` WHERE `sjy_id` = 57 LIMIT 1   [ RunTime:0.0869s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.4107s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '120000' LIMIT 1   [ RunTime:0.0505s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 98 行.
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0497s ]
+SQL: SELECT * FROM `sjy_project` WHERE `status` = 2 AND `community_id` = 30  [ RunTime:0.0847s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0789s ]
+SQL: SELECT `sjy_origanization_id` FROM `sjy_origanization_position_info` WHERE `sjy_origanization_city` = '120000'  [ RunTime:0.0784s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0582s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_origanization_base_info` LIMIT 1   [ RunTime:0.0708s ]
+
