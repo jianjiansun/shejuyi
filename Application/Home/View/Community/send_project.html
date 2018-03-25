@@ -245,13 +245,17 @@
             success: function (data) {
                 console.log(data);
 
-                layer.msg("")
+
 
                 if(data.state == 1)
                 {
+                    layer.msg("f发布不成功");
                     window.location.href = "__CONTROLLER__/"
+                }else{
+                    layer.msg(data.errorInfo );
                 }
             },
+
             async:false
         });
         return false;

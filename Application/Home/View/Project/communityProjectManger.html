@@ -694,12 +694,25 @@
                         for(var i =0; i < data.data.length; i++ ){
                             html += '<p class = "proposal-detail">' +
                                     '<span>'+ data.data[i].sjy_project_book_name + '</span>' +
-                                    '<a class = "download-btn" href="'+ data.data[i].sjy_project_path +'">下载</a>' +
+                                    '<a class = "download-btn" id = "'+ data.data[i].sjy_id +'"   href="javascript:;">下载</a>' +
                                     '</p>';
 
                         }
 
                         $(".organize-proposal").html(html);
+
+
+                        $(".dowmload-btn").click(function(){
+
+                            var book_id = $(this).attr("id");
+
+                            $.get("__MODULE__/Project/downloadProjectBook", {"id" : book_id},function(data){
+
+
+                            });
+                        });
+
+
 
                     });
                 });
@@ -966,14 +979,13 @@
 
     $("#agreenFinish").click(function () {
 
-        $.post("__MODULE__/Project/communityCompleteProject", function(data){
+        $.post("__MODULE__/Project/communityWaitCompleteProject", function(data){
 
-            var html5 = '';
-            console.log(data[0].sjy_community_project_title );
+            var html4 = '';
 
             for(var i = 0; i < data.length; i++){
 
-                html5 += '<tr>' +
+                html4 += '<tr>' +
                     '<td class = "project-title">'+ data[i].project_info.sjy_community_project_title +'</td>' +
                     '<td>'+ data[i].project_info.sjy_community_project_origanization_name+'</td>' +
                     '<td>'+ data[i].project_info.sjy_community_project_service_area+'</td>' +
@@ -981,13 +993,14 @@
                     '<td>' +
                     '<a class = "progressStep" id = "'+ data[i].project_id +'" href="javascript:;">查看进度</a> ' +
                     '<a href="__CONTROLLER__/displayCommunityProject/id/'+data[i].project_id+'">详情</a> <br>' +
+                    '<a class = "agreeFinishProject" id = "'+ data[i].project_id +'"  data_id = "'+ data[i].sjy_id +'"  href="javascript:;">同意结项</a> ' +
                     '<a class = "projectBook" id = "'+ data[i].project_id +'"  data_id = "'+ data[i].origanization_id +'"  href="javascript:;">项目书</a> ' +
                     '</tr>';
 
             }
-            $("#tbody5").html(html5);
+            $("#tbody4").html(html4);
 
-            /*5.1 查看进度*/
+            /*4.1 查看进度*/
             $(".progressStep").click(function () {
 
                 $(".add-progress").animate({
@@ -1031,7 +1044,7 @@
 
             });
 
-            /*5.2 项目书*/
+            /*4.2 项目书*/
             $(".projectBook").click(function () {
 
                 var proName = $(this).parent().siblings('.proName').text();
@@ -1097,6 +1110,48 @@
 
             });
 
+            /*4.3 同意结项 */
+            $(".agreeFinishProject").click(function () {
+
+                var project_title = $(this).parent().siblings('.project-title').text();
+
+                var project_id = $(this).attr("id");
+                var sjy_id = $(this).attr("data_id");
+
+                var score = 3;
+
+
+                layer.open({
+                    content: '<p>是否同意结束项目</p><p class = "ortext">'+project_title +'</p>'
+                    ,btn: ['确定', '取消']
+                    ,yes: function(){
+
+                        //按钮【按钮一】的回调
+
+                        $.post("__MODULE__/Project/agreenEndProject", {"project_id": project_id ,"score" :score, "id" : sjy_id }, function (data) {
+
+                            if(data.state == 1){
+                                /*跳转到进行中*/
+                                layer.closeAll();
+
+
+                            }else{
+
+                                layer.msg(data.errorInfo);
+
+                            }
+
+                        });
+
+
+                    }
+                    ,cancel: function(){
+                        //右上角关闭回调
+
+                        //return false 开启该代码可禁止点击该按钮关闭
+                    }
+                });
+            })
 
 
         });
@@ -1239,48 +1294,6 @@
             });
 
 
-            /*5.3 同意结项 */
-            $(".agreeFinishProject").click(function () {
-
-                var project_title = $(this).parent().siblings('.project-title').text();
-
-                var project_id = $(this).attr("id");
-                var sjy_id = $(this).attr("data_id");
-
-                var score = 3;
-
-
-                layer.open({
-                    content: '<p>是否同意结束项目</p><p class = "ortext">'+project_title +'</p>'
-                    ,btn: ['确定', '取消']
-                    ,yes: function(){
-
-                        //按钮【按钮一】的回调
-
-                        $.post("__MODULE__/Project/agreenEndProject", {"project_id": project_id ,"score" :score, "id" : sjy_id }, function (data) {
-
-                            if(data.state == 1){
-                                /*跳转到进行中*/
-                                layer.closeAll();
-
-
-                            }else{
-
-                                layer.msg(data.errorInfo);
-
-                            }
-
-                        });
-
-
-                    }
-                    ,cancel: function(){
-                        //右上角关闭回调
-
-                        //return false 开启该代码可禁止点击该按钮关闭
-                    }
-                });
-            })
 
 
 
