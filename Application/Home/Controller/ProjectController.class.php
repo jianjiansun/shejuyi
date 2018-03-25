@@ -310,7 +310,7 @@
         	foreach($info as $key=>$value)
         	{
         		$project_info = M('community_project_info')->where(array('sjy_id'=>$value['project_id']))->find();
-        		$info[$key]['project_detail'] = $project_info;
+        		$info[$key]['project_info'] = $project_info;
         	}
         	$this->ajaxReturn($info);
         }
@@ -800,10 +800,17 @@
         //查询已完成的项目
         public function communityCompleteProject()
         {
-             //社区id
-            $community_id = session('userInfo')['sjy_community_user_community_code'];
-            $info = M('community_project_info')->where(array('sjy_community_project_status'=>2))->select();
-            $this->ajaxReturn($info);
+            //社会组织id
+        	$community_code = session('userInfo')['sjy_community_user_community_code'];
+        	//已完成的项目
+        	$info = M('project')->where(array('community_id'=>$community_code,'status'=>100))->order('project_start_time desc')->select();
+        	//查询项目详情
+        	foreach($info as $key=>$value)
+        	{
+        		$project_info = M('community_project_info')->where(array('sjy_id'=>$value['project_id']))->find();
+        		$info[$key]['project_info'] = $project_info;
+        	}
+        	$this->ajaxReturn($info);
         }
         //查看项目进度
         public function projectRate()
