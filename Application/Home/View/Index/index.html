@@ -128,7 +128,7 @@
             $("#register .remider").html("密码由6~20位数字或字母组成");
             return false;
         }
-        if( !($("#Rpassword1").val() == $("#Rpassword2")) ){
+        if( !($("#Rpassword1").val() == $("#Rpassword2").val() ) ){
             $("#register .remider").html("两次输入密码不一致");
             return false;
         }
