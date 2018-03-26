@@ -7,7 +7,11 @@
 		//展示社区项目详情页
 		public function displayCommunityProject()
 		{
+            
             $id=I('get.id'); //项目id
+            //查看该项目是否正在进行，正在进行则不能发送项目书
+            $project_status = M('community_project_info')->where(array('sjy_id'=>$id))->getField('sjy_community_project_status');
+            $this->assign('project_status',$project_status); //项目状态
             // //查询该项目是否状态为1，且当前时间大于项目开始时间且社会组织没有主动开始项目
             $info = M('project')->where(array('project_id'=>$id,'status'=>2))->find();
             if(!empty($info))
