@@ -11,6 +11,7 @@
         public $user_image = '';//用户头像
         public $islogin = "";  //是否登陆
         public $isidentify = ""; //是否认证
+        public $index = ''; //主页
     	//初始化 登录检测 没有登录禁止访问
     	public function __construct()
     	{
@@ -36,6 +37,7 @@
                             $this->isidentify = session("userInfo")["sjy_community_user_isidentify"];  //是否认证
                             $this->user_image = session("userInfo")['sjy_community_user_image'];       //用户图片
                             $this->code = session('userInfo')['sjy_community_user_community_code']; //社区编号
+                            $this->index = "/Home/Community/index";  //社区主页
                             //查询该用户是否是管理员
                             $this->role = session("userInfo")["sjy_community_user_role"];   //是否是管理员
                             if($this->role == 1)
@@ -69,6 +71,8 @@
                             $this->user_image = session("userInfo")['sjy_origanization_user_image'];       //用户图片
 
                             $this->code = session('userInfo')['sjy_origanization_user_origanization_code']; //社会组织编号
+
+                            $this->index = '/Home/Origanization/index';  //社会组织主页
                             //查询该用户是否是管理员
                             $this->role = session("userInfo")["sjy_origanization_user_role"];   //是否是管理员
                             if($this->role == 3)
@@ -105,6 +109,7 @@
                     $this->assign('user_image',$this->user_image);  //用户头像
                     $this->assign('code',$this->code);   //用户社区或者社会组织编号
                     $this->assign('figure',session('figure'));   //用户所属编号
+                    $this->assign('index',$this->index); //主页
 
 
             }else{
