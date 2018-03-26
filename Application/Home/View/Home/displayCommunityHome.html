@@ -412,6 +412,10 @@
         $(".detail-detail .box4").css("display", "block");
     });
 
+
+
+
+
     $.post("__CONTROLLER__/getCommunityInfo?id={$id}", function (data) {
 
         var img = '<img class = "orLogo" src="'+ data.sjy_community_logo_img_path +'" alt="">';
@@ -445,119 +449,131 @@
 
     });
 
-    $.post("__MODULE__/Project/communityTenderProject?community_code={$id}", function (data) {
+    $(".nav2").click(function(){
+        $.post("__MODULE__/Project/communityTenderProject?community_code={$id}", function (data) {
 
-        var html = "";
-        console.log(data);
-        for( var i = 0; i < data.data.length; i++){
-            html += '<li class = "clearfix pro-li">' +
-                    '<a href="__MODULE__/Project/displayCommunityProject/id/'+data.data[i].sjy_id+'">'+
-                    '<div class = "left leftImg">' +
-                    '<img src="'+ data.data[i].project_images +'" alt="">' +
-                    '</div>' +
-                    '<div class = "left leftCon">' +
-                    '<dl>' +
-                    '<dd class = "project-tit">'+ data.data[i].sjy_community_project_title +'</dd>' +
-                    '</dl>' +
-                    '<dl>' +
-                    '<dt>招标周期</dt>' +
-                    '<dd>'+ data.data[i].sjy_community_project_collect_start_time + '~'+ data.data[i].sjy_community_project_collect_end_time+'</dd>' +
-                    '</dl>' +
-                    '<dl>' +
-                    '<dt>执行周期</dt>' +
-                    '<dd>'+ data.data[i].sjy_community_project_start_time + '~'+ data.data[i].sjy_community_project_end_time+'</dd>' +
-                    '</dl>' +
-                    '<dl>' +
-                    '<dt>落地社区</dt>' +
-                    '<dd>'+ data.data[i].sjy_community_name +'</dd>' +
-                    '</dl>' +
-                    '<dl>' +
-                    '<dt>服务对象</dt>' +
-                    '<dd>'+ data.data[i].sjy_community_project_service_area +'</dd>' +
-                    '</dl>' +
-                    '</div>' +
-                    '</a>'+
-                    '</li>';
-        }
 
-        $(".box2 ul").html(html);
+            var html = "";
+            console.log(data);
+            for( var i = 0; i < data.data.length; i++){
+                html += '<li class = "clearfix pro-li">' +
+                        '<a href="__MODULE__/Project/displayCommunityProject/id/'+data.data[i].sjy_id+'">'+
+                        '<div class = "left leftImg">' +
+                        '<img src="'+ data.data[i].main_imgs +'" alt="">' +
+                        '</div>' +
+                        '<div class = "left leftCon">' +
+                        '<dl>' +
+                        '<dd class = "project-tit">'+ data.data[i].sjy_community_project_title +'</dd>' +
+                        '</dl>' +
+                        '<dl>' +
+                        '<dt>招标周期</dt>' +
+                        '<dd>'+ data.data[i].sjy_community_project_collect_start_time + '~'+ data.data[i].sjy_community_project_collect_end_time+'</dd>' +
+                        '</dl>' +
+                        '<dl>' +
+                        '<dt>执行周期</dt>' +
+                        '<dd>'+ data.data[i].sjy_community_project_start_time + '~'+ data.data[i].sjy_community_project_end_time+'</dd>' +
+                        '</dl>' +
+                        '<dl>' +
+                        '<dt>落地社区</dt>' +
+                        '<dd>'+ data.data[i].sjy_community_name +'</dd>' +
+                        '</dl>' +
+                        '<dl>' +
+                        '<dt>服务对象</dt>' +
+                        '<dd>'+ data.data[i].sjy_community_project_service_area +'</dd>' +
+                        '</dl>' +
+                        '</div>' +
+                        '</a>'+
+                        '</li>';
+            }
 
+            $(".box2 ul").html(html);
+
+
+
+        });
     });
 
 
-    $.post("__MODULE__/Project/communityIngProject?community_code={$id}", function (data) {
+    $(".nav3").click(function () {
+        $.post("__MODULE__/Project/communityIngProject?community_code={$id}", function (data) {
 
-        var html = "";
-        console.log(data);
-        for( var i = 0; i < data.data.length; i++){
-            html += '<li class = "clearfix pro-li">' +
-                    '<div class = "left leftImg">' +
-                    '<img src="http://120.24.242.45/shejuyi'+ data.data[i].project_images +'" alt="">' +
-                    '</div>' +
-                    '<div class = "left leftCon">' +
-                    '<dl>' +
-                    '<dd class = "project-tit">'+ data.data[i].sjy_community_project_title +'</dd>' +
-                    '</dl>' +
-                    '<dl>' +
-                    '<dt>项目周期</dt>' +
-                    '<dd>'+ data.data[i].sjy_community_project_start_time + '~'+ data.data[i].sjy_community_project_end_time+'</dd>' +
-                    '</dl>' +
-                    '<dl>' +
-                    '<dt>落地社区</dt>' +
-                    '<dd>'+ data.data[i].sjy_community_name+'</dd>' +
-                    '</dl>' +
-                    '<dl>' +
-                    '<dt>执行机构</dt>' +
-                    '<dd>'+ data.data[i].sjy_community_project_origanization_name +'</dd>' +
-                    '</dl>' +
-                    '<dl>' +
-                    '<dt>服务对象</dt>' +
-                    '<dd>'+ data.data[i].sjy_community_project_service_area +'</dd>' +
-                    '</dl>' +
-                    '</div>' +
-                    '</li>';
-        }
+            var html = "";
+            console.log(data);
+            for( var i = 0; i < data.data.length; i++){
+                html += '<li class = "clearfix pro-li">' +
+                        '<div class = "left leftImg">' +
+                        '<img src="http://120.24.242.45/shejuyi'+ data.data[i].project_images +'" alt="">' +
+                        '</div>' +
+                        '<div class = "left leftCon">' +
+                        '<dl>' +
+                        '<dd class = "project-tit">'+ data.data[i].sjy_community_project_title +'</dd>' +
+                        '</dl>' +
+                        '<dl>' +
+                        '<dt>项目周期</dt>' +
+                        '<dd>'+ data.data[i].sjy_community_project_start_time + '~'+ data.data[i].sjy_community_project_end_time+'</dd>' +
+                        '</dl>' +
+                        '<dl>' +
+                        '<dt>落地社区</dt>' +
+                        '<dd>'+ data.data[i].sjy_community_name+'</dd>' +
+                        '</dl>' +
+                        '<dl>' +
+                        '<dt>执行机构</dt>' +
+                        '<dd>'+ data.data[i].sjy_community_project_origanization_name +'</dd>' +
+                        '</dl>' +
+                        '<dl>' +
+                        '<dt>服务对象</dt>' +
+                        '<dd>'+ data.data[i].sjy_community_project_service_area +'</dd>' +
+                        '</dl>' +
+                        '</div>' +
+                        '</li>';
+            }
 
-        $(".box3 ul").html(html);
+            $(".box3 ul").html(html);
 
+        });
     });
 
-    $.post("__MODULE__/Project/communityCompleteProject?community_code={$id}", function (data) {
 
-        var html = "";
-        console.log(data);
-        for( var i = 0; i < data.data.length; i++){
-            html += '<li class = "clearfix pro-li">' +
-                    '<div class = "left leftImg">' +
-                    '<img src="http://120.24.242.45/shejuyi'+ data.data[i].project_images +'" alt="">' +
-                    '</div>' +
-                    '<div class = "left leftCon">' +
-                    '<dl>' +
-                    '<dd class = "project-tit">'+ data.data[i].sjy_community_project_title +'</dd>' +
-                    '</dl>' +
-                    '<dl>' +
-                    '<dt>项目周期</dt>' +
-                    '<dd>'+ data.data[i].sjy_community_project_start_time + '~'+ data.data[i].sjy_community_project_end_time+'</dd>' +
-                    '</dl>' +
-                    '<dl>' +
-                    '<dt>落地社区</dt>' +
-                    '<dd>'+ data.data[i].sjy_community_name+'</dd>' +
-                    '</dl>' +
-                    '<dl>' +
-                    '<dt>执行机构</dt>' +
-                    '<dd>'+ data.data[i].sjy_community_project_origanization_name +'</dd>' +
-                    '</dl>' +
-                    '<dl>' +
-                    '<dt>服务对象</dt>' +
-                    '<dd>'+ data.data[i].sjy_community_project_service_area +'</dd>' +
-                    '</dl>' +
-                    '</div>' +
-                    '</li>';
-        }
+    $(".nav4").click(function () {
+        $.post("__MODULE__/Project/communityCompleteProject?community_code={$id}", function (data) {
 
-        $(".box4 ul").html(html);
+            var html = "";
+            console.log(data);
+            for( var i = 0; i < data.data.length; i++){
+                html += '<li class = "clearfix pro-li">' +
+                        '<div class = "left leftImg">' +
+                        '<img src="http://120.24.242.45/shejuyi'+ data.data[i].project_images +'" alt="">' +
+                        '</div>' +
+                        '<div class = "left leftCon">' +
+                        '<dl>' +
+                        '<dd class = "project-tit">'+ data.data[i].sjy_community_project_title +'</dd>' +
+                        '</dl>' +
+                        '<dl>' +
+                        '<dt>项目周期</dt>' +
+                        '<dd>'+ data.data[i].sjy_community_project_start_time + '~'+ data.data[i].sjy_community_project_end_time+'</dd>' +
+                        '</dl>' +
+                        '<dl>' +
+                        '<dt>落地社区</dt>' +
+                        '<dd>'+ data.data[i].sjy_community_name+'</dd>' +
+                        '</dl>' +
+                        '<dl>' +
+                        '<dt>执行机构</dt>' +
+                        '<dd>'+ data.data[i].sjy_community_project_origanization_name +'</dd>' +
+                        '</dl>' +
+                        '<dl>' +
+                        '<dt>服务对象</dt>' +
+                        '<dd>'+ data.data[i].sjy_community_project_service_area +'</dd>' +
+                        '</dl>' +
+                        '</div>' +
+                        '</li>';
+            }
 
-    });
+            $(".box4 ul").html(html);
+
+        });
+    })
+
+
 
 
 
