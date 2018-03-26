@@ -1198,13 +1198,7 @@ class CommunityController extends BaseController {
 	}
        
    
-      //批复结项目申请
-     public function replyproject()
-     {
-       $id = I('get.id');  //sjy_project 主键id
-       $this->assign('id',$id);
-       $this->display();
-     }
+    
   
  
  

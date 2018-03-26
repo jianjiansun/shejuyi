@@ -6,7 +6,7 @@
     {
         public $showname = "";  //显示的名字
         public $ismanger = '';  //是否是管理员
-        public $code = ""; //是否有社区
+        public $code = ""; //是否有社区或社会组织
         public $role = ''; //角色
         public $user_image = '';//用户头像
         public $islogin = "";  //是否登陆
@@ -35,14 +35,15 @@
                             //查询该用户是否认证
                             $this->isidentify = session("userInfo")["sjy_community_user_isidentify"];  //是否认证
                             $this->user_image = session("userInfo")['sjy_community_user_image'];       //用户图片
+                            $this->code = session('userInfo')['sjy_community_user_community_code']; //社区编号
                             //查询该用户是否是管理员
                             $this->role = session("userInfo")["sjy_community_user_role"];   //是否是管理员
                             if($this->role == 1)
                             {
                                 $this->ismanger = 1; //管理员 社会组织
                             }
-                            //查询该用户是否有所属社区，没有社区 不允许发项目
-                            $this->code = M('community_user_info')->where(array('sjy_id'=>session('userInfo')['sjy_id']))->getField('sjy_community_user_community_code');   
+                            // //查询该用户是否有所属社区，没有社区 不允许发项目
+                            // $this->code = M('community_user_info')->where(array('sjy_id'=>session('userInfo')['sjy_id']))->getField('sjy_community_user_community_code');   
                             //没认证的显示登录手机号，认证后,显示姓名 管理员 姓名(管理员)
                             if(empty($this->isidentify))
                             {
@@ -64,16 +65,18 @@
                            //查询该用户是否认证
 
                             $this->isidentify = session("userInfo")["sjy_origanization_user_isidentify"];  //是否认证
-
+                            
                             $this->user_image = session("userInfo")['sjy_origanization_user_image'];       //用户图片
+
+                            $this->code = session('userInfo')['sjy_origanization_user_origanization_code']; //社会组织编号
                             //查询该用户是否是管理员
                             $this->role = session("userInfo")["sjy_origanization_user_role"];   //是否是管理员
                             if($this->role == 3)
                             {
                                 $this->ismanger = 1; //管理员 社会组织
                             }
-                            //查询该用户是否有所属社区，没有社区 不允许发项目
-                            $this->code = $userInfo['sjy_origanization_user_origanization_code'];   
+                            // //查询该用户是否有所属社区，没有社区 不允许发项目
+                            // $this->code = $userInfo['sjy_origanization_user_origanization_code'];   
                             //没认证的显示登录手机号，认证后,显示姓名 管理员 姓名(管理员)
                             if(empty($this->isidentify))
                             {
@@ -100,8 +103,9 @@
                     $this->assign('isidentify',$this->isidentify); //是否认证
                     $this->assign('ismanger',$this->ismanger);  //是否是管理员
                     $this->assign('user_image',$this->user_image);  //用户头像
-                    $this->assign('code',$this->code);   //用户所属编号
+                    $this->assign('code',$this->code);   //用户社区或者社会组织编号
                     $this->assign('figure',session('figure'));   //用户所属编号
+
 
             }else{
                 $this->redirect("/");

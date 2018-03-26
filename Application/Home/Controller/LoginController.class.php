@@ -173,16 +173,13 @@
     	public function isregistered($phone,$type)
     	{
     		//查询社会组织
-            if($type == 1)
-            {
-    			$res =  M("origanization_user_info")->where(array("sjy_origanization_login_id"=>$phone))->find();
-    		}
+            
+    		$res =  M("origanization_user_info")->where(array("sjy_origanization_login_id"=>$phone))->find();
+    		
     		//查询社区
-    		if($type == 2)
-    		{
-    			$res =  M("community_user_info")->where(array("sjy_community_login_id"=>$phone))->find();
-    		}
-    		if(!empty($res))
+    		$val =  M("community_user_info")->where(array("sjy_community_login_id"=>$phone))->find();
+    	
+    		if(!empty($res)||!empty($val))
     		{
     			return true;    //查到
     		}else{

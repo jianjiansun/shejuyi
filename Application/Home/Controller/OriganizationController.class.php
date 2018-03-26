@@ -7,13 +7,13 @@
 		{
 			//检测社区已经同意的项目，并且已经到项目开始日期，但是社会组织没有主动点击开始项目，默认将该项目开始
 			parent::__construct();
-			if(isset(session('userInfo')['sjy_community_user_origanization_code']))
+			if(isset(session('userInfo')['sjy_origanization_user_origanization_code']))
 			{
 				 $info = M('project')->where(array('status'=>2,'origanization_id'=>session('userInfo')['sjy_origanization_user_origanization_code']))->select();
 				 foreach($info as $key=>$value)
 				 {
 					 //查询社会组织没有主动点击开始项目
-					 $starttime = M('community_project_info')->where(array('sjy_id'=>$value['project_id']))->getField('sjy_community_project_start_time');
+					 $starttime = M('community_project_info')->where(array('sjy_id'=>$value['project_id']))->getField('sjy_community_project_start_time'); //项目计划开始时间
 					 //当前时间大于项目开始时间
 					 if(time()>=strtotime($starttime))
 					 {
