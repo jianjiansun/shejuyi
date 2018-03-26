@@ -789,7 +789,8 @@
               $data['project_end_time']= date('Y-m-d H:i:s',time());//项目结束时间
               $data['status'] = 100;//完成项目
               $data['score'] = $score; //评分
-              $data['peoject_agreen_end_people_id'] = session('userInfo')['sjy_id'];
+              $data['project_agreen_end_people_id'] = session('userInfo')['sjy_id'];
+             
               $res = M('project')->where(array('sjy_id'=>$id))->save($data);
               //更改sjy_community_project表
               $val = M('community_project_info')->where(array('sjy_id'=>$project_id))->save(array('sjy_community_project_status'=>2));

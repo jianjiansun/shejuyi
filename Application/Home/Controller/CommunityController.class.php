@@ -1194,7 +1194,7 @@ class CommunityController extends BaseController {
 	public function logout()
 	{
 	   session('userInfo',null);
-	   header("Location:/shejuyi");
+	   header("Location:/");
 	}
        
    
