@@ -83,7 +83,11 @@
 
 }
 .detail-head ul  li a.on{
-    color: #e72418;
+     color: #e72418!important;
+     border-bottom:1px solid #e72418;
+ }
+.detail-head ul  li a:hover{
+    color: #e72418!important;
     border-bottom:1px solid #e72418;
 }
 .detail-detail{
