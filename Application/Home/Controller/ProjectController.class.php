@@ -541,12 +541,16 @@
         public function communityTenderProject()
         {
             $page = I('get.page')?I('get.page'):1; //页面
+            $community_code = I('get.community_code')?I('get.community_code'):null;  //社区id是否传递
             $limit = 15;
             $start = ($page-1)*$limit; //开始
             $limit = $start.",".$limit;
             //在招标周期 且sjy_community_project_status=0的项目
             //社区id
-            $community_code = session('userInfo')['sjy_community_user_community_code'];
+            if(empty($community_code))
+            {
+                $community_code = session('userInfo')['sjy_community_user_community_code'];
+            }
             //正在征集中
             $data = array(
                   "sjy_community_project_status"=>0,
@@ -716,14 +720,22 @@
             $this->ajaxReturn($info);
 
         }
-        //查询执行中项目
+        //查询社区正在执行中项目
         public function communityIngProject()
         {
-            //社区id
-            $community_id = session('userInfo')['sjy_community_user_community_code'];
+            $community_id = I('get.community_code')?I('get.community_code'):null;  //社区id
+
+            if(empty($community_id))
+            {
+                //社区id
+                $community_id = session('userInfo')['sjy_community_user_community_code'];
+                $status = array(10,98);
+            }else{
+                $status = array(10,99);
+            }
             //查询该社区下正在进行的项目
             //[10,98] 正在执行中 其中99提交结项目申请
-            $info = M('project')->where(array('community_id'=>$community_id,'status'=>array('between',[10,98])))->order('project_start_time desc')->select();
+            $info = M('project')->where(array('community_id'=>$community_id,'status'=>array('between',$status)))->order('project_start_time desc')->select();
             //查询项目详情
              //查询项目详情
              foreach($info as $key=>$value)
@@ -774,11 +786,15 @@
               }
               
         }
-        //查询已完成的项目
+        //查询社区已完成的项目
         public function communityCompleteProject()
         {
-            //社会组织id
-        	$community_code = session('userInfo')['sjy_community_user_community_code'];
+            $community_code = I('get.community_code')?I('get.community_code'):null;
+            if(empty($community_code))
+            {
+                //社会组织id
+        	   $community_code = session('userInfo')['sjy_community_user_community_code'];
+            }
         	//已完成的项目
         	$info = M('project')->where(array('community_id'=>$community_code,'status'=>100))->order('project_start_time desc')->select();
         	//查询项目详情

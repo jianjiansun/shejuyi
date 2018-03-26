@@ -445,7 +445,7 @@
 
     });
 
-    $.post("__MODULE__/Project/getCommunityTenderProject?id={$id}", function (data) {
+    $.post("__MODULE__/Project/communityTenderProject?community_code={$id}", function (data) {
 
         var html = "";
         console.log(data);
@@ -485,7 +485,7 @@
     });
 
 
-    $.post("http://120.24.242.45/shejuyi/index.php/Home/Origanizationback/getcommunityingproject?id=26", function (data) {
+    $.post("__MODULE__/Project/communityIngProject?community_code={$id}", function (data) {
 
         var html = "";
         console.log(data);
@@ -522,7 +522,7 @@
 
     });
 
-    $.post("http://120.24.242.45/shejuyi/index.php/Home/Origanizationback/getcommunityoldproject?id=26", function (data) {
+    $.post("__MODULE__/Project/communityCompleteProject?community_code={$id}", function (data) {
 
         var html = "";
         console.log(data);
