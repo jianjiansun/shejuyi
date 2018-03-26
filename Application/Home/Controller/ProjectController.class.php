@@ -216,8 +216,11 @@
         public function ingProject()
         {
         	//社会组织id
-            $origanization_code = session('userInfo')['sjy_origanization_user_origanization_code'];
-            
+            $origanization_code = I('get.origanization_code')?I('get.origanization_code'):null;
+            if(empty($origanization_code))
+            {
+                $origanization_code = session('userInfo')['sjy_origanization_user_origanization_code'];
+            }
         	//[10,99] 正在执行中 其中99提交结项目申请
             $info = M('project')->where(array('origanization_id'=>$origanization_code,'status'=>array('between',[10,98])))->order('project_start_time desc')->select();
             
@@ -275,11 +278,15 @@
             }
         }
 
-        //已完成的项目
+        //社会组织已完成的项目
         public function completeProject()
         {
-        	//社会组织id
-        	$origanization_code = session('userInfo')['sjy_origanization_user_origanization_code'];
+            $origanization_code = I('get.origanization_code')?I('get.origanization_code'):null;
+            if(empty($origanization_code))
+            {
+        	   //社会组织id
+        	   $origanization_code = session('userInfo')['sjy_origanization_user_origanization_code'];
+            }
         	//已完成的项目
         	$info = M('project')->where(array('origanization_id'=>$origanization_code,'status'=>100))->order('project_start_time desc')->select();
             // var_dump($info);die;
