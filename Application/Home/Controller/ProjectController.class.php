@@ -101,8 +101,7 @@
         {
         	$this->display();
         }
-
-
+        
         //邀请我
         public function invite()
         {
@@ -565,6 +564,12 @@
                   'sjy_community_project_start_time'=>array('gt',date('Y-m-d',time())) 
             );
             $info = M('community_project_info')->where($data)->limit($limit)->select();
+            foreach($info as $key=>$value)
+            {
+                $imgs = M('community_project_image')->where(array('sjy_community_project_id'=>$value['sjy_id'],))->find();
+               
+                $info[$key]['main_imgs'] = $imgs['sjy_community_project_image'];
+            }
             $count = M('community_project_info')->where($data)->count();
             $pages = ceil($count/15);
             $res = array(
