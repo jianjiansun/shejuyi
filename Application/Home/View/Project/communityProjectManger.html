@@ -1120,7 +1120,7 @@
                 var project_id = $(this).attr("id");
                 var sjy_id = $(this).attr("data_id");
 
-                var score = 3;
+
 
 
                 layer.open({
@@ -1133,6 +1133,7 @@
                     '</div>'
                     ,btn: ['确定', '取消']
                     ,yes: function(){
+                        var score =  $(".fenshu").text();
 
                         //按钮【按钮一】的回调
 
