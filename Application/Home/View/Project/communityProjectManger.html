@@ -3,16 +3,18 @@
     <link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
     <link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
     <link rel="stylesheet" href="__PUBLIC__/Home/css/right-tab.css">
-
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/score.css">
     <script src = "__PUBLIC__/Home/js/jquery-1.12.4.js"></script>
     <script src = "__PUBLIC__/Home/js/bootstrap.js"></script>
     <script src = "__PUBLIC__/Home/js/layui.js"></script>
     <script src = "__PUBLIC__/Home/js/layui.all.js"></script>
+    <script src = "__PUBLIC__/Home/js/startScore.js"></script>
 
     <script src="__PUBLIC__/Home/js/plugins/cover_js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
     <script src="__PUBLIC__/Home/js/plugins/cover_js/hammer.js" type="text/javascript" charset="utf-8"></script>
     <script src="__PUBLIC__/Home/js/plugins/cover_js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
     <script src="__PUBLIC__/Home/js/plugins/cover_js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
+
 
 
 </head>
@@ -1122,7 +1124,13 @@
 
 
                 layer.open({
-                    content: '<p>是否同意结束项目</p><p class = "ortext">'+project_title +'</p>'
+                    content: '<p>是否同意结束项目</p><p class = "ortext">'+project_title +' ？</p>' +
+                    '<p class="title">给社会组织评分</p>' +
+                    '<div id="startone"  class="block clearfix" >' +
+                    '<div class="star_score"></div>' +
+                    '<p style="float:left;">您的评分：<span class="fenshu"></span> 分</p>' +
+                    '<div class="attitude"></div>' +
+                    '</div>'
                     ,btn: ['确定', '取消']
                     ,yes: function(){
 
@@ -1151,6 +1159,9 @@
                         //return false 开启该代码可禁止点击该按钮关闭
                     }
                 });
+
+
+                scoreFun($("#startone"));
             })
 
 

@@ -4,10 +4,13 @@
     <link rel="stylesheet" href="__PUBLIC__/Home/css/chooseCity.css">
     <link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
     <link rel="stylesheet" href="__PUBLIC__/Home/css/detail.css">
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/score.css">
     <script src = "__PUBLIC__/Home/js/jquery-1.12.4.js"></script>
     <script src = "__PUBLIC__/Home/js/bootstrap.js"></script>
     <script src = "__PUBLIC__/Home/js/jquery.page.js"></script>
     <script src = "__PUBLIC__/Home/js/upLoadImg.js"></script>
+    <script src = "__PUBLIC__/Home/js/startScore.js"></script>
 
 </head>
 <body>
@@ -234,81 +237,39 @@
                 </div>
 
                 <div class = "box box4" style = "display: none;">
-                    <ul class = "clearfix">
-                        <li class = "clearfix pro-li">
-                            <div class = "left leftImg">
-                                <img src="__PUBLIC__/Home/imgs/shequ3.jpg" alt="">
-                            </div>
-                            <div class = "left leftCon">
-                                <dl>
-                                    <!--<dt>项目名称</dt>-->
-                                    <dd class = "project-tit">“志愿青春，成长无虑”如意社区青少年服务项目</dd>
-                                </dl>
-                                <dl>
-                                    <dt>执行周期</dt>
-                                    <dd>2017.07.11-2017.12.15</dd>
-                                </dl>
-                                <dl>
-                                    <dt>落地社区</dt>
-                                    <dd>如意社区</dd>
-                                </dl>
-                                <dl>
-                                    <dt>时 间</dt>
-                                    <dd>2017-09-13 20:28</dd>
-                                </dl>
-                            </div>
 
-                        </li>
+                    <div class="layui-tab-item layui-show">
 
-                        <li class = "clearfix pro-li">
-                            <div class = "left leftImg">
-                                <img src="__PUBLIC__/Home/imgs/shequ3.jpg" alt="">
-                            </div>
-                            <div class = "left leftCon">
-                                <dl>
-                                    <!--<dt>项目名称</dt>-->
-                                    <dd class = "project-tit">“志愿青春，成长无虑”如意社区青少年服务项目</dd>
-                                </dl>
-                                <dl>
-                                    <dt>执行周期</dt>
-                                    <dd>2017.07.11-2017.12.15</dd>
-                                </dl>
-                                <dl>
-                                    <dt>落地社区</dt>
-                                    <dd>如意社区</dd>
-                                </dl>
-                                <dl>
-                                    <dt>时 间</dt>
-                                    <dd>2017-09-13 20:28</dd>
-                                </dl>
-                            </div>
+                        <div class="basic-information">
+                            <table class="layui-table">
+                                <colgroup>
 
-                        </li>
-                        <li class = "clearfix pro-li">
-                            <div class = "left leftImg">
-                                <img src="__PUBLIC__/Home/imgs/shequ3.jpg" alt="">
-                            </div>
-                            <div class = "left leftCon">
-                                <dl>
-                                    <!--<dt>项目名称</dt>-->
-                                    <dd class = "project-tit">“志愿青春，成长无虑”如意社区青少年服务项目</dd>
-                                </dl>
-                                <dl>
-                                    <dt>执行周期</dt>
-                                    <dd>2017.07.11-2017.12.15</dd>
-                                </dl>
-                                <dl>
-                                    <dt>落地社区</dt>
-                                    <dd>如意社区</dd>
-                                </dl>
-                                <dl>
-                                    <dt>时 间</dt>
-                                    <dd>2017-09-13 20:28</dd>
-                                </dl>
-                            </div>
+                                    <col width="200">
+                                    <col width="200">
+                                    <col width="200">
+                                    <col width="220">
 
-                        </li>
-                    </ul>
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th>项目名称</th>
+                                    <th>执行机构</th>
+                                    <th>执行周期</th>
+                                    <th>评分</th>
+
+                                </tr>
+                                </thead>
+                                <tbody id = "tbodyScore">
+
+                                </tbody>
+                            </table>
+
+
+                        </div>
+
+                        <!--分页-->
+                        <div class = "pagination" id="pagination0"></div>
+                    </div>
 
                 </div>
 
@@ -541,36 +502,29 @@
 
             var html = "";
             console.log(data);
-            for( var i = 0; i < data.data.length; i++){
-                html += '<li class = "clearfix pro-li">' +
-                        '<div class = "left leftImg">' +
-                        '<img src="http://120.24.242.45/shejuyi'+ data.data[i].project_images +'" alt="">' +
-                        '</div>' +
-                        '<div class = "left leftCon">' +
-                        '<dl>' +
-                        '<dd class = "project-tit">'+ data.data[i].sjy_community_project_title +'</dd>' +
-                        '</dl>' +
-                        '<dl>' +
-                        '<dt>项目周期</dt>' +
-                        '<dd>'+ data.data[i].sjy_community_project_start_time + '~'+ data.data[i].sjy_community_project_end_time+'</dd>' +
-                        '</dl>' +
-                        '<dl>' +
-                        '<dt>落地社区</dt>' +
-                        '<dd>'+ data.data[i].sjy_community_name+'</dd>' +
-                        '</dl>' +
-                        '<dl>' +
-                        '<dt>执行机构</dt>' +
-                        '<dd>'+ data.data[i].sjy_community_project_origanization_name +'</dd>' +
-                        '</dl>' +
-                        '<dl>' +
-                        '<dt>服务对象</dt>' +
-                        '<dd>'+ data.data[i].sjy_community_project_service_area +'</dd>' +
-                        '</dl>' +
-                        '</div>' +
-                        '</li>';
+            for( var i = 0; i < data.length; i++){
+
+                html+= '<tr>' +
+                        '<td>'+ data[i].project_info.sjy_community_project_title +'</td>' +
+                        '<td>'+data[i].project_info.sjy_community_project_origanization_name +'</td>' +
+                        '<td>'+data[i].project_start_time+' ~<br>'+data[i].project_end_time +'</td>' +
+                        '<td>' +
+                        '<div class="atar_Show"><p tip="'+ data[i].score +'"></p></div>' +
+                        '<span></span>' +
+                        '</td>' +
+                        '</tr>';
+
+
             }
 
-            $(".box4 ul").html(html);
+            $(".box4 #tbodyScore").html(html);
+
+            $(".atar_Show p").each(function(index, element) {
+                var num=$(this).attr("tip");
+                var www=num*2*16;//
+                $(this).css("width",www);
+                $(this).parent(".atar_Show").siblings("span").text(num+"分");
+            });
 
         });
     })

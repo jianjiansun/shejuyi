@@ -1,5 +1,4 @@
-a{
-    color: #333!important;}
+
 .mainNav{
     padding-top: 38px;
     padding-left: 98px;
@@ -27,6 +26,7 @@ a{
     font-size: 16px;
     font-weight: 900;
     color:red;
+    margin-top: 20px;
 }
 .ProName{
     font-size: 16px;
