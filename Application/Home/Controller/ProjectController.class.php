@@ -71,31 +71,7 @@
 		    
 	 		$this->ajaxReturn($projectinfo);
 	    }
-	    //查看社区正在招标的项目
-	    public  function  getCommunityTenderProject()
-	    {
-	    	$page = I('get.page')==null?1:I('get.page'); //页码 默认第一页    
-            //分页 每页15条
-            $id = I('get.id');  //社区id
-
-	    	$limit = 15;
-	    	//每页开始下标
-	    	$start = ($page-1)*$limit; 
-	    	$limit = $start.",".$limit;
-        	//status=0 招标截止时间大于当前时间 正在招标中
-	    	$project_info = M('community_project_info')->where(array("sjy_community_id"=>$id,"sjy_community_project_state"=>0,"sjy_community_project_collect_end_time"=>array("gt",date("Y-m-d H:i:s"))))->limit($limit)->select();
-	    	//项目主图
-	    	foreach($project_info as $key=>$value)
-	    	{
-	    		$main_image = M('community_project_image')->where(array('sjy_community_project_id'=>$value['sjy_id']))->getField('sjy_community_project_image');
-	    		$project_info[$key]['project_images'] = $main_image; 
-	    	}
-	    	$pages = M('community_project_info')->where(array("sjy_community_id"=>$id,"sjy_community_project_status"=>0,"sjy_community_project_collect_end_time"=>array("gt",date("Y-m-d H:i:s"))))->count();
-	    	 //返回数据
-            $res['pages'] = ceil($pages/15); //总页码数
-	        $res['data'] = $project_info;  //项目信息
-	    	$this->ajaxReturn($res);
-	    }
+	  
 	    //查看社会组织项目详情
         public function displayProjectInfo()
         {
@@ -846,6 +822,20 @@
             echo fread($fp,$file_size);
             fclose($fp);
             exit();
+        }
+        //根据项目id获得项目图片
+        public function  getProjectMainImg()
+        {
+            $project_id = I('get.project_id');
+            $imgs = M('community_project_image')->where(array('sjy_community_project_id'=>$project_id))->find();
+            $this->ajaxReturn($imgs);
+        }
+        //根据项目id获取项目所有图片
+        public function getProjectAllImg()
+        {
+            $project_id = I('get.project_id');
+            $imgs = M('community_project_image')->where(array('sjy_community_project_id'=>$project_id))->select();
+            $this->ajaxReturn($imgs);
         }
 	}
 ?>
