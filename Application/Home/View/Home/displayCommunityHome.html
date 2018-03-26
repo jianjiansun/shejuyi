@@ -499,32 +499,34 @@
 
             var html = "";
             console.log(data);
-            for( var i = 0; i < data.data.length; i++){
+            for( var i = 0; i < data.length; i++){
                 html += '<li class = "clearfix pro-li">' +
+                        '<a href="__MODULE__/Project/displayCommunityProject/id/'+ data[i].project_info.sjy_id+'">'+
                         '<div class = "left leftImg">' +
-                        '<img src="http://120.24.242.45/shejuyi'+ data.data[i].project_images +'" alt="">' +
+                        '<img src="'+ data[i].main_imgs+'" alt="">' +
                         '</div>' +
                         '<div class = "left leftCon">' +
                         '<dl>' +
-                        '<dd class = "project-tit">'+ data.data[i].sjy_community_project_title +'</dd>' +
+                        '<dd class = "project-tit">'+ data[i].project_info.sjy_community_project_title +'</dd>' +
                         '</dl>' +
                         '<dl>' +
                         '<dt>项目周期</dt>' +
-                        '<dd>'+ data.data[i].sjy_community_project_start_time + '~'+ data.data[i].sjy_community_project_end_time+'</dd>' +
+                        '<dd>'+ data[i].project_info.sjy_community_project_start_time + '~'+ data[i].project_info.sjy_community_project_end_time+'</dd>' +
                         '</dl>' +
                         '<dl>' +
                         '<dt>落地社区</dt>' +
-                        '<dd>'+ data.data[i].sjy_community_name+'</dd>' +
+                        '<dd>'+ data[i].project_info.sjy_community_name+'</dd>' +
                         '</dl>' +
                         '<dl>' +
                         '<dt>执行机构</dt>' +
-                        '<dd>'+ data.data[i].sjy_community_project_origanization_name +'</dd>' +
+                        '<dd>'+ data[i].project_info.sjy_community_project_origanization_name +'</dd>' +
                         '</dl>' +
                         '<dl>' +
                         '<dt>服务对象</dt>' +
-                        '<dd>'+ data.data[i].sjy_community_project_service_area +'</dd>' +
+                        '<dd>'+ data[i].project_info.sjy_community_project_service_area +'</dd>' +
                         '</dl>' +
                         '</div>' +
+                        '</a>'+
                         '</li>';
             }
 
