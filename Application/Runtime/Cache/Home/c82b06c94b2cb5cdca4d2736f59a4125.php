@@ -1,14 +1,30 @@
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/deliver.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/modules/laydate/default/laydate.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/modules/layer/default/layer.css">
-    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/webuploader.css">
-    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/demo.css">
-    <script src = "__PUBLIC__/Home/js/laydate.js"></script>
-    <script src = "__PUBLIC__/Home/js/layer.js"></script>
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EasyLife</title>
+    <link rel="stylesheet" href="/Public/Home/css/bootstrap.css">
+    <link rel="stylesheet" href="/Public/Home/css/common.css">
+    <link rel="stylesheet" href="/Public/Home/css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+    <script src="/Public/Home/js/jquery-1.12.4.js"></script>
+    <script src="/Public/Home/js/bootstrap.js"></script>
+    <script src = "/Public/Home/js/autoResizeImage.js"></script>
 
-    <script type="text/javascript" src="__PUBLIC__/Home/js/webuploader.js"></script>
+    <link rel="stylesheet" href="/Public/Home/css/region.css">
+    <link rel="stylesheet" href="/Public/Home/css/deliver.css">
+    <link rel="stylesheet" href="/Public/Home/css/layui.css">
+    <link rel="stylesheet" href="/Public/Home/css/modules/laydate/default/laydate.css">
+    <link rel="stylesheet" href="/Public/Home/css/modules/layer/default/layer.css">
+    <link rel="stylesheet" type="text/css" href="/Public/Home/css/webuploader.css">
+    <link rel="stylesheet" type="text/css" href="/Public/Home/css/demo.css">
+    <script src = "/Public/Home/js/laydate.js"></script>
+    <script src = "/Public/Home/js/layer.js"></script>
+
+    <script type="text/javascript" src="/Public/Home/js/webuploader.js"></script>
 
 </head>
 <body>
@@ -19,7 +35,7 @@
     </div>
     <div class="right person">
         <div class="dropdown pull-right">
-            <a href="#" data-toggle="dropdown" class="dropdown-toggle"><img src="__PUBLIC__/Home/imgs/personDl.jpg" alt=""></a>
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle"><img src="/Public/Home/imgs/personDl.jpg" alt=""></a>
             <ul class="dropdown-menu">
                <li>
                    <a href="#">账号设置</a>
@@ -51,9 +67,7 @@
             <div class="form-group">
                 <label for="name">服务对象</label>
                 <select class ="serverArea" name="server_area" id="">
-                <foreach name='service_object' item='val'>
-                    <option value="{$val.sjy_id}">{$val.service_object_name}</option>
-                </foreach>
+                <?php if(is_array($service_object)): foreach($service_object as $key=>$val): ?><option value="<?php echo ($val["sjy_id"]); ?>"><?php echo ($val["service_object_name"]); ?></option><?php endforeach; endif; ?>
                 </select>
             </div>
             <div class="form-group">
@@ -63,6 +77,10 @@
             <div class="form-group">
                 <label for="name">项目预算</label>
                 <input name = "plan_money" type="text" id="" value = ""  onKeyUp="value=value.replace(/[^\d]/g,'')" > <span>万元</span>
+            </div>
+            <div class="form-group">
+                <label for="name">项目书征集周期</label>
+                <input name = "collect_start_time" type="text" id="test2" value = "" style = "width: 192px;">
             </div>
             <div class="form-group">
                 <label for="name">项目介绍</label>
@@ -111,7 +129,7 @@
     </div>
 </div>
 </body>
-<script src="__PUBLIC__/Home/js/extend-webuploader.js" type="text/javascript"></script>
+<script src="/Public/Home/js/extend-webuploader.js" type="text/javascript"></script>
 <script>
 
     //执行一个laydate实例
@@ -198,7 +216,10 @@
         }
 
 
-       
+        if( collect_start_time == ""){
+            layer.msg('项目书征集周期');
+            return false;
+        }
         if( demand_describe == ""){
             layer.msg('项目介绍');
             return false;
@@ -210,12 +231,13 @@
 
 
         $.ajax({
-            url: "__CONTROLLER__/doSendProject",
+            url: "/index.php/Home/Origanization/doSendProject",
             type: "POST",
             data: {
                 project_name : project_name,
                 server_area : server_area,
                 demand_describe : demand_describe,
+                collect_start_time : collect_start_time,
                 plan_money:plan_money,
                 start_time : start_time,
                 origanization_project_images : origanization_project_images
@@ -225,7 +247,7 @@
                 console.log(data);
                 if(data.state == 1)
                 {
-                    window.location.href = "__CONTROLLER__/"
+                    window.location.href = "/index.php/Home/Origanization/"
                 }
             },
             async:false

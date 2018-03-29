@@ -414,7 +414,7 @@
 	        $project_name = I("post.project_name");  //项目名字
 	        $server_area = I("post.server_area");  //项目服务领域 
 	        $demand_describe=I("post.demand_describe");  //项目需求简介
-	        $collect_start_time = I("post.collect_start_time");  //项目征集开始时间
+	      
 	        $plan_money = I('post.plan_money'); //项目预算
 	        $start_time = I("post.start_time");  //项目开始时间
 	        $time = explode('~',$collect_start_time);
