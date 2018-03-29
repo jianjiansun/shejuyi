@@ -437,15 +437,15 @@
 	        {
 	            $ret["errorInfo"] = "项目需求简介不能为空";
 	        }
-	        //项目周期不能在征集周期之前
-	        if(strtotime($start_time)<strtotime($collect_end_time))
-	        {
-	             $ret['errorInfo'] = '项目开始时间必须大于项目征集时间';
-	        }
-	        if(empty($collect_start_time))
-	        {
-	            $ret["errorInfo"] = "项目征集时间不能为空";
-	        }
+	        // //项目周期不能在征集周期之前
+	        // if(strtotime($start_time)<strtotime($collect_end_time))
+	        // {
+	        //      $ret['errorInfo'] = '项目开始时间必须大于项目征集时间';
+	        // }
+	        // if(empty($collect_start_time))
+	        // {
+	        //     $ret["errorInfo"] = "项目征集时间不能为空";
+	        // }
 	        if(empty($start_time))
 	        {
 	            $ret["errorInfo"] = "项目周期不能为空";
@@ -469,8 +469,8 @@
 	        $data["sjy_origanization_project_service_area"] = $server_area_name;  //项目服务领域
 	        $data["sjy_origanization_project_service_area_id"] = $server_area;  //项目服务领域id
 	        $data["sjy_origanization_project_info"] = $demand_describe;  //项目详情简介
-	        $data["sjy_origanization_project_collect_start_time"] = $collect_start_time; //项目开始收集时间
-	        $data["sjy_origanization_project_collect_end_time"] = $collect_end_time;    //项目结束收集时间
+	        // $data["sjy_origanization_project_collect_start_time"] = $collect_start_time; //项目开始收集时间
+	        // $data["sjy_origanization_project_collect_end_time"] = $collect_end_time;    //项目结束收集时间
 	        $data["sjy_origanization_project_start_time"] = $start_time; //项目开始时间
 	        $data["sjy_origanization_project_end_time"] = $end_time; //项目结束时间
 	        $data['sjy_origanization_project_plan_money'] = $plan_money;  //项目预算

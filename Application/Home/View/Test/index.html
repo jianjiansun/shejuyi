@@ -5,9 +5,10 @@
 	<title>Document</title>
 </head>
 <body>
-	<form method='post' action="__CONTROLLER__/haha" enctype="multipart/form-data">
-	    <input type = 'hidden' name = 'project_id' value='22' />
-		<input type = 'file' name='file'/>
+	<form method='post' action="__CONTROLLER__/upload" enctype="multipart/form-data">
+		<input type = 'file' name='file[]'/>
+		<input type = 'file' name='file[]'/>
+		<input type = 'file' name='file[]'/>
 		<input type = 'submit' value='提交' />
 	</form>
 </body>

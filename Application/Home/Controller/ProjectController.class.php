@@ -60,6 +60,13 @@
 	    	$this->assign('id',$id);
 	    	$this->display();
 		}
+        //展示社会组织项目详情页
+        public function displayOriganizationProject()
+        {
+            $id=I('get.id'); //项目id
+            $this->assign('id',$id);
+            $this->display();
+        }
 		//获得社区项目详情接口
 	    public function getCommunityProject()
 	    {
@@ -75,16 +82,8 @@
 		    
 	 		$this->ajaxReturn($projectinfo);
 	    }
-	  
-	    //查看社会组织项目详情
-        public function displayProjectInfo()
-        {
-           $id = I('get.id');
-           $this->assign('id',$id);
-           $this->display();
-        }
         //取得社会组织项目详情接口
-        public function getProjectInfo()
+        public function getOriganizationProject()
         {
             //项目id
             $id = I("get.id"); 
