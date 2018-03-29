@@ -816,6 +816,8 @@
                 //社会组织id
         	   $community_code = session('userInfo')['sjy_community_user_community_code'];
             }
+
+           
         	//已完成的项目
         	$info = M('project')->where(array('community_id'=>$community_code,'status'=>100))->order('project_start_time desc')->select();
         	//查询项目详情
