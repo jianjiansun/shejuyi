@@ -19,7 +19,10 @@ class IndexController extends Controller {
       	  }else{
       	  	 session(null); //清除所有session
       	  }
+      }else{
+            $figure = '';
       }
+      $this->assign('figure',$figure);
       $this->display();
     }
 }

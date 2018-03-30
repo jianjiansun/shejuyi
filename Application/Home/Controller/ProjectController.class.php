@@ -102,6 +102,29 @@
         //社会组织项目管理
         public function origanizationProjectManger()
         {
+            $origanization_code = session('userInfo')['sjy_origanization_user_origanization_code']; //社会组织编码
+            //查询各个进度各有多少
+            //邀请我
+            $where = array('origanization_id'=>$origanization_code,'status'=>0);
+            $invitenNum = M('project')->where($where)->count();
+            //投标中
+            $where = array('origanization_id'=>$origanization_code,'status'=>1);
+            $sendNum = M('project')->where($where)->count();
+            //待开始
+            $where = array('origanization_id'=>$origanization_code,'status'=>2);
+            $waitStatNum = M('project')->where($where)->count();
+            //执行中
+            $where = array('origanization_id'=>$origanization_code,'status'=>array('between',array(10,98)));
+            $ingNum = M('project')->where($where)->count();
+            //结项申请中
+            $where = array('origanization_id'=>$origanization_code,'status'=>99);
+            $applyEndNum = M('project')->where($where)->count();
+
+            $this->assign('invitenNum',$invitenNum); //邀请我
+            $this->assign('sendNum',$sendNum); //投标中
+            $this->assign('waitStatNum',$waitStatNum); //待开始
+            $this->assign('ingNum',$ingNum); //进行中
+            $this->assign('applyEndNum',$applyEndNum); //申请结项中
         	$this->display();
         }
         
@@ -494,6 +517,26 @@
         //社区项目管理页面展示
         public function communityProjectManger()
         {
+            $community_code = session('userInfo')['sjy_community_user_community_code']; //社会组织编码
+            //查询各个进度各有多少
+            
+            //征集中
+            $where = array('community_id'=>$community_code,'status'=>1);
+            $collectNum = M('project')->where($where)->count();
+            //待开始
+            $where = array('community_id'=>$community_code,'status'=>2);
+            $waitStatNum = M('project')->where($where)->count();
+            //执行中
+            $where = array('community_id'=>$community_code,'status'=>array('between',array(10,98)));
+            $ingNum = M('project')->where($where)->count();
+            //结项申请中
+            $where = array('community_id'=>$community_code,'status'=>99);
+            $applyEndNum = M('project')->where($where)->count();
+            
+            $this->assign('collectNum',$collectNum); //征集中
+            $this->assign('waitStatNum',$waitStatNum); //待开始
+            $this->assign('ingNum',$ingNum); //进行中
+            $this->assign('applyEndNum',$applyEndNum); //申请结项中
             $this->display();
         }
         //邀请社会组织发送项目

@@ -12,6 +12,7 @@
         public $islogin = "";  //是否登陆
         public $isidentify = ""; //是否认证
         public $index = ''; //主页
+        public $active=''; //项目动态
     	//初始化 登录检测 没有登录禁止访问
     	public function __construct()
     	{
@@ -57,6 +58,12 @@
                                     $this->showname = $this->showname."(管理员)";
                                 }
                             }
+                            //社区是否有项目动态
+                            if($this->code){
+                                $where = array('community_id'=>$this->code,'status'=>array('between',array(1,99)));
+                                $this->active = count(M('project')->where($where)->find());
+                            }
+
                     }
                     
                     //社会组织登录
@@ -91,7 +98,13 @@
                                 {
                                     $this->showname = $this->showname."(管理员)";
                                 }
-                            }  
+                            } 
+                            //社会组织是否有项目动态
+                            if($this->code){
+                                $where = array('origanization_id'=>$this->code,'status'=>array('between',array(0,99)));
+                                $this->active = count(M('project')->where($where)->find());
+
+                            } 
                     }
                     $cityid = session("cityid");
                     if($cityid==null)
@@ -110,6 +123,7 @@
                     $this->assign('code',$this->code);   //用户社区或者社会组织编号
                     $this->assign('figure',session('figure'));   //用户所属编号
                     $this->assign('index',$this->index); //主页
+                    $this->assign('active',$this->active); //是否有提醒的项目
 
 
             }else{

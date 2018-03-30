@@ -219,10 +219,10 @@
                 <div class="col-md-10 column perperson-con" style = "background: #FFFFFF;">
                     <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
                         <ul class="layui-tab-title">
-                            <li class="layui-this"  lay-id="a">征集中</li>
-                            <li id = "starting" lay-id="b">待开始</li>
-                            <li id = "going" lay-id="c">执行中</li>
-                            <li id = "agreenFinish"  lay-id="d">结项中</li>
+                            <li class="layui-this"  lay-id="a">征集中<if condition='$collectNum gt 0'><span class="layui-badge">{$collectNum}</span></if></li>
+                            <li id = "starting" lay-id="b">待开始<if condition='$waitStatNum gt 0'><span class="layui-badge">{$waitStatNum}</span></if></li>
+                            <li id = "going" lay-id="c">执行中<if condition='$ingNum gt 0'><span class="layui-badge">{$ingNum}</span></if></li>
+                            <li id = "agreenFinish"  lay-id="d">结项中<if condition='$applyEndNum gt 0'><span class="layui-badge">{$applyEndNum}</span></if></li>
                             <li id = "finishProject" lay-id="e">已完成</li>
                         </ul>
                         <div class="layui-tab-content">

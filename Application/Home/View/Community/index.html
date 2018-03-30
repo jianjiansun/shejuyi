@@ -1,6 +1,8 @@
 
 <link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
 <link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
+<link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
+<script src="__PUBLIC__/Home/js/layui.js"></script>
 </head>
 <body>
 <div class="shadeBox"></div>
@@ -18,7 +20,7 @@
 
             <a href="#" data-toggle="dropdown" class="dropdown-toggle">
                 <img src="{$user_image}" alt="">
-                <span>{$showname}</span>
+                <span>{$showname}<if condition='$active egt 1'><span class="layui-badge-dot"></span></if></span>
             </a>
             <ul class="dropdown-menu personalMenu">
                 <li>
@@ -31,7 +33,7 @@
                     <a href="__CONTROLLER__/mycommunity">我的社区</a>
                 </li>
                 <li>
-                    <a href="__MODULE__/Project/communityProjectManger">我的项目</a>
+                    <a href="__MODULE__/Project/communityProjectManger">我的项目<if condition='$active egt 1'><span class="layui-badge-dot"></span></if></a>
                 </li>
                 <li>
                     <a href="">我的消息</a>
