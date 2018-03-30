@@ -38,7 +38,7 @@
 
             <a href="#" data-toggle="dropdown" class="dropdown-toggle">
                 <img src="{$user_image}" alt="">
-                <span>{$showname}</span>
+                <span>{$showname}<if condition='$active egt 1'><span class="layui-badge-dot"></span></if></span>
             </a>
             <if condition='$figure eq 2'>
                     <ul class="dropdown-menu personalMenu">
@@ -52,7 +52,7 @@
                             <a href="__MODULE__/Community/mycommunity">我的社区</a>
                         </li>
                         <li>
-                            <a href="__MODULE__/Project/communityProjectManger">我的项目</a>
+                            <a href="__MODULE__/Project/communityProjectManger">我的项目<?php if($active>=1){ ?><span class="layui-badge-dot"></span><?php } ?></a>
                         </li>
                         <li>
                             <a href="">我的消息</a>
@@ -75,7 +75,7 @@
                                 <a href="__MODULE__/Origanization/myoriganization">我的机构</a>
                             </li>
                             <li>
-                                <a href="__MODULE__/Project/origanizationProjectManger">我的项目</a>
+                                <a href="__MODULE__/Project/origanizationProjectManger">我的项目<?php if($active>=1){ ?><span class="layui-badge-dot"></span><?php } ?></a>
                             </li>
                             <li>
                                 <a href="">我的消息</a>
