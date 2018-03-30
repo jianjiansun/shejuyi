@@ -668,8 +668,13 @@
 	    //升级我的机构
 	    public function updateOriganizationInfo()
 	    {
+	    	
+            
             $ret['state'] = 0;
             $ret['errorInfo'] = '';
+            //开启事务
+	        $model = M();
+	        $model->startTrans();
             //机构id
             $origanization_code = session("userInfo")["sjy_origanization_user_origanization_code"];
 	    	$phone = I("post.phone");  //固定电话
@@ -701,11 +706,12 @@
             {
                 $editInfo['sjy_origanization_introduce'] = $introduce;
             }
-            $res = 0;
-            if(!empty($editInfo)) {
-                //更改机构基本信息
-                $res = M("origanization_base_info")->where(array("sjy_id" => $origanization_code))->save($editInfo);
-            }
+            
+            $editInfo['updatetime'] = time();
+            //更改机构基本信息
+            $res = M("origanization_base_info")->where(array("sjy_id" => $origanization_code))->save($editInfo);
+            
+            
             //更改地址信息
             $province = I("post.province");             //社会组织所在省份
             $city = I("post.city");                     //社会组织所在城市
@@ -730,13 +736,15 @@
             $position_info["sjy_origanization_area"] = $area;
             $position_info['sjy_origanization_area_name'] = $area_name;
             $position_info["sjy_origanization_address"] = $address;
-
-            $origanization_position_info->where(array("sjy_origanization_id"=>$origanization_code))->save($position_info);
-            if($res||empty($editInfo))
+            $position_info['updatetime'] = time();
+            $val = $origanization_position_info->where(array("sjy_origanization_id"=>$origanization_code))->save($position_info);
+            if($res&&$val)
 			{
 				$ret['state'] = 1;
+				$model->commit();
 			}else{
             	$ret['errorInfo'] = '修改失败，请重试';
+            	$model->rollback();
 			}
 			$this->ajaxReturn($ret);
 
