@@ -205,15 +205,17 @@
                         <li>
                             <a href="__MODULE__/Community/personInfo">账号设置</a>
                         </li>
-                        <li>
-                            <a href="__MODULE__/Community/myCommunity">我的社区</a>
-                        </li>
-                        <li>
-                            <a  class = "on" href="__MODULE__/Project/communityProjectManger">我的项目</a>
-                        </li>
-                        <li>
-                            <a href="">我的消息</a>
-                        </li>
+                        <if condition='($isidentify eq 1) and ($code gt 0)'>
+                          <li>
+                              <a href="__MODULE__/Community/myCommunity">我的社区</a>
+                          </li>
+                          <li>
+                              <a  class = "on" href="__MODULE__/Project/communityProjectManger">我的项目</a>
+                          </li>
+                          <li>
+                              <a href="">我的消息</a>
+                          </li>
+                        </if>
                     </ul>
                 </div>
                 <div class="col-md-10 column perperson-con" style = "background: #FFFFFF;">
