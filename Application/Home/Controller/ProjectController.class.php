@@ -425,7 +425,7 @@
                     }
                  }
             }
-            $rate_imgs = json_encode($imgs);
+            $rate_imgs = json_decode($imgs);
             //执行新增
             $data['sjy_projectrate_title'] = $rate_title;//进度标题
             $data['sjy_project_rate_image'] = $rate_imgs; //进度图片
@@ -879,7 +879,7 @@
         public function projectRate()
         {
             $project_id = I('get.project_id'); //项目id
-            $rate = M('projectrate')->where(array('sjy_project_id'=>$project_id))->select(); //项目进度
+            $rate = M('projectrate')->where(array('sjy_project_id'=>$project_id))->order('create_time desc')->select(); //项目进度
             $this->ajaxReturn($rate);
         }
         //下载项目书
