@@ -421,11 +421,11 @@
                      $new_file = $new_file.$filename.".{$type}";
                      if (file_put_contents($new_file, base64_decode(str_replace($result[1], '', $base64_image_content)))){
                             $url = "/Uploads/origanization/project_rate/".date('Ymd',time())."/".$filename.".{$type}";
-                            $imgs[$key.'imgs'] = $url;
+                            $imgs. = $url.'|=|';
                     }
                  }
             }
-            $rate_imgs = json_encode($imgs);
+            $rate_imgs = $imgs;
             //执行新增
             $data['sjy_projectrate_title'] = $rate_title;//进度标题
             $data['sjy_project_rate_image'] = $rate_imgs; //进度图片
