@@ -54,9 +54,9 @@ jQuery(function(){
     // 优化retina, 在retina下这个值是2
     var ratio = window.devicePixelRatio || 1;
     // 缩略图大小
-    var thumbnailWidth = 200;
-     thumbnailWidth *= ratio;
-    var thumbnailHeight = 130;
+    var thumbnailWidth = window.webuploader.config.thumbWidth || 110;
+    thumbnailWidth *= ratio;
+    var thumbnailHeight = window.webuploader.config.thumbHeight || 110;
     thumbnailHeight *= ratio;
     var uploader = WebUploader.create({
         swf: "webuploader-0.1.5/Uploader.swf",
@@ -72,12 +72,10 @@ jQuery(function(){
             extensions: 'gif,jpg,jpeg,png',
             mimeTypes: 'images/*'
         },
-        compress :false,
-        thumb : false,
         resize: false,
         disableGlobalDnd: true,
-        chunked: false,
-        fileNumLimit:5
+        chunked: true,
+        fileNumLimit: 30
     });
 
     function setDragEvent(){
@@ -168,7 +166,6 @@ jQuery(function(){
 
     //添加附件到webuploader中
     function addFile( file ){
-
         var index = $queue.find('li').length;
         var imgLeft = index * (thumbnailWidth+10);
         var imgTop = 0;
@@ -181,7 +178,9 @@ jQuery(function(){
         }
         $queue.height(wrapHeight);
         var $li = $('<li data-key="'+file.key+'"  data-src="'+file.src+'" data-sort="'+index+'" draggable="true" id="' + file.id + '" style="position:absolute;margin:0;cursor:move;width:'+thumbnailWidth+'px;height:'+thumbnailHeight+'px;left:'+imgLeft+'px;top:'+imgTop+'">' +
-                '<p class="imgWrap"></p>' + '</li>'
+            '<p class="title">' + file.name + '</p>' +
+            '<p class="imgWrap"></p>' +
+            '<p class="progress"><span></span></p>' + '</li>'
             ),
             $btns = $('<div class="file-panel">' +
                 '<span class="cancel">删除</span>').appendTo( $li ),
@@ -222,7 +221,7 @@ jQuery(function(){
 
                 percentages[ file.id ] = [ fileSize, 0];
                 file.rotation = 0;
-            }
+            };
 
             file.on('statuschange', function(cur, prev){
                 if( prev == 'progress'){
@@ -447,8 +446,8 @@ jQuery(function(){
 
     uploader.on('uploadProgress', function( file, percentage){
         var $li = $('#' + file.id),
-        $percent = $li.find('.progess span');
-        
+            $percent = $li.find('.progess span');
+
         $percent.css( "width", percentage * 100 + '%');
         updateTotalProgress();
     });
