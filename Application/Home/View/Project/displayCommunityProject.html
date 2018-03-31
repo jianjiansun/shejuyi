@@ -129,7 +129,7 @@
                 <div class="detail-head">
                     <ul class="detail-nav">
                         <li><a class="nav1 on" href="javascript:;">项目主页</a></li>
-                        <li><a class="nav2" href="javascript:;">项目进度</a></li>
+                        <li><a class="nav2" id = "viewProgress" href="javascript:;">项目进度</a></li>
                     </ul>
                     <if condition='($figure eq 1) and ($project_status eq 0)'>
                         <button type="button" class="layui-btn deliverBox" id="test1">
@@ -256,6 +256,28 @@
                                         <p>Peanut gourd nori welsh onion rock melon mustard jícama. Desert raisin amaranth kombu aubergine kale seakale brussels sprout pea. Black-eyed pea celtuce bamboo shoot salad kohlrabi leek squash prairie turnip catsear
                                             rock melon chard taro broccoli turnip greens. Fennel quandong potato watercress ricebean swiss chard garbanzo. Endive daikon brussels sprout lotus root silver beet epazote melon shallot.</p>
 
+                                        <div class="tm-m-photos">
+                                            <ul class="tm-m-photos-thumb">
+                                                <li data-src="//img.alicdn.com/bao/uploaded/i2/0/TB2k9ZybS8YBeNkSnb4XXaevFXa_!!0-rate.jpg_400x400.jpg">
+                                                    <img src="//img.alicdn.com/bao/uploaded/i2/0/TB2k9ZybS8YBeNkSnb4XXaevFXa_!!0-rate.jpg_40x40.jpg">
+                                                    <b class="tm-photos-arrow"></b>
+                                                </li>
+                                                <li data-src="//img.alicdn.com/bao/uploaded/i2/0/TB2RSprg1OSBuNjy0FdXXbDnVXa_!!0-rate.jpg_400x400.jpg">
+                                                    <img src="//img.alicdn.com/bao/uploaded/i2/0/TB2RSprg1OSBuNjy0FdXXbDnVXa_!!0-rate.jpg_40x40.jpg">
+                                                    <b class="tm-photos-arrow"></b>
+                                                </li>
+                                            </ul>
+                                            <div class="tm-m-photo-viewer" style="width:0px;height:0px;display:none;">
+                                                <img src="">
+                                                <a class="tm-m-photo-viewer-navleft">
+                                                    <i class="tm-m-photo-viewer-navicon"></i>
+                                                </a>
+                                                <a class="tm-m-photo-viewer-navright">
+                                                    <i class="tm-m-photo-viewer-navicon"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+
                                     </div>
 
                                 </li>
@@ -308,6 +330,9 @@
                                             pea sprouts welsh onion wattle seed pea salsify turnip scallion peanut arugula bamboo shoot onion swiss chard. Avocado tomato peanut soko amaranth grape fennel chickweed mung bean soybean endive squash beet
                                             greens carrot chicory green bean. Tigernut dandelion sea lettuce garlic daikon courgette celery maize parsley komatsuna black-eyed pea bell pepper aubergine cauliflower zucchini. Quandong pea chickweed tomatillo
                                             quandong cauliflower spinach water spinach.</p>
+                                            <div>
+                                                <img src="" alt="">
+                                            </div>
 
                                     </div>
 
@@ -487,4 +512,75 @@
 
 
     });
+
+
+
+    /*进度查看*/
+
+    $("#viewProgress").click(function () {
+
+        $.get("__MODULE__/Project/projectRate?project_id=" + project_id, function (data) {
+
+            var html = '';
+
+            for(var i = 0; i < data.length; i++){
+
+                html += '<li>' +
+                    '<time class="cbp_tmtime" datetime=""><span>'+ data[i].create_time +'</span> <span>18:30</span></time>' +
+                    '<div class="cbp_tmicon cbp_tmicon-phone"></div>' +
+                    '<div class="cbp_tmlabel">' +
+                    '<h2>'+ data[i].sjy_projectrate_title +'</h2>' +
+                    '<p>'+ data[i].sjy_project_rate_con +'</p>' +
+                    '</div>' +
+                    '<div class="tm-m-photos">' +
+                    '<ul class="tm-m-photos-thumb">';
+
+
+                console.log( data[i].sjy_project_rate_image  );
+
+
+               eval(" var imgArr = " +(data[i].sjy_project_rate_image) ) ;
+
+
+                console.log(imgArr );
+
+
+                for( var j = 0; j < imgArr.length ; j ++ ) {
+
+
+                    console.log(imgArr.j +'imgs'   + ' 121324324' );
+
+
+                    html +=  '<li >\n' +
+                        '<img src="/'+ imgArr.j +'imgs'+'">\n' +
+                        '<b class="tm-photos-arrow"></b>\n' +
+                        '</li>';
+                }
+
+                html +=   '</ul>' +
+                    '</div>' +
+                    '</li>';
+
+
+            }
+
+             $(".cbp_tmtimeline").html(html);
+
+        })
+
+
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+
 </script>

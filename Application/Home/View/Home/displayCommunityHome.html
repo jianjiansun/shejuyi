@@ -314,38 +314,9 @@
 
                     <div class="box box4" style="display: none;">
 
-                        <div class="layui-tab-item layui-show">
+                        <ul class="clearfix">
 
-                            <div class="basic-information">
-                                <table class="layui-table">
-                                    <colgroup>
-
-                                        <col width="200">
-                                        <col width="200">
-                                        <col width="200">
-                                        <col width="220">
-
-                                    </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th>项目名称</th>
-                                            <th>执行机构</th>
-                                            <th>执行周期</th>
-                                            <th>评分</th>
-
-                                        </tr>
-                                    </thead>
-                                    <tbody id="tbodyScore">
-
-                                    </tbody>
-                                </table>
-
-
-                            </div>
-
-                            <!--分页-->
-                            <div class="pagination" id="pagination0"></div>
-                        </div>
+                        </ul>
 
                     </div>
 
@@ -576,24 +547,46 @@
     $(".nav4").click(function() {
         $.post("__MODULE__/Project/communityCompleteProject?community_code={$id}", function(data) {
 
+
+
+
             var html = "";
-            console.log(data);
+
+
             for (var i = 0; i < data.length; i++) {
-
-                html += '<tr>' +
-                    '<td>' + data[i].project_info.sjy_community_project_title + '</td>' +
-                    '<td>' + data[i].project_info.sjy_community_project_origanization_name + '</td>' +
-                    '<td>' + data[i].project_start_time + ' ~<br>' + data[i].project_end_time + '</td>' +
-                    '<td>' +
-                    '<div class="atar_Show"><p tip="' + data[i].score + '"></p></div>' +
+                html += '<li class = "clearfix pro-li">' +
+                    '<a href="__MODULE__/Project/displayCommunityProject/id/' + data[i].project_info.sjy_id + '">' +
+                    '<div class = "left leftImg">' +
+                    '<img src="' + data[i].main_imgs + '" alt="">' +
+                    '</div>' +
+                    '<div class = "left leftCon">' +
+                    '<dl>' +
+                    '<dd class = "project-tit">' + data[i].project_info.sjy_community_project_title + '</dd>' +
+                    '</dl>' +
+                    '<dl>' +
+                    '<dt>项目名称</dt>' +
+                    '<dd>' + data[i].project_info.sjy_community_project_title + '</dd>' +
+                    '</dl>' +
+                    '<dl>' +
+                    '<dt>执行机构</dt>' +
+                    '<dd>' + data[i].project_info.sjy_community_project_origanization_name + '</dd>' +
+                    '</dl>' +
+                    '<dl>' +
+                    '<dt>执行周期</dt>' +
+                    '<dd>' + data[i].project_start_time +' ~ '+ data[i].project_end_time + '</dd>' +
+                    '</dl>' +
+                    '<dl>' +
+                    '<dt>评分</dt>' +
+                    '<dd  class="atar_Show"><p tip="' + data[i].score + '"></p></dd>' +
                     '<span></span>' +
-                    '</td>' +
-                    '</tr>';
-
-
+                    '</dl>' +
+                    '</div>' +
+                    '</a>' +
+                    '</li>';
             }
 
-            $(".box4 #tbodyScore").html(html);
+            $(".box4 ul").html(html);
+
 
             $(".atar_Show p").each(function(index, element) {
                 var num = $(this).attr("tip");
@@ -601,6 +594,12 @@
                 $(this).css("width", www);
                 $(this).parent(".atar_Show").siblings("span").text(num + "分");
             });
+
+
+
+
+
+
 
         });
     })

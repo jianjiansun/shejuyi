@@ -744,3 +744,38 @@ html {
     height: 1px;
     overflow: hidden;
 }
+
+
+.tm-m-photos, .tm-m-photos-thumb {
+    zoom: 1;
+    min-height: 60px;
+}
+.tm-m-photos-thumb li {
+    float: left;
+    border: 2px solid #f2f2f2;
+    padding: 2px;
+    margin-right: 8px;
+    position: relative;
+    transition: border-color .2s ease-out;
+}
+.tm-m-photos-thumb img {
+    display: block;
+    width: 60px;
+    height: 60px;
+    cursor: url(//img.alicdn.com/tps/i1/T1nTBDFCRbXXbzTk_b-25-20.png),url(//assets.alicdn.com/img/common/zoom_in.cur),auto;
+}
+
+.tm-photos-arrow {
+    width: 0;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    border: 6px dashed transparent;
+    border-top: 6px solid #f23d6a;
+    position: absolute;
+    left: 15px;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    bottom: -8px;
+    background: 0 0;
+}
