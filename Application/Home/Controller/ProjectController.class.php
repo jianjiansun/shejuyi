@@ -1,7 +1,8 @@
 <?php
 	namespace Home\Controller;
 	use Think\Controller;
-	use Home\Controller\BaseController;
+    use Home\Controller\BaseController;
+    use Home\Controller\UploadController;
 	class ProjectController extends BaseController
 	{
 		//展示社区项目详情页
@@ -394,38 +395,60 @@
         		}
         	}
         }
+        //显示社会组织添加项目进度页面
+        public function displayAddProjectRate()
+        {
+            $project_id = I('get.project_id');
+            $this->assign('project_id',$project_id);
+            $this->display();
+        }
         //社会组织增加项目进度
         public function addProjectRate()
         {
+            
             $project_id = I('post.project_id'); //项目id
             $rate_title = I('post.rate_title'); //进度标题
             $rate_desc = I('post.rate_desc'); //进度详细内容
-            //插入项目图片
-            //base64数组
-            $base64_data = I('post.project_rate_images');
-            $imgs = array();
-            $filename = time();
-            foreach ($base64_data as $key => $value) {
-            $result = '';
-            $filename++;
-            $base64_image_content = $value;
-            if (preg_match('/^(data:\s*image\/(\w+);base64,)/', $base64_image_content, $result)){
-            $type = $result[2];
-            $new_file = "./Uploads/origanization/project_rate/".date('Ymd',time())."/";
-      
-                    if(!file_exists($new_file))
-                    {
-                            //检查是否有该文件夹，如果没有就创建，并给予最高权限
-                              mkdir($new_file, 0700);
-                     }
-                     $new_file = $new_file.$filename.".{$type}";
-                     if (file_put_contents($new_file, base64_decode(str_replace($result[1], '', $base64_image_content)))){
-                            $url = "/Uploads/origanization/project_rate/".date('Ymd',time())."/".$filename.".{$type}";
-                            $imgs[$key] = $url;
-                    }
-                 }
+            if(empty($rate_desc)||empty($rate_title))
+            {
+                return false;
             }
-            $rate_imgs = implode($imgs,'||');
+            $rate_img = $_FILES['rate_img'];
+            $num = count($rate_img['name']);
+            
+            //七牛云图片上传类
+            $uploadObj = new UploadController();
+            $time = time();
+            //检测图片是否合法
+            for($i=0;$i<$num;$i++)
+            {
+                $flag = $i+1;
+                
+                //图片大小不得超过2M
+                if($rate_img['size'][$i]>2097152)
+                {
+                    $this->ajaxReturn(array('state'=>0,'errorInfo'=>'第'.$flag.'张图大小超过2M'));
+                }
+                $file  = $rate_img['tmp_name'][$i];//文件名
+                
+                $type  = $this->getImagetype($file); 
+                $filetype = ['jpg', 'jpeg', 'gif', 'bmp', 'png'];
+                if (!in_array($type, $filetype))
+                { 
+                    $this->ajaxReturn(array('state'=>0,'errorInfo'=>'第'.$flag.'张图不是图片类型！'));
+                }
+                $file_name = $time.uniqid();
+                $newpath = '/Uploads/origanization/project_rate/'.$file_name.'.'.$type;
+                
+                $uploadres = $uploadObj->singUpload($file,$newpath);
+
+                if($uploadres)
+                {
+                    $imgpath[] = $newpath; 
+                }
+            
+            }
+            $rate_imgs = implode($imgpath,'||');
             //执行新增
             $data['sjy_projectrate_title'] = $rate_title;//进度标题
             $data['sjy_project_rate_image'] = $rate_imgs; //进度图片
@@ -440,7 +463,7 @@
 
             if($res)
             {
-                $this->ajaxReturn(array('errorInfo'=>'','state'=>1)); //成功
+                $this->ajaxReturn(array('errorInfo'=>'填写成功','state'=>1)); //成功
             }else{
                 $this->ajaxReturn(array('errorInfo'=>'填写失败,请重试','state'=>0)); //失败
             }
@@ -923,5 +946,62 @@
             $imgs = M('community_project_image')->where(array('sjy_community_project_id'=>$project_id))->select();
             $this->ajaxReturn($imgs);
         }
+        //*判断图片上传格式是否为图片 return返回文件后缀
+        public function getImagetype($filename)
+        {
+            $file = fopen($filename, 'rb');
+            $bin = fread($file, 2); //只读2字节
+            fclose($file);
+            $strInfo = @unpack('C2chars', $bin);
+            $typeCode = intval($strInfo['chars1'].$strInfo['chars2']);
+            // dd($typeCode);
+            $fileType = '';
+            switch ($typeCode) {
+                case 255216:
+                $fileType = 'jpg';
+                break;
+                case 7173:
+                $fileType = 'gif';
+                break;
+                case 6677:
+                $fileType = 'bmp';
+                break;
+                case 13780:
+                $fileType = 'png';
+                break;
+                default:
+                $fileType = '只能上传图片类型格式';
+            }
+            // if ($strInfo['chars1']=='-1' AND $strInfo['chars2']=='-40' ) return 'jpg';
+            // if ($strInfo['chars1']=='-119' AND $strInfo['chars2']=='80' ) return 'png';
+            return $fileType;
+        }
+        //base64
+        // public function base64()
+        // {
+        //     $base64_data = I('post.project_rate_images');
+        //     $imgs = array();
+        //     $filename = time();
+        //     foreach ($base64_data as $key => $value) {
+        //     $result = '';
+        //     $filename++;
+        //     $base64_image_content = $value;
+        //     if (preg_match('/^(data:\s*image\/(\w+);base64,)/', $base64_image_content, $result)){
+        //     $type = $result[2];
+        //     $new_file = "./Uploads/origanization/project_rate/".date('Ymd',time())."/";
+      
+        //             if(!file_exists($new_file))
+        //             {
+        //                     //检查是否有该文件夹，如果没有就创建，并给予最高权限
+        //                       mkdir($new_file, 0700);
+        //              }
+        //              $new_file = $new_file.$filename.".{$type}";
+        //              if (file_put_contents($new_file, base64_decode(str_replace($result[1], '', $base64_image_content)))){
+        //                     $url = "/Uploads/origanization/project_rate/".date('Ymd',time())."/".$filename.".{$type}";
+        //                     $imgs[$key] = $url;
+        //             }
+        //          }
+        //     }
+        // }
 	}
 ?>
