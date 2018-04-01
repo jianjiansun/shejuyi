@@ -1,6 +1,22 @@
-<script src="__PUBLIC__/Home/js/layui.js"></script>
-<script src="__PUBLIC__/Home/js/layui.all.js"></script>
-<link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EasyLife</title>
+    <link rel="stylesheet" href="/Public/Home/css/bootstrap.css">
+    <link rel="stylesheet" href="/Public/Home/css/common.css">
+    <link rel="stylesheet" href="/Public/Home/css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+    <script src="/Public/Home/js/jquery-1.12.4.js"></script>
+    <script src="/Public/Home/js/bootstrap.js"></script>
+    <script src = "/Public/Home/js/autoResizeImage.js"></script>
+
+<script src="/Public/Home/js/layui.js"></script>
+<script src="/Public/Home/js/layui.all.js"></script>
+<link rel="stylesheet" href="/Public/Home/css/layui.css">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>添加项目进度</title>
 <style type="text/css">
@@ -104,11 +120,11 @@
 </head>
 
 <body>
-    <form class="layui-form" id="upBox" action="__CONTROLLER__/addProjectRate">
+    <form class="layui-form" id="upBox" action="/index.php/Home/Project/addProjectRate">
         <div class="layui-form-item">
             <label class="layui-form-label">标题</label>
             <div class="layui-input-block">
-                <input type='hidden' name='project_id' value='{$project_id}' />
+                <input type='hidden' name='project_id' value='<?php echo ($project_id); ?>' />
                 <input type="text" name="rate_title" required lay-verify="required" placeholder="请输入进度标题" autocomplete="off" class="layui-input">
             </div>
         </div>
@@ -133,7 +149,7 @@
             </div>
         </div>
     </form>
-    <script src="__PUBLIC__/Home/js/uploadImg20180401sjj.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/Public/Home/js/uploadImg20180401sjj.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
         function dosubmit() {
             $("button").trigger("click");
@@ -142,7 +158,7 @@
             inputId: 'file', //input框id
             imgBox: 'imgBox', //图片容器id
             buttonId: 'btn', //提交按钮id
-            upUrl: '__CONTROLLER__/addProjectRate', //提交地址
+            upUrl: '/index.php/Home/Project/addProjectRate', //提交地址
             data: 'rate_img', //参数名
             num: "5" //上传个数
         })

@@ -77,7 +77,7 @@ function submitPicture(url, data) {
                 if (dat.state == 1) {
                     //发布成功
                     layer.msg("项目进度添加成功", function() {
-                        window.close();
+                        parent.layer.closeAll();
                     });
                 }
             }
