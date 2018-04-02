@@ -321,6 +321,7 @@
         	{
         		$project_info = M('community_project_info')->where(array('sjy_id'=>$value['project_id']))->find();
         		$info[$key]['project_info'] = $project_info;
+                $info[$key]['main_image'] = M('community_project_image')->where(array('sjy_community_project_id'=>$value['project_id']))->getField('sjy_community_project_image');
         	}
         	$this->ajaxReturn($info);
         }
