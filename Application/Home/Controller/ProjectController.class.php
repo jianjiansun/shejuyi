@@ -438,7 +438,7 @@
                     $this->ajaxReturn(array('state'=>0,'errorInfo'=>'第'.$flag.'张图不是图片类型！'));
                 }
                 $file_name = $time.uniqid();
-                $newpath = '/Uploads/origanization/project_rate/'.$file_name.'.'.$type;
+                $newpath = '/Uploads/origanization/project_rate/'.date('Y-m-d',$time).'/'.$file_name.'.'.$type;
                 
                 $uploadres = $uploadObj->singUpload($file,$newpath);
 

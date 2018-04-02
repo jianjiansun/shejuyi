@@ -2,6 +2,7 @@
 	namespace Home\Controller;
 	use Think\Controller;
 	use Home\Controller\BaseController;
+	use Home\Controller\UploadController;
 	class OriganizationController extends BaseController{
 		public function __construct()
 		{
@@ -403,6 +404,7 @@
 			//服务对象
 			$service_object = M("service_object")->select();
 			$this->assign("service_object",$service_object);
+			$this->assign('time',date('Y-m-d',time()));
 			$this->display();
 		}
 		//执行项目插入
@@ -437,15 +439,6 @@
 	        {
 	            $ret["errorInfo"] = "项目需求简介不能为空";
 	        }
-	        // //项目周期不能在征集周期之前
-	        // if(strtotime($start_time)<strtotime($collect_end_time))
-	        // {
-	        //      $ret['errorInfo'] = '项目开始时间必须大于项目征集时间';
-	        // }
-	        // if(empty($collect_start_time))
-	        // {
-	        //     $ret["errorInfo"] = "项目征集时间不能为空";
-	        // }
 	        if(empty($start_time))
 	        {
 	            $ret["errorInfo"] = "项目周期不能为空";
@@ -456,11 +449,61 @@
 	            $this->ajaxReturn($ret);
 	            die;
 	        }
-	         
+	          $time = time();
+             //插入项目图片
+            //七牛云图片上传 
+            $uploadObj = new UploadController();
+            //项目主图 主图 base64格式 
+            $main_image = I('post.main_image');
+            $base64 = explode('base64,',$main_image)[1];
+            //文件名
+            $path = '/Uploads/origanization/projectimg/'.date('Y-m-d',$time).'/'.$time.uniqid();
+            $base64res = $uploadObj->base64Upload($base64,$path);
+            if($base64res)
+            {
+               $projectimg[] = $path; //项目主图
+            }else{
+                 $this->ajaxReturn(array('state'=>0,'errorInfo'=>'项目主图上传失败,请重试！'));
+            }
+
+            //项目相册
+            //检测图片是否合法
+            $project_images = $_FILES['project_images'];
+            $num = count($project_images['name']);
+            for($i=0;$i<$num;$i++)
+            {
+                $flag = $i+1;
+                
+                //图片大小不得超过2M
+                if($project_images['size'][$i]>2097152)
+                {
+                    $this->ajaxReturn(array('state'=>0,'errorInfo'=>'第'.$flag.'张图大小超过2M'));
+                }
+                $file  = $project_images['tmp_name'][$i];//文件名
+                
+                $type  = $this->getImagetype($file); 
+                $filetype = ['jpg', 'jpeg', 'gif', 'bmp', 'png'];
+                if (!in_array($type, $filetype))
+                { 
+                    $this->ajaxReturn(array('state'=>0,'errorInfo'=>'第'.$flag.'张图不是图片类型！'));
+                }
+                $file_name = $time.uniqid();
+                $newpath = '/Uploads/origanization/projectimg/'.date('Y-m-d',$time).'/'.$file_name.'.'.$type;
+                
+                $uploadres = $uploadObj->singUpload($file,$newpath);
+
+
+                if($uploadres)
+                {
+                    $projectimg[] = $newpath; 
+                }
+            
+            }
 	        //项目所属社区id
 	        $origanization = M("origanization_user_info")->where(array("sjy_id"=>session("userInfo")['sjy_id']))->getField("sjy_origanization_user_origanization_code");
 	    
-	    
+	        $model = M();
+            $model->startTrans();
 	    //换取项目服务对象
 	        $server_area_name = M("service_object")->where(array("sjy_id"=>$server_area))->getField("service_object_name");
 	        $data["sjy_origanization_id"] = $origanization;  //社区id
@@ -482,44 +525,22 @@
 	        $data['sjy_origanization_project_cityid'] = $city;
 	        $res = M("origanization_project_info")->add($data);
 	         //插入项目图片
-	        //base64数组
-	        $base64_data = I('post.origanization_project_images');
-	        $imgs = array();
-	        $filename = time();
-	        foreach ($base64_data as $key => $value) {
-	        $result = '';
-	        $filename++;
-	        $base64_image_content = $value;
-	        if (preg_match('/^(data:\s*image\/(\w+);base64,)/', $base64_image_content, $result)){
-	        $type = $result[2];
-	        $new_file = "./Uploads/origanization/projectimg/".date('Ymd',time())."/";
-	  
-	                if(!file_exists($new_file))
-	                {
-	                        //检查是否有该文件夹，如果没有就创建，并给予最高权限
-	                          mkdir($new_file, 0700);
-	                 }
-	                 $new_file = $new_file.$filename.".{$type}";
-	                 if (file_put_contents($new_file, base64_decode(str_replace($result[1], '', $base64_image_content)))){
-	                        $url = "/Uploads/origanization/projectimg/".date('Ymd',time())."/".$filename.".{$type}";
-	                        $imgs[$key]['sjy_origanization_project_image'] = $url;
-	                        $imgs[$key]['sjy_origanization_project_id'] =$res;
-	                       
-	                }
-	             }
-	        }
-
-	        //插入项目图片
-	        $rut = M('origanization_project_image')->addAll($imgs);
-	        if($res)
-	        {
-	            $ret["state"] = 1;
-	            $ret['errorInfo'] = '';
-	        }else{
-	            $ret["errorInfo"] = "发布失败,请重试";
-	        }
-
-	        $this->ajaxReturn($ret);
+	        
+	         foreach ($projectimg as $key => $value) {
+               $project_image[] = array('sjy_origanization_project_id'=>$res,'sjy_origanization_project_image'=>$value);
+            }
+            //插入项目图片
+            $rut = M('origanization_project_image')->addAll($project_image);
+	         if($res&&$rut)
+            {
+                $model->commit();
+                $ret["state"] = 1;
+                $ret['errorInfo'] = '发布成功';
+            }else{
+                $model->rollback();
+                $ret["errorInfo"] = "发布失败,请重试";
+            }
+            $this->ajaxReturn($ret);
 	    }
 	   
 	  
@@ -1186,6 +1207,37 @@
         	}else{
         		return true;   //没有找到相同身份证号的
         	}
+        }
+
+        //*判断图片上传格式是否为图片 return返回文件后缀
+        public function getImagetype($filename)
+        {
+            $file = fopen($filename, 'rb');
+            $bin = fread($file, 2); //只读2字节
+            fclose($file);
+            $strInfo = @unpack('C2chars', $bin);
+            $typeCode = intval($strInfo['chars1'].$strInfo['chars2']);
+            // dd($typeCode);
+            $fileType = '';
+            switch ($typeCode) {
+                case 255216:
+                $fileType = 'jpg';
+                break;
+                case 7173:
+                $fileType = 'gif';
+                break;
+                case 6677:
+                $fileType = 'bmp';
+                break;
+                case 13780:
+                $fileType = 'png';
+                break;
+                default:
+                $fileType = '只能上传图片类型格式';
+            }
+            // if ($strInfo['chars1']=='-1' AND $strInfo['chars2']=='-40' ) return 'jpg';
+            // if ($strInfo['chars1']=='-119' AND $strInfo['chars2']=='80' ) return 'png';
+            return $fileType;
         }
        
        

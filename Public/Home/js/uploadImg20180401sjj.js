@@ -71,6 +71,7 @@ function submitPicture(url, data) {
             processData: false,
             contentType: false,
             success: function(dat) {
+
                 if (dat.state == 0) {
                     layer.msg(dat.errorInfo);
                 }
@@ -78,6 +79,7 @@ function submitPicture(url, data) {
                     //发布成功
                     layer.msg("项目进度添加成功", function() {
                         parent.layer.closeAll();
+                        window.close();
                     });
                 }
             }
