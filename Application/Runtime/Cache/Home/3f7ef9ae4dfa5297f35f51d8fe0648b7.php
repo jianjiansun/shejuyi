@@ -109,28 +109,6 @@
         </div>
 
         <ul class="layui-timeline" style="width: 256px;">
-            <li class="layui-timeline-item">
-                <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
-                <div class="layui-timeline-content layui-text">
-                    <h3 class="layui-timeline-title">8月18日</h3>
-                    <p>
-                        layui 2.0 的一切准备工作似乎都已到位。发布之弦，一触即发。
-                        <br>不枉近百个日日夜夜与之为伴。因小而大，因弱而强。
-                        <br>无论它能走多远，抑或如何支撑？至少我曾倾注全心，无怨无悔 <i class="layui-icon"></i>
-                    </p>
-                </div>
-            </li>
-            <li class="layui-timeline-item">
-                <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
-                <div class="layui-timeline-content layui-text">
-                    <h3 class="layui-timeline-title">8月16日</h3>
-                    <p>杜甫的思想核心是儒家的仁政思想，他有“<em>致君尧舜上，再使风俗淳</em>”的宏伟抱负。个人最爱的名篇有：</p>
-                    <ul>
-                        <li>《登高》</li>
-                        <li>《茅屋为秋风所破歌》</li>
-                    </ul>
-                </div>
-            </li>
         </ul>
 
         <script>
@@ -191,12 +169,6 @@
     </div>
 
 
-
-
-
-
-
-
     <div class="container main-container">
         <div class="row clearfix">
             <div class="col-md-12 column">
@@ -245,7 +217,7 @@
                     <div class="col-md-10 column perperson-con" style="background: #FFFFFF;">
                         <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
                             <ul class="layui-tab-title">
-                                <li class="layui-this" lay-id="a">邀请我
+                                <li class="layui-this"  lay-id="a">邀请我
                                     <?php if($invitenNum > 0): ?><span class="layui-badge"><?php echo ($invitenNum); ?></span><?php endif; ?>
                                 </li>
                                 <li id="biding" lay-id="b">投标中
@@ -290,25 +262,8 @@
                                                     <th>操作</th>
                                                 </tr>
                                             </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>2016-11-29</td>
-                                                    <td>人生就像是一场修行</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>投递项目书 详情</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>10</td>
-                                                    <td>2016-11-28</td>
-                                                    <td>于千万年之中，时间的无涯的荒野里…</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>投递项目书 详情</td>
-                                                </tr>
+                                            <tbody id = "tbody1">
+
                                             </tbody>
                                         </table>
 
@@ -347,24 +302,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody id="tbody2">
-                                                <tr>
 
-                                                    <td>2016-11-29</td>
-                                                    <td>人生就像是一场修行</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>详情 项目书</td>
-
-                                                </tr>
-                                                <tr>
-                                                    <td>2016-11-28</td>
-                                                    <td>于千万年之中，时间的无涯的荒野里…</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>详情 项目书</td>
-                                                </tr>
                                             </tbody>
                                         </table>
 
@@ -398,24 +336,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody id="tbody3">
-                                                <tr>
 
-                                                    <td>2016-11-29</td>
-                                                    <td>人生就像是一场修行</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>开始 详情 项目书</td>
-
-                                                </tr>
-                                                <tr>
-                                                    <td>2016-11-28</td>
-                                                    <td>于千万年之中，时间的无涯的荒野里…</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>开始 详情 项目书</td>
-                                                </tr>
                                             </tbody>
                                         </table>
                                     </div>
@@ -447,26 +368,8 @@
                                                 </tr>
                                             </thead>
                                             <tbody id="tbody4">
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>2016-11-29</td>
-                                                    <td>人生就像是一场修行</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>查看进度 添加进度 详情 项目书</td>
 
 
-                                                </tr>
-                                                <tr>
-                                                    <td>10</td>
-                                                    <td>2016-11-28</td>
-                                                    <td>于千万年之中，时间的无涯的荒野里…</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>查看进度 添加进度 详情 项目书</td>
-                                                </tr>
                                             </tbody>
                                         </table>
                                     </div>
@@ -499,26 +402,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody id="tbody5">
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>2016-11-29</td>
-                                                    <td>人生就像是一场修行</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>查看进度 添加进度 详情 项目书</td>
 
-
-                                                </tr>
-                                                <tr>
-                                                    <td>10</td>
-                                                    <td>2016-11-28</td>
-                                                    <td>于千万年之中，时间的无涯的荒野里…</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>查看进度 添加进度 详情 项目书</td>
-                                                </tr>
                                             </tbody>
                                         </table>
                                     </div>
@@ -553,26 +437,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody id="tbody6">
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>2016-11-29</td>
-                                                    <td>人生就像是一场修行</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>查看进度 详情 项目书</td>
 
-
-                                                </tr>
-                                                <tr>
-                                                    <td>10</td>
-                                                    <td>2016-11-28</td>
-                                                    <td>于千万年之中，时间的无涯的荒野里…</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>查看进度 详情 项目书</td>
-                                                </tr>
                                             </tbody>
                                         </table>
                                     </div>
@@ -684,7 +549,7 @@
                     '<td>' + data.data[i].project_detail.sjy_community_project_service_area + '</td>' +
                     '<td>' + data.data[i].project_detail.sjy_community_project_collect_start_time + ' ~<br>' + data.data[i].project_detail.sjy_community_project_collect_end_time + '</td>' +
                     '<td>' + data.data[i].status_desc + '</td>' +
-                    '<td><a href="/index.php/Home/Project/displayCommunityProject/id/' + data.data[i].project_id + '">详情</a> <a class = "projectBook" id = "' + data.data[i].project_id + '" href="javascript:;">项目书</a></td>' +
+                    '<td><a class="layui-btn" href="/index.php/Home/Project/displayCommunityProject/id/' + data.data[i].project_id + '">详情</a> <a class = "projectBook layui-btn layui-btn-normal" id = "' + data.data[i].project_id + '" href="javascript:;">项目书</a></td>' +
                     '</tr>';
             }
 
@@ -786,7 +651,9 @@
                     '<td>' + data[i].community_agreen_project_start_people + '</td>' +
                     '<td>' + data[i].project_detail.sjy_community_project_start_time + ' ~<br>' + data[i].project_detail.sjy_community_project_end_time + '</td>' +
                     '<td>' + data[i].community_agreen_project_start_time + '</td>' +
-                    '<td><a class = "startProject" sjy_id = "' + data[i].sjy_id + '" id = "' + data[i].project_id + '" href="javascript:;">开始</a> <a href="/index.php/Home/Project/displayCommunityProject/id/' + data[i].project_id + '">详情</a><br><a class = "projectBook" id = "' + data[i].project_id + '" href="javascript:;">项目书</a></td>' +
+                    '<td><a class = "startProject" sjy_id = "' + data[i].sjy_id + '" id = "' + data[i].project_id + '" href="javascript:;">开始</a> ' +
+                        '<a class="layui-btn" href="/index.php/Home/Project/displayCommunityProject/id/' + data[i].project_id + '">详情</a><br>' +
+                        '<a class = "projectBook" id = "' + data[i].project_id + '" href="javascript:;">项目书</a></td>' +
                     '</tr>';
             }
 
@@ -927,8 +794,8 @@
 
 
                 if (data[i].status >= 10 && data[i].status <= 98) {
-                    html4 += '<td><a class = "progressStep" id = "' + data[i].project_id + '" href="javascript:;">查看进度</a> ' +
-                        '<a href="/index.php/Home/Project/displayCommunityProject/id/' + data[i].project_id + '">详情</a> <br>' +
+                    html4 += '<td><a class = "see-progress" id = "' + data[i].project_id + '" href="javascript:;">查看进度</a> ' +
+                        '<a class = "see-detail"  href="/index.php/Home/Project/displayCommunityProject/id/' + data[i].project_id + '">详情</a> <br>' +
                         '<a class = "addProgress" id = "' + data[i].project_id + '" href="javascript:;">添加进度</a>   ' +
                         '<a class = "projectBook" id = "' + data[i].project_id + '" href="javascript:;">项目书</a><br>' +
                         '<a class = "finishProject" id = "' + data[i].project_id + '"  data_id = "' + data[i].sjy_id + '"  href="javascript:;">结项目</a></td>' +
@@ -936,7 +803,7 @@
 
                 } else {
                     html4 += '<td><a class = "progressStep" id = "' + data[i].project_id + '" href="javascript:;">查看进度</a> ' +
-                        '<a href="/index.php/Home/Project/displayCommunityProject/id/' + data[i].project_id + '">详情</a> <br>' +
+                        '<a class = "see-detail" href="/index.php/Home/Project/displayCommunityProject/id/' + data[i].project_id + '">详情</a> <br>' +
                         '<a class = "projectBook" id = "' + data[i].project_id + '" href="javascript:;">项目书</a>' +
                         '<a class = "finishProject" id = "' + data[i].project_id + '"  data_id = "' + data[i].sjy_id + '"  href="javascript:;">结项目</a></td>' +
                         '</tr>';
@@ -949,14 +816,13 @@
             $("#tbody4").html(html4);
 
             /*4.1 查看进度*/
-            $(".progressStep").click(function() {
+            $(".see-progress").click(function() {
 
                 $(".add-progress").animate({
                     right: '0px'
                 });
 
                 $(".progressStep").height($(window).height());
-                $(".progressStep").height($(window).height() - 200);
                 $(".sure-btn-box").height(200);
 
                 $(".close-tab-right").click(function() {
@@ -1156,8 +1022,8 @@
                     '<td>' + data[i].project_detail.sjy_community_project_start_time + ' ~<br>' + data[i].project_detail.sjy_community_project_end_time + '</td>' +
                     '<td>' + data[i].project_start_time + '</td>' +
                     '<td>' + data[i].project_apply_end_time + '</td>' +
-                    '<td><a class = "progressStep" id = "' + data[i].project_id + '" href="javascript:;">查看进度</a> ' +
-                    '<a href="/index.php/Home/Project/displayCommunityProject/id/' + data[i].project_id + '">详情</a> <br>' +
+                    '<td><a class = "see-progress" id = "' + data[i].project_id + '" href="javascript:;">查看进度</a> ' +
+                    '<a  class = "see-detail" href="/index.php/Home/Project/displayCommunityProject/id/' + data[i].project_id + '">详情</a> <br>' +
                     '<a class = "projectBook" id = "' + data[i].project_id + '" href="javascript:;">项目书</a><br>' +
                     '</tr>';
 
@@ -1168,7 +1034,7 @@
             $("#tbody5").html(html5);
 
             /*5.1 查看进度*/
-            $(".progressStep").click(function() {
+            $(".see-progress").click(function() {
 
                 $(".add-progress").animate({
                     right: '0px'
@@ -1302,8 +1168,8 @@
                     '<td>' + data[i].project_info.sjy_community_project_send_prople_name + '</td>' +
                     '<td>' + data[i].project_info.sjy_community_project_start_time + ' ~<br>' + data[i].project_info.sjy_community_project_end_time + '</td>' +
                     '<td>' + data[i].project_start_time + ' ~<br>' + data[i].project_end_time + '</td>' +
-                    '<td><a class = "progressStep" id = "' + data[i].project_id + '" href="javascript:;">查看进度</a> ' +
-                    '<a href="/index.php/Home/Project/displayCommunityProject/id/' + data[i].project_id + '">详情</a> <br>' +
+                    '<td><a class = "see-progress" id = "' + data[i].project_id + '" href="javascript:;">查看进度</a> ' +
+                    '<a  class = "see-detail" href="/index.php/Home/Project/displayCommunityProject/id/' + data[i].project_id + '">详情</a> <br>' +
                     '<a class = "projectBook" id = "' + data[i].project_id + '" href="javascript:;">项目书</a><br>' +
                     '</tr>';
             }
@@ -1311,7 +1177,7 @@
             $("#tbody6").html(html6);
 
             /*6.1 查看进度*/
-            $(".progressStep").click(function() {
+            $(".see-progress").click(function() {
 
                 $(".add-progress").animate({
                     right: '0px'
@@ -1405,9 +1271,7 @@
 
                     $(".choose-organize-box").html(html);
 
-
-
-
+                    
 
                     $(".dowmload-btn").click(function() {
 

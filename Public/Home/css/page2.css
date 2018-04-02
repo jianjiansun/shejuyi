@@ -208,6 +208,7 @@
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     border-radius: 100%;
+    border: 1px solid #CCCCCC;
 }
 
 .person-ul li a {
@@ -778,4 +779,66 @@ html {
     opacity: 0;
     bottom: -8px;
     background: 0 0;
+}
+
+.see-progress{
+    display: inline-block;
+    padding: 1px 6px;
+    background: #33ABA0;
+    color: #ffffff;
+    margin-bottom: 5px;
+    margin-right: 6px;
+}
+.see-progress:hover{
+    font-weight: 900;
+    color: #ffffff;
+}
+.see-detail{
+    display: inline-block;
+    padding: 1px 6px;
+    background: #4BB2FF;
+    color: #ffffff;
+    margin-bottom: 5px;
+    margin-right: 6px;
+}
+.see-detail:hover{
+    font-weight: 900;
+    color: #ffffff;
+}
+.addProgress{
+    display: inline-block;
+    padding: 1px 6px;
+    background: #FFC633;
+    color: #ffffff;
+    margin-bottom: 5px;
+    margin-right: 6px;
+}
+.addProgress:hover{
+    font-weight: 900;
+    color: #ffffff;
+}
+
+.projectBook {
+    display: inline-block;
+    padding: 1px 6px;
+    background: #FF794E;
+    color: #ffffff;
+    margin-bottom: 5px;
+    margin-right: 6px;
+}
+.projectBook:hover{
+    font-weight: 900;
+    color: #ffffff;
+}
+
+.finishProject {
+    display: inline-block;
+    padding: 1px 6px;
+    background: #004358;
+    color: #ffffff;
+
+}
+.finishProject:hover{
+    font-weight: 900;
+    color: #ffffff;
 }

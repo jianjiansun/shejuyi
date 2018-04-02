@@ -33,7 +33,7 @@
 }
 
 .cbp_tmtimeline > li .cbp_tmtime span:first-child {
-	font-size: 0.9em;
+	font-size: 14px;
 	color: #333333;
 }
 
@@ -113,7 +113,6 @@
 }
 
 .cbp_tmicon-phone:before {
-	content: "\e000";
 }
 
 .cbp_tmicon-screen:before {
