@@ -128,7 +128,22 @@
             $this->assign('applyEndNum',$applyEndNum); //申请结项中
         	$this->display();
         }
-        
+        //社会组织发布的项目
+        public function origanizationSendProject()
+        {
+            //社会组织id
+            $origanization_code = I('get.origanization_code')?I('get.origanization_code'):null;
+            if(empty($origanization_code))
+            {
+                $origanization_code = session('userInfo')['sjy_origanization_user_origanization_code'];
+            }
+            $project_info = M('origanization_project_info')->where(array('sjy_origanization_id'=>$origanization_code))->select();
+            foreach($project_info as $key=>$value)
+            {
+                $project_info[$key]['main_image'] = M('origanization_project_image')->where(array('sjy_origanization_project_id'=>$value['sjy_id']))->getField('sjy_origanization_project_image');
+            }
+            $this->ajaxReturn($project_info);
+        }
         //邀请我
         public function invite()
         {
@@ -255,6 +270,7 @@
         	{
         		
         		$project_info = M('community_project_info')->where(array('sjy_id'=>$value['project_id']))->find();
+
         		if($value['status'] == 99)
         		{
         			$info[$key]['status_desc'] = '结项中';
@@ -265,6 +281,7 @@
         			$info[$key]['status_desc'] = '正在执行';
         		}
         		$info[$key]['project_detail'] = $project_info;
+                $project_info[$key]['main_image'] = M('community_project_image')->where(array('sjy_community_project_id'=>$value['project_id']))->getField('sjy_community_project_image');
         	}
         	$this->ajaxReturn($info);
         }
