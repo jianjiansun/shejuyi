@@ -1,19 +1,35 @@
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EasyLife</title>
+    <link rel="stylesheet" href="/Public/Home/css/bootstrap.css">
+    <link rel="stylesheet" href="/Public/Home/css/common.css">
+    <link rel="stylesheet" href="/Public/Home/css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+    <script src="/Public/Home/js/jquery-1.12.4.js"></script>
+    <script src="/Public/Home/js/bootstrap.js"></script>
+    <script src = "/Public/Home/js/autoResizeImage.js"></script>
 
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/right-tab.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/score.css">
-    <script src = "__PUBLIC__/Home/js/jquery-1.12.4.js"></script>
-    <script src = "__PUBLIC__/Home/js/bootstrap.js"></script>
-    <script src = "__PUBLIC__/Home/js/layui.js"></script>
-    <script src = "__PUBLIC__/Home/js/layui.all.js"></script>
-    <script src = "__PUBLIC__/Home/js/startScore.js"></script>
 
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/hammer.js" type="text/javascript" charset="utf-8"></script>
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
-    <script src="__PUBLIC__/Home/js/plugins/cover_js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="/Public/Home/css/region.css">
+    <link rel="stylesheet" href="/Public/Home/css/layui.css">
+    <link rel="stylesheet" href="/Public/Home/css/page2.css">
+    <link rel="stylesheet" href="/Public/Home/css/right-tab.css">
+    <link rel="stylesheet" href="/Public/Home/css/score.css">
+    <script src = "/Public/Home/js/jquery-1.12.4.js"></script>
+    <script src = "/Public/Home/js/bootstrap.js"></script>
+    <script src = "/Public/Home/js/layui.js"></script>
+    <script src = "/Public/Home/js/layui.all.js"></script>
+    <script src = "/Public/Home/js/startScore.js"></script>
+
+    <script src="/Public/Home/js/plugins/cover_js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/Public/Home/js/plugins/cover_js/hammer.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/Public/Home/js/plugins/cover_js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/Public/Home/js/plugins/cover_js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
 
 
 
@@ -22,13 +38,13 @@
 <div class = "headLogin">
     <div class = "container">
         <div class = "left changeBan logoPer">
-            <a href="__MODULE__/Community/">
-                <img src="__PUBLIC__/Home/imgs/logo.png" alt="">
+            <a href="/index.php/Home/Community/">
+                <img src="/Public/Home/imgs/logo.png" alt="">
                 <span>社居易</span>
             </a>
         </div>
         <div class="right person">
-           <!-- <img src="__PUBLIC__/Home/imgs/personDl.jpg" alt="">-->
+           <!-- <img src="/Public/Home/imgs/personDl.jpg" alt="">-->
         </div>
     </div>
 </div>
@@ -180,7 +196,7 @@
                     <h2>个人信息</h2>
                     <div>
                         <div class = "user-img">
-                            <img id="userImg" src="{$user_image}" alt="  ">
+                            <img id="userImg" src="<?php echo ($user_image); ?>" alt="  ">
                             <span class = "iconfont VIP-icon">&#xe65b;</span>
                         </div>
                         <p style = "margin-top: 12px;">
@@ -206,32 +222,30 @@
 
                     <ul class="person-ul">
                         <li>
-                            <a href="__MODULE__/Community/communityIdentify">认证状态</a>
+                            <a href="/index.php/Home/Community/communityIdentify">认证状态</a>
                         </li>
 
                         <li>
-                            <a href="__MODULE__/Community/personInfo">账号设置</a>
+                            <a href="/index.php/Home/Community/personInfo">账号设置</a>
                         </li>
-                        <if condition='($isidentify eq 1) and ($code gt 0)'>
-                          <li>
-                              <a href="__MODULE__/Community/myCommunity">我的社区</a>
+                        <?php if(($isidentify == 1) and ($code > 0)): ?><li>
+                              <a href="/index.php/Home/Community/myCommunity">我的社区</a>
                           </li>
                           <li>
-                              <a  class = "on" href="__MODULE__/Project/communityProjectManger">我的项目</a>
+                              <a  class = "on" href="/index.php/Home/Project/communityProjectManger">我的项目</a>
                           </li>
                           <li>
                               <a href="">我的消息</a>
-                          </li>
-                        </if>
+                          </li><?php endif; ?>
                     </ul>
                 </div>
                 <div class="col-md-10 column perperson-con" style = "background: #FFFFFF;">
                     <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
                         <ul class="layui-tab-title">
-                            <li class="layui-this"  lay-id="a">征集中<if condition='$collectNum gt 0'><span class="layui-badge">{$collectNum}</span></if></li>
-                            <li id = "starting" lay-id="b">待开始<if condition='$waitStatNum gt 0'><span class="layui-badge">{$waitStatNum}</span></if></li>
-                            <li id = "going" lay-id="c">执行中<if condition='$ingNum gt 0'><span class="layui-badge">{$ingNum}</span></if></li>
-                            <li id = "agreenFinish"  lay-id="d">结项中<if condition='$applyEndNum gt 0'><span class="layui-badge">{$applyEndNum}</span></if></li>
+                            <li class="layui-this"  lay-id="a">征集中<?php if($collectNum > 0): ?><span class="layui-badge"><?php echo ($collectNum); ?></span><?php endif; ?></li>
+                            <li id = "starting" lay-id="b">待开始<?php if($waitStatNum > 0): ?><span class="layui-badge"><?php echo ($waitStatNum); ?></span><?php endif; ?></li>
+                            <li id = "going" lay-id="c">执行中<?php if($ingNum > 0): ?><span class="layui-badge"><?php echo ($ingNum); ?></span><?php endif; ?></li>
+                            <li id = "agreenFinish"  lay-id="d">结项中<?php if($applyEndNum > 0): ?><span class="layui-badge"><?php echo ($applyEndNum); ?></span><?php endif; ?></li>
                             <li id = "finishProject" lay-id="e">已完成</li>
                         </ul>
                         <div class="layui-tab-content">
@@ -549,7 +563,7 @@
 
 
             $.ajax({
-                url: "__MODULE__/Origanization/douploadtouxiang",
+                url: "/index.php/Home/Origanization/douploadtouxiang",
                 type: "POST",
                 data: {
                     img: dataURL
@@ -575,7 +589,7 @@
 
     /*1. 征集中*/
 
-    $.post("__CONTROLLER__/communityTenderProject", function (data) {
+    $.post("/index.php/Home/Project/communityTenderProject", function (data) {
 
         var html = '';
         for(var i = 0; i < data.data.length; i++){
@@ -585,7 +599,7 @@
                 '<td>'+ data.data[i].sjy_community_project_service_area +'</td>\n' +
                 '<td>'+ data.data[i].sjy_community_project_collect_start_time+'~<br>'+data.data[i].sjy_community_project_collect_end_time +'</td>\n' +
                 '<td>'+ data.data[i].sjy_community_project_start_time+'~<br>'+ data.data[i].sjy_community_project_end_time  +'</td>\n' +
-                '<td><a href="__CONTROLLER__/displayCommunityProject/id/'+data.data[i].sjy_id+'">查看</a><br><a id = "'+data.data[i].sjy_id +'" class = "intention-organization" href="javascript:;">意向机构</a></td>\n' +
+                '<td><a href="/index.php/Home/Project/displayCommunityProject/id/'+data.data[i].sjy_id+'">查看</a><br><a id = "'+data.data[i].sjy_id +'" class = "intention-organization" href="javascript:;">意向机构</a></td>\n' +
                 '\n' +
                 '</tr>';
         }
@@ -617,7 +631,7 @@
 
             var id = $(this).attr("id");
 
-            $.post("__MODULE__/Project/intentOriganization/id/" + id , function (data) {
+            $.post("/index.php/Home/Project/intentOriganization/id/" + id , function (data) {
 
                 var html = '';
 
@@ -655,7 +669,7 @@
 
                             //按钮【按钮一】的回调
 
-                            $.post("__MODULE__/Project/agreeProject",{ project_id: projectId, origanization_id : organizationId  }, function(data){
+                            $.post("/index.php/Home/Project/agreeProject",{ project_id: projectId, origanization_id : organizationId  }, function(data){
 
                                 if(data.state == 1){
 
@@ -699,7 +713,7 @@
                     $(".organize-proposal").css("display", "none");
                     $(this).parent().next().css("display", "block");
 
-                    $.post("__MODULE__/Project/projectBookList/origanization_id/" + organizationId +"/project_id/" +  id , function (data) {
+                    $.post("/index.php/Home/Project/projectBookList/origanization_id/" + organizationId +"/project_id/" +  id , function (data) {
                         console.log(data);
                         var html = "";
                         for(var i =0; i < data.data.length; i++ ){
@@ -717,7 +731,7 @@
 
                             var book_id = $(this).attr("id");
 
-                            $.get("__MODULE__/Project/downloadProjectBook", {"id" : book_id},function(data){
+                            $.get("/index.php/Home/Project/downloadProjectBook", {"id" : book_id},function(data){
 
 
                             });
@@ -739,7 +753,7 @@
     });
 
     /*2、 待开始*/
-    $.get("__MODULE__/Project/waitOriganizationStart",  function(data){
+    $.get("/index.php/Home/Project/waitOriganizationStart",  function(data){
 
         //console.log(data[0].project_info.sjy_community_name);
 
@@ -752,7 +766,7 @@
                 '<td>'+ data[i].project_info.sjy_community_project_send_prople_name +'</td>\n' +
                 '<td>'+ data[i].project_info.sjy_community_project_origanization_name	+'</td>\n' +
                 '<td>'+ data[i].project_info.sjy_community_project_service_area +'</td>\n' +
-                '<td><a href="__CONTROLLER__/displayCommunityProject/id/'+data[i].project_id+'">查看</a>' +
+                '<td><a href="/index.php/Home/Project/displayCommunityProject/id/'+data[i].project_id+'">查看</a>' +
                 '<a class = "projectBook" id = "'+ data[i].project_id +'"  data_id = "'+ data[i].origanization_id +'"  href="javascript:;">项目书</a> ' +
                 '</td>\n' +
                 '</tr>';
@@ -784,7 +798,7 @@
             var project_id = $(this).attr("id");
             var origanization_id = $(this).attr("data_id");
 
-            $.get("__MODULE__/Project/projectBookList",{"project_id" : project_id,"origanization_id" :origanization_id}, function (data) {
+            $.get("/index.php/Home/Project/projectBookList",{"project_id" : project_id,"origanization_id" :origanization_id}, function (data) {
 
                 var html = '';
                 html += '<div class = "organize-choose-tit">\n' +
@@ -816,7 +830,7 @@
 
                     var book_id = $(this).attr("id");
 
-                    $.get("__MODULE__/Project/downloadProjectBook", {"id" : book_id},function(data){
+                    $.get("/index.php/Home/Project/downloadProjectBook", {"id" : book_id},function(data){
 
 
                     });
@@ -847,7 +861,7 @@
     /*3. 进行中*/
     $("#going").click(function () {
 
-        $.post("__MODULE__/Project/communityIngProject", function(data){
+        $.post("/index.php/Home/Project/communityIngProject", function(data){
 
             var html3 = '';
             console.log(data[0].sjy_community_project_title );
@@ -861,7 +875,7 @@
                     '<td>'+ data[i].project_info.sjy_community_project_collect_start_time + ' ~<br>'+data[i].project_info.sjy_community_project_collect_end_time +'</td>' +
                     '<td>'+ data[i].project_info.sjy_community_project_start_time + ' ~<br>'+data[i].project_info.sjy_community_project_end_time +'</td>' +
                     '<td><a class = "progressStep" id = "'+ data[i].project_id +'" href="javascript:;">查看进度</a> ' +
-                        '<a href="__CONTROLLER__/displayCommunityProject/id/'+data[i].project_id+'">详情</a> <br>' +
+                        '<a href="/index.php/Home/Project/displayCommunityProject/id/'+data[i].project_id+'">详情</a> <br>' +
                         '<a class = "projectBook" id = "'+ data[i].project_id +'"  data_id = "'+ data[i].origanization_id +'"  href="javascript:;">项目书</a> ' +
                         '</tr>';
 
@@ -887,7 +901,7 @@
 
                 var project_id = $(this).attr("id");
 
-                $.get("__MODULE__/Project/projectRate" , {"project_id" : project_id}, function (data) {
+                $.get("/index.php/Home/Project/projectRate" , {"project_id" : project_id}, function (data) {
 
                     console.log(data);
                     var text4 = '';
@@ -937,7 +951,7 @@
                 var project_id = $(this).attr("id");
                 var origanization_id = $(this).attr("data_id");
 
-                $.get("__MODULE__/Project/projectBookList",{"project_id" : project_id,"origanization_id" :origanization_id}, function (data) {
+                $.get("/index.php/Home/Project/projectBookList",{"project_id" : project_id,"origanization_id" :origanization_id}, function (data) {
 
                     var html = '';
                     html += '<div class = "organize-choose-tit">\n' +
@@ -969,7 +983,7 @@
 
                         var book_id = $(this).attr("id");
 
-                        $.get("__MODULE__/Project/downloadProjectBook", {"id" : book_id},function(data){
+                        $.get("/index.php/Home/Project/downloadProjectBook", {"id" : book_id},function(data){
 
 
                         });
@@ -990,7 +1004,7 @@
 
     $("#agreenFinish").click(function () {
 
-        $.post("__MODULE__/Project/communityWaitCompleteProject", function(data){
+        $.post("/index.php/Home/Project/communityWaitCompleteProject", function(data){
 
             var html4 = '';
 
@@ -1003,7 +1017,7 @@
                     '<td>'+ data[i].project_apply_end_time+'</td>' +
                     '<td>' +
                     '<a class = "progressStep" id = "'+ data[i].project_id +'" href="javascript:;">查看进度</a> ' +
-                    '<a href="__CONTROLLER__/displayCommunityProject/id/'+data[i].project_id+'">详情</a> <br>' +
+                    '<a href="/index.php/Home/Project/displayCommunityProject/id/'+data[i].project_id+'">详情</a> <br>' +
                     '<a class = "agreeFinishProject" id = "'+ data[i].project_id +'"  data_id = "'+ data[i].sjy_id +'"  href="javascript:;">同意结项</a> ' +
                     '<a class = "projectBook" id = "'+ data[i].project_id +'"  data_id = "'+ data[i].origanization_id +'"  href="javascript:;">项目书</a> ' +
                     '</tr>';
@@ -1030,7 +1044,7 @@
 
                 var project_id = $(this).attr("id");
 
-                $.get("__MODULE__/Project/projectRate" , {"project_id" : project_id}, function (data) {
+                $.get("/index.php/Home/Project/projectRate" , {"project_id" : project_id}, function (data) {
 
                     console.log(data);
                     var text4 = '';
@@ -1079,7 +1093,7 @@
                 var project_id = $(this).attr("id");
                 var origanization_id = $(this).attr("data_id");
 
-                $.get("__MODULE__/Project/projectBookList",{"project_id" : project_id,"origanization_id" :origanization_id}, function (data) {
+                $.get("/index.php/Home/Project/projectBookList",{"project_id" : project_id,"origanization_id" :origanization_id}, function (data) {
 
                     var html = '';
                     html += '<div class = "organize-choose-tit">\n' +
@@ -1111,7 +1125,7 @@
 
                         var book_id = $(this).attr("id");
 
-                        $.get("__MODULE__/Project/downloadProjectBook", {"id" : book_id},function(data){
+                        $.get("/index.php/Home/Project/downloadProjectBook", {"id" : book_id},function(data){
 
 
                         });
@@ -1146,7 +1160,7 @@
 
                         //按钮【按钮一】的回调
 
-                        $.post("__MODULE__/Project/agreenEndProject", {"project_id": project_id ,"score" :score, "id" : sjy_id }, function (data) {
+                        $.post("/index.php/Home/Project/agreenEndProject", {"project_id": project_id ,"score" :score, "id" : sjy_id }, function (data) {
 
                             if(data.state == 1){
                                 /*跳转到进行中*/
@@ -1180,7 +1194,7 @@
 
     /*5. 已完成 */
     $("#finishProject").click(function () {
-        $.post("__MODULE__/Project/communityCompleteProject", function(data){
+        $.post("/index.php/Home/Project/communityCompleteProject", function(data){
 
             var html5 = '';
             console.log(data[0].sjy_community_project_title );
@@ -1195,7 +1209,7 @@
                     '<td>'+ data[i].project_info.sjy_community_project_start_time+'~<br>' + data[i].project_info.sjy_community_project_end_time+'</td>' +
                     '<td>' +
                     '<a class = "progressStep" id = "'+ data[i].project_id +'" href="javascript:;">查看进度</a> ' +
-                    '<a href="__CONTROLLER__/displayCommunityProject/id/'+data[i].project_id+'">详情</a> <br>' +
+                    '<a href="/index.php/Home/Project/displayCommunityProject/id/'+data[i].project_id+'">详情</a> <br>' +
                     '<a class = "projectBook" id = "'+ data[i].project_id +'"  data_id = "'+ data[i].origanization_id +'"  href="javascript:;">项目书</a> ' +
                     '</tr>';
 
@@ -1221,7 +1235,7 @@
 
                 var project_id = $(this).attr("id");
 
-                $.get("__MODULE__/Project/projectRate" , {"project_id" : project_id}, function (data) {
+                $.get("/index.php/Home/Project/projectRate" , {"project_id" : project_id}, function (data) {
 
                     console.log(data);
                     var text4 = '';
@@ -1270,7 +1284,7 @@
                 var project_id = $(this).attr("id");
                 var origanization_id = $(this).attr("data_id");
 
-                $.get("__MODULE__/Project/projectBookList",{"project_id" : project_id,"origanization_id" :origanization_id}, function (data) {
+                $.get("/index.php/Home/Project/projectBookList",{"project_id" : project_id,"origanization_id" :origanization_id}, function (data) {
 
                     var html = '';
                     html += '<div class = "organize-choose-tit">\n' +
@@ -1302,7 +1316,7 @@
 
                         var book_id = $(this).attr("id");
 
-                        $.get("__MODULE__/Project/downloadProjectBook", {"id" : book_id},function(data){
+                        $.get("/index.php/Home/Project/downloadProjectBook", {"id" : book_id},function(data){
 
 
                         });

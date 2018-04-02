@@ -20,7 +20,12 @@
         <div class="dropdown pull-right">
 
             <a href="#" data-toggle="dropdown" class="dropdown-toggle">
-                <img src="{$user_image}" alt="">
+                <div class = "user-img" style = "display: inline-block">
+                    <img src="{$user_image}" alt="">
+                    <span class = "iconfont VIP-icon" style = "right: -20px;">&#xe65b;</span>
+                </div>
+
+
                 <span>{$showname}<if condition='$active egt 1'><span class="layui-badge-dot"></span></if></span>
             </a>
             <ul class="dropdown-menu personalMenu">

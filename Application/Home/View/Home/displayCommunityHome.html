@@ -35,7 +35,7 @@
     <div id="showCityBox" class="province-switch" style="display: none;">
     </div>
     <div class="headLogin">
-        <div class="container">
+
             <div class="left changeBan">
                 <a href="javascript:;" id="cityChoose" class="region">{$city}</a>
                 <a class="on" href="">社会组织版</a>
@@ -45,7 +45,10 @@
         <div class="dropdown pull-right">
 
             <a href="#" data-toggle="dropdown" class="dropdown-toggle">
-                <img src="{$user_image}" alt="">
+                <div class = "user-img" style = "display: inline-block">
+                    <img src="{$user_image}" alt="">
+                    <span class = "iconfont VIP-icon" style = "right: -20px;">&#xe65b;</span>
+                </div>
                 <span>{$showname}<if condition='$active egt 1'><span class="layui-badge-dot"></span></if></span>
             </a>
             <if condition='$figure eq 2'>
@@ -99,8 +102,6 @@
             </if>
         </div>
 
-
-    </div>
         </div>
     </div>
     <div class="headNavBox">

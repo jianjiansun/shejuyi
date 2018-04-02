@@ -842,3 +842,24 @@ html {
     font-weight: 900;
     color: #ffffff;
 }
+.user-img{
+    position: relative;
+
+}
+.VIP-icon{
+    position: absolute;
+    bottom: 0;
+    right: 40px;
+    font-size: 18px;
+    color: #ffffff;
+    background:#FF5722;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    height: 16px;
+    line-height: 18px;
+    width: 24px;
+    text-align: center;
+    display: inline-block;
+
+}
