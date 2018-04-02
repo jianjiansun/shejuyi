@@ -585,7 +585,8 @@
                 '<td>'+ data.data[i].sjy_community_project_service_area +'</td>\n' +
                 '<td>'+ data.data[i].sjy_community_project_collect_start_time+'~<br>'+data.data[i].sjy_community_project_collect_end_time +'</td>\n' +
                 '<td>'+ data.data[i].sjy_community_project_start_time+'~<br>'+ data.data[i].sjy_community_project_end_time  +'</td>\n' +
-                '<td><a href="__CONTROLLER__/displayCommunityProject/id/'+data.data[i].sjy_id+'">查看</a><br><a id = "'+data.data[i].sjy_id +'" class = "intention-organization" href="javascript:;">意向机构</a></td>\n' +
+                '<td><a href="__CONTROLLER__/displayCommunityProject/id/'+data.data[i].sjy_id+'">查看</a><br>' +
+                    '<a id = "'+data.data[i].sjy_id +'" class = "intention-organization" href="javascript:;">意向机构</a></td>\n' +
                 '\n' +
                 '</tr>';
         }
@@ -860,8 +861,8 @@
                     '<td>'+ data[i].project_info.sjy_community_project_service_area+'</td>' +
                     '<td>'+ data[i].project_info.sjy_community_project_collect_start_time + ' ~<br>'+data[i].project_info.sjy_community_project_collect_end_time +'</td>' +
                     '<td>'+ data[i].project_info.sjy_community_project_start_time + ' ~<br>'+data[i].project_info.sjy_community_project_end_time +'</td>' +
-                    '<td><a class = "progressStep" id = "'+ data[i].project_id +'" href="javascript:;">查看进度</a> ' +
-                        '<a href="__CONTROLLER__/displayCommunityProject/id/'+data[i].project_id+'">详情</a> <br>' +
+                    '<td><a class = "see-progress" id = "'+ data[i].project_id +'" href="javascript:;">查看进度</a> ' +
+                        '<a class = "see-detail" href="__CONTROLLER__/displayCommunityProject/id/'+data[i].project_id+'">详情</a> <br>' +
                         '<a class = "projectBook" id = "'+ data[i].project_id +'"  data_id = "'+ data[i].origanization_id +'"  href="javascript:;">项目书</a> ' +
                         '</tr>';
 
@@ -869,7 +870,7 @@
             $("#tbody3").html(html3);
 
             /*3.1 查看进度*/
-            $(".progressStep").click(function () {
+            $(".see-progress").click(function () {
 
                 $(".add-progress").animate({
                     right:'0px'
@@ -1002,8 +1003,8 @@
                     '<td>'+ data[i].project_info.sjy_community_project_service_area+'</td>' +
                     '<td>'+ data[i].project_apply_end_time+'</td>' +
                     '<td>' +
-                    '<a class = "progressStep" id = "'+ data[i].project_id +'" href="javascript:;">查看进度</a> ' +
-                    '<a href="__CONTROLLER__/displayCommunityProject/id/'+data[i].project_id+'">详情</a> <br>' +
+                    '<a class = "see-progress" id = "'+ data[i].project_id +'" href="javascript:;">查看进度</a> ' +
+                    '<a class = "see-detail" href="__CONTROLLER__/displayCommunityProject/id/'+data[i].project_id+'">详情</a> <br>' +
                     '<a class = "agreeFinishProject" id = "'+ data[i].project_id +'"  data_id = "'+ data[i].sjy_id +'"  href="javascript:;">同意结项</a> ' +
                     '<a class = "projectBook" id = "'+ data[i].project_id +'"  data_id = "'+ data[i].origanization_id +'"  href="javascript:;">项目书</a> ' +
                     '</tr>';
@@ -1012,7 +1013,7 @@
             $("#tbody4").html(html4);
 
             /*4.1 查看进度*/
-            $(".progressStep").click(function () {
+            $(".see-progress").click(function () {
 
                 $(".add-progress").animate({
                     right:'0px'
@@ -1194,8 +1195,8 @@
                     '<td>'+ data[i].project_start_time+'~<br>' + data[i].project_end_time +'</td>' +
                     '<td>'+ data[i].project_info.sjy_community_project_start_time+'~<br>' + data[i].project_info.sjy_community_project_end_time+'</td>' +
                     '<td>' +
-                    '<a class = "progressStep" id = "'+ data[i].project_id +'" href="javascript:;">查看进度</a> ' +
-                    '<a href="__CONTROLLER__/displayCommunityProject/id/'+data[i].project_id+'">详情</a> <br>' +
+                    '<a class = "see-progress" id = "'+ data[i].project_id +'" href="javascript:;">查看进度</a> ' +
+                    '<a class = "see-detail" href="__CONTROLLER__/displayCommunityProject/id/'+data[i].project_id+'">详情</a> <br>' +
                     '<a class = "projectBook" id = "'+ data[i].project_id +'"  data_id = "'+ data[i].origanization_id +'"  href="javascript:;">项目书</a> ' +
                     '</tr>';
 
@@ -1203,7 +1204,7 @@
             $("#tbody5").html(html5);
 
             /*5.1 查看进度*/
-            $(".progressStep").click(function () {
+            $(".see-progress").click(function () {
 
                 $(".add-progress").animate({
                     right:'0px'

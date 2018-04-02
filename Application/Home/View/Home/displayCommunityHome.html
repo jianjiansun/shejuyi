@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="__PUBLIC__/Home/css/chooseCity.css">
     <link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
     <link rel="stylesheet" href="__PUBLIC__/Home/css/detail.css">
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/score.css">
     
     <link rel="stylesheet" href="__PUBLIC__/Home/css/component.css">
     <link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
@@ -205,30 +206,6 @@
                                 </div>
 
                             </li>
-                            <li class="clearfix pro-li">
-                                <div class="left leftImg">
-                                    <img src="__PUBLIC__/Home/imgs/shequ1.jpg" alt="">
-                                </div>
-                                <div class="left leftCon">
-                                    <dl>
-                                        <!--<dt>项目名称</dt>-->
-                                        <dd class="project-tit">“志愿青春，成长无虑”如意社区青少年服务项目</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>执行周期</dt>
-                                        <dd>2017.07.11-2017.12.15</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>落地社区</dt>
-                                        <dd>如意社区</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>评  分</dt>
-                                        <dd>88分</dd>
-                                    </dl>
-                                </div>
-
-                            </li>
                         </ul>
 
 
@@ -236,55 +213,8 @@
 
                     <div class="box box3" style="display: none;">
                         <ul class="clearfix">
-                            <li class="clearfix pro-li">
-                                <div class="left leftImg">
-                                    <img src="__PUBLIC__/Home/imgs/shequ3.jpg" alt="">
-                                </div>
-                                <div class="left leftCon">
-                                    <dl>
-                                        <!--<dt>项目名称</dt>-->
-                                        <dd class="project-tit">“志愿青春，成长无虑”如意社区青少年服务项目</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>执行周期</dt>
-                                        <dd>2017.07.11-2017.12.15</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>落地社区</dt>
-                                        <dd>如意社区</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>时 间</dt>
-                                        <dd>2017-09-13 20:28</dd>
-                                    </dl>
-                                </div>
 
-                            </li>
 
-                            <li class="clearfix pro-li">
-                                <div class="left leftImg">
-                                    <img src="__PUBLIC__/Home/imgs/shequ3.jpg" alt="">
-                                </div>
-                                <div class="left leftCon">
-                                    <dl>
-                                        <!--<dt>项目名称</dt>-->
-                                        <dd class="project-tit">“志愿青春，成长无虑”如意社区青少年服务项目</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>执行周期</dt>
-                                        <dd>2017.07.11-2017.12.15</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>落地社区</dt>
-                                        <dd>如意社区</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>时 间</dt>
-                                        <dd>2017-09-13 20:28</dd>
-                                    </dl>
-                                </div>
-
-                            </li>
                             <li class="clearfix pro-li">
                                 <div class="left leftImg">
                                     <img src="__PUBLIC__/Home/imgs/shequ3.jpg" alt="">
@@ -578,8 +508,13 @@
                     '</dl>' +
                     '<dl>' +
                     '<dt>评分</dt>' +
-                    '<dd  class="atar_Show"><p tip="' + data[i].score + '"></p></dd>' +
-                    '<span></span>' +
+                    '<dd>' +
+                    '<div class="atar_Show">' +
+                    '<p tip="' + data[i].score + '"></p>' +
+                    '</div>' +
+                    '<span>' +
+                    '</span>' +
+                    '</dd>' +
                     '</dl>' +
                     '</div>' +
                     '</a>' +

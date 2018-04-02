@@ -838,6 +838,32 @@ html {
     color: #ffffff;
 
 }
+.intention-organization{
+    display: inline-block;
+    padding: 1px 6px;
+    background: #FF794E;
+    color: #ffffff;
+    margin-bottom: 5px;
+    margin-right: 6px;
+}
+
+.intention-organization:hover{
+    font-weight: 900;
+    color: #ffffff;
+}
+.agreeFinishProject{
+    display: inline-block;
+    padding: 1px 6px;
+    background: #FF794E;
+    color: #ffffff;
+    margin-bottom: 5px;
+    margin-right: 6px;
+}
+.agreeFinishProject:hover{
+    font-weight: 900;
+    color: #ffffff;
+}
+
 .finishProject:hover{
     font-weight: 900;
     color: #ffffff;
