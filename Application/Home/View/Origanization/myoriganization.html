@@ -11,7 +11,11 @@
 <script src="__PUBLIC__/Home/js/plugins/cover_js/hammer.js" type="text/javascript" charset="utf-8"></script>
 <script src="__PUBLIC__/Home/js/plugins/cover_js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
 <script src="__PUBLIC__/Home/js/plugins/cover_js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="__PUBLIC__/Home/js/jQuery.upload.min.js"></script>
+<link rel="stylesheet" href="__PUBLIC__/Home/css/upload.css">
+<style>
 
+</style>
 </head>
 
 <body>
@@ -42,11 +46,11 @@
                     <div class="col-md-2 column  perperson">
                         <h2>个人信息</h2>
                         <div>
-                            <div class = "user-img">
+                            <div class="user-img">
                                 <img id="userImg" src="{$user_image}" alt="  ">
-                                <span class = "iconfont VIP-icon">&#xe65b;</span>
+                                <span class="iconfont VIP-icon">&#xe65b;</span>
                             </div>
-                            <p style = "margin-top: 12px;">
+                            <p style="margin-top: 12px;">
                                 VIP有效期 :<br>
                                 <span class="blue-btn" style="background:#ffa34a;color: #ffffff;">2018-05-01~2019-05-01</span>
                             </p>
@@ -203,18 +207,14 @@
                                         <div class="img-box full">
                                             <section class=" img-section">
                                                 <p class="up-p">机构风采：<span class="up-span">上传一张图片</span></p>
-                                                <div id="preview" class="testImg">
-                                                    <img id="imghead" border=0 src='__PUBLIC__/Home/imgs/a11.png'>
-                                                </div>
-
-                                                <div class="uploadBtn">
-                                                    <input class="uploadImgBtn" type="file" onchange="previewImage(this)" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg">
+                                                <div class="case">
+                                                    <div class="upload" action='__CONTROLLER__/uploadoriganizationimgs' data-num='1' id='case2'></div>
                                                 </div>
                                             </section>
                                         </div>
                                     </div>
 
-                                    <div class="sure"><a href="javascript:;" id="sureBtn3" class="layui-btn">确定</a></div>
+
                                 </div>
                             </div>
                         </div>
@@ -234,6 +234,11 @@
         </div>
     </div>
 </body>
+<script>
+    $(function() {
+        $("#case2").upload();
+    })
+</script>
 <script src="__PUBLIC__/Home/js/cityBoxShow.js"></script>
 <script>
     $.post("__CONTROLLER__/getOriganizationInfo", function(data) {
@@ -439,9 +444,9 @@
         dataType: "json",
         success: function(data) {
             if (data) {
-                $("#imghead").attr('src', data);
+                $("#case2").attr('data-value', 'http://p33g9t7dr.bkt.clouddn.com/' + data);
             } else {
-                $("#imghead").attr('src', '__PUBLIC__/Home/imgs/a11.png')
+                // $("#imghead").attr('src', '__PUBLIC__/Home/imgs/a11.png')
             }
         }
     })
