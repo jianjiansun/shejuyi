@@ -9,41 +9,43 @@
 <script src="__PUBLIC__/Home/js/upLoadImg.js"></script> -->
 
 
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/testfy.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/chooseCity.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/detail.css">
-    
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/component.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/score.css">
+<link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
+<link rel="stylesheet" href="__PUBLIC__/Home/css/testfy.css">
+<link rel="stylesheet" href="__PUBLIC__/Home/css/chooseCity.css">
+<link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
+<link rel="stylesheet" href="__PUBLIC__/Home/css/detail.css">
 
-    <script src="__PUBLIC__/Home/js/jquery.page.js"></script>
-    <script src="__PUBLIC__/Home/js/upLoadImg.js"></script>
-    <script src="__PUBLIC__/Home/js/layui.js"></script>
+<link rel="stylesheet" href="__PUBLIC__/Home/css/component.css">
+<link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
+<link rel="stylesheet" href="__PUBLIC__/Home/css/score.css">
+
+<script src="__PUBLIC__/Home/js/jquery.page.js"></script>
+<script src="__PUBLIC__/Home/js/upLoadImg.js"></script>
+<script src="__PUBLIC__/Home/js/layui.js"></script>
 </head>
+
 <body>
     <div class="shadeBox"></div>
     <div id="showCityBox" class="province-switch" style="display: none;">
     </div>
     <div class="headLogin">
-            <div class="left changeBan">
-                <a href="javascript:;" id="cityChoose" class="region">{$city}</a>
-                <a class="on" href="">社会组织版</a>
-                <a href="">社区版</a>
-            </div>
-            <div class="right person">
-                <div class="dropdown pull-right">
+        <div class="left changeBan">
+            <a href="javascript:;" id="cityChoose" class="region">{$city}</a>
+            <a class="on" href="">社会组织版</a>
+            <a href="">社区版</a>
+        </div>
+        <div class="right person">
+            <div class="dropdown pull-right">
 
-            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
-                <div class = "user-img" style = "display: inline-block">
-                    <img src="{$user_image}" alt="">
-                    <span class = "iconfont VIP-icon" style = "right: -20px;">&#xe65b;</span>
-                </div>
-                <span>{$showname}<if condition='$active egt 1'><span class="layui-badge-dot"></span></if></span>
-            </a>
-            <if condition='$figure eq 2'>
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                    <div class="user-img" style="display: inline-block">
+                        <img src="{$user_image}" alt="">
+                        <span class="iconfont VIP-icon" style="right: -20px;">&#xe65b;</span>
+                    </div>
+                    <span>{$showname}<if condition='$active egt 1'><span class="layui-badge-dot"></span></if>
+                    </span>
+                </a>
+                <if condition='$figure eq 2'>
                     <ul class="dropdown-menu personalMenu">
                         <li>
                             <a href="__MODULE__/Community/communityIdentify">认证状态</a>
@@ -64,18 +66,18 @@
 
                             <li>
                         </if>
-                            <a href="__MODULE__/Community/logout">注销</a>
+                        <a href="__MODULE__/Community/logout">注销</a>
                         </li>
                     </ul>
-           <else />
+                    <else />
                     <ul class="dropdown-menu personalMenu">
                         <li>
                             <a href="__MODULE__/Origanization/origanizationIdentify">认证状态</a>
                         </li>
-                            <li>
-                                <a href="__MODULE__/Origanization/personinfo">账号设置</a>
-                            </li>
-                         <if condition='($isidentify eq 1) and ($code gt 0)'>
+                        <li>
+                            <a href="__MODULE__/Origanization/personinfo">账号设置</a>
+                        </li>
+                        <if condition='($isidentify eq 1) and ($code gt 0)'>
                             <li>
                                 <a href="__MODULE__/Origanization/myoriganization">我的机构</a>
                             </li>
@@ -90,8 +92,8 @@
                             <a href="__MODULE__/Origanization/logout">注销</a>
                         </li>
                     </ul>
-            </if>
-        </div>
+                </if>
+            </div>
         </div>
     </div>
     <div class="headNavBox">
@@ -135,9 +137,9 @@
                 <div class="detail-head">
                     <ul class="detail-nav">
                         <li><a class="nav1 on" href="javascript:;">机构详情</a></li>
-                        <li><a id = "alreadyFinishProject" class="nav2" href="javascript:;">已完成的项目</a></li>
-                        <li><a id = "finishingProject" class="nav3" href="javascript:;">正在完成的项目</a></li>
-                        <li><a id = "alreadyDeliver" class="nav4" href="javascript:;">已发布的</a></li>
+                        <li><a id="alreadyFinishProject" class="nav2" href="javascript:;">已完成的项目</a></li>
+                        <li><a id="finishingProject" class="nav3" href="javascript:;">正在完成的项目</a></li>
+                        <li><a id="alreadyDeliver" class="nav4" href="javascript:;">已发布的</a></li>
                     </ul>
                 </div>
                 <div class="detail-detail">
@@ -395,49 +397,49 @@
 
 
     /*已完成的项目*/
-    $(".nav2").click(function () {
+    $(".nav2").click(function() {
 
-        $.post("__MODULE__/Project/completeProject?origanization_code={$id}", function (data) {
+        $.post("__MODULE__/Project/completeProject?origanization_code={$id}", function(data) {
 
 
             var html = '';
-            for(var i= 0; i < data.length; i++){
+            for (var i = 0; i < data.length; i++) {
                 html += '<li class="clearfix pro-li">' +
-                        '<a href="__MODULE__/Project/displayCommunityProject/id/' + data[i].sjy_id + '">' +
-                        '<div class="left leftImg">' +
-                        '<img src="http://p33g9t7dr.bkt.clouddn.com/'+ data[i].main_image +'" alt="">' +
-                        '</div>' +
-                        '<div class="left leftCon">' +
-                        '<dl>' +
-                        '<dd class="project-tit">'+ data[i].project_info.sjy_community_project_title +'</dd>' +
-                        '</dl>' +
-                        '<dl>' +
-                        '<dt>执行周期</dt>' +
-                        '<dd>'+ data[i].project_info.sjy_community_project_start_time +' ~ ' + data[i].project_info.sjy_community_project_end_time + '</dd>' +
-                        '</dl>' +
-                        '<dl>' +
-                        '<dt>落地社区</dt>' +
-                        '<dd>'+ data[i].sjy_community_name +'</dd>' +
-                        '</dl>' +
-                        '<dl>' +
-                        '<dt>评  分</dt>' +
-                        '<dd><div class="atar_Show">' +
-                        '<p tip="'+ data[i].score +'"></p>' +
-                        '</div>' +
-                        '<span></span></dd>' +
-                        '</dl>' +
-                        '</div>' +
-                        '</a>' +
-                        '</li>';
+                    '<a target="_blank" href="__MODULE__/Project/displayCommunityProject/id/' + data[i].project_info['sjy_id'] + '">' +
+                    '<div class="left leftImg">' +
+                    '<img src="http://p33g9t7dr.bkt.clouddn.com/' + data[i].main_image + '" alt="">' +
+                    '</div>' +
+                    '<div class="left leftCon">' +
+                    '<dl>' +
+                    '<dd class="project-tit">' + data[i].project_info.sjy_community_project_title + '</dd>' +
+                    '</dl>' +
+                    '<dl>' +
+                    '<dt>执行周期</dt>' +
+                    '<dd>' + data[i].project_info.sjy_community_project_start_time + ' ~ ' + data[i].project_info.sjy_community_project_end_time + '</dd>' +
+                    '</dl>' +
+                    '<dl>' +
+                    '<dt>落地社区</dt>' +
+                    '<dd>' + data[i].project_info['sjy_community_name'] + '</dd>' +
+                    '</dl>' +
+                    '<dl>' +
+                    '<dt>评  分</dt>' +
+                    '<dd><div class="atar_Show">' +
+                    '<p tip="' + data[i].score + '"></p>' +
+                    '</div>' +
+                    '<span></span></dd>' +
+                    '</dl>' +
+                    '</div>' +
+                    '</a>' +
+                    '</li>';
             }
 
             $(".box2 ul").html(html);
             //显示分数
             $(".show_number li p").each(function(index, element) {
-                var num=$(this).attr("tip");
-                var www=num*2*16;//
-                $(this).css("width",www);
-                $(this).parent(".atar_Show").siblings("span").text(num+"分");
+                var num = $(this).attr("tip");
+                var www = num * 2 * 16; //
+                $(this).css("width", www);
+                $(this).parent(".atar_Show").siblings("span").text(num + "分");
             });
 
 
@@ -451,49 +453,46 @@
 
     /*正在完成的项目*/
 
-    $(".nav3").click(function () {
+    $(".nav3").click(function() {
 
-        $.post("__MODULE__/Project/ingProject?origanization_code={$id}", function (data) {
+        $.post("__MODULE__/Project/ingProject?origanization_code={$id}", function(data) {
 
             var html = '';
-            for(var i= 0; i < data.length; i++){
+            for (var i = 0; i < data.length; i++) {
                 html += '<li class="clearfix pro-li">' +
-                        '<a href="__MODULE__/Project/displayCommunityProject/id/' + data[i].sjy_id + '" target="_blank" >' +
-                        '<div class="left leftImg">' +
-                        '<img src="http://p33g9t7dr.bkt.clouddn.com/'+ data[i].main_image +'" alt="">' +
-                        '</div>' +
-                        '<div class="left leftCon">' +
-                        '<dl>' +
-                        '<dd class="project-tit">'+ data[i].sjy_origanization_name +'</dd>' +
-                        '</dl>' +
-                        '<dl>' +
-                        '<dt>执行周期</dt>' +
-                        '<dd>'+ data[i].sjy_community_project_start_time +' ~ ' + data[i].sjy_community_project_end_time + '</dd>' +
-                        '</dl>' +
-                        '<dl>' +
-                        '<dt>落地社区</dt>' +
-                        '<dd>'+ data[i].sjy_community_name +'</dd>' +
-                        '</dl>' +
-                        '<dl>' +
-                        '<dt>评  分</dt>' +
-                        '<dd><div class="atar_Show">' +
-                        '<p tip="'+ data[i].score +'"></p>' +
-                        '</div>' +
-                        '<span></span></dd>' +
-                        '</dl>' +
-                        '</div>' +
-                        '</a>' +
-                        '</li>';
+                    '<a href="__MODULE__/Project/displayCommunityProject/id/' + data[i].project_detail['sjy_id'] + '" target="_blank" >' +
+                    '<div class="left leftImg">' +
+                    '<img src="http://p33g9t7dr.bkt.clouddn.com/' + data[i].main_image + '" alt="">' +
+                    '</div>' +
+                    '<div class="left leftCon">' +
+                    '<dl>' +
+                    '<dd class="project-tit">' + data[i].project_detail['sjy_community_project_title'] + '</dd>' +
+                    '</dl>' +
+                    '<dl>' +
+                    '<dt>服务对象</dt>' +
+                    '<dd>' + data[i].project_detail['sjy_community_project_service_area'] + '</dd>' +
+                    '</dl>' +
+                    '<dl>' +
+                    '<dt>项目周期</dt>' +
+                    '<dd>' + data[i].project_detail['sjy_community_project_start_time'] + ' ~ ' + data[i].project_detail['sjy_community_project_end_time'] + '</dd>' +
+                    '</dl>' +
+                    '<dl>' +
+                    '<dt>落地社区</dt>' +
+                    '<dd>' + data[i].project_detail['sjy_community_name'] + '</dd>' +
+                    '</dl>' +
+                    '</div>' +
+                    '</a>' +
+                    '</li>';
             }
 
             $(".box3 ul").html(html);
 
             //显示分数
             $(".show_number li p").each(function(index, element) {
-                var num=$(this).attr("tip");
-                var www=num*2*16;//
-                $(this).css("width",www);
-                $(this).parent(".atar_Show").siblings("span").text(num+"分");
+                var num = $(this).attr("tip");
+                var www = num * 2 * 16; //
+                $(this).css("width", www);
+                $(this).parent(".atar_Show").siblings("span").text(num + "分");
             });
 
 
@@ -506,49 +505,46 @@
 
     /*已发布的项目*/
 
-    $(".nav4").click(function () {
+    $(".nav4").click(function() {
 
-        $.post("__MODULE__/Project/origanizationSendProject?origanization_code={$id}", function (data) {
+        $.post("__MODULE__/Project/origanizationSendProject?origanization_code={$id}", function(data) {
 
             var html = '';
-            for(var i= 0; i < data.length; i++){
+            for (var i = 0; i < data.length; i++) {
                 html += '<li class="clearfix pro-li">' +
-                        '<a href="__MODULE__/Project/displayCommunityProject/id/' + data[i].sjy_id + '" target="_blank">' +
-                        '<div class="left leftImg">' +
-                        '<img src="http://p33g9t7dr.bkt.clouddn.com/'+ data[i].main_image +'" alt="">' +
-                        '</div>' +
-                        '<div class="left leftCon">' +
-                        '<dl>' +
-                        '<dd class="project-tit">'+ data[i].sjy_origanization_name +'</dd>' +
-                        '</dl>' +
-                        '<dl>' +
-                        '<dt>执行周期</dt>' +
-                        '<dd>'+ data[i].sjy_community_project_start_time +' ~ ' + data[i].sjy_community_project_end_time + '</dd>' +
-                        '</dl>' +
-                        '<dl>' +
-                        '<dt>落地社区</dt>' +
-                        '<dd>'+ data[i].sjy_community_name +'</dd>' +
-                        '</dl>' +
-                        '<dl>' +
-                        '<dt>评  分</dt>' +
-                        '<dd><div class="atar_Show">' +
-                        '<p tip="'+ data[i].score +'"></p>' +
-                        '</div>' +
-                        '<span></span></dd>' +
-                        '</dl>' +
-                        '</div>' +
-                        '</a>' +
-                        '</li>';
+                    '<a href="__MODULE__/Project/displayOriganizationProject/id/' + data[i].sjy_id + '" target="_blank">' +
+                    '<div class="left leftImg">' +
+                    '<img src="http://p33g9t7dr.bkt.clouddn.com/' + data[i].main_image + '" alt="">' +
+                    '</div>' +
+                    '<div class="left leftCon">' +
+                    '<dl>' +
+                    '<dd class="project-tit">' + data[i].sjy_origanization_project_title + '</dd>' +
+                    '</dl>' +
+                    '<dl>' +
+                    '<dt>服务对象</dt>' +
+                    '<dd>' + data[i].sjy_origanization_project_service_area + '</dd>' +
+                    '</dl>' +
+                    '<dl>' +
+                    '<dt>执行周期</dt>' +
+                    '<dd>' + data[i].sjy_origanization_project_start_time + ' ~ ' + data[i].sjy_origanization_project_end_time + '</dd>' +
+                    '</dl>' +
+                    '<dl>' +
+                    '<dt>发布时间</dt>' +
+                    '<dd>' + data[i].sjy_origanization_project_send_time + '</dd>' +
+                    '</dl>' +
+                    '</div>' +
+                    '</a>' +
+                    '</li>';
             }
 
             $(".box4 ul").html(html);
 
             //显示分数
             $(".show_number li p").each(function(index, element) {
-                var num=$(this).attr("tip");
-                var www=num*2*16;//
-                $(this).css("width",www);
-                $(this).parent(".atar_Show").siblings("span").text(num+"分");
+                var num = $(this).attr("tip");
+                var www = num * 2 * 16; //
+                $(this).css("width", www);
+                $(this).parent(".atar_Show").siblings("span").text(num + "分");
             });
 
 
@@ -557,10 +553,6 @@
 
 
     })
-
-
-
-
 </script>
 
 </html>
