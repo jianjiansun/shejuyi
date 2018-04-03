@@ -846,52 +846,28 @@ class CommunityController extends BaseController {
         public function douploadtouxiang()
         {
             //接到base64格式图片
+            $time = time();
             $base64_image_content = I("post.img");
-            $ret["state"] = 0;
-            $ret['url'] = '';
-            if (preg_match('/^(data:\s*image\/(\w+);base64,)/', $base64_image_content, $result)){
-                $type = $result[2];
-                $new_file = "./Uploads/community/touxiang/".date('Ymd',time())."/";
-
-                if(!file_exists($new_file))
-                {
-                    //检查是否有该文件夹，如果没有就创建，并给予最高权限
-                     mkdir($new_file, 0700);
-                }
-                $file_name = time();
-                $new_file = $new_file.$file_name.".{$type}";
-                if (file_put_contents($new_file, base64_decode(str_replace($result[1], '', $base64_image_content)))){
-                    $ret["url"] = "/Uploads/community/touxiang/".date('Ymd',time())."/".$file_name.".{$type}";
-                    
-                    //取出原图片地址
-                    $oldimage = M("community_user_info")->where(array("sjy_id"=>session("userInfo")["sjy_id"]))->getField('sjy_community_user_image');
-                    $res = M("community_user_info")->where(array("sjy_id"=>session("userInfo")["sjy_id"]))->save(array("sjy_community_user_image"=>$ret['url']));
-                    if($res)
-                    {
-                        //原图片如果不是默认,并且存在就删除
-                        if(file_exists('.'.$oldimage))
-                        {
-                            if($oldimage!='/Uploads/touxiang/moren.png')
-                            {
-                                unlink('.'.$oldimage);
-                            }
-                        }
-                        $ret['state'] = 1;
-                    }else{
-                        $ret['state'] = 0;
-                        $ret['url'] = '';
-                        $ret['errorInfo'] = '上传失败，请重试';
-                    }
-                    $this->ajaxReturn($ret);
-                }else{
-                    $ret['errorInfo'] = '上传失败,请重试';
-                    $this->ajaxReturn($ret);
-                }
+            $base64 = explode('base64,',$base64_image_content)[1];
+            //文件名
+            $path = '/Uploads/community/touxiang/'.date('Y-m-d',$time).'/'.$time.uniqid();
+            $uploadObj = new UploadController();
+            $base64res = $uploadObj->base64Upload($base64,$path);
+            if($base64res)
+            {
+                 $touxiang = $path; //项目主图
+                 //添加到数据库
+                 $res = M('community_user_info')->where(array('sjy_id'=>session('userInfo')['sjy_id']))->save(array('sjy_community_user_image'=>$path));
+                 if($res)
+                 {
+                    $this->ajaxReturn(array('state'=>1,'errorInfo'=>'上传成功！'));
+                 }else{
+                     $this->ajaxReturn(array('state'=>0,'errorInfo'=>'上传失败,请重试！'));
+                 }
             }else{
-                $ret['errorInfo'] = '上传失败,请重试';
-                $this->ajaxReturn($ret);
+                 $this->ajaxReturn(array('state'=>0,'errorInfo'=>'上传失败,请重试！'));
             }
-
+            
         }
         public function myCommunity()
         {
