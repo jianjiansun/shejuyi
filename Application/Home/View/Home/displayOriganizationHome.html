@@ -22,6 +22,7 @@
 <script src="__PUBLIC__/Home/js/jquery.page.js"></script>
 <script src="__PUBLIC__/Home/js/upLoadImg.js"></script>
 <script src="__PUBLIC__/Home/js/layui.js"></script>
+<script src = "__PUBLIC__/Home/js/layui.all.js"></script>
 </head>
 
 <body>
@@ -121,11 +122,13 @@
                 <div class="col-md-1 orLogoBox">
                     <img class="orLogo" src="__PUBLIC__/Home/imgs/or4.jpg" alt="">
                 </div>
-                <div class="col-md-7 community-tit">
+                <div class="col-md-5 community-tit">
                     <h3>中国社区</h3>
                     <p>致力于服务社区人民的一系活动</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
+
+                    <a id = "inviteOr" class="deliverBtn" href="javascript:;">邀请做项目</a>
                     <a class="deliverBtn" href="deliver.html">发布项目</a>
                 </div>
 
@@ -325,6 +328,21 @@
 </body>
 <script src="__PUBLIC__/Home/js/cityBoxShow.js"></script>
 <script>
+
+
+    /*邀请做项目*/
+    $("#inviteOr").click(function () {
+
+        layer.open({
+            type: 2,
+            area: ['800px', '400px'],
+            content: '__MODULE__/Project/displayCommunityTendPorject'
+        });
+
+    });
+
+
+
     $(".detail-nav li a").click(function() {
         $(this).addClass("on");
         $(".detail-nav li a").removeClass("on")
@@ -392,6 +410,9 @@
             '</div>';
 
         $(".box1").html(html);
+
+
+
 
     });
 

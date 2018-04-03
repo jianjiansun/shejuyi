@@ -11,9 +11,7 @@
     <script src="__PUBLIC__/Home/js/jquery.page.js"></script>
     <script src="__PUBLIC__/Home/js/upLoadImg.js"></script>
     <script src="__PUBLIC__/Home/js/layui.js"></script>
-
-
-
+    <script src = "__PUBLIC__/Home/js/layui.all.js"></script>
 
 </head>
 
@@ -22,7 +20,6 @@
     <div id="showCityBox" class="province-switch" style="display: none;">
     </div>
     <div class="headLogin">
-        <div class="container">
             <div class="left changeBan">
                 <a href="javascript:;" id="cityChoose" class="region">{$city}</a>
                 <a class="on" href="">社会组织版</a>
@@ -82,7 +79,6 @@
                         </li>
                     </ul>
             </if>
-        </div>
             </div>
         </div>
     </div>
@@ -127,7 +123,10 @@
                 <div class="detail-head">
                     <ul class="detail-nav">
                         <li><a class="nav1 on" href="javascript:;">项目主页</a></li>
+
+
                     </ul>
+
                     <if condition='($figure eq 1) and ($project_status eq 0)'>
                         <button type="button" class="layui-btn deliverBox" id="test1">
 	                    <i class="layui-icon">&#xe67c;</i>发送项目书
@@ -178,8 +177,6 @@
                             <p><img class="orDetail-img" src="__PUBLIC__/Home/imgs/or-detail.jpg" alt=""></p>
                         </div>
                     </div>
-
-                    
 
                 </div>
             </div>
@@ -282,7 +279,10 @@
         html += '<div class = "detail-item">' +
             '<span class = "left">发布机构</span>' +
             '<p class = "left" style = "line-height:  30px;">' +
-            '<a href="__MODULE__/Home/displayOriganizationHome/id/' + data.sjy_origanization_id + '">' + data.sjy_origanization_name + '</a></p>' +
+            '<a href="__MODULE__/Home/displayOriganizationHome/id/' + data.sjy_origanization_id + '">' + data.sjy_origanization_name + '</a> ' +
+
+                '</p>' +
+                '<a id = "inviteOr" class = "layui-btn" href="javascript:;" style = "float: right; ">邀请做项目</a>' +
             '</div>' +
             '<div class = "detail-item">' +
             '<span class = "left">服务领域</span>' +
@@ -294,7 +294,7 @@
             '</div>' +
             '<div class = "detail-item">' +
             '<span  class = "left">项目周期</span>' +
-            '<p  class = "left" style = "line-height:  30px;">' + data.sjy_origanization_project_start_time + '-' + data.sjy_origanization_project_end_time + '</p>' +
+            '<p  class = "left" style = "line-height:  30px;">' + data.sjy_origanization_project_start_time + ' ~ ' + data.sjy_origanization_project_end_time + '</p>' +
             '</div>' +
             '<div class = "detail-item">' +
             '<span  class = "left">项目内容</span>' +
@@ -306,11 +306,24 @@
         console.log(data.project_image.length);
 
         for (var i = 0; i < data.project_image.length; i++) {
-            html += '<p><img class = "orDetail-img" src="' + data.project_image[i].sjy_origanization_project_image + '" alt=""></p>';
+            html += '<p><img class = "orDetail-img" src="http://p33g9t7dr.bkt.clouddn.com/' + data.project_image[i].sjy_origanization_project_image + '" alt=""></p>';
         }
         html += '</div>';
 
         $(".box1").html(html);
+
+
+        /*邀请做项目*/
+        $("#inviteOr").click(function () {
+
+            layer.open({
+                type: 2,
+                area: ['800px', '400px'],
+                content: '__MODULE__/Project/displayCommunityTendPorject'
+            });
+
+        });
+
 
     });
 </script>
