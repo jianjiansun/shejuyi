@@ -1022,59 +1022,49 @@ class CommunityController extends BaseController {
         //升级社区风采图片
         public function uploadcommunityimgs()
         {
-            $base64_image_content = I("post.file");
-            //执行base64上传
-            if (preg_match('/^(data:\s*image\/(\w+);base64,)/', $base64_image_content, $result)){
-                $type = $result[2];
-                $new_file = "./Uploads/community/fengcai/".date('Ymd',time())."/";
-
-                if(!file_exists($new_file))
-                {
-                    //检查是否有该文件夹，如果没有就创建，并给予最高权限
-                     mkdir($new_file, 0700);
-                }
-                $file_name = time();
-                $new_file = $new_file.$file_name.".{$type}";
-                if (file_put_contents($new_file, base64_decode(str_replace($result[1], '', $base64_image_content)))){
-                    $ret["url"] = "/Uploads/community/fengcai/".date('Ymd',time())."/".$file_name.".{$type}";
-                    $ret['error'] = 0;
-                    //查询社区是否有风采
-                    $has = M('community_images')->where(array("sjy_community_code"=>session("userInfo")['sjy_community_user_community_code']))->find();
-                    if(empty($has)) {
-                        $res = M("community_images")->add(array("sjy_community_code" => session("userInfo")['sjy_community_user_community_code'], "sjy_community_images" => $ret['url']));
-                    }else{
-
-                        $res = M('community_images')->where(array("sjy_community_code"=>session("userInfo")['sjy_community_user_community_code']))->save(array("sjy_community_images" => $ret['url']));
-                        if($res)
-                        {
-                            //删除原先照片
-                            $path = $has['sjy_community_images'];
-                            if(file_exists('.'.$path))
-                            {
-                                unlink('.'.$path);
-                            }
-                        }
-                    }
-                    $rut['state'] = 0;
-                    $rut['errorInfo'] = "";
-                    if($res)
-                    {
-                       $rut['state'] = 1;
-                    }else{
-                        $rut['errorInfo'] = '修改失败，请重试';
-                    }
-                    $this->ajaxReturn($rut);
-                }else{
-                    $rut['state'] = 0;
-                    $rut['errorInfo'] = '修改失败，请重试';
-                    $this->ajaxReturn($rut);
-                }
-            }else{
-                $rut['state'] = 0;
-                $rut['errorInfo'] = '图片非法';
-                $this->ajaxReturn($rut);
+            $img = $_FILES['file']; //社会组织风采
+           
+            //七牛云图片上传类
+            $uploadObj = new UploadController();
+            $time = time();
+      
+            if($img['size']>2097152)
+            {
+              $this->ajaxReturn(array('code'=>0,'msg'=>'机构风采图片超过2M'));
             }
+            $file  = $img['tmp_name'];//文件名
+            
+            $type  = $this->getImagetype($file); 
+            $filetype = ['jpg', 'jpeg', 'gif', 'bmp', 'png'];
+            if (!in_array($type, $filetype))
+            { 
+              $this->ajaxReturn(array('code'=>0,'msg'=>'机构风采图片类型错误'));
+            }
+            $file_name = $time.uniqid();
+            $newpath = '/Uploads/community/fengcai/'.date('Y-m-d',$time).'/'.$file_name.'.'.$type;
+            
+            $uploadres = $uploadObj->singUpload($file,$newpath);
+            
+            //上传成功
+            if($uploadres)
+            {
+              $origanization_code = session('userInfo')['sjy_community_user_community_code'];
+              $hasImg = M('community_images')->where(array('sjy_community_code'=>$origanization_code))->find();
+              if(!empty($hasImg))
+              {
+                 $val = M('community_images')->where(array('sjy_id'=>$hasImg['sjy_id']))->save(array('sjy_community_images'=>$newpath));
+              }else{
+                 $val = M('community_images')->add(array('sjy_community_images'=>$newpath));
+              }
 
+              if($val)
+              {
+                $this->ajaxReturn(array('code'=>0,'msg'=>'上传成功'));
+              }
+              else{
+                $this->ajaxReturn(array('code'=>1,'msg'=>'请重试'));
+              }
+            }
         }
         //员工列表
         public function getStaffList()
