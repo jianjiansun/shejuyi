@@ -32,7 +32,7 @@
                           // $data['project_start_people_id'] = session('userInfo')['sjy_id'];  //同意人id
                           $res = M('project')->where(array('sjy_id'=>$info['sjy_id']))->save($data);
 
-                         //更新sjy_community_project_info表
+                          //更新sjy_community_project_info表
                           // $data = array(
                           //         "sjy_community_project_origanization"=>$info['origanization_id'],
                           //         "sjy_community_project_origanization_name"=>M('origanization_base_info')->where(array('sjy_id'=>$info['origanization_id']))->getField('sjy_origanization_name')

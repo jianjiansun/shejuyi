@@ -61,6 +61,7 @@
                                         <div id="clipArea"></div>
                                         <div class="clipBtn">
                                             <button id="clipBtn">确定</button>
+                                            <button onClick="javascript:$('.cover-wrap').fadeOut();">关闭</button>
                                         </div>
                                     </div>
                                 </div>
@@ -206,9 +207,15 @@
                                     <div class="basic-information">
                                         <div class="img-box full">
                                             <section class=" img-section">
-                                                <p class="up-p">机构风采：<span class="up-span">上传一张图片</span></p>
+                                                <p class="up-p">机构logo：<span class="up-span">上传一张logo</span></p>
                                                 <div class="case">
-                                                    <div class="upload" action='__CONTROLLER__/uploadoriganizationimgs' data-num='1' id='case2'></div>
+                                                    <div class="upload" data-type="png,jpg,jpeg,gif" action='__CONTROLLER__/uploadoriganizationlogo' data-file='logo' data-num='1' id='case3'></div>
+                                                </div>
+                                            </section>
+                                            <section class=" img-section">
+                                                <p class="up-p">机构风采：<span class="up-span">上传一张风采</span></p>
+                                                <div class="case">
+                                                    <div class="upload" style='width:500px;height:300px' data-type="png,jpg,jpeg,gif" action='__CONTROLLER__/uploadoriganizationimgs' data-num='1' id='case2'></div>
                                                 </div>
                                             </section>
                                         </div>
@@ -237,6 +244,7 @@
 <script>
     $(function() {
         $("#case2").upload();
+        $("#case3").upload();
     })
 </script>
 <script src="__PUBLIC__/Home/js/cityBoxShow.js"></script>
@@ -436,7 +444,8 @@
         return false;
 
     });
-
+    
+    //获得机构风采
     $.ajax({
         url: "__CONTROLLER__/getoriganizationimgs",
         type: "get",
@@ -445,6 +454,20 @@
         success: function(data) {
             if (data) {
                 $("#case2").attr('data-value', 'http://p33g9t7dr.bkt.clouddn.com/' + data);
+            } else {
+                // $("#imghead").attr('src', '__PUBLIC__/Home/imgs/a11.png')
+            }
+        }
+    })
+    //获得机构logo
+    $.ajax({
+        url: "__CONTROLLER__/getoriganizationlogo",
+        type: "get",
+        data: {},
+        dataType: "json",
+        success: function(data) {
+            if (data) {
+                $("#case3").attr('data-value', 'http://p33g9t7dr.bkt.clouddn.com/' + data);
             } else {
                 // $("#imghead").attr('src', '__PUBLIC__/Home/imgs/a11.png')
             }

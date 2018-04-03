@@ -776,6 +776,12 @@
             $images = M('origanization_images')->where(array('sjy_origanization_code'=>session('userInfo')['sjy_origanization_user_origanization_code']))->getField('sjy_origanization_images');
             $this->ajaxReturn($images);
 		}
+		//获得社会组织logo
+		public function getoriganizationlogo()
+		{
+			$images = M('origanization_base_info')->where(array('sjy_origanization_code'=>session('userInfo')['sjy_origanization_user_origanization_code']))->getField('sjy_origanization_logo_img_path');
+            $this->ajaxReturn($images);
+		}
 	    //升级机构风采图片
         public function uploadoriganizationimgs()
         {   
@@ -814,6 +820,50 @@
 				}else{
                     $val = M('origanization_images')->add(array('sjy_origanization_images'=>$newpath));
 				}
+
+				if($val)
+				{
+					$this->ajaxReturn(array('code'=>0,'msg'=>'上传成功'));
+				}
+				else{
+					$this->ajaxReturn(array('code'=>1,'msg'=>'请重试'));
+				}
+			}
+        }
+         //升级机构logo
+        public function uploadoriganizationlogo()
+        {   
+			
+			$img = $_FILES['logo']; //社会组织风采
+           
+            //七牛云图片上传类
+            $uploadObj = new UploadController();
+			$time = time();
+			
+			if($img['size']>2097152)
+			{
+				$this->ajaxReturn(array('code'=>0,'msg'=>'logo图片超过2M'));
+			}
+			$file  = $img['tmp_name'];//文件名
+			
+			$type  = $this->getImagetype($file); 
+			$filetype = ['jpg', 'jpeg', 'gif', 'bmp', 'png'];
+			if (!in_array($type, $filetype))
+			{ 
+				$this->ajaxReturn(array('code'=>0,'msg'=>'logo图片类型错误'));
+			}
+			$file_name = $time.uniqid();
+			$newpath = '/Uploads/origanization/logo/'.date('Y-m-d',$time).'/'.$file_name.'.'.$type;
+			
+			$uploadres = $uploadObj->singUpload($file,$newpath);
+			
+			//上传成功
+			if($uploadres)
+			{
+				$origanization_code = session('userInfo')['sjy_origanization_user_origanization_code'];
+				
+                $val = M('origanization_base_info')->where(array('sjy_id'=>$origanization_code))->save(array('sjy_origanization_logo_img_path'=>$newpath));
+				
 
 				if($val)
 				{
