@@ -630,6 +630,14 @@
             }
                
         }
+        //社区主动邀请页面显示
+        public function displayCommunityTendPorject()
+        {
+            $origanization_code = I('get.origanization_id'); //社会组织id
+            $origanization_name = M('origanization_base_info')->where(array('sjy_id'=>$origanization_code))->getField('sjy_origanization_name');
+            $this->assign('origanization_name',$origanization_name);
+            $this->display();
+        }
         //社区正在招标中的项目
         public function communityTenderProject()
         {
@@ -819,6 +827,7 @@
             $this->ajaxReturn($info);
 
         }
+        
         //查询社区正在执行中项目
         public function communityIngProject()
         {
@@ -994,6 +1003,7 @@
             // if ($strInfo['chars1']=='-119' AND $strInfo['chars2']=='80' ) return 'png';
             return $fileType;
         }
+        
         //base64
         // public function base64()
         // {
