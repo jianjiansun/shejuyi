@@ -1,5 +1,21 @@
-<link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
-<script src="__PUBLIC__/Home/js/layui.all.js"></script>
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EasyLife</title>
+    <link rel="stylesheet" href="/Public/Home/css/bootstrap.css">
+    <link rel="stylesheet" href="/Public/Home/css/common.css">
+    <link rel="stylesheet" href="/Public/Home/css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+    <script src="/Public/Home/js/jquery-1.12.4.js"></script>
+    <script src="/Public/Home/js/bootstrap.js"></script>
+    <script src = "/Public/Home/js/autoResizeImage.js"></script>
+
+<link rel="stylesheet" href="/Public/Home/css/layui.css">
+<script src="/Public/Home/js/layui.all.js"></script>
 
 <table class="layui-table" style=" width:94%; margin-left: 3%; margin-top: 20px; margin-bottom: 20px;">
     <colgroup>
@@ -31,7 +47,7 @@
 </table>
 
 <script>
-    $.post("__MODULE__/Project/communityTenderProject", function(data) {
+    $.post("/index.php/Home/Project/communityTenderProject", function(data) {
 
         var html = '';
         console.log(data);
@@ -53,7 +69,7 @@
         $(".inviteBtn").click(function() {
 
             var project_title = $(".project_title").text();
-            var agreeOrganization = '{$origanization_name}';
+            var agreeOrganization = '<?php echo ($origanization_name); ?>';
 
 
             layer.confirm('是否确定?<br><p style = "color: red;">' + project_title + '</p>由<p style = "color: red;">' + agreeOrganization + '</p>', {
@@ -62,9 +78,9 @@
 
                 var project_id = $(this).attr("id");
                
-                var origanization_id = '{$origanization_code}';
+                var origanization_id = '<?php echo ($origanization_code); ?>';
 
-                $.post("__MODULE__/Project/inviteOriganization", {
+                $.post("/index.php/Home/Project/inviteOriganization", {
                     "project_id": project_id,
                     'origanization_code':origanization_id
                 }, function(data) {
