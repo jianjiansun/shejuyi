@@ -531,6 +531,66 @@
          initUrl: './fileinit.php'*/
     };
 
+    /*1. 邀请我*/
+    $.post("__MODULE__/Project/invite", function (data) {
+
+        var html1 = '';
+
+//        console.log(data);
+
+
+        for(var i = 0; i < data.length; i++ ){
+
+            html1 += '<tr>' +
+                    '<td>' + data[i].project_detail.sjy_community_project_title + '</td>' +
+                    '<td>' + data[i].project_detail.sjy_community_name + '</td>' +
+                    '<td>' + data[i].project_detail.sjy_community_project_service_area  + '</td>' +
+                    '<td>' + data[i].status_desc+ '</td>' +
+                    '<td>' + data[i].project_detail.sjy_community_project_collect_start_time + ' ~<br>' + data[i].project_detail.sjy_community_project_collect_end_time + '</td>' +
+                    '<td>' + data[i].invitate_time + '</td>' +
+                    '<td><a class="see-detail" style="width: 68px; text-align: center;"  href="__CONTROLLER__/displayCommunityProject/id/' + data[i].project_id + '">详情</a> ' +
+                    '<a id = "agreeOrganization" class = "projectBook" style="width: 68px; text-align: center;"  id = "' + data[i].project_id + '" href="javascript:;">同意</a></td>' +
+                    '</tr>';
+        }
+
+        $("#tbody1").html(html1);
+
+
+        /*点击同意的操作*/
+        $("#agreeOrganization").click(function () {
+
+            /*layer.confirm('选择发送的项目书<br><button class="layui-btn test" lay-data="{url: '/b/', accept: ' + 'file' +'}">上传文件</button>？', {
+                btn: ['确定', '取消'] //可以无限个按钮
+            }, function(index, layero){
+                var upload = layui.upload;
+
+                //创建一个上传组件
+                upload.render({
+                    elem: '#id'
+                    ,url: ''
+                    ,done: function(res, index, upload){ //上传后的回调
+
+                    }
+                    //,accept: 'file' //允许上传的文件类型
+                    //,size: 50 //最大允许上传的文件大小
+                    //,……
+                })
+
+
+            }, function(index){
+
+
+
+
+            });*/
+
+            
+        })
+        
+    });
+
+
+
 
     /*2.投标中*/
     $("#biding").click(function() {
@@ -541,15 +601,16 @@
 
 
             for (var i = 0; i < data.data.length; i++) {
-                html2 += '<tr>' +
-                    '<td>' + data.data[i].project_detail.sjy_community_project_title + '</td>' +
-                    '<td>' + data.data[i].project_detail.sjy_community_name + '</td>' +
-                    '<td>' + data.data[i].project_detail.sjy_community_project_send_prople_name + '</td>' +
-                    '<td>' + data.data[i].project_detail.sjy_community_project_service_area + '</td>' +
-                    '<td>' + data.data[i].project_detail.sjy_community_project_collect_start_time + ' ~<br>' + data.data[i].project_detail.sjy_community_project_collect_end_time + '</td>' +
-                    '<td>' + data.data[i].status_desc + '</td>' +
-                    '<td><a class="layui-btn" href="__CONTROLLER__/displayCommunityProject/id/' + data.data[i].project_id + '">详情</a> <a class = "projectBook layui-btn layui-btn-normal" id = "' + data.data[i].project_id + '" href="javascript:;">项目书</a></td>' +
-                    '</tr>';
+                html2 +='<tr>' +
+                        '<td>' + data.data[i].project_detail.sjy_community_project_title + '</td>' +
+                        '<td>' + data.data[i].project_detail.sjy_community_name + '</td>' +
+                        '<td>' + data.data[i].project_detail.sjy_community_project_send_prople_name + '</td>' +
+                        '<td>' + data.data[i].project_detail.sjy_community_project_service_area + '</td>' +
+                        '<td>' + data.data[i].project_detail.sjy_community_project_collect_start_time + ' ~<br>' + data.data[i].project_detail.sjy_community_project_collect_end_time + '</td>' +
+                        '<td>' + data.data[i].status_desc + '</td>' +
+                        '<td><a class="see-detail" href="__CONTROLLER__/displayCommunityProject/id/' + data.data[i].project_id + '">详情</a>' +
+                        '<a class = "projectBook" id = "' + data.data[i].project_id + '" href="javascript:;">项目书</a></td>' +
+                        '</tr>';
             }
 
             $("#tbody2").html(html2);
@@ -651,7 +712,7 @@
                     '<td>' + data[i].project_detail.sjy_community_project_start_time + ' ~<br>' + data[i].project_detail.sjy_community_project_end_time + '</td>' +
                     '<td>' + data[i].community_agreen_project_start_time + '</td>' +
                     '<td><a class = "startProject" sjy_id = "' + data[i].sjy_id + '" id = "' + data[i].project_id + '" href="javascript:;">开始</a> ' +
-                        '<a class="layui-btn" href="__CONTROLLER__/displayCommunityProject/id/' + data[i].project_id + '">详情</a><br>' +
+                        '<a class="see-detail" href="__CONTROLLER__/displayCommunityProject/id/' + data[i].project_id + '">详情</a><br>' +
                         '<a class = "projectBook" id = "' + data[i].project_id + '" href="javascript:;">项目书</a></td>' +
                     '</tr>';
             }
