@@ -57,13 +57,17 @@
 
             var project_id = $(this).attr("id");
 
+            var origanization_id = '{$origanization_code}';
+
             layer.confirm('是否确定?<br><p style = "color: red;">' + project_title + '</p>由<p style = "color: red;">' + agreeOrganization + '</p>', {
                 btn: ['确定', '取消'] //可以无限个按钮
             }, function(index, layero) {
 
 
-               
-                var origanization_id = '{$origanization_code}';
+
+                console.log( project_id + "project_id");
+                console.log( origanization_id + "origanization_id");
+                
 
                 $.post("__MODULE__/Project/inviteOriganization", {
                     "project_id": project_id,
