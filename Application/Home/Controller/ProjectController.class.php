@@ -147,7 +147,7 @@
         //邀请我
         public function invite()
         {
-            $page = I('get.page'); //页面
+            $page = I('get.page')?I('get.page'):1; //页面
             $limit = 15;
             $start = ($page-1)*$limit; //开始
             $limit = $start.",".$limit;
@@ -166,7 +166,7 @@
         		//根据$project_info['sjy_community_project_status']判断状态 0 正在征集 >=1征集结束
         		if($project_info['sjy_community_project_status']==0&&time()<=strtotime($project_info['sjy_community_project_end_time']))
         		{
-        			$info[$key]['status_desc'] = '投标期';
+        			 $info[$key]['status_desc'] = '投标期';
         		}else if($project_info['sjy_community_project_status']>=1||time()>strtotime($project_info['sjy_community_project_end_time'])){
         			$info[$key]['status_desc'] = '投标结束';
         		}
