@@ -588,7 +588,7 @@
             //社区id
             $community_id = session('userInfo')['sjy_community_user_community_code'];
             //社会组织id
-            $origanization_id = I('post.origanization_id');
+            $origanization_id = I('post.origanization_code');
             $where = array(
                 'project_id'=>$project_id,
                 'community_id'=>$community_id,
