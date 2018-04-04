@@ -68,6 +68,7 @@
                     if( data.state == 1 ){
                         layer.closeAll();
                         layer.closeAll('iframe');
+                        parent.layer.close()
                     }else {
                         layer.msg(data.errorInfo);
                     }
