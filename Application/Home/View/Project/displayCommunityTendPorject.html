@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
-<script src = "__PUBLIC__/Home/js/layui.all.js"></script>
+<script src="__PUBLIC__/Home/js/layui.all.js"></script>
 
-<table class="layui-table" style = " width:94%; margin-left: 3%; margin-top: 20px; margin-bottom: 20px;">
+<table class="layui-table" style=" width:94%; margin-left: 3%; margin-top: 20px; margin-bottom: 20px;">
     <colgroup>
         <col width="200">
         <col width="200">
@@ -10,77 +10,85 @@
 
     </colgroup>
     <thead>
-    <tr>
-        <th>名称</th>
-        <th>服务对象</th>
-        <th>征集周期</th>
-        <th>操作</th>
-    </tr>
+        <tr>
+            <th>名称</th>
+            <th>服务对象</th>
+            <th>征集周期</th>
+            <th>操作</th>
+        </tr>
     </thead>
     <tbody id="tableBody">
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>
-            <a class="layui-btn layui-btn-danger layui-btn-xs" >邀请</a>
-        </td>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <a class="layui-btn layui-btn-danger layui-btn-xs">邀请</a>
+            </td>
 
-      </tr>
+        </tr>
     </tbody>
 </table>
 
 <script>
-
-    $.post("__MODULE__/Project/communityTenderProject", function (data) {
+    $.post("__MODULE__/Project/communityTenderProject", function(data) {
 
         var html = '';
         console.log(data);
         console.log(data.data.length);
 
-        for(var i = 0; i < data.data.length; i++){
+        for (var i = 0; i < data.data.length; i++) {
             html += '<tr>' +
-                    '<td class = "project_title">'+ data.data[i].sjy_community_project_title +'</td>' +
-                    '<td>'+ data.data[i].sjy_community_project_service_area +'</td>' +
-                    '<td>'+ data.data[i].sjy_community_project_collect_start_time + ' ~ '+ data.data[i].sjy_community_project_collect_end_time +'</td>' +
-                    '<td>' +
-                    '<a class="layui-btn layui-btn-danger layui-btn-xs inviteBtn" id = "'+ data.data[i].sjy_id +'" href = "javascript:;" >邀请</a>' +
-                    '</td>' +
-                    '</tr>';
+                '<td class = "project_title">' + data.data[i].sjy_community_project_title + '</td>' +
+                '<td>' + data.data[i].sjy_community_project_service_area + '</td>' +
+                '<td>' + data.data[i].sjy_community_project_collect_start_time + ' ~ ' + data.data[i].sjy_community_project_collect_end_time + '</td>' +
+                '<td>' +
+                '<a class="layui-btn layui-btn-danger layui-btn-xs inviteBtn" id = "' + data.data[i].sjy_id + '" href = "javascript:;" >邀请</a>' +
+                '</td>' +
+                '</tr>';
         }
 
         $("#tableBody").html(html);
 
-        $(".inviteBtn").click(function () {
+        $(".inviteBtn").click(function() {
 
             var project_title = $(".project_title").text();
-            var agreeOrganization = '北京市通州区启明星机构';
+            var agreeOrganization = '{$origanization_name}';
 
 
-            layer.confirm('是否确定?<br><p style = "color: red;">'+ project_title +'</p>由<p style = "color: red;">'+ agreeOrganization +'</p>', {
+            layer.confirm('是否确定?<br><p style = "color: red;">' + project_title + '</p>由<p style = "color: red;">' + agreeOrganization + '</p>', {
                 btn: ['确定', '取消'] //可以无限个按钮
-            }, function(index, layero){
+            }, function(index, layero) {
 
                 var project_id = $(this).attr("id");
 
-                $.post("__MODULE__/Project/inviteOriganization", { "project_id" : project_id }, function (data) {
+                $.post("__MODULE__/Project/inviteOriganization", {
+                    "project_id": project_id
+                }, function(data) {
 
+<<<<<<< HEAD
                     if( data.state == 1 ){
                         layer.closeAll();
                         layer.closeAll('iframe');
                         parent.layer.close()
                     }else {
+=======
+                    if (data.state == 1) {
+                        layer.msg(data.errorInfo, function() {
+                            parent.layer.closeAll();
+                        })
+                    } else {
+>>>>>>> c19b4b84cecf34a49ca2097f0cffb1bf429d24ac
                         layer.msg(data.errorInfo);
                     }
                 });
 
 
-            }, function(index){
+            }, function(index) {
                 //按钮【按钮二】的回调
             });
 
         });
 
     })
-
 </script>
