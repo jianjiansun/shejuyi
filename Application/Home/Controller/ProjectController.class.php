@@ -636,6 +636,7 @@
             $origanization_code = I('get.origanization_id'); //社会组织id
             $origanization_name = M('origanization_base_info')->where(array('sjy_id'=>$origanization_code))->getField('sjy_origanization_name');
             $this->assign('origanization_name',$origanization_name);
+            $this->assign('origanization_code',$origanization_code);
             $this->display();
         }
         //社区正在招标中的项目
