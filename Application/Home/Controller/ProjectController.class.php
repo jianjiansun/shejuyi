@@ -599,7 +599,7 @@
             $res = M('Project')->where($where)->find();
             if($res)
             {
-                $this->ajaxReturn(array('state'=>2,'该项目已邀请过该机构'));
+                $this->ajaxReturn(array('state'=>2,'errorInfo'=>'该项目已邀请过该机构'));
             }
             $where = array(
                 'project_id'=>$project_id,
@@ -611,7 +611,7 @@
             $val = M('Project')->where($where)->find();
             if($val)
             {
-                $this->ajaxReturn(array('state'=>3,'该项目该机构已发送项目书'));
+                $this->ajaxReturn(array('state'=>3,'errorInfo'=>'该项目该机构已发送项目书'));
             }
 
             //将该项目信息插入sjy_project表
