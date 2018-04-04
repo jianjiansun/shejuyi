@@ -109,6 +109,7 @@
 
 }
 .detail-item p{
+    line-height: 30px;
 }
 .detail-item{
     display: block;

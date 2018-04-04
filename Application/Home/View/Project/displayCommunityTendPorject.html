@@ -52,7 +52,8 @@
 
         $(".inviteBtn").click(function() {
 
-            var project_title = $(".project_title").text();
+            var project_title = $(this).parent().siblings(".project_title").text();
+
             var agreeOrganization = '{$origanization_name}';
 
             var project_id = $(this).attr("id");
@@ -67,7 +68,7 @@
 
                 console.log( project_id + "project_id");
                 console.log( origanization_id + "origanization_id");
-                
+
 
                 $.post("__MODULE__/Project/inviteOriganization", {
                     "project_id": project_id,
