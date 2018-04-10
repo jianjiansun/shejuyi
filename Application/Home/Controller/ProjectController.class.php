@@ -164,10 +164,12 @@
         	{
         		$project_info = M('community_project_info')->where(array('sjy_id'=>$value['project_id']))->find();
         		//根据$project_info['sjy_community_project_status']判断状态 0 正在征集 >=1征集结束
-        		if($project_info['sjy_community_project_status']==0&&time()<=strtotime($project_info['sjy_community_project_end_time']))
+        		if($project_info['sjy_community_project_status']==0&&time()<=strtotime($project_info['sjy_community_project_collect
+                    _end_time']))
         		{
         			 $info[$key]['status_desc'] = '投标期';
-        		}else if($project_info['sjy_community_project_status']>=1||time()>strtotime($project_info['sjy_community_project_end_time'])){
+        		}else if($project_info['sjy_community_project_status']>=1||time()>strtotime($project_info['sjy_community_project_collect
+                    _end_time'])){
         			$info[$key]['status_desc'] = '投标结束';
         		}
         		$info[$key]['project_detail'] = $project_info;
@@ -361,6 +363,7 @@
         		$this->ajaxReturn($res);
         	}else{
         		//执行项目书发送
+
         		$val = $this->file_upload($project_id,$project_info);
         		$this->ajaxReturn($val);
         	}
@@ -522,6 +525,7 @@
 	    	//需要新增 之前没有项目联系过
 	    	if(empty($isupload))
 	    	{
+                //没找到
 	    		$data["project_id"] = $project_id;
 		    	$data["community_id"] = $community_id;
 		    	$data["origanization_id"] = $origanization_id;
@@ -529,8 +533,18 @@
                 $data['send_project_book_time'] = date('Y-m-d H:i:s',time());  //项目书最后发送时间
 	    		$res = M("project")->add($data);
 	    	}else{
+                //找到了
 	    		//更新项目书发送时间 //最后时间
-                $res = M('project')->where(array("project_id"=>$project_id,"community_id"=>$community_id,"origanization_id"=>$origanization_id))->save(array("send_project_book_time"=>date('Y-m-d H:i:s',time())));
+                if($isupload['status']==0)
+                {
+                    
+                    $res = M('project')->where(array("project_id"=>$project_id,"community_id"=>$community_id,"origanization_id"=>$origanization_id))->save(array("send_project_book_time"=>date('Y-m-d H:i:s',time()),'status'=>"1"));
+                }else
+                {
+                    
+                    $res = M('project')->where(array("project_id"=>$project_id,"community_id"=>$community_id,"origanization_id"=>$origanization_id))->save(array("send_project_book_time"=>date('Y-m-d H:i:s',time())));
+                }
+
 	    	}
 	    	//将信息插入项目书表
 	    	$param['sjy_project_id'] = $project_id;     //项目id
@@ -542,6 +556,8 @@
             $param['project_book_send_people'] = session('userInfo')['sjy_origanization_user_real_name'];  //项目书发送者
             $param['project_book_send_people_id'] = session('userInfo')['sjy_id'];  //发送者id            
 	    	$val = M('project_book')->add($param);
+
+            
 		    if ($res&&$val){
 			    // 提交事务
 			    $model->commit(); 
