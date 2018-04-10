@@ -459,7 +459,10 @@ html {
     left:  50%;
     margin-left: -50px;
 }
-
+.layui-upload-choose{
+    position: absolute!important;
+    top: 129px!important;
+}
 
 
 

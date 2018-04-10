@@ -39,12 +39,12 @@ layui.use('element', function(){
 </script>      
 <body>
 <!-- 4.1 邀请我 实现发送项目书-->
-<div class="layui-layer-shade" id="shade1" times="1" style="z-index: 19891014;display: none; background-color: rgb(0, 0, 0); opacity: 0.3;"></div>
-<div class="layui-layer layui-layer-dialog" id="layer3" type="dialog" times="3" showtime="0" contype="string" style="z-index: 19891017;display: none; width: 400px; height: 300px; top: 165px; left: 751.5px;">
+<div class="layui-layer-shade" id="shade1" times="1" style="z-index:1014;display: none; background-color: rgb(0, 0, 0); opacity: 0.3;"></div>
+<div class="layui-layer layui-layer-dialog" id="layer3" type="dialog" times="3" showtime="0" contype="string" style="z-index: 1017;display: none; width: 400px; height: 300px; top: 165px; left: 751.5px;">
     <div class="layui-layer-title" style="cursor: move;">信息</div>
     <div id="layer4" class="layui-layer-content" style="height: 258px;">
         <p>选择发送的项目书</p><br>
-        <button type="button" class="layui-btn deliverBox or-deliverBtn" id="test1">
+        <button type="button" class="layui-btn deliverBox or-deliverBtn" style = "width: 358px;" id="test1">
             <i class="layui-icon">&#xe67c;</i>发送项目书 <br>
             <button class = "isUpload" id="uploadPDF">上传</button>
         </button>
@@ -567,87 +567,14 @@ layui.use('element', function(){
          initUrl: './fileinit.php'*/
     };
 
-    /*1. 邀请我*/
-    $.post("__MODULE__/Project/invite", function (data) {
-
-        var html1 = '';
-
-//        console.log(data);
-
-
-        for(var i = 0; i < data.length; i++ ){
-
-            html1 += '<tr>' +
-                    '<td>' + data[i].project_detail.sjy_community_project_title + '</td>' +
-                    '<td>' + data[i].project_detail.sjy_community_name + '</td>' +
-                    '<td>' + data[i].project_detail.sjy_community_project_service_area  + '</td>' +
-                    '<td>' + data[i].status_desc+ '</td>' +
-                    '<td>' + data[i].project_detail.sjy_community_project_collect_start_time + ' ~<br>' + data[i].project_detail.sjy_community_project_collect_end_time + '</td>' +
-                    '<td>' + data[i].invitate_time + '</td>' +
-                    '<td><a class="see-detail" style="width: 68px; text-align: center;"  href="__CONTROLLER__/displayCommunityProject/id/' + data[i].project_id + '">详情</a> ' +
-                    '<a id = "agreeOrganization" class = "projectBook" style="width: 68px; text-align: center;"  data-id = "' + data[i].project_id + '" href="javascript:;">同意</a></td>' +
-                    '</tr>';
-        }
-
-        $("#tbody1").html(html1);
-
-
-                /*点击同意的操作*/
-        $("#agreeOrganization").click(function () {
-
-            $("#shade1").css("display", "block");
-            $("#layer3").css("display", "block");
-
-            $("#closeDeliver").click(function () {
-                $("#shade1").css("display", "none");
-                $("#layer3").css("display", "none");
-            });
-
-            var  $id = $(this).attr("data-id");
-
-            console.log( $id  + "$id ");
-
-
-            layui.use('upload', function() {
-
-                var upload = layui.upload;
-                //执行实例
-                var uploadPdf = upload.render({
-                    elem: '#test1', //绑定元素
-                    auto: false,
-                    bindAction: '#uploadPDF',
-                    url: "__MODULE__/Project/sendProjectBook/project_id/" + $id,
-                    exts: 'pdf|doc|docx',
-                    done: function(res) {
-                        //上传完毕回调
-                        if (res.state == 1) {
-                            layer.msg("发送成功");
-                            layer.closeAll();
-                        }else {
-                            layer.msg( res.errorMsg );
-                        }
-                    },
-                    error: function() {
-                        //请求异常回调
-                    }
-                });
-
-
-            });
-            
-            
-
-
-            
-        })
-        
-    });
 
 
 
 
     /*2.投标中*/
-    $("#biding").click(function() {
+
+
+    var bindingFunc = function () {
 
         $.post("__MODULE__/Project/alreadySendProject", function(data) {
             var html2 = '';
@@ -701,23 +628,23 @@ layui.use('element', function(){
 
                     var html = '';
                     html += '<div class = "organize-choose-tit">\n' +
-                        '<span>机构A</span>\n' +
-                        '<a class = "agree-organization" href="javascript:;">上传时间 <span></span></a>\n' +
-                        '</div>\n';
+                            '<span>机构A</span>\n' +
+                            '<a class = "agree-organization" href="javascript:;">上传时间 <span></span></a>\n' +
+                            '</div>\n';
 
                     console.log(data);
 
                     for (var i = 0; i < data.length; i++) {
 
                         html += '<li class = "choose-organize-item">\n' +
-                            '<p class = "proposal-detail">\n' +
-                            '<span>' + data[i].sjy_project_book_name + '</span>\n <br>' +
-                            '</p>\n' +
-                            '<p class = "proposal-detail">\n' +
-                            '<span>' + data[i].sjy_project_book_send_time + '</span>\n' +
-                            '<a class = "download-btn" id = "' + data[i].sjy_id + '" href="' + data[i].sjy_project_path + '">下载</a>\n' +
-                            '</p>\n' +
-                            '</li>\n';
+                                '<p class = "proposal-detail">\n' +
+                                '<span>' + data[i].sjy_project_book_name + '</span>\n <br>' +
+                                '</p>\n' +
+                                '<p class = "proposal-detail">\n' +
+                                '<span>' + data[i].sjy_project_book_send_time + '</span>\n' +
+                                '<a class = "download-btn" id = "' + data[i].sjy_id + '" href="' + data[i].sjy_project_path + '">下载</a>\n' +
+                                '</p>\n' +
+                                '</li>\n';
 
                     }
 
@@ -746,8 +673,121 @@ layui.use('element', function(){
 
 
         });
+    };
+
+    $("#biding").click(function() {
+        bindingFunc();
+    });
+
+
+
+
+
+    /*1. 邀请我*/
+    $.post("__MODULE__/Project/invite", function (data) {
+
+        var html1 = '';
+
+//        console.log(data);
+
+
+        for(var i = 0; i < data.length; i++ ){
+
+            html1 += '<tr>' +
+                    '<td>' + data[i].project_detail.sjy_community_project_title + '</td>' +
+                    '<td>' + data[i].project_detail.sjy_community_name + '</td>' +
+                    '<td>' + data[i].project_detail.sjy_community_project_service_area  + '</td>' +
+                    '<td>' + data[i].status_desc+ '</td>' +
+                    '<td>' + data[i].project_detail.sjy_community_project_collect_start_time + ' ~<br>' + data[i].project_detail.sjy_community_project_collect_end_time + '</td>' +
+                    '<td>' + data[i].invitate_time + '</td>' +
+                    '<td><a class="see-detail" style="width: 68px; text-align: center;"  href="__CONTROLLER__/displayCommunityProject/id/' + data[i].project_id + '">详情</a> ' +
+                    '<a id = "agreeOrganization" class = "projectBook" style="width: 68px; text-align: center;"  data-id = "' + data[i].project_id + '" href="javascript:;">同意</a></td>' +
+                    '</tr>';
+        }
+
+        $("#tbody1").html(html1);
+
+
+        /*点击同意的操作*/
+        $("#agreeOrganization").click(function () {
+
+            $("#shade1").css("display", "block");
+            $("#layer3").css("display", "block");
+
+            $("#closeDeliver").click(function () {
+                $("#shade1").css("display", "none");
+                $("#layer3").css("display", "none");
+            });
+
+            var  $id = $(this).attr("data-id");
+
+            console.log( $id  + "$id ");
+
+
+            layui.use('upload', function() {
+
+                var upload = layui.upload;
+                //执行实例
+                var uploadPdf = upload.render({
+                    elem: '#test1', //绑定元素
+                    auto: false,
+                    bindAction: '#uploadPDF',
+                    url: "__MODULE__/Project/sendProjectBook/project_id/" + $id,
+                    exts: 'pdf|doc|docx',
+                    done: function(res) {
+                        //上传完毕回调
+                        if (res.state == 1) {
+                            layer.msg("发送成功");
+                            layer.msg('发送成功',function(){
+                                $("#shade1").css("display", "none");
+                                $("#layer3").css("display", "none");
+
+                                var numa = Number($("#numa").text()) - 1;
+                                if( numa == 0 ){
+                                    $("#numa").remove();
+                                }
+                                $("#numa").text(numa);
+
+                                var numb = 0;
+
+                                if( !Number($("#numb").text()) ){
+
+                                    numb = numb + 1;
+                                    $("#numb").html('<span id="numb" class="layui-badge">1</span>');
+
+                                }else {
+
+                                    numb = Number($("#numb").text()) + 1;
+                                    $("#numb").text(numb);
+
+                                }
+
+                                bindingFunc();
+
+                                layer.msg("即将进入投标中", function () {
+                                    element.tabChange("docDemoTabBrief", "b");
+
+
+                                })
+
+                            });
+                        }else {
+                            layer.msg( res.errorMsg );
+                        }
+                    },
+                    error: function() {
+                        //请求异常回调
+                    }
+                });
+
+
+            });
+
+        })
 
     });
+
+
 
 
 
