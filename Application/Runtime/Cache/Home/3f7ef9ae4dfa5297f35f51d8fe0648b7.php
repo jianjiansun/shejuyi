@@ -590,7 +590,6 @@ layui.use('element', function(){
 
     var bindingFunc = function () {
 
-
         $.post("/index.php/Home/Project/alreadySendProject", function(data) {
             var html2 = '';
 
@@ -688,13 +687,12 @@ layui.use('element', function(){
 
 
         });
-
-
     };
 
     $("#biding").click(function() {
         bindingFunc();
     });
+
 
 
 
@@ -767,15 +765,15 @@ layui.use('element', function(){
 
                                 var numb = 0;
 
-                                if( !Number($("#numb").text()) ){
-
-                                    numb = numb + 1;
-                                    $("#numb").html('<span id="numb" class="layui-badge">1</span>');
-
-                                }else {
-
+                                if( $("#biding").children().is("span") ){
+                                    console.log("span");
                                     numb = Number($("#numb").text()) + 1;
                                     $("#numb").text(numb);
+
+                                }else {
+                                    console.log("not span");
+                                    numb = numb + 1;
+                                    $("#biding").append('<span id="numb" class="layui-badge">1</span>');
 
                                 }
 
