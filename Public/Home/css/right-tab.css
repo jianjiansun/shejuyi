@@ -56,8 +56,24 @@ div.proposal-detail{
     line-height: 26px;
     border-bottom: 1px solid #e6e6e6;
 }
+a:active{
+    color: #ffffff!important;
+}
+a:visited{
+    color: #ffffff!important;
+}
+a:focus{
+    color: #ffffff!important;
+}
+a:hover{
+    font-weight: 900;
+}
 .proposal-detail .download-btn{
     float: right;
+    display: inline-block;
+    padding: 0px 12px;
+    background: #009688;
+    color: #ffffff;
 }
 .sure-btn-box{
     border-top: 1px solid #e6e6e6;
