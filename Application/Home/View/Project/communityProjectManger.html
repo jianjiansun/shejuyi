@@ -626,9 +626,13 @@
                 for ( var i = 0; i < data.data.length; i ++){
                   html += '<li class = "choose-organize-item">' +
                           '<div class = "organize-choose-tit">' +
+                          '<p>' +
                           '<span class = "intentionOrName">'+ data.data[i].origanization_info.sjy_origanization_name  +'</span>' +
+                          '</p>'+
+                          '<p>' +
                           '<a  class="see-project-book"  id = "'+ data.data[i].origanization_id +'" href="javascript:;">查看项目书</a>' +
                           '<a class = "agree-organization" href="javascript:;">同意</a>'+
+                          '</p>'+
                           '</div>' +
                           '<div class = "organize-proposal" style = "display:none;">' +
                           '</div>' +
