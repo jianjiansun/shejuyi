@@ -443,6 +443,27 @@ html {
     color: red;
     margin-top: 10px;
 }
+
+#layer4{
+    position: relative;
+}
+
+.or-deliverBtn{
+    position: absolute!important;
+    top: 60px!important;
+    left: 20px;
+}
+.isUpload{
+    position: absolute!important;
+    top: 190px;
+    left:  50%;
+    margin-left: -50px;
+}
+
+
+
+
+
 .id-remider{
     clear: both;
 }
@@ -524,7 +545,6 @@ html {
     margin-top: 30px;
     margin-left: 20px;
 }
-
 
 
 .addMemberBox .addTit{
