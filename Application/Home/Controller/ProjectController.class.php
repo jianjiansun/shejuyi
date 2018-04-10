@@ -557,7 +557,7 @@
             $param['project_book_send_people_id'] = session('userInfo')['sjy_id'];  //发送者id            
 	    	$val = M('project_book')->add($param);
 
-            
+
 		    if ($res&&$val){
 			    // 提交事务
 			    $model->commit(); 
@@ -679,7 +679,14 @@
             foreach($info as $key=>$value)
             {
                 $imgs = M('community_project_image')->where(array('sjy_community_project_id'=>$value['sjy_id'],))->find();
-               
+                //根据项目id和社区id查询已经投递项目书的机构
+                $data = array(
+                       "community_id"=>$community_code,
+                       'project_id'=>$value['sjy_id'],
+                       'status'=>1
+                );
+                $nums = M('project')->where($data)->count();
+                $info[$key]['origanization_nums'] = $nums;
                 $info[$key]['main_imgs'] = $imgs['sjy_community_project_image'];
             }
             $count = M('community_project_info')->where($data)->count();
