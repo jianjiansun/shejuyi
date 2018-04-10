@@ -280,9 +280,9 @@
             '<span class = "left">发布机构</span>' +
             '<p class = "left" style = "line-height:  30px;">' +
             '<a href="__MODULE__/Home/displayOriganizationHome/id/' + data.sjy_origanization_id + '">' + data.sjy_origanization_name + '</a> ' +
-
-            '</p>' +
+            '</p>' + '<if condition="$figure eq 2">' +
             '<a id = "inviteOr" class = "layui-btn" href="javascript:;" style = "float: right; ">邀请做项目</a>' +
+            ' </if>'+
             '</div>' +
             '<div class = "detail-item">' +
             '<span class = "left">服务领域</span>' +
