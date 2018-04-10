@@ -1,0 +1,66 @@
+[ 2018-04-10T14:03:19+08:00 ] 127.0.0.1 http://config.pinyin.sogou.com/api/toolbox/geturl.php?h=ED573B078CD4F5C408612B95D3F1EE5B&v=8.8.0.1953&r=0000_sogou_pinyin_82e
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000971s ]
+ERR: 无法加载模块:Api
+
+[ 2018-04-10T14:03:48+08:00 ] 127.0.0.1 /Public/Home/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000371s ]
+ERR: 无法加载模块:Public
+
+[ 2018-04-10T14:03:49+08:00 ] 127.0.0.1 /Public/Home/imgs/image.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000345s ]
+ERR: 无法加载模块:Public
+
+[ 2018-04-10T14:04:25+08:00 ] 127.0.0.1 /Public/Home/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000679s ]
+ERR: 无法加载模块:Public
+
+[ 2018-04-10T14:29:44+08:00 ] 127.0.0.1 http://config.pinyin.sogou.com/api/toolbox/geturl.php?h=ED573B078CD4F5C408612B95D3F1EE5B&v=8.8.0.1953&r=0000_sogou_pinyin_82e
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010608s ]
+ERR: 无法加载模块:Api
+
+[ 2018-04-10T14:31:10+08:00 ] 127.0.0.1 /Public/Home/imgs/image.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000550s ]
+ERR: 无法加载模块:Public
+
+[ 2018-04-10T14:31:10+08:00 ] 127.0.0.1 /Public/Home/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000392s ]
+ERR: 无法加载模块:Public
+
+[ 2018-04-10T14:31:19+08:00 ] 127.0.0.1 /Public/Home/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+ERR: 无法加载模块:Public
+
+[ 2018-04-10T14:31:19+08:00 ] 127.0.0.1 /Public/Home/imgs/image.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000531s ]
+ERR: 无法加载模块:Public
+
+[ 2018-04-10T14:33:37+08:00 ] 127.0.0.1 /Public/Home/css/bootstrap.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000421s ]
+ERR: 无法加载模块:Public
+
+[ 2018-04-10T14:33:37+08:00 ] 127.0.0.1 /Public/Home/imgs/image.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000401s ]
+ERR: 无法加载模块:Public
+

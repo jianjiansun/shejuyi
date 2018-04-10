@@ -1,0 +1,293 @@
+[ 2018-04-10T14:03:44+08:00 ] 127.0.0.1 /index.php/Home/Project/origanizationProjectManger
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.027362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.027429s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0469s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 79 LIMIT 1   [ RunTime:0.0486s ]
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0453s ]
+SQL: SELECT * FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` BETWEEN 0 AND 99 LIMIT 1   [ RunTime:0.0395s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0457s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0467s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 118 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` = 0 LIMIT 1   [ RunTime:0.0424s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` = 1 LIMIT 1   [ RunTime:0.0414s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` = 2 LIMIT 1   [ RunTime:0.0451s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` BETWEEN 10 AND 98 LIMIT 1   [ RunTime:0.0388s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` = 99 LIMIT 1   [ RunTime:0.0395s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000304s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000353s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.311988s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.312059s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.055739s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.055816s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.030700s ]
+INFO: [ app_end ] --END-- [ RunTime:0.030766s ]
+
+[ 2018-04-10T14:03:47+08:00 ] 127.0.0.1 /index.php/Home/Project/origanizationProjectManger
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000403s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000801s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000851s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0500s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 79 LIMIT 1   [ RunTime:0.0462s ]
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0402s ]
+SQL: SELECT * FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` BETWEEN 0 AND 99 LIMIT 1   [ RunTime:0.0463s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0483s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0414s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 118 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` = 0 LIMIT 1   [ RunTime:0.0459s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` = 1 LIMIT 1   [ RunTime:0.0497s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` = 2 LIMIT 1   [ RunTime:0.0406s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` BETWEEN 10 AND 98 LIMIT 1   [ RunTime:0.0394s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` = 99 LIMIT 1   [ RunTime:0.0471s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000645s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000741s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.082340s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.082413s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000673s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000706s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000959s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001003s ]
+
+[ 2018-04-10T14:03:49+08:00 ] 127.0.0.1 /index.php/Home/Project/invite
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000778s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000836s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0476s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 79 LIMIT 1   [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0461s ]
+SQL: SELECT * FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` BETWEEN 0 AND 99 LIMIT 1   [ RunTime:0.0461s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0459s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0448s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 118 行.
+SQL: SELECT * FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` = 0 ORDER BY invitate_time desc LIMIT 0,15   [ RunTime:0.0462s ]
+SQL: SHOW COLUMNS FROM `sjy_community_project_info` [ RunTime:0.0468s ]
+SQL: SELECT * FROM `sjy_community_project_info` WHERE `sjy_id` = 43 LIMIT 1   [ RunTime:0.0493s ]
+NOTIC: [8] Undefined index: sjy_community_project_collect
+                    _end_time C:\xampp\htdocs\shejuyi\Application\Home\Controller\ProjectController.class.php 第 168 行.
+NOTIC: [8] Undefined index: sjy_community_project_collect
+                    _end_time C:\xampp\htdocs\shejuyi\Application\Home\Controller\ProjectController.class.php 第 172 行.
+
+[ 2018-04-10T14:05:11+08:00 ] 127.0.0.1 /index.php/Home/Project/sendProjectBook/project_id/43
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000530s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000567s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0484s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 79 LIMIT 1   [ RunTime:0.0475s ]
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` BETWEEN 0 AND 99 LIMIT 1   [ RunTime:0.0389s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0467s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0470s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 118 行.
+SQL: SHOW COLUMNS FROM `sjy_community_project_info` [ RunTime:0.0448s ]
+SQL: SELECT * FROM `sjy_community_project_info` WHERE `sjy_id` = 43 LIMIT 1   [ RunTime:0.0459s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given C:\xampp\htdocs\shejuyi\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SELECT * FROM `sjy_project` WHERE `project_id` = 43 AND `community_id` = 30 AND `origanization_id` = 24 LIMIT 1   [ RunTime:0.0447s ]
+SQL: UPDATE `sjy_project` SET `send_project_book_time`='2018-04-10 14:05:11',`status`='1' WHERE `project_id` = 43 AND `community_id` = 30 AND `origanization_id` = 24 [ RunTime:0.0379s ]
+SQL: SHOW COLUMNS FROM `sjy_project_book` [ RunTime:0.0435s ]
+SQL: INSERT INTO `sjy_project_book` (`sjy_project_id`,`sjy_origanization_id`,`sjy_community_id`,`sjy_project_book_send_time`,`sjy_project_path`,`sjy_project_book_name`,`project_book_send_people`,`project_book_send_people_id`) VALUES ('43','24','30','2018-04-10 14:05:11','/Uploads/project_book/2018-04-10/5acc5417604c9.doc','新建 Microsoft Word 97 - 2003 文档.doc','孙建建','79') [ RunTime:0.0470s ]
+
+[ 2018-04-10T14:05:12+08:00 ] 127.0.0.1 /index.php/Home/Project/sendProjectBook/project_id/43
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000526s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001361s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0511s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 79 LIMIT 1   [ RunTime:0.0427s ]
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0474s ]
+SQL: SELECT * FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` BETWEEN 0 AND 99 LIMIT 1   [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0477s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0411s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 118 行.
+SQL: SHOW COLUMNS FROM `sjy_community_project_info` [ RunTime:0.0435s ]
+SQL: SELECT * FROM `sjy_community_project_info` WHERE `sjy_id` = 43 LIMIT 1   [ RunTime:0.0444s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given C:\xampp\htdocs\shejuyi\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SELECT * FROM `sjy_project` WHERE `project_id` = 43 AND `community_id` = 30 AND `origanization_id` = 24 LIMIT 1   [ RunTime:0.0435s ]
+SQL: UPDATE `sjy_project` SET `send_project_book_time`='2018-04-10 14:05:12' WHERE `project_id` = 43 AND `community_id` = 30 AND `origanization_id` = 24 [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `sjy_project_book` [ RunTime:0.0485s ]
+SQL: INSERT INTO `sjy_project_book` (`sjy_project_id`,`sjy_origanization_id`,`sjy_community_id`,`sjy_project_book_send_time`,`sjy_project_path`,`sjy_project_book_name`,`project_book_send_people`,`project_book_send_people_id`) VALUES ('43','24','30','2018-04-10 14:05:12','/Uploads/project_book/2018-04-10/5acc541872780.doc','新建 Microsoft Word 97 - 2003 文档.doc','孙建建','79') [ RunTime:0.0478s ]
+
+[ 2018-04-10T14:31:09+08:00 ] 127.0.0.1 /index.php/Home/Project/origanizationProjectManger
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000447s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009403s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0460s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 79 LIMIT 1   [ RunTime:0.0408s ]
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0488s ]
+SQL: SELECT * FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` BETWEEN 0 AND 99 LIMIT 1   [ RunTime:0.0473s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0476s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0390s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 118 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` = 0 LIMIT 1   [ RunTime:0.0366s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` = 1 LIMIT 1   [ RunTime:0.0395s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` = 2 LIMIT 1   [ RunTime:0.0395s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` BETWEEN 10 AND 98 LIMIT 1   [ RunTime:0.0377s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` = 99 LIMIT 1   [ RunTime:0.0378s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000289s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000338s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.231794s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.231867s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.020392s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.020441s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.013410s ]
+INFO: [ app_end ] --END-- [ RunTime:0.013466s ]
+
+[ 2018-04-10T14:31:10+08:00 ] 127.0.0.1 /index.php/Home/Project/invite
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000478s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000801s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000843s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0472s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 79 LIMIT 1   [ RunTime:0.0456s ]
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0476s ]
+SQL: SELECT * FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` BETWEEN 0 AND 99 LIMIT 1   [ RunTime:0.0464s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0458s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0462s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 118 行.
+SQL: SELECT * FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` = 0 ORDER BY invitate_time desc LIMIT 0,15   [ RunTime:0.0472s ]
+
+[ 2018-04-10T14:31:18+08:00 ] 127.0.0.1 /index.php/Home/Project/origanizationProjectManger
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001196s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001268s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0430s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 79 LIMIT 1   [ RunTime:0.0480s ]
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0467s ]
+SQL: SELECT * FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` BETWEEN 0 AND 99 LIMIT 1   [ RunTime:0.0398s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0447s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0464s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 118 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` = 0 LIMIT 1   [ RunTime:0.0482s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` = 1 LIMIT 1   [ RunTime:0.0446s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` = 2 LIMIT 1   [ RunTime:0.0461s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` BETWEEN 10 AND 98 LIMIT 1   [ RunTime:0.0443s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` = 99 LIMIT 1   [ RunTime:0.0457s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000643s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000740s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.080649s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.080735s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000670s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000702s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001325s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001374s ]
+
+[ 2018-04-10T14:31:19+08:00 ] 127.0.0.1 /index.php/Home/Project/invite
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000422s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000855s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000913s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0483s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 79 LIMIT 1   [ RunTime:0.0483s ]
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0473s ]
+SQL: SELECT * FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` BETWEEN 0 AND 99 LIMIT 1   [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0511s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0460s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 118 行.
+SQL: SELECT * FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` = 0 ORDER BY invitate_time desc LIMIT 0,15   [ RunTime:0.0509s ]
+
+[ 2018-04-10T14:31:26+08:00 ] 127.0.0.1 /index.php/Home/Project/alreadySendProject
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000426s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000848s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000902s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0464s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 79 LIMIT 1   [ RunTime:0.0455s ]
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0404s ]
+SQL: SELECT * FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` BETWEEN 0 AND 99 LIMIT 1   [ RunTime:0.0452s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0461s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0473s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 118 行.
+SQL: SELECT * FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` = 1 ORDER BY send_project_book_time desc LIMIT 0,15   [ RunTime:0.0386s ]
+SQL: SHOW COLUMNS FROM `sjy_community_project_info` [ RunTime:0.0453s ]
+SQL: SELECT * FROM `sjy_community_project_info` WHERE `sjy_id` = 43 LIMIT 1   [ RunTime:0.0382s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` = 1 LIMIT 1   [ RunTime:0.0398s ]
+
+[ 2018-04-10T14:33:37+08:00 ] 127.0.0.1 /index.php/Home/Project/origanizationProjectManger
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000420s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000782s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000824s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0399s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 79 LIMIT 1   [ RunTime:0.0412s ]
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0462s ]
+SQL: SELECT * FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` BETWEEN 0 AND 99 LIMIT 1   [ RunTime:0.0481s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0410s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0466s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 118 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` = 0 LIMIT 1   [ RunTime:0.0403s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` = 1 LIMIT 1   [ RunTime:0.0387s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` = 2 LIMIT 1   [ RunTime:0.0446s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` BETWEEN 10 AND 98 LIMIT 1   [ RunTime:0.0447s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` = 99 LIMIT 1   [ RunTime:0.0485s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000649s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000749s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.109320s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.109390s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000670s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000703s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001129s ]
+
+[ 2018-04-10T14:33:38+08:00 ] 127.0.0.1 /index.php/Home/Project/invite
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000403s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000800s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000846s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0467s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_id` = 79 LIMIT 1   [ RunTime:0.0477s ]
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0389s ]
+SQL: SELECT * FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` BETWEEN 0 AND 99 LIMIT 1   [ RunTime:0.0451s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0451s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0477s ]
+NOTIC: [8] Undefined variable: islogin C:\xampp\htdocs\shejuyi\Application\Home\Controller\BaseController.class.php 第 118 行.
+SQL: SELECT * FROM `sjy_project` WHERE `origanization_id` = 24 AND `status` = 0 ORDER BY invitate_time desc LIMIT 0,15   [ RunTime:0.0420s ]
+
