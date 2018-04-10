@@ -345,7 +345,7 @@
         //社会组织投递项目书
         public function sendProjectBook()
         {
-        	$project_id = I('post.project_id'); //项目id
+        	$project_id = I('get.project_id'); //项目id
             if(empty($project_id))
             {
                 $this->ajaxReturn(array('state'=>9,'errorInfo'=>"上传错误,请重试"));
