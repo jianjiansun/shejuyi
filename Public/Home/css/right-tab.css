@@ -26,20 +26,26 @@
     font-size: 14px;
     padding: 0 12px;
     line-height: 44px;
-    background: #e6e6e6;
     height: 44px;
-    border-bottom: 1px solid #e6e6e6;
+
 }
 .organize-choose-tit > span{
-    color: #4890FF;
+    color: #EA6F5A;
     font-weight: 900;
 }
+
+
 .choose-organize-box{
     overflow-y: auto;
 }
 .agree-organization{
     float: right;
     font-size: 14px;
+    padding: 0 12px;
+    background: #009688;
+    color: #ffffff;
+    height: 26px;
+    line-height: 26px;
 }
 .organize-proposal{
     padding: 0  12px;
@@ -56,13 +62,13 @@ div.proposal-detail{
     line-height: 26px;
     border-bottom: 1px solid #e6e6e6;
 }
-a:active{
+tbody a:active{
     color: #ffffff!important;
 }
-a:visited{
+tbody a:visited{
     color: #ffffff!important;
 }
-a:focus{
+tbody a:focus{
     color: #ffffff!important;
 }
 a:hover{
@@ -97,10 +103,16 @@ a:hover{
     border-radius:4px;
 }
 .see-project-book{
-    margin-left: 40px;
+    float: left;
+    height: 26px;
+    line-height: 26px;
+    display: inline-block;
     font-size: 14px;
-    color: #2b7fff;
+    color: #ffffff;
+    padding: 0 12px;
+    background: #4BB2FF;
+
 }
 .see-project-book.on {
-    color: #EA6F5A;;
+    color: #EA6F5A;
 }

@@ -229,7 +229,7 @@
                 <div class="col-md-10 column perperson-con" style = "background: #FFFFFF;">
                     <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
                         <ul class="layui-tab-title">
-                            <li class="layui-this"  lay-id="a">征集中<if condition='$collectNum gt 0'><span class="layui-badge">{$collectNum}</span></if></li>
+                            <li id = "collecting" class="layui-this"  lay-id="a">征集中<if condition='$collectNum gt 0'><span class="layui-badge">{$collectNum}</span></if></li>
                             <li id = "starting" lay-id="b">待开始<if condition='$waitStatNum gt 0'><span class="layui-badge">{$waitStatNum}</span></if></li>
                             <li id = "going" lay-id="c">执行中<if condition='$ingNum gt 0'><span class="layui-badge">{$ingNum}</span></if></li>
                             <li id = "agreenFinish"  lay-id="d">结项中<if condition='$applyEndNum gt 0'><span class="layui-badge">{$applyEndNum}</span></if></li>
@@ -576,173 +576,189 @@
 
     /*1. 征集中*/
 
-    $.post("__CONTROLLER__/communityTenderProject", function (data) {
 
-        var html = '';
-        for(var i = 0; i < data.data.length; i++){
-            html += '<tr>\n' +
-                '<td class = "proName">'+  data.data[i].sjy_community_project_title+'</td>\n' +
-                '<td>'+ data.data[i].sjy_community_project_send_prople_name +'</td>\n' +
-                '<td>'+ data.data[i].sjy_community_project_service_area +'</td>\n' +
-                '<td>'+ data.data[i].sjy_community_project_collect_start_time+'~<br>'+data.data[i].sjy_community_project_collect_end_time +'</td>\n' +
-                '<td>'+ data.data[i].sjy_community_project_start_time+'~<br>'+ data.data[i].sjy_community_project_end_time  +'</td>\n' +
-                '<td><a class = "see-detail" style="width: 68px; text-align: center;"  href="__CONTROLLER__/displayCommunityProject/id/'+data.data[i].sjy_id+'"> 详情 </a><br>' +
-                    '<a id = "'+data.data[i].sjy_id +'" class = "intention-organization" href="javascript:;">意向机构</a></td>\n' +
-                '\n' +
-                '</tr>';
-        }
+    var collectingFunc = function () {
+        $.post("__CONTROLLER__/communityTenderProject", function (data) {
+
+            var html = '';
+            for(var i = 0; i < data.data.length; i++){
+                html += '<tr>\n' +
+                        '<td class = "proName">'+  data.data[i].sjy_community_project_title+'</td>\n' +
+                        '<td>'+ data.data[i].sjy_community_project_send_prople_name +'</td>\n' +
+                        '<td>'+ data.data[i].sjy_community_project_service_area +'</td>\n' +
+                        '<td>'+ data.data[i].sjy_community_project_collect_start_time+'~<br>'+data.data[i].sjy_community_project_collect_end_time +'</td>\n' +
+                        '<td>'+ data.data[i].sjy_community_project_start_time+'~<br>'+ data.data[i].sjy_community_project_end_time  +'</td>\n' +
+                        '<td><a class = "see-detail" style="width: 68px; text-align: center;"  href="__CONTROLLER__/displayCommunityProject/id/'+data.data[i].sjy_id+'"> 详情 </a><br>' +
+                        '<a id = "'+data.data[i].sjy_id +'" class = "intention-organization" href="javascript:;">意向机构</a></td>\n' +
+                        '\n' +
+                        '</tr>';
+            }
 
 
-        $("#tbody1").html(html);
+            $("#tbody1").html(html);
 
-        $(".intention-organization").click(function () {
+            $(".intention-organization").click(function () {
 
-            var projectId = $(this).attr("id");
+                var projectId = $(this).attr("id");
 
-            var proName = $(this).parent().siblings('.proName').text();
-            console.log(proName + "proName");
+                var proName = $(this).parent().siblings('.proName').text();
+                console.log(proName + "proName");
 
-            $(".tab-right-bar").animate({
-                right:'0px',
-            });
-
-            $(".tab-right-bar").height($(window).height() );
-            $(".right-tab-content").height($(window).height() -200);
-            $(".sure-btn-box").height( 200);
-
-            $(".close-tab-right").click(function () {
                 $(".tab-right-bar").animate({
-                    right:'-320px'
+                    right:'0px',
                 });
-            });
 
+                $(".tab-right-bar").height($(window).height() );
+                $(".right-tab-content").height($(window).height() -200);
+                $(".sure-btn-box").height( 200);
 
-            var id = $(this).attr("id");
-
-            $.post("__MODULE__/Project/intentOriganization/id/" + id , function (data) {
-
-                var html = '';
-
-                for ( var i = 0; i < data.data.length; i ++){
-                  html += '<li class = "choose-organize-item">' +
-                          '<div class = "organize-choose-tit">' +
-                          '<p>' +
-                          '<span class = "intentionOrName">'+ data.data[i].origanization_info.sjy_origanization_name  +'</span>' +
-                          '</p>'+
-                          '<p>' +
-                          '<a  class="see-project-book"  id = "'+ data.data[i].origanization_id +'" href="javascript:;">查看项目书</a>' +
-                          '<a class = "agree-organization" href="javascript:;">同意</a>'+
-                          '</p>'+
-                          '</div>' +
-                          '<div class = "organize-proposal" style = "display:none;">' +
-                          '</div>' +
-                          '</li>';
-                }
-
-
-
-
-                $(".choose-organize-box").html(html);
-
-                /*同意社会组织的接口*/
-                $(".agree-organization").click(function () {
-
-
-                    var organizationId = $(this).siblings('.see-project-book').attr('id');
-                    var orText = $(this).siblings('.intentionOrName').text();
-
-
-
-
-                    layer.open({
-                        content: '<p>你是否确定要</p><p class = "ortext">'+orText +'</p>执行<p class = "ProName">' + proName + '</p>'
-                        ,btn: ['确定', '取消']
-                        ,yes: function(){
-
-                            //按钮【按钮一】的回调
-
-                            $.post("__MODULE__/Project/agreeProject",{ project_id: projectId, origanization_id : organizationId  }, function(data){
-
-                                if(data.state == 1){
-
-                                    location.reload();
-                                    /*layer.close();*/
-                                }
-
-
-                            })
-
-
-                        }
-                        ,cancel: function(){
-                            //右上角关闭回调
-
-                            //return false 开启该代码可禁止点击该按钮关闭
-                        }
+                $(".close-tab-right").click(function () {
+                    $(".tab-right-bar").animate({
+                        right:'-320px'
                     });
-
-
-
-
                 });
 
 
+                var id = $(this).attr("id");
+
+                $.post("__MODULE__/Project/intentOriganization/id/" + id , function (data) {
+
+                    var html = '';
+
+                    for ( var i = 0; i < data.data.length; i ++){
+                        html += '<li class = "choose-organize-item or-item-line">' +
+                                '<div class = "organize-choose-tit">' +
+                                '<span class = "intentionOrName">'+ data.data[i].origanization_info.sjy_origanization_name  +'</span><br>' +
+                                '<a  class="see-project-book"  id = "'+ data.data[i].origanization_id +'" href="javascript:;">查看项目书</a>' +
+                                '<a class = "agree-organization download-btn" href="javascript:;">同意</a>'+
+                                '</div>' +
+                                '<div class = "organize-proposal" style = "display:none;">' +
+                                '</div>' +
+                                '</li>';
+
+
+                    }
 
 
 
 
 
 
-                /*查看项目书*/
-                $(".see-project-book").click(function () {
 
-                    var organizationId = $(this).attr("id");
+                    $(".choose-organize-box").html(html);
 
-                    $(".see-project-book").removeClass("on");
-                    $(this).addClass("on");
-                    console.log("点击出现项目书");
-
-                    $(".organize-proposal").css("display", "none");
-                    $(this).parent().next().css("display", "block");
-
-                    $.post("__MODULE__/Project/projectBookList/origanization_id/" + organizationId +"/project_id/" +  id , function (data) {
-                        console.log(data);
-                        var html = "";
-                        for(var i =0; i < data.data.length; i++ ){
-                            html += '<p class = "proposal-detail">' +
-                                    '<span>'+ data.data[i].sjy_project_book_name + '</span>' +
-                                    '<a class = "download-btn" id = "'+ data.data[i].sjy_id +'"   href="javascript:;">下载</a>' +
-                                    '</p>';
-
-                        }
-
-                        $(".organize-proposal").html(html);
+                    /*同意社会组织的接口*/
+                    $(".agree-organization").click(function () {
 
 
-                        $(".dowmload-btn").click(function(){
-
-                            var book_id = $(this).attr("id");
-
-                            $.get("__MODULE__/Project/downloadProjectBook", {"id" : book_id},function(data){
+                        var organizationId = $(this).siblings('.see-project-book').attr('id');
+                        var orText = $(this).siblings('.intentionOrName').text();
 
 
-                            });
+
+
+                        layer.open({
+                            content: '<p>你是否确定要</p><p class = "ortext">'+orText +'</p>执行<p class = "ProName">' + proName + '</p>'
+                            ,btn: ['确定', '取消']
+                            ,yes: function(){
+
+                                //按钮【按钮一】的回调
+
+                                $.post("__MODULE__/Project/agreeProject",{ project_id: projectId, origanization_id : organizationId  }, function(data){
+
+                                    if(data.state == 1){
+
+                                        location.reload();
+                                        /*layer.close();*/
+                                    }
+
+
+                                })
+
+
+                            }
+                            ,cancel: function(){
+                                //右上角关闭回调
+
+                                //return false 开启该代码可禁止点击该按钮关闭
+                            }
                         });
 
 
 
-                    });
-                });
 
-                
+                    });
+
+
+
+
+
+
+
+
+                    /*查看项目书*/
+                    $(".see-project-book").click(function () {
+
+                        var organizationId = $(this).attr("id");
+
+                        $(".see-project-book").removeClass("on");
+                        $(this).addClass("on");
+                        console.log("点击出现项目书");
+
+                        $(".organize-proposal").css("display", "none");
+                        $(this).parent().next().css("display", "block");
+
+                        $.post("__MODULE__/Project/projectBookList/origanization_id/" + organizationId +"/project_id/" +  id , function (data) {
+                            console.log(data);
+                            var html = "";
+                            for(var i =0; i < data.data.length; i++ ){
+                                html += '<p class = "proposal-detail">' +
+                                        '<span>'+ data.data[i].sjy_project_book_name + '</span>' +
+                                        '<a class = "download-btn" id = "'+ data.data[i].sjy_id +'"   href="javascript:;">下载</a>' +
+                                        '</p>';
+
+                            }
+
+                            $(".organize-proposal").html(html);
+
+
+                            $(".dowmload-btn").click(function(){
+
+                                var book_id = $(this).attr("id");
+
+                                $.get("__MODULE__/Project/downloadProjectBook", {"id" : book_id},function(data){
+
+
+                                });
+                            });
+
+
+
+                        });
+                    });
+
+
+                })
+
             })
 
-        })
 
 
 
+        });
+    };
 
+    collectingFunc();
+
+
+    $("#collecting").click(function () {
+        collectingFunc();
     });
+
+
+
+
+
 
     /*2、 待开始*/
     $.get("__MODULE__/Project/waitOriganizationStart",  function(data){
@@ -1279,10 +1295,6 @@
                 $.get("__MODULE__/Project/projectBookList",{"project_id" : project_id,"origanization_id" :origanization_id}, function (data) {
 
                     var html = '';
-                    html += '<div class = "organize-choose-tit">\n' +
-                        '<span>机构A</span>\n' +
-                        '<a class = "agree-organization" href="javascript:;">上传时间 <span></span></a>\n' +
-                        '</div>\n' ;
 
                     console.log(data);
 
@@ -1290,7 +1302,7 @@
 
                         html +='<li class = "choose-organize-item">\n' +
                             '<div class = "proposal-detail">\n' +
-                            '<span>'+ data.data[i].sjy_project_book_name +'</span>\n <br>' +
+                            '<span  class = "DocTit">'+ data.data[i].sjy_project_book_name +'</span>\n <br>' +
                             '<span>'+ data.data[i].sjy_project_book_send_time +'</span>\n' +
                             '<a class = "download-btn" id = "'+ data.data[i].sjy_id +'" href="'+ data.data[i].sjy_project_path +'">下载</a>\n' +
                             '</div>\n' +
