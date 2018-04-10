@@ -817,6 +817,18 @@ html {
     font-weight: 900;
     color: #ffffff;
 }
+.or-inten-num{
+    position: relative;
+    right: 10px;
+    bottom: -10px;
+    color: #ffffff;
+    background: #5FB878;
+    display: inline-block;
+    padding:0 4px;
+    border-radius: 100%;
+
+
+}
 .see-detail{
     display: inline-block;
     padding: 1px 6px;
