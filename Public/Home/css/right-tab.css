@@ -49,12 +49,13 @@
 }
 .organize-proposal{
     padding: 0  12px;
+    margin-top: 53px;
 
 }
 p.proposal-detail{
     height: 40px;
     line-height: 40px;
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px dashed #e6e6e6;
 }
 div.proposal-detail{
     padding: 10px;
@@ -80,6 +81,8 @@ a:hover{
     padding: 0px 12px;
     background: #009688;
     color: #ffffff;
+    height: 26px;
+    line-height: 26px;
 }
 .sure-btn-box{
     border-top: 1px solid #e6e6e6;
@@ -114,5 +117,28 @@ a:hover{
 
 }
 .see-project-book.on {
-    color: #EA6F5A;
+    color: #ffffff!important;
 }
+
+.agree-organization:hover{
+    color: #ffffff!important;
+}
+.agree-organization:active{
+    color: #ffffff!important;
+}
+.agree-organization:visited{
+    color: #ffffff!important;
+}
+p.proposal-detail > span {
+    display: inline-block;
+    width:180px;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    overflow:hidden;
+
+
+}
+
+
+
