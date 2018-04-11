@@ -54,12 +54,6 @@ layui.use('element', function(){
     </span>
     <span class="layui-layer-resize"></span>
 </div>
-
-
-
-
-
-
     <div class="headLogin">
         <div class="container">
             <div class="left changeBan logoPer">
@@ -188,8 +182,6 @@ layui.use('element', function(){
     </div>
 
 
-
-
     <div class="container main-container">
         <div class="row clearfix">
             <div class="col-md-12 column">
@@ -198,9 +190,8 @@ layui.use('element', function(){
                     <div class="col-md-2 column  perperson">
                         <h2>个人信息</h2>
                         <div >
-
                             <div class = "user-img">
-                                <img id="userImg" src="{$user_image}" alt="  ">
+                                <img id="userImg" src="http://p33g9t7dr.bkt.clouddn.com/{$user_image}" alt="  ">
                                 <span class = "iconfont VIP-icon">&#xe65b;</span>
                             </div>
                             <p style = "margin-top: 12px;">
@@ -566,14 +557,6 @@ layui.use('element', function(){
     };
 
 
-
-
-
-
-
-
-
-
     /*5 .结项申请中 */
 
     var applyFinishProjectFunc = function () {
@@ -603,6 +586,9 @@ layui.use('element', function(){
             /*5.1 查看进度*/
             $(".see-progress").click(function() {
 
+
+                $("#shade1").css("display" , "block");
+
                 $(".add-progress").animate({
                     right: '0px'
                 });
@@ -615,6 +601,8 @@ layui.use('element', function(){
                     $(".add-progress").animate({
                         right: '-320px'
                     });
+
+                    $("#shade1").css("display" , "none");
                 });
 
                 var project_id = $(this).attr("id");
@@ -651,6 +639,8 @@ layui.use('element', function(){
             /*5.3 项目书*/
             $(".projectBook").click(function() {
 
+                $("#shade1").css("display" , "block");
+
                 var proName = $(this).parent().siblings('.proName').text();
                 console.log(proName + "proName");
 
@@ -665,6 +655,8 @@ layui.use('element', function(){
                     $(".tab-right-bar").animate({
                         right: '-320px'
                     });
+
+                    $("#shade1").css("display" , "none");
                 });
 
 
@@ -718,15 +710,8 @@ layui.use('element', function(){
     $("#apllyFinishProject").click(function() {
 
         applyFinishProjectFunc();
+
     });
-
-
-
-
-
-
-
-
 
 
 
@@ -771,6 +756,8 @@ layui.use('element', function(){
             /*4.1 查看进度*/
             $(".see-progress").click(function() {
 
+                $("#shade1").css("display" , "block");
+
                 $(".add-progress").animate({
                     right: '0px'
                 });
@@ -782,6 +769,8 @@ layui.use('element', function(){
                     $(".add-progress").animate({
                         right: '-320px'
                     });
+
+                    $("#shade1").css("display" , "none");
                 });
 
                 var project_id = $(this).attr("id");
@@ -818,6 +807,9 @@ layui.use('element', function(){
             /*4.3 项目书*/
             $(".projectBook").click(function() {
 
+
+                $("#shade1").css("display" , "block");
+
                 var proName = $(this).parent().siblings('.proName').text();
                 console.log(proName + "proName");
 
@@ -832,6 +824,8 @@ layui.use('element', function(){
                     $(".tab-right-bar").animate({
                         right: '-320px'
                     });
+
+                    $("#shade1").css("display" , "none");
                 });
 
 
@@ -1009,7 +1003,7 @@ layui.use('element', function(){
 
             $("#tbody3").html(html3);
 
-            /*是否开始项目*/
+            /*3.1  是否开始项目*/
             $(".startProject").click(function() {
 
                 var project_id = $(this).attr("id");
@@ -1080,10 +1074,12 @@ layui.use('element', function(){
             });
 
 
-            /*项目书点击下载*/
+            /* 3.3 项目书点击下载*/
 
             $(".projectBook").click(function() {
 
+
+                $("#shade1").css("display" , "block");
 
                 var proName = $(this).parent().siblings('.proName').text();
                 console.log(proName + "proName");
@@ -1099,6 +1095,8 @@ layui.use('element', function(){
                     $(".tab-right-bar").animate({
                         right: '-320px'
                     });
+
+                    $("#shade1").css("display" , "block");
                 });
 
 
@@ -1178,11 +1176,12 @@ layui.use('element', function(){
 
             $("#tbody2").html(html2);
 
-            /*项目书点击下载*/
+            /*2.1 项目书点击下载*/
 
             $(".projectBook").click(function() {
 
 
+                $("#shade1").css("display" , "block");
 
                 var proName = $(this).parent().siblings('.proName').text();
                 console.log(proName + "proName");
@@ -1367,15 +1366,7 @@ layui.use('element', function(){
     });
 
 
-
     inviteMeFunc();
-
-
-
-
-
-
-
 
 
     /*6 . 已完成 */
@@ -1402,6 +1393,8 @@ layui.use('element', function(){
             /*6.1 查看进度*/
             $(".see-progress").click(function() {
 
+                $("#shade1").css("display" , "block");
+
                 $(".add-progress").animate({
                     right: '0px'
                 });
@@ -1414,6 +1407,8 @@ layui.use('element', function(){
                     $(".add-progress").animate({
                         right: '-320px'
                     });
+
+                    $("#shade1").css("display" , "none");
                 });
 
                 var project_id = $(this).attr("id");
@@ -1441,11 +1436,10 @@ layui.use('element', function(){
             });
 
 
-
-
-
             /*6.3 项目书*/
             $(".projectBook").click(function() {
+
+                $("#shade1").css("display" , "block");
 
                 var proName = $(this).parent().siblings('.proName').text();
                 console.log(proName + "proName");
@@ -1461,6 +1455,8 @@ layui.use('element', function(){
                     $(".tab-right-bar").animate({
                         right: '-320px'
                     });
+
+                    $("#shade1").css("display" , "none");
                 });
 
 
@@ -1509,128 +1505,6 @@ layui.use('element', function(){
 
 
 
-
-
-
-    layui.use(['laypage', 'layer'], function() {
-        var laypage = layui.laypage,
-            layer = layui.layer;
-
-        //执行一个laypage实例
-        laypage.render({
-            elem: 'pagination0',
-            count: 70 //数据总数，从服务端得到
-                ,
-            jump: function(obj, first) {
-                //obj包含了当前分页的所有参数，比如：
-                console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
-                console.log(obj.limit); //得到每页显示的条数
-                console.log("page0");
-
-                //首次不执行
-                if (!first) {
-                    //do something
-                }
-            }
-        });
-
-
-        //执行一个laypage实例
-        laypage.render({
-            elem: 'pagination1',
-            count: 70 //数据总数，从服务端得到
-                ,
-            jump: function(obj, first) {
-                //obj包含了当前分页的所有参数，比如：
-                console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
-                console.log(obj.limit); //得到每页显示的条数
-                console.log("page1");
-                //首次不执行
-                if (!first) {
-                    //do something
-                }
-            }
-        });
-
-        //执行一个laypage实例
-        laypage.render({
-            elem: 'pagination2',
-            count: 70 //数据总数，从服务端得到
-                ,
-            jump: function(obj, first) {
-                //obj包含了当前分页的所有参数，比如：
-                console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
-                console.log(obj.limit); //得到每页显示的条数
-
-                //首次不执行
-                if (!first) {
-                    //do something
-                }
-            }
-        });
-
-
-        //执行一个laypage实例
-        laypage.render({
-            elem: 'pagination3',
-            count: 70 //数据总数，从服务端得到
-                ,
-            jump: function(obj, first) {
-                //obj包含了当前分页的所有参数，比如：
-                console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
-                console.log(obj.limit); //得到每页显示的条数
-
-                //首次不执行
-                if (!first) {
-                    //do something
-                }
-            }
-        });
-        //执行一个laypage实例
-        laypage.render({
-            elem: 'pagination4',
-            count: 70 //数据总数，从服务端得到
-                ,
-            jump: function(obj, first) {
-                //obj包含了当前分页的所有参数，比如：
-                console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
-                console.log(obj.limit); //得到每页显示的条数
-
-                //首次不执行
-                if (!first) {
-                    //do something
-                }
-            }
-        });
-
-        //执行一个laypage实例
-        laypage.render({
-            elem: 'pagination5',
-            count: 1000,
-            layout: ['limit', 'prev', 'page', 'next']
-        });
-        //执行一个laypage实例
-        laypage.render({
-            elem: 'pagination6',
-            count: 1000 //数据总数，从服务端得到
-                ,
-            curr: location.hash.replace('#!fenye=', '') //获取hash值为fenye的当前页
-                ,
-            hash: 'fenye' //自定义hash值
-                ,
-            jump: function(obj, first) {
-                //obj包含了当前分页的所有参数，比如：
-                console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
-                console.log(obj.limit); //得到每页显示的条数
-
-                //首次不执行
-                if (!first) {
-                    //do something
-                }
-            }
-        });
-
-    });
 </script>
 
 <script src="__PUBLIC__/Home/js/extend-webuploader.js" type="text/javascript"></script>

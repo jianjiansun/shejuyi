@@ -356,6 +356,13 @@
             '<div class = "detail-item">' +
             '<span  class = "left">项目图片</span>';
 
+        if( data.sjy_community_project_origanization_name == null ){
+            
+        }
+
+
+
+
         console.log(data.project_image.length);
 
         for (var i = 0; i < data.project_image.length; i++) {

@@ -322,29 +322,37 @@
             '<div class = "detail-item">' +
             '<span class = "left">服务领域</span>' +
             '<p class = "left" style = "line-height:  30px;">' + data.sjy_community_project_service_area + '</p>' +
-            '</div>' +
-            '<div class = "detail-item">' +
-            '<span  class = "left">项目执行方</span>' +
-            '<a href="__MODULE__/Home/displayOriganizationHome/id/'+data.sjy_community_project_origanization+'">' + data.sjy_community_project_origanization_name + '</p>' +
-            '</div>' +
-            '<div class = "detail-item">' +
-            '<span  class = "left">项目预算</span>' +
-            '<p  class = "left" style = "line-height:  30px;">' + data.sjy_community_project_plan_money + '</p>' +
-            '</div>' +
-            '<div class = "detail-item">' +
-            '<span  class = "left">项目周期</span>' +
-            '<p  class = "left" style = "line-height:  30px;">' + data.sjy_community_project_start_time + '-' + data.sjy_community_project_end_time + '</p>' +
-            '</div>' +
-            '<div class = "detail-item">' +
-            '<span  class = "left">征集周期</span>' +
-            '<p  class = "left" style = "line-height:  30px;">' + data.sjy_community_project_collect_start_time + '-' + data.sjy_community_project_collect_end_time + '</p>' +
-            '</div>' +
-            '<div class = "detail-item">' +
-            '<span  class = "left">项目内容</span>' +
-            '<p  class = "left" style = "line-height:  30px;">' + data.sjy_community_project_demand + '</p>' +
-            '</div>' +
-            '<div class = "detail-item">' +
-            '<span  class = "left">项目图片</span>';
+            '</div>';
+
+        if( data.sjy_community_project_origanization_name != null ){
+            html +='<div class = "detail-item">' +
+                    '<span  class = "left">项目执行方</span>' +
+                    '<a href="__MODULE__/Home/displayOriganizationHome/id/'+data.sjy_community_project_origanization+'">' + data.sjy_community_project_origanization_name + '</p>' +
+                    '</div>';
+
+        }
+
+        html +=  '<div class = "detail-item">' +
+                '<span  class = "left">项目预算</span>' +
+                '<p  class = "left" style = "line-height:  30px;">' + data.sjy_community_project_plan_money + '</p>' +
+                '</div>' +
+                '<div class = "detail-item">' +
+                '<span  class = "left">项目周期</span>' +
+                '<p  class = "left" style = "line-height:  30px;">' + data.sjy_community_project_start_time + '-' + data.sjy_community_project_end_time + '</p>' +
+                '</div>' +
+                '<div class = "detail-item">' +
+                '<span  class = "left">征集周期</span>' +
+                '<p  class = "left" style = "line-height:  30px;">' + data.sjy_community_project_collect_start_time + '-' + data.sjy_community_project_collect_end_time + '</p>' +
+                '</div>' +
+                '<div class = "detail-item">' +
+                '<span  class = "left">项目内容</span>' +
+                '<p  class = "left" style = "line-height:  30px;">' + data.sjy_community_project_demand + '</p>' +
+                '</div>' +
+                '<div class = "detail-item">' +
+                '<span  class = "left">项目图片</span>';
+
+
+
 
         console.log(data.project_image.length);
 

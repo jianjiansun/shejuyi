@@ -49,7 +49,7 @@
 
 <div class = "tab-right-bar" style = "display: block;">
     <div class = "right-tab">
-       <a class = "close-tab-right" href="javascript:;">意向 <br>机构</a>
+       <a class = "close-tab-right" href="javascript:;">项目书 <br></a>
         <!--   <a href="javascript:;">我的意向社区</a>-->
     </div>
     <div class = "right-tab-content">
@@ -132,14 +132,12 @@
             $(".organize-proposal").css("display", "block");
         });
 
-
-
-
     </script>
 
 </div>
 
 <!--查看进度-->
+<div class="layui-layer-shade" id="shade1" times="1" style="z-index:1014;display: none; background-color: rgb(0, 0, 0); opacity: 0.3;"></div>
 
 <div class = "add-progress">
     <div class = "right-tab">
@@ -193,7 +191,7 @@
                     <h2>个人信息</h2>
                     <div>
                         <div class = "user-img">
-                            <img id="userImg" src="{$user_image}" alt="  ">
+                            <img id="userImg" src="http://p33g9t7dr.bkt.clouddn.com/{$user_image}" alt="  ">
                             <span class = "iconfont VIP-icon">&#xe65b;</span>
                         </div>
                         <p style = "margin-top: 12px;">
@@ -206,8 +204,8 @@
                                 <div class="coverBox" >
                                     <div id="clipArea" ></div>
                                     <div class="clipBtn">
-                                        <button id="clipBtn">确定</button>
-                                        <button onClick="javascript:$('.cover-wrap').fadeOut();">关闭</button>
+                                        <button class="layui-btn" id="clipBtn">确定</button>
+                                        <button class = "clipBtnClose iconfont" onClick="javascript:$('.cover-wrap').fadeOut();">&#xe60e;</button>
                                     </div>
                                 </div>
                             </div>
@@ -275,25 +273,6 @@
                                         </tr>
                                         </thead>
                                         <tbody id = "tbody1">
-                                        <tr>
-                                            <td>1</td>
-                                            <td>2016-11-29</td>
-                                            <td>人生就像是一场修行</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>意向机构 详情</td>
- 
-                                        </tr>
-                                        <tr>
-                                            <td>10</td>
-                                            <td>2016-11-28</td>
-                                            <td>于千万年之中，时间的无涯的荒野里…</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>意向机构 详情</td>
-                                        </tr>
                                         </tbody>
                                     </table>
 
@@ -316,36 +295,20 @@
                                             <col width="200">
                                             <col width="200">
                                             <col width="200">
-                                            <col width="200">
+                                            <col width="220">
 
                                         </colgroup>
                                         <thead>
-                                        <tr>
-                                            <th>项目名称</th>
-                                            <th>发布人</th>
-                                            <th>执行机构</th>
-                                            <th>服务对象</th>
-                                            <th>操作</th>
-                                        </tr>
+                                            <tr>
+                                                <th>项目名称</th>
+                                                <th>发布人</th>
+                                                <th>执行机构</th>
+                                                <th>服务对象</th>
+                                                <th>操作</th>
+                                            </tr>
                                         </thead>
-                                        <tbody id = "tbody2">
-                                        <tr>
-                                            <td>1</td>
-                                            <td>2016-11-29</td>
-                                            <td>人生就像是一场修行</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>查看</td>
 
-                                        </tr>
-                                        <tr>
-                                            <td>10</td>
-                                            <td>2016-11-28</td>
-                                            <td>于千万年之中，时间的无涯的荒野里…</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>查看</td>
-                                        </tr>
+                                        <tbody id = "tbody2">
                                         </tbody>
                                     </table>
 
@@ -380,25 +343,6 @@
                                         </tr>
                                         </thead>
                                         <tbody id = "tbody3">
-                                        <tr>
-                                            <td>1</td>
-                                            <td>2016-11-29</td>
-                                            <td>人生就像是一场修行</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>进度 查看</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>10</td>
-                                            <td>2016-11-28</td>
-                                            <td>于千万年之中，时间的无涯的荒野里…</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>进度 查看</td>
-                                        </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -416,8 +360,7 @@
                                             <col width="200">
                                             <col width="200">
                                             <col width="200">
-                                            <col width="200">
-                                            <col width="200">
+                                            <col width="220">
                                         </colgroup>
                                         <thead>
                                         <tr>
@@ -429,24 +372,7 @@
                                         </tr>
                                         </thead>
                                         <tbody id = "tbody4">
-                                        <tr>
-                                            <td>1</td>
-                                            <td>2016-11-29</td>
-                                            <td>人生就像是一场修行</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>同意 拒绝 查看 进度</td>
 
-
-                                        </tr>
-                                        <tr>
-                                            <td>10</td>
-                                            <td>2016-11-28</td>
-                                            <td>于千万年之中，时间的无涯的荒野里…</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>同意 拒绝 查看 进度</td>
-                                        </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -468,7 +394,7 @@
                                             <col width="200">
                                             <col width="200">
                                             <col width="200">
-                                            <col width="200">
+                                            <col width="290">
                                         </colgroup>
                                         <thead>
                                         <tr>
@@ -481,26 +407,7 @@
                                         </tr>
                                         </thead>
                                         <tbody id = "tbody5">
-                                        <tr>
-                                            <td>1</td>
-                                            <td>2016-11-29</td>
-                                            <td>人生就像是一场修行</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
 
-
-                                        </tr>
-                                        <tr>
-                                            <td>10</td>
-                                            <td>2016-11-28</td>
-                                            <td>于千万年之中，时间的无涯的荒野里…</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -614,6 +521,8 @@
             /*2.2 项目书*/
             $(".projectBook").click(function () {
 
+                $("#shade1").css("display" , "block");
+
                 var proName = $(this).parent().siblings('.proName').text();
                 console.log(proName + "proName");
 
@@ -629,6 +538,7 @@
                     $(".tab-right-bar").animate({
                         right:'-320px'
                     });
+                    $("#shade1").css("display" , "none");
                 });
 
 
@@ -711,7 +621,12 @@
 
             $("#tbody1").html(html);
 
+            /* 1 征集中 意向机构  */
+
             $(".intention-organization").click(function () {
+
+                $("#shade1").css("display" , "block");
+
 
                 var projectId = $(this).attr("id");
 
@@ -722,6 +637,8 @@
                     right:'0px',
                 });
 
+                $(".")
+
                 $(".tab-right-bar").height($(window).height() );
                 $(".right-tab-content").height($(window).height() -200);
                 $(".sure-btn-box").height( 200);
@@ -730,6 +647,7 @@
                     $(".tab-right-bar").animate({
                         right:'-320px'
                     });
+                    $("#shade1").css("display" , "none");
                 });
 
 
@@ -838,7 +756,10 @@
                     /*查看项目书*/
                     $(".see-project-book").click(function () {
 
+
                         var organizationId = $(this).attr("id");
+
+
 
                         $(".see-project-book").removeClass("on");
                         $(this).addClass("on");
@@ -880,7 +801,9 @@
                 })
 
             })
-            
+
+
+
 
         });
     };
@@ -893,10 +816,6 @@
     });
 
 
-
-
-
-    
     /*3. 进行中*/
     $("#going").click(function () {
 
@@ -924,6 +843,8 @@
             /*3.1 查看进度*/
             $(".see-progress").click(function () {
 
+                $("#shade1").css("display" , "block");
+
                 $(".add-progress").animate({
                     right:'0px'
                 });
@@ -936,6 +857,8 @@
                     $(".add-progress").animate({
                         right:'-320px'
                     });
+
+                    $("#shade1").css("display" , "none");
                 });
 
                 var project_id = $(this).attr("id");
@@ -969,6 +892,8 @@
             /*3.2 项目书*/
             $(".projectBook").click(function () {
 
+                $("#shade1").css("display" , "block");
+
                 var proName = $(this).parent().siblings('.proName').text();
                 console.log(proName + "proName");
 
@@ -984,6 +909,8 @@
                     $(".tab-right-bar").animate({
                         right:'-320px'
                     });
+
+                    $("#shade1").css("display" , "none");
                 });
 
 
@@ -1039,6 +966,162 @@
         
     });
 
+
+
+
+    /*5. 已完成 */
+
+    var finishProjectFunc = function () {
+        $.post("__MODULE__/Project/communityCompleteProject", function(data){
+
+            var html5 = '';
+            console.log(data[0].sjy_community_project_title );
+
+            for(var i = 0; i < data.length; i++){
+
+                html5+= '<tr>' +
+                        '<td class = "project-title">'+ data[i].project_info.sjy_community_project_title +'</td>' +
+                        '<td>'+ data[i].project_info.sjy_community_project_origanization_name+'</td>' +
+                        '<td>'+ data[i].project_info.sjy_community_project_service_area+'</td>' +
+                        '<td>'+ data[i].project_start_time+'~<br>' + data[i].project_end_time +'</td>' +
+                        '<td>'+ data[i].project_info.sjy_community_project_start_time+'~<br>' + data[i].project_info.sjy_community_project_end_time+'</td>' +
+                        '<td>' +
+                        '<a class = "see-progress" id = "'+ data[i].project_id +'" href="javascript:;">查看进度</a> ' +
+                        '<a class = "see-detail" href="__CONTROLLER__/displayCommunityProject/id/'+data[i].project_id+'">详情</a> <br>' +
+                        '<a class = "projectBook" id = "'+ data[i].project_id +'"  data_id = "'+ data[i].origanization_id +'"  href="javascript:;">项目书</a> ' +
+                        '</tr>';
+
+            }
+            $("#tbody5").html(html5);
+
+            /*5.1 查看进度*/
+            $(".see-progress").click(function () {
+
+                $("#shade1").css("display" , "block");
+
+                $(".add-progress").animate({
+                    right:'0px'
+                });
+
+                $(".progressStep").height($(window).height() );
+                $(".progressStep").height($(window).height() -200);
+                $(".sure-btn-box").height( 200);
+
+                $(".close-tab-right").click(function () {
+                    $("#shade1").css("display" , "none");
+                    $(".add-progress").animate({
+                        right:'-320px'
+                    });
+                });
+
+                var project_id = $(this).attr("id");
+
+                $.get("__MODULE__/Project/projectRate" , {"project_id" : project_id}, function (data) {
+
+                    console.log(data);
+                    var text4 = '';
+
+                    for(var i = 0; i < data.length; i ++){
+                        text4 += '<li class="layui-timeline-item">\n' +
+                                '<i class="layui-icon layui-timeline-axis">&#xe63f;</i>\n' +
+                                '<div class="layui-timeline-content layui-text">\n' +
+                                '<h3 class="layui-timeline-title">'+ data[i].sjy_project_rate_con +'</h3>\n' +
+                                '<p>' +  data[i].create_time +'</p>' +
+                                '</div>\n' +
+                                '</li>';
+
+                    }
+
+                    $(".layui-timeline").html(text4);
+                });
+
+
+
+
+
+            });
+
+            /*5.2 项目书*/
+
+            $(".projectBook").click(function () {
+                $("#shade1").css("display" , "block");
+
+                var proName = $(this).parent().siblings('.proName').text();
+                console.log(proName + "proName");
+
+                $(".tab-right-bar").animate({
+                    right:'0px'
+                });
+
+                $(".tab-right-bar").height($(window).height() );
+                $(".right-tab-content").height($(window).height());
+
+                $(".close-tab-right").click(function () {
+                    $(".tab-right-bar").animate({
+                        right:'-320px'
+                    });
+                    $("#shade1").css("display" , "none");
+                });
+
+
+                var project_id = $(this).attr("id");
+                var origanization_id = $(this).attr("data_id");
+
+                $.get("__MODULE__/Project/projectBookList",{"project_id" : project_id,"origanization_id" :origanization_id}, function (data) {
+
+                    var html = '';
+
+                    console.log(data);
+
+                    for ( var i = 0; i < data.data.length; i ++){
+
+                        html +='<li class = "choose-organize-item">\n' +
+                                '<div class = "proposal-detail">\n' +
+                                '<span  class = "DocTit">'+ data.data[i].sjy_project_book_name +'</span>\n <br>' +
+                                '<span>'+ data.data[i].sjy_project_book_send_time +'</span>\n' +
+                                '<a class = "download-btn" id = "'+ data.data[i].sjy_id +'" href="'+ data.data[i].sjy_project_path +'">下载</a>\n' +
+                                '</div>\n' +
+                                '</li>\n' ;
+                    }
+
+
+                    $(".choose-organize-box").html(html);
+
+
+
+
+
+                    $(".dowmload-btn").click(function(){
+
+                        var book_id = $(this).attr("id");
+
+                        $.get("__MODULE__/Project/downloadProjectBook", {"id" : book_id},function(data){
+
+
+                        });
+                    });
+
+                })
+
+            });
+
+
+
+
+
+
+        });
+
+    };
+
+
+    $("#finishProject").click(function () {
+        finishProjectFunc();
+
+    });
+
+
+
     /*4. 结项中*/
 
     $("#agreenFinish").click(function () {
@@ -1067,6 +1150,9 @@
             /*4.1 查看进度*/
             $(".see-progress").click(function () {
 
+
+                $("#shade1").css("display" , "block");
+
                 $(".add-progress").animate({
                     right:'0px'
                 });
@@ -1079,6 +1165,8 @@
                     $(".add-progress").animate({
                         right:'-320px'
                     });
+                    $("#shade1").css("display" , "none");
+
                 });
 
                 var project_id = $(this).attr("id");
@@ -1111,6 +1199,8 @@
             /*4.2 项目书*/
             $(".projectBook").click(function () {
 
+                $("#shade1").css("display" , "block");
+
                 var proName = $(this).parent().siblings('.proName').text();
                 console.log(proName + "proName");
 
@@ -1123,6 +1213,7 @@
                 $(".right-tab-content").height($(window).height());
 
                 $(".close-tab-right").click(function () {
+                    $("#shade1").css("display" , "none");
                     $(".tab-right-bar").animate({
                         right:'-320px'
                     });
@@ -1135,10 +1226,6 @@
                 $.get("__MODULE__/Project/projectBookList",{"project_id" : project_id,"origanization_id" :origanization_id}, function (data) {
 
                     var html = '';
-                    html += '<div class = "organize-choose-tit">\n' +
-                        '<span>机构A</span>\n' +
-                        '<a class = "agree-organization" href="javascript:;">上传时间 <span></span></a>\n' +
-                        '</div>\n' ;
 
                     console.log(data);
 
@@ -1174,6 +1261,7 @@
 
             });
 
+
             /*4.3 同意结项 */
             $(".agreeFinishProject").click(function () {
 
@@ -1206,6 +1294,21 @@
                                 layer.closeAll();
 
 
+                                var numd = Number($("#numd").text()) - 1;
+                                if( numd == 0 ){
+                                    $("#numd").remove();
+                                }
+                                $("#numd").text(numd);
+
+
+                                finishProjectFunc();
+
+                                layer.msg('项目将进入已完成',function(){
+                                    element.tabChange("docDemoTabBrief", "e");
+                                })
+
+
+
                             }else{
 
                                 layer.msg(data.errorInfo);
@@ -1231,264 +1334,8 @@
     });
 
 
-    /*5. 已完成 */
-    $("#finishProject").click(function () {
-        $.post("__MODULE__/Project/communityCompleteProject", function(data){
 
-            var html5 = '';
-            console.log(data[0].sjy_community_project_title );
 
-            for(var i = 0; i < data.length; i++){
-
-                html5+= '<tr>' +
-                    '<td class = "project-title">'+ data[i].project_info.sjy_community_project_title +'</td>' +
-                    '<td>'+ data[i].project_info.sjy_community_project_origanization_name+'</td>' +
-                    '<td>'+ data[i].project_info.sjy_community_project_service_area+'</td>' +
-                    '<td>'+ data[i].project_start_time+'~<br>' + data[i].project_end_time +'</td>' +
-                    '<td>'+ data[i].project_info.sjy_community_project_start_time+'~<br>' + data[i].project_info.sjy_community_project_end_time+'</td>' +
-                    '<td>' +
-                    '<a class = "see-progress" id = "'+ data[i].project_id +'" href="javascript:;">查看进度</a> ' +
-                    '<a class = "see-detail" href="__CONTROLLER__/displayCommunityProject/id/'+data[i].project_id+'">详情</a> <br>' +
-                    '<a class = "projectBook" id = "'+ data[i].project_id +'"  data_id = "'+ data[i].origanization_id +'"  href="javascript:;">项目书</a> ' +
-                    '</tr>';
-
-            }
-            $("#tbody5").html(html5);
-
-            /*5.1 查看进度*/
-            $(".see-progress").click(function () {
-
-                $(".add-progress").animate({
-                    right:'0px'
-                });
-
-                $(".progressStep").height($(window).height() );
-                $(".progressStep").height($(window).height() -200);
-                $(".sure-btn-box").height( 200);
-
-                $(".close-tab-right").click(function () {
-                    $(".add-progress").animate({
-                        right:'-320px'
-                    });
-                });
-
-                var project_id = $(this).attr("id");
-
-                $.get("__MODULE__/Project/projectRate" , {"project_id" : project_id}, function (data) {
-
-                    console.log(data);
-                    var text4 = '';
-
-                    for(var i = 0; i < data.length; i ++){
-                        text4 += '<li class="layui-timeline-item">\n' +
-                            '<i class="layui-icon layui-timeline-axis">&#xe63f;</i>\n' +
-                            '<div class="layui-timeline-content layui-text">\n' +
-                            '<h3 class="layui-timeline-title">'+ data[i].sjy_project_rate_con +'</h3>\n' +
-                            '<p>' +  data[i].create_time +'</p>' +
-                            '</div>\n' +
-                            '</li>';
-
-                    }
-
-                    $(".layui-timeline").html(text4);
-                });
-
-
-
-
-
-            });
-
-            /*5.2 项目书*/
-            $(".projectBook").click(function () {
-
-                var proName = $(this).parent().siblings('.proName').text();
-                console.log(proName + "proName");
-
-                $(".tab-right-bar").animate({
-                    right:'0px'
-                });
-
-                $(".tab-right-bar").height($(window).height() );
-                $(".right-tab-content").height($(window).height());
-
-                $(".close-tab-right").click(function () {
-                    $(".tab-right-bar").animate({
-                        right:'-320px'
-                    });
-                });
-
-
-                var project_id = $(this).attr("id");
-                var origanization_id = $(this).attr("data_id");
-
-                $.get("__MODULE__/Project/projectBookList",{"project_id" : project_id,"origanization_id" :origanization_id}, function (data) {
-
-                    var html = '';
-
-                    console.log(data);
-
-                    for ( var i = 0; i < data.data.length; i ++){
-
-                        html +='<li class = "choose-organize-item">\n' +
-                            '<div class = "proposal-detail">\n' +
-                            '<span  class = "DocTit">'+ data.data[i].sjy_project_book_name +'</span>\n <br>' +
-                            '<span>'+ data.data[i].sjy_project_book_send_time +'</span>\n' +
-                            '<a class = "download-btn" id = "'+ data.data[i].sjy_id +'" href="'+ data.data[i].sjy_project_path +'">下载</a>\n' +
-                            '</div>\n' +
-                            '</li>\n' ;
-                    }
-
-
-                    $(".choose-organize-box").html(html);
-
-
-
-
-
-                    $(".dowmload-btn").click(function(){
-
-                        var book_id = $(this).attr("id");
-
-                        $.get("__MODULE__/Project/downloadProjectBook", {"id" : book_id},function(data){
-
-
-                        });
-                    });
-
-                })
-
-            });
-
-
-
-
-
-
-        });
-
-    })
-
-
-
-    
-    
-    
-
-
-
-    /*layui.use(['laypage', 'layer'], function(){
-        var laypage = layui.laypage
-                ,layer = layui.layer;
-
-        //执行一个laypage实例
-        laypage.render({
-            elem: 'pagination0'
-            ,count: 70 //数据总数，从服务端得到
-            ,jump: function(obj, first){
-                //obj包含了当前分页的所有参数，比如：
-                console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
-                console.log(obj.limit); //得到每页显示的条数
-                console.log("page0");
-
-                //首次不执行
-                if(!first){
-                    //do something
-                }
-            }
-        });
-
-
-        //执行一个laypage实例
-        laypage.render({
-            elem: 'pagination1'
-            ,count: 70 //数据总数，从服务端得到
-            ,jump: function(obj, first){
-                //obj包含了当前分页的所有参数，比如：
-                console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
-                console.log(obj.limit); //得到每页显示的条数
-                console.log("page1");
-                //首次不执行
-                if(!first){
-                    //do something
-                }
-            }
-        });
-
-        //执行一个laypage实例
-        laypage.render({
-            elem: 'pagination2'
-            ,count: 70 //数据总数，从服务端得到
-            ,jump: function(obj, first){
-                //obj包含了当前分页的所有参数，比如：
-                console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
-                console.log(obj.limit); //得到每页显示的条数
-
-                //首次不执行
-                if(!first){
-                    //do something
-                }
-            }
-        });
-
-
-        //执行一个laypage实例
-        laypage.render({
-            elem: 'pagination3'
-            ,count: 70 //数据总数，从服务端得到
-            ,jump: function(obj, first){
-                //obj包含了当前分页的所有参数，比如：
-                console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
-                console.log(obj.limit); //得到每页显示的条数
-
-                //首次不执行
-                if(!first){
-                    //do something
-                }
-            }
-        });
-
-        //执行一个laypage实例
-        laypage.render({
-            elem: 'pagination4'
-            ,count: 70 //数据总数，从服务端得到
-            ,jump: function(obj, first){
-                //obj包含了当前分页的所有参数，比如：
-                console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
-                console.log(obj.limit); //得到每页显示的条数
-
-                //首次不执行
-                if(!first){
-                    //do something
-                }
-            }
-        });
-
-        //执行一个laypage实例
-        laypage.render({
-            elem: 'pagination5'
-            ,count: 1000
-            ,layout: ['limit', 'prev', 'page', 'next']
-        });
-        //执行一个laypage实例
-        laypage.render({
-            elem: 'pagination6'
-            ,count: 1000 //数据总数，从服务端得到
-            ,curr: location.hash.replace('#!fenye=', '') //获取hash值为fenye的当前页
-            ,hash: 'fenye' //自定义hash值
-            ,jump: function(obj, first){
-                //obj包含了当前分页的所有参数，比如：
-                console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
-                console.log(obj.limit); //得到每页显示的条数
-
-                //首次不执行
-                if(!first){
-                    //do something
-                }
-            }
-        });
-
-    });*/
 
 
 </script>

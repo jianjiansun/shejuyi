@@ -1,3 +1,19 @@
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EasyLife</title>
+    <link rel="stylesheet" href="/Public/Home/css/bootstrap.css">
+    <link rel="stylesheet" href="/Public/Home/css/common.css">
+    <link rel="stylesheet" href="/Public/Home/css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+    <script src="/Public/Home/js/jquery-1.12.4.js"></script>
+    <script src="/Public/Home/js/bootstrap.js"></script>
+    <script src = "/Public/Home/js/autoResizeImage.js"></script>
+
 
 <div class = "cityShow">
     <span class = "closeCityBox"></span>
@@ -156,7 +172,7 @@
 
 
         $.ajax({
-            url: "__CONTROLLER__/setcity",
+            url: "/index.php/Home/Changeprovince/setcity",
             type: "POST",
             data: {
                 cityid : cityid
@@ -172,6 +188,10 @@
             async:false
         });
         return false;
+
+
+
+
 
     });
 
