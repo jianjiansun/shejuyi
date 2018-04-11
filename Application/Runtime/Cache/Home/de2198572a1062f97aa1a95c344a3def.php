@@ -381,7 +381,7 @@
                                             <col width="200">
                                             <col width="200">
                                             <col width="200">
-                                            <col width="200">
+                                            <col width="280">
                                         </colgroup>
                                         <thead>
                                         <tr>
@@ -804,7 +804,7 @@
 
                                         var numb = 0;
 
-                                        if( $("#biding").children().is("span") ){
+                                        if( $("#starting").children().is("span") ){
                                             console.log("span");
                                             numb = Number($("#numb").text()) + 1;
                                             $("#numb").text(numb);
@@ -812,7 +812,7 @@
                                         }else {
                                             console.log("not span");
                                             numb = numb + 1;
-                                            $("#biding").append('<span id="numb" class="layui-badge">1</span>');
+                                            $("#starting").append('<span id="numb" class="layui-badge">1</span>');
 
                                         }
 
@@ -935,8 +935,8 @@
                 html3 += '<tr>' +
                     '<td class = "project-title">'+ data[i].project_info.sjy_community_project_title +'</td>' +
                     '<td>'+ data[i].project_info.sjy_community_project_send_prople_name+'</td>' +
-                    '<td>'+ data[i].project_info.sjy_community_project_service_area+'</td>' +
-                    '<td>'+ data[i].project_info.sjy_community_project_collect_start_time + ' ~<br>'+data[i].project_info.sjy_community_project_collect_end_time +'</td>' +
+                    '<td>'+ data[i].project_info.sjy_community_project_origanization_name+'</td>' +
+                    '<td>'+ data[i].project_info.sjy_community_project_service_area + '</td>' +
                     '<td>'+ data[i].project_info.sjy_community_project_start_time + ' ~<br>'+data[i].project_info.sjy_community_project_end_time +'</td>' +
                     '<td><a class = "see-progress" id = "'+ data[i].project_id +'" href="javascript:;">查看进度</a> ' +
                         '<a class = "see-detail" href="/index.php/Home/Project/displayCommunityProject/id/'+data[i].project_id+'">详情</a> <br>' +

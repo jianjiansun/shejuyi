@@ -139,6 +139,13 @@ p.proposal-detail > span {
 
 
 }
-
+.startProject{
+    display: inline-block;
+    padding: 1px 6px;
+    background: #5FB878;
+    color: #ffffff;
+    margin-bottom: 5px;
+    margin-right: 6px;
+}
 
 

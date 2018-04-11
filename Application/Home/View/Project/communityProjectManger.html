@@ -367,7 +367,7 @@
                                             <col width="200">
                                             <col width="200">
                                             <col width="200">
-                                            <col width="200">
+                                            <col width="280">
                                         </colgroup>
                                         <thead>
                                         <tr>
@@ -880,9 +880,7 @@
                 })
 
             })
-
-
-
+            
 
         });
     };
@@ -893,15 +891,6 @@
     $("#collecting").click(function () {
         collectingFunc();
     });
-
-
-
-
-
-
-
-
-
 
 
 
@@ -921,8 +910,8 @@
                 html3 += '<tr>' +
                     '<td class = "project-title">'+ data[i].project_info.sjy_community_project_title +'</td>' +
                     '<td>'+ data[i].project_info.sjy_community_project_send_prople_name+'</td>' +
-                    '<td>'+ data[i].project_info.sjy_community_project_service_area+'</td>' +
-                    '<td>'+ data[i].project_info.sjy_community_project_collect_start_time + ' ~<br>'+data[i].project_info.sjy_community_project_collect_end_time +'</td>' +
+                    '<td>'+ data[i].project_info.sjy_community_project_origanization_name+'</td>' +
+                    '<td>'+ data[i].project_info.sjy_community_project_service_area + '</td>' +
                     '<td>'+ data[i].project_info.sjy_community_project_start_time + ' ~<br>'+data[i].project_info.sjy_community_project_end_time +'</td>' +
                     '<td><a class = "see-progress" id = "'+ data[i].project_id +'" href="javascript:;">查看进度</a> ' +
                         '<a class = "see-detail" href="__CONTROLLER__/displayCommunityProject/id/'+data[i].project_id+'">详情</a> <br>' +

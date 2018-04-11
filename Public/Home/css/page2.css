@@ -812,6 +812,7 @@ html {
     color: #ffffff;
     margin-bottom: 5px;
     margin-right: 6px;
+    width: 68px;
 }
 .see-progress:hover{
     font-weight: 900;
@@ -836,6 +837,8 @@ html {
     color: #ffffff;
     margin-bottom: 5px;
     margin-right: 6px;
+    width: 68px;
+    text-align: center;
 }
 .see-detail:hover{
     font-weight: 900;
@@ -848,6 +851,8 @@ html {
     color: #ffffff;
     margin-bottom: 5px;
     margin-right: 6px;
+    width: 68px;
+    text-align: center;
 }
 .addProgress:hover{
     font-weight: 900;
@@ -861,6 +866,8 @@ html {
     color: #ffffff;
     margin-bottom: 5px;
     margin-right: 6px;
+    width: 68px;
+    text-align: center;
 }
 .projectBook:hover{
     font-weight: 900;
@@ -872,6 +879,8 @@ html {
     padding: 1px 6px;
     background: #004358;
     color: #ffffff;
+    width: 68px;
+    text-align: center;
 
 }
 .intention-organization{
