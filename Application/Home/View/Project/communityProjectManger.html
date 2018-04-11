@@ -790,7 +790,7 @@
 
                                         var numb = 0;
 
-                                        if( $("#biding").children().is("span") ){
+                                        if( $("#starting").children().is("span") ){
                                             console.log("span");
                                             numb = Number($("#numb").text()) + 1;
                                             $("#numb").text(numb);
@@ -798,7 +798,7 @@
                                         }else {
                                             console.log("not span");
                                             numb = numb + 1;
-                                            $("#biding").append('<span id="numb" class="layui-badge">1</span>');
+                                            $("#starting").append('<span id="numb" class="layui-badge">1</span>');
 
                                         }
 
