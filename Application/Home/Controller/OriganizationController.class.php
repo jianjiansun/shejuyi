@@ -894,7 +894,7 @@
             {
                  $touxiang = $path; //项目主图
                  //添加到数据库
-                 $res = M('community_user_info')->where(array('sjy_id'=>session('userInfo')['sjy_id']))->save(array('sjy_community_user_image'=>$path));
+                 $res = M('origanization_user_info')->where(array('sjy_id'=>session('userInfo')['sjy_id']))->save(array('sjy_origanization_user_image'=>$path));
                  if($res)
                  {
                     $this->ajaxReturn(array('state'=>1,'errorInfo'=>'上传成功！'));
