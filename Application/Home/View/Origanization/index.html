@@ -145,30 +145,6 @@
         </ul>
         <div style="height: 0; clear: both;"></div>
         <ul class = "buildImg" id = "projectList">
-            <!--<li class="col-md-6 column">
-                <a href="detail1.html">
-                    <p class = "where">
-                        <span class = "region region1">夕阳红社区养老服务</span>
-                    </p>
-                    <div class="col-md-6 column" style = "padding: 0;">
-                        <img  src="__PUBLIC__/Home/imgs/shequ2.jpg" alt="" >
-                    </div>
-                    <div class="col-md-6 column house-list-info">
-                        <p class = "where">
-                            <span  class = "sp2 sp">项目发布方</span>
-                            <span class = "region">如意社区</span>
-                        </p>
-                        <p class = "where">
-                            <span  class = "sp3 sp">服务对象</span>
-                            <span class = "region">老年人</span>
-                        </p>
-                        <div class = "type">
-                            <span class = "iconfont">&#xe61f;</span>
-                            <span>北京市</span>-<span>通州区</span>-<span>永顺</span>
-                        </div>
-                    </div>
-                </a>
-            </li>-->
 
 
             <li>
@@ -194,8 +170,10 @@
 
                 </div>
             </li>
-
         </ul>
+
+        <div style="text-align: center" id="test1"></div>
+
     </div>
     <div class = "col-md-3 program-box">
         <div  class= "publish-program">
@@ -243,10 +221,16 @@
 <!--<script src = "../js/slider.js"></script>-->
 <script>
 
+    /*分页*/
+    var count;
+
     $.post("__CONTROLLER__/getprojectlist/page/1", function (data) {
         var html = "";
 
-        console.log(data.data[0]);
+         count = Number(data.count);
+        console.log(count + "count");
+
+
         for(var i = 0; i < data.data.length ; i ++) {
             html+=  '<li>' +
                     '<a href="__MODULE__/Project/displayCommunityProject?id='+data.data[i].sjy_id+'">'+
@@ -275,9 +259,82 @@
 
 
         }
+
+
         $("#projectList").html(html);
 
+
+        layui.use('laypage', function(){
+
+            var laypage = layui.laypage;
+
+            //执行一个laypage实例
+            laypage.render({
+                elem: 'test1'
+                ,count: count//数据总数，从服务端得到
+                ,limit: 10
+                ,jump: function(obj, first){
+                    //obj包含了当前分页的所有参数，比如：
+                    console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
+                    console.log(obj.limit); //得到每页显示的条数
+
+                    $.post("__CONTROLLER__/getprojectlist/page/"+ obj.curr, function (data) {
+                        var html = "";
+
+                        for(var i = 0; i < data.data.length ; i ++) {
+                            html+=  '<li>' +
+                                    '<a href="__MODULE__/Project/displayCommunityProject?id='+data.data[i].sjy_id+'">'+
+                                    '<div class="col-md-3 column" >' +
+                                    '<img  src="'+ data.data[i].project_image_path +'" alt="" style = "height: 140px;width: 190px;border: 1px solid #cccccc;">' +
+                                    '</div>' +
+                                    '<div class="col-md-7 column house-list-info" style="padding-top: 10px;">' +
+                                    '<p class = "projectTit">' +
+                                    '<span class = "tit">'+ data.data[i].sjy_community_project_title +'</span>' +
+                                    '</p>' +
+                                    '<p class = "where">' +
+                                    '<span  class = "sp2 sp">发布方</span><i>|</i>' +
+                                    '<span class = "region region1">'+  data.data[i].community_info.sjy_community_name +'</span>' +
+                                    '</p>' +
+                                    '<p class = "where">' +
+                                    '<span  class = "sp3 sp">服务对象</span><i>|</i>' +
+                                    '<span class = "region">'+  data.data[i].sjy_community_project_service_area +'</span>' +
+                                    '</p>' +
+                                    '<div class = "type">' +
+                                    '<span class = "iconfont">&#xe61f;</span>' +
+                                    '<span>'+  data.data[i].address.sjy_community_province_name +'</span>-<span>'+  data.data[i].address.sjy_community_area_name +'</span>-<span>'+  data.data[i].address.sjy_community_street_name +'</span>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '</a>'+
+                                    '</li>';
+
+
+                        }
+                        $("#projectList").html(html);
+
+                    });
+
+
+                    //首次不执行
+                    if(!first){
+                        //do something
+
+
+
+                    }
+                }
+            });
+
+        });
+
     });
+
+
+
+
+
+
+
+
 
 
 </script>

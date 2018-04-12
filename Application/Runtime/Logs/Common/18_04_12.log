@@ -1,222 +1,108 @@
-[ 2018-04-12T16:19:23+08:00 ] 127.0.0.1 /Uploads/origanization/logo/2018-04-03/15227394115ac328d35d1c5.jpg
+[ 2018-04-12T17:13:02+08:00 ] 127.0.0.1 /Uploads/origanization/touxiang/20180325/1521971480.jpeg
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000366s ]
 ERR: 无法加载模块:Uploads
 
-[ 2018-04-12T16:20:39+08:00 ] 127.0.0.1 /Uploads/origanization/touxiang/20180325/1521971480.jpeg
+[ 2018-04-12T17:13:02+08:00 ] 127.0.0.1 /Public/Home/css/bootstrap.css.map
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-ERR: 无法加载模块:Uploads
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000382s ]
+ERR: 无法加载模块:Public
 
-[ 2018-04-12T16:20:39+08:00 ] 127.0.0.1 /Uploads/origanization/touxiang/20180325/1521971480.jpeg
+[ 2018-04-12T17:13:03+08:00 ] 127.0.0.1 /wefgerfrehb.jpg
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
-ERR: 无法加载模块:Uploads
-
-[ 2018-04-12T16:20:42+08:00 ] 127.0.0.1 /Uploads/origanization/touxiang/20180325/1521971480.jpeg
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-ERR: 无法加载模块:Uploads
-
-[ 2018-04-12T16:20:42+08:00 ] 127.0.0.1 /Uploads/origanization/touxiang/20180325/1521971480.jpeg
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
-ERR: 无法加载模块:Uploads
-
-[ 2018-04-12T16:20:44+08:00 ] 127.0.0.1 /Uploads/origanization/business_licence_img/20180325/1521971578.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-ERR: 无法加载模块:Uploads
-
-[ 2018-04-12T16:20:53+08:00 ] 127.0.0.1 /Uploads/origanization/touxiang/20180325/1521971480.jpeg
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
-ERR: 无法加载模块:Uploads
-
-[ 2018-04-12T16:20:54+08:00 ] 127.0.0.1 /Uploads/origanization/touxiang/20180325/1521971480.jpeg
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000500s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-ERR: 无法加载模块:Uploads
-
-[ 2018-04-12T16:20:55+08:00 ] 127.0.0.1 /Uploads/origanization/business_licence_img/20180325/1521971578.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-ERR: 无法加载模块:Uploads
-
-[ 2018-04-12T16:21:24+08:00 ] 127.0.0.1 /Uploads/origanization/touxiang/20180325/1521971480.jpeg
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-ERR: 无法加载模块:Uploads
-
-[ 2018-04-12T16:21:25+08:00 ] 127.0.0.1 /Uploads/origanization/touxiang/20180325/1521971480.jpeg
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-ERR: 无法加载模块:Uploads
-
-[ 2018-04-12T16:21:27+08:00 ] 127.0.0.1 /Uploads/community/projectimg/20180325/1521972125.jpeg
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
-ERR: 无法加载模块:Uploads
-
-[ 2018-04-12T16:21:27+08:00 ] 127.0.0.1 /Uploads/community/projectimg/2018-04-02/15226545805ac1dd740859f
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-ERR: 无法加载模块:Uploads
-
-[ 2018-04-12T16:21:27+08:00 ] 127.0.0.1 /wefgerfrehb.jpg
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000411s ]
 ERR: 无法加载模块:Wefgerfrehb
 
-[ 2018-04-12T16:21:27+08:00 ] 127.0.0.1 /Uploads/community/projectimg/2018-04-11/15234305935acdb4c15f5a6
+[ 2018-04-12T17:13:05+08:00 ] 127.0.0.1 /wefgerfrehb.jpg
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
-ERR: 无法加载模块:Uploads
-
-[ 2018-04-12T16:21:27+08:00 ] 127.0.0.1 /Uploads/community/projectimg/2018-04-02/15226541065ac1db9a55965
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-ERR: 无法加载模块:Uploads
-
-[ 2018-04-12T16:21:28+08:00 ] 127.0.0.1 /Uploads/community/projectimg/2018-04-12/15235205085acf13fce64d8
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000500s ]
-INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
-ERR: 无法加载模块:Uploads
-
-[ 2018-04-12T16:23:44+08:00 ] 127.0.0.1 /Uploads/origanization/touxiang/20180325/1521971480.jpeg
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-ERR: 无法加载模块:Uploads
-
-[ 2018-04-12T16:23:45+08:00 ] 127.0.0.1 /Uploads/origanization/touxiang/20180325/1521971480.jpeg
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-ERR: 无法加载模块:Uploads
-
-[ 2018-04-12T16:23:47+08:00 ] 127.0.0.1 /Uploads/community/projectimg/20180325/1521972125.jpeg
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-ERR: 无法加载模块:Uploads
-
-[ 2018-04-12T16:23:47+08:00 ] 127.0.0.1 /Uploads/community/projectimg/2018-04-02/15226545805ac1dd740859f
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-ERR: 无法加载模块:Uploads
-
-[ 2018-04-12T16:23:47+08:00 ] 127.0.0.1 /Uploads/community/projectimg/2018-04-11/15234305935acdb4c15f5a6
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-ERR: 无法加载模块:Uploads
-
-[ 2018-04-12T16:23:47+08:00 ] 127.0.0.1 /Uploads/community/projectimg/2018-04-02/15226541065ac1db9a55965
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001500s ]
-ERR: 无法加载模块:Uploads
-
-[ 2018-04-12T16:23:47+08:00 ] 127.0.0.1 /wefgerfrehb.jpg
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000365s ]
 ERR: 无法加载模块:Wefgerfrehb
 
-[ 2018-04-12T16:23:47+08:00 ] 127.0.0.1 /Uploads/community/projectimg/2018-04-12/15235205085acf13fce64d8
+[ 2018-04-12T17:13:33+08:00 ] 127.0.0.1 /Uploads/origanization/touxiang/20180325/1521971480.jpeg
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000345s ]
 ERR: 无法加载模块:Uploads
 
-[ 2018-04-12T16:24:27+08:00 ] 127.0.0.1 /Uploads/origanization/touxiang/20180325/1521971480.jpeg
+[ 2018-04-12T17:13:33+08:00 ] 127.0.0.1 /Public/Home/css/bootstrap.css.map
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-ERR: 无法加载模块:Uploads
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000355s ]
+ERR: 无法加载模块:Public
 
-[ 2018-04-12T16:24:28+08:00 ] 127.0.0.1 /Uploads/origanization/touxiang/20180325/1521971480.jpeg
+[ 2018-04-12T17:13:34+08:00 ] 127.0.0.1 /wefgerfrehb.jpg
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
-ERR: 无法加载模块:Uploads
-
-[ 2018-04-12T16:24:30+08:00 ] 127.0.0.1 /Uploads/community/projectimg/20180325/1521972125.jpeg
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
-ERR: 无法加载模块:Uploads
-
-[ 2018-04-12T16:24:30+08:00 ] 127.0.0.1 /wefgerfrehb.jpg
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000382s ]
 ERR: 无法加载模块:Wefgerfrehb
 
-[ 2018-04-12T16:24:31+08:00 ] 127.0.0.1 /Uploads/community/projectimg/2018-04-12/15235205085acf13fce64d8
+[ 2018-04-12T17:13:36+08:00 ] 127.0.0.1 /wefgerfrehb.jpg
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000846s ]
+ERR: 无法加载模块:Wefgerfrehb
+
+[ 2018-04-12T17:13:46+08:00 ] 127.0.0.1 /Uploads/community/projectimg/2018-04-12/15235205085acf13fce64d8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000392s ]
 ERR: 无法加载模块:Uploads
 
-[ 2018-04-12T16:24:31+08:00 ] 127.0.0.1 /Uploads/community/projectimg/2018-04-02/15226541065ac1db9a55965
+[ 2018-04-12T17:27:05+08:00 ] 127.0.0.1 /Uploads/origanization/touxiang/20180325/1521971480.jpeg
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000398s ]
 ERR: 无法加载模块:Uploads
 
-[ 2018-04-12T16:24:31+08:00 ] 127.0.0.1 /Uploads/community/projectimg/2018-04-02/15226545805ac1dd740859f
+[ 2018-04-12T17:27:06+08:00 ] 127.0.0.1 /wefgerfrehb.jpg
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000341s ]
+ERR: 无法加载模块:Wefgerfrehb
+
+[ 2018-04-12T17:27:07+08:00 ] 127.0.0.1 /wefgerfrehb.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000560s ]
+ERR: 无法加载模块:Wefgerfrehb
+
+[ 2018-04-12T17:27:44+08:00 ] 127.0.0.1 /Uploads/origanization/touxiang/20180325/1521971480.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000320s ]
 ERR: 无法加载模块:Uploads
 
-[ 2018-04-12T16:24:31+08:00 ] 127.0.0.1 /Uploads/community/projectimg/2018-04-11/15234305935acdb4c15f5a6
+[ 2018-04-12T17:27:45+08:00 ] 127.0.0.1 /wefgerfrehb.jpg
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000337s ]
+ERR: 无法加载模块:Wefgerfrehb
+
+[ 2018-04-12T17:27:46+08:00 ] 127.0.0.1 /wefgerfrehb.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000330s ]
+ERR: 无法加载模块:Wefgerfrehb
+
+[ 2018-04-12T17:29:22+08:00 ] 127.0.0.1 /Uploads/origanization/touxiang/20180325/1521971480.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000396s ]
 ERR: 无法加载模块:Uploads
 
-[ 2018-04-12T16:27:08+08:00 ] 127.0.0.1 /Uploads/origanization/touxiang/20180325/1521971480.jpeg
+[ 2018-04-12T17:29:23+08:00 ] 127.0.0.1 /wefgerfrehb.jpg
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
-ERR: 无法加载模块:Uploads
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+ERR: 无法加载模块:Wefgerfrehb
 
-[ 2018-04-12T16:27:09+08:00 ] 127.0.0.1 /Uploads/origanization/touxiang/20180325/1521971480.jpeg
+[ 2018-04-12T17:29:24+08:00 ] 127.0.0.1 /wefgerfrehb.jpg
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
-ERR: 无法加载模块:Uploads
-
-[ 2018-04-12T16:27:10+08:00 ] 127.0.0.1 /Uploads/community/projectimg/20180325/1521972125.jpeg
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
-ERR: 无法加载模块:Uploads
-
-[ 2018-04-12T16:27:10+08:00 ] 127.0.0.1 /wefgerfrehb.jpg
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001500s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000337s ]
 ERR: 无法加载模块:Wefgerfrehb
 
