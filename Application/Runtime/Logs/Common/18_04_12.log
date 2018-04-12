@@ -4,3 +4,81 @@ INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 ERR: 无法加载模块:Favicon
 
+[ 2018-04-12T15:51:32+08:00 ] 127.0.0.1 /Uploads/origanization/logo/2018-04-03/15227394115ac328d35d1c5.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000805s ]
+ERR: 无法加载模块:Uploads
+
+[ 2018-04-12T15:51:48+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000421s ]
+ERR: 无法加载模块:Favicon
+
+[ 2018-04-12T15:51:49+08:00 ] 127.0.0.1 /Uploads/origanization/logo/2018-04-03/15227394115ac328d35d1c5.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000689s ]
+ERR: 无法加载模块:Uploads
+
+[ 2018-04-12T15:51:58+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000349s ]
+ERR: 无法加载模块:Favicon
+
+[ 2018-04-12T15:51:59+08:00 ] 127.0.0.1 /Uploads/origanization/logo/2018-04-03/15227394115ac328d35d1c5.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000344s ]
+ERR: 无法加载模块:Uploads
+
+[ 2018-04-12T15:52:11+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000379s ]
+ERR: 无法加载模块:Favicon
+
+[ 2018-04-12T15:52:11+08:00 ] 127.0.0.1 /Uploads/origanization/logo/2018-04-03/15227394115ac328d35d1c5.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000345s ]
+ERR: 无法加载模块:Uploads
+
+[ 2018-04-12T15:52:15+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000371s ]
+ERR: 无法加载模块:Favicon
+
+[ 2018-04-12T15:52:16+08:00 ] 127.0.0.1 /Uploads/origanization/logo/2018-04-03/15227394115ac328d35d1c5.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+ERR: 无法加载模块:Uploads
+
+[ 2018-04-12T15:52:22+08:00 ] 127.0.0.1 /Uploads/origanization/logo/2018-04-03/15227394115ac328d35d1c5.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+ERR: 无法加载模块:Uploads
+
+[ 2018-04-12T15:52:39+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000342s ]
+ERR: 无法加载模块:Favicon
+
+[ 2018-04-12T15:52:39+08:00 ] 127.0.0.1 /Uploads/origanization/logo/2018-04-03/15227394115ac328d35d1c5.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000344s ]
+ERR: 无法加载模块:Uploads
+
+[ 2018-04-12T15:52:47+08:00 ] 127.0.0.1 /Uploads/origanization/logo/2018-04-03/15227394115ac328d35d1c5.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000688s ]
+ERR: 无法加载模块:Uploads
+

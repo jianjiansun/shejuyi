@@ -1,8 +1,24 @@
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EasyLife</title>
+    <link rel="stylesheet" href="/Public/Home/css/bootstrap.css">
+    <link rel="stylesheet" href="/Public/Home/css/common.css">
+    <link rel="stylesheet" href="/Public/Home/css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+    <script src="/Public/Home/js/jquery-1.12.4.js"></script>
+    <script src="/Public/Home/js/bootstrap.js"></script>
+    <script src = "/Public/Home/js/autoResizeImage.js"></script>
 
-<link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
-<script src="__PUBLIC__/Home/js/layui.js"></script>
+
+<link rel="stylesheet" href="/Public/Home/css/region.css">
+<link rel="stylesheet" href="/Public/Home/css/page2.css">
+<link rel="stylesheet" href="/Public/Home/css/layui.css">
+<script src="/Public/Home/js/layui.js"></script>
 </head>
 <body>
 <div class="shadeBox"></div>
@@ -11,47 +27,40 @@
 
 <div class = "headLogin">
     <div class = "left changeBan">
-        <a href = "javascript:;" id = "cityChoose" class = "region">{$city}</a>
+        <a href = "javascript:;" id = "cityChoose" class = "region"><?php echo ($city); ?></a>
         <a href="">社会组织版</a>
         <a class = "on" href="">社区版</a>
     </div>
     <div class="right person">
         <div class="dropdown pull-right">
 
-            <if condition='($isidentify eq 1) and ($code gt 0)'>
-                <a class = "myOwnIndex" href="__MODULE__/Home/displayCommunityHome">XX社区主页</a>
-            </if>
+            <?php if(($isidentify == 1) and ($code > 0)): ?><a class = "myOwnIndex" href="/index.php/Home/Home/displayCommunityHome">XX社区主页</a><?php endif; ?>
 
             <a href="#" data-toggle="dropdown" class="dropdown-toggle">
                 <div class = "user-img" style = "display: inline-block">
 
-                    <img src="{$user_image}" alt="">
+                    <img src="<?php echo ($user_image); ?>" alt="">
                     <span class = "iconfont VIP-icon" style = "right: -20px;">&#xe65b;</span>
                 </div>
-                <span>{$showname}<if condition='$active egt 1'><span class="layui-badge-dot"></span></if></span>
+                <span><?php echo ($showname); if($active >= 1): ?><span class="layui-badge-dot"></span><?php endif; ?></span>
             </a>
 
             <ul class="dropdown-menu personalMenu">
                 <li>
-                    <a href="__CONTROLLER__/communityIdentify">认证状态</a>
+                    <a href="/index.php/Home/Community/communityIdentify">认证状态</a>
                 </li>
-                <if condition='($isidentify eq 1)'>
-                    <li>
-                        <a href="__CONTROLLER__/personinfo">账号设置</a>
-                    </li>
-                </if>
-                <if condition='($isidentify eq 1) and ($code gt 0)'>
-                    <li>
-                        <a href="__CONTROLLER__/mycommunity">我的社区</a>
+                <?php if(($isidentify == 1)): ?><li>
+                        <a href="/index.php/Home/Community/personinfo">账号设置</a>
+                    </li><?php endif; ?>
+                <?php if(($isidentify == 1) and ($code > 0)): ?><li>
+                        <a href="/index.php/Home/Community/mycommunity">我的社区</a>
                     </li>
                     <li>
-                        <a href="__MODULE__/Project/communityProjectManger">我的项目<if condition='$active egt 1'><span class="layui-badge-dot"></span></if></a>
-                    </li>
-                   
-                </if>
+                        <a href="/index.php/Home/Project/communityProjectManger">我的项目<?php if($active >= 1): ?><span class="layui-badge-dot"></span><?php endif; ?></a>
+                    </li><?php endif; ?>
 
                 <li>
-                    <a href="__CONTROLLER__/logout">注销</a>
+                    <a href="/index.php/Home/Community/logout">注销</a>
                 </li>
             </ul>
         </div>
@@ -65,12 +74,12 @@
     <div class = "container">
         <div class = "top">
             <div class = "logo  col-md-7">
-                <img src="__PUBLIC__/Home/imgs/logo.png" alt="">
+                <img src="/Public/Home/imgs/logo.png" alt="">
                 <span>社居易</span>
             </div>
             <ul class = "mainNav col-md-5">
                 <li>
-                    <a class = "" href="__CONTROLLER__/send_project">发布项目</a>
+                    <a class = "" href="/index.php/Home/Community/send_project">发布项目</a>
                 </li>
             </ul>
         </div>
@@ -86,7 +95,7 @@
     <div class = "container">
         <div class = "top">
             <div class = "logo  col-md-6">
-                <img src="__PUBLIC__/Home/imgs/logo.png" alt="">
+                <img src="/Public/Home/imgs/logo.png" alt="">
                 <span>社居易</span>
 
 
@@ -110,9 +119,9 @@
         <div id="ifocus_pic">
             <div id="ifocus_piclist" style="left:0; top:0;">
                 <ul>
-                    <li><a href="#"><img src="__PUBLIC__/Home/imgs/zixun1.JPG" alt="" /></a></li>
-                    <li><a href="#"><img src="__PUBLIC__/Home/imgs/zixun2.JPG" alt="" /></a></li>
-                    <li><a href="#"><img src="__PUBLIC__/Home/imgs/zixun3.jpg" alt="" /></a></li>
+                    <li><a href="#"><img src="/Public/Home/imgs/zixun1.JPG" alt="" /></a></li>
+                    <li><a href="#"><img src="/Public/Home/imgs/zixun2.JPG" alt="" /></a></li>
+                    <li><a href="#"><img src="/Public/Home/imgs/zixun3.jpg" alt="" /></a></li>
                 </ul>
             </div>
             <div id="ifocus_opdiv"></div>
@@ -126,9 +135,9 @@
         </div>
         <div id="ifocus_btn">
             <ul>
-                <li class="current"><img src="__PUBLIC__/Home/imgs/zixun1.JPG" alt="" /></li>
-                <li class="normal"><img src="__PUBLIC__/Home/imgs/zixun2.JPG" alt="" /></li>
-                <li class="normal"><img src="__PUBLIC__/Home/imgs/zixun3.jpg" alt="" /></li>
+                <li class="current"><img src="/Public/Home/imgs/zixun1.JPG" alt="" /></li>
+                <li class="normal"><img src="/Public/Home/imgs/zixun2.JPG" alt="" /></li>
+                <li class="normal"><img src="/Public/Home/imgs/zixun3.jpg" alt="" /></li>
             </ul>
         </div>
     </div>
@@ -167,7 +176,7 @@
         <ul class = "buildImg" id = "projectList">
             <!-- <li>
                 <div class="col-md-4 column" >
-                    <img  src="__PUBLIC__/Home/imgs/she.jpg" alt="" style = "height: 200px;width: 200px;border: 1px solid #cccccc;">
+                    <img  src="/Public/Home/imgs/she.jpg" alt="" style = "height: 200px;width: 200px;border: 1px solid #cccccc;">
                 </div>
                 <div class="col-md-6 column house-list-info" style="padding-top: 56px;">
                     <p class = "where">
@@ -191,7 +200,7 @@
             </li>
             <li>
                 <div class="col-md-4 column" >
-                    <img  src="__PUBLIC__/Home/imgs/qimingxing.png" alt="" style = "height: 200px;width: 200px;border: 1px solid #cccccc;">
+                    <img  src="/Public/Home/imgs/qimingxing.png" alt="" style = "height: 200px;width: 200px;border: 1px solid #cccccc;">
                 </div>
                 <div class="col-md-6 column house-list-info" style="padding-top: 56px;">
                     <p class = "where">
@@ -215,7 +224,7 @@
             </li>
             <li>
                 <div class="col-md-4 column" >
-                    <img  src="__PUBLIC__/Home/imgs/lvnong.png" alt="" style = "height: 200px;width: 200px;border: 1px solid #cccccc;">
+                    <img  src="/Public/Home/imgs/lvnong.png" alt="" style = "height: 200px;width: 200px;border: 1px solid #cccccc;">
                 </div>
                 <div class="col-md-6 column house-list-info" style="padding-top: 56px;">
                     <p class = "where">
@@ -255,9 +264,7 @@
     <div class = "col-md-3 program-box">
         <div  class= "publish-program">
 
-            <if condition='($isidentify eq 1) and ($code gt 0)'>
-                <a class= "publish-btn" href="__CONTROLLER__/send_project">发布项目</a>
-            </if>
+            <?php if(($isidentify == 1) and ($code > 0)): ?><a class= "publish-btn" href="/index.php/Home/Community/send_project">发布项目</a><?php endif; ?>
 
         </div>
 
@@ -294,15 +301,15 @@
 </div>
 
 </body>
-<script src = "__PUBLIC__/Home/js/cityBoxShow.js"></script>
+<script src = "/Public/Home/js/cityBoxShow.js"></script>
 
 <script>
 
-    $.post("__CONTROLLER__/getoriganizationlist/page/1", function (data) {
+    $.post("/index.php/Home/Community/getoriganizationlist/page/1", function (data) {
         var html = "";
         console.log(data.data[0]);
          for(var i = 0; i < data.data.length ; i ++) {
-            var href = '__MODULE__/Home/displayOriganizationHome/id/'+data.data[i].sjy_id;
+            var href = '/index.php/Home/Home/displayOriganizationHome/id/'+data.data[i].sjy_id;
 
 
              html+=  '<li>' +
