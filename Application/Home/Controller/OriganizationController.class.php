@@ -200,6 +200,22 @@
             {
             	$ret["errorInfo"] = "该身份证号已被使用";
             }
+
+            //logo
+            $time = time();
+            $base64 = explode('base64,',$logo_img)[1];
+            //文件名
+            $path = '/Uploads/origanization/logo_img/'.date('Y-m-d',$time).'/'.$time.uniqid();
+            $uploadObj = new UploadController();
+            $base64res = $uploadObj->base64Upload($base64,$path);
+            if($base64res)
+            {
+                 $imgpath = $path; //项目主图
+                 //添加到数据库
+                 $base_info['sjy_origanization_logo_img_path'] = $imgpath;
+            }else{
+                $ret["errorInfo"] = "logo上传出错,请重试";
+            }
 	        //如果数据有错则不执行插入
 	        if(!empty($ret["errorInfo"]))
 	        {
@@ -207,15 +223,19 @@
 	            die;
 	        }
             //执行图片上传
+
+            
+
             //社会组织营业执照,社会组织logo
-            $base64_data = array($business_licence_img,$logo_img);                     
+
+            $base64_data = array($business_licence_img);                     
 	        foreach ($base64_data as $key => $value) {
 	            $base64_image_content = $value;
 	            if($key==0)
 	            {
 	            	$folder = 'business_licence_img';  //营业执照照片存放地址
 	            }else{
-	            	$folder = 'logo_img';         //logo存放地址
+	            	// $folder = 'logo_img';         //logo存放地址
 	            }            
                 if (preg_match('/^(data:\s*image\/(\w+);base64,)/', $base64_image_content, $result)){
                                  $type = $result[2];
@@ -233,7 +253,7 @@
                                        {
                                         	 $base_info['sjy_origanization_business_licence_path'] = $imgpath;  //社会组织营业执照图片
                                         }else{
-                                        	 $base_info['sjy_origanization_logo_img_path'] = $imgpath;  //社会组织logo图片
+                                        	 // $base_info['sjy_origanization_logo_img_path'] = $imgpath;  //社会组织logo图片
                                         }          
                                 }
                          }
