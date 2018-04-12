@@ -51,9 +51,11 @@
                         <li>
                             <a href="__MODULE__/Community/communityIdentify">认证状态</a>
                         </li>
+                        <if condition='($isidentify eq 1)'>
                         <li>
                             <a href="__MODULE__/Community/personinfo">账号设置</a>
                         </li>
+                        </if>
                         <if condition='($isidentify eq 1) and ($code gt 0)'>
                             <li>
                                 <a href="__MODULE__/Community/mycommunity">我的社区</a>
@@ -62,7 +64,7 @@
                                 <a href="__MODULE__/Project/communityProjectManger">我的项目<?php if($active>=1){ ?><span class="layui-badge-dot"></span><?php } ?></a>
                             </li>
                             <li>
-                                <a href="">我的消息</a>
+                                <a href="__MODULE__/Home/displayCommunityHome">社区主页</a>
                             </li>
 
                             <li>
@@ -75,9 +77,11 @@
                         <li>
                             <a href="__MODULE__/Origanization/origanizationIdentify">认证状态</a>
                         </li>
+                        <if condition='($isidentify eq 1)'>
                         <li>
                             <a href="__MODULE__/Origanization/personinfo">账号设置</a>
                         </li>
+                        </if>
                         <if condition='($isidentify eq 1) and ($code gt 0)'>
                             <li>
                                 <a href="__MODULE__/Origanization/myoriganization">我的机构</a>
@@ -86,7 +90,7 @@
                                 <a href="__MODULE__/Project/origanizationProjectManger">我的项目<?php if($active>=1){ ?><span class="layui-badge-dot"></span><?php } ?></a>
                             </li>
                             <li>
-                                <a href="">我的消息</a>
+                                <a href="__MODULE__/Home/displayOriganizationHome">机构主页</a>
                             </li>
                         </if>
                         <li>
@@ -377,7 +381,7 @@
 
     $.post("__CONTROLLER__/getOriganizationInfo?id={$id}", function(data) {
 
-        var img = '<img class = "orLogo" src="' + data.sjy_origanization_logo_img_path + '" alt="">';
+        var img = '<img class = "orLogo" src="http://p33g9t7dr.bkt.clouddn.com/' + data.sjy_origanization_logo_img_path + '" alt="">';
         $(".orLogoBox").html(img);
 
         var tit = "";

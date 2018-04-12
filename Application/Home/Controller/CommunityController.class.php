@@ -348,7 +348,7 @@ class CommunityController extends BaseController {
                                  $new_file = $new_file.time().".{$type}";
                                  if (file_put_contents($new_file, base64_decode(str_replace($result[1], '', $base64_image_content)))){
                                         $imgpath = "/Uploads/community/id_card/".date('Ymd',time())."/".time().".{$type}";
-                                        $data["sjy_community_id_card_img"] = $imgpath;  //身份证图片
+                                        $data["sjy_community_user_id_card_img"] = $imgpath;  //身份证图片
                                  
                                 }
                          }
