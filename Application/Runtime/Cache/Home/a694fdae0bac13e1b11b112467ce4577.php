@@ -45,9 +45,9 @@
                 <li>
                     <a href="/index.php/Home/Community/communityIdentify">认证状态</a>
                 </li>
-                <li>
-                    <a href="/index.php/Home/Community/personinfo">账号设置</a>
-                </li>
+                <?php if(($isidentify == 1)): ?><li>
+                        <a href="/index.php/Home/Community/personinfo">账号设置</a>
+                    </li><?php endif; ?>
                 <?php if(($isidentify == 1) and ($code > 0)): ?><li>
                         <a href="/index.php/Home/Community/mycommunity">我的社区</a>
                     </li>

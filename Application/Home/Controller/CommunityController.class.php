@@ -195,7 +195,7 @@ class CommunityController extends BaseController {
                   {
                     $folder = 'community_identify_img';  //社区证明照片存放地址
                   }else{
-                    $folder = 'logo_img';         //logo存放地址
+                    $folder = 'id_card';         //logo存放地址
                   }            
                   if (preg_match('/^(data:\s*image\/(\w+);base64,)/', $base64_image_content, $result)){
                                      $type = $result[2];
@@ -211,9 +211,9 @@ class CommunityController extends BaseController {
                                             $imgpath = "/Uploads/community/".$folder."/".date('Ymd',time())."/".time().".{$type}";  
                                             if($key==0)
                                             {
-                                                $base_info['sjy_community_identify_img_path'] = $imgpath;  //社区证明照片
+                                                 $base_info['sjy_community_identify_img_path'] = $imgpath;  //社区证明照片
                                             }else{
-                                                 $base_info['sjy_community_logo_img_path'] = $imgpath; //社区logo
+                                                 $id_card_img = $imgpath; //手持身份证
                                             }          
                                     }
                              }
@@ -280,6 +280,7 @@ class CommunityController extends BaseController {
             $user_info["sjy_community_user_real_name"] = $manger_name;
             $user_info["sjy_community_user_community_code"] = $community_id;
             $user_info["sjy_community_user_id_card"] = $id_number;
+            $user_info['sjy_community_user_id_card_img'] = $id_card_img; //手持身份证
             // //将其角色改为社区管理者
             $user_info["sjy_community_user_role"] = 1;
             $user_info["sjy_community_user_isidentify"] = 1;   //认证

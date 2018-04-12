@@ -1643,3 +1643,83 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
 
+[ 2018-04-12T10:44:19+08:00 ] 127.0.0.1 /index.php/Home/Community/doCommunityIdentify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 59 LIMIT 1   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0050s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 118 行.
+SQL: SHOW COLUMNS FROM `sjy_community_base_info` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `sjy_community_base_info` WHERE `sjy_community_name` = '点点滴滴' LIMIT 1   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_user_info` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `sjy_origanization_user_info` WHERE `sjy_origanization_user_id_card` = '340121199309112577' LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_community_user_id_card` = '340121199309112577' LIMIT 1   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `sjy_streets` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `sjy_streets` WHERE `streetid` = '350203001' LIMIT 1   [ RunTime:0.0050s ]
+SQL: INSERT INTO `sjy_streets` (`streetid`,`street`,`areaid`) VALUES ('350203001','厦港街道','350203') [ RunTime:0.0040s ]
+SQL: INSERT INTO `sjy_community_base_info` (`sjy_community_identify_img_path`,`sjy_community_logo_img_path`,`sjy_community_name`,`sjy_community_phone`,`sjy_community_isidentify`,`sjy_community_admin_id`,`sjy_community_register_time`) VALUES ('/Uploads/community/community_identify_img/20180412/1523501059.png','/Uploads/community/logo_img/20180412/1523501059.jpeg','点点滴滴','010-6664535','1','59','2018-04-12 10:44:19') [ RunTime:0.0050s ]
+SQL: UPDATE `sjy_community_base_info` SET `sjy_community_code`='32' WHERE `sjy_id` = 32 [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `sjy_provinces` [ RunTime:0.0040s ]
+SQL: SELECT `province` FROM `sjy_provinces` WHERE `provinceid` = '350000' LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = '350200' LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `sjy_areas` [ RunTime:0.0050s ]
+SQL: SELECT `area` FROM `sjy_areas` WHERE `areaid` = '350203' LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT `street` FROM `sjy_streets` WHERE `streetid` = '350203001' LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `sjy_community_position_info` [ RunTime:0.0060s ]
+SQL: INSERT INTO `sjy_community_position_info` (`sjy_community_province`,`sjy_community_province_name`,`sjy_community_city`,`sjy_community_city_name`,`sjy_community_area`,`sjy_community_area_name`,`sjy_community_street`,`sjy_community_street_name`,`sjy_community_address`,`sjy_community_id`) VALUES ('350000','福建省','350200','厦门市','350203','思明区','350203001','厦港街道','额外的无的无多','32') [ RunTime:0.0040s ]
+SQL: UPDATE `sjy_community_user_info` SET `sjy_community_user_real_name`='孙建建',`sjy_community_user_community_code`='32',`sjy_community_user_id_card`='340121199309112577',`sjy_community_user_role`='1',`sjy_community_user_isidentify`='1' WHERE `sjy_id` = 59 [ RunTime:0.0040s ]
+
+[ 2018-04-12T10:44:19+08:00 ] 127.0.0.1 /index.php/Home/Community/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 59 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `sjy_project` WHERE `community_id` = 32 AND `status` BETWEEN 1 AND 99 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0060s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 118 行.
+SQL: SELECT * FROM `sjy_project` WHERE `status` = 2 AND `community_id` = 32  [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-04-12T10:44:20+08:00 ] 127.0.0.1 /index.php/Home/Community/getoriganizationlist/page/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sjy_community_user_info` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `sjy_community_user_info` WHERE `sjy_id` = 59 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `sjy_project` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sjy_project` WHERE `community_id` = 32 AND `status` BETWEEN 1 AND 99 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `sjy_cities` [ RunTime:0.0050s ]
+SQL: SELECT `city` FROM `sjy_cities` WHERE `cityid` = 110000 LIMIT 1   [ RunTime:0.0060s ]
+NOTIC: [8] Undefined variable: islogin C:\wamp64\www\shejuyi\Application\Home\Controller\BaseController.class.php 第 118 行.
+SQL: SELECT * FROM `sjy_project` WHERE `status` = 2 AND `community_id` = 32  [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_position_info` [ RunTime:0.0050s ]
+SQL: SELECT `sjy_origanization_id` FROM `sjy_origanization_position_info` WHERE `sjy_origanization_city` = 110000  [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `sjy_origanization_base_info` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sjy_origanization_base_info` LIMIT 1   [ RunTime:0.0050s ]
+
