@@ -28,7 +28,12 @@
 	    //查看社会组织主页
         public function displayOriganizationHome()
         {
-            $id = I('get.id'); //社会组织id
+        	if(session('userInfo')['sjy_origanization_user_origanization_code'])
+        	{
+        		$id = session('userInfo')['sjy_origanization_user_origanization_code'];
+        	}else{
+            	$id = I('get.id'); //社会组织id
+            }
             $this->assign("id",$id);
             $this->display();
         }

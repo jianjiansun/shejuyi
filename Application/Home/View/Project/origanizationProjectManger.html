@@ -223,10 +223,11 @@ layui.use('element', function(){
                             <li>
                                 <a href="__MODULE__/Origanization/origanizationIdentify">认证状态</a>
                             </li>
-
+                            <if condition='($isidentify eq 1)'>
                             <li>
                                 <a href="__MODULE__/Origanization/personInfo">账号设置</a>
                             </li>
+                            </if>
                             <if condition='($isidentify eq 1) and ($code gt 0)'>
                                 <li>
                                     <a href="__MODULE__/Origanization/myOriganization">我的机构</a>
@@ -235,7 +236,7 @@ layui.use('element', function(){
                                     <a class="on" href="__MODULE__/Project/origanizationProjectManger">我的项目</a>
                                 </li>
                                 <li>
-                                    <a href="">我的消息</a>
+                                    <a href="__MODULE__/Home/diaplayOriganizationHome">机构主页</a>
                                 </li>
                             </if>
                         </ul>

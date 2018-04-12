@@ -71,21 +71,22 @@
 
                         <ul class="person-ul">
                             <li>
-                                <a href="__CONTROLLER__/communityIdentify">认证状态</a>
-                            </li>
-
-                            <li>
-                                <a href="__CONTROLLER__/personInfo">账号设置</a>
-                            </li>
-                            <li>
-                                <a class="on" href="__CONTROLLER__/myCommunity">我的社区</a>
-                            </li>
-                            <li>
-                                <a href="__MODULE__/Project/communityProjectManger">我的项目</a>
-                            </li>
-                            <li>
-                                <a href="">我的消息</a>
-                            </li>
+                            <a href="__MODULE__/Community/communityIdentify">认证状态</a>
+                        </li>
+                        <if condition='($isidentify eq 1)'>
+                          <li>
+                              <a href="__MODULE__/Community/personInfo">账号设置</a>
+                          </li>
+                        </if>
+                        <if condition='($isidentify eq 1) and ($code gt 0)'>
+                          <li>
+                              <a href="__MODULE__/Community/myCommunity">我的社区</a>
+                          </li>
+                          <li>
+                              <a  class = "on" href="__MODULE__/Project/communityProjectManger">我的项目</a>
+                          </li>
+                        </if>
+                           
                         </ul>
                     </div>
                     <div class="col-md-10 column perperson-con" style="background: #FFFFFF;">
@@ -161,29 +162,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody id="tableBody">
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>2016-11-29</td>
-                                                    <td>人生就像是一场修行</td>
-                                                    <td></td>
-                                                    <td>
-                                                        <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
-                                                        <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
-                                                        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
-                                                    </td>
-
-                                                </tr>
-                                                <tr>
-                                                    <td>10</td>
-                                                    <td>2016-11-28</td>
-                                                    <td>于千万年之中，时间的无涯的荒野里…</td>
-                                                    <td></td>
-                                                    <td>
-                                                        <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
-                                                        <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
-                                                        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
-                                                    </td>
-                                                </tr>
+                                               
                                             </tbody>
                                         </table>
                                     </div>
@@ -193,7 +172,7 @@
                                     <div class="basic-information">
                                         <div class="img-box full">
                                             <section class=" img-section">
-                                                 <p class="up-p">社区风采：<span class="up-span">上传一张风采</span></p>
+                                                 <p class="up-p">社区风采：<span class="up-span">上传一张社区风采</span></p>
                                                 <div class="case">
                                                     <div class="upload" style='width:500px;height:300px' data-type="png,jpg,jpeg,gif" action='__CONTROLLER__/uploadcommunityimgs' data-num='1' id='case2'></div>
                                                 </div>
@@ -421,14 +400,17 @@
             //console.log(data);
             var html = '';
             for (var i = 0; i < data.data.length; i++) {
-
+                if(data.data[i].sjy_community_user_email != null )
+                {
+                    var email = data.data[i].sjy_community_user_email;
+                }else{
+                    var email = '';
+                }
                 html += '<tr>' +
                     '<td>' + data.data[i].sjy_community_user_real_name + '</td>' +
                     '<td class = "sjy_community_login_id">' + data.data[i].sjy_community_login_id + '</td>' +
-                    '<td>' + data.data[i].sjy_community_user_email + '</td>' +
+                    '<td>' + email + '</td>' +
                     '<td>' +
-                    '<a class="layui-btn layui-btn-primary layui-btn-xs">查看</a>' +
-                    '<a class="layui-btn layui-btn-xs">编辑</a>' +
                     '<a class="layui-btn layui-btn-danger layui-btn-xs deleteEmployees" href = "javascript:;">删除</a>' +
                     '</td>' +
                     '</tr>';
@@ -449,7 +431,7 @@
                 $(this).parents("tr").remove();
 
                 $.ajax({
-                    url: "http://120.24.242.45/shejuyi/index.php/Home/Communityback/delStaff",
+                    url: "__MODULE__/Community/delStaff",
                     type: "POST",
                     data: {
                         phone: phone
