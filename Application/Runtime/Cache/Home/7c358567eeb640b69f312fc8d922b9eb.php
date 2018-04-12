@@ -1,28 +1,44 @@
-<!-- <link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/testfy.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/chooseCity.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/detail.css">
-<script src="__PUBLIC__/Home/js/jquery-1.12.4.js"></script>
-<script src="__PUBLIC__/Home/js/bootstrap.js"></script>
-<script src="__PUBLIC__/Home/js/jquery.page.js"></script>
-<script src="__PUBLIC__/Home/js/upLoadImg.js"></script> -->
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EasyLife</title>
+    <link rel="stylesheet" href="/Public/Home/css/bootstrap.css">
+    <link rel="stylesheet" href="/Public/Home/css/common.css">
+    <link rel="stylesheet" href="/Public/Home/css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+    <script src="/Public/Home/js/jquery-1.12.4.js"></script>
+    <script src="/Public/Home/js/bootstrap.js"></script>
+    <script src = "/Public/Home/js/autoResizeImage.js"></script>
+
+<!-- <link rel="stylesheet" href="/Public/Home/css/region.css">
+<link rel="stylesheet" href="/Public/Home/css/testfy.css">
+<link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+<link rel="stylesheet" href="/Public/Home/css/page2.css">
+<link rel="stylesheet" href="/Public/Home/css/detail.css">
+<script src="/Public/Home/js/jquery-1.12.4.js"></script>
+<script src="/Public/Home/js/bootstrap.js"></script>
+<script src="/Public/Home/js/jquery.page.js"></script>
+<script src="/Public/Home/js/upLoadImg.js"></script> -->
 
 
-<link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/testfy.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/chooseCity.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/detail.css">
+<link rel="stylesheet" href="/Public/Home/css/region.css">
+<link rel="stylesheet" href="/Public/Home/css/testfy.css">
+<link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+<link rel="stylesheet" href="/Public/Home/css/page2.css">
+<link rel="stylesheet" href="/Public/Home/css/detail.css">
 
-<link rel="stylesheet" href="__PUBLIC__/Home/css/component.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/score.css">
+<link rel="stylesheet" href="/Public/Home/css/component.css">
+<link rel="stylesheet" href="/Public/Home/css/layui.css">
+<link rel="stylesheet" href="/Public/Home/css/score.css">
 
-<script src="__PUBLIC__/Home/js/jquery.page.js"></script>
-<script src="__PUBLIC__/Home/js/upLoadImg.js"></script>
-<script src="__PUBLIC__/Home/js/layui.js"></script>
-<script src="__PUBLIC__/Home/js/layui.all.js"></script>
+<script src="/Public/Home/js/jquery.page.js"></script>
+<script src="/Public/Home/js/upLoadImg.js"></script>
+<script src="/Public/Home/js/layui.js"></script>
+<script src="/Public/Home/js/layui.all.js"></script>
 </head>
 
 <body>
@@ -31,7 +47,7 @@
     </div>
     <div class="headLogin">
         <div class="left changeBan">
-            <a href="javascript:;" id="cityChoose" class="region">{$city}</a>
+            <a href="javascript:;" id="cityChoose" class="region"><?php echo ($city); ?></a>
             <a class="on" href="">社会组织版</a>
             <a href="">社区版</a>
         </div>
@@ -40,74 +56,62 @@
 
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">
                     <div class="user-img" style="display: inline-block">
-                        <img src="{$user_image}" alt="">
+                        <img src="<?php echo ($user_image); ?>" alt="">
                         <span class="iconfont VIP-icon" style="right: -20px;">&#xe65b;</span>
                     </div>
-                    <span>{$showname}<if condition='$active egt 1'><span class="layui-badge-dot"></span></if>
+                    <span><?php echo ($showname); if($active >= 1): ?><span class="layui-badge-dot"></span><?php endif; ?>
                     </span>
                 </a>
-                <if condition='$figure eq 2'>
-                    <ul class="dropdown-menu personalMenu">
+                <?php if($figure == 2): ?><ul class="dropdown-menu personalMenu">
                         <li>
-                            <a href="__MODULE__/Community/communityIdentify">认证状态</a>
+                            <a href="/index.php/Home/Community/communityIdentify">认证状态</a>
                         </li>
-                        <if condition='($isidentify eq 1)'>
+                        <?php if(($isidentify == 1)): ?><li>
+                            <a href="/index.php/Home/Community/personinfo">账号设置</a>
+                        </li><?php endif; ?>
+                        <?php if(($isidentify == 1) and ($code > 0)): ?><li>
+                                <a href="/index.php/Home/Community/mycommunity">我的社区</a>
+                            </li>
+                            <li>
+                                <a href="/index.php/Home/Project/communityProjectManger">我的项目<?php if($active>=1){ ?><span class="layui-badge-dot"></span><?php } ?></a>
+                            </li>
+                            <li>
+                                <a href="/index.php/Home/Home/displayCommunityHome">社区主页</a>
+                            </li><?php endif; ?>
                         <li>
-                            <a href="__MODULE__/Community/personinfo">账号设置</a>
-                        </li>
-                        </if>
-                        <if condition='($isidentify eq 1) and ($code gt 0)'>
-                            <li>
-                                <a href="__MODULE__/Community/mycommunity">我的社区</a>
-                            </li>
-                            <li>
-                                <a href="__MODULE__/Project/communityProjectManger">我的项目<?php if($active>=1){ ?><span class="layui-badge-dot"></span><?php } ?></a>
-                            </li>
-                            <li>
-                                <a href="__MODULE__/Home/displayCommunityHome">社区主页</a>
-                            </li>
-
-                           
-                        </if>
-                        <li>
-                        <a href="__MODULE__/Community/logout">注销</a>
+                        <a href="/index.php/Home/Community/logout">注销</a>
                         </li>
                     </ul>
-                    <else />
+                    <?php else: ?>
                     <ul class="dropdown-menu personalMenu">
                         <li>
-                            <a href="__MODULE__/Origanization/origanizationIdentify">认证状态</a>
+                            <a href="/index.php/Home/Origanization/origanizationIdentify">认证状态</a>
                         </li>
-                        <if condition='($isidentify eq 1)'>
+                        <?php if(($isidentify == 1)): ?><li>
+                            <a href="/index.php/Home/Origanization/personinfo">账号设置</a>
+                        </li><?php endif; ?>
+                        <?php if(($isidentify == 1) and ($code > 0)): ?><li>
+                                <a href="/index.php/Home/Origanization/myoriganization">我的机构</a>
+                            </li>
+                            <li>
+                                <a href="/index.php/Home/Project/origanizationProjectManger">我的项目<?php if($active>=1){ ?><span class="layui-badge-dot"></span><?php } ?></a>
+                            </li>
+                            <li>
+                                <a href="/index.php/Home/Home/displayOriganizationHome">机构主页</a>
+                            </li><?php endif; ?>
                         <li>
-                            <a href="__MODULE__/Origanization/personinfo">账号设置</a>
+                            <a href="/index.php/Home/Origanization/logout">注销</a>
                         </li>
-                        </if>
-                        <if condition='($isidentify eq 1) and ($code gt 0)'>
-                            <li>
-                                <a href="__MODULE__/Origanization/myoriganization">我的机构</a>
-                            </li>
-                            <li>
-                                <a href="__MODULE__/Project/origanizationProjectManger">我的项目<?php if($active>=1){ ?><span class="layui-badge-dot"></span><?php } ?></a>
-                            </li>
-                            <li>
-                                <a href="__MODULE__/Home/displayOriganizationHome">机构主页</a>
-                            </li>
-                        </if>
-                        <li>
-                            <a href="__MODULE__/Origanization/logout">注销</a>
-                        </li>
-                    </ul>
-                </if>
+                    </ul><?php endif; ?>
             </div>
         </div>
     </div>
     <div class="headNavBox">
         <div class="container">
             <div class="top">
-                <a href="{$index}">
+                <a href="<?php echo ($index); ?>">
                     <div class="logo  col-md-6">
-                        <img src="__PUBLIC__/Home/imgs/logo.png" alt="">
+                        <img src="/Public/Home/imgs/logo.png" alt="">
                         <span>社居易</span>
                     </div>
                 </a>
@@ -125,17 +129,15 @@
         <div class="detailBox">
             <div class="detail-bottom">
                 <div class="col-md-1 orLogoBox">
-                    <img class="orLogo" src="__PUBLIC__/Home/imgs/or4.jpg" alt="">
+                    <img class="orLogo" src="/Public/Home/imgs/or4.jpg" alt="">
                 </div>
                 <div class="col-md-5 community-tit">
                     <h3>中国社区</h3>
                     <p>致力于服务社区人民的一系活动</p>
                 </div>
                 <div class="col-md-6">
-                <if condition='$figure eq 2'>
-                    <a id="inviteOr" class="deliverBtn" href="javascript:;">邀请做项目</a>
-                </if>
-                    <a class="deliverBtn" target='blank' href="__MODULE__/Origanization/send_project">发布项目</a>
+                <?php if($figure == 2): ?><a id="inviteOr" class="deliverBtn" href="javascript:;">邀请做项目</a><?php endif; ?>
+                    <a class="deliverBtn" target='blank' href="/index.php/Home/Origanization/send_project">发布项目</a>
                 </div>
 
             </div>
@@ -179,7 +181,7 @@
                         <ul class="clearfix">
                             <li class="clearfix pro-li">
                                 <div class="left leftImg">
-                                    <img src="__PUBLIC__/Home/imgs/shequ1.jpg" alt="">
+                                    <img src="/Public/Home/imgs/shequ1.jpg" alt="">
                                 </div>
                                 <div class="left leftCon">
                                     <dl>
@@ -211,7 +213,7 @@
                         <ul class="clearfix">
                             <li class="clearfix pro-li">
                                 <div class="left leftImg">
-                                    <img src="__PUBLIC__/Home/imgs/shequ3.jpg" alt="">
+                                    <img src="/Public/Home/imgs/shequ3.jpg" alt="">
                                 </div>
                                 <div class="left leftCon">
                                     <dl>
@@ -243,7 +245,7 @@
                         <ul class="clearfix">
                             <li class="clearfix pro-li">
                                 <div class="left leftImg">
-                                    <img src="__PUBLIC__/Home/imgs/shequ3.jpg" alt="">
+                                    <img src="/Public/Home/imgs/shequ3.jpg" alt="">
                                 </div>
                                 <div class="left leftCon">
                                     <dl>
@@ -289,14 +291,14 @@
                     <h3>最新项目</h3>
                     <ul class="latest-ulbox clearfix">
                         <li class="clearfix">
-                            <div class="left left-img"><img src="__PUBLIC__/Home/imgs/shequ3.jpg" alt=""></div>
+                            <div class="left left-img"><img src="/Public/Home/imgs/shequ3.jpg" alt=""></div>
                             <div class="left right-detail">
                                 <p class="p1">“志愿青春，成长无虑”如意社区青少年服务项目</p>
                                 <p class="p2">2017-09-13 20:28</p>
                             </div>
                         </li>
                         <li class="clearfix">
-                            <div class="left left-img"><img src="__PUBLIC__/Home/imgs/shequ3.jpg" alt=""></div>
+                            <div class="left left-img"><img src="/Public/Home/imgs/shequ3.jpg" alt=""></div>
                             <div class="left right-detail">
                                 <p class="p1">“志愿青春，成长无虑”如意社区青少年服务项目</p>
                                 <p class="p2">2017-09-13 20:28</p>
@@ -304,7 +306,7 @@
                         </li>
 
                         <li class="clearfix">
-                            <div class="left left-img"><img src="__PUBLIC__/Home/imgs/shequ3.jpg" alt=""></div>
+                            <div class="left left-img"><img src="/Public/Home/imgs/shequ3.jpg" alt=""></div>
                             <div class="left right-detail">
                                 <p class="p1">“志愿青春，成长无虑”如意社区青少年服务项目</p>
                                 <p class="p2">2017-09-13 20:28</p>
@@ -332,7 +334,7 @@
         </div>
     </div>
 </body>
-<script src="__PUBLIC__/Home/js/cityBoxShow.js"></script>
+<script src="/Public/Home/js/cityBoxShow.js"></script>
 <script>
     /*邀请做项目*/
     $("#inviteOr").click(function() {
@@ -340,7 +342,7 @@
         layer.open({
             type: 2,
             area: ['40%', '50%'],
-            content: '__MODULE__/Project/displayCommunityTendPorject?origanization_id={$id}'
+            content: '/index.php/Home/Project/displayCommunityTendPorject?origanization_id=<?php echo ($id); ?>'
         });
 
     });
@@ -380,7 +382,7 @@
 
     });
 
-    $.post("__CONTROLLER__/getOriganizationInfo?id={$id}", function(data) {
+    $.post("/index.php/Home/Home/getOriganizationInfo?id=<?php echo ($id); ?>", function(data) {
 
         var img = '<img class = "orLogo" src="http://p33g9t7dr.bkt.clouddn.com/' + data.sjy_origanization_logo_img_path + '" alt="">';
         $(".orLogoBox").html(img);
@@ -424,13 +426,13 @@
     /*已完成的项目*/
     $(".nav2").click(function() {
 
-        $.post("__MODULE__/Project/completeProject?origanization_code={$id}", function(data) {
+        $.post("/index.php/Home/Project/completeProject?origanization_code=<?php echo ($id); ?>", function(data) {
 
 
             var html = '';
             for (var i = 0; i < data.length; i++) {
                 html += '<li class="clearfix pro-li">' +
-                    '<a target="_blank" href="__MODULE__/Project/displayCommunityProject/id/' + data[i].project_info['sjy_id'] + '">' +
+                    '<a target="_blank" href="/index.php/Home/Project/displayCommunityProject/id/' + data[i].project_info['sjy_id'] + '">' +
                     '<div class="left leftImg">' +
                     '<img src="http://p33g9t7dr.bkt.clouddn.com/' + data[i].main_image + '" alt="">' +
                     '</div>' +
@@ -480,12 +482,12 @@
 
     $(".nav3").click(function() {
 
-        $.post("__MODULE__/Project/ingProject?origanization_code={$id}", function(data) {
+        $.post("/index.php/Home/Project/ingProject?origanization_code=<?php echo ($id); ?>", function(data) {
 
             var html = '';
             for (var i = 0; i < data.length; i++) {
                 html += '<li class="clearfix pro-li">' +
-                    '<a href="__MODULE__/Project/displayCommunityProject/id/' + data[i].project_detail['sjy_id'] + '" target="_blank" >' +
+                    '<a href="/index.php/Home/Project/displayCommunityProject/id/' + data[i].project_detail['sjy_id'] + '" target="_blank" >' +
                     '<div class="left leftImg">' +
                     '<img src="http://p33g9t7dr.bkt.clouddn.com/' + data[i].main_image + '" alt="">' +
                     '</div>' +
@@ -532,12 +534,12 @@
 
     $(".nav4").click(function() {
 
-        $.post("__MODULE__/Project/origanizationSendProject?origanization_code={$id}", function(data) {
+        $.post("/index.php/Home/Project/origanizationSendProject?origanization_code=<?php echo ($id); ?>", function(data) {
 
             var html = '';
             for (var i = 0; i < data.length; i++) {
                 html += '<li class="clearfix pro-li">' +
-                    '<a href="__MODULE__/Project/displayOriganizationProject/id/' + data[i].sjy_id + '" target="_blank">' +
+                    '<a href="/index.php/Home/Project/displayOriganizationProject/id/' + data[i].sjy_id + '" target="_blank">' +
                     '<div class="left leftImg">' +
                     '<img src="http://p33g9t7dr.bkt.clouddn.com/' + data[i].main_image + '" alt="">' +
                     '</div>' +
