@@ -66,12 +66,12 @@
         public function getprojectlist()
         {
           $page = I('get.page')==null?1:I('get.page'); //页码 默认第一页   
-          $start = ($page-1)*10;                       //每页显示数量 10
+          $start = ($page-1)*2;                       //每页显示数量 10
             
 	   	  //城市
      	  $cityid = session("cityid")==null?110000:session("cityid");
      	   //查询城市下社区发布项目信息;
-          $project_info = M('community_project_info')->where(array('cityid'=>$cityid))->limit($start,10)->select();
+          $project_info = M('community_project_info')->where(array('cityid'=>$cityid))->limit($start,2)->select();
           //根据项目信息查询社区信息
           foreach($project_info as $key=>$value)
           {
@@ -92,7 +92,7 @@
            	  $project_info[$key]['project_image_path']=$imgpath;  //社区项目图片
            }
            $allprojectinfo = M('community_project_info')->where(array('cityid'=>$cityid))->count();
-           $pages = ceil($allprojectinfo/10);  //总页码数
+           $pages = ceil($allprojectinfo/2);  //总页码数
            //返回数据
            $res['pages'] = $pages; //总页码数
 	       $res['data'] = $project_info;  //项目信息
