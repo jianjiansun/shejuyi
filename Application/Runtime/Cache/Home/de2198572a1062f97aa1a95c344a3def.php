@@ -207,7 +207,7 @@
                     <h2>个人信息</h2>
                     <div>
                         <div class = "user-img">
-                            <img id="userImg" src="http://p33g9t7dr.bkt.clouddn.com/<?php echo ($user_image); ?>" alt="  ">
+                            <img id="userImg" src="<?php echo ($user_image); ?>" alt="  ">
                             <span class = "iconfont VIP-icon">&#xe65b;</span>
                         </div>
                         <p style = "margin-top: 12px;">
@@ -236,18 +236,14 @@
                         <li>
                             <a href="/index.php/Home/Community/communityIdentify">认证状态</a>
                         </li>
-
-                        <li>
-                            <a href="/index.php/Home/Community/personInfo">账号设置</a>
-                        </li>
+                        <?php if(($isidentify == 1)): ?><li>
+                              <a href="/index.php/Home/Community/personInfo">账号设置</a>
+                          </li><?php endif; ?>
                         <?php if(($isidentify == 1) and ($code > 0)): ?><li>
                               <a href="/index.php/Home/Community/myCommunity">我的社区</a>
                           </li>
                           <li>
                               <a  class = "on" href="/index.php/Home/Project/communityProjectManger">我的项目</a>
-                          </li>
-                          <li>
-                              <a href="">我的消息</a>
                           </li><?php endif; ?>
                     </ul>
                 </div>

@@ -1,19 +1,35 @@
-<link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/chooseCity.css">
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EasyLife</title>
+    <link rel="stylesheet" href="/Public/Home/css/bootstrap.css">
+    <link rel="stylesheet" href="/Public/Home/css/common.css">
+    <link rel="stylesheet" href="/Public/Home/css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+    <script src="/Public/Home/js/jquery-1.12.4.js"></script>
+    <script src="/Public/Home/js/bootstrap.js"></script>
+    <script src = "/Public/Home/js/autoResizeImage.js"></script>
 
-<script src="__PUBLIC__/Home/js/layui.js"></script>
-<script src="__PUBLIC__/Home/js/layui.all.js"></script>
-<script src="__PUBLIC__/Home/js/upLoadImgBig.js"></script>
+<link rel="stylesheet" href="/Public/Home/css/region.css">
+<link rel="stylesheet" href="/Public/Home/css/layui.css">
+<link rel="stylesheet" href="/Public/Home/css/page2.css">
+<link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+
+<script src="/Public/Home/js/layui.js"></script>
+<script src="/Public/Home/js/layui.all.js"></script>
+<script src="/Public/Home/js/upLoadImgBig.js"></script>
 
 
-<script src="__PUBLIC__/Home/js/plugins/cover_js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
-<script src="__PUBLIC__/Home/js/plugins/cover_js/hammer.js" type="text/javascript" charset="utf-8"></script>
-<script src="__PUBLIC__/Home/js/plugins/cover_js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
-<script src="__PUBLIC__/Home/js/plugins/cover_js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="__PUBLIC__/Home/js/jQuery.upload.min.js"></script>
-<link rel="stylesheet" href="__PUBLIC__/Home/css/upload.css">
+<script src="/Public/Home/js/plugins/cover_js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Public/Home/js/plugins/cover_js/hammer.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Public/Home/js/plugins/cover_js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Public/Home/js/plugins/cover_js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Public/Home/js/jQuery.upload.min.js"></script>
+<link rel="stylesheet" href="/Public/Home/css/upload.css">
 
 
 </head>
@@ -24,13 +40,13 @@
     <div class="headLogin">
         <div class="container">
             <div class="left changeBan logoPer">
-                <a href='{$index}'>
-                    <img src="__PUBLIC__/Home/imgs/logo.png" alt="">
+                <a href='<?php echo ($index); ?>'>
+                    <img src="/Public/Home/imgs/logo.png" alt="">
                     <span>社居易</span>
                 </a>
             </div>
             <div class="right person">
-                <!--<img src="__PUBLIC__/Home/imgs/personDl.jpg" alt="">-->
+                <!--<img src="/Public/Home/imgs/personDl.jpg" alt="">-->
             </div>
         </div>
     </div>
@@ -44,7 +60,7 @@
                         <h2>个人信息</h2>
                         <div>
                             <div class = "user-img">
-                                <img id="userImg" src="{$user_image}" alt="  ">
+                                <img id="userImg" src="<?php echo ($user_image); ?>" alt="  ">
                                 <span class = "iconfont VIP-icon">&#xe65b;</span>
                             </div>
                             <p style = "margin-top: 12px;">
@@ -71,21 +87,18 @@
 
                         <ul class="person-ul">
                             <li>
-                            <a href="__MODULE__/Community/communityIdentify">认证状态</a>
-                        </li>
-                        <if condition='($isidentify eq 1)'>
-                          <li>
-                              <a href="__MODULE__/Community/personInfo">账号设置</a>
-                          </li>
-                        </if>
-                        <if condition='($isidentify eq 1) and ($code gt 0)'>
-                          <li>
-                              <a href="__MODULE__/Community/myCommunity">我的社区</a>
-                          </li>
-                          <li>
-                              <a  class = "on" href="__MODULE__/Project/communityProjectManger">我的项目</a>
-                          </li>
-                        </if>
+                                <a href="/index.php/Home/Community/communityIdentify">认证状态</a>
+                            </li>
+
+                            <li>
+                                <a href="/index.php/Home/Community/personInfo">账号设置</a>
+                            </li>
+                            <li>
+                                <a class="on" href="/index.php/Home/Community/myCommunity">我的社区</a>
+                            </li>
+                            <li>
+                                <a href="/index.php/Home/Project/communityProjectManger">我的项目</a>
+                            </li>
                            
                         </ul>
                     </div>
@@ -174,7 +187,7 @@
                                             <section class=" img-section">
                                                  <p class="up-p">社区风采：<span class="up-span">上传一张社区风采</span></p>
                                                 <div class="case">
-                                                    <div class="upload" style='width:500px;height:300px' data-type="png,jpg,jpeg,gif" action='__CONTROLLER__/uploadcommunityimgs' data-num='1' id='case2'></div>
+                                                    <div class="upload" style='width:500px;height:300px' data-type="png,jpg,jpeg,gif" action='/index.php/Home/Community/uploadcommunityimgs' data-num='1' id='case2'></div>
                                                 </div>
                                             </section>
                                         </div>
@@ -201,7 +214,7 @@
     </div>
 </body>
 
-<script src="__PUBLIC__/Home/js/cityBoxShow.js"></script>
+<script src="/Public/Home/js/cityBoxShow.js"></script>
 <script type="text/javascript">
     
     $(function() {
@@ -214,7 +227,7 @@
 
     //初始化信息显示
     $.ajax({
-        url: "__CONTROLLER__/getCommunityInfo",
+        url: "/index.php/Home/Community/getCommunityInfo",
         type: "POST",
         data: {},
         dataType: "json",
@@ -256,7 +269,7 @@
             $("#userImg").attr("src", dataURL);
 
             $.ajax({
-                url: "__CONTROLLER__/douploadtouxiang",
+                url: "/index.php/Home/Community/douploadtouxiang",
                 type: "POST",
                 data: {
                     img: dataURL
@@ -326,7 +339,7 @@
 
 
         $.ajax({
-            url: "__CONTROLLER__/updateCommunityInfo",
+            url: "/index.php/Home/Community/updateCommunityInfo",
             type: "POST",
             data: {
                 community_name: community_name,
@@ -347,7 +360,7 @@
     });
 
     $.ajax({
-        url: "__CONTROLLER__/getcommunityimgs",
+        url: "/index.php/Home/Community/getcommunityimgs",
         type: "get",
         data: {},
         dataType: "json",
@@ -355,7 +368,7 @@
             if (data) {
                 $("#case2").attr('data-value', 'http://p33g9t7dr.bkt.clouddn.com/' + data);
             } else {
-                // $("#imghead").attr('src', '__PUBLIC__/Home/imgs/a11.png')
+                // $("#imghead").attr('src', '/Public/Home/imgs/a11.png')
             }
         }
     })
@@ -366,7 +379,7 @@
         console.log(file);
 
         $.ajax({
-            url: "__CONTROLLER__/uploadcommunityimgs",
+            url: "/index.php/Home/Community/uploadcommunityimgs",
             type: "POST",
             data: {
                 file: file
@@ -389,7 +402,7 @@
 
     /*社会组织员工管理  */
     $.ajax({
-        url: "__CONTROLLER__/getStaffList",
+        url: "/index.php/Home/Community/getStaffList",
         type: "get",
         data: {
             page: 1
@@ -431,7 +444,7 @@
                 $(this).parents("tr").remove();
 
                 $.ajax({
-                    url: "__MODULE__/Community/delStaff",
+                    url: "/index.php/Home/Community/delStaff",
                     type: "POST",
                     data: {
                         phone: phone

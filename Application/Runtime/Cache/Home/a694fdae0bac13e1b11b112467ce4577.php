@@ -53,9 +53,6 @@
                     </li>
                     <li>
                         <a href="/index.php/Home/Project/communityProjectManger">我的项目<?php if($active >= 1): ?><span class="layui-badge-dot"></span><?php endif; ?></a>
-                    </li>
-                    <li>
-                        <a href="">我的消息</a>
                     </li><?php endif; ?>
 
                 <li>

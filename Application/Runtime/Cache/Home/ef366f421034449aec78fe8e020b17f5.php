@@ -1,23 +1,39 @@
-<link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EasyLife</title>
+    <link rel="stylesheet" href="/Public/Home/css/bootstrap.css">
+    <link rel="stylesheet" href="/Public/Home/css/common.css">
+    <link rel="stylesheet" href="/Public/Home/css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+    <script src="/Public/Home/js/jquery-1.12.4.js"></script>
+    <script src="/Public/Home/js/bootstrap.js"></script>
+    <script src = "/Public/Home/js/autoResizeImage.js"></script>
 
-<link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/testfy.css">
+<link rel="stylesheet" href="/Public/Home/css/region.css">
+
+<link rel="stylesheet" href="/Public/Home/css/layui.css">
+<link rel="stylesheet" href="/Public/Home/css/page2.css">
+<link rel="stylesheet" href="/Public/Home/css/testfy.css">
 
 
-<script src="__PUBLIC__/Home/street/jquery.citys.js"></script>
-<script src="__PUBLIC__/Home/js/layui.js"></script>
-<script src="__PUBLIC__/Home/js/layui.all.js"></script>
-<script src="__PUBLIC__/Home/js/upLoadImg.js"></script>
-<script src="__PUBLIC__/Home/js/upLoadImg2.js"></script>
-<script src="__PUBLIC__/Home/js/upLoadImg3.js"></script>
-<script src="__PUBLIC__/Home/js/upLoadImg4.js"></script>
+<script src="/Public/Home/street/jquery.citys.js"></script>
+<script src="/Public/Home/js/layui.js"></script>
+<script src="/Public/Home/js/layui.all.js"></script>
+<script src="/Public/Home/js/upLoadImg.js"></script>
+<script src="/Public/Home/js/upLoadImg2.js"></script>
+<script src="/Public/Home/js/upLoadImg3.js"></script>
+<script src="/Public/Home/js/upLoadImg4.js"></script>
 
 
-<script src="__PUBLIC__/Home/js/plugins/cover_js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
-<script src="__PUBLIC__/Home/js/plugins/cover_js/hammer.js" type="text/javascript" charset="utf-8"></script>
-<script src="__PUBLIC__/Home/js/plugins/cover_js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
-<script src="__PUBLIC__/Home/js/plugins/cover_js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Public/Home/js/plugins/cover_js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Public/Home/js/plugins/cover_js/hammer.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Public/Home/js/plugins/cover_js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Public/Home/js/plugins/cover_js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
 
 
 </head>
@@ -26,13 +42,13 @@
     <div class="headLogin">
         <div class="container">
             <div class="left changeBan logoPer">
-                <a href='{$index}'>
-                    <img src="__PUBLIC__/Home/imgs/logo.png" alt="">
+                <a href='<?php echo ($index); ?>'>
+                    <img src="/Public/Home/imgs/logo.png" alt="">
                     <span>社居易</span>
                 </a>
             </div>
             <div class="right person">
-                <!-- <img src="__PUBLIC__/Home/imgs/personDl.jpg" alt="">-->
+                <!-- <img src="/Public/Home/imgs/personDl.jpg" alt="">-->
             </div>
         </div>
     </div>
@@ -46,7 +62,7 @@
                         <h2>个人信息</h2>
                         <div>
                             <div class = "user-img">
-                                <img id="userImg" src="{$user_image}" alt="  ">
+                                <img id="userImg" src="<?php echo ($user_image); ?>" alt="  ">
                                 <span class = "iconfont VIP-icon">&#xe65b;</span>
                             </div>
                             <p style = "margin-top: 12px;">
@@ -73,27 +89,22 @@
 
                         <ul class="person-ul">
                              <li>
-                            <a href="__MODULE__/Community/communityIdentify">认证状态</a>
+                            <a href="/index.php/Home/Community/communityIdentify">认证状态</a>
                         </li>
-                        <if condition='($isidentify eq 1)'>
-                          <li>
-                              <a href="__MODULE__/Community/personInfo">账号设置</a>
-                          </li>
-                        </if>
-                        <if condition='($isidentify eq 1) and ($code gt 0)'>
-                          <li>
-                              <a href="__MODULE__/Community/myCommunity">我的社区</a>
+                        <?php if(($isidentify == 1)): ?><li>
+                              <a href="/index.php/Home/Community/personInfo">账号设置</a>
+                          </li><?php endif; ?>
+                        <?php if(($isidentify == 1) and ($code > 0)): ?><li>
+                              <a href="/index.php/Home/Community/myCommunity">我的社区</a>
                           </li>
                           <li>
-                              <a  class = "on" href="__MODULE__/Project/communityProjectManger">我的项目</a>
-                          </li>
-                         
-                        </if>
+                              <a  class = "on" href="/index.php/Home/Project/communityProjectManger">我的项目</a>
+                          </li><?php endif; ?>
                         </ul>
                     </div>
                     <div class="col-md-10 column perperson-con" style="background: #FFFFFF;">
                         <div class="testfyed">
-                            <img src="__PUBLIC__/Home/imgs/testfied.png" alt="">
+                            <img src="/Public/Home/imgs/testfied.png" alt="">
                         </div>
                         <div class="layui-tab layui-tab-brief testfy" lay-filter="docDemoTabBrief">
                             <ul class="layui-tab-title">
@@ -127,7 +138,7 @@
                                             </li>
                                             <li>
                                                 <p>固定电话</p>
-                                                <input name="tel_code" type="text" value='{$phonecode}' style="width: 60px"> -
+                                                <input name="tel_code" type="text" value='<?php echo ($phonecode); ?>' style="width: 60px"> -
                                                 <input name="telephone" class="dianhuaNum" type="text" style="width: 200px"> <span class='iconfont'>&#xe60a;</span>
                                                 <div class="id-remider">
                                                     <p class="remider"></p>
@@ -154,7 +165,7 @@
                                     <div class="col-md-4">
 
                                         <div id="preview" class="testImg">
-                                            <img id="imghead" width=100% border=0 src='__PUBLIC__/Home/imgs/uploadImg.png'>
+                                            <img id="imghead" width=100% border=0 src='/Public/Home/imgs/uploadImg.png'>
                                         </div>
 
 
@@ -166,7 +177,7 @@
                                         </div>
 
                                         <div id="preview2" class="testImg">
-                                            <img id="imghead2" width=100% border=0 src='__PUBLIC__/Home/imgs/uploadImg.png'>
+                                            <img id="imghead2" width=100% border=0 src='/Public/Home/imgs/uploadImg.png'>
                                         </div>
 
                                         <div class="uploadBtn">
@@ -214,7 +225,7 @@
                                     <div class="col-md-4">
 
                                         <div id="preview3" class="testImg">
-                                            <img id="imghead3" border=0 src='__PUBLIC__/Home/imgs/uploadImg.png'>
+                                            <img id="imghead3" border=0 src='/Public/Home/imgs/uploadImg.png'>
                                         </div>
 
                                         <div class="uploadBtn">
@@ -249,7 +260,7 @@
     </div>
 </body>
 <script>
-    if ("{$isidentify}" == 1) {
+    if ("<?php echo ($isidentify); ?>" == 1) {
         //认证
         $(".testfyed").css("display", "block");
         $(".testfy").css("display", "none");
@@ -292,7 +303,7 @@
             $("#userImg").attr("src", dataURL);
 
             $.ajax({
-                url: "__CONTROLLER__/douploadtouxiang",
+                url: "/index.php/Home/Community/douploadtouxiang",
                 type: "POST",
                 data: {
                     img: dataURL
@@ -349,7 +360,7 @@
         $town.hide().empty();
         if (info['code'] % 1e4 && info['code'] < 7e6) { //是否为“区”且不是港澳台地区
             $.ajax({
-                url: '__PUBLIC__/Home/street/Town/' + info['code'] + '.json',
+                url: '/Public/Home/street/Town/' + info['code'] + '.json',
                 dataType: 'json',
                 success: function(town) {
                     $town.show();
@@ -437,7 +448,7 @@
         }
 
         $.ajax({
-            url: "__CONTROLLER__/doCommunityIdentify",
+            url: "/index.php/Home/Community/doCommunityIdentify",
             type: "POST",
             data: {
                 community_name: community_name,
@@ -459,7 +470,7 @@
             success: function(data) {
                 if (data.state == 1) {
                     layer.msg("认证成功");
-                    window.location.href = "__CONTROLLER__/"
+                    window.location.href = "/index.php/Home/Community/"
                 }
             },
             async: false
@@ -499,7 +510,7 @@
 
         /**/
         $.ajax({
-            url: "__CONTROLLER__/doCommunityPersonIdentify",
+            url: "/index.php/Home/Community/doCommunityPersonIdentify",
             type: "POST",
             data: {
                 real_name: real_name,
@@ -512,7 +523,7 @@
                 console.log(data);
                 if (data.state == 1) {
 
-                    window.location.href = "__CONTROLLER__/";
+                    window.location.href = "/index.php/Home/Community/";
                 }
             },
             async: false

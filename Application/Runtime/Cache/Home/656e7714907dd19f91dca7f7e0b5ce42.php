@@ -1,13 +1,29 @@
-<link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EasyLife</title>
+    <link rel="stylesheet" href="/Public/Home/css/bootstrap.css">
+    <link rel="stylesheet" href="/Public/Home/css/common.css">
+    <link rel="stylesheet" href="/Public/Home/css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+    <script src="/Public/Home/js/jquery-1.12.4.js"></script>
+    <script src="/Public/Home/js/bootstrap.js"></script>
+    <script src = "/Public/Home/js/autoResizeImage.js"></script>
 
-<script src="__PUBLIC__/Home/js/layui.all.js"></script>
+<link rel="stylesheet" href="/Public/Home/css/region.css">
+<link rel="stylesheet" href="/Public/Home/css/layui.css">
+<link rel="stylesheet" href="/Public/Home/css/page2.css">
 
-<script src="__PUBLIC__/Home/js/plugins/cover_js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
-<script src="__PUBLIC__/Home/js/plugins/cover_js/hammer.js" type="text/javascript" charset="utf-8"></script>
-<script src="__PUBLIC__/Home/js/plugins/cover_js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
-<script src="__PUBLIC__/Home/js/plugins/cover_js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Public/Home/js/layui.all.js"></script>
+
+<script src="/Public/Home/js/plugins/cover_js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Public/Home/js/plugins/cover_js/hammer.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Public/Home/js/plugins/cover_js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Public/Home/js/plugins/cover_js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
 
 </head>
 
@@ -15,13 +31,13 @@
     <div class="headLogin">
         <div class="container">
             <div class="left changeBan logoPer">
-                <a href='{$index}'>
-                    <img src="__PUBLIC__/Home/imgs/logo.png" alt="">
+                <a href='<?php echo ($index); ?>'>
+                    <img src="/Public/Home/imgs/logo.png" alt="">
                     <span>社居易</span>
                 </a>
             </div>
             <div class="right person">
-                <!-- <img src="__PUBLIC__/Home/imgs/personDl.jpg" alt="">-->
+                <!-- <img src="/Public/Home/imgs/personDl.jpg" alt="">-->
             </div>
         </div>
     </div>
@@ -35,7 +51,7 @@
                         <h2>个人信息</h2>
                         <div>
                             <div class = "user-img">
-                                <img id="userImg" src="{$user_image}" alt="  ">
+                                <img id="userImg" src="<?php echo ($user_image); ?>" alt="  ">
                                 <span class = "iconfont VIP-icon">&#xe65b;</span>
                             </div>
                             <p style = "margin-top: 12px;">
@@ -62,21 +78,17 @@
 
                         <ul class="person-ul">
                               <li>
-                            <a href="__MODULE__/Community/communityIdentify">认证状态</a>
+                            <a href="/index.php/Home/Community/communityIdentify">认证状态</a>
                         </li>
-                        <if condition='($isidentify eq 1)'>
-                          <li>
-                              <a href="__MODULE__/Community/personInfo">账号设置</a>
-                          </li>
-                        </if>
-                        <if condition='($isidentify eq 1) and ($code gt 0)'>
-                          <li>
-                              <a href="__MODULE__/Community/myCommunity">我的社区</a>
+                        <?php if(($isidentify == 1)): ?><li>
+                              <a href="/index.php/Home/Community/personInfo">账号设置</a>
+                          </li><?php endif; ?>
+                        <?php if(($isidentify == 1) and ($code > 0)): ?><li>
+                              <a href="/index.php/Home/Community/myCommunity">我的社区</a>
                           </li>
                           <li>
-                              <a  class = "on" href="__MODULE__/Project/communityProjectManger">我的项目</a>
-                          </li>
-                        </if>
+                              <a  class = "on" href="/index.php/Home/Project/communityProjectManger">我的项目</a>
+                          </li><?php endif; ?>
                         </ul>
                     </div>
                     <div class="col-md-10 column perperson-con" style="background: #FFFFFF;">
@@ -157,7 +169,7 @@
 <script>
     //初始化信息显示
     $.ajax({
-        url: "__CONTROLLER__/getPersonInfo",
+        url: "/index.php/Home/Community/getPersonInfo",
         type: "POST",
         data: {},
         dataType: "json",
@@ -200,7 +212,7 @@
             $("#userImg").attr("src", dataURL);
 
             $.ajax({
-                url: "__CONTROLLER__/douploadtouxiang",
+                url: "/index.php/Home/Community/douploadtouxiang",
                 type: "POST",
                 data: {
                     img: dataURL
@@ -290,7 +302,7 @@
 
 
         $.ajax({
-            url: "__CONTROLLER__/updatePersonInfo",
+            url: "/index.php/Home/Community/updatePersonInfo",
             type: "POST",
             data: {
                 email: email,
