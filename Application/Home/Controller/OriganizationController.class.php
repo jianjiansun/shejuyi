@@ -95,6 +95,7 @@
            $pages = ceil($allprojectinfo/2);  //总页码数
            //返回数据
            $res['pages'] = $pages; //总页码数
+           $res['count'] = $allprojectinfo;
 	       $res['data'] = $project_info;  //项目信息
 	      
 	       $this->ajaxReturn($res);
