@@ -230,6 +230,12 @@ input:focus{
 .person-ul li a.on{
     background: #efefef;
 }
+.myOwnIndex{
+    font-size: 16px;
+    margin-right: 20px;
+    color: #333;
+
+}
 
 a
 {

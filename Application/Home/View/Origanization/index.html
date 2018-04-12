@@ -21,6 +21,9 @@
 
             <a href="#" data-toggle="dropdown" class="dropdown-toggle">
                 <div class = "user-img" style = "display: inline-block">
+                    <if condition='($isidentify eq 1) and ($code gt 0)'>
+                        <a class = "myOwnIndex" href="__MODULE__/Home/displayOriganizationHome">社会组织主页</a>
+                    </if>
                     <img src="{$user_image}" alt="">
                     <span class = "iconfont VIP-icon" style = "right: -20px;">&#xe65b;</span>
                 </div>
@@ -61,6 +64,8 @@
             <div class = "logo  col-md-6">
                 <img src="__PUBLIC__/Home/imgs/logo.png" alt="">
                 <span>社居易</span>
+
+
             </div>
             <div  class = "mainNav col-md-6">
                 <div class = "search">
@@ -193,7 +198,10 @@
     </div>
     <div class = "col-md-3 program-box">
         <div  class= "publish-program">
-            <a class= "publish-btn" href="__CONTROLLER__/send_project">发布项目</a>
+            <if condition='($isidentify eq 1) and ($code gt 0)'>
+                <a class= "publish-btn" href="__CONTROLLER__/send_project">发布项目</a>
+            </if>
+
         </div>
         
         

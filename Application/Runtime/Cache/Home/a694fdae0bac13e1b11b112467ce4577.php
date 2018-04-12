@@ -36,11 +36,13 @@
 
             <a href="#" data-toggle="dropdown" class="dropdown-toggle">
                 <div class = "user-img" style = "display: inline-block">
+                    <?php if(($isidentify == 1) and ($code > 0)): ?><a class = "myOwnIndex" href="/index.php/Home/Home/displayCommunityHome">XX社区主页</a><?php endif; ?>
                     <img src="<?php echo ($user_image); ?>" alt="">
                     <span class = "iconfont VIP-icon" style = "right: -20px;">&#xe65b;</span>
                 </div>
                 <span><?php echo ($showname); if($active >= 1): ?><span class="layui-badge-dot"></span><?php endif; ?></span>
             </a>
+
             <ul class="dropdown-menu personalMenu">
                 <li>
                     <a href="/index.php/Home/Community/communityIdentify">认证状态</a>
@@ -96,6 +98,8 @@
             <div class = "logo  col-md-6">
                 <img src="/Public/Home/imgs/logo.png" alt="">
                 <span>社居易</span>
+
+
             </div>
             <div  class = "mainNav col-md-6">
                 <div class = "search">
@@ -260,7 +264,9 @@
     </div>
     <div class = "col-md-3 program-box">
         <div  class= "publish-program">
-            <a class= "publish-btn" href="/index.php/Home/Community/send_project">发布项目</a>
+
+            <?php if(($isidentify == 1) and ($code > 0)): ?><a class= "publish-btn" href="/index.php/Home/Community/send_project">发布项目</a><?php endif; ?>
+
         </div>
 
 
