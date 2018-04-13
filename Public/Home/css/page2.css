@@ -467,13 +467,25 @@ html {
 }
 .layui-upload-choose{
     position: absolute!important;
-    top: 129px!important;
+    top: 42px!important;
+    right: 0px;
+    background: #F6F2DB;
+    width: 300px;
 }
 .DocTit{
     color: #FF5722;
     font-weight: 900;
 }
 
+.communityIndex{
+    color: #EA6F5A;
+    font-weight: 900;
+}
+.communityIndex:hover{
+    font-weight: 900;
+    color: #EA6F5A;
+    text-decoration: underline!important;
+}
 
 
 .id-remider{

@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
 <link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
 <link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
+<link rel="stylesheet" href="__PUBLIC__/Home/css/right-tab.css">
 <script src="__PUBLIC__/Home/js/layui.js"></script>
 </head>
 
@@ -70,8 +71,8 @@
             </div>
             <div  class = "mainNav col-md-6">
                 <div class = "search">
-                    <input class="form-control" type="text" />
-                    <button type="submit" class="btn btn-default iconfont">&#xe61a;</button>
+                    <input id = "searchText" class="form-control" type="text" />
+                    <button id = "searchAll" type="submit" class="btn btn-default iconfont">&#xe61a;</button>
 
                 </div>
             </div>
@@ -121,26 +122,30 @@
 <div class="container house-list">
     <div class="row clearfix  col-md-9">
         <ul class="nav navbar-nav classNav">
-            <li class="active">
-                <a href="">为老服务</a>
+
+            <li>
+                <a class = "on" href="javascript:;">全部</a>
             </li>
             <li>
-                <a href="">青少年服务</a>
+                <a href="javascript:;">为老服务</a>
             </li>
             <li>
-                <a href="">医务服务</a>
+                <a href="javascript:;">青少年服务</a>
             </li>
             <li>
-                <a href="">司法矫正</a>
+                <a href="javascript:;">医务服务</a>
             </li>
             <li>
-                <a href="">心理服务</a>
+                <a href="javascript:;">司法矫正</a>
             </li>
             <li>
-                <a href="">社区服务</a>
+                <a href="javascript:;">心理服务</a>
             </li>
             <li>
-                <a href="">党建</a>
+                <a href="javascript:;">社区服务</a>
+            </li>
+            <li>
+                <a href="javascript:;">党建</a>
             </li>
         </ul>
         <div style="height: 0; clear: both;"></div>
@@ -221,111 +226,181 @@
 <!--<script src = "../js/slider.js"></script>-->
 <script>
 
-    /*分页*/
-    var count;
+    /*首次加载*/
+    var searchFunc = function () {
 
-    $.post("__CONTROLLER__/getprojectlist/page/1", function (data) {
-        var html = "";
+        var count;
 
-         count = Number(data.count);
-        console.log(count + "count");
+        $.post("__CONTROLLER__/getprojectlist/page/1", function (data) {
+            var html = "";
 
-
-        for(var i = 0; i < data.data.length ; i ++) {
-            html+=  '<li>' +
-                    '<a href="__MODULE__/Project/displayCommunityProject?id='+data.data[i].sjy_id+'">'+
-                    '<div class="col-md-3 column" >' +
-                    '<img  src="'+ data.data[i].project_image_path +'" alt="" style = "height: 140px;width: 190px;border: 1px solid #cccccc;">' +
-                    '</div>' +
-                    '<div class="col-md-7 column house-list-info" style="padding-top: 10px;">' +
-                    '<p class = "projectTit">' +
-                    '<span class = "tit">'+ data.data[i].sjy_community_project_title +'</span>' +
-                    '</p>' +
-                    '<p class = "where">' +
-                    '<span  class = "sp2 sp">发布方</span><i>|</i>' +
-                    '<span class = "region region1">'+  data.data[i].community_info.sjy_community_name +'</span>' +
-                    '</p>' +
-                    '<p class = "where">' +
-                    '<span  class = "sp3 sp">服务对象</span><i>|</i>' +
-                    '<span class = "region">'+  data.data[i].sjy_community_project_service_area +'</span>' +
-                    '</p>' +
-                    '<div class = "type">' +
-                    '<span class = "iconfont">&#xe61f;</span>' +
-                    '<span>'+  data.data[i].address.sjy_community_province_name +'</span>-<span>'+  data.data[i].address.sjy_community_area_name +'</span>-<span>'+  data.data[i].address.sjy_community_street_name +'</span>' +
-                    '</div>' +
-                    '</div>' +
-                    '</a>'+
-                    '</li>';
+            count = Number(data.count);
+            console.log(count + "count");
 
 
-        }
+            for(var i = 0; i < data.data.length ; i ++) {
+                html+=  '<li>' +
+                        '<a href="__MODULE__/Project/displayCommunityProject?id='+data.data[i].sjy_id+'">'+
+                        '<div class="col-md-3 column" >' +
+                        '<img  src="'+ data.data[i].project_image_path +'" alt="" style = "height: 140px;width: 190px;border: 1px solid #cccccc;">' +
+                        '</div>' +
+                        '<div class="col-md-7 column house-list-info" style="padding-top: 10px;">' +
+                        '<p class = "projectTit">' +
+                        '<span class = "tit">'+ data.data[i].sjy_community_project_title +'</span>' +
+                        '</p>' +
+                        '<p class = "where">' +
+                        '<span  class = "sp2 sp">发布方</span><i>|</i>' +
+                        '<span class = "region region1">'+  data.data[i].community_info.sjy_community_name +'</span>' +
+                        '</p>' +
+                        '<p class = "where">' +
+                        '<span  class = "sp3 sp">服务对象</span><i>|</i>' +
+                        '<span class = "region">'+  data.data[i].sjy_community_project_service_area +'</span>' +
+                        '</p>' +
+                        '<div class = "type">' +
+                        '<span class = "iconfont">&#xe61f;</span>' +
+                        '<span>'+  data.data[i].address.sjy_community_province_name +'</span>-<span>'+  data.data[i].address.sjy_community_area_name +'</span>-<span>'+  data.data[i].address.sjy_community_street_name +'</span>' +
+                        '</div>' +
+                        '</div>' +
+                        '</a>'+
+                        '</li>';
 
 
-        $("#projectList").html(html);
+            }
 
 
-        layui.use('laypage', function(){
+            $("#projectList").html(html);
 
-            var laypage = layui.laypage;
 
-            //执行一个laypage实例
-            laypage.render({
-                elem: 'test1'
-                ,count: count//数据总数，从服务端得到
-                ,limit: 10
-                ,jump: function(obj, first){
-                    //obj包含了当前分页的所有参数，比如：
-                    console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
-                    console.log(obj.limit); //得到每页显示的条数
+            layui.use('laypage', function(){
 
-                    $.post("__CONTROLLER__/getprojectlist/page/"+ obj.curr, function (data) {
-                        var html = "";
+                var laypage = layui.laypage;
 
-                        for(var i = 0; i < data.data.length ; i ++) {
-                            html+=  '<li>' +
-                                    '<a href="__MODULE__/Project/displayCommunityProject?id='+data.data[i].sjy_id+'">'+
-                                    '<div class="col-md-3 column" >' +
-                                    '<img  src="'+ data.data[i].project_image_path +'" alt="" style = "height: 140px;width: 190px;border: 1px solid #cccccc;">' +
-                                    '</div>' +
-                                    '<div class="col-md-7 column house-list-info" style="padding-top: 10px;">' +
-                                    '<p class = "projectTit">' +
-                                    '<span class = "tit">'+ data.data[i].sjy_community_project_title +'</span>' +
-                                    '</p>' +
-                                    '<p class = "where">' +
-                                    '<span  class = "sp2 sp">发布方</span><i>|</i>' +
-                                    '<span class = "region region1">'+  data.data[i].community_info.sjy_community_name +'</span>' +
-                                    '</p>' +
-                                    '<p class = "where">' +
-                                    '<span  class = "sp3 sp">服务对象</span><i>|</i>' +
-                                    '<span class = "region">'+  data.data[i].sjy_community_project_service_area +'</span>' +
-                                    '</p>' +
-                                    '<div class = "type">' +
-                                    '<span class = "iconfont">&#xe61f;</span>' +
-                                    '<span>'+  data.data[i].address.sjy_community_province_name +'</span>-<span>'+  data.data[i].address.sjy_community_area_name +'</span>-<span>'+  data.data[i].address.sjy_community_street_name +'</span>' +
-                                    '</div>' +
-                                    '</div>' +
-                                    '</a>'+
-                                    '</li>';
+                //执行一个laypage实例
+                laypage.render({
+                    elem: 'test1'
+                    ,count: count//数据总数，从服务端得到
+                    ,limit: 10
+                    ,jump: function(obj, first){
+                        //obj包含了当前分页的所有参数，比如：
+                        console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
+                        console.log(obj.limit); //得到每页显示的条数
+
+                        $.post("__CONTROLLER__/getprojectlist/page/"+ obj.curr, function (data) {
+                            var html = "";
+
+                            for(var i = 0; i < data.data.length ; i ++) {
+                                html+=  '<li>' +
+                                        '<a href="__MODULE__/Project/displayCommunityProject?id='+data.data[i].sjy_id+'">'+
+                                        '<div class="col-md-3 column" >' +
+                                        '<img  src="'+ data.data[i].project_image_path +'" alt="" style = "height: 140px;width: 190px;border: 1px solid #cccccc;">' +
+                                        '</div>' +
+                                        '<div class="col-md-7 column house-list-info" style="padding-top: 10px;">' +
+                                        '<p class = "projectTit">' +
+                                        '<span class = "tit">'+ data.data[i].sjy_community_project_title +'</span>' +
+                                        '</p>' +
+                                        '<p class = "where">' +
+                                        '<span  class = "sp2 sp">发布方</span><i>|</i>' +
+                                        '<span class = "region region1">'+  data.data[i].community_info.sjy_community_name +'</span>' +
+                                        '</p>' +
+                                        '<p class = "where">' +
+                                        '<span  class = "sp3 sp">服务对象</span><i>|</i>' +
+                                        '<span class = "region">'+  data.data[i].sjy_community_project_service_area +'</span>' +
+                                        '</p>' +
+                                        '<div class = "type">' +
+                                        '<span class = "iconfont">&#xe61f;</span>' +
+                                        '<span>'+  data.data[i].address.sjy_community_province_name +'</span>-<span>'+  data.data[i].address.sjy_community_area_name +'</span>-<span>'+  data.data[i].address.sjy_community_street_name +'</span>' +
+                                        '</div>' +
+                                        '</div>' +
+                                        '</a>'+
+                                        '</li>';
+
+
+                            }
+                            $("#projectList").html(html);
+
+                        });
+
+                        //首次不执行
+                        if(!first){
+                            //do something
+
 
 
                         }
-                        $("#projectList").html(html);
-
-                    });
-
-
-                    //首次不执行
-                    if(!first){
-                        //do something
-
-
-
                     }
-                }
+                });
+
             });
+
 
         });
 
+    };
+
+    searchFunc();
+
+    /*搜索 */
+    var text = $("#searchText").val();
+    var type = "";
+
+    /*为老服务， 司法矫正 等taB 项的切换*/
+    $(".classNav > li > a").click(function () {
+
+        type = $(this).text();
+        console.log(type);
+
+        $(".classNav > li > a").removeClass("on");
+
+        $(this).addClass('on');
+        search();
+
+    });
+
+
+    /*搜索的时候， 请求的接口*/
+    var search = function () {
+
+        $.ajax({
+            url: "__MODULE__/Project/searchCommunityProject",
+            type: "POST",
+            data: {
+                type: type,
+                text: text
+            },
+            dataType: "json",
+            success: function(data) {
+
+                searchFunc();
+
+            },
+            async: false
+        });
+        return false;
+
+    };
+
+    /*按下搜索按钮*/
+    $("#searchAll").click(function () {
+        text = $("#searchText").val();
+        console.log( text );
+
+        search();
+
+    });
+
+
+
+
+
+    /*回车也可以了*/
+
+    $("body").keydown(function() {
+        if (event.keyCode == "13") {
+
+            text = $("#searchText").val();
+            search();
+
+        }
     });
 
 

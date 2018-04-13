@@ -148,4 +148,21 @@ p.proposal-detail > span {
     margin-right: 6px;
 }
 
+.classNav > li > a:hover {
+    color: #EA6F5A;
+    font-weight: 900;
+    background: transparent;
+}
+.classNav > li > a.on {
+    color: #EA6F5A;
+    font-weight: 900;
+    background: transparent;
+}
+
+
+
+
+
+
+
 

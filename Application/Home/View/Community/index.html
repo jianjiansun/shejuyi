@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
 <link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
 <link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
+<link rel="stylesheet" href="__PUBLIC__/Home/css/right-tab.css">
 <script src="__PUBLIC__/Home/js/layui.js"></script>
 </head>
 <body>
@@ -24,7 +25,6 @@
 
             <a href="#" data-toggle="dropdown" class="dropdown-toggle">
                 <div class = "user-img" style = "display: inline-block">
-
                     <img src="{$user_image}" alt="">
                     <span class = "iconfont VIP-icon" style = "right: -20px;">&#xe65b;</span>
                 </div>
@@ -93,8 +93,8 @@
             </div>
             <div  class = "mainNav col-md-6">
                 <div class = "search">
-                    <input class="form-control" type="text" />
-                    <button type="submit" class="btn btn-default iconfont">&#xe61a;</button>
+                    <input id = "searchText" class="form-control" type="text" />
+                    <button id = "searchAll" type="submit" class="btn btn-default iconfont">&#xe61a;</button>
 
                 </div>
             </div>
@@ -141,102 +141,30 @@
 <div class="container house-list">
     <div class="row clearfix  col-md-9">
         <ul class="nav navbar-nav classNav">
-            <li class="active">
-                <a href="">为老服务</a>
+            <li >
+                <a class = "on" href="javascript:;">为老服务</a>
             </li>
             <li>
-                <a href="">青少年服务</a>
+                <a href="javascript:;">青少年服务</a>
             </li>
             <li>
-                <a href="">医务服务</a>
+                <a href="javascript:;">医务服务</a>
             </li>
             <li>
-                <a href="">司法矫正</a>
+                <a href="javascript:;">司法矫正</a>
             </li>
             <li>
-                <a href="">心理服务</a>
+                <a href="javascript:;">心理服务</a>
             </li>
             <li>
-                <a href="">社区服务</a>
+                <a href="javascript:;">社区服务</a>
             </li>
             <li>
-                <a href="">党建</a>
+                <a href="javascript:;">党建</a>
             </li>
         </ul>
         <div style="height: 0; clear: both;"></div>
         <ul class = "buildImg" id = "projectList">
-            <!-- <li>
-                <div class="col-md-4 column" >
-                    <img  src="__PUBLIC__/Home/imgs/she.jpg" alt="" style = "height: 200px;width: 200px;border: 1px solid #cccccc;">
-                </div>
-                <div class="col-md-6 column house-list-info" style="padding-top: 56px;">
-                    <p class = "where">
-                        <span class = "region region1">社居易社会组织</span>
-                    </p>
-                    <p class = "where">
-                        <span  class = "sp3 sp">服务领域</span>
-                        <span class = "region">青少年</span>
-                    </p>
-                    <div class = "type">
-                        <span class = "iconfont">&#xe61f;</span>
-                        <span>北京市</span>-<span>通州区</span>-<span>永顺</span>
-                    </div>
-                </div>
-                <div class="col-md-2 column house-list-price">
-                    <div class = "price">
-                        <a class= "detailBtn" href="">了解详情</a>
-                        <a class= "detailBtn" href="">联系项目</a>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="col-md-4 column" >
-                    <img  src="__PUBLIC__/Home/imgs/qimingxing.png" alt="" style = "height: 200px;width: 200px;border: 1px solid #cccccc;">
-                </div>
-                <div class="col-md-6 column house-list-info" style="padding-top: 56px;">
-                    <p class = "where">
-                        <span class = "region region1">启明星社会组织</span>
-                    </p>
-                    <p class = "where">
-                        <span  class = "sp3 sp">服务领域</span>
-                        <span class = "region">失业人员</span>
-                    </p>
-                    <div class = "type">
-                        <span class = "iconfont">&#xe61f;</span>
-                        <span>北京市</span>-<span>通州区</span>-<span>永顺</span>
-                    </div>
-                </div>
-                <div class="col-md-2 column house-list-price">
-                    <div class = "price">
-                        <a class= "detailBtn" href="">了解详情</a>
-                        <a class= "detailBtn" href="">联系项目</a>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="col-md-4 column" >
-                    <img  src="__PUBLIC__/Home/imgs/lvnong.png" alt="" style = "height: 200px;width: 200px;border: 1px solid #cccccc;">
-                </div>
-                <div class="col-md-6 column house-list-info" style="padding-top: 56px;">
-                    <p class = "where">
-                        <span class = "region region1">绿农社会组织</span>
-                    </p>
-                    <p class = "where">
-                        <span  class = "sp3 sp">服务领域</span>
-                        <span class = "region">失业人员</span>
-                    </p>
-                    <div class = "type">
-                        <span class = "iconfont">&#xe61f;</span>
-                        <span>北京市</span>-<span>通州区</span>-<span>永顺</span>
-                    </div>
-                </div>
-                <div class="col-md-2 column house-list-price">
-                    <div class = "price">
-                        <a class= "detailBtn" href="">了解详情</a>
-                        <a class= "detailBtn" href="">联系项目</a>
-                    </div>
-                </div>
-            </li> -->
 
 
         </ul>
@@ -298,6 +226,8 @@
 
 <script>
 
+    /*社区这边还没弄分页*/
+
     $.post("__CONTROLLER__/getoriganizationlist/page/1", function (data) {
         var html = "";
         console.log(data.data[0]);
@@ -332,6 +262,72 @@
         $("#projectList").html(html);
 
      });
+
+
+
+
+
+    /*搜索 */
+
+    var search = function () {
+
+        $.ajax({
+            url: "__MODULE__/Project/searchCommunityProject",
+            type: "POST",
+            data: {
+                type: type,
+                text: text
+            },
+            dataType: "json",
+            success: function(data) {
+
+                if (data.state == 1) {
+                    layer.msg('修改成功');
+                }
+            },
+            async: false
+        });
+        return false;
+
+    };
+
+
+
+    $("#searchAll").click(function () {
+
+        var text = $("#searchText").val();
+        var type = "";
+
+        console.log( text );
+
+        search();
+
+    });
+
+
+
+
+
+    $("body").keydown(function() {
+        if (event.keyCode == "13") {//keyCode=13是回车键；数字不同代表监听的按键不同
+
+            var text = $("#searchText").val();
+            var type = "";
+
+            search();
+
+
+
+        }
+    });
+
+
+
+
+
+
+
+
 
 
 
