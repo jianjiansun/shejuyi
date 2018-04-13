@@ -7,7 +7,12 @@
 		//展示社区详情页
 		public function displayCommunityHome()
 		{
-			$id = I('get.id');  //社区id
+			if(session('userInfo')['sjy_community_user_community_code'])
+        	{
+        		$id = session('userInfo')['sjy_community_user_community_code'];
+        	}else{
+            	$id = I('get.id'); //社区id
+            }
 	    	$this->assign('id',$id);
 	    	$this->display();
 		}

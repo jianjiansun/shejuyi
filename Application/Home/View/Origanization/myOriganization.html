@@ -543,15 +543,26 @@
             //console.log(data);
             var html = '';
             for (var i = 0; i < data.data.length; i++) {
+                if(data.data[i].sjy_origanization_user_email!=null)
+                {
+                    var user_email = data.data[i].sjy_origanization_user_email;
+                }else{
+                    var user_email = '';
+                }
 
+                 if(data.data[i].sjy_origanization_user_wechat!=null)
+                {
+                    var user_wechat = data.data[i].sjy_origanization_user_wechat;
+                }else{
+                    var user_wechat = '';
+                }
                 html += '<tr>' +
                     '<td>' + data.data[i].sjy_origanization_user_real_name + '</td>' +
                     '<td class = "sjy_origanization_login_id">' + data.data[i].sjy_origanization_login_id + '</td>' +
-                    '<td>' + data.data[i].sjy_origanization_user_email + '</td>' +
-                    '<td>' + data.data[i].sjy_origanization_user_wechat + '</td>' +
+                    '<td>' + user_email + '</td>' +
+                    '<td>' + user_wechat + '</td>' +
                     '<td>' +
                     // '<a class="layui-btn layui-btn-primary layui-btn-xs">查看</a>' +
-                    '<a class="layui-btn layui-btn-xs">编辑</a>' +
                     '<a class="layui-btn layui-btn-danger layui-btn-xs deleteEmployees" href = "javascript:;">删除</a>' +
                     '</td>' +
                     '</tr>';
