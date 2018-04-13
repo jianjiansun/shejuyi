@@ -13,6 +13,8 @@
         public $isidentify = ""; //是否认证
         public $index = ''; //主页
         public $active=''; //项目动态
+        public $origanization_name = ''; //社会组织名字
+        public $community_name = ''; //社区名字
     	//初始化 登录检测 没有登录禁止访问
     	public function __construct()
     	{
@@ -62,6 +64,8 @@
                             if($this->code){
                                 $where = array('community_id'=>$this->code,'status'=>array('between',array(1,99)));
                                 $this->active = count(M('project')->where($where)->find());
+                                $this->community_name = M('community_base_info')->where(array('sjy_id'=>$this->code))->getField('sjy_community_name');
+
                             }
 
                     }
@@ -75,7 +79,7 @@
 
                             $this->isidentify = session("userInfo")["sjy_origanization_user_isidentify"];  //是否认证
                             
-                            $this->user_image = session("userInfo")['sjy_origanization_user_image'];       //用户图片
+                            $this->user_image = 'http://p33g9t7dr.bkt.clouddn.com/'.session("userInfo")['sjy_origanization_user_image'];       //用户图片
 
                             $this->code = session('userInfo')['sjy_origanization_user_origanization_code']; //社会组织编号
 
@@ -103,6 +107,7 @@
                             if($this->code){
                                 $where = array('origanization_id'=>$this->code,'status'=>array('between',array(0,99)));
                                 $this->active = count(M('project')->where($where)->find());
+                                $this->origanization_name = M('origanization_base_info')->where(array('sjy_id'=>$this->code))->getField('sjy_origanization_name');
 
                             } 
                     }
@@ -124,6 +129,8 @@
                     $this->assign('figure',session('figure'));   //用户所属编号
                     $this->assign('index',$this->index); //主页
                     $this->assign('active',$this->active); //是否有提醒的项目
+                    $this->assign('origanization_name',$this->origanization_name);
+                    $this->assign('community_name',$this->community_name);
 
 
             }else{

@@ -30,7 +30,12 @@
             </div>
             <div class="right person">
         <div class="dropdown pull-right">
-
+            <if condition='($isidentify eq 1) and ($code gt 0) and ($figure eq 1)'>
+                        <a class = "myOwnIndex" href="__MODULE__/Home/displayOriganizationHome">{$origanization_name}</a>
+            </if>
+            <if condition='($isidentify eq 1) and ($code gt 0) and ($figure eq 2)'>
+                        <a class = "myOwnIndex" href="__MODULE__/Home/displayCommunityHome">{$community_name}</a>
+            </if>
             <a href="#" data-toggle="dropdown" class="dropdown-toggle">
                 <div class = "user-img" style = "display: inline-block">
                     <img src="{$user_image}" alt="">
@@ -53,7 +58,7 @@
                             <a href="__MODULE__/Project/communityProjectManger">我的项目</a>
                         </li>
                         <li>
-                            <a href="">我的消息</a>
+                            <a href="__MODULE__/Home/displayCommunityHome">社区主页</a>
                         </li>
 
                         <li>
@@ -77,7 +82,7 @@
                                 <a href="__MODULE__/Project/origanizationProjectManger">我的项目</a>
                             </li>
                             <li>
-                                <a href="">我的消息</a>
+                                <a href="__MODULE__/Home/displayCOriganizationHome">机构主页</a>
                             </li>
                         </if>
                         <li>
@@ -151,57 +156,55 @@
                     <div class="box box1" style="display: block;">
                         <div class="detail-item">
                             <span class="left">服务领域</span>
-                            <p class="left" style="line-height:  30px;">青少年服务、党建服务、社区社工服务</p>
+                            <p class="left" style="line-height:  30px;"></p>
                         </div>
 
                         <div class="detail-item">
                             <span class="left">项目执行方</span>
-                            <p class="left" style="line-height:  30px;">陈迪</p>
+                            <p class="left" style="line-height:  30px;"></p>
                         </div>
                         <div class="detail-item">
                             <span class="left">项目预算</span>
-                            <p class="left" style="line-height:  30px;">12万</p>
+                            <p class="left" style="line-height:  30px;"></p>
                         </div>
                         <div class="detail-item">
                             <span class="left">项目周期</span>
-                            <p class="left" style="line-height:  30px;">2017.07.11-2017.12.15</p>
+                            <p class="left" style="line-height:  30px;"></p>
                         </div>
                         <div class="detail-item">
                             <span class="left">征集周期</span>
-                            <p class="left" style="line-height:  30px;">2017.07.11-2017.12.15</p>
+                            <p class="left" style="line-height:  30px;"></p>
                         </div>
                         <div class="detail-item">
                             <span class="left">项目内容</span>
-                            <p class="left" style="line-height:  30px;">如意社区青少年服务项目如意社区青少年服务项目如意社区青少年服务项目如意社区青少 年服务项目如意社区青少年服务项目如意社区青少年服务项目如意社区青少年服务项目如意社区青少如意社区青少年服务项目如意社区青少年服务项目 年服务项目如意社区青少年服务项目如意社区青少年服务项目
+                            <p class="left" style="line-height:  30px;">
                             </p>
                         </div>
 
                         <div class="detail-item">
                             <span class="left">项目图片</span>
-                            <p><img class="orDetail-img" src="__PUBLIC__/Home/imgs/or-detail.jpg" alt=""></p>
+                            <p><img class="orDetail-img" src="" alt=""></p>
                         </div>
                     </div>
 
                     <div class="box box2" style="display: none;">
                         <div>
-                            <img style="width: 100%;" src="__PUBLIC__/Home/imgs/building.png" alt="">
+                            <img style="width: 100%;" src="" alt="">
                         </div>
                         <div>
                             <ul class="cbp_tmtimeline">
 
                                 <li>
 
-                                    <time class="cbp_tmtime" datetime="2013-04-10 18:30"><span>4/10/13</span> <span>18:30</span></time>
+                                    <time class="cbp_tmtime" datetime="2013-04-10 18:30"><span></span> <span></span></time>
 
                                     <div class="cbp_tmicon cbp_tmicon-phone"></div>
 
                                     <div class="cbp_tmlabel">
 
-                                        <h2>Ricebean black-eyed pea</h2>
+                                        <h2></h2>
 
-                                        <p>Winter purslane courgette pumpkin quandong komatsuna fennel green bean cucumber watercress. Pea sprouts wattle seed rutabaga okra yarrow cress avocado grape radish bush tomato ricebean black-eyed pea maize eggplant.
-                                            Cabbage lentil cucumber chickpea sorrel gram garbanzo plantain lotus root bok choy squash cress potato summer purslane salsify fennel horseradish dulse. Winter purslane garbanzo artichoke broccoli lentil corn
-                                            okra silver beet celery quandong. Plantain salad beetroot bunya nuts black-eyed pea collard greens radish water spinach gourd chicory prairie turnip avocado sierra leone bologi.</p>
+                                        <p></p>
 
                                     </div>
 
@@ -357,7 +360,7 @@
         console.log(data.project_image.length);
 
         for (var i = 0; i < data.project_image.length; i++) {
-            html += '<p><img class = "orDetail-img" src="' + data.project_image[i].sjy_community_project_image + '" alt=""></p>';
+            html += '<p><img class = "orDetail-img" src="http://p33g9t7dr.bkt.clouddn.com/' + data.project_image[i].sjy_community_project_image + '" alt=""></p>';
         }
         html += '</div>';
 
@@ -379,6 +382,8 @@
                 //上传完毕回调
                 if (res.state == 1) {
                     layer.msg("发送成功");
+                }else{
+                    layer.msg(res.errorInfo)
                 }
             },
             error: function() {

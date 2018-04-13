@@ -27,7 +27,12 @@
         </div>
         <div class="right person">
             <div class="dropdown pull-right">
-
+                <if condition='($isidentify eq 1) and ($code gt 0) and ($figure eq 1)'>
+                        <a class = "myOwnIndex" href="__MODULE__/Home/displayOriganizationHome">{$origanization_name}</a>
+                </if>
+                <if condition='($isidentify eq 1) and ($code gt 0) and ($figure eq 2)'>
+                        <a class = "myOwnIndex" href="__MODULE__/Home/displayCommunityHome">{$community_name}</a>
+                </if>
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">
                     <img src="{$user_image}" alt="">
                     <span>{$showname}</span>
@@ -47,7 +52,7 @@
                             <a href="__MODULE__/Project/communityProjectManger">我的项目</a>
                         </li>
                         <li>
-                            <a href="">我的消息</a>
+                            <a href="__MODULE__/Home/displayCommunityHome">社区主页</a>
                         </li>
 
                         <li>
@@ -71,7 +76,7 @@
                                 <a href="__MODULE__/Project/origanizationProjectManger">我的项目</a>
                             </li>
                             <li>
-                                <a href="">我的消息</a>
+                                <a href="__MODULE__/Home/displayOriganizationHome">机构主页</a>
                             </li>
                         </if>
                         <li>
@@ -127,12 +132,7 @@
 
                     </ul>
 
-                    <if condition='($figure eq 1) and ($project_status eq 0)'>
-                        <button type="button" class="layui-btn deliverBox" id="test1">
-	                    <i class="layui-icon">&#xe67c;</i>发送项目书
-	                    <button id="uploadPDF">上传</button>
-                        </button>
-                    </if>
+                   
 
 
                     <!--<form class = "deliverForm" action="__MODULE__/Project/sendProjectBook" enctype="multipart/form-data">

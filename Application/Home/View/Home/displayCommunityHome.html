@@ -44,7 +44,12 @@
             </div>
             <div class="right person">
         <div class="dropdown pull-right">
-
+             <if condition='($isidentify eq 1) and ($code gt 0) and ($figure eq 1)'>
+                    <a class = "myOwnIndex" href="__MODULE__/Home/displayOriganizationHome">{$origanization_name}</a>
+            </if>
+            <if condition='($isidentify eq 1) and ($code gt 0) and ($figure eq 2)'>
+                    <a class = "myOwnIndex" href="__MODULE__/Home/displayCommunityHome">{$community_name}</a>
+            </if>
             <a href="#" data-toggle="dropdown" class="dropdown-toggle">
                 <div class = "user-img" style = "display: inline-block">
                     <img src="{$user_image}" alt="">
@@ -137,9 +142,12 @@
                     <h3></h3>
                     <p></p>
                 </div>
-                <div class="col-md-4">
-                    <a class="deliverBtn" href="deliver.html">发布项目</a>
-                </div>
+                <if condition='($figure eq 1) and ($code gt 0)'>
+                    <a class="deliverBtn" target='blank' href="__MODULE__/Origanization/send_project">发布项目</a>
+                </if>
+                <if condition='($figure eq 2) and ($code gt 0)'>
+                    <a class="deliverBtn" target='blank' href="__MODULE__/Community/send_project">发布项目</a>
+                </if>
 
             </div>
 
@@ -185,30 +193,7 @@
 
                     <div class="box box2" style="display: none;">
                         <ul class="clearfix">
-                            <li class="clearfix pro-li">
-                                <div class="left leftImg">
-                                    <img src="__PUBLIC__/Home/imgs/shequ1.jpg" alt="">
-                                </div>
-                                <div class="left leftCon">
-                                    <dl>
-                                        <!--<dt>项目名称</dt>-->
-                                        <dd class="project-tit">“志愿青春，成长无虑”如意社区青少年服务项目</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>执行周期</dt>
-                                        <dd>2017.07.11-2017.12.15</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>落地社区</dt>
-                                        <dd>如意社区</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>评  分</dt>
-                                        <dd>88分</dd>
-                                    </dl>
-                                </div>
-
-                            </li>
+                            
                         </ul>
 
 
@@ -218,30 +203,7 @@
                         <ul class="clearfix">
 
 
-                            <li class="clearfix pro-li">
-                                <div class="left leftImg">
-                                    <img src="__PUBLIC__/Home/imgs/shequ3.jpg" alt="">
-                                </div>
-                                <div class="left leftCon">
-                                    <dl>
-                                        <!--<dt>项目名称</dt>-->
-                                        <dd class="project-tit">“志愿青春，成长无虑”如意社区青少年服务项目</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>执行周期</dt>
-                                        <dd>2017.07.11-2017.12.15</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>落地社区</dt>
-                                        <dd>如意社区</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>时 间</dt>
-                                        <dd>2017-09-13 20:28</dd>
-                                    </dl>
-                                </div>
-
-                            </li>
+                           
                         </ul>
 
                     </div>
@@ -370,9 +332,15 @@
 
         var html = "";
         console.log(data);
+        if(data.sjy_community_introduce!=null)
+        {
+            var introduce = data.sjy_community_introduce;
+        }else{
+            var introduce = '';
+        }
         html += '<div class = "detail-item">' +
             '<span>社区简介</span>' +
-            '<p>' + data.sjy_community_introduce + '</p>' +
+            '<p>' + introduce + '</p>' +
             '</div>' +
             '<div class = "detail-item">' +
             '<span  class = "left">社区地址</span>' +
@@ -401,7 +369,7 @@
                 html += '<li class = "clearfix pro-li">' +
                     '<a href="__MODULE__/Project/displayCommunityProject/id/' + data.data[i].sjy_id + '">' +
                     '<div class = "left leftImg">' +
-                    '<img src="' + data.data[i].main_imgs + '" alt="">' +
+                    '<img src="http://p33g9t7dr.bkt.clouddn.com/' + data.data[i].main_imgs + '" alt="">' +
                     '</div>' +
                     '<div class = "left leftCon">' +
                     '<dl>' +

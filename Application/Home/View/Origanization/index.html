@@ -19,7 +19,7 @@
     <div class="right person">
         <div class="dropdown pull-right">
             <if condition='($isidentify eq 1) and ($code gt 0)'>
-                <a class = "myOwnIndex" href="__MODULE__/Home/displayOriganizationHome">社会组织主页</a>
+                <a class = "myOwnIndex" href="__MODULE__/Home/displayOriganizationHome">{$origanization_name}</a>
             </if>
             <a href="#" data-toggle="dropdown" class="dropdown-toggle">
                 <div class = "user-img" style = "display: inline-block">
@@ -48,7 +48,7 @@
                         <a href="__MODULE__/Project/origanizationProjectManger">我的项目<if condition='$active egt 1'><span class="layui-badge-dot"></span></if></a>
                     </li>
                     <li>
-                        <a href="__MODULE__/Home/diaplayOriganizationHome">机构主页</a>
+                        <a href="__MODULE__/Home/displayOriganizationHome">机构主页</a>
                     </li>
                 </if>
                 <li>
@@ -147,29 +147,7 @@
         <ul class = "buildImg" id = "projectList">
 
 
-            <li>
-                <div class="col-md-3 column" >
-                    <img  src="__PUBLIC__/Home/imgs/shequ2.jpg" alt="" style = "height: 140px;width: 190px;border: 1px solid #cccccc;">
-                </div>
-                <div class="col-md-7 column house-list-info" style="padding-top: 10px;">
-                    <p class = "projectTit">
-                        <span class = "tit">夕阳红社区养老服务</span>
-                    </p>
-                    <p class = "where">
-                        <span  class = "sp2 sp">发布方</span><i>|</i>
-                        <span class = "region region1">社居易社会组织</span>
-                    </p>
-                    <p class = "where">
-                        <span  class = "sp3 sp">服务领域</span><i>|</i>
-                        <span class = "region">青少年</span>
-                    </p>
-                    <div class = "type">
-                        <span class = "iconfont">&#xe61f;</span>
-                        <span>北京市</span>-<span>通州区</span>-<span>永顺</span>
-                    </div>
-
-                </div>
-            </li>
+           
         </ul>
 
         <div style="text-align: center" id="test1"></div>
@@ -235,7 +213,7 @@
             html+=  '<li>' +
                     '<a href="__MODULE__/Project/displayCommunityProject?id='+data.data[i].sjy_id+'">'+
                     '<div class="col-md-3 column" >' +
-                    '<img  src="'+ data.data[i].project_image_path +'" alt="" style = "height: 140px;width: 190px;border: 1px solid #cccccc;">' +
+                    '<img  src="http://p33g9t7dr.bkt.clouddn.com/'+ data.data[i].project_image_path +'" alt="" style = "height: 140px;width: 190px;border: 1px solid #cccccc;">' +
                     '</div>' +
                     '<div class="col-md-7 column house-list-info" style="padding-top: 10px;">' +
                     '<p class = "projectTit">' +
@@ -285,7 +263,7 @@
                             html+=  '<li>' +
                                     '<a href="__MODULE__/Project/displayCommunityProject?id='+data.data[i].sjy_id+'">'+
                                     '<div class="col-md-3 column" >' +
-                                    '<img  src="'+ data.data[i].project_image_path +'" alt="" style = "height: 140px;width: 190px;border: 1px solid #cccccc;">' +
+                                    '<img  src="http://p33g9t7dr.bkt.clouddn.com/'+ data.data[i].project_image_path +'" alt="" style = "height: 140px;width: 190px;border: 1px solid #cccccc;">' +
                                     '</div>' +
                                     '<div class="col-md-7 column house-list-info" style="padding-top: 10px;">' +
                                     '<p class = "projectTit">' +

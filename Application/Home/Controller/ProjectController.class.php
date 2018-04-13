@@ -603,6 +603,7 @@
             $project_id = I('post.project_id');  //社区项目id
             //社区id
             $community_id = session('userInfo')['sjy_community_user_community_code'];
+            
             //社会组织id
             $origanization_id = I('post.origanization_code');
             $where = array(
@@ -672,10 +673,11 @@
             //正在征集中
             $data = array(
                   "sjy_community_project_status"=>0,
-                  "sjy_community_project_collect_start_time"=>array('lt',date('Y-m-d',time())),
-                  'sjy_community_project_start_time'=>array('gt',date('Y-m-d',time())) 
+                  "sjy_community_project_collect_start_time"=>array('elt',date('Y-m-d',time())),
+                  'sjy_community_project_collect_end_time'=>array('egt',date('Y-m-d',time())) 
             );
             $info = M('community_project_info')->where($data)->limit($limit)->select();
+            
             foreach($info as $key=>$value)
             {
                 $imgs = M('community_project_image')->where(array('sjy_community_project_id'=>$value['sjy_id'],))->find();
