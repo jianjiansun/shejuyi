@@ -839,7 +839,7 @@
 				{
 					$val = M('origanization_images')->where(array('sjy_id'=>$hasImg['sjy_id']))->save(array('sjy_origanization_images'=>$newpath));
 				}else{
-                    $val = M('origanization_images')->add(array('sjy_origanization_images'=>$newpath));
+                    $val = M('origanization_images')->add(array('sjy_origanization_images'=>$newpath,'sjy_origanization_code'=>$origanization_code));
 				}
 
 				if($val)

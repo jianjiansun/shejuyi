@@ -1049,13 +1049,13 @@ class CommunityController extends BaseController {
             //上传成功
             if($uploadres)
             {
-              $origanization_code = session('userInfo')['sjy_community_user_community_code'];
-              $hasImg = M('community_images')->where(array('sjy_community_code'=>$origanization_code))->find();
+              $community_code = session('userInfo')['sjy_community_user_community_code'];
+              $hasImg = M('community_images')->where(array('sjy_community_code'=>$community_code))->find();
               if(!empty($hasImg))
               {
                  $val = M('community_images')->where(array('sjy_id'=>$hasImg['sjy_id']))->save(array('sjy_community_images'=>$newpath));
               }else{
-                 $val = M('community_images')->add(array('sjy_community_images'=>$newpath));
+                 $val = M('community_images')->add(array('sjy_community_images'=>$newpath,'sjy_community_code'=>$community_code));
               }
 
               if($val)
