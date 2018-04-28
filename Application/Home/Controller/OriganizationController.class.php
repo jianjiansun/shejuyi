@@ -213,7 +213,7 @@
             {
                  $imgpath = $path; //项目主图
                  //添加到数据库
-                 $base_info['sjy_origanization_logo_img_path'] = $imgpath;
+                 $base_info['sjy_origanization_logo_img_path'] = 'http://p33g9t7dr.bkt.clouddn.com/'.$imgpath;
             }else{
                 $ret["errorInfo"] = "logo上传出错,请重试";
             }
