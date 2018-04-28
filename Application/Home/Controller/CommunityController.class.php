@@ -1026,7 +1026,7 @@ class CommunityController extends BaseController {
             $img = $_FILES['file']; //社会组织风采
            
             //七牛云图片上传类
-            $uploadObj = new UploadController();
+            // $uploadObj = new UploadController();
             $time = time();
       
             if($img['size']>2097152)
@@ -1041,11 +1041,15 @@ class CommunityController extends BaseController {
             { 
               $this->ajaxReturn(array('code'=>0,'msg'=>'机构风采图片类型错误'));
             }
-            $file_name = $time.uniqid();
-            $newpath = '/Uploads/community/fengcai/'.date('Y-m-d',$time).'/'.$file_name.'.'.$type;
+            // $file_name = $time.uniqid();
+            // $newpath = '/Uploads/community/fengcai/'.date('Y-m-d',$time).'/'.$file_name.'.'.$type;
             
-            $uploadres = $uploadObj->singUpload($file,$newpath);
+            // $uploadres = $uploadObj->singUpload($file,$newpath);
             
+            $setting=C('UPLOAD_SITEIMG_QINIU');
+            $Upload = new \Think\Upload($setting);
+
+            $uploadres = $Upload->upload($_FILES);
             //上传成功
             if($uploadres)
             {
@@ -1053,9 +1057,9 @@ class CommunityController extends BaseController {
               $hasImg = M('community_images')->where(array('sjy_community_code'=>$community_code))->find();
               if(!empty($hasImg))
               {
-                 $val = M('community_images')->where(array('sjy_id'=>$hasImg['sjy_id']))->save(array('sjy_community_images'=>$newpath));
+                 $val = M('community_images')->where(array('sjy_id'=>$hasImg['sjy_id']))->save(array('sjy_community_images'=>$uploadres['file']['url']));
               }else{
-                 $val = M('community_images')->add(array('sjy_community_images'=>$newpath,'sjy_community_code'=>$community_code));
+                 $val = M('community_images')->add(array('sjy_community_images'=>$uploadres['file']['url'],'sjy_community_code'=>$community_code));
               }
 
               if($val)
@@ -1065,6 +1069,8 @@ class CommunityController extends BaseController {
               else{
                 $this->ajaxReturn(array('code'=>1,'msg'=>'请重试'));
               }
+            }else{
+               $this->ajaxReturn(array('code'=>1,'msg'=>'请重试'));  
             }
         }
         //员工列表

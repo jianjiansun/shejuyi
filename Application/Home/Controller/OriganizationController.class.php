@@ -809,8 +809,6 @@
 			
 			$img = $_FILES['file']; //社会组织风采
            
-            //七牛云图片上传类
-            $uploadObj = new UploadController();
 			$time = time();
 			
 			if($img['size']>2097152)
@@ -825,10 +823,19 @@
 			{ 
 				$this->ajaxReturn(array('code'=>0,'msg'=>'机构风采图片类型错误'));
 			}
-			$file_name = $time.uniqid();
-			$newpath = '/Uploads/origanization/fengcai/'.date('Y-m-d',$time).'/'.$file_name.'.'.$type;
+			// $file_name = $time.uniqid();
+
+		    
+			// $newpath = '/Uploads/origanization/fengcai/'.date('Y-m-d',$time).'/'.$file_name.'.'.$type;
 			
-			$uploadres = $uploadObj->singUpload($file,$newpath);
+			$setting=C('UPLOAD_SITEIMG_QINIU');
+		    $Upload = new \Think\Upload($setting);
+
+		    $uploadres = $Upload->upload($_FILES);
+		    
+			//七牛云图片上传类
+   //          $uploadObj = new UploadController();
+			// $uploadres = $uploadObj->singUpload($file,$newpath);
 			
 			//上传成功
 			if($uploadres)
@@ -837,9 +844,9 @@
 				$hasImg = M('origanization_images')->where(array('sjy_origanization_code'=>$origanization_code))->find();
 				if(!empty($hasImg))
 				{
-					$val = M('origanization_images')->where(array('sjy_id'=>$hasImg['sjy_id']))->save(array('sjy_origanization_images'=>$newpath));
+					$val = M('origanization_images')->where(array('sjy_id'=>$hasImg['sjy_id']))->save(array('sjy_origanization_images'=>$uploadres['file']['url']));
 				}else{
-                    $val = M('origanization_images')->add(array('sjy_origanization_images'=>$newpath,'sjy_origanization_code'=>$origanization_code));
+                    $val = M('origanization_images')->add(array('sjy_origanization_images'=>$uploadres['file']['url'],'sjy_origanization_code'=>$origanization_code));
 				}
 
 				if($val)
@@ -849,6 +856,8 @@
 				else{
 					$this->ajaxReturn(array('code'=>1,'msg'=>'请重试'));
 				}
+			}else{
+					$this->ajaxReturn(array('code'=>1,'msg'=>'请重试'));
 			}
         }
          //升级机构logo
@@ -858,7 +867,7 @@
 			$img = $_FILES['logo']; //社会组织风采
            
             //七牛云图片上传类
-            $uploadObj = new UploadController();
+            // $uploadObj = new UploadController();
 			$time = time();
 			
 			if($img['size']>2097152)
@@ -873,17 +882,22 @@
 			{ 
 				$this->ajaxReturn(array('code'=>0,'msg'=>'logo图片类型错误'));
 			}
-			$file_name = $time.uniqid();
-			$newpath = '/Uploads/origanization/logo/'.date('Y-m-d',$time).'/'.$file_name.'.'.$type;
+			// $file_name = $time.uniqid();
+			// $newpath = '/Uploads/origanization/logo/'.date('Y-m-d',$time).'/'.$file_name.'.'.$type;
 			
-			$uploadres = $uploadObj->singUpload($file,$newpath);
+
+			$setting=C('UPLOAD_SITEIMG_QINIU');
+		    $Upload = new \Think\Upload($setting);
+
+		    $uploadres = $Upload->upload($_FILES);
+			// $uploadres = $uploadObj->singUpload($file,$newpath);
 			
 			//上传成功
 			if($uploadres)
 			{
 				$origanization_code = session('userInfo')['sjy_origanization_user_origanization_code'];
 				
-                $val = M('origanization_base_info')->where(array('sjy_id'=>$origanization_code))->save(array('sjy_origanization_logo_img_path'=>$newpath));
+                $val = M('origanization_base_info')->where(array('sjy_id'=>$origanization_code))->save(array('sjy_origanization_logo_img_path'=>$uploadres['logo']['url']));
 				
 
 				if($val)
@@ -893,6 +907,8 @@
 				else{
 					$this->ajaxReturn(array('code'=>1,'msg'=>'请重试'));
 				}
+			}else{
+				    $this->ajaxReturn(array('code'=>1,'msg'=>'请重试'));
 			}
         }
         //账号设置页面
@@ -1116,113 +1132,7 @@
 	    	$this->ajaxReturn(array("state"=>$state,'errorInfo'=>$errorInfo,"user_info"=>$user_info));
 	        
 	    }
-	   //执行项目插入
-	    public function doeditproject()
-	    {
-	    	$ret["state"] = 0;
-			$ret["errorInfo"] = "";
-	    	//项目id
-	    	$project_id = I("post.project_id");
-	    	//项目其他信息
-	    		$ret["state"] = 0;
-			$ret["errorInfo"] = "";
-			//接收数据
-			$project_name = I("post.project_name");  //项目名字
-			$service_object_id = I("post.server_object");  //项目服务对象
-			$project_introduce = I("post.project_introduce"); //项目介绍
-			$project_goal = I("post.project_goal"); //项目目标
-			$time = I("post.start_time");  //项目开始时间
-			$time = explode('~',$time);
-			$start_time = $time[0];
-			$end_time = $time[1]; //项目结束时间
-			//非空检测
-			if(empty($project_name))
-			{
-				$ret["errorInfo"] = "项目名字不能为空";
-			}else if(empty($service_object_id))
-			{
-				$ret["errorInfo"] = "项目服务对象不能为空";
-			}else if(empty($project_introduce))
-			{
-				$ret["errorInfo"] = "项目介绍不能为空";
-			}else if(empty($project_goal))
-			{
-				$ret["errorInfo"] = "项目目标不能为空";
-			}else if(empty($start_time))
-			{
-				$ret["errorInfo"] = "项目开始时间不能为空";
-			}else if(empty($end_time))
-			{
-				$ret["errorInfo"] = "项目结束时间不能为空";
-			}else {
-
-			}
-			if(!empty($ret["errorInfo"]))
-			{
-				$this->ajaxReturn($ret);
-			}
-			//执行数据插入
-			//换取项目服务对象
-			$service_object = M("service_object")->where(array("sjy_id"=>$service_object_id))->getField("service_object_name");
-			$data["sjy_origanization_project_title"] = $project_name;
-			$data["sjy_origanization_project_service_object"] = $service_object;
-			$data['sjy_origanization_project_service_object_id'] = $service_object_id;
-			$data["sjy_origanization_project_info"] = $project_introduce;
-			$data["sjy_origanization_project_target"] = $project_goal;
-			$data["sjy_origanization_project_start_time"] = $start_time;
-			$data["sjy_origanization_project_end_time"] = $end_time;
-
-			//将数据插入
-			// var_dump($data);die;
-			$res = M("origanization_project_info")->where(array("sjy_id"=>$project_id))->save($data);
-                                //插入项目图片
-                           $base64_data = session('send_project_data');
-  
-                     foreach ($base64_data as $key => $value) {
-                      $base64_image_content = $value;
-  
-                  if (preg_match('/^(data:\s*image\/(\w+);base64,)/', $base64_image_content, $result)){
-                                   $type = $result[2];
-                                   $new_file = "./Uploads/origanization/project/".date('Ymd',time())."/";
-  
-                                   if(!file_exists($new_file))
-                                  {
-                                          //检查是否有该文件夹，如果没有就创建，并给予最高权限
-                                            mkdir($new_file, 0700);
-                                   }
-                                   $new_file = $new_file.time().".{$type}";
-                                   if (file_put_contents($new_file, base64_decode(str_replace($result[1], '', $base64_image_content)))){
-                                          $url = "/Uploads/origanization/project/".date('Ymd',time())."/".time().".{$type}";
-                                          M("origanization_project_image")->add(array("sjy_origanization_project_image"=>$url,'sjy_origanization_project_id'=>$project_id));
-                                  }
-                           }
-                      }
-                      //删除原有图片
-                     $previmgs = session('del_edit_project_img');
-                     if(!empty($previmgs))
-                     {
-                         foreach($previmgs as $key=>$value)
-                         {
-                               //查看文件是否存在，存在删除
-                               $path = M('origanization_project_image')->where(array('sjy_id'=>$value))->getField('sjy_origanization_project_image');
-                                if(file_exists('.'.$path))
-                                {
-                                    unlink('.'.$path);
-                                    M('origanization_project_image')->where(array('sjy_id'=>$value))->delete();
-                                }
-
-                               
-                         }     
-                     } 
-		        
-                      
-			
-			
-				$ret["state"] = 1;
-			
-
-			$this->ajaxReturn($ret);
-	    }
+	 
 	    //注销
         public function logout()
 	    {

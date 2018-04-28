@@ -20,7 +20,8 @@
     	{
     		parent::__construct();
     		//登录检测
-    		if(empty(session('userInfo')))
+            $userInfo_check = session('userInfo');
+    		if(empty($userInfo_check))
     		{
     			$this->redirect("/");  //没有登录跳转到跟目录
                 die;
@@ -31,8 +32,8 @@
             if(!empty($userInfo))
             {
                     $this->islogin = 1;   //已登录
-
-                    if(session('figure') == 2)
+                    $figure = session('figure');
+                    if($figure == 2)
                     {     
                             $userInfo = M('community_user_info')->where(array('sjy_id'=>session('userInfo')['sjy_id']))->find();
                             session('userInfo',$userInfo);                
@@ -71,7 +72,7 @@
                     }
                     
                     //社会组织登录
-                    if(session('figure') == 1)
+                    if($figure == 1)
                     {
                            $userInfo = M('origanization_user_info')->where(array('sjy_id'=>session('userInfo')['sjy_id']))->find();
                            session('userInfo',$userInfo);

@@ -10,7 +10,8 @@
 			//登陆者的类型
 			$type = I("get.type"); //1 社会组织 2 社区
 		    $link = '';
-			if(!empty(session('userInfo')))
+            $userInfo = session('userInfo');
+			if(!empty($userInfo))
 			{
 			   $userInfo = session('userInfo');
 			   if(array_key_exists('sjy_origanization_login_id',$userInfo))
@@ -191,8 +192,8 @@
         public function verify()
         {
             $verify = new Geetest(C('CAPTCHA_ID'),C("PRIVATE_KEY"));
-
-            if(!isset($_SESSION['user_id'])){
+            $user_id = $_SESSION['user_id'];
+            if(!isset($user_id)){
               $_SESSION['user_id']=uniqid();// 生成一个唯一ID
             }
             $data = array(
