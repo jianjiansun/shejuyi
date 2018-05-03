@@ -392,7 +392,7 @@ class CommunityController extends BaseController {
         //执行项目插入
         public function doSendProject()
         {
-            
+            $doc = new \XSDocument();//迅搜文档对象
             $ret["state"] = 0;
             $ret['errorInfo'] = '';
             //接收数据
@@ -529,6 +529,11 @@ class CommunityController extends BaseController {
                 $model->commit();
                 $ret["state"] = 1;
                 $ret['errorInfo'] = '发布成功';
+                $xs = new \XS('demo');
+                //项目id,项目标题 项目主图，项目所属社区名字 项目服务领域 服务领域id,项目需求简介，项目征集时间,项目开始时间，项目状态
+                $search_data = array('sjy_id'=>$res,'sjy_community_project_title'=>$data['sjy_community_project_title'],'project_image_path'=>$path,'sjy_community_name'=>$data['sjy_community_name'],'sjy_community_project_service_area'=>$data['sjy_community_project_service_area'],'sjy_community_project_service_area_id'=>$data["sjy_community_project_service_area_id"],'sjy_community_project_demand'=>$data['sjy_community_project_demand'],'sjy_community_project_collect_start_time'=>date('Ymd',strtotime($data['sjy_community_project_collect_start_time'])),'sjy_community_project_collect_end_time'=>date('Ymd',strtotime($data['sjy_community_project_collect_end_time'])),'sjy_community_project_start_time'=>date('Ymd',strtotime($data['sjy_community_project_start_time'])),'sjy_community_project_end_time'=>date('Ymd',strtotime($data['sjy_community_project_end_time'])),'sjy_community_project_status'=>$data['sjy_community_project_status']);
+                $doc->setFields($search_data);
+                $xs->index->add($doc);
             }else{
                 $model->rollback();
                 $ret["errorInfo"] = "发布失败,请重试";
