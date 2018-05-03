@@ -23,16 +23,28 @@
            // $docs = $search->search('郭淑青');
            // var_dump($docs);die;
  			if(empty($type)){
-	            $docs = $search->setQuery($search_body)->setLimit($offset,10)->search();
+	            $docs = $search->setQuery($search_body)->setLimit(10,$offset)->search();
+                  
                 $count = $search->setQuery($search_body)->count();
             }else{
-	            $docs = $search->setQuery($search_body)->addRange('sjy_community_project_service_area_id', $type, $type)->setLimit($offset,10)->search();
+	            $docs = $search->setQuery($search_body)->addRange('sjy_community_project_service_area_id', $type, $type)->setLimit(10,$offset)->search();
                 $count = $search->setQuery($search_body)->addRange('sjy_community_project_service_area_id', $type, $type)->count();
            }
-                       
+           $ret['count'] = $count;
+                  
            foreach($docs as $key=>$value)
            {
-              echo $value->sjy_id;die;
+              
+              $ret['data'][$key]['sjy_id'] = $value->sjy_id;
+              $ret['data'][$key]['sjy_community_name'] = $value->sjy_community_name;
+              $ret['data'][$key]['sjy_community_project_title'] = $value->sjy_community_project_title;
+              $ret['data'][$key]['sjy_community_project_service_area'] = $value->sjy_community_project_service_area;
+              $ret['data'][$key]['project_image_path'] = $value->project_image_path;
+              $ret['data'][$key]['address']['sjy_community_province_name'] = $value->sjy_community_province;
+              $ret['data'][$key]['address']['sjy_community_city_name'] = $value->sjy_community_city;
+              $ret['data'][$key]['address']['sjy_community_area_name'] = $value->sjy_community_area;
+              $ret['data'][$key]['address']['sjy_community_street_name'] = $value->sjy_community_street;
            }
+           $this->ajaxReturn($ret);
 		}
 	}
