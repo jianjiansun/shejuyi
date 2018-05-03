@@ -514,9 +514,10 @@ class CommunityController extends BaseController {
             $data['sjy_community_project_send_time'] = date('Y-m-d H:i:s',time());//发布时间
             $data['sjy_community_project_status'] = 0; //项目征集中
             //发布城市
-            $city = M('community_position_info')->where(['sjy_community_id'=>$community])->getField('sjy_community_city');
-            $data['cityid'] = $city;
-            $data['cityname'] = M('community_position_info')->where(['sjy_community_id'=>$community])->getField('sjy_community_city_name'); //项目所在城市名字
+            $position_info = M('community_position_info')->where(['sjy_community_id'=>$community])->find();
+            $data['cityid'] = $position_info['sjy_community_city'];
+            $data['cityname'] = $position_info['sjy_community_city_name']; //项目所在城市名字
+
             $res = M("community_project_info")->add($data);
            
             foreach ($projectimg as $key => $value) {
@@ -530,8 +531,8 @@ class CommunityController extends BaseController {
                 $ret["state"] = 1;
                 $ret['errorInfo'] = '发布成功';
                 $xs = new \XS('demo');
-                //项目id,项目标题 项目主图，项目所属社区名字 项目服务领域 服务领域id,项目需求简介，项目征集时间,项目开始时间，项目状态
-                $search_data = array('sjy_id'=>$res,'sjy_community_project_title'=>$data['sjy_community_project_title'],'project_image_path'=>$path,'sjy_community_name'=>$data['sjy_community_name'],'sjy_community_project_service_area'=>$data['sjy_community_project_service_area'],'sjy_community_project_service_area_id'=>$data["sjy_community_project_service_area_id"],'sjy_community_project_demand'=>$data['sjy_community_project_demand'],'sjy_community_project_collect_start_time'=>date('Ymd',strtotime($data['sjy_community_project_collect_start_time'])),'sjy_community_project_collect_end_time'=>date('Ymd',strtotime($data['sjy_community_project_collect_end_time'])),'sjy_community_project_start_time'=>date('Ymd',strtotime($data['sjy_community_project_start_time'])),'sjy_community_project_end_time'=>date('Ymd',strtotime($data['sjy_community_project_end_time'])),'sjy_community_project_status'=>$data['sjy_community_project_status']);
+                //项目id,项目标题 项目主图，项目所属社区名字 项目服务领域 服务领域id,项目需求简介，项目所在省市区，项目征集时间,项目开始时间，项目状态
+                $search_data = array('sjy_id'=>$res,'sjy_community_project_title'=>$data['sjy_community_project_title'],'project_image_path'=>$path,'sjy_community_name'=>$data['sjy_community_name'],'sjy_community_project_service_area'=>$data['sjy_community_project_service_area'],'sjy_community_project_service_area_id'=>$data["sjy_community_project_service_area_id"],'sjy_community_project_demand'=>$data['sjy_community_project_demand'],'sjy_community_province'=>$position_info['sjy_community_province_name'],'sjy_community_city'=>$position_info['sjy_community_city_name'],'sjy_community_area'=>$position_info['sjy_community_area_name'],'sjy_community_street'=>$position_info['sjy_community_street_name'],'sjy_community_project_collect_start_time'=>date('Ymd',strtotime($data['sjy_community_project_collect_start_time'])),'sjy_community_project_collect_end_time'=>date('Ymd',strtotime($data['sjy_community_project_collect_end_time'])),'sjy_community_project_start_time'=>date('Ymd',strtotime($data['sjy_community_project_start_time'])),'sjy_community_project_end_time'=>date('Ymd',strtotime($data['sjy_community_project_end_time'])),'sjy_community_project_status'=>$data['sjy_community_project_status']);
                 $doc->setFields($search_data);
                 $xs->index->add($doc);
             }else{

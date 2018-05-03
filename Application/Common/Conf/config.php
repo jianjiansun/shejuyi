@@ -10,7 +10,8 @@ return array(
     'DB_PORT'               =>  '3306',        // 端口
     'DB_PREFIX'             =>  'sjy_',    // 数据库表前缀
     'LAYOUT_ON'             =>   true,     //使用模板布局
-
+    'TMPL_EXCEPTION_FILE'   =>  '/404.html',// 异常页面的模板文件
+    'ERROR_PAGE'            =>  '/404.html', // 错误定向页面
     'UPLOAD_SITEIMG_QINIU' => array ( 
                     'maxSize' => 5 * 1024 * 1024,//文件大小
                     'rootPath' => './',
