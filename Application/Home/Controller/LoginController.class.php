@@ -108,6 +108,7 @@
                 $ret['msg'] = '验证失败,请重试';
                 $this->ajaxReturn($ret);
             }
+
     		$phone = I("post.phone");  //手机号
     		$type = I("post.type");  //类型                 
     		$password = I("post.password");  //密码
@@ -119,9 +120,11 @@
     			$ret['msg'] = '账号或密码不能为空';
     			$this->ajaxReturn($ret);
     		}
+
     		//社会组织登陆
     		if($type == 1)
     		{   //先查询，如果没查到则新增
+                
     			$val = M("origanization_user_info")->where(array("sjy_origanization_login_id"=>$phone,'password'=>$password))->find();
                 
     			//账号或密码错误
@@ -134,7 +137,7 @@
     				$ret["state"] = 2;   //查到数据
     			}
     		}
-
+            
     		//社区登陆
     		if($type == 2)
     		{
@@ -210,6 +213,7 @@
         //二次验证
         public function reVerify($geetest_challenge, $geetest_validate, $geetest_seccode)
         {
+           // var_dump($_SESSION['gtserver']);die;
 
             //var_dump($geetest_challenge.'----'.$geetest_validate.'----'.$geetest_seccode);die;
             $verify = new Geetest(C('CAPTCHA_ID'),C("PRIVATE_KEY"));
@@ -239,6 +243,7 @@
               
             // 如果验证码验证成功，再进行其他校验
             if($code_flag){
+
                return true;
             }else{
                return false;
