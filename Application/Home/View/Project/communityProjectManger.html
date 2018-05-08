@@ -834,6 +834,7 @@
                         '<a class = "see-detail" href="__CONTROLLER__/displayCommunityProject/id/'+data[i].project_id+'">详情</a> <br>' +
                         '<a class = "projectBook" id = "'+ data[i].project_id +'"  data_id = "'+ data[i].origanization_id +'"  href="javascript:;">项目书</a> ' +
                         '</tr>';
+                
 
             }
             $("#tbody3").html(html3);
@@ -1023,7 +1024,7 @@
                         text4 += '<li class="layui-timeline-item">\n' +
                                 '<i class="layui-icon layui-timeline-axis">&#xe63f;</i>\n' +
                                 '<div class="layui-timeline-content layui-text">\n' +
-                                '<h3 class="layui-timeline-title">'+ data[i].sjy_project_rate_con +'</h3>\n' +
+                                '<h3 class="layui-timeline-title">'+ data[i].sjy_projectrate_title +'</h3>\n' +
                                 '<p>' +  data[i].create_time +'</p>' +
                                 '</div>\n' +
                                 '</li>';
