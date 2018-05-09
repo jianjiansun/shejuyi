@@ -25,10 +25,10 @@
  			if(empty($type)){
 	            $docs = $search->setQuery($search_body)->setLimit(10,$offset)->search();
                   
-                $count = $search->setQuery($search_body)->count();
+              $count = $search->setQuery($search_body)->count();
             }else{
 	            $docs = $search->setQuery($search_body)->addRange('sjy_community_project_service_area_id', $type, $type)->setLimit(10,$offset)->search();
-                $count = $search->setQuery($search_body)->addRange('sjy_community_project_service_area_id', $type, $type)->count();
+              $count = $search->setQuery($search_body)->addRange('sjy_community_project_service_area_id', $type, $type)->count();
            }
            $ret['count'] = $count;
                   
@@ -45,6 +45,10 @@
               $ret['data'][$key]['address']['sjy_community_city_name'] = $value->sjy_community_city;
               $ret['data'][$key]['address']['sjy_community_area_name'] = $value->sjy_community_area;
               $ret['data'][$key]['address']['sjy_community_street_name'] = $value->sjy_community_street;
+           }
+           if(empty($docs))
+           {
+              $ret['data'] = array();
            }
            $this->ajaxReturn($ret);
 		}
