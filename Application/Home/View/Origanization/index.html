@@ -131,29 +131,14 @@
             <ul class="nav navbar-nav classNav">
 
                 <li>
-                    <a class="on" href="javascript:;">全部</a>
+                    <a class="on" href="javascript:;" flag="0">全部</a>
                 </li>
-                <li>
-                    <a href="javascript:;">为老服务</a>
-                </li>
-                <li>
-                    <a href="javascript:;">青少年服务</a>
-                </li>
-                <li>
-                    <a href="javascript:;">医务服务</a>
-                </li>
-                <li>
-                    <a href="javascript:;">司法矫正</a>
-                </li>
-                <li>
-                    <a href="javascript:;">心理服务</a>
-                </li>
-                <li>
-                    <a href="javascript:;">社区服务</a>
-                </li>
-                <li>
-                    <a href="javascript:;">党建</a>
-                </li>
+                <foreach name='service_object' item="vo">
+                    <li>
+                        <a href="javascript:;" flag="{$vo['sjy_id']}">{$vo['service_object_name']}</a>
+                    </li>
+                </foreach>
+                
             </ul>
             <div style="height: 0; clear: both;"></div>
             <ul class="buildImg" id="projectList">
@@ -215,7 +200,7 @@
 
         var count;
 
-        $.post("__CONTROLLER__/getprojectlist/page/1", function(data) {
+        $.post("__MODULE__/Search/searchCommunityProject/page/1", function(data) {
             var html = "";
 
             count = Number(data.count);
@@ -270,7 +255,7 @@
                         console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
                         console.log(obj.limit); //得到每页显示的条数
 
-                        $.post("__CONTROLLER__/getprojectlist/page/" + obj.curr, function(data) {
+                        $.post("__MODULE__/Search/searchCommunityProject/page/" + obj.curr, function(data) {
                             var html = "";
 
                             for (var i = 0; i < data.data.length; i++) {
@@ -331,7 +316,7 @@
     /*为老服务， 司法矫正 等taB 项的切换*/
     $(".classNav > li > a").click(function() {
 
-        type = $(this).text();
+        type = $(this).attr('flag');
         console.log(type);
 
         $(".classNav > li > a").removeClass("on");
@@ -346,7 +331,7 @@
     var search = function() {
 
         $.ajax({
-            url: "__MODULE__/Project/searchCommunityProject",
+            url: "__MODULE__/Search/searchCommunityProject",
             type: "POST",
             data: {
                 type: type,

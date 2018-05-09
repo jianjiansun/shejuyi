@@ -60,6 +60,9 @@
 		//社区项目展示页
 		public function index()
 		{
+			 //社区项目分类
+			 $service_object = M('service_object')->select();
+			 $this->assign('service_object',$service_object);
 		     $this->display();
 		}
         //搜索 分页

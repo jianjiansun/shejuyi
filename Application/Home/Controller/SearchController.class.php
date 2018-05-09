@@ -37,6 +37,7 @@
               
               $ret['data'][$key]['sjy_id'] = $value->sjy_id;
               $ret['data'][$key]['sjy_community_name'] = $value->sjy_community_name;
+              $ret['data'][$key]['community_info']['sjy_community_name'] = $value->sjy_community_name;
               $ret['data'][$key]['sjy_community_project_title'] = $value->sjy_community_project_title;
               $ret['data'][$key]['sjy_community_project_service_area'] = $value->sjy_community_project_service_area;
               $ret['data'][$key]['project_image_path'] = $value->project_image_path;
