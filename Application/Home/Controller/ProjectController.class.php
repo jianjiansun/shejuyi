@@ -378,10 +378,12 @@
         	$project_id = $project_id; //项目id
         	//社会组织id
         	$origanization_code = session('userInfo')['sjy_origanization_user_origanization_code'];
-        	if(empty($origanization_code))
+            $is_identify = session('userInfo')['sjy_origanization_user_isidentify'];
+           
+        	if(empty($origanization_code)||empty($is_identify))
         	{
         		$res['state'] = 2;
-        		$res['errorInfo'] = '尚未加入机构，无法发送';
+        		$res['errorInfo'] = '尚未认证或尚未加入机构，无法发送';
         		return $res;
         	}else{
         		//是否过了招标期 是否有人中标
@@ -492,6 +494,15 @@
         //发送项目书
 	    public function file_upload($project_id,$project_info)
 	    {
+            //检测用户是否有所属机构是否认证如果没有，则不允许发送
+            //社会组织id
+            $origanization_id = session("userInfo")["sjy_origanization_user_origanization_code"];
+            // //认证
+            // $is_identify = session('userInfo')['sjy_origanization_user_isidentify'];
+            // if(empty($origanization_id)||empty($is_identify))
+            // {
+            //     return array("state"=>6,"errorInfo"=>"尚未认证或尚未加入任何组织,无法发送");
+            // }
 	    	//执行上传文件前检测
 	    	//文件扩展名检测    
     	    $upload = new \Think\Upload();// 实例化上传类
@@ -516,8 +527,8 @@
 	    	$time = date("Y-m-d H:i:s");
 	    	//项目id
 	    	$project_id = $project_id;
-	    	//社会组织id
-	    	$origanization_id = session("userInfo")["sjy_origanization_user_origanization_code"];
+	    	
+	    	
 	    	//将信息插入sjy_project表  首先去找有没有该条记录，有并且status=1，则不操作sjy_project表 除此之外则操作该表
 	    	$isupload = M("project")->where(array("project_id"=>$project_id,"community_id"=>$community_id,"origanization_id"=>$origanization_id))->find();
 	    	$model = M();
