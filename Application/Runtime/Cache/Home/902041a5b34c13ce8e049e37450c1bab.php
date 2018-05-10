@@ -1,8 +1,24 @@
-<link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/right-tab.css">
-<script src="__PUBLIC__/Home/js/layui.js"></script>
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EasyLife</title>
+    <link rel="stylesheet" href="/Public/Home/css/bootstrap.css">
+    <link rel="stylesheet" href="/Public/Home/css/common.css">
+    <link rel="stylesheet" href="/Public/Home/css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+    <script src="/Public/Home/js/jquery-1.12.4.js"></script>
+    <script src="/Public/Home/js/bootstrap.js"></script>
+    <script src = "/Public/Home/js/autoResizeImage.js"></script>
+
+<link rel="stylesheet" href="/Public/Home/css/region.css">
+<link rel="stylesheet" href="/Public/Home/css/page2.css">
+<link rel="stylesheet" href="/Public/Home/css/layui.css">
+<link rel="stylesheet" href="/Public/Home/css/right-tab.css">
+<script src="/Public/Home/js/layui.js"></script>
 </head>
 
 <body>
@@ -12,49 +28,43 @@
 
     <div class="headLogin">
         <div class="left changeBan">
-            <a href="javascript:;" id="cityChoose" class="region">{$city}</a>
+            <a href="javascript:;" id="cityChoose" class="region"><?php echo ($city); ?></a>
             <a class="on" href="">社会组织版</a>
             <a href="">社区版</a>
         </div>
 
         <div class="right person">
             <div class="dropdown pull-right">
-                <if condition='($isidentify eq 1) and ($code gt 0)'>
-                    <a class="myOwnIndex" href="__MODULE__/Home/displayOriganizationHome">{$origanization_name}</a>
-                </if>
+                <?php if(($isidentify == 1) and ($code > 0)): ?><a class="myOwnIndex" href="/index.php/home/Home/displayOriganizationHome"><?php echo ($origanization_name); ?></a><?php endif; ?>
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">
                     <div class="user-img" style="display: inline-block">
 
-                        <img src="{$user_image}" alt="">
+                        <img src="<?php echo ($user_image); ?>" alt="">
                         <span class="iconfont VIP-icon" style="right: -20px;">&#xe65b;</span>
                     </div>
 
 
-                    <span>{$showname}<if condition='$active egt 1'><span class="layui-badge-dot"></span></if>
+                    <span><?php echo ($showname); if($active >= 1): ?><span class="layui-badge-dot"></span><?php endif; ?>
                     </span>
                 </a>
                 <ul class="dropdown-menu personalMenu">
                     <li>
-                        <a href="__CONTROLLER__/origanizationIdentify">认证状态</a>
+                        <a href="/index.php/home/origanization/origanizationIdentify">认证状态</a>
                     </li>
-                    <if condition='($isidentify eq 1)'>
-                        <li>
-                            <a href="__CONTROLLER__/personInfo">账号设置</a>
-                        </li>
-                    </if>
-                    <if condition='($isidentify eq 1) and ($code gt 0)'>
-                        <li>
-                            <a href="__CONTROLLER__/myOriganization">我的机构</a>
+                    <?php if(($isidentify == 1)): ?><li>
+                            <a href="/index.php/home/origanization/personInfo">账号设置</a>
+                        </li><?php endif; ?>
+                    <?php if(($isidentify == 1) and ($code > 0)): ?><li>
+                            <a href="/index.php/home/origanization/myOriganization">我的机构</a>
                         </li>
                         <li>
-                            <a href="__MODULE__/Project/origanizationProjectManger">我的项目<if condition='$active egt 1'><span class="layui-badge-dot"></span></if></a>
+                            <a href="/index.php/home/Project/origanizationProjectManger">我的项目<?php if($active >= 1): ?><span class="layui-badge-dot"></span><?php endif; ?></a>
                         </li>
                         <li>
-                            <a href="__MODULE__/Home/displayOriganizationHome">机构主页</a>
-                        </li>
-                    </if>
+                            <a href="/index.php/home/Home/displayOriganizationHome">机构主页</a>
+                        </li><?php endif; ?>
                     <li>
-                        <a href="__CONTROLLER__/logout">注销</a>
+                        <a href="/index.php/home/origanization/logout">注销</a>
                     </li>
                 </ul>
             </div>
@@ -65,7 +75,7 @@
         <div class="container">
             <div class="top">
                 <div class="logo  col-md-6">
-                    <img src="__PUBLIC__/Home/imgs/logo.png" alt="">
+                    <img src="/Public/Home/imgs/logo.png" alt="">
                     <span>社居易</span>
 
 
@@ -93,13 +103,13 @@
                 <div id="ifocus_piclist" style="left:0; top:0;">
                     <ul>
                         <li>
-                            <a href="#"><img src="__PUBLIC__/Home/imgs/zixun1.JPG" alt="" /></a>
+                            <a href="#"><img src="/Public/Home/imgs/zixun1.JPG" alt="" /></a>
                         </li>
                         <li>
-                            <a href="#"><img src="__PUBLIC__/Home/imgs/zixun2.JPG" alt="" /></a>
+                            <a href="#"><img src="/Public/Home/imgs/zixun2.JPG" alt="" /></a>
                         </li>
                         <li>
-                            <a href="#"><img src="__PUBLIC__/Home/imgs/zixun3.jpg" alt="" /></a>
+                            <a href="#"><img src="/Public/Home/imgs/zixun3.jpg" alt="" /></a>
                         </li>
                     </ul>
                 </div>
@@ -114,9 +124,9 @@
             </div>
             <div id="ifocus_btn">
                 <ul>
-                    <li class="current"><img src="__PUBLIC__/Home/imgs/zixun1.JPG" alt="" /></li>
-                    <li class="normal"><img src="__PUBLIC__/Home/imgs/zixun2.JPG" alt="" /></li>
-                    <li class="normal"><img src="__PUBLIC__/Home/imgs/zixun3.jpg" alt="" /></li>
+                    <li class="current"><img src="/Public/Home/imgs/zixun1.JPG" alt="" /></li>
+                    <li class="normal"><img src="/Public/Home/imgs/zixun2.JPG" alt="" /></li>
+                    <li class="normal"><img src="/Public/Home/imgs/zixun3.jpg" alt="" /></li>
                 </ul>
             </div>
         </div>
@@ -133,11 +143,9 @@
                 <li>
                     <a class="on" href="javascript:;" flag="0">全部</a>
                 </li>
-                <foreach name='service_object' item="vo">
-                    <li>
-                        <a href="javascript:;" flag="{$vo['sjy_id']}">{$vo['service_object_name']}</a>
-                    </li>
-                </foreach>
+                <?php if(is_array($service_object)): foreach($service_object as $key=>$vo): ?><li>
+                        <a href="javascript:;" flag="<?php echo ($vo['sjy_id']); ?>"><?php echo ($vo['service_object_name']); ?></a>
+                    </li><?php endforeach; endif; ?>
                 
             </ul>
             <div style="height: 0; clear: both;"></div>
@@ -152,9 +160,7 @@
         </div>
         <div class="col-md-3 program-box">
             <div class="publish-program">
-                <if condition='($isidentify eq 1) and ($code gt 0)'>
-                    <a class="publish-btn" href="__CONTROLLER__/send_project">发布项目</a>
-                </if>
+                <?php if(($isidentify == 1) and ($code > 0)): ?><a class="publish-btn" href="/index.php/home/origanization/send_project">发布项目</a><?php endif; ?>
 
             </div>
 
@@ -190,7 +196,7 @@
     </div>
 
 </body>
-<script src="__PUBLIC__/Home/js/cityBoxShow.js"></script>
+<script src="/Public/Home/js/cityBoxShow.js"></script>
 
 <!-- 因为这个插件， 所以就不可以出来那个地址选择了 -->
 <!--<script src = "../js/slider.js"></script>-->
@@ -200,44 +206,44 @@
 
         var count;
 
-        // $.get("__MODULE__/Search/searchCommunityProject/page/1", function(data) {
+        $.get("/index.php/home/Search/searchCommunityProject/page/1", function(data) {
             var html = "";
 
-            // count = Number(data.count);
-            // console.log(count + "count");
+            count = Number(data.count);
+            console.log(count + "count");
 
 
-            // for (var i = 0; i < data.data.length; i++) {
-            //     html += '<li>' +
-            //         '<a href="__MODULE__/Project/displayCommunityProject?id=' + data.data[i].sjy_id + '">' +
-            //         '<div class="col-md-3 column" >' +
-            //         '<img  src="http://p33g9t7dr.bkt.clouddn.com/' + data.data[i].project_image_path + '" alt="" style = "height: 140px;width: 190px;border: 1px solid #cccccc;">' +
-            //         '</div>' +
-            //         '<div class="col-md-7 column house-list-info" style="padding-top: 10px;">' +
-            //         '<p class = "projectTit">' +
-            //         '<span class = "tit">' + data.data[i].sjy_community_project_title + '</span>' +
-            //         '</p>' +
-            //         '<p class = "where">' +
-            //         '<span  class = "sp2 sp">发布方</span><i>|</i>' +
-            //         '<span class = "region region1">' + data.data[i].community_info.sjy_community_name + '</span>' +
-            //         '</p>' +
-            //         '<p class = "where">' +
-            //         '<span  class = "sp3 sp">服务对象</span><i>|</i>' +
-            //         '<span class = "region">' + data.data[i].sjy_community_project_service_area + '</span>' +
-            //         '</p>' +
-            //         '<div class = "type">' +
-            //         '<span class = "iconfont">&#xe61f;</span>' +
-            //         '<span>' + data.data[i].address.sjy_community_province_name + '</span>-<span>' + data.data[i].address.sjy_community_area_name + '</span>-<span>' + data.data[i].address.sjy_community_street_name + '</span>' +
-            //         '</div>' +
-            //         '</div>' +
-            //         '</a>' +
-            //         '</li>';
+            for (var i = 0; i < data.data.length; i++) {
+                html += '<li>' +
+                    '<a href="/index.php/home/Project/displayCommunityProject?id=' + data.data[i].sjy_id + '">' +
+                    '<div class="col-md-3 column" >' +
+                    '<img  src="http://p33g9t7dr.bkt.clouddn.com/' + data.data[i].project_image_path + '" alt="" style = "height: 140px;width: 190px;border: 1px solid #cccccc;">' +
+                    '</div>' +
+                    '<div class="col-md-7 column house-list-info" style="padding-top: 10px;">' +
+                    '<p class = "projectTit">' +
+                    '<span class = "tit">' + data.data[i].sjy_community_project_title + '</span>' +
+                    '</p>' +
+                    '<p class = "where">' +
+                    '<span  class = "sp2 sp">发布方</span><i>|</i>' +
+                    '<span class = "region region1">' + data.data[i].community_info.sjy_community_name + '</span>' +
+                    '</p>' +
+                    '<p class = "where">' +
+                    '<span  class = "sp3 sp">服务对象</span><i>|</i>' +
+                    '<span class = "region">' + data.data[i].sjy_community_project_service_area + '</span>' +
+                    '</p>' +
+                    '<div class = "type">' +
+                    '<span class = "iconfont">&#xe61f;</span>' +
+                    '<span>' + data.data[i].address.sjy_community_province_name + '</span>-<span>' + data.data[i].address.sjy_community_area_name + '</span>-<span>' + data.data[i].address.sjy_community_street_name + '</span>' +
+                    '</div>' +
+                    '</div>' +
+                    '</a>' +
+                    '</li>';
 
 
-            // }
+            }
 
 
-            // $("#projectList").html(html);
+            $("#projectList").html(html);
 
 
             layui.use('laypage', function() {
@@ -255,12 +261,12 @@
                         console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
                         console.log(obj.limit); //得到每页显示的条数
 
-                        $.get("__MODULE__/Search/searchCommunityProject/page/" + obj.curr, function(data) {
+                        $.get("/index.php/home/Search/searchCommunityProject/page/" + obj.curr, function(data) {
                             var html = "";
 
                             for (var i = 0; i < data.data.length; i++) {
                                 html += '<li>' +
-                                    '<a href="__MODULE__/Project/displayCommunityProject?id=' + data.data[i].sjy_id + '">' +
+                                    '<a href="/index.php/home/Project/displayCommunityProject?id=' + data.data[i].sjy_id + '">' +
                                     '<div class="col-md-3 column" >' +
                                     '<img  src="http://p33g9t7dr.bkt.clouddn.com/' + data.data[i].project_image_path + '" alt="" style = "height: 140px;width: 190px;border: 1px solid #cccccc;">' +
                                     '</div>' +
@@ -303,7 +309,7 @@
             });
 
 
-        // });
+        });
 
     };
 
@@ -331,7 +337,7 @@
     var search = function() {
 
         $.ajax({
-            url: "__MODULE__/Search/searchCommunityProject",
+            url: "/index.php/home/Search/searchCommunityProject",
             type: "GET",
             data: {
                 type: type,
