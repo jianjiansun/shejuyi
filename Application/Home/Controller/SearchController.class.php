@@ -52,4 +52,24 @@
            }
            $this->ajaxReturn($ret);
 		}
+    //总数据数量
+    public function getCount()
+    {
+      //接收参数
+      $search_body = I('get.search_body')?I('get.search_body'):""; //搜索框里输入的内容
+      
+      $type = I('get.type')?I('get.type'):"";  //二次筛选的条件
+
+      
+      $xs = new \XS('demo'); // 建立 XS 对象，项目名称为：demo
+      $search = $xs->search; // 获取 搜索对象
+     // $docs = $search->search('郭淑青');
+     // var_dump($docs);die;
+      if(empty($type)){
+              $count = $search->setQuery($search_body)->count();
+            }else{
+              $count = $search->setQuery($search_body)->addRange('sjy_community_project_service_area_id', $type, $type)->count();
+           }
+           $this->ajaxReturn($count);
+    }
 	}

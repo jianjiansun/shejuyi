@@ -196,14 +196,17 @@
 <!--<script src = "../js/slider.js"></script>-->
 <script>
     /*首次加载*/
-    var searchFunc = function() {
+    var searchFunc = function(text='',type='') {
 
         var count;
+        /*搜索 */
+       
 
-        // $.get("__MODULE__/Search/searchCommunityProject/page/1", function(data) {
+      
+        $.get("__MODULE__/Search/getCount?type="+type+"&search_body="+text, function(data) {
             var html = "";
 
-            // count = Number(data.count);
+            count = Number(data);
             // console.log(count + "count");
 
 
@@ -255,7 +258,7 @@
                         console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
                         console.log(obj.limit); //得到每页显示的条数
 
-                        $.get("__MODULE__/Search/searchCommunityProject/page/" + obj.curr, function(data) {
+                        $.get("__MODULE__/Search/searchCommunityProject?type="+type+"&search_body="+text+"&page=" + obj.curr, function(data) {
                             var html = "";
 
                             for (var i = 0; i < data.data.length; i++) {
@@ -303,7 +306,7 @@
             });
 
 
-        // });
+        });
 
     };
 
@@ -322,30 +325,30 @@
         $(".classNav > li > a").removeClass("on");
 
         $(this).addClass('on');
-        search();
+        search(text,type);
 
     });
 
 
     /*搜索的时候， 请求的接口*/
-    var search = function() {
+    var search = function(text='',type='') {
+        searchFunc(text,type);
+        // $.ajax({
+        //     url: "__MODULE__/Search/searchCommunityProject",
+        //     type: "GET",
+        //     data: {
+        //         type: type,
+        //         search_body: text
+        //     },
+        //     dataType: "json",
+        //     success: function(data) {
 
-        $.ajax({
-            url: "__MODULE__/Search/searchCommunityProject",
-            type: "GET",
-            data: {
-                type: type,
-                text: text
-            },
-            dataType: "json",
-            success: function(data) {
+        //         searchFunc();
 
-                searchFunc();
-
-            },
-            async: false
-        });
-        return false;
+        //     },
+        //     async: false
+        // });
+        // return false;
 
     };
 
@@ -353,8 +356,9 @@
     $("#searchAll").click(function() {
         text = $("#searchText").val();
         console.log(text);
-
-        search();
+        $(".classNav > li > a").removeClass("on");
+        $('.classNav > li > a:first').addClass('on');
+        search(text,0);
 
     });
 
@@ -366,9 +370,10 @@
 
     $("body").keydown(function() {
         if (event.keyCode == "13") {
-
+            $(".classNav > li > a").removeClass("on");
+            $(".classNav > li > a:first").addClass('on');
             text = $("#searchText").val();
-            search();
+            search(text,0);
 
         }
     });
