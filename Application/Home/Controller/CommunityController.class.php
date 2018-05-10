@@ -59,6 +59,9 @@ class CommunityController extends BaseController {
        }
     	//社会组织列表
         public function index(){
+             //社会组织类型
+             $origanization_type = M('origanization_type')->select();
+             $this->assign('origanization_type',$origanization_type);
              $this->display();
         }
         //社会组织列表
