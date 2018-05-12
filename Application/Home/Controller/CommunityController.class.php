@@ -62,6 +62,15 @@ class CommunityController extends BaseController {
              //社会组织类型
              $origanization_type = M('origanization_type')->select();
              $this->assign('origanization_type',$origanization_type);
+             //项目总数
+			 $project_num = M('community_project_info')->count();
+			 $this->assign('project_num',$project_num);
+			 //社区总数
+			 $community_num = M('community_base_info')->count();
+			 $this->assign('community_num',$community_num);
+			 //社会组织总数
+			 $origanization_num = M('origanization_base_info')->count();
+			 $this->assign('origanization_num',$origanization_num);
              $this->display();
         }
         //社会组织列表

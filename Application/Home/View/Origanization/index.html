@@ -138,7 +138,7 @@
                         <a href="javascript:;" flag="{$vo['sjy_id']}">{$vo['service_object_name']}</a>
                     </li>
                 </foreach>
-                
+
             </ul>
             <div style="height: 0; clear: both;"></div>
             <ul class="buildImg" id="projectList">
@@ -165,15 +165,15 @@
             <div class="paddingBox">
                 <dl>
                     <dt>项目总数</dt>
-                    <dd><span>12333</span> 个</dd>
+                    <dd><span>{$project_num}</span> 个</dd>
                 </dl>
                 <dl>
                     <dt>入驻机构</dt>
-                    <dd><span>123</span> 家</dd>
+                    <dd><span>{$origanization_num}</span> 家</dd>
                 </dl>
                 <dl>
                     <dt>入驻社区</dt>
-                    <dd><span>12344</span> 家</dd>
+                    <dd><span>{$community_num}</span> 家</dd>
                 </dl>
             </div>
         </div>
@@ -196,14 +196,14 @@
 <!--<script src = "../js/slider.js"></script>-->
 <script>
     /*首次加载*/
-    var searchFunc = function(text='',type='') {
+    var searchFunc = function(text = '', type = '') {
 
         var count;
         /*搜索 */
-       
 
-      
-        $.get("__MODULE__/Search/getCount?type="+type+"&search_body="+text, function(data) {
+
+
+        $.get("__MODULE__/Search/getCount?type=" + type + "&search_body=" + text, function(data) {
             var html = "";
 
             count = Number(data);
@@ -258,7 +258,7 @@
                         console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
                         console.log(obj.limit); //得到每页显示的条数
 
-                        $.get("__MODULE__/Search/searchCommunityProject?type="+type+"&search_body="+text+"&page=" + obj.curr, function(data) {
+                        $.get("__MODULE__/Search/searchCommunityProject?type=" + type + "&search_body=" + text + "&page=" + obj.curr, function(data) {
                             var html = "";
 
                             for (var i = 0; i < data.data.length; i++) {
@@ -325,14 +325,14 @@
         $(".classNav > li > a").removeClass("on");
 
         $(this).addClass('on');
-        search(text,type);
+        search(text, type);
 
     });
 
 
     /*搜索的时候， 请求的接口*/
-    var search = function(text='',type='') {
-        searchFunc(text,type);
+    var search = function(text = '', type = '') {
+        searchFunc(text, type);
         // $.ajax({
         //     url: "__MODULE__/Search/searchCommunityProject",
         //     type: "GET",
@@ -358,7 +358,7 @@
         console.log(text);
         $(".classNav > li > a").removeClass("on");
         $('.classNav > li > a:first').addClass('on');
-        search(text,0);
+        search(text, 0);
 
     });
 
@@ -373,7 +373,7 @@
             $(".classNav > li > a").removeClass("on");
             $(".classNav > li > a:first").addClass('on');
             text = $("#searchText").val();
-            search(text,0);
+            search(text, 0);
 
         }
     });
