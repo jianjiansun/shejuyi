@@ -62,6 +62,15 @@ class CommunityController extends BaseController {
              //社会组织类型
              $origanization_type = M('origanization_type')->select();
              $this->assign('origanization_type',$origanization_type);
+             //项目总数
+			 $project_num = M('community_project_info')->count();
+			 $this->assign('project_num',$project_num);
+			 //社区总数
+			 $community_num = M('community_base_info')->count();
+			 $this->assign('community_num',$community_num);
+			 //社会组织总数
+			 $origanization_num = M('origanization_base_info')->count();
+			 $this->assign('origanization_num',$origanization_num);
              $this->display();
         }
         //社会组织列表
@@ -449,22 +458,28 @@ class CommunityController extends BaseController {
             //七牛云图片上传 
             $uploadObj = new UploadController();
             //项目主图 主图 base64格式 
-            $main_image = I('post.main_image');
-            $base64 = explode('base64,',$main_image)[1];
-            //文件名
-            $path = '/Uploads/community/projectimg/'.date('Y-m-d',$time).'/'.$time.uniqid();
-            $base64res = $uploadObj->base64Upload($base64,$path);
-            if($base64res)
+            $main_image = I('post.main_image')?I('post.main_image'):'';
+            if($main_image)
             {
-               $projectimg[] = $path; //项目主图
+                $base64 = explode('base64,',$main_image)[1];
+                //文件名
+                $path = '/Uploads/community/projectimg/'.date('Y-m-d',$time).'/'.$time.uniqid();
+                $base64res = $uploadObj->base64Upload($base64,$path);
+                if($base64res)
+                {
+                $projectimg[] = $path; //项目主图
+                }else{
+                    $this->ajaxReturn(array('state'=>0,'errorInfo'=>'项目主图上传失败,请重试！'));
+                }
             }else{
-                 $this->ajaxReturn(array('state'=>0,'errorInfo'=>'项目主图上传失败,请重试！'));
+                $path = '';
             }
 
             //项目相册
             //检测图片是否合法
             $project_images = $_FILES['project_images'];
             $num = count($project_images['name']);
+            $projectimg = array();
             for($i=0;$i<$num;$i++)
             {
                 $flag = $i+1;
@@ -527,7 +542,13 @@ class CommunityController extends BaseController {
                $project_image[] = array('sjy_community_project_id'=>$res,'sjy_community_project_image'=>$value);
             }
             //插入项目图片
-            $rut = M('community_project_image')->addAll($project_image);
+            if(!empty($project_image))
+            {
+                $rut = M('community_project_image')->addAll($project_image);
+            }else{
+                $rut = 1;
+            }
+            
             if($res&&$rut)
             {
                 $model->commit();

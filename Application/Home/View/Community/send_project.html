@@ -1,24 +1,23 @@
+<link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
+<link rel="stylesheet" href="__PUBLIC__/Home/css/deliver.css">
+<link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
+<link rel="stylesheet" href="__PUBLIC__/Home/css/modules/laydate/default/laydate.css">
+<link rel="stylesheet" href="__PUBLIC__/Home/css/modules/layer/default/layer.css">
+<!--  <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/webuploader.css"> -->
 
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/deliver.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/modules/laydate/default/laydate.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/modules/layer/default/layer.css">
-   <!--  <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/webuploader.css"> -->
-
-    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/demo.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/demo.css">
 
 
-   
-    <script src="__PUBLIC__/Home/js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
-    <script src="__PUBLIC__/Home/js/hammer.js" type="text/javascript" charset="utf-8"></script>
-    <script src="__PUBLIC__/Home/js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
-    <script src="__PUBLIC__/Home/js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src = "__PUBLIC__/Home/js/laydate.js"></script>
-    <script src = "__PUBLIC__/Home/js/layer.js"></script>
-    <script src="__PUBLIC__/Home/js/layui.js"></script>
-    <script src="__PUBLIC__/Home/js/layui.all.js"></script>
-    <style type="text/css">
+
+<script src="__PUBLIC__/Home/js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
+<script src="__PUBLIC__/Home/js/hammer.js" type="text/javascript" charset="utf-8"></script>
+<script src="__PUBLIC__/Home/js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
+<script src="__PUBLIC__/Home/js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="__PUBLIC__/Home/js/laydate.js"></script>
+<script src="__PUBLIC__/Home/js/layer.js"></script>
+<script src="__PUBLIC__/Home/js/layui.js"></script>
+<script src="__PUBLIC__/Home/js/layui.all.js"></script>
+<style type="text/css">
 * {
         margin: 0;
         padding: 0;
@@ -115,16 +114,17 @@
 }
 */
 </style>
-    
+
 
 </head>
-<body>
-<div class = "headLogin">
 
-    <div class = "left changeBan">
-        <h2>发布项目</h2>
-    </div>
-    <div class="right person">
+<body>
+    <div class="headLogin">
+
+        <div class="left changeBan">
+            <h2>发布项目</h2>
+        </div>
+        <!-- <div class="right person">
         <div class="dropdown pull-right">
             <a href="#" data-toggle="dropdown" class="dropdown-toggle"><img src="../imgs/personDl.jpg" alt=""></a>
             <ul class="dropdown-menu">
@@ -140,97 +140,97 @@
             </ul>
 
         </div>
+    </div> -->
+
     </div>
+    <div class="container" style="margin-bottom: 40px;">
+        <div style="height: 80px;">
+            <h3 class="deliver-tit">发布项目</h3>
+        </div>
 
-</div>
-<div class="container" style = "margin-bottom: 40px;">
-    <div style = "height: 80px;">
-        <h3 class = "deliver-tit">发布项目</h3>
-    </div>
+        <div class="col-md-12" style="background: #FFFFFF;padding: 30px;">
+            <form role="form" class="deliver-form" id="upBox">
+                <div class="form-group">
+                    <label for="name">项目名称</label>
+                    <input type="text" name="project_name" class="form-control" id="name" placeholder="请输入项目名称">
+                </div>
 
-    <div class = "col-md-12" style = "background: #FFFFFF;padding: 30px;" >
-        <form role="form" class = "deliver-form" id="upBox">
-            <div class="form-group">
-                <label for="name">项目名称</label>
-                <input type="text" name = "project_name" class="form-control" id="name" placeholder="请输入项目名称">
-            </div>
-
-            <div class="form-group">
-                <label for="name">服务对象</label>
-                <select class ="serverArea" name="server_area" lay-verify="" id="">
+                <div class="form-group">
+                    <label for="name">服务对象</label>
+                    <select class="serverArea" name="server_area" lay-verify="" id="">
                 <foreach name="service_object" item="val">
                     <option value="{$val.sjy_id}">{$val.service_object_name}</option>
                 </foreach>
                 </select>
-            </div>
-            <div class="form-group">
-                <label for="name">征集周期</label>
-                <input name = "collect_start_time" placeholder="请选择征集周期" type="text" id="test2" value = "" style = "width: 192px;">
-            </div>
-            <div class="form-group">
-                <label for="name">项目周期</label>
-                <input name = "start_time" type="text" placeholder="请选择项目周期" id="test1" style = "width: 192px;">
-            </div>
-             <div class="form-group">
-                <label for="name">项目预算</label>
-                <input name = "plan_money" placeholder="请输入项目预算" type="text" id="" value = ""  onKeyUp="value=value.replace(/[^\d]/g,'')" > <span>万元</span>
-            </div>
-            <div class="form-group">
-                <label for="name">项目介绍</label>
-                <textarea id = "formTextarea" placeholder="请输入项目介绍" name = "demand_describe" class="form-control ccccc" rows="3" ></textarea>
-            </div>
-            <div class="form-group">
-                <label for="name">项目主图</label>
-                        <div class="ycupload-mainbox">
-                                    <div class="ycupload-line"></div>
-                                    <div style="height:30px;"></div>
-                                    <div  style="min-height:1px;">
-                                        <div class="container">
-                                            <div class="row">
-                                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding-right:0;padding-left:36px;">
-                                                    <!--<a href="javascript:void(0);" class="cover-uploadBtn">
+                </div>
+                <div class="form-group">
+                    <label for="name">征集周期</label>
+                    <input name="collect_start_time" placeholder="请选择征集周期" type="text" id="test2" value="" style="width: 192px;">
+                </div>
+                <div class="form-group">
+                    <label for="name">项目周期</label>
+                    <input name="start_time" type="text" placeholder="请选择项目周期" id="test1" style="width: 192px;">
+                </div>
+                <div class="form-group">
+                    <label for="name">项目预算</label>
+                    <input name="plan_money" placeholder="请输入项目预算" type="text" id="" value="" onKeyUp="value=value.replace(/[^\d]/g,'')"> <span>万元</span>
+                </div>
+                <div class="form-group">
+                    <label for="name">项目介绍</label>
+                    <textarea id="formTextarea" placeholder="请输入项目介绍" name="demand_describe" class="form-control ccccc" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="name">项目主图</label>
+                    <div class="ycupload-mainbox">
+                        <div class="ycupload-line"></div>
+                        <div style="height:30px;"></div>
+                        <div style="min-height:1px;">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12" style="padding-right:0;padding-left:36px;">
+                                        <!--<a href="javascript:void(0);" class="cover-uploadBtn">
                                                         <img src="img/yc_uploadimg_06.png"/>
                                                         <div id="clipArea"></div>
                                                         <input type="file" id="file">
                                                         <button id="clipBtn">截取</button>
                                                     </a>
                                                     <div id="view"></div>-->
-                                                    <div style="min-height:1px;line-height:160px;text-align:center;position:relative;" ontouchstart="">
-                                                        <div class="cover-wrap" style="display:none;position:fixed;left:0;top:0;width:100%;height:100%;background: rgba(0, 0, 0, 0.4);z-index: 10000000;text-align:center;">    
-                                                            <div class="" style="width:700px;height:400px;margin:100px auto;background-color:#FFFFFF;overflow: hidden;border-radius:4px;">
-                                                                <div id="clipArea" style="margin:10px;height: 320px;"></div>
-                                                                <div class="" style="height:56px;line-height:36px;text-align: center;padding-top:8px;">
-                                                                    <button onclick="return false" id="clipBtn" style="width:120px;height: 36px;border-radius: 4px;background-color:#ff8a00;color: #FFFFFF;font-size: 14px;text-align: center;line-height: 36px;outline: none;">确定</button>
-                                                                    <button onClick="javascript:$('.cover-wrap').fadeOut();" style="width:120px;height: 36px;border-radius: 4px;background-color:#ff8a00;color: #FFFFFF;font-size: 14px;text-align: center;line-height: 36px;outline: none;">关闭</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div id="view" style="width:214px;height:160.5px;" title="请上传 428*321 的项目主图"></div>
-                                                        <div style="height:10px;"></div>
-                                                        <div class="" style="width:140px;height:32px;border-radius: 4px;background-color:#ff8a00;color: #FFFFFF;font-size: 14px;text-align:center;line-height:32px;outline:none;margin-left:37px;position:relative;">
-                                                            点击上传主图
-                                                            <input type="file" id="file" style="cursor:pointer;opacity:0;filter:alpha(opacity=0);width:100%;height:100%;position:absolute;top:0;left:0;">
-                                                        </div>
+                                        <div style="min-height:1px;line-height:160px;text-align:center;position:relative;" ontouchstart="">
+                                            <div class="cover-wrap" style="display:none;position:fixed;left:0;top:0;width:100%;height:100%;background: rgba(0, 0, 0, 0.4);z-index: 10000000;text-align:center;">
+                                                <div class="" style="width:700px;height:400px;margin:100px auto;background-color:#FFFFFF;overflow: hidden;border-radius:4px;">
+                                                    <div id="clipArea" style="margin:10px;height: 320px;"></div>
+                                                    <div class="" style="height:56px;line-height:36px;text-align: center;padding-top:8px;">
+                                                        <button onclick="return false" id="clipBtn" style="width:120px;height: 36px;border-radius: 4px;background-color:#ff8a00;color: #FFFFFF;font-size: 14px;text-align: center;line-height: 36px;outline: none;">确定</button>
+                                                        <button onClick="javascript:$('.cover-wrap').fadeOut();" style="width:120px;height: 36px;border-radius: 4px;background-color:#ff8a00;color: #FFFFFF;font-size: 14px;text-align: center;line-height: 36px;outline: none;">关闭</button>
                                                     </div>
-                                                    
-                                                    
                                                 </div>
                                             </div>
+                                            <div id="view" style="width:214px;height:160.5px;" title="请上传 428*321 的项目主图"></div>
+                                            <div style="height:10px;"></div>
+                                            <div class="" style="width:140px;height:32px;border-radius: 4px;background-color:#ff8a00;color: #FFFFFF;font-size: 14px;text-align:center;line-height:32px;outline:none;margin-left:37px;position:relative;">
+                                                点击上传主图
+                                                <input type="file" id="file" style="cursor:pointer;opacity:0;filter:alpha(opacity=0);width:100%;height:100%;position:absolute;top:0;left:0;">
+                                            </div>
                                         </div>
-                                        
-                                    </div>
-                                    <div style="height:25px;"></div>
-                        </div>
-            </div>
-            <div class="form-group">
-                <label for="name">项目相册</label>
-                 <div style="width: 100%;position: relative;">
 
-                    <div id="inputBox"><input type="file" title="请选择图片" id="file1" multiple accept="image/png,image/jpg,image/gif,image/JPEG" />点击选择图片</div>
-                    <div id="imgBox"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div style="height:25px;"></div>
+                    </div>
                 </div>
-            </div>
-          <!--   <div class = "clearfix" style = "height: 200px; position: relative;">
+                <div class="form-group">
+                    <label for="name">项目相册</label>
+                    <div style="width: 100%;position: relative;">
+
+                        <div id="inputBox"><input type="file" title="请选择图片" id="file1" multiple accept="image/png,image/jpg,image/gif,image/JPEG" />点击选择图片</div>
+                        <div id="imgBox"></div>
+                    </div>
+                </div>
+                <!--   <div class = "clearfix" style = "height: 200px; position: relative;">
                 <label for="name">上传图片</label>
                 <div class="page-container">
                     <div id="uploader" class="wu-example">
@@ -252,80 +252,80 @@
                     </div>
                 </div>
             </div> -->
-            <div class = "clearfix" style = "width: 100%;text-align: center;padding-top:200px;">
-                <a href = "javascript:;" id = "deliverBtn" type="submit" class="btn btn-default deliver-btn">提交</a>
-            </div>
+                <div class="clearfix" style="width: 100%;text-align: center;padding-top:200px;">
+                    <a href="javascript:;" id="deliverBtn" type="submit" class="btn btn-default deliver-btn">提交</a>
+                </div>
 
 
-        </form>
+            </form>
+        </div>
+
     </div>
-   
-</div>
-<div class="row clearfix footerBox">
-    <div class="container">
-        <div class="copyright fl">
-            <p class = "left">北京社居易有限公司 版权所有</p>
-            <p class = "right">
-                Copyright © EasyLife.com All rights reserved.2017-2020  京ICP证1166666号 京公网安备133333333444
-            </p>
+    <div class="row clearfix footerBox">
+        <div class="container">
+            <div class="copyright fl">
+                <p class="left">北京社居易有限公司 版权所有</p>
+                <p class="right">
+                    Copyright © EasyLife.com All rights reserved.2017-2020 京ICP证1166666号 京公网安备133333333444
+                </p>
+            </div>
         </div>
     </div>
-</div>
 </body>
-<script src="__PUBLIC__/Home/js/uploadImg20180401sjj.js" type="text/javascript" charset="utf-8"></script>
-    <script type="text/javascript">
-        imgUpload({
-            inputId: 'file1', //input框id
-            imgBox: 'imgBox', //图片容器id
-            buttonId: 'deliverBtn', //提交按钮id
-            upUrl: '__CONTROLLER__/doSendProject', //提交地址
-            data: 'project_images', //参数名
-            num: "5" //上传个数
-        })
-    </script>
- <script type="text/javascript">
-        
-        //上传封面
-        //document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-        var clipArea = new bjj.PhotoClip("#clipArea", {
-            size: [428, 321],// 截取框的宽和高组成的数组。默认值为[260,260]
-            outputSize: [428, 321], // 输出图像的宽和高组成的数组。默认值为[0,0]，表示输出图像原始大小
-            //outputType: "jpg", // 指定输出图片的类型，可选 "jpg" 和 "png" 两种种类型，默认为 "jpg"
-            file: "#file", // 上传图片的<input type="file">控件的选择器或者DOM对象
-            view: "#view", // 显示截取后图像的容器的选择器或者DOM对象
-            ok: "#clipBtn", // 确认截图按钮的选择器或者DOM对象
-            loadStart: function() {
-                // 开始加载的回调函数。this指向 fileReader 对象，并将正在加载的 file 对象作为参数传入
-                $('.cover-wrap').fadeIn();
-                console.log("照片读取中");
-            },
-            loadComplete: function() {
-                 // 加载完成的回调函数。this指向图片对象，并将图片地址作为参数传入
-                console.log("照片读取完成");
-            },
-            //loadError: function(event) {}, // 加载失败的回调函数。this指向 fileReader 对象，并将错误事件的 event 对象作为参数传入
-            clipFinish: function(dataURL) {
-                 // 裁剪完成的回调函数。this指向图片对象，会将裁剪出的图像数据DataURL作为参数传入
-                $('.cover-wrap').fadeOut();
-                $('#view').css('background-size','100% 100%');
-                console.log(dataURL);
-                $("form").append("<input type='hidden' name='main_image' value='"+dataURL+"' />");
-            }
-        });
-        //clipArea.destroy();
-        </script>
+<script src="__PUBLIC__/Home/js/uploadImg20180401sjjsendproject.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    imgUpload({
+        inputId: 'file1', //input框id
+        imgBox: 'imgBox', //图片容器id
+        buttonId: 'deliverBtn', //提交按钮id
+        upUrl: '__CONTROLLER__/doSendProject', //提交地址
+        data: 'project_images', //参数名
+        num: "5" //上传个数
+    })
+</script>
+<script type="text/javascript">
+    //上传封面
+    //document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    var clipArea = new bjj.PhotoClip("#clipArea", {
+        size: [428, 321], // 截取框的宽和高组成的数组。默认值为[260,260]
+        outputSize: [428, 321], // 输出图像的宽和高组成的数组。默认值为[0,0]，表示输出图像原始大小
+        //outputType: "jpg", // 指定输出图片的类型，可选 "jpg" 和 "png" 两种种类型，默认为 "jpg"
+        file: "#file", // 上传图片的<input type="file">控件的选择器或者DOM对象
+        view: "#view", // 显示截取后图像的容器的选择器或者DOM对象
+        ok: "#clipBtn", // 确认截图按钮的选择器或者DOM对象
+        loadStart: function() {
+            // 开始加载的回调函数。this指向 fileReader 对象，并将正在加载的 file 对象作为参数传入
+            $('.cover-wrap').fadeIn();
+            console.log("照片读取中");
+        },
+        loadComplete: function() {
+            // 加载完成的回调函数。this指向图片对象，并将图片地址作为参数传入
+            console.log("照片读取完成");
+        },
+        //loadError: function(event) {}, // 加载失败的回调函数。this指向 fileReader 对象，并将错误事件的 event 对象作为参数传入
+        clipFinish: function(dataURL) {
+            // 裁剪完成的回调函数。this指向图片对象，会将裁剪出的图像数据DataURL作为参数传入
+            $('.cover-wrap').fadeOut();
+            $('#view').css('background-size', '100% 100%');
+            console.log(dataURL);
+            $("form").append("<input type='hidden' name='main_image' value='" + dataURL + "' />");
+        }
+    });
+    //clipArea.destroy();
+</script>
 <script>
-
     //执行一个laydate实例
     laydate.render({
-        elem: '#test1'
-        ,range: '~' //或 range: '~' 来自定义分割字符
-        ,min: '{$nowtimw}'
+        elem: '#test1',
+        range: '~' //或 range: '~' 来自定义分割字符
+            ,
+        min: '{$nowtimw}'
     });
     laydate.render({
-        elem: '#test2'
-        ,range: '~' //或 range: '~' 来自定义分割字符
-        ,min: '{$nowtimw}'
+        elem: '#test2',
+        range: '~' //或 range: '~' 来自定义分割字符
+            ,
+        min: '{$nowtimw}'
     });
 
 
@@ -460,12 +460,6 @@
 
 
     // })
-
-
-
-
-
-
 </script>
 
 </html>
