@@ -18,8 +18,8 @@
 					 //当前时间大于项目开始时间
 					 if(time()>=strtotime($starttime))
 					 {
-						   //将该项目改为社会组织同意（默认同意）
-						   //开启事务
+						     //将该项目改为社会组织同意（默认同意）
+						     //开启事务
 							 $model = M();
 							 $model->startTrans();
  
@@ -131,6 +131,7 @@
 		//执行社会组织认证
 		public function doOriganizationIdenty()
 		{
+			$doc = new \XSDocument();//迅搜文档对象
 			//接收社会组织认证参数
 			$origanization_name = I("post.origanization_name");  //社会组织名字
 			$province = I("post.province");             //社会组织所在省份
@@ -312,6 +313,12 @@
 	            $model->commit();
 	            $ret["state"] = 1;
 	            $ret['errorInfo'] = '';
+	            //社会组织信息进入搜索服务
+                $xs = new \XS('origanization');
+                //项目id,项目标题 项目主图，项目所属社区名字 项目服务领域 服务领域id,项目需求简介，项目所在省市区，项目征集时间,项目开始时间，项目状态
+                $search_data = array('sjy_id'=>$origanization_id,'sjy_origanization_name'=>$origanization_name,'sjy_origanization_type_id'=>$origanization_type,'sjy_origanization_type_name'=>$base_info['sjy_origanization_type_name'],'sjy_origanization_city_id'=>$city,'sjy_origanization_city_name'=>$city_name,'sjy_origanization_area_name'=>$area_name,'sjy_origanization_logo_img_path'=>$base_info['sjy_origanization_logo_img_path']);
+                $doc->setFields($search_data);
+                $xs->index->add($doc);
 	            $this->ajaxReturn($ret);   //认证成功
 	        }
 	        else

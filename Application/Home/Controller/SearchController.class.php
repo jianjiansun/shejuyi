@@ -102,15 +102,12 @@
            {
               
               $ret['data'][$key]['sjy_id'] = $value->sjy_id;
-              $ret['data'][$key]['sjy_community_name'] = $value->sjy_community_name;
-              $ret['data'][$key]['community_info']['sjy_community_name'] = $value->sjy_community_name;
-              $ret['data'][$key]['sjy_community_project_title'] = $value->sjy_community_project_title;
-              $ret['data'][$key]['sjy_community_project_service_area'] = $value->sjy_community_project_service_area;
-              $ret['data'][$key]['project_image_path'] = $value->project_image_path;
-              $ret['data'][$key]['address']['sjy_community_province_name'] = $value->sjy_community_province;
-              $ret['data'][$key]['address']['sjy_community_city_name'] = $value->sjy_community_city;
-              $ret['data'][$key]['address']['sjy_community_area_name'] = $value->sjy_community_area;
-              $ret['data'][$key]['address']['sjy_community_street_name'] = $value->sjy_community_street;
+              $ret['data'][$key]['sjy_origanization_type_id'] = $value->sjy_origanization_type_id;
+              $ret['data'][$key]['sjy_origanization_logo_img_path'] = $value->sjy_origanization_logo_img_path;
+              $ret['data'][$key]['sjy_origanization_name'] = $value->sjy_origanization_name;
+              $ret['data'][$key]['sjy_origanization_type_name'] = $value->sjy_origanization_type_name;
+              $ret['data'][$key]['address']['sjy_origanization_city_name'] = $value->sjy_origanization_city_name;
+              $ret['data'][$key]['address']['sjy_origanization_area_name'] = $value->sjy_origanization_area_name;
            }
            if(empty($docs))
            {
