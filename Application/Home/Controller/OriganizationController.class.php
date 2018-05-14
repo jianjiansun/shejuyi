@@ -458,7 +458,7 @@
 	        $server_area = I("post.server_area");  //项目服务领域 
 	        $demand_describe=I("post.demand_describe");  //项目需求简介
 	      
-	        $data['plan_money'] = I('post.plan_money'); //项目预算
+	        $plan_money = I('post.plan_money'); //项目预算
 			$data['start_time'] = I("post.start_time");  //项目开始时间
 			$data['danwei'] = I('post.danwei'); //单位 1月 2年
 			$data['project_background'] = I('post.project_background'); //项目背景
@@ -487,35 +487,35 @@
 	        {
 	            $ret["errorInfo"] = "项目预算不能为空";
 			}
-			if(empty($project_background))
+			if(empty($data['project_background']))
 	        {
 	            $ret["errorInfo"] = "项目项目背景不能为空";
 	        }
-	        if(empty($project_goal))
+	        if(empty($data['project_goal']))
 	        {
 	            $ret["errorInfo"] = "项目目标及意义不能为空";
 	        }
-	        if(empty($project_experience))
+	        if(empty($data['project_experience']))
 	        {
 	            $ret["errorInfo"] = "已有基础及经验不能为空";
 	        }
-	        if(empty($project_way))
+	        if(empty($data['project_way']))
 	        {
 	            $ret["errorInfo"] = "项目具体方法及途径不能为空";
 			}
-			if(empty($project_rate_plan))
+			if(empty($data['project_rate_plan']))
 	        {
 	            $ret["errorInfo"] = "项目实施进度及安排不能为空";
 	        }
-	        if(empty($project_desired_result))
+	        if(empty($data['project_desired_result']))
 	        {
 	            $ret["errorInfo"] = "项目预期效果不能为空";
 	        }
-	        if(empty($project_range))
+	        if(empty($data['project_range']))
 	        {
 	            $ret["errorInfo"] = "项目涵盖范围及规模不能为空";
 	        }
-	        if(empty($project_innovate))
+	        if(empty($data['project_innovate']))
 	        {
 	            $ret["errorInfo"] = "项目创新之处不能为空";
 	        }

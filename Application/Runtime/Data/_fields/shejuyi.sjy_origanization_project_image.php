@@ -1,0 +1,1 @@
+a:5:{i:0;s:6:"sjy_id";i:1;s:28:"sjy_origanization_project_id";i:2;s:31:"sjy_origanization_project_image";s:3:"_pk";s:6:"sjy_id";s:5:"_type";a:3:{s:6:"sjy_id";s:16:"int(10) unsigned";s:28:"sjy_origanization_project_id";s:7:"int(11)";s:31:"sjy_origanization_project_image";s:12:"varchar(255)";}}
