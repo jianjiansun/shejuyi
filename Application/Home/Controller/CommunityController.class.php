@@ -266,6 +266,7 @@ class CommunityController extends BaseController {
             $base_info['sjy_community_isidentify'] = 1;                 //社区已认证
             $base_info['sjy_community_admin_id'] = session('userInfo')['sjy_id']; //社区管理员id
             $base_info['sjy_community_register_time'] = date("Y-m-d H:i:s"); //社区认证时间
+            $base_info['sjy_community_logo_img_path'] = 'community/logo/moren.jpg';  //社区注册 默认的社区logo
             //插入社区基本信息，并取得社区自增id
             $community_id = $community_base_info->add($base_info);
     	      $community_base_info->where(array("sjy_id"=>$community_id))->save(array("sjy_community_code"=>$community_id));
@@ -472,7 +473,7 @@ class CommunityController extends BaseController {
                     $this->ajaxReturn(array('state'=>0,'errorInfo'=>'项目主图上传失败,请重试！'));
                 }
             }else{
-                $path = '';
+                $path = M('community_base_info')->where(array('sjy_id'=>session("userInfo")['sjy_community_user_community_code']))->getField('sjy_community_logo_img_path');
             }
 
             //项目相册
