@@ -153,59 +153,96 @@
 
             <form role="form" class="deliver-form" id="upBox">
                 <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
-                    <ul class="layui-tab-title">
-                        <li class="layui-this">申请项目</li>
-                        <li>当前项目</li>
-                        <li>历史项目</li>
-                    </ul>
-                    <div class="layui-tab-content">
-                        <div class="layui-tab-item layui-show">
+                    
+                       
+                        
                             <div class="form-group">
                                 <label for="name">项目名称</label>
                                 <input type="text" name="project_name" class="form-control" id="name" placeholder="请输入项目名称">
                             </div>
-
+                            <div class="form-group">
+                                <label for="name">项目类别</label>
+                                <select class="type" name="type" lay-verify="" id="type">
+                                       <option value='0'>请选择</option>
+                                       <option value='1'>申请项目</option>
+                                       <option value='2'>当前项目</option>
+                                       <option value='3'>历史项目</option>
+                                </select>
+                            </div>
+                            <script type="text/javascript">
+                                        $("#type").change(function () {  
+                                            var type = $(this).children('option:selected').val();
+                                            if(type == 1)
+                                            {
+                                                $("#project_goal").css('display','block'); //目的意义及目标
+                                                $("#project_experience").css('display','block'); //已有基础及经验
+                                                $("#project_way").css('display','block'); //具体方法及途径
+                                                $("#project_rate_plan").css('display','none'); //实施进度安排
+                                                $("#project_desired_result").css('display','block'); //项目预期效果
+                                                $("#project_range").css('display','none'); //涵盖范围及规模
+                                                $("#project_innovate").css('display','none');  //创新之处
+                                                $("#plan_money").css('display','block');  //创新之处
+                                            }else if(type==2)
+                                            {
+                                                $("#project_goal").css('display','block'); //目的意义及目标
+                                                $("#project_experience").css('display','block'); //已有基础及经验
+                                                $("#project_way").css('display','block'); //具体方法及途径
+                                                $("#project_rate_plan").css('display','block'); //实施进度安排
+                                                $("#project_desired_result").css('display','block'); //项目预期效果
+                                                $("#project_range").css('display','block'); //涵盖范围及规模
+                                                $("#project_innovate").css('display','block');  //创新之处
+                                                $("#plan_money").css('display','block');  //创新之处
+                                            }else if(type == 3){
+                                                $("#project_goal").css('display','block'); //目的意义及目标
+                                                $("#project_experience").css('display','none'); //已有基础及经验
+                                                $("#project_way").css('display','block'); //具体方法及途径
+                                                $("#project_rate_plan").css('display','none'); //实施进度安排
+                                                $("#project_desired_result").css('display','block'); //项目预期效果
+                                                $("#project_range").css('display','block'); //涵盖范围及规模
+                                                $("#project_innovate").css('display','block');  //创新之处
+                                                $("#plan_money").css('display','none');  //创新之处
+                                            }
+                                            else{
+                                                layer.msg('请选择项目类别')
+                                            }
+                                        });  
+                            </script>
                             <div class="form-group">
                                 <label for="name">服务领域</label>
                                 <select class="serverArea" name="server_area" lay-verify="" id="">
-                <foreach name="service_object" item="val">
-                    <option value="{$val.sjy_id}">{$val.service_object_name}</option>
-                </foreach>
-                </select>
+                                    <foreach name="service_object" item="val">
+                                        <option value="{$val.sjy_id}">{$val.service_object_name}</option>
+                                    </foreach>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label for="start_time">项目周期</label>
                                 <select name="start_time" lay-verify="">
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                          <option value="10">10</option>
-                          <option value="11">11</option>
-                          <option value="12">12</option>
-<<<<<<< HEAD
-                    </select> 
-                    <!-- <input name="start_time" type="text" placeholder="请选择项目周期" id="test1" style="width: 192px;"> -->
-                    <select name="danwei" lay-verify="">
-=======
-                    </select>
-                                <!-- <input name="start_time" type="text" placeholder="请选择项目周期" id="test1" style="width: 192px;"> -->
+                                      <option value="1">1</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+                                      <option value="4">4</option>
+                                      <option value="5">5</option>
+                                      <option value="6">6</option>
+                                      <option value="7">7</option>
+                                      <option value="8">8</option>
+                                      <option value="9">9</option>
+                                      <option value="10">10</option>
+                                      <option value="11">11</option>
+                                      <option value="12">12</option>
+                                </select> 
+                   
+                    
                                 <select name="danwei" lay-verify="">
->>>>>>> a22a81e46c10b7f062897f96c9848d3ce5e6408c
-                          <option value="1">个月</option>
-                          <option value="2">年</option>
-                    </select>
+                                    <option value="1">个月</option>
+                                    <option value="2">年</option>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label for="name">机构简介</label>
-                                <textarea id="formTextarea" disabled="true" name="origanization_desc" class="form-control ccccc" rows="3"></textarea>
+                                <textarea id="formTextarea" disabled="true" name="origanization_desc" class="form-control ccccc" rows="3">{$origanization_desc}</textarea>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group" id='plan_money' style="display:none">
                                 <label for="name">项目预算</label>
                                 <input name="plan_money" placeholder="请输入项目预算(整数)" type="text" id="" value="" onKeyUp="value=value.replace(/[^\d]/g,'')"> <span>万元</span>
                             </div>
@@ -217,31 +254,31 @@
                                 <label for="name">项目背景</label>
                                 <textarea id="formTextarea" placeholder="请输入项目背景" name="project_background" class="form-control ccccc" rows="3"></textarea>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group" id='project_goal' style="display:none">
                                 <label for="name">目的意义及目标</label>
                                 <textarea id="formTextarea" placeholder="请输入项目目的意义及目标" name="project_goal" class="form-control ccccc" rows="3"></textarea>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group" id='project_experience' style="display:none">
                                 <label for="name">已有基础及经验</label>
                                 <textarea id="formTextarea" placeholder="请输入项目已有基础及经验" name="project_experience" class="form-control ccccc" rows="3"></textarea>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group" id='project_way' style="display:none">
                                 <label for="name">具体方法及途径</label>
                                 <textarea id="formTextarea" placeholder="请输入项目具体方法及途径" name="project_way" class="form-control ccccc" rows="3"></textarea>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group" id='project_rate_plan' style="display:none">
                                 <label for="name">实施进度安排</label>
                                 <textarea id="formTextarea" placeholder="请输入项目实施进度安排" name="project_rate_plan" class="form-control ccccc" rows="3"></textarea>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group" id='project_desired_result' style="display:none">
                                 <label for="name">预期效果</label>
                                 <textarea id="formTextarea" placeholder="请输入项目预期效果" name="project_desired_result" class="form-control ccccc" rows="3"></textarea>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group" id='project_range' style="display:none">
                                 <label for="name">涵盖范围及规模</label>
                                 <textarea id="formTextarea" placeholder="请输入项目涵盖的范围及规模" name="project_range" class="form-control ccccc" rows="3"></textarea>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group" id='project_innovate' style="display:none">
                                 <label for="name">创新之处</label>
                                 <textarea id="formTextarea" placeholder="请输入项目创新之处" name="project_innovate" class="form-control ccccc" rows="3"></textarea>
                             </div>
@@ -266,16 +303,16 @@
                                                             <div class="" style="width:700px;height:400px;margin:100px auto;background-color:#FFFFFF;overflow: hidden;border-radius:4px;">
                                                                 <div id="clipArea" style="margin:10px;height: 320px;"></div>
                                                                 <div class="" style="height:56px;line-height:36px;text-align: center;padding-top:8px;">
-                                                                    <button onclick="return false" id="clipBtn" style="width:120px;height: 36px;border-radius: 4px;background-color:#ff8a00;color: #FFFFFF;font-size: 14px;text-align: center;line-height: 36px;outline: none;">确定</button>
+                                                                    <button onclick="return false" id="clipBtn2" style="width:120px;height: 36px;border-radius: 4px;background-color:#ff8a00;color: #FFFFFF;font-size: 14px;text-align: center;line-height: 36px;outline: none;">确定</button>
                                                                     <button onClick="javascript:$('.cover-wrap').fadeOut();" style="width:120px;height: 36px;border-radius: 4px;background-color:#ff8a00;color: #FFFFFF;font-size: 14px;text-align: center;line-height: 36px;outline: none;">关闭</button>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div id="view" style="width:214px;height:160.5px;" title="请上传 428*321 的项目主图"></div>
+                                                        <div id="view2" style="width:214px;height:160.5px;" title="请上传 428*321 的项目主图"></div>
                                                         <div style="height:10px;"></div>
                                                         <div class="" style="width:140px;height:32px;border-radius: 4px;background-color:#ff8a00;color: #FFFFFF;font-size: 14px;text-align:center;line-height:32px;outline:none;margin-left:37px;position:relative;">
                                                             点击上传主图
-                                                            <input type="file" id="file" style="cursor:pointer;opacity:0;filter:alpha(opacity=0);width:100%;height:100%;position:absolute;top:0;left:0;">
+                                                            <input type="file" id="file2" style="cursor:pointer;opacity:0;filter:alpha(opacity=0);width:100%;height:100%;position:absolute;top:0;left:0;">
                                                         </div>
                                                     </div>
 
@@ -292,19 +329,19 @@
                                 <label for="name">项目相册</label>
                                 <div style="width: 100%;position: relative;">
 
-                                    <div id="inputBox"><input type="file" title="请选择图片" id="file1" multiple accept="image/png,image/jpg,image/gif,image/JPEG" />点击选择图片</div>
-                                    <div id="imgBox"></div>
+                                    <div id="inputBox"><input type="file" title="请选择图片" id="file2" multiple accept="image/png,image/jpg,image/gif,image/JPEG" />点击选择图片</div>
+                                    <div id="imgBox2"></div>
                                 </div>
                             </div>
                             <div class="clearfix" style="width: 100%;text-align: center;padding-top:200px;">
-                                <a href="javascript:;" id="deliverBtn" type="submit" class="btn btn-default deliver-btn">提交</a>
+                                <a href="javascript:;" id="deliverBtn2" type="submit" class="btn btn-default deliver-btn">提交</a>
                             </div>
                             <script type="text/javascript">
                                 imgUpload({
-                                    inputId: 'file1', //input框id
-                                    imgBox: 'imgBox', //图片容器id
-                                    buttonId: 'deliverBtn', //提交按钮id
-                                    upUrl: '__CONTROLLER__/doSendProject?type=1', //提交地址
+                                    inputId: 'file2', //input框id
+                                    imgBox: 'imgBox2', //图片容器id
+                                    buttonId: 'deliverBtn2', //提交按钮id
+                                    upUrl: '__CONTROLLER__/doSendProject?type=2', //提交地址
                                     data: 'project_images', //参数名
                                     num: "5" //上传个数
                                 })
@@ -316,9 +353,9 @@
                                     size: [428, 321], // 截取框的宽和高组成的数组。默认值为[260,260]
                                     outputSize: [428, 321], // 输出图像的宽和高组成的数组。默认值为[0,0]，表示输出图像原始大小
                                     //outputType: "jpg", // 指定输出图片的类型，可选 "jpg" 和 "png" 两种种类型，默认为 "jpg"
-                                    file: "#file", // 上传图片的<input type="file">控件的选择器或者DOM对象
-                                    view: "#view", // 显示截取后图像的容器的选择器或者DOM对象
-                                    ok: "#clipBtn", // 确认截图按钮的选择器或者DOM对象
+                                    file: "#file2", // 上传图片的<input type="file">控件的选择器或者DOM对象
+                                    view: "#view2", // 显示截取后图像的容器的选择器或者DOM对象
+                                    ok: "#clipBtn2", // 确认截图按钮的选择器或者DOM对象
                                     loadStart: function() {
                                         // 开始加载的回调函数。this指向 fileReader 对象，并将正在加载的 file 对象作为参数传入
                                         $('.cover-wrap').fadeIn();
@@ -332,7 +369,7 @@
                                     clipFinish: function(dataURL) {
                                         // 裁剪完成的回调函数。this指向图片对象，会将裁剪出的图像数据DataURL作为参数传入
                                         $('.cover-wrap').fadeOut();
-                                        $('#view').css('background-size', '100% 100%');
+                                        $('#view2').css('background-size', '100% 100%');
                                         console.log(dataURL);
                                         $("form").append("<input type='hidden' name='main_image' value='" + dataURL + "' />");
                                     }
@@ -354,10 +391,9 @@
                                 //     min: '{$nowtimw}'
                                 // });
                             </script>
-                        </div>
-                        <div class="layui-tab-item">当前项目</div>
-                        <div class="layui-tab-item">历史项目</div>
-                    </div>
+                        
+                       
+                   
                 </div>
 
                 <script>

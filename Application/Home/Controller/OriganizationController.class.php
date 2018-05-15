@@ -444,32 +444,43 @@
 			//服务对象
 			$service_object = M("service_object")->select();
 			$this->assign("service_object",$service_object);
-			$this->assign('time',date('Y-m-d',time()));
+			$origanization_desc = M('origanization_base_info')->where(array('sjy_id'=>session('userInfo')['sjy_origanization_user_origanization_code']))->getField('sjy_origanization_introduce');
+			$this->assign('origanization_desc',$origanization_desc);
 			$this->display();
 		}
 		//执行项目插入
 	    public function doSendProject()
 	    {
+	    	
 	        $ret["state"] = 0;
 			$ret['errorInfo'] = '';
+			$type = I('post.type'); //项目类型
+            if(empty($type))
+            {
+            	$ret['errorInfo'] = '请选择项目类型';
+            	$this->ajaxReturn($ret);
+	            die;
+            }
 			
 	        //接收数据
 	        $project_name = I("post.project_name");  //项目名字
 	        $server_area = I("post.server_area");  //项目服务领域 
 	        $demand_describe=I("post.demand_describe");  //项目需求简介
 	      
-	        $plan_money = I('post.plan_money'); //项目预算
-			$data['start_time'] = I("post.start_time");  //项目开始时间
-			$data['danwei'] = I('post.danwei'); //单位 1月 2年
-			$data['project_background'] = I('post.project_background'); //项目背景
-			$data['project_goal'] = I('post.project_goal'); //项目目标及意义
-			$data['project_experience'] = I('post.project_experience');//已有基础及经验
-			$data['project_way'] = I('post.project_way');//具体方法及途径
-			$data['project_rate_plan'] = I('post.project_rate_plan');//实施进度及安排
-			$data['project_desired_result'] = I('post.project_desired_result'); //预期效果
-			$data['project_range'] = I('post.project_range'); //涵盖范围及规模
-			$data['project_innovate'] = I('post.project_innovate');//创新之处
-	       
+	        $plan_money = I('post.plan_money')&&($type==1||$type==2)?I('post.plan_money'):''; //项目预算
+			$data['start_time'] = I("post.start_time")?I('post.start_time'):'';  //项目开始时间
+			$data['danwei'] = I('post.danwei')?I('post.danwei'):''; //单位 1月 2年
+			$data['project_background'] = I('post.project_background')?I('post.project_background'):''; //项目背景
+			$data['project_goal'] = I('post.project_goal')?I('post.project_goal'):''; //项目目标及意义
+			$data['project_experience'] = I('post.project_experience')&&($type==1||$type==2)?I('post.project_experience'):'';//已有基础及经验
+			$data['project_way'] = I('post.project_way')?I('post.project_way'):'';//具体方法及途径
+			$data['project_rate_plan'] = I('post.project_rate_plan')&&$type==2?I('post.project_rate_plan'):'';//实施进度及安排
+			$data['project_desired_result'] = I('post.project_desired_result')?I('post.project_desired_result'):''; //预期效果
+			$data['project_range'] = I('post.project_range')&&($type==2||$type==3)?I('post.project_range'):''; //涵盖范围及规模
+			$data['project_innovate'] = I('post.project_innovate')&&($type==2||$type==3)?I('post.project_innovate'):'';//创新之处
+	        
+
+
 	        //非空校验
 	        if(empty($project_name))
 	        {
@@ -483,7 +494,7 @@
 	        {
 	            $ret["errorInfo"] = "项目说明不能为空";
 	        }
-	        if(empty($plan_money))
+	        if(empty($plan_money)&&($type==1||$type==2))
 	        {
 	            $ret["errorInfo"] = "项目预算不能为空";
 			}
@@ -495,7 +506,7 @@
 	        {
 	            $ret["errorInfo"] = "项目目标及意义不能为空";
 	        }
-	        if(empty($data['project_experience']))
+	        if(empty($data['project_experience'])&&($type==1||$type==2))
 	        {
 	            $ret["errorInfo"] = "已有基础及经验不能为空";
 	        }
@@ -503,20 +514,22 @@
 	        {
 	            $ret["errorInfo"] = "项目具体方法及途径不能为空";
 			}
-			if(empty($data['project_rate_plan']))
+			if(empty($data['project_rate_plan'])&&$type==2)
 	        {
 	            $ret["errorInfo"] = "项目实施进度及安排不能为空";
 	        }
 	        if(empty($data['project_desired_result']))
 	        {
+
 	            $ret["errorInfo"] = "项目预期效果不能为空";
 	        }
-	        if(empty($data['project_range']))
+	        if(empty($data['project_range'])&&($type==2||$type==3))
 	        {
 	            $ret["errorInfo"] = "项目涵盖范围及规模不能为空";
 	        }
-	        if(empty($data['project_innovate']))
+	        if(empty($data['project_innovate'])&&($type==2||$type==3))
 	        {
+	        	
 	            $ret["errorInfo"] = "项目创新之处不能为空";
 	        }
 	        //如果出错，返回
@@ -531,16 +544,21 @@
             $uploadObj = new UploadController();
             //项目主图 主图 base64格式 
             $main_image = I('post.main_image');
-            $base64 = explode('base64,',$main_image)[1];
-            //文件名
-            $path = '/Uploads/origanization/projectimg/'.date('Y-m-d',$time).'/'.$time.uniqid();
-            $base64res = $uploadObj->base64Upload($base64,$path);
-            if($base64res)
+            if($main_image)
             {
-               $projectimg[] = $path; //项目主图
-            }else{
-                 $this->ajaxReturn(array('state'=>0,'errorInfo'=>'项目主图上传失败,请重试！'));
-            }
+	            $base64 = explode('base64,',$main_image)[1];
+	            //文件名
+	            $path = '/Uploads/origanization/projectimg/'.date('Y-m-d',$time).'/'.$time.uniqid();
+	            $base64res = $uploadObj->base64Upload($base64,$path);
+	            if($base64res)
+	            {
+	               $projectimg[] = $path; //项目主图
+	            }else{
+	                $this->ajaxReturn(array('state'=>0,'errorInfo'=>'项目主图上传失败,请重试！'));
+	            }
+	        }else{
+	        	    $path = M('origanization_base_info')->where(array('sjy_id'=>session("userInfo")['sjy_origanization_user_origanization_code']))->getField('sjy_origanization_logo_img_path');
+	        }
 
             //项目相册
             //检测图片是否合法
@@ -588,6 +606,7 @@
 	        $data["sjy_origanization_project_service_area"] = $server_area_name;  //项目服务领域
 	        $data["sjy_origanization_project_service_area_id"] = $server_area;  //项目服务领域id
 	        $data["sjy_origanization_project_info"] = $demand_describe;  //项目详情简介
+	        $data['sjy_origanization_project_type'] = I('post.type'); //社会组织发布的项目类型  1申请项目 2 当前项目 3 历史项目
 	        // $data["sjy_origanization_project_collect_start_time"] = $collect_start_time; //项目开始收集时间
 	        // $data["sjy_origanization_project_collect_end_time"] = $collect_end_time;    //项目结束收集时间
 	        
@@ -598,14 +617,24 @@
 	        //发布城市
 	        $city = M('origanization_position_info')->where(['sjy_origanization_id'=>$origanization])->getField('sjy_origanization_city');
 			$data['sjy_origanization_project_cityid'] = $city;
+
+            
 	        $res = M("origanization_project_info")->add($data);
-	         //插入项目图片
 	        
+
+	         //插入项目图片
 	         foreach ($projectimg as $key => $value) {
                $project_image[] = array('sjy_origanization_project_id'=>$res,'sjy_origanization_project_image'=>$value);
             }
             //插入项目图片
-            $rut = M('origanization_project_image')->addAll($project_image);
+            //插入项目图片
+            if(!empty($project_image))
+            {
+            	$rut = M('origanization_project_image')->addAll($project_image);
+            }else{
+                $rut = 1;
+            }
+            
 	         if($res&&$rut)
             {
                 $model->commit();
