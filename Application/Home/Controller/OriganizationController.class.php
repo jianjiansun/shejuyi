@@ -451,21 +451,25 @@
 	    public function doSendProject()
 	    {
 	        $ret["state"] = 0;
-	        $ret['errorInfo'] = '';
+			$ret['errorInfo'] = '';
+			
 	        //接收数据
 	        $project_name = I("post.project_name");  //项目名字
 	        $server_area = I("post.server_area");  //项目服务领域 
 	        $demand_describe=I("post.demand_describe");  //项目需求简介
 	      
 	        $plan_money = I('post.plan_money'); //项目预算
-	        $start_time = I("post.start_time");  //项目开始时间
-	        $time = explode('~',$collect_start_time);
-	        $collect_start_time = $time[0];
-	        $collect_end_time = $time[1]; //项目结束时间
-
-	        $time = explode('~', $start_time);
-	        $start_time = $time[0];
-	        $end_time = $time[1]; //项目结束时间
+			$data['start_time'] = I("post.start_time");  //项目开始时间
+			$data['danwei'] = I('post.danwei'); //单位 1月 2年
+			$data['project_background'] = I('post.project_background'); //项目背景
+			$data['project_goal'] = I('post.project_goal'); //项目目标及意义
+			$data['project_experience'] = I('post.project_experience');//已有基础及经验
+			$data['project_way'] = I('post.project_way');//具体方法及途径
+			$data['project_rate_plan'] = I('post.project_rate_plan');//实施进度及安排
+			$data['project_desired_result'] = I('post.project_desired_result'); //预期效果
+			$data['project_range'] = I('post.project_range'); //涵盖范围及规模
+			$data['project_innovate'] = I('post.project_innovate');//创新之处
+	       
 	        //非空校验
 	        if(empty($project_name))
 	        {
@@ -477,11 +481,43 @@
 	        }
 	        if(empty($demand_describe))
 	        {
-	            $ret["errorInfo"] = "项目需求简介不能为空";
+	            $ret["errorInfo"] = "项目说明不能为空";
 	        }
-	        if(empty($start_time))
+	        if(empty($plan_money))
 	        {
-	            $ret["errorInfo"] = "项目周期不能为空";
+	            $ret["errorInfo"] = "项目预算不能为空";
+			}
+			if(empty($data['project_background']))
+	        {
+	            $ret["errorInfo"] = "项目项目背景不能为空";
+	        }
+	        if(empty($data['project_goal']))
+	        {
+	            $ret["errorInfo"] = "项目目标及意义不能为空";
+	        }
+	        if(empty($data['project_experience']))
+	        {
+	            $ret["errorInfo"] = "已有基础及经验不能为空";
+	        }
+	        if(empty($data['project_way']))
+	        {
+	            $ret["errorInfo"] = "项目具体方法及途径不能为空";
+			}
+			if(empty($data['project_rate_plan']))
+	        {
+	            $ret["errorInfo"] = "项目实施进度及安排不能为空";
+	        }
+	        if(empty($data['project_desired_result']))
+	        {
+	            $ret["errorInfo"] = "项目预期效果不能为空";
+	        }
+	        if(empty($data['project_range']))
+	        {
+	            $ret["errorInfo"] = "项目涵盖范围及规模不能为空";
+	        }
+	        if(empty($data['project_innovate']))
+	        {
+	            $ret["errorInfo"] = "项目创新之处不能为空";
 	        }
 	        //如果出错，返回
 	        if(!empty($ret["errorInfo"]))
@@ -554,15 +590,14 @@
 	        $data["sjy_origanization_project_info"] = $demand_describe;  //项目详情简介
 	        // $data["sjy_origanization_project_collect_start_time"] = $collect_start_time; //项目开始收集时间
 	        // $data["sjy_origanization_project_collect_end_time"] = $collect_end_time;    //项目结束收集时间
-	        $data["sjy_origanization_project_start_time"] = $start_time; //项目开始时间
-	        $data["sjy_origanization_project_end_time"] = $end_time; //项目结束时间
+	        
 	        $data['sjy_origanization_project_plan_money'] = $plan_money;  //项目预算
 	        $data['sjy_origanization_project_send_prople_id'] = session('userInfo')['sjy_id'];//发布人id
 	        $data['sjy_origanization_project_send_prople_name'] = session('userInfo')['sjy_origanization_user_real_name'];//发布人名字
 	        $data['sjy_origanization_project_send_time'] = date('Y-m-d H:i:s',time());//发布时间
 	        //发布城市
 	        $city = M('origanization_position_info')->where(['sjy_origanization_id'=>$origanization])->getField('sjy_origanization_city');
-	        $data['sjy_origanization_project_cityid'] = $city;
+			$data['sjy_origanization_project_cityid'] = $city;
 	        $res = M("origanization_project_info")->add($data);
 	         //插入项目图片
 	        

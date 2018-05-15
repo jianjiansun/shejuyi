@@ -1,23 +1,39 @@
-<link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/deliver.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/modules/laydate/default/laydate.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/modules/layer/default/layer.css">
-<!--  <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/webuploader.css"> -->
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EasyLife</title>
+    <link rel="stylesheet" href="/Public/Home/css/bootstrap.css">
+    <link rel="stylesheet" href="/Public/Home/css/common.css">
+    <link rel="stylesheet" href="/Public/Home/css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+    <script src="/Public/Home/js/jquery-1.12.4.js"></script>
+    <script src="/Public/Home/js/bootstrap.js"></script>
+    <script src = "/Public/Home/js/autoResizeImage.js"></script>
 
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/demo.css">
+<link rel="stylesheet" href="/Public/Home/css/region.css">
+<link rel="stylesheet" href="/Public/Home/css/deliver.css">
+<link rel="stylesheet" href="/Public/Home/css/layui.css">
+<link rel="stylesheet" href="/Public/Home/css/modules/laydate/default/laydate.css">
+<link rel="stylesheet" href="/Public/Home/css/modules/layer/default/layer.css">
+<!--  <link rel="stylesheet" type="text/css" href="/Public/Home/css/webuploader.css"> -->
+
+<link rel="stylesheet" type="text/css" href="/Public/Home/css/demo.css">
 
 
 
-<script src="__PUBLIC__/Home/js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
-<script src="__PUBLIC__/Home/js/hammer.js" type="text/javascript" charset="utf-8"></script>
-<script src="__PUBLIC__/Home/js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
-<script src="__PUBLIC__/Home/js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="__PUBLIC__/Home/js/laydate.js"></script>
-<script src="__PUBLIC__/Home/js/layer.js"></script>
-<script src="__PUBLIC__/Home/js/layui.js"></script>
-<script src="__PUBLIC__/Home/js/layui.all.js"></script>
-<script src="__PUBLIC__/Home/js/uploadImg20180401sjjsendproject.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Public/Home/js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Public/Home/js/hammer.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Public/Home/js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Public/Home/js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Public/Home/js/laydate.js"></script>
+<script src="/Public/Home/js/layer.js"></script>
+<script src="/Public/Home/js/layui.js"></script>
+<script src="/Public/Home/js/layui.all.js"></script>
+<script src="/Public/Home/js/uploadImg20180401sjjsendproject.js" type="text/javascript" charset="utf-8"></script>
 <style type="text/css">
 * {
         margin: 0;
@@ -168,9 +184,7 @@
                             <div class="form-group">
                                 <label for="name">服务领域</label>
                                 <select class="serverArea" name="server_area" lay-verify="" id="">
-                <foreach name="service_object" item="val">
-                    <option value="{$val.sjy_id}">{$val.service_object_name}</option>
-                </foreach>
+                <?php if(is_array($service_object)): foreach($service_object as $key=>$val): ?><option value="<?php echo ($val["sjy_id"]); ?>"><?php echo ($val["service_object_name"]); ?></option><?php endforeach; endif; ?>
                 </select>
                             </div>
                             <div class="form-group">
@@ -188,15 +202,9 @@
                           <option value="10">10</option>
                           <option value="11">11</option>
                           <option value="12">12</option>
-<<<<<<< HEAD
-                    </select> 
-                    <!-- <input name="start_time" type="text" placeholder="请选择项目周期" id="test1" style="width: 192px;"> -->
-                    <select name="danwei" lay-verify="">
-=======
                     </select>
                                 <!-- <input name="start_time" type="text" placeholder="请选择项目周期" id="test1" style="width: 192px;"> -->
                                 <select name="danwei" lay-verify="">
->>>>>>> a22a81e46c10b7f062897f96c9848d3ce5e6408c
                           <option value="1">个月</option>
                           <option value="2">年</option>
                     </select>
@@ -304,7 +312,7 @@
                                     inputId: 'file1', //input框id
                                     imgBox: 'imgBox', //图片容器id
                                     buttonId: 'deliverBtn', //提交按钮id
-                                    upUrl: '__CONTROLLER__/doSendProject?type=1', //提交地址
+                                    upUrl: '/index.php/home/origanization/doSendProject?type=1', //提交地址
                                     data: 'project_images', //参数名
                                     num: "5" //上传个数
                                 })
@@ -345,13 +353,13 @@
                                 //     elem: '#test1',
                                 //     range: '~' //或 range: '~' 来自定义分割字符
                                 //         ,
-                                //     min: '{$nowtimw}'
+                                //     min: '<?php echo ($nowtimw); ?>'
                                 // });
                                 // laydate.render({
                                 //     elem: '#test2',
                                 //     range: '~' //或 range: '~' 来自定义分割字符
                                 //         ,
-                                //     min: '{$nowtimw}'
+                                //     min: '<?php echo ($nowtimw); ?>'
                                 // });
                             </script>
                         </div>
