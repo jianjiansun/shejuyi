@@ -39,7 +39,7 @@
                             session('userInfo',$userInfo);                
                             //查询该用户是否认证
                             $this->isidentify = session("userInfo")["sjy_community_user_isidentify"];  //是否认证
-                            $this->user_image = 'http://p33g9t7dr.bkt.clouddn.com/'.session("userInfo")['sjy_community_user_image'];       //用户图片
+                            $this->user_image = session("userInfo")['sjy_community_user_image'];       //用户图片
                             $this->code = session('userInfo')['sjy_community_user_community_code']; //社区编号
                             $this->index = "/Home/Community/index";  //社区主页
                             //查询该用户是否是管理员
@@ -80,7 +80,7 @@
 
                             $this->isidentify = session("userInfo")["sjy_origanization_user_isidentify"];  //是否认证
                             
-                            $this->user_image = 'http://p33g9t7dr.bkt.clouddn.com/'.session("userInfo")['sjy_origanization_user_image'];       //用户图片
+                            $this->user_image = session("userInfo")['sjy_origanization_user_image'];       //用户图片
 
                             $this->code = session('userInfo')['sjy_origanization_user_origanization_code']; //社会组织编号
 

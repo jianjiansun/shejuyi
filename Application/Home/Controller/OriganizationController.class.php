@@ -552,7 +552,7 @@
 	            $base64res = $uploadObj->base64Upload($base64,$path);
 	            if($base64res)
 	            {
-	               $projectimg[] = $path; //项目主图
+	               $projectimg[] = 'http://p33g9t7dr.bkt.clouddn.com/'.$path; //项目主图
 	            }else{
 	                $this->ajaxReturn(array('state'=>0,'errorInfo'=>'项目主图上传失败,请重试！'));
 	            }
@@ -590,7 +590,7 @@
 
                 if($uploadres)
                 {
-                    $projectimg[] = $newpath; 
+                    $projectimg[] = 'http://p33g9t7dr.bkt.clouddn.com/'.$newpath; 
                 }
             
             }
@@ -625,7 +625,7 @@
 
 	         //插入项目图片
 	         foreach ($projectimg as $key => $value) {
-               $project_image[] = array('sjy_origanization_project_id'=>$res,'sjy_origanization_project_image'=>'p33g9t7dr.bkt.clouddn.com/.'$value);
+               $project_image[] = array('sjy_origanization_project_id'=>$res,'sjy_origanization_project_image'=>$value);
             }
             //插入项目图片
             //插入项目图片
@@ -1015,7 +1015,7 @@
             {
                  $touxiang = $path; //项目主图
                  //添加到数据库
-                 $res = M('origanization_user_info')->where(array('sjy_id'=>session('userInfo')['sjy_id']))->save(array('sjy_origanization_user_image'=>'p33g9t7dr.bkt.clouddn.com/'.$path));
+                 $res = M('origanization_user_info')->where(array('sjy_id'=>session('userInfo')['sjy_id']))->save(array('sjy_origanization_user_image'=>'http://p33g9t7dr.bkt.clouddn.com/'.$path));
                  if($res)
                  {
                     $this->ajaxReturn(array('state'=>1,'errorInfo'=>'上传成功！'));

@@ -68,12 +68,12 @@
             //社会组织
             if($type == 1)
             {
-            	 $res = M("origanization_user_info")->add(array("sjy_origanization_login_id"=>$phone,'password'=>$password,"sjy_origanization_user_image"=>"/Uploads/touxiang/moren.png",'sjy_origanization_user_register_time'=>date('Y-m-d H:i:s',time())));
+            	 $res = M("origanization_user_info")->add(array("sjy_origanization_login_id"=>$phone,'password'=>$password,"sjy_origanization_user_image"=>"http://p33g9t7dr.bkt.clouddn.com/Uploads/touxiang/moren.png",'sjy_origanization_user_register_time'=>date('Y-m-d H:i:s',time())));
             }
             //社区
             if($type == 2)
             {
-                 $res = M("community_user_info")->add(array("sjy_community_login_id"=>$phone,'password'=>$password,"sjy_community_user_image"=>"/Uploads/touxiang/moren.png",'sjy_community_user_register_time'=>date('Y-m-d H:i:s',time())));
+                 $res = M("community_user_info")->add(array("sjy_community_login_id"=>$phone,'password'=>$password,"sjy_community_user_image"=>"http://p33g9t7dr.bkt.clouddn.com/Uploads/touxiang/moren.png",'sjy_community_user_register_time'=>date('Y-m-d H:i:s',time())));
             }
             if(!empty($res))
             {

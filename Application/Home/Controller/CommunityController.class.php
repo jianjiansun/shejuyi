@@ -266,7 +266,7 @@ class CommunityController extends BaseController {
             $base_info['sjy_community_isidentify'] = 1;                 //社区已认证
             $base_info['sjy_community_admin_id'] = session('userInfo')['sjy_id']; //社区管理员id
             $base_info['sjy_community_register_time'] = date("Y-m-d H:i:s"); //社区认证时间
-            $base_info['sjy_community_logo_img_path'] = 'community/logo/moren.jpg';  //社区注册 默认的社区logo
+            $base_info['sjy_community_logo_img_path'] = 'http://p33g9t7dr.bkt.clouddn.com/community/logo/moren.jpg';  //社区注册 默认的社区logo
             //插入社区基本信息，并取得社区自增id
             $community_id = $community_base_info->add($base_info);
     	      $community_base_info->where(array("sjy_id"=>$community_id))->save(array("sjy_community_code"=>$community_id));
@@ -468,7 +468,7 @@ class CommunityController extends BaseController {
                 $base64res = $uploadObj->base64Upload($base64,$path);
                 if($base64res)
                 {
-                    $projectimg[] = $path; //项目主图
+                    $projectimg[] = 'http://p33g9t7dr.bkt.clouddn.com/'.$path; //项目主图
                 }else{
                     $this->ajaxReturn(array('state'=>0,'errorInfo'=>'项目主图上传失败,请重试！'));
                 }
@@ -481,7 +481,7 @@ class CommunityController extends BaseController {
             //检测图片是否合法
             $project_images = $_FILES['project_images'];
             $num = count($project_images['name']);
-            $projectimg = array();
+            
             for($i=0;$i<$num;$i++)
             {
                 $flag = $i+1;
@@ -503,11 +503,11 @@ class CommunityController extends BaseController {
                 $newpath = 'Uploads/community/projectimg/'.date('Y-m-d',$time).'/'.$file_name.'.'.$type;
                 
                 $uploadres = $uploadObj->singUpload($file,$newpath);
-
+                
 
                 if($uploadres)
                 {
-                    $projectimg[] = $newpath; 
+                    $projectimg[] = 'http://p33g9t7dr.bkt.clouddn.com/'.$newpath; 
                 }
             
             }
@@ -541,7 +541,7 @@ class CommunityController extends BaseController {
             $res = M("community_project_info")->add($data);
            
             foreach ($projectimg as $key => $value) {
-               $project_image[] = array('sjy_community_project_id'=>$res,'sjy_community_project_image'=>'p33g9t7dr.bkt.clouddn.com/'.$value);
+               $project_image[] = array('sjy_community_project_id'=>$res,'sjy_community_project_image'=>$value);
             }
             //插入项目图片
             if(!empty($project_image))
@@ -558,7 +558,7 @@ class CommunityController extends BaseController {
                 $ret['errorInfo'] = '发布成功';
                 $xs = new \XS('demo');
                 //项目id,项目标题 项目主图，项目所属社区名字 项目服务领域 服务领域id,项目需求简介，项目所在省市区，项目征集时间,项目开始时间，项目状态
-                $search_data = array('sjy_id'=>$res,'sjy_community_project_title'=>$data['sjy_community_project_title'],'project_image_path'=>'p33g9t7dr.bkt.clouddn.com/'.$path,'sjy_community_name'=>$data['sjy_community_name'],'sjy_community_project_service_area'=>$data['sjy_community_project_service_area'],'sjy_community_project_service_area_id'=>$data["sjy_community_project_service_area_id"],'sjy_community_project_demand'=>$data['sjy_community_project_demand'],'sjy_community_province'=>$position_info['sjy_community_province_name'],'sjy_community_city'=>$position_info['sjy_community_city_name'],'sjy_community_area'=>$position_info['sjy_community_area_name'],'sjy_community_street'=>$position_info['sjy_community_street_name'],'sjy_community_project_collect_start_time'=>date('Ymd',strtotime($data['sjy_community_project_collect_start_time'])),'sjy_community_project_collect_end_time'=>date('Ymd',strtotime($data['sjy_community_project_collect_end_time'])),'sjy_community_project_start_time'=>date('Ymd',strtotime($data['sjy_community_project_start_time'])),'sjy_community_project_end_time'=>date('Ymd',strtotime($data['sjy_community_project_end_time'])),'sjy_community_project_status'=>$data['sjy_community_project_status']);
+                $search_data = array('sjy_id'=>$res,'sjy_community_project_title'=>$data['sjy_community_project_title'],'project_image_path'=>'http://p33g9t7dr.bkt.clouddn.com/'.$path,'sjy_community_name'=>$data['sjy_community_name'],'sjy_community_project_service_area'=>$data['sjy_community_project_service_area'],'sjy_community_project_service_area_id'=>$data["sjy_community_project_service_area_id"],'sjy_community_project_demand'=>$data['sjy_community_project_demand'],'sjy_community_province'=>$position_info['sjy_community_province_name'],'sjy_community_city'=>$position_info['sjy_community_city_name'],'sjy_community_area'=>$position_info['sjy_community_area_name'],'sjy_community_street'=>$position_info['sjy_community_street_name'],'sjy_community_project_collect_start_time'=>date('Ymd',strtotime($data['sjy_community_project_collect_start_time'])),'sjy_community_project_collect_end_time'=>date('Ymd',strtotime($data['sjy_community_project_collect_end_time'])),'sjy_community_project_start_time'=>date('Ymd',strtotime($data['sjy_community_project_start_time'])),'sjy_community_project_end_time'=>date('Ymd',strtotime($data['sjy_community_project_end_time'])),'sjy_community_project_status'=>$data['sjy_community_project_status']);
                 $doc->setFields($search_data);
                 $xs->index->add($doc);
             }else{
@@ -890,7 +890,7 @@ class CommunityController extends BaseController {
             {
                  
                  //添加到数据库
-                 $res = M('community_user_info')->where(array('sjy_id'=>session('userInfo')['sjy_id']))->save(array('sjy_community_user_image'=>'p33g9t7dr.bkt.clouddn.com/'.$path));
+                 $res = M('community_user_info')->where(array('sjy_id'=>session('userInfo')['sjy_id']))->save(array('sjy_community_user_image'=>'http://p33g9t7dr.bkt.clouddn.com/'.$path));
                  if($res)
                  {
                     $this->ajaxReturn(array('state'=>1,'errorInfo'=>'上传成功！'));
