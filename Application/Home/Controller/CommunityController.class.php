@@ -503,7 +503,7 @@ class CommunityController extends BaseController {
                 $newpath = 'Uploads/community/projectimg/'.date('Y-m-d',$time).'/'.$file_name.'.'.$type;
                 
                 $uploadres = $uploadObj->singUpload($file,$newpath);
-                
+
 
                 if($uploadres)
                 {
