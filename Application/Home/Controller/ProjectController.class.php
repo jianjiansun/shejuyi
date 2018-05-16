@@ -79,6 +79,7 @@
 	    	//社区地址信息
 	    	$projectinfo['address'] = M('community_position_info')->where(array("sjy_community_id"=>$projectinfo['sjy_community_id']))->find(); 
             //项目图片
+           
 		    $projectinfo['project_image'] = M('community_project_image')->where(array('sjy_community_project_id'=>$id))->select();
 		    
 	 		$this->ajaxReturn($projectinfo);

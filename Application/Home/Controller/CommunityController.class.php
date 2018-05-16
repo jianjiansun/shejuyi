@@ -474,6 +474,7 @@ class CommunityController extends BaseController {
                 }
             }else{
                 $path = M('community_base_info')->where(array('sjy_id'=>session("userInfo")['sjy_community_user_community_code']))->getField('sjy_community_logo_img_path');
+                $projectimg[] = $path; //项目主图
             }
 
             //项目相册

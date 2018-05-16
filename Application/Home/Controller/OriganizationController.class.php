@@ -558,6 +558,7 @@
 	            }
 	        }else{
 	        	    $path = M('origanization_base_info')->where(array('sjy_id'=>session("userInfo")['sjy_origanization_user_origanization_code']))->getField('sjy_origanization_logo_img_path');
+	        	    $projectimg[] = $path; //项目主图
 	        }
 
             //项目相册
