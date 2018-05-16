@@ -360,7 +360,7 @@
         console.log(data.project_image.length);
 
         for (var i = 0; i < data.project_image.length; i++) {
-            html += '<p><img class = "orDetail-img" src="http://p33g9t7dr.bkt.clouddn.com/' + data.project_image[i].sjy_community_project_image + '" alt=""></p>';
+            html += '<p><img class = "orDetail-img" src="' + data.project_image[i].sjy_community_project_image + '" alt=""></p>';
         }
         html += '</div>';
 
@@ -433,7 +433,7 @@
 
 
                     html +=  '<li  class = "scaleImg">\n' +
-                            '<img src="http://p33g9t7dr.bkt.clouddn.com/'+ imgArr[j]+'?imageslim">\n' +
+                            '<img src="'+ imgArr[j]+'?imageslim">\n' +
                             '<b class="tm-photos-arrow"></b>\n' +
                             '</li>';
                 }

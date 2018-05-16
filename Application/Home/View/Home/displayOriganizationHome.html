@@ -322,7 +322,7 @@
 
     $.post("__CONTROLLER__/getOriganizationInfo?id={$id}", function(data) {
 
-        var img = '<img class = "orLogo" src="http://p33g9t7dr.bkt.clouddn.com/' + data.sjy_origanization_logo_img_path + '" alt="">';
+        var img = '<img class = "orLogo" src="' + data.sjy_origanization_logo_img_path + '" alt="">';
         $(".orLogoBox").html(img);
 
         var tit = "";
@@ -378,7 +378,7 @@
                 html += '<li class="clearfix pro-li">' +
                     '<a target="_blank" href="__MODULE__/Project/displayCommunityProject/id/' + data[i].project_info['sjy_id'] + '">' +
                     '<div class="left leftImg">' +
-                    '<img src="http://p33g9t7dr.bkt.clouddn.com/' + data[i].main_image + '" alt="">' +
+                    '<img src="' + data[i].main_image + '" alt="">' +
                     '</div>' +
                     '<div class="left leftCon">' +
                     '<dl>' +
@@ -433,7 +433,7 @@
                 html += '<li class="clearfix pro-li">' +
                     '<a href="__MODULE__/Project/displayCommunityProject/id/' + data[i].project_detail['sjy_id'] + '" target="_blank" >' +
                     '<div class="left leftImg">' +
-                    '<img src="http://p33g9t7dr.bkt.clouddn.com/' + data[i].main_image + '" alt="">' +
+                    '<img src="' + data[i].main_image + '" alt="">' +
                     '</div>' +
                     '<div class="left leftCon">' +
                     '<dl>' +
@@ -485,7 +485,7 @@
                 html += '<li class="clearfix pro-li">' +
                     '<a href="__MODULE__/Project/displayOriganizationProject/id/' + data[i].sjy_id + '" target="_blank">' +
                     '<div class="left leftImg">' +
-                    '<img src="http://p33g9t7dr.bkt.clouddn.com/' + data[i].main_image + '" alt="">' +
+                    '<img src="' + data[i].main_image + '" alt="">' +
                     '</div>' +
                     '<div class="left leftCon">' +
                     '<dl>' +

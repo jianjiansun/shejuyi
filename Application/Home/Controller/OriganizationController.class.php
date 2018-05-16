@@ -224,7 +224,7 @@
             $base64res = $uploadObj->base64Upload($base64,$path);
             if($base64res)
             {
-                 $imgpath = $path; //项目主图
+                 $imgpath = $path;
                  //添加到数据库
                  $base_info['sjy_origanization_logo_img_path'] = 'http://p33g9t7dr.bkt.clouddn.com/'.$imgpath;
             }else{
@@ -548,7 +548,7 @@
             {
 	            $base64 = explode('base64,',$main_image)[1];
 	            //文件名
-	            $path = '/Uploads/origanization/projectimg/'.date('Y-m-d',$time).'/'.$time.uniqid();
+	            $path = 'Uploads/origanization/projectimg/'.date('Y-m-d',$time).'/'.$time.uniqid();
 	            $base64res = $uploadObj->base64Upload($base64,$path);
 	            if($base64res)
 	            {
@@ -583,7 +583,7 @@
                     $this->ajaxReturn(array('state'=>0,'errorInfo'=>'第'.$flag.'张图不是图片类型！'));
                 }
                 $file_name = $time.uniqid();
-                $newpath = '/Uploads/origanization/projectimg/'.date('Y-m-d',$time).'/'.$file_name.'.'.$type;
+                $newpath = 'Uploads/origanization/projectimg/'.date('Y-m-d',$time).'/'.$file_name.'.'.$type;
                 
                 $uploadres = $uploadObj->singUpload($file,$newpath);
 
@@ -625,7 +625,7 @@
 
 	         //插入项目图片
 	         foreach ($projectimg as $key => $value) {
-               $project_image[] = array('sjy_origanization_project_id'=>$res,'sjy_origanization_project_image'=>$value);
+               $project_image[] = array('sjy_origanization_project_id'=>$res,'sjy_origanization_project_image'=>'p33g9t7dr.bkt.clouddn.com/.'$value);
             }
             //插入项目图片
             //插入项目图片
@@ -1008,14 +1008,14 @@
             $base64_image_content = I("post.img");
             $base64 = explode('base64,',$base64_image_content)[1];
             //文件名
-            $path = '/Uploads/origanization/touxiang/'.date('Y-m-d',$time).'/'.$time.uniqid();
+            $path = 'Uploads/origanization/touxiang/'.date('Y-m-d',$time).'/'.$time.uniqid();
             $uploadObj = new UploadController();
             $base64res = $uploadObj->base64Upload($base64,$path);
             if($base64res)
             {
                  $touxiang = $path; //项目主图
                  //添加到数据库
-                 $res = M('origanization_user_info')->where(array('sjy_id'=>session('userInfo')['sjy_id']))->save(array('sjy_origanization_user_image'=>$path));
+                 $res = M('origanization_user_info')->where(array('sjy_id'=>session('userInfo')['sjy_id']))->save(array('sjy_origanization_user_image'=>'p33g9t7dr.bkt.clouddn.com/'.$path));
                  if($res)
                  {
                     $this->ajaxReturn(array('state'=>1,'errorInfo'=>'上传成功！'));
