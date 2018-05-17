@@ -582,18 +582,19 @@
                 { 
                     $this->ajaxReturn(array('state'=>0,'errorInfo'=>'第'.$flag.'张图不是图片类型！'));
                 }
-                $file_name = $time.uniqid();
-                $newpath = 'Uploads/origanization/projectimg/'.date('Y-m-d',$time).'/'.$file_name.'.'.$type;
-                
-                $uploadres = $uploadObj->singUpload($file,$newpath);
-
-
-                if($uploadres)
-                {
-                    $projectimg[] = 'http://p33g9t7dr.bkt.clouddn.com/'.$newpath; 
-                }
             
             }
+            $setting=C('UPLOAD_SITEIMG_QINIU');
+            $Upload = new \Think\Upload($setting);
+            $uploadres = $Upload->upload($_FILES);
+            if($uploadres)
+            {
+                foreach($uploadres as $key=>$value)
+                {
+                     $projectimg[] = $value['url'];
+                }
+            }
+            
 	        //项目所属社区id
 	        $origanization = M("origanization_user_info")->where(array("sjy_id"=>session("userInfo")['sjy_id']))->getField("sjy_origanization_user_origanization_code");
 	    
