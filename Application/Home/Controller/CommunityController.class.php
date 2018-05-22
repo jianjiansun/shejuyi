@@ -513,7 +513,6 @@ class CommunityController extends BaseController {
                      $projectimg[] = $value['url'];
                 }
             }
-            
             //项目所属社区id
             $community = M("community_user_info")->where(array("sjy_id"=>session("userInfo")['sjy_id']))->getField("sjy_community_user_community_code");
         
