@@ -99,16 +99,18 @@
     	//执行登录验证
     	public function dologin()
     	{
+			
     		$ret['state'] = 0;
     		$ret['msg'] = '登录失败，请重试';
-            $verify = $this->reVerify(I('post.geetest_challenge'), I('post.geetest_validate'), I('post.geetest_seccode'));
+			$verify = $this->reVerify(I('post.geetest_challenge'), I('post.geetest_validate'), I('post.geetest_seccode'));
+			
             if(!$verify)
             {
                 $ret['state'] = -2;
                 $ret['msg'] = '验证失败,请重试';
                 $this->ajaxReturn($ret);
             }
-
+            
     		$phone = I("post.phone");  //手机号
     		$type = I("post.type");  //类型                 
     		$password = I("post.password");  //密码
@@ -120,13 +122,12 @@
     			$ret['msg'] = '账号或密码不能为空';
     			$this->ajaxReturn($ret);
     		}
-
+            
     		//社会组织登陆
     		if($type == 1)
     		{   //先查询，如果没查到则新增
                 
     			$val = M("origanization_user_info")->where(array("sjy_origanization_login_id"=>$phone,'password'=>$password))->find();
-                
     			//账号或密码错误
     			if(empty($val))
     			{
@@ -168,7 +169,7 @@
     			session("userInfo",$userInfo);
                 
     		}
-
+           
     		$this->ajaxReturn($ret);
     	}
 
