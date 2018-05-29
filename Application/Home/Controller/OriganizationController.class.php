@@ -582,24 +582,25 @@
                 { 
                     $this->ajaxReturn(array('state'=>0,'errorInfo'=>'第'.$flag.'张图不是图片类型！'));
                 }
-                $file_name = $time.uniqid();
-                $newpath = 'Uploads/origanization/projectimg/'.date('Y-m-d',$time).'/'.$file_name.'.'.$type;
-                
-                $uploadres = $uploadObj->singUpload($file,$newpath);
-
-
-                if($uploadres)
-                {
-                    $projectimg[] = 'http://p33g9t7dr.bkt.clouddn.com/'.$newpath; 
-                }
             
             }
+            $setting=C('UPLOAD_SITEIMG_QINIU');
+            $Upload = new \Think\Upload($setting);
+            $uploadres = $Upload->upload($_FILES);
+            if($uploadres)
+            {
+                foreach($uploadres as $key=>$value)
+                {
+                     $projectimg[] = $value['url'];
+                }
+            }
+
 	        //项目所属社区id
 	        $origanization = M("origanization_user_info")->where(array("sjy_id"=>session("userInfo")['sjy_id']))->getField("sjy_origanization_user_origanization_code");
 	    
 	        $model = M();
             $model->startTrans();
-	    //换取项目服务对象
+	        //换取项目服务对象
 	        $server_area_name = M("service_object")->where(array("sjy_id"=>$server_area))->getField("service_object_name");
 	        $data["sjy_origanization_id"] = $origanization;  //社区id
 	        $data['sjy_origanization_name'] = M('origanization_base_info')->where(array("sjy_id"=>$origanization))->getField('sjy_origanization_name'); //社区名字
