@@ -405,7 +405,7 @@ class CommunityController extends BaseController {
         //执行项目插入
         public function doSendProject()
         {
-            $doc = new \XSDocument();//迅搜文档对象
+            // $doc = new \XSDocument();//迅搜文档对象
             $ret["state"] = 0;
             $ret['errorInfo'] = '';
             //接收数据
@@ -481,7 +481,12 @@ class CommunityController extends BaseController {
             //检测图片是否合法
             $project_images = $_FILES['project_images'];
             $num = count($project_images['name']);
+            $setting=C('UPLOAD_SITEIMG_QINIU');
+		    $Upload = new \Think\Upload($setting);
+
+            $uploadres = $Upload->upload($_FILES);
             
+           
             for($i=0;$i<$num;$i++)
             {
                 $flag = $i+1;
