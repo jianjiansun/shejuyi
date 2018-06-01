@@ -13,29 +13,28 @@
     <div class="headLogin">
         <div class="left changeBan">
             <a href="javascript:;" id="cityChoose" class="region">{$city}</a>
-            <a class='on' href="">社会组织版</a>
-            <a href="__CONTROLLER__/communityIndex" target='_blank'>社区版</a>
+            <a class='on' href="__CONTROLLER__/origanizationIndex" target="_blank">社会组织版</a>
+            <a href="__CONTROLLER__/index" target="_blank">社区版</a>
         </div>
-
         <div class="right person">
             <div class="dropdown pull-right">
+
                 <if condition='($isidentify eq 1) and ($code gt 0)'>
-                    <a class="myOwnIndex" href="__MODULE__/Home/displayOriganizationHome">{$origanization_name}</a>
+                    <a class="myOwnIndex" href="__MODULE__/Home/displayCommunityHome">{$community_name}</a>
                 </if>
+
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">
                     <div class="user-img" style="display: inline-block">
-
                         <img src="{$user_image}" alt="">
                         <span class="iconfont VIP-icon" style="right: -20px;">&#xe65b;</span>
                     </div>
-
-
                     <span>{$showname}<if condition='$active egt 1'><span class="layui-badge-dot"></span></if>
                     </span>
                 </a>
+
                 <ul class="dropdown-menu personalMenu">
                     <li>
-                        <a href="__CONTROLLER__/origanizationIdentify">认证状态</a>
+                        <a href="__CONTROLLER__/communityIdentify">认证状态</a>
                     </li>
                     <if condition='($isidentify eq 1)'>
                         <li>
@@ -44,21 +43,23 @@
                     </if>
                     <if condition='($isidentify eq 1) and ($code gt 0)'>
                         <li>
-                            <a href="__CONTROLLER__/myOriganization">我的机构</a>
+                            <a href="__CONTROLLER__/myCommunity">我的社区</a>
                         </li>
                         <li>
-                            <a href="__MODULE__/Project/origanizationProjectManger">我的项目<if condition='$active egt 1'><span class="layui-badge-dot"></span></if></a>
+                            <a href="__MODULE__/Project/communityProjectManger">我的项目<if condition='$active egt 1'><span class="layui-badge-dot"></span></if></a>
                         </li>
-                        <li>
-                            <a href="__MODULE__/Home/displayOriganizationHome">机构主页</a>
-                        </li>
+
                     </if>
+
                     <li>
                         <a href="__CONTROLLER__/logout">注销</a>
                     </li>
                 </ul>
             </div>
+
+
         </div>
+
     </div>
 
     <div class="headNavBox">

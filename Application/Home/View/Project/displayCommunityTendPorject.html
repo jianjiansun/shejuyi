@@ -66,18 +66,18 @@
 
 
 
-                console.log( project_id + "project_id");
-                console.log( origanization_id + "origanization_id");
+                console.log(project_id + "project_id");
+                console.log(origanization_id + "origanization_id");
 
 
                 $.post("__MODULE__/Project/inviteOriganization", {
                     "project_id": project_id,
-                    'origanization_code':origanization_id
+                    'origanization_code': origanization_id
                 }, function(data) {
 
 
                     if (data.state == 1) {
-                        layer.msg(data.errorInfo, function () {
+                        layer.msg(data.errorInfo, function() {
                             parent.layer.closeAll();
                         })
                     } else {

@@ -1,16 +1,15 @@
+<link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
+<link rel="stylesheet" href="__PUBLIC__/Home/css/testfy.css">
+<link rel="stylesheet" href="__PUBLIC__/Home/css/chooseCity.css">
+<link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
+<link rel="stylesheet" href="__PUBLIC__/Home/css/detail.css">
+<link rel="stylesheet" href="__PUBLIC__/Home/css/deliver.css">
+<link rel="stylesheet" href="__PUBLIC__/Home/css/component.css">
+<link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
 
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/testfy.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/chooseCity.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/detail.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/deliver.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/component.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
-
-    <script src="__PUBLIC__/Home/js/jquery.page.js"></script>
-    <script src="__PUBLIC__/Home/js/upLoadImg.js"></script>
-    <script src="__PUBLIC__/Home/js/layui.js"></script>
+<script src="__PUBLIC__/Home/js/jquery.page.js"></script>
+<script src="__PUBLIC__/Home/js/upLoadImg.js"></script>
+<script src="__PUBLIC__/Home/js/layui.js"></script>
 
 
 
@@ -23,27 +22,27 @@
     </div>
     <div class="headLogin">
 
-            <div class="left changeBan">
-                <a href="javascript:;" id="cityChoose" class="region">{$city}</a>
-                <a class="on" href="">社会组织版</a>
-                <a href="">社区版</a>
-            </div>
-            <div class="right person">
-        <div class="dropdown pull-right">
-            <if condition='($isidentify eq 1) and ($code gt 0) and ($figure eq 1)'>
-                        <a class = "myOwnIndex" href="__MODULE__/Home/displayOriganizationHome">{$origanization_name}</a>
-            </if>
-            <if condition='($isidentify eq 1) and ($code gt 0) and ($figure eq 2)'>
-                        <a class = "myOwnIndex" href="__MODULE__/Home/displayCommunityHome">{$community_name}</a>
-            </if>
-            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
-                <div class = "user-img" style = "display: inline-block">
-                    <img src="{$user_image}" alt="">
-                    <span class = "iconfont VIP-icon" style = "right: -20px;">&#xe65b;</span>
-                </div>
-                <span>{$showname}</span>
-            </a>
-            <if condition='$figure eq 2'>
+        <div class="left changeBan">
+            <a href="javascript:;" id="cityChoose" class="region">{$city}</a>
+            <!-- <a class="on" href="">社会组织版</a>
+                <a href="">社区版</a> -->
+        </div>
+        <div class="right person">
+            <div class="dropdown pull-right">
+                <if condition='($isidentify eq 1) and ($code gt 0) and ($figure eq 1)'>
+                    <a class="myOwnIndex" href="__MODULE__/Home/displayOriganizationHome">{$origanization_name}</a>
+                </if>
+                <if condition='($isidentify eq 1) and ($code gt 0) and ($figure eq 2)'>
+                    <a class="myOwnIndex" href="__MODULE__/Home/displayCommunityHome">{$community_name}</a>
+                </if>
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                    <div class="user-img" style="display: inline-block">
+                        <img src="{$user_image}" alt="">
+                        <span class="iconfont VIP-icon" style="right: -20px;">&#xe65b;</span>
+                    </div>
+                    <span>{$showname}</span>
+                </a>
+                <if condition='$figure eq 2'>
                     <ul class="dropdown-menu personalMenu">
                         <li>
                             <a href="__MODULE__/Community/communityIdentify">认证状态</a>
@@ -65,16 +64,16 @@
                             <a href="__MODULE__/Community/logout">注销</a>
                         </li>
                     </ul>
-           <else />
+                    <else />
                     <ul class="dropdown-menu personalMenu">
                         <li>
                             <a href="__MODULE__/Origanization/origanizationIdentify">认证状态</a>
                         </li>
-                       
-                            <li>
-                                <a href="__MODULE__/Origanization/personinfo">账号设置</a>
-                            </li>
-                         <if condition='($isidentify eq 1) and ($code gt 0)'>
+
+                        <li>
+                            <a href="__MODULE__/Origanization/personinfo">账号设置</a>
+                        </li>
+                        <if condition='($isidentify eq 1) and ($code gt 0)'>
                             <li>
                                 <a href="__MODULE__/Origanization/myoriganization">我的机构</a>
                             </li>
@@ -89,8 +88,8 @@
                             <a href="__MODULE__/Origanization/logout">注销</a>
                         </li>
                     </ul>
-            </if>
-        </div>
+                </if>
+            </div>
         </div>
     </div>
     <div class="headNavBox">
@@ -134,7 +133,7 @@
                 <div class="detail-head">
                     <ul class="detail-nav">
                         <li><a class="nav1 on" href="javascript:;">项目主页</a></li>
-                        <li><a class="nav2" id = "viewProgress" href="javascript:;">项目进度</a></li>
+                        <li><a class="nav2" id="viewProgress" href="javascript:;">项目进度</a></li>
                     </ul>
                     <if condition='($figure eq 1) and ($project_status eq 0)'>
                         <button type="button" class="layui-btn deliverBox" id="test1">
@@ -276,7 +275,7 @@
             <div class="copyright fl">
                 <p class="left">北京社居易有限公司 版权所有</p>
                 <p class="right">
-                    Copyright © EasyLife.com All rights reserved.2017-2020 京ICP证1166666号 京公网安备133333333444
+                    Copyright © 2017-2018 社居易 京ICP备18019570
                 </p>
             </div>
         </div>
@@ -327,32 +326,32 @@
             '<p class = "left" style = "line-height:  30px;">' + data.sjy_community_project_service_area + '</p>' +
             '</div>';
 
-        if( data.sjy_community_project_origanization_name != null ){
-            html +='<div class = "detail-item">' +
-                    '<span  class = "left">项目执行方</span>' +
-                    '<a href="__MODULE__/Home/displayOriganizationHome/id/'+data.sjy_community_project_origanization+'">' + data.sjy_community_project_origanization_name + '</p>' +
-                    '</div>';
+        if (data.sjy_community_project_origanization_name != null) {
+            html += '<div class = "detail-item">' +
+                '<span  class = "left">项目执行方</span>' +
+                '<a href="__MODULE__/Home/displayOriganizationHome/id/' + data.sjy_community_project_origanization + '">' + data.sjy_community_project_origanization_name + '</p>' +
+                '</div>';
 
         }
 
-        html +=  '<div class = "detail-item">' +
-                '<span  class = "left">项目预算</span>' +
-                '<p  class = "left" style = "line-height:  30px;">' + data.sjy_community_project_plan_money + '</p>' +
-                '</div>' +
-                '<div class = "detail-item">' +
-                '<span  class = "left">项目周期</span>' +
-                '<p  class = "left" style = "line-height:  30px;">' + data.sjy_community_project_start_time + '-' + data.sjy_community_project_end_time + '</p>' +
-                '</div>' +
-                '<div class = "detail-item">' +
-                '<span  class = "left">征集周期</span>' +
-                '<p  class = "left" style = "line-height:  30px;">' + data.sjy_community_project_collect_start_time + '-' + data.sjy_community_project_collect_end_time + '</p>' +
-                '</div>' +
-                '<div class = "detail-item">' +
-                '<span  class = "left">项目内容</span>' +
-                '<p  class = "left" style = "line-height:  30px;">' + data.sjy_community_project_demand + '</p>' +
-                '</div>' +
-                '<div class = "detail-item">' +
-                '<span  class = "left">项目图片</span>';
+        html += '<div class = "detail-item">' +
+            '<span  class = "left">项目预算</span>' +
+            '<p  class = "left" style = "line-height:  30px;">' + data.sjy_community_project_plan_money + '</p>' +
+            '</div>' +
+            '<div class = "detail-item">' +
+            '<span  class = "left">项目周期</span>' +
+            '<p  class = "left" style = "line-height:  30px;">' + data.sjy_community_project_start_time + '-' + data.sjy_community_project_end_time + '</p>' +
+            '</div>' +
+            '<div class = "detail-item">' +
+            '<span  class = "left">征集周期</span>' +
+            '<p  class = "left" style = "line-height:  30px;">' + data.sjy_community_project_collect_start_time + '-' + data.sjy_community_project_collect_end_time + '</p>' +
+            '</div>' +
+            '<div class = "detail-item">' +
+            '<span  class = "left">项目内容</span>' +
+            '<p  class = "left" style = "line-height:  30px;">' + data.sjy_community_project_demand + '</p>' +
+            '</div>' +
+            '<div class = "detail-item">' +
+            '<span  class = "left">项目图片</span>';
 
 
 
@@ -382,7 +381,7 @@
                 //上传完毕回调
                 if (res.state == 1) {
                     layer.msg("发送成功");
-                }else{
+                } else {
                     layer.msg(res.errorInfo)
                 }
             },
@@ -398,26 +397,26 @@
 
     /*进度查看*/
 
-    $("#viewProgress").one("click", function () {
-        $.get("__MODULE__/Project/projectRate?project_id=" + project_id, function (data) {
+    $("#viewProgress").one("click", function() {
+        $.get("__MODULE__/Project/projectRate?project_id=" + project_id, function(data) {
 
             var html = '';
 
-            for(var i = 0; i < data.length; i++){
+            for (var i = 0; i < data.length; i++) {
 
                 html += '<li>' +
-                        '<time class="cbp_tmtime" datetime=""><span>'+ data[i].create_time.split(" ", 1) +'</span><span>'+ data[i].create_time.substring(10, 16)  + '</span></time>' +
-                        '<div class="cbp_tmicon cbp_tmicon-phone">新</div>' +
-                        '<div class="cbp_tmlabel">' +
-                        '<h2>'+ data[i].sjy_projectrate_title +'</h2>' +
-                        '<p>'+ data[i].sjy_project_rate_con +'</p>' +
-                        '<div class="tm-m-photos">' +
-                        '<ul class="tm-m-photos-thumb">';
+                    '<time class="cbp_tmtime" datetime=""><span>' + data[i].create_time.split(" ", 1) + '</span><span>' + data[i].create_time.substring(10, 16) + '</span></time>' +
+                    '<div class="cbp_tmicon cbp_tmicon-phone">新</div>' +
+                    '<div class="cbp_tmlabel">' +
+                    '<h2>' + data[i].sjy_projectrate_title + '</h2>' +
+                    '<p>' + data[i].sjy_project_rate_con + '</p>' +
+                    '<div class="tm-m-photos">' +
+                    '<ul class="tm-m-photos-thumb">';
 
 
 
 
-                console.log( data[i].sjy_project_rate_image  );
+                console.log(data[i].sjy_project_rate_image);
 
                 var imgString = data[i].sjy_project_rate_image;
                 var imgArr = imgString.split("||");
@@ -425,22 +424,22 @@
 
 
 
-                console.log(imgArr );
-                console.log(imgArr.length );
-                console.log(imgArr[0] );
+                console.log(imgArr);
+                console.log(imgArr.length);
+                console.log(imgArr[0]);
 
-                for( var j = 0; j < imgArr.length ; j ++ ) {
+                for (var j = 0; j < imgArr.length; j++) {
 
 
-                    html +=  '<li  class = "scaleImg">\n' +
-                            '<img src="'+ imgArr[j]+'?imageslim">\n' +
-                            '<b class="tm-photos-arrow"></b>\n' +
-                            '</li>';
+                    html += '<li  class = "scaleImg">\n' +
+                        '<img src="' + imgArr[j] + '?imageslim">\n' +
+                        '<b class="tm-photos-arrow"></b>\n' +
+                        '</li>';
                 }
 
-                html +=   '</ul>' +
-                        '</div>' +'</div>'+
-                        '</li>';
+                html += '</ul>' +
+                    '</div>' + '</div>' +
+                    '</li>';
 
 
             }
@@ -448,26 +447,10 @@
             $(".cbp_tmtimeline").html(html);
 
             layer.photos({
-                photos: '.scaleImg'
-                ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+                photos: '.scaleImg',
+                anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
             });
 
         })
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </script>

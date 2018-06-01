@@ -73,6 +73,22 @@ class CommunityController extends BaseController {
 			 $this->assign('origanization_num',$origanization_num);
              $this->display();
         }
+        //社会组织版
+        public function origanizationIndex(){
+           //社区项目分类
+			 $service_object = M('service_object')->select();
+			 $this->assign('service_object',$service_object);
+			 //项目总数
+			 $project_num = M('community_project_info')->count();
+			 $this->assign('project_num',$project_num);
+			 //社区总数
+			 $community_num = M('community_base_info')->count();
+			 $this->assign('community_num',$community_num);
+			 //社会组织总数
+			 $origanization_num = M('origanization_base_info')->count();
+			 $this->assign('origanization_num',$origanization_num);
+		     $this->display();
+       }
         //社会组织列表
         public function getoriganizationlist()
         {
