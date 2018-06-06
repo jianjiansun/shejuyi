@@ -1,5 +1,21 @@
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EasyLife</title>
+    <link rel="stylesheet" href="/Public/Home/css/bootstrap.css">
+    <link rel="stylesheet" href="/Public/Home/css/common.css">
+    <link rel="stylesheet" href="/Public/Home/css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+    <script src="/Public/Home/js/jquery-1.12.4.js"></script>
+    <script src="/Public/Home/js/bootstrap.js"></script>
+    <script src = "/Public/Home/js/autoResizeImage.js"></script>
 
-<script type="text/javascript" src = "__PUBLIC__/Home/js/gt.js"></script>
+
+<script type="text/javascript" src = "/Public/Home/js/gt.js"></script>
 
 </head>
 <body>
@@ -93,7 +109,7 @@
                         return false;
                     }
                     $.ajax({
-                        url : "__MODULE__/Login/dologin",
+                        url : "/index.php/Home/Login/dologin",
                         data: {
                                 type : 1,
                                 phone : $("#username").val(),
@@ -107,7 +123,7 @@
                         success : function (data) {
 
                             if(data.state == 2){
-                                window.location.href = "__MODULE__/Origanization/index";
+                                window.location.href = "/index.php/Home/Origanization/index";
                             } else {
                                 captchaObj.reset(); // 调用该接口进行重置
                                 $("#login .remider").html(data.msg);
@@ -141,13 +157,13 @@
             return false;
         }
         $.ajax({
-            url : "__MODULE__/Login/doregister",
+            url : "/index.php/Home/Login/doregister",
             data: {type : 1, phone : $("#Rusername").val() , password : $("#Rpassword1").val(), repassword:$("#Rpassword2").val()},
             type : "post",
             dataType : "json",
             success : function (data) {
                 if(data.state == 3){
-                    window.location.href = "__MODULE__/Origanization/index";
+                    window.location.href = "/index.php/Home/Origanization/index";
                 } else {
                     $("#register .remider").html(data.msg);
                 }
@@ -246,7 +262,7 @@
                                 return false;
                             }
                             $.ajax({
-                                url : "__MODULE__/Login/dologin",
+                                url : "/index.php/Home/Login/dologin",
                                 data: 
                                     {
                                         type : 2, 
@@ -261,7 +277,7 @@
                                 success : function (data) {
 
                                     if(data.state == 2){
-                                        window.location.href = "__MODULE__/Community/index";
+                                        window.location.href = "/index.php/Home/Community/index";
                                     } else {
                                         captchaObj.reset(); // 调用该接口进行重置
                                         $("#login2 .remider").html(data.msg);
@@ -295,13 +311,13 @@
             return false;
         }
         $.ajax({
-            url : "__MODULE__/Login/doregister",
+            url : "/index.php/Home/Login/doregister",
             data: {type : 2, phone : $("#Rusername2").val() , password : $("#Rpassword21").val(), repassword:$("#Rpassword22").val()},
             type : "post",
             dataType : "json",
             success : function (data) {
                 if(data.state == 3){
-                    window.location.href = "__MODULE__/Community/index";
+                    window.location.href = "/index.php/Home/Community/index";
                 } else {
                     $("#register2 .remider").html(data.msg);
                 }
@@ -316,15 +332,15 @@
 
 
 <div class="banner clearfix" style = "background: rgba(0 ,0, 0, 0.9);">
-    <img class="bannerImg" src="__PUBLIC__/Home/imgs/indexNav.jpg" alt="" >
+    <img class="bannerImg" src="/Public/Home/imgs/indexNav.jpg" alt="" >
     <div class="container">
         <div class="row clearfix bannerCon">
-            <img class='logo' src="__PUBLIC__/Home/imgs/logo.png" alt="">
+            <img class='logo' src="/Public/Home/imgs/logo.png" alt="">
             <h1></h1>
             <div class="contant">
-                <img class = "leftImg" src="__PUBLIC__/Home/imgs/leftLine.png" alt="">
+                <img class = "leftImg" src="/Public/Home/imgs/leftLine.png" alt="">
                 <h2 class="mainDetail">社居易，让社会工作更简单</h2>
-                <img class = "rightImg" src="__PUBLIC__/Home/imgs/rightLine.png" alt="">
+                <img class = "rightImg" src="/Public/Home/imgs/rightLine.png" alt="">
             </div>
             <p class="declare">
                 <span class="iconfont">&#xe6cd;</span>
@@ -344,7 +360,7 @@
     <div class="row clearfix classify">
         <div class="col-md-6">
             <dl class="shegong assort">
-                <dt class="col-md-2"><img src="__PUBLIC__/Home/imgs/shegong.png" alt=""></dt>
+                <dt class="col-md-2"><img src="/Public/Home/imgs/shegong.png" alt=""></dt>
                 <dd class="col-md-4">
                     所有信息均为真实数据, 关于不正当竞争虚假信息郑重声明
                 </dd>
@@ -355,7 +371,7 @@
         </div>
         <div class="col-md-6 column">
             <dl class="shegong assort">
-                <dt class="col-md-2"><img src="__PUBLIC__/Home/imgs/shequ.png" alt=""></dt>
+                <dt class="col-md-2"><img src="/Public/Home/imgs/shequ.png" alt=""></dt>
                 <dd class="col-md-4">
                     所有信息均为真实数据, 关于不正当竞争虚假信息郑重声明
                 </dd>
@@ -383,7 +399,7 @@
             <div class="col-md-3 column">
                 <a href="html/detail.html">
                     <div class="imgBox">
-                        <img src="__PUBLIC__/Home/imgs/lvnong.png" alt="">
+                        <img src="/Public/Home/imgs/lvnong.png" alt="">
                     </div>
                     <div class="programDetail"><p>北京市通州区启明星社区社会工作事务所</p></div>
                 </a>
@@ -392,20 +408,20 @@
             </div>
             <div class="col-md-3 column">
                 <div class="imgBox">
-                    <img src="__PUBLIC__/Home/imgs/qimingxing.png" alt="">
+                    <img src="/Public/Home/imgs/qimingxing.png" alt="">
                 </div>
                 <div class="programDetail"><p>北京市通州区启明星社区社会工作事务所</p></div>
             </div>
             <div class="col-md-3 column">
                 <div class="imgBox">
-                    <img src="__PUBLIC__/Home/imgs/tonghuishuyuan.jpg" alt="">
+                    <img src="/Public/Home/imgs/tonghuishuyuan.jpg" alt="">
 
                 </div>
                 <div class="programDetail"><p>北京市通州区启明星社区社会工作事务所</p></div>
             </div>
             <div class="col-md-3 column">
                 <div class="imgBox">
-                    <img src="__PUBLIC__/Home/imgs/xinhuadangjian.png" alt="">
+                    <img src="/Public/Home/imgs/xinhuadangjian.png" alt="">
                 </div>
                 <div class="programDetail"><p>北京市通州区启明星社区社会工作事务所</p></div>
             </div>
@@ -431,7 +447,7 @@
         <div class="col-md-3 column">
             <a href="html/detail1.html">
                 <div class="imgBox1">
-                    <img src="__PUBLIC__/Home/imgs/shequ1.jpg" alt="">
+                    <img src="/Public/Home/imgs/shequ1.jpg" alt="">
                     <p class="addressTag">北京市—通州区</p>
                 </div>
                 <div class="imgShader">
@@ -443,7 +459,7 @@
         </div>
         <div class="col-md-3 column">
             <div class="imgBox1">
-                <img src="__PUBLIC__/Home/imgs/shequ2.jpg" alt="">
+                <img src="/Public/Home/imgs/shequ2.jpg" alt="">
                 <p class="addressTag">北京市—通州区</p>
             </div>
             <div class="imgShader">
@@ -452,7 +468,7 @@
         </div>
         <div class="col-md-3 column">
             <div class="imgBox1">
-                <img src="__PUBLIC__/Home/imgs/shequ3.jpg" alt="">
+                <img src="/Public/Home/imgs/shequ3.jpg" alt="">
                 <p class="addressTag">北京市—通州区</p>
             </div>
             <div class="imgShader">
@@ -461,7 +477,7 @@
         </div>
         <div class="col-md-3 column">
             <div class="imgBox1">
-                <img src="__PUBLIC__/Home/imgs/shequ4.JPG" alt="">
+                <img src="/Public/Home/imgs/shequ4.JPG" alt="">
                 <p class="addressTag">北京市—通州区</p>
             </div>
             <div class="imgShader">
@@ -496,7 +512,7 @@
   
             $.ajax({
                 // 获取id，challenge，success（是否启用failback）
-                url: "__MODULE__/Login/verify?t=" + (new Date()).getTime(), // 加随机数防止缓存
+                url: "/index.php/Home/Login/verify?t=" + (new Date()).getTime(), // 加随机数防止缓存
                 type: "get",
                 dataType: "json",
                 success: function (data) {
@@ -525,7 +541,7 @@
     var c = 0;  
     $('#loginModel2').on('show.bs.modal', function () {
 
-           if('{$figure}'==2)
+           if('<?php echo ($figure); ?>'==2)
            {
               //已经登录，则不用再次登录
               window.location.href='/Community/index';
@@ -536,7 +552,7 @@
           
                     $.ajax({
                         // 获取id，challenge，success（是否启用failback）
-                        url: "__MODULE__/Login/verify?t=" + (new Date()).getTime(), // 加随机数防止缓存
+                        url: "/index.php/Home/Login/verify?t=" + (new Date()).getTime(), // 加随机数防止缓存
                         type: "get",
                         dataType: "json",
                         success: function (data) {
@@ -560,4 +576,3 @@
 
 })
 </script>
-
