@@ -21,11 +21,11 @@
                    $filename = time();
                    foreach($tmp_name as $key=>$value)
                    {
-              	$filename++;
-       	    	$pathinfo = pathinfo($file['name'][$key]);
-       	    	$extension = $pathinfo['extension']; //扩展名
-       	    	$newpath = '/origanization/project_img/'.date('Y-m-d',time()).'/'.$filename.'.'.$extension;
-       	    	$upload->singUpload($value,$newpath);   	
+						$filename++;
+						$pathinfo = pathinfo($file['name'][$key]);
+						$extension = $pathinfo['extension']; //扩展名
+						$newpath = '/origanization/project_img/'.date('Y-m-d',time()).'/'.$filename.'.'.$extension;
+						$upload->singUpload($value,$newpath);   	
                    }
 
               }

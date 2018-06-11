@@ -1289,8 +1289,6 @@
             // if ($strInfo['chars1']=='-119' AND $strInfo['chars2']=='80' ) return 'png';
             return $fileType;
         }
-       
-       
-	
+	   
 	}
 ?>
