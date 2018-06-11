@@ -150,7 +150,7 @@
             // var_dump($phonecode);die;
 			$this->assign('phonecode',$phonecode);
             //社会组织服务领域
-            $service_area = M('origanization_type')->select();
+            $service_area = M('service_object')->select();
             $this->assign('service_area',$service_area);
         	$this->display();
         }
