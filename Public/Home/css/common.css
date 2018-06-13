@@ -21,8 +21,10 @@ li{
 body{
     color: #333!important;
     overflow-x: hidden;
-    background: #efefef;
-    font: 14px Helvetica Neue,Helvetica,PingFang SC,\5FAE\8F6F\96C5\9ED1,Tahoma,Arial,sans-serif;
+    background: #f4f4f4;
+    font-size: 14px;
+    font-family: "Microsoft YaHei"!important;
+
 }
 
 .left{
