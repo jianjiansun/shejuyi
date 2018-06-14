@@ -78,8 +78,8 @@
 		public function communityIndex()
 		{
 			 //社会组织类型
-             $origanization_type = M('origanization_type')->select();
-             $this->assign('origanization_type',$origanization_type);
+             $service_object = M('service_object')->select();
+             $this->assign('service_object',$service_object);
              //项目总数
 			 $project_num = M('community_project_info')->count();
 			 $this->assign('project_num',$project_num);
@@ -205,10 +205,10 @@
 	        {
 	        	$ret['errorInfo'] = 'logo未上传';
 	        }
-	        if(empty($origanization_telephone))
-	        {
-	            $ret["errorInfo"] = "社会组织固定电话未填写";
-	        }
+	        // if(empty($origanization_telephone))
+	        // {
+	        //     $ret["errorInfo"] = "社会组织固定电话未填写";
+	        // }
 	        if(empty($province)||empty($city)||empty($area)||empty($address))
 	        {
 	            $ret["errorInfo"] = "请补全社会组织地址信息";
