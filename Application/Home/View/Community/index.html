@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
 <link rel="stylesheet" href="__PUBLIC__/Home/css/right-tab.css">
 <link rel="stylesheet" href="__PUBLIC__/Home/css/carousel.css">
+<link rel="shortcut icon" href="__PUBLIC__/Home/img/easyLife.ico" />
 <script src="__PUBLIC__/Home/js/layui.js"></script>
 <script src="__PUBLIC__/Home/js/carousel.js"></script>
 </head>
@@ -133,22 +134,28 @@
 
     <div class="container house-list">
         <div class="row clearfix  col-md-9">
-            <ul class="nav navbar-nav classNav">
-                <li>
-                    <a class="on" href="javascript:;" flag='0'>全部</a>
-                </li>
-                <foreach name='origanization_type' item='vo'>
+            <div class = "allNavShowBox clearfix">
+                <ul class="nav navbar-nav classNav">
                     <li>
-                        <a href="javascript:;" flag="{$vo['sjy_id']}">{$vo['sjy_origanization_type_name']}</a>
+                        <a class="on" href="javascript:;" flag='0'>全部</a>
                     </li>
-                </foreach>
-            </ul>
-            <div style="height: 0; clear: both;"></div>
-            <ul class="buildImg" id="origanizationList">
+                    <foreach name='origanization_type' item='vo'>
+                        <li>
+                            <a href="javascript:;" flag="{$vo['sjy_id']}">{$vo['sjy_origanization_type_name']}</a>
+                        </li>
+                    </foreach>
+                </ul>
+                <div style="height: 0; clear: both;"></div>
+                <ul class="buildImg" id="origanizationList">
+
+                </ul>
+                <div style="text-align: center" id="test1"></div>
+
+            </div>
 
 
-            </ul>
-            <div style="text-align: center" id="test1"></div>
+
+
         </div>
         <div class="col-md-3 program-box">
             <div class="publish-program">

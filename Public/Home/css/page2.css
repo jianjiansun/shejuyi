@@ -258,9 +258,9 @@
     text-align: center;
     background: #FFFFFF;
 }
-input:focus{
+/*input:focus{
     border: 1px solid red!important;
-}
+}*/
 
 .layui-input:focus{
     border: 1px solid red!important;
