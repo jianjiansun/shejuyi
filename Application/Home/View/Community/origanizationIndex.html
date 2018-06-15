@@ -17,7 +17,7 @@
     <div class="headLogin">
         <div class="left changeBan">
             <a href="javascript:;" id="cityChoose" class="region">{$city}</a>
-            <a class="on" href="__MODULE__/Community/OriganizationIndex" target="_blank">社会组织版</a>
+            <a class="on" href="__MODULE__/Community/origanizationIndex" target="_blank">社会组织版</a>
             <a href="__MODULE__/Origanization/communityIndex" target="_blank">社区版</a>
         </div>
         <div class="right person">
@@ -92,19 +92,19 @@
 
 
     <!--轮播图-->
-    <div class = "container">
-        <div id = "banner1" style = "width: 1170px; height: 360px;"></div>
+    <div class="container">
+        <div id="banner1" style="width: 1170px; height: 360px;"></div>
     </div>
     <script>
-        window.onload = function(){
+        window.onload = function() {
             var banner1 = new Carousel();
             //图片地址数组。不要少于三张
-            var imgSrcDate = ["__PUBLIC__/Home/imgs/ban1.png","__PUBLIC__/Home/imgs/ban2.png","__PUBLIC__/Home/imgs/ban3.png","__PUBLIC__/Home/imgs/ban4.png"];
+            var imgSrcDate = ["__PUBLIC__/Home/imgs/ban1.png", "__PUBLIC__/Home/imgs/ban2.png", "__PUBLIC__/Home/imgs/ban3.png", "__PUBLIC__/Home/imgs/ban4.png"];
             banner1.init({
-                container:"#banner1",
-                datas:imgSrcDate,
-                autoplaySpeed:3000,
-                autoplay:true
+                container: "#banner1",
+                datas: imgSrcDate,
+                autoplaySpeed: 3000,
+                autoplay: true
             });
 
 

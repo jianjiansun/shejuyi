@@ -16,7 +16,7 @@
     <div class="headLogin">
         <div class="left changeBan">
             <a href="javascript:;" id="cityChoose" class="region">{$city}</a>
-            <a href="__MODULE__/Community/OriganizationIndex" target="_blank">社会组织版</a>
+            <a href="__MODULE__/Community/origanizationIndex" target="_blank">社会组织版</a>
             <a class="on" href="__MODULE__/Origanization/communityIndex" target="_blank">社区版</a>
         </div>
         <div class="right person">
@@ -108,19 +108,19 @@
     </div>
 
 
-    <div class = "container">
-        <div id = "banner1" style = "width: 1170px; height: 360px;"></div>
+    <div class="container">
+        <div id="banner1" style="width: 1170px; height: 360px;"></div>
     </div>
     <script>
-        window.onload = function(){
+        window.onload = function() {
             var banner1 = new Carousel();
             //图片地址数组。不要少于三张
-            var imgSrcDate = ["__PUBLIC__/Home/imgs/ban1.png","__PUBLIC__/Home/imgs/ban2.png","__PUBLIC__/Home/imgs/ban3.png","__PUBLIC__/Home/imgs/ban4.png"];
+            var imgSrcDate = ["__PUBLIC__/Home/imgs/ban1.png", "__PUBLIC__/Home/imgs/ban2.png", "__PUBLIC__/Home/imgs/ban3.png", "__PUBLIC__/Home/imgs/ban4.png"];
             banner1.init({
-                container:"#banner1",
-                datas:imgSrcDate,
-                autoplaySpeed:3000,
-                autoplay:true
+                container: "#banner1",
+                datas: imgSrcDate,
+                autoplaySpeed: 3000,
+                autoplay: true
             });
         }
     </script>
@@ -130,12 +130,21 @@
 
     <div class="container house-list">
         <div class="row clearfix  col-md-9">
+<<<<<<< HEAD
             <div class = "allNavShowBox clearfix">
 
                 <a class="on  all" href="javascript:;" flag="0">全部</a>
 
                 <ul class="nav navbar-nav classNav">
                     <foreach name='service_object' item="vo" >
+=======
+            <div class="allNavShowBox clearfix">
+                <ul class="nav navbar-nav classNav">
+                    <li>
+                        <a class="on" href="javascript:;" flag='0'>全部</a>
+                    </li>
+                    <foreach name='service_object' item='vo'>
+>>>>>>> 1b1607cea029c7051975c5ce764752eb18d99c23
                         <li>
                             <a href="javascript:;" flag="{$vo['sjy_id']}">{$vo['service_object_name']}</a>
                         </li>
