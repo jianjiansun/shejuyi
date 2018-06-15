@@ -52,8 +52,10 @@
                         <li>
                             <a href="__MODULE__/Project/communityProjectManger">我的项目<if condition='$active egt 1'><span class="layui-badge-dot"></span></if></a>
                         </li>
-
                     </if>
+                    <li>
+                        <a class = "" href="__CONTROLLER__/send_project">发布项目</a>
+                    </li>
 
                     <li>
                         <a href="__CONTROLLER__/logout">注销</a>
@@ -110,32 +112,31 @@
     </script>
 
 
-
-
-
-
     <div class="container house-list">
         <div class="row clearfix  col-md-9">
-            <ul class="nav navbar-nav classNav">
+            <div class="allNavShowBox clearfix">
+                <ul class="nav navbar-nav classNav">
 
-                <li>
-                    <a class="on" href="javascript:;" flag="0">全部</a>
-                </li>
-                <foreach name='service_object' item="vo">
                     <li>
-                        <a href="javascript:;" flag="{$vo['sjy_id']}">{$vo['service_object_name']}</a>
+                        <a class="on" href="javascript:;" flag="0">全部</a>
                     </li>
-                </foreach>
+                    <foreach name='service_object' item="vo">
+                        <li>
+                            <a href="javascript:;" flag="{$vo['sjy_id']}">{$vo['service_object_name']}</a>
+                        </li>
+                    </foreach>
 
-            </ul>
-            <div style="height: 0; clear: both;"></div>
-            <ul class="buildImg" id="projectList">
+                </ul>
+                <div style="height: 0; clear: both;"></div>
+                <ul class="buildImg" id="projectList">
 
 
 
-            </ul>
+                </ul>
 
-            <div style="text-align: center" id="test1"></div>
+                <div style="text-align: center" id="test1"></div>
+            </div>
+
 
         </div>
         <div class="col-md-3 program-box">

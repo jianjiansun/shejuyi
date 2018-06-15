@@ -122,15 +122,58 @@
 
 <body>
     <div class="headLogin">
+
         <div class="left changeBan logoPer">
-            <a href="{$index}">
+            <a href='{$index}'>
                 <img src="__PUBLIC__/Home/imgs/logo.png" alt="">
                 <span>社居易</span>
             </a>
+            <ul class = "indexNavBox">
+                <li><a href="{$index}">首页</a></li>
+                <li><a href="__MODULE__/Community/origanizationIndex">组织首页</a></li>
+                <li><a href="__MODULE__/Origanization/communityIndex">社区首页</a></li>
+            </ul>
         </div>
         <div class="right person">
-            <!-- <img src="__PUBLIC__/Home/imgs/personDl.jpg" alt="">-->
+            <div class="dropdown pull-right">
+
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                    <div class="user-img" style="display: inline-block">
+                        <img src="{$user_image}" alt="">
+                        <span class="iconfont VIP-icon" style="right: -20px;">&#xe65b;</span>
+                    </div>
+                    <span>{$showname}<if condition='$active egt 1'><span class="layui-badge-dot"></span></if>
+                        </span>
+                </a>
+                <ul class="dropdown-menu personalMenu">
+                    <li>
+                        <a href="__CONTROLLER__/communityIdentify">认证状态</a>
+                    </li>
+                    <if condition='($isidentify eq 1)'>
+                        <li>
+                            <a href="__CONTROLLER__/personInfo">账号设置</a>
+                        </li>
+                    </if>
+                    <if condition='($isidentify eq 1) and ($code gt 0)'>
+                        <li>
+                            <a href="__CONTROLLER__/myCommunity">我的社区</a>
+                        </li>
+                        <li>
+                            <a href="__MODULE__/Project/communityProjectManger">我的项目<if condition='$active egt 1'><span class="layui-badge-dot"></span></if></a>
+                        </li>
+
+                    </if>
+                    <li>
+                        <a class = "" href="__CONTROLLER__/send_project">发布项目</a>
+                    </li>
+
+                    <li>
+                        <a href="__CONTROLLER__/logout">注销</a>
+                    </li>
+                </ul>
+            </div>
         </div>
+
     </div>
     <div class="container" style="margin-bottom: 40px;">
         <div style="height: 80px;">

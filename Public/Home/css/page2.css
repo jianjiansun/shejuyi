@@ -44,6 +44,22 @@
     margin-left: -4px;
     font-size: 14px;
 }
+.indexNavBox{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 240px;
+}
+.indexNavBox li {
+    float: left;
+}
+.indexNavBox li a{
+    border-right: none ;
+}
+.indexNavBox li a:hover{
+    color: #ea6f5a;
+}
+
 .changeBan a.on{
     background: #efefef;
     font-weight: 900;
@@ -117,7 +133,7 @@
 
     height: 100%;
     position: absolute;
-    line-height: 42px;
+    line-height: 62px;
     font-weight: 700;
     color: #000;
     text-align: center;
@@ -277,7 +293,12 @@
     font-size: 16px;
     margin-right: 20px;
     color: #333;
-
+    display: inline-block;
+    width: 80px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
 }
 
 a
