@@ -60,8 +60,9 @@ class CommunityController extends BaseController {
     	//社会组织列表
         public function index(){
              //社会组织类型
-             $origanization_type = M('origanization_type')->select();
-             $this->assign('origanization_type',$origanization_type);
+             $service_object = M('service_object')->select();
+			 
+             $this->assign('service_object',$service_object);
              //项目总数
 			 $project_num = M('community_project_info')->count();
 			 $this->assign('project_num',$project_num);
