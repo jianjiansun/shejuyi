@@ -1,67 +1,76 @@
-<link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/right-tab.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/carousel.css">
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en">
 
-<link rel="shortcut icon" href="__PUBLIC__/Home/img/easyLife.ico" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>社居易</title>
+    <meta name='description' content='社居易，致力于社区工作简单化' />
+    <link rel="stylesheet" href="/Public/Home/css/bootstrap.css">
+    <link rel="stylesheet" href="/Public/Home/css/common.css">
+    <link rel="stylesheet" href="/Public/Home/css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+    <script src="/Public/Home/js/jquery-1.12.4.js"></script>
+    <script src="/Public/Home/js/bootstrap.js"></script>
+    <script src="/Public/Home/js/autoResizeImage.js"></script>
 
-<script src="__PUBLIC__/Home/js/layui.js"></script>
-
-<script src="__PUBLIC__/Home/js/carousel.js"></script>
+    <link rel="stylesheet" href="/Public/Home/css/region.css">
+<link rel="stylesheet" href="/Public/Home/css/page2.css">
+<link rel="stylesheet" href="/Public/Home/css/layui.css">
+<link rel="stylesheet" href="/Public/Home/css/right-tab.css">
+<link rel="stylesheet" href="/Public/Home/css/carousel.css">
+<link rel="shortcut icon" href="/Public/Home/img/easyLife.ico" />
+<script src="/Public/Home/js/layui.js"></script>
+<script src="/Public/Home/js/carousel.js"></script>
 </head>
 
 <body>
     <div class="shadeBox"></div>
     <div id="showCityBox" class="province-switch" style="display: none;">
     </div>
+
     <div class="headLogin">
         <div class="left changeBan">
-            <a href="javascript:;" id="cityChoose" class="region">{$city}</a>
-            <a href="__MODULE__/Community/origanizationIndex" target="_blank">社会组织版</a>
-            <a class="on" href="__MODULE__/Origanization/communityIndex" target="_blank">社区版</a>
+            <a href="javascript:;" id="cityChoose" class="region"><?php echo ($city); ?></a>
+            <a href="/index.php/Home/Community/origanizationIndex" target="_blank">社会组织版</a>
+            <a class="on" href="/index.php/Home/Origanization/communityIndex" target="_blank">社区版</a>
         </div>
         <div class="right person">
             <div class="dropdown pull-right">
-                <if condition='($isidentify eq 1) and ($code gt 0)'>
-                    <a class="myOwnIndex" href="__MODULE__/Home/displayOriganizationHome">{$origanization_name}</a>
-                </if>
+
+                <?php if(($isidentify == 1) and ($code > 0)): ?><a class="myOwnIndex" href="/index.php/Home/Home/displayCommunityHome"><?php echo ($community_name); ?></a><?php endif; ?>
+
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">
                     <div class="user-img" style="display: inline-block">
-
-                        <img src="{$user_image}" alt="">
+                        <img src="<?php echo ($user_image); ?>" alt="">
                         <span class="iconfont VIP-icon" style="right: -20px;">&#xe65b;</span>
                     </div>
-
-
-                    <span>{$showname}<if condition='$active egt 1'><span class="layui-badge-dot"></span></if>
+                    <span><?php echo ($showname); if($active >= 1): ?><span class="layui-badge-dot"></span><?php endif; ?>
                     </span>
                 </a>
+
                 <ul class="dropdown-menu personalMenu">
                     <li>
-                        <a href="__CONTROLLER__/origanizationIdentify">认证状态</a>
+                        <a href="/index.php/Home/Community/communityIdentify">认证状态</a>
                     </li>
-                    <if condition='($isidentify eq 1)'>
-                        <li>
-                            <a href="__CONTROLLER__/personInfo">账号设置</a>
-                        </li>
-                    </if>
-                    <if condition='($isidentify eq 1) and ($code gt 0)'>
-                        <li>
-                            <a href="__CONTROLLER__/myOriganization">我的机构</a>
+                    <?php if(($isidentify == 1)): ?><li>
+                            <a href="/index.php/Home/Community/personInfo">账号设置</a>
+                        </li><?php endif; ?>
+                    <?php if(($isidentify == 1) and ($code > 0)): ?><li>
+                            <a href="/index.php/Home/Community/myCommunity">我的社区</a>
                         </li>
                         <li>
-                            <a href="__MODULE__/Project/origanizationProjectManger">我的项目<if condition='$active egt 1'><span class="layui-badge-dot"></span></if></a>
-                        </li>
-                        <li>
-                            <a href="__MODULE__/Home/displayOriganizationHome">机构主页</a>
-                        </li>
-                    </if>
+                            <a href="/index.php/Home/Project/communityProjectManger">我的项目<?php if($active >= 1): ?><span class="layui-badge-dot"></span><?php endif; ?></a>
+                        </li><?php endif; ?>
+
                     <li>
-                        <a href="__CONTROLLER__/logout">注销</a>
+                        <a href="/index.php/Home/Community/logout">注销</a>
                     </li>
                 </ul>
             </div>
+
+
         </div>
 
     </div>
@@ -70,12 +79,12 @@
     <div class = "container">
         <div class = "top">
             <div class = "logo  col-md-7">
-                <img src="__PUBLIC__/Home/imgs/logo.png" alt="">
+                <img src="/Public/Home/imgs/logo.png" alt="">
                 <span>社居易</span>
             </div>
             <ul class = "mainNav col-md-5">
                 <li>
-                    <a class = "" href="__CONTROLLER__/send_project">发布项目</a>
+                    <a class = "" href="/index.php/Home/Community/send_project">发布项目</a>
                 </li>
             </ul>
         </div>
@@ -91,8 +100,10 @@
         <div class="container">
             <div class="top">
                 <div class="logo  col-md-6">
-                    <img src="__PUBLIC__/Home/imgs/logo.png" alt="">
+                    <img src="/Public/Home/imgs/logo.png" alt="">
                     <span>社居易</span>
+
+
                 </div>
                 <div class="mainNav col-md-6">
                     <div class="search">
@@ -108,6 +119,8 @@
     </div>
 
 
+    <!--轮播图-->
+
     <div class="container">
         <div id="banner1" style="width: 1170px; height: 360px;"></div>
     </div>
@@ -115,46 +128,45 @@
         window.onload = function() {
             var banner1 = new Carousel();
             //图片地址数组。不要少于三张
-            var imgSrcDate = ["__PUBLIC__/Home/imgs/ban1.png", "__PUBLIC__/Home/imgs/ban2.png", "__PUBLIC__/Home/imgs/ban3.png", "__PUBLIC__/Home/imgs/ban4.png"];
+            var imgSrcDate = ["/Public/Home/imgs/ban1.png", "/Public/Home/imgs/ban2.png", "/Public/Home/imgs/ban3.png", "/Public/Home/imgs/ban4.png"];
             banner1.init({
                 container: "#banner1",
                 datas: imgSrcDate,
                 autoplaySpeed: 3000,
                 autoplay: true
             });
-        }
 
+
+        }
     </script>
+
+
+
     <div class="container house-list">
         <div class="row clearfix  col-md-9">
-            <div class="allNavShowBox clearfix">
+            <div class = "allNavShowBox clearfix">
                 <a class="on  all" href="javascript:;" flag="0">全部</a>
 
                 <ul class="nav navbar-nav classNav">
-                    <foreach name='service_object' item="vo">
-
-                        <li>
-                            <a href="javascript:;" flag="{$vo['sjy_id']}">{$vo['service_object_name']}</a>
-                        </li>
-
-                    </foreach>
+                    <?php if(is_array($service_object)): foreach($service_object as $key=>$vo): ?><li>
+                            <a href="javascript:;" flag="<?php echo ($vo['sjy_id']); ?>"><?php echo ($vo['service_object_name']); ?></a>
+                        </li><?php endforeach; endif; ?>
                 </ul>
                 <a href="javascript:;" class="more">更多</a>
             </div>
-
             <div style="height: 0; clear: both;"></div>
-            <ul class="buildImg" id="projectList">
+            <ul class="buildImg" id="origanizationList">
 
             </ul>
-
             <div style="text-align: center" id="test1"></div>
+
+
 
         </div>
         <div class="col-md-3 program-box">
             <div class="publish-program">
-                <if condition='($isidentify eq 1) and ($code gt 0)'>
-                    <a class="publish-btn" target='_blank' href="__CONTROLLER__/send_project">发布项目</a>
-                </if>
+
+                <?php if(($isidentify == 1) and ($code > 0)): ?><a class="publish-btn" target='_blank' href="/index.php/Home/Community/send_project">发布项目</a><?php endif; ?>
 
             </div>
 
@@ -165,36 +177,35 @@
             <div class="paddingBox">
                 <dl>
                     <dt>项目总数</dt>
-                    <dd><span>{$project_num}</span> 个</dd>
+                    <dd><span><?php echo ($project_num); ?></span> 个</dd>
                 </dl>
                 <dl>
                     <dt>入驻机构</dt>
-                    <dd><span>{$origanization_num}</span> 家</dd>
+                    <dd><span><?php echo ($origanization_num); ?></span> 家</dd>
                 </dl>
                 <dl>
                     <dt>入驻社区</dt>
-                    <dd><span>{$community_num}</span> 家</dd>
+                    <dd><span><?php echo ($community_num); ?></span> 家</dd>
                 </dl>
             </div>
         </div>
     </div>
-
-
     <div class="row clearfix footerBox">
         <div class="container">
             <div class="copyright fl">
                 <p class="left">北京社居易有限公司 版权所有</p>
                 <p class="right">
-                        Copyright © 2017-2018 社居易 京ICP备18019570
+                    Copyright © 2017-2018 社居易 京ICP备18019570
                 </p>
             </div>
         </div>
     </div>
-</body>
 
-<script src="__PUBLIC__/Home/js/cityBoxShow.js"></script>
+</body>
+<script src="/Public/Home/js/cityBoxShow.js"></script>
 
 <script>
+
     /* 折叠更多哦*/
     var flag = false;
 
@@ -214,7 +225,6 @@
     });
 
 
-
     /*社区这边还没弄分页*/
     /*首次加载*/
     var searchFunc = function(text = '', type = '') {
@@ -224,7 +234,7 @@
 
 
 
-        $.get("__MODULE__/Search/getOriganizationCount?type=" + type + "&search_body=" + text, function(data) {
+        $.get("/index.php/Home/Search/getOriganizationCount?type=" + type + "&search_body=" + text, function(data) {
             var html = "";
 
             count = Number(data);
@@ -236,17 +246,17 @@
                 laypage.render({
                     elem: 'test1',
                     count: count //数据总数，从服务端得到
-                    ,
+                        ,
                     limit: 10,
                     jump: function(obj, first) {
                         //obj包含了当前分页的所有参数，比如：
                         console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
                         console.log(obj.limit); //得到每页显示的条数
-                        $.get("__MODULE__/Search/searchOriganization?type=" + type + "&search_body=" + text + "&page=" + obj.curr, function(data) {
+                        $.get("/index.php/Home/Search/searchOriganization?type=" + type + "&search_body=" + text + "&page=" + obj.curr, function(data) {
                             var html = "";
-                            //console.log(data.data[0]);
+                           // console.log(data.data[0]);
                             for (var i = 0; i < data.data.length; i++) {
-                                var href = '__MODULE__/Home/displayOriganizationHome/id/' + data.data[i].sjy_id;
+                                var href = '/index.php/Home/Home/displayOriganizationHome/id/' + data.data[i].sjy_id;
 
 
                                 html += '<li>' +
@@ -321,7 +331,7 @@
     var search = function(text = '', type = '') {
         searchFunc(text, type);
         // $.ajax({
-        //     url: "__MODULE__/Search/searchCommunityProject",
+        //     url: "/index.php/Home/Search/searchCommunityProject",
         //     type: "GET",
         //     data: {
         //         type: type,
