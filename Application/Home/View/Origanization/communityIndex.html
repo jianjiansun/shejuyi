@@ -3,7 +3,9 @@
 <link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
 <link rel="stylesheet" href="__PUBLIC__/Home/css/right-tab.css">
 <link rel="stylesheet" href="__PUBLIC__/Home/css/carousel.css">
+
 <link rel="shortcut icon" href="__PUBLIC__/Home/img/easyLife.ico" />
+
 <script src="__PUBLIC__/Home/js/layui.js"></script>
 
 <script src="__PUBLIC__/Home/js/carousel.js"></script>
@@ -124,85 +126,69 @@
             });
         }
     </script>
-
-
-
-
     <div class="container house-list">
         <div class="row clearfix  col-md-9">
-
             <div class="allNavShowBox clearfix">
-
                 <a class="on  all" href="javascript:;" flag="0">全部</a>
 
                 <ul class="nav navbar-nav classNav">
-
-                    <div class="allNavShowBox clearfix">
-                        <ul class="nav navbar-nav classNav">
-                            <li>
-                                <a class="on" href="javascript:;" flag='0'>全部</a>
-                            </li>
-                            <foreach name='service_object' item='vo'>
-
-                                <li>
-                                    <a href="javascript:;" flag="{$vo['sjy_id']}">{$vo['service_object_name']}</a>
-                                </li>
-                            </foreach>
-                        </ul>
-                        <a href="javascript:;" class="more">更多</a>
-
-                    </div>
-
-                    <div style="height: 0; clear: both;"></div>
-                    <ul class="buildImg" id="origanizationList">
-
-
-                    </ul>
-                    <div style="text-align: center" id="test1"></div>
+                    <foreach name='service_object' item="vo">
+                        <li>
+                            <a href="javascript:;" flag="{$vo['sjy_id']}">{$vo['service_object_name']}</a>
+                        </li>
+                    </foreach>
+                </ul>
+                <a href="javascript:;" class="more">更多</a>
             </div>
-            <div class="col-md-3 program-box">
-                <div class="publish-program">
-                    <if condition='($figure eq 1) and ($code gt 0)'>
-                        <a class="publish-btn" target='_blank' href="__MODULE__/Origanization/send_project">发布项目</a>
-                    </if>
-                    <if condition='($figure eq 2) and ($code gt 0)'>
-                        <a class="deliverBtn" target='_blank' href="__MODULE__/Community/send_project">发布项目</a>
-                    </if>
+
+            <div style="height: 0; clear: both;"></div>
+            <ul class="buildImg" id="projectList">
+
+            </ul>
+
+            <div style="text-align: center" id="test1"></div>
+
+        </div>
+        <div class="col-md-3 program-box">
+            <div class="publish-program">
+                <if condition='($isidentify eq 1) and ($code gt 0)'>
+                    <a class="publish-btn" target='_blank' href="__CONTROLLER__/send_project">发布项目</a>
+                </if>
+
+            </div>
 
 
-                </div>
-
-
-                <div class="programTit">
-                    <p class="tit-p1">基本信息</p>
-                </div>
-                <div class="paddingBox">
-                    <dl>
-                        <dt>项目总数</dt>
-                        <dd><span>{$project_num}</span> 个</dd>
-                    </dl>
-                    <dl>
-                        <dt>入驻机构</dt>
-                        <dd><span>{$origanization_num}</span> 家</dd>
-                    </dl>
-                    <dl>
-                        <dt>入驻社区</dt>
-                        <dd><span>{$community_num}</span> 家</dd>
-                    </dl>
-                </div>
+            <div class="programTit">
+                <p class="tit-p1">基本信息</p>
+            </div>
+            <div class="paddingBox">
+                <dl>
+                    <dt>项目总数</dt>
+                    <dd><span>{$project_num}</span> 个</dd>
+                </dl>
+                <dl>
+                    <dt>入驻机构</dt>
+                    <dd><span>{$origanization_num}</span> 家</dd>
+                </dl>
+                <dl>
+                    <dt>入驻社区</dt>
+                    <dd><span>{$community_num}</span> 家</dd>
+                </dl>
             </div>
         </div>
-        <div class="row clearfix footerBox">
-            <div class="container">
-                <div class="copyright fl">
-                    <p class="left">北京社居易有限公司 版权所有</p>
-                    <p class="right">
-                        Copyright © 2017-2018 社居易 京ICP备18019570
-                    </p>
-                </div>
+    </div>
+
+
+    <div class="row clearfix footerBox">
+        <div class="container">
+            <div class="copyright fl">
+                <p class="left">北京社居易有限公司 版权所有</p>
+                <p class="right">
+                    Copyright © 2017-2018 社居易 京ICP备18019570
+                </p>
             </div>
         </div>
-
+    </div>
 </body>
 <script src="__PUBLIC__/Home/js/cityBoxShow.js"></script>
 
