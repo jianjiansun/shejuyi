@@ -78,7 +78,8 @@
 		public function communityIndex()
 		{
 			 //社会组织类型
-             $service_object = M('service_object')->select();
+			 $service_object = M('service_object')->select();
+			 
              $this->assign('service_object',$service_object);
              //项目总数
 			 $project_num = M('community_project_info')->count();
