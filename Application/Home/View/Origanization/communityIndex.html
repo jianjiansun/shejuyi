@@ -303,6 +303,21 @@
     var text = $("#searchText").val();
     var type = "";
 
+
+    /* 全部搜索*/
+    $(".allNavShowBox .all").click(function() {
+
+        type = $(this).attr('flag');
+        console.log(type);
+
+        $(".classNav > li > a").removeClass("on");
+
+        $(this).addClass('on');
+        search(text, type);
+
+    });
+
+
     /*为老服务， 司法矫正 等taB 项的切换*/
     $(".classNav > li > a").click(function() {
 
