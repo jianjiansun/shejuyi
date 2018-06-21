@@ -134,48 +134,21 @@
 
     <div class="container house-list">
         <div class="row clearfix  col-md-9">
-<<<<<<< HEAD
-            <div class = "allNavShowBox clearfix">
-                <a class="on  all" href="javascript:;" flag="0">全部</a>
-
-                <ul class="nav navbar-nav classNav">
-                    <foreach name='service_object' item="vo">
-
-=======
             <div class="allNavShowBox clearfix">
                 <a class="on  all" href="javascript:;" flag="0">全部</a>
 
                 <ul class="nav navbar-nav classNav">
-<<<<<<< HEAD
                     <foreach name='service_object' item="vo">
                         <li>
                             <a href="javascript:;" flag="{$vo['sjy_id']}">{$vo['service_object_name']}</a>
                         </li>
-=======
-                    <li>
-                        <a class="on" href="javascript:;" flag='0'>全部</a>
-                    </li>
-                    <foreach name='service_object' item='vo'>
->>>>>>> c5985eaeff8e5f09fb6d27220b5075da843dd21c
-                        <li>
-                            <a href="javascript:;" flag="{$vo['sjy_id']}">{$vo['service_object_name']}</a>
-                        </li>
-
->>>>>>> 996edbb18099780bd99cce6da5058f40ab36e416
                     </foreach>
                 </ul>
                 <a href="javascript:;" class="more">更多</a>
             </div>
-            <div style="height: 0; clear: both;"></div>
-            <ul class="buildImg" id="origanizationList">
 
-<<<<<<< HEAD
             <div style="height: 0; clear: both;"></div>
             <ul class="buildImg" id="origanizationList">
-=======
-            </ul>
-            <div style="text-align: center" id="test1"></div>
->>>>>>> 996edbb18099780bd99cce6da5058f40ab36e416
 
             </ul>
 
@@ -226,45 +199,23 @@
 <script src="__PUBLIC__/Home/js/cityBoxShow.js"></script>
 
 <script>
-<<<<<<< HEAD
     /* 折叠更多哦*/
     var flag_click = false;
 
     $(".more").click(function() {
         if (flag_click) {
-=======
-
-    /* 折叠更多哦*/
-    var flag = false;
-
-    $(".more").click(function() {
-        if (flag) {
->>>>>>> 996edbb18099780bd99cce6da5058f40ab36e416
             $(".classNav").css({
                 "height": "74px",
                 "overflow": "hidden"
             });
-<<<<<<< HEAD
             flag_click = false;
-=======
-            flag = false;
->>>>>>> 996edbb18099780bd99cce6da5058f40ab36e416
         } else {
             $(".classNav").css({
                 "height": "auto"
             });
-<<<<<<< HEAD
             flag_click = true;
         }
     });
-=======
-            flag = true;
-        }
-    });
-
-
-    /*社区这边还没弄分页*/
->>>>>>> 996edbb18099780bd99cce6da5058f40ab36e416
     /*首次加载*/
     var searchFunc = function(text = '', type = '') {
 
@@ -293,7 +244,7 @@
                         console.log(obj.limit); //得到每页显示的条数
                         $.get("__MODULE__/Search/searchOriganization?type=" + type + "&search_body=" + text + "&page=" + obj.curr, function(data) {
                             var html = "";
-                           // console.log(data.data[0]);
+                            console.log(data.data[0]);
                             for (var i = 0; i < data.data.length; i++) {
                                 var href = '__MODULE__/Home/displayOriganizationHome/id/' + data.data[i].sjy_id;
 
