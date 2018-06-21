@@ -302,7 +302,7 @@
 	        $base_info['sjy_origanization_isidentify'] = 1;                 //社会组织已认证
 	        $base_info['sjy_origanization_admin_id'] = session('userInfo')['sjy_id'];  //管理者id
 	        $base_info['sjy_origanization_register_time'] = date("Y-m-d H:i:s",time()); //注册时间
-	        $base_info['sjy_origanization_type_name'] = M('origanization_type')->where(['sjy_id'=>$origanization_type])->getField('sjy_origanization_type_name');     //社会组织类型汉字
+	        $base_info['sjy_origanization_type_name'] = M('service_object')->where(['sjy_id'=>$origanization_type])->getField('service_object_name');     //社会组织类型汉字
 	        //插入社会组织基本信息，并取得社会组织自增id
 	        $origanization_id = $origanization_base_info->add($base_info);
 
