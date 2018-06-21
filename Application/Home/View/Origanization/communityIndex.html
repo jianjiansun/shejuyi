@@ -93,8 +93,6 @@
                 <div class="logo  col-md-6">
                     <img src="__PUBLIC__/Home/imgs/logo.png" alt="">
                     <span>社居易</span>
-
-
                 </div>
                 <div class="mainNav col-md-6">
                     <div class="search">
@@ -125,6 +123,7 @@
                 autoplay: true
             });
         }
+
     </script>
     <div class="container house-list">
         <div class="row clearfix  col-md-9">
@@ -133,9 +132,11 @@
 
                 <ul class="nav navbar-nav classNav">
                     <foreach name='service_object' item="vo">
+
                         <li>
                             <a href="javascript:;" flag="{$vo['sjy_id']}">{$vo['service_object_name']}</a>
                         </li>
+
                     </foreach>
                 </ul>
                 <a href="javascript:;" class="more">更多</a>
@@ -184,12 +185,13 @@
             <div class="copyright fl">
                 <p class="left">北京社居易有限公司 版权所有</p>
                 <p class="right">
-                    Copyright © 2017-2018 社居易 京ICP备18019570
+                        Copyright © 2017-2018 社居易 京ICP备18019570
                 </p>
             </div>
         </div>
     </div>
 </body>
+
 <script src="__PUBLIC__/Home/js/cityBoxShow.js"></script>
 
 <script>
@@ -234,7 +236,7 @@
                 laypage.render({
                     elem: 'test1',
                     count: count //数据总数，从服务端得到
-                        ,
+                    ,
                     limit: 10,
                     jump: function(obj, first) {
                         //obj包含了当前分页的所有参数，比如：
@@ -242,7 +244,7 @@
                         console.log(obj.limit); //得到每页显示的条数
                         $.get("__MODULE__/Search/searchOriganization?type=" + type + "&search_body=" + text + "&page=" + obj.curr, function(data) {
                             var html = "";
-                            console.log(data.data[0]);
+                            //console.log(data.data[0]);
                             for (var i = 0; i < data.data.length; i++) {
                                 var href = '__MODULE__/Home/displayOriganizationHome/id/' + data.data[i].sjy_id;
 
