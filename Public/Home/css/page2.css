@@ -144,6 +144,8 @@
     background: #ea6f5a;
     width: 80px;
     color: #ffffff;
+    position: absolute;
+    left: 0;
 }
 .allNavShowBox .more{
     right: 50px;
