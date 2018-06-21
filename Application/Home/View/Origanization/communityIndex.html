@@ -142,7 +142,7 @@
             </div>
 
             <div style="height: 0; clear: both;"></div>
-            <ul class="buildImg" id="projectList">
+            <ul class="buildImg" id="origanizationList">
 
             </ul>
 
@@ -194,20 +194,20 @@
 
 <script>
     /* 折叠更多哦*/
-    var flag = false;
+    var flag_click = false;
 
     $(".more").click(function() {
-        if (flag) {
+        if (flag_click) {
             $(".classNav").css({
                 "height": "74px",
                 "overflow": "hidden"
             });
-            flag = false;
+            flag_click = false;
         } else {
             $(".classNav").css({
                 "height": "auto"
             });
-            flag = true;
+            flag_click = true;
         }
     });
 

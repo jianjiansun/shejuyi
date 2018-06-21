@@ -135,26 +135,24 @@
     <div class="container house-list">
         <div class="row clearfix  col-md-9">
             <div class="allNavShowBox clearfix">
+                <a class="on  all" href="javascript:;" flag="0">全部</a>
+
                 <ul class="nav navbar-nav classNav">
-                    <li>
-                        <a class="on" href="javascript:;" flag='0'>全部</a>
-                    </li>
-                    <foreach name='service_object' item='vo'>
+                    <foreach name='service_object' item="vo">
                         <li>
                             <a href="javascript:;" flag="{$vo['sjy_id']}">{$vo['service_object_name']}</a>
                         </li>
                     </foreach>
                 </ul>
-                <div style="height: 0; clear: both;"></div>
-                <ul class="buildImg" id="origanizationList">
-
-                </ul>
-                <div style="text-align: center" id="test1"></div>
-
+                <a href="javascript:;" class="more">更多</a>
             </div>
 
+            <div style="height: 0; clear: both;"></div>
+            <ul class="buildImg" id="origanizationList">
 
+            </ul>
 
+            <div style="text-align: center" id="test1"></div>
 
         </div>
         <div class="col-md-3 program-box">
@@ -201,7 +199,23 @@
 <script src="__PUBLIC__/Home/js/cityBoxShow.js"></script>
 
 <script>
-    /*社区这边还没弄分页*/
+    /* 折叠更多哦*/
+    var flag_click = false;
+
+    $(".more").click(function() {
+        if (flag_click) {
+            $(".classNav").css({
+                "height": "74px",
+                "overflow": "hidden"
+            });
+            flag_click = false;
+        } else {
+            $(".classNav").css({
+                "height": "auto"
+            });
+            flag_click = true;
+        }
+    });
     /*首次加载*/
     var searchFunc = function(text = '', type = '') {
 
