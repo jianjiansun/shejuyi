@@ -1,36 +1,56 @@
-<link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/testfy.css">
-<link rel="shortcut icon" href="__PUBLIC__/Home/img/easyLife.ico" />
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en">
 
-<script src="__PUBLIC__/Home/street/jquery.citys.js"></script>
-<script src="__PUBLIC__/Home/js/layui.js"></script>
-<script src="__PUBLIC__/Home/js/layui.all.js"></script>
-<script src="__PUBLIC__/Home/js/upLoadImg.js"></script>
-<script src="__PUBLIC__/Home/js/upLoadImg2.js"></script>
-<script src="__PUBLIC__/Home/js/upLoadImg3.js"></script>
-<script src="__PUBLIC__/Home/js/upLoadImg4.js"></script>
-<script src="__PUBLIC__/Home/js/plugins/cover_js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
-<script src="__PUBLIC__/Home/js/plugins/cover_js/hammer.js" type="text/javascript" charset="utf-8"></script>
-<script src="__PUBLIC__/Home/js/plugins/cover_js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
-<script src="__PUBLIC__/Home/js/plugins/cover_js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>社居易</title>
+    <meta name='description' content='社居易，致力于社区工作简单化' />
+    <link rel="stylesheet" href="/Public/Home/css/bootstrap.css">
+    <link rel="stylesheet" href="/Public/Home/css/common.css">
+    <link rel="stylesheet" href="/Public/Home/css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+    <script src="/Public/Home/js/jquery-1.12.4.js"></script>
+    <script src="/Public/Home/js/bootstrap.js"></script>
+    <script src="/Public/Home/js/autoResizeImage.js"></script>
+
+    <link rel="stylesheet" href="/Public/Home/css/region.css">
+
+<link rel="stylesheet" href="/Public/Home/css/layui.css">
+<link rel="stylesheet" href="/Public/Home/css/page2.css">
+<link rel="stylesheet" href="/Public/Home/css/testfy.css">
+<link rel="shortcut icon" href="/Public/Home/img/easyLife.ico" />
+
+<script src="/Public/Home/street/jquery.citys.js"></script>
+<script src="/Public/Home/js/layui.js"></script>
+<script src="/Public/Home/js/layui.all.js"></script>
+<script src="/Public/Home/js/upLoadImg.js"></script>
+<script src="/Public/Home/js/upLoadImg2.js"></script>
+<script src="/Public/Home/js/upLoadImg3.js"></script>
+<script src="/Public/Home/js/upLoadImg4.js"></script>
+
+
+<script src="/Public/Home/js/plugins/cover_js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Public/Home/js/plugins/cover_js/hammer.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Public/Home/js/plugins/cover_js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Public/Home/js/plugins/cover_js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
+
 
 </head>
 
 <body>
-
     <div class="headLogin">
 
         <div class="left changeBan logoPer">
-            <a href='{$index}'>
-                <img src="__PUBLIC__/Home/imgs/logo.png" alt="">
+            <a href='<?php echo ($index); ?>'>
+                <img src="/Public/Home/imgs/logo.png" alt="">
                 <span>社居易</span>
             </a>
             <ul class="indexNavBox">
-                <li><a href="{$index}">首页</a></li>
-                <li><a href="__MODULE__/Community/origanizationIndex">组织首页</a></li>
-                <li><a href="__MODULE__/Origanization/communityIndex">社区首页</a></li>
+                <li><a href="<?php echo ($index); ?>">首页</a></li>
+                <li><a href="/index.php/Home/Community/origanizationIndex">组织首页</a></li>
+                <li><a href="/index.php/Home/Origanization/communityIndex">社区首页</a></li>
             </ul>
         </div>
         <div class="right person">
@@ -38,36 +58,32 @@
 
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">
                     <div class="user-img" style="display: inline-block">
-                        <img src="{$user_image}" alt="">
+                        <img src="<?php echo ($user_image); ?>" alt="">
                         <span class="iconfont VIP-icon" style="right: -20px;">&#xe65b;</span>
                     </div>
-                    <span>{$showname}<if condition='$active egt 1'><span class="layui-badge-dot"></span></if>
+                    <span><?php echo ($showname); if($active >= 1): ?><span class="layui-badge-dot"></span><?php endif; ?>
                     </span>
                 </a>
                 <ul class="dropdown-menu personalMenu">
                     <li>
-                        <a href="__CONTROLLER__/origanizationIdentify">认证状态</a>
+                        <a href="/index.php/Home/Community/communityIdentify">认证状态</a>
                     </li>
-                    <if condition='($isidentify eq 1)'>
-                        <li>
-                            <a href="__CONTROLLER__/personInfo">账号设置</a>
-                        </li>
-                    </if>
-                    <if condition='($isidentify eq 1) and ($code gt 0)'>
-                        <li>
-                            <a href="__CONTROLLER__/myOriganization">我的机构</a>
+                    <?php if(($isidentify == 1)): ?><li>
+                            <a href="/index.php/Home/Community/personInfo">账号设置</a>
+                        </li><?php endif; ?>
+                    <?php if(($isidentify == 1) and ($code > 0)): ?><li>
+                            <a href="/index.php/Home/Community/myCommunity">我的社区</a>
                         </li>
                         <li>
-                            <a href="__MODULE__/Project/origanizationProjectManger">我的项目<if condition='$active egt 1'><span class="layui-badge-dot"></span></if></a>
+                            <a href="/index.php/Home/Project/communityProjectManger">我的项目<?php if($active >= 1): ?><span class="layui-badge-dot"></span><?php endif; ?></a>
                         </li>
                         <li>
-                            <a class="" href="__MODULE__/Home/displayOriganizationHome">机构主页</a>
-                        </li>
-                    </if>
+                            <a class="" href="/index.php/Home/Community/send_project">发布项目</a>
+                        </li><?php endif; ?>
 
 
                     <li>
-                        <a href="__CONTROLLER__/logout">注销</a>
+                        <a href="/index.php/Home/Community/logout">注销</a>
                     </li>
                 </ul>
             </div>
@@ -75,19 +91,16 @@
 
     </div>
 
-
-
     <div class="container main-container">
         <div class="row clearfix">
             <div class="col-md-12 column">
                 <div class="row clearfix">
 
-
                     <div class="col-md-2 column  perperson">
                         <h2>个人信息</h2>
                         <div>
                             <div class="user-img">
-                                <img id="userImg" src="{$user_image}" alt="  ">
+                                <img id="userImg" src="<?php echo ($user_image); ?>" alt="  ">
                                 <span class="iconfont VIP-icon">&#xe65b;</span>
                             </div>
                             <p style="margin-top: 12px;">
@@ -103,7 +116,6 @@
                                             <button id="clipBtn">确定</button>
                                             <button onClick="javascript:$('.cover-wrap').fadeOut();">关闭</button>
                                         </div>
-
                                     </div>
                                 </div>
                                 <div class="changePicBtn">
@@ -112,38 +124,37 @@
                                 </div>
                             </div>
                         </div>
+
                         <ul class="person-ul">
                             <li>
-                                <a class="on" href="__MODULE__/Origanization/origanizationIdentify">认证状态</a>
+                                <a class="on" href="/index.php/Home/Community/communityIdentify">认证状态</a>
                             </li>
-                            <if condition='($isidentify eq 1)'>
-                                <li>
-                                    <a href="__MODULE__/Origanization/personInfo">账号设置</a>
-                                </li>
-                            </if>
-                            <if condition='($isidentify eq 1) and ($code gt 0)'>
-                                <li>
-                                    <a href="__MODULE__/Origanization/myOriganization">我的机构</a>
-                                </li>
-                                <li>
-                                    <a href="__MODULE__/Project/origanizationProjectManger">我的项目</a>
+
+
+                            <?php if(($isidentify == 1)): ?><li>
+                                    <a href="/index.php/Home/Community/personInfo">账号设置</a>
+                                </li><?php endif; ?>
+                            <?php if(($isidentify == 1) and ($code > 0)): ?><li>
+                                    <a href="/index.php/Home/Community/myCommunity">我的社区</a>
                                 </li>
                                 <li>
-                                    <a href="__MODULE__/Home/displayOriganizationHome">机构主页</a>
+                                    <a href="/index.php/Home/Project/communityProjectManger">我的项目</a>
                                 </li>
-                            </if>
+                                <li>
+                                    <a class="" href="/index.php/Home/Community/send_project">发布项目</a>
+                                </li><?php endif; ?>
+
 
                         </ul>
                     </div>
                     <div class="col-md-10 column perperson-con" style="background: #FFFFFF;">
-
                         <div class="testfyed">
-                            <img src="__PUBLIC__/Home/imgs/testfied.png" alt="">
+                            <img src="/Public/Home/imgs/testfied.png" alt="">
                         </div>
                         <div class="layui-tab layui-tab-brief testfy" lay-filter="docDemoTabBrief">
                             <ul class="layui-tab-title">
-                                <li class="layui-this" lay-id="a">社会组织认证</li>
-                                <li lay-id="b">社工认证</li>
+                                <li class="layui-this" lay-id="a">社区认证</li>
+                                <li lay-id="b">居干认证</li>
                             </ul>
                             <div class="layui-tab-content">
                                 <div class="layui-tab-item layui-show">
@@ -151,16 +162,17 @@
                                     <div class="col-md-8">
                                         <ul class="testUl" style="padding-bottom: 0">
                                             <li>
-                                                <p>机构名</p>
-                                                <input type="text" name="origanization_name"> <span class='iconfont'>&#xe60a;</span>
+                                                <p>社区名</p>
+                                                <input name="community_name" type="text"> <span class='iconfont'>&#xe60a;</span>
                                             </li>
                                             <li>
                                                 <p>地址</p>
-                                                <div id="demo" style="margin-bottom: 10px;">
+                                                <div id="demo" class="citys" style="margin-bottom: 10px;">
                                                     <p>
                                                         <select name="province"></select>
                                                         <select name="city"></select>
                                                         <select name="area"></select>
+                                                        <select name="town" class="streetName"></select>
                                                     </p>
                                                 </div>
                                                 <div id="show"></div>
@@ -171,20 +183,12 @@
                                             </li>
                                             <li>
                                                 <p>固定电话</p>
-                                                <input name="tel_code" value='{$phonecode}' type="text" style="width: 60px"> -
+                                                <input name="tel_code" type="text" value='<?php echo ($phonecode); ?>' style="width: 60px"> -
                                                 <input name="telephone" class="dianhuaNum" type="text" style="width: 200px"> <span class='iconfont'>&#xe60a;</span>
                                                 <div class="id-remider">
                                                     <p class="remider"></p>
                                                 </div>
 
-                                            </li>
-                                            <li>
-                                                <p>服务领域</p>
-                                                <select name="origanization_type" id="">
-                                            <foreach name = "service_area" item = "val">
-                                                <option value="{$val.sjy_id}">{$val.service_object_name}</option>
-                                            </foreach>
-                                            </select>
                                             </li>
                                             <li>
                                                 <p>运营者姓名</p>
@@ -206,24 +210,24 @@
                                     <div class="col-md-4">
 
                                         <div id="preview" class="testImg">
-                                            <img id="imghead" width=100% border=0 src='__PUBLIC__/Home/imgs/uploadImg.png'>
+                                            <img id="imghead" width=100% border=0 src='/Public/Home/imgs/uploadImg.png'>
                                         </div>
 
 
                                         <div class="uploadBtn">
                                             <div class="uploadImg">
-                                                上传机构营业执照
+                                                社区证明
                                             </div>
                                             <input type="file" onchange="previewImage(this)" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg">
                                         </div>
 
                                         <div id="preview2" class="testImg">
-                                            <img id="imghead2" width=100% border=0 src='__PUBLIC__/Home/imgs/uploadImg.png'>
+                                            <img id="imghead2" width=100% border=0 src='/Public/Home/imgs/uploadImg.png'>
                                         </div>
 
                                         <div class="uploadBtn">
                                             <div class="uploadImg">
-                                                上传组织Logo
+                                                手持身份证
                                             </div>
                                             <input type="file" onchange="previewImage2(this)" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg">
                                         </div>
@@ -243,7 +247,7 @@
                                         <ul class="testUl">
                                             <li>
                                                 <p>姓名</p>
-                                                <input name="real_name" type="text"> <span class='iconfont'>&#xe60a;</span>
+                                                <input type="text" name="real_name"> <span class='iconfont'>&#xe60a;</span>
                                             </li>
                                             <li>
                                                 <p>身份证号</p>
@@ -266,29 +270,19 @@
                                     <div class="col-md-4">
 
                                         <div id="preview3" class="testImg">
-                                            <img id="imghead3" border=0 src='__PUBLIC__/Home/imgs/uploadImg.png'>
-                                        </div>
-
-                                        <div class="uploadBtn">
-                                            <div class="uploadImg">
-                                                上传社工证明
-                                            </div>
-                                            <input type="file" onchange="previewImage3(this)" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg">
-                                        </div>
-                                        <div id="preview4" class="testImg">
-                                            <img id="imghead4" border=0 src='__PUBLIC__/Home/imgs/uploadImg.png'>
+                                            <img id="imghead3" border=0 src='/Public/Home/imgs/uploadImg.png'>
                                         </div>
 
                                         <div class="uploadBtn">
                                             <div class="uploadImg">
                                                 手持身份证照
                                             </div>
-                                            <input type="file" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg" onchange="previewImage4(this)">
+                                            <input type="file" onchange="previewImage3(this)" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg">
                                         </div>
 
                                     </div>
                                     <div class="clearfix"></div>
-                                    <div class="submitBox">
+                                    <div class="submitBox" style="margin-top: 300px;">
                                         <input id="submitOrMember" type="submit" value="提交">
                                     </div>
                                 </div>
@@ -311,7 +305,7 @@
     </div>
 </body>
 <script>
-    if ("{$isidentify}" == 1) {
+    if ("<?php echo ($isidentify); ?>" == 1) {
         //认证
         $(".testfyed").css("display", "block");
         $(".testfy").css("display", "none");
@@ -322,6 +316,7 @@
         $(".testfyed").css("display", "none");
         $(".testfy").css("display", "block");
     }
+
 
 
     /*个人图片的切换*/
@@ -350,13 +345,10 @@
             $('#view').css('background-size', '100% 100%');
 
 
-            console.log(dataURL);
-
             $("#userImg").attr("src", dataURL);
 
-
             $.ajax({
-                url: "__CONTROLLER__/douploadtouxiang",
+                url: "/index.php/Home/Community/douploadtouxiang",
                 type: "POST",
                 data: {
                     img: dataURL
@@ -366,19 +358,17 @@
                     if (data.state == 1) {
                         layer.msg('修改成功');
                         console.log(data.url)
+                    } else {
+                        layer.msg(data.errorInfo);
                     }
                 },
                 async: false
             });
             return false;
 
-
-
         }
     });
     //clipArea.destroy();
-
-
 
 
 
@@ -410,48 +400,78 @@
     });
 
     /*城市三级联动*/
+    var $town = $('#demo select[name="town"]');
+    var townFormat = function(info) {
+        $town.hide().empty();
+        if (info['code'] % 1e4 && info['code'] < 7e6) { //是否为“区”且不是港澳台地区
+            $.ajax({
+                url: '/Public/Home/street/Town/' + info['code'] + '.json',
+                dataType: 'json',
+                success: function(town) {
+                    $town.show();
+                    for (i in town) {
+                        $town.append('<option value="' + i + '">' + town[i] + '</option>');
+                    }
+                }
+            });
+        }
+    };
     $('#demo').citys({
-        code: 350206
+        province: '福建',
+        city: '厦门',
+        area: '思明',
+        onChange: function(info) {
+            townFormat(info);
+        }
+    }, function(api) {
+        var info = api.getInfo();
+        townFormat(info);
     });
 
-    /*社会组织认证*/
+
+
+    /*社区认证*/
     $("#submitOr").click(function() {
 
 
-        var origanization_name = $("input[name='origanization_name']").val(); //社会组织名字
-        var province = $("select[name='province']")[0].value; //社会组织所在省
-        var city = $("select[name='city']")[0].value; //社会组织所在城市
-        var area = $("select[name='area']")[0].value; //社会组织所在区域
-        var address = $("input[name='address']").val(); //社会组织地址
-        var manger_name = $("input[name='manger_name']").val(); //社会组织运营人员姓名
-        var telephone = $("input[name='telephone']").val(); //社会组织固定电话
-        var origanization_type = $("select[name=origanization_type]").val(); //社会组织类型
-        var id_number = $("input[name='id_number']").val(); //运营者身份证号
-        var business_licence_img = $("#imghead").attr("src");
+        var community_name = $("input[name='community_name']").val();
+        var province = $("select[name='province']")[0].value;
+        var city = $("select[name='city']")[0].value;
+        var area = $("select[name='area']")[0].value;
+        var town = $("select[name='town']")[0].value;
+        var address = $("input[name='address']").val();
+        var town_name = $(".streetName").find("option:selected").text();
+        var manger_name = $("input[name='manger_name']").val();
+        var telephone = $("input[name='telephone']").val();
+        var id_number = $("input[name='id_number']").val();
+        var community_identify_img = $("#imghead").attr("src");
         var logo_img = $("#imghead2").attr("src");
 
-        console.log(origanization_name);
+        console.log(community_name);
         console.log(province);
         console.log(city);
         console.log(area);
+        console.log(town);
+        console.log(town_name);
         console.log(address);
         console.log(manger_name);
         console.log(telephone);
         console.log(id_number);
-        console.log(business_licence_img);
         console.log(logo_img);
-        if (origanization_name == "") {
-            layer.msg('请填写社会组织名字');
+        console.log(community_identify_img);
+
+        if (community_name == "") {
+            layer.msg('请填写社区机构名');
             return false;
         }
         if (address == "") {
             layer.msg('请填写详细地址');
             return false;
         }
-        // if (telephone == "") {
-        //     layer.msg('请填写电话');
-        //     return false;
-        // }
+        if (telephone == "") {
+            layer.msg('请填写电话');
+            return false;
+        }
 
         if (manger_name == "") {
             layer.msg('请填写运营者姓名');
@@ -461,39 +481,41 @@
             layer.msg('请填写运营者身份证号');
             return false;
         }
-        if (business_licence_img.indexOf('data:image') == -1) {
+
+        if (community_identify_img.indexOf('data:image') == -1) {
             layer.msg('请上传营业执照');
             return false;
         }
+
         if (logo_img.indexOf('data:image') == -1) {
-            layer.msg('请上传组织logo');
+            layer.msg('请上社区logo');
             return false;
         }
 
         $.ajax({
-            url: "__CONTROLLER__/doOriganizationIdenty",
+            url: "/index.php/Home/Community/doCommunityIdentify",
             type: "POST",
             data: {
-                origanization_name: origanization_name,
+                community_name: community_name,
                 province: province,
                 city: city,
                 area: area,
+                town: town,
                 address: address,
+                town_name: town_name,
                 tel_code: "010",
                 telephone: telephone,
                 manger_name: manger_name,
                 id_number: id_number,
-                origanization_type: origanization_type,
-                business_licence_img: business_licence_img,
-                logo_img: logo_img
+                logo_img: logo_img,
+                community_identify_img: community_identify_img
+
             },
             dataType: "json",
             success: function(data) {
-                console.log(data);
                 if (data.state == 1) {
-                    window.location.href = "__CONTROLLER__/"
-                } else {
-                    layer.msg(data.errorInfo)
+                    layer.msg("认证成功");
+                    window.location.href = "/index.php/Home/Community/"
                 }
             },
             async: false
@@ -508,8 +530,8 @@
         var real_name = $("input[name='real_name']").val();
         var id_card = $("input[name='id_card']").val();
         var wechat = $("input[name='wechat']").val();
+
         var id_card_img = $("#imghead3").attr("src");
-        var staff_img = $("#imghead4").attr("src");
 
         if (real_name == "") {
             layer.msg('社工姓名');
@@ -527,33 +549,26 @@
             layer.msg('手持身份证照片');
             return false;
         }
-        if (staff_img.indexOf('data:image') == -1) {
-            layer.msg('社工证明');
-            return false;
-        }
         console.log(real_name);
         console.log(id_card);
         console.log(id_card_img);
-        console.log(staff_img);
 
         /**/
         $.ajax({
-            url: "__CONTROLLER__/doOriganizationPersonIdenty",
+            url: "/index.php/Home/Community/doCommunityPersonIdentify",
             type: "POST",
             data: {
                 real_name: real_name,
                 id_card: id_card,
                 id_card_img: id_card_img,
-                staff_img: staff_img,
                 wechat: wechat
             },
             dataType: "json",
             success: function(data) {
                 console.log(data);
                 if (data.state == 1) {
-                    window.location.href = "__CONTROLLER__/";
-                } else {
-                    layer.msg(data.errorInfo);
+
+                    window.location.href = "/index.php/Home/Community/";
                 }
             },
             async: false

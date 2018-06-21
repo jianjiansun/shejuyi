@@ -1,24 +1,41 @@
-<link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/deliver.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/modules/laydate/default/laydate.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/modules/layer/default/layer.css">
-<link rel="shortcut icon" href="__PUBLIC__/Home/img/easyLife.ico" />
-<!--  <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/webuploader.css"> -->
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en">
 
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/demo.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>社居易</title>
+    <meta name='description' content='社居易，致力于社区工作简单化' />
+    <link rel="stylesheet" href="/Public/Home/css/bootstrap.css">
+    <link rel="stylesheet" href="/Public/Home/css/common.css">
+    <link rel="stylesheet" href="/Public/Home/css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+    <script src="/Public/Home/js/jquery-1.12.4.js"></script>
+    <script src="/Public/Home/js/bootstrap.js"></script>
+    <script src="/Public/Home/js/autoResizeImage.js"></script>
+
+    <link rel="stylesheet" href="/Public/Home/css/region.css">
+<link rel="stylesheet" href="/Public/Home/css/deliver.css">
+<link rel="stylesheet" href="/Public/Home/css/layui.css">
+<link rel="stylesheet" href="/Public/Home/css/modules/laydate/default/laydate.css">
+<link rel="stylesheet" href="/Public/Home/css/modules/layer/default/layer.css">
+<link rel="shortcut icon" href="/Public/Home/img/easyLife.ico" />
+<!--  <link rel="stylesheet" type="text/css" href="/Public/Home/css/webuploader.css"> -->
+
+<link rel="stylesheet" type="text/css" href="/Public/Home/css/demo.css">
+<link rel="stylesheet" href="/Public/Home/css/page2.css">
 
 
 
-<script src="__PUBLIC__/Home/js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
-<script src="__PUBLIC__/Home/js/hammer.js" type="text/javascript" charset="utf-8"></script>
-<script src="__PUBLIC__/Home/js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
-<script src="__PUBLIC__/Home/js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="__PUBLIC__/Home/js/laydate.js"></script>
-<script src="__PUBLIC__/Home/js/layer.js"></script>
-<script src="__PUBLIC__/Home/js/layui.js"></script>
-<script src="__PUBLIC__/Home/js/layui.all.js"></script>
+<script src="/Public/Home/js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Public/Home/js/hammer.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Public/Home/js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Public/Home/js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Public/Home/js/laydate.js"></script>
+<script src="/Public/Home/js/layer.js"></script>
+<script src="/Public/Home/js/layui.js"></script>
+<script src="/Public/Home/js/layui.all.js"></script>
 <style type="text/css">
     * {
         margin: 0;
@@ -124,14 +141,14 @@
     <div class="headLogin">
 
         <div class="left changeBan logoPer">
-            <a href='{$index}'>
-                <img src="__PUBLIC__/Home/imgs/logo.png" alt="">
+            <a href='<?php echo ($index); ?>'>
+                <img src="/Public/Home/imgs/logo.png" alt="">
                 <span>社居易</span>
             </a>
-            <ul class="indexNavBox">
-                <li><a href="{$index}">首页</a></li>
-                <li><a href="__MODULE__/Community/origanizationIndex">组织首页</a></li>
-                <li><a href="__MODULE__/Origanization/communityIndex">社区首页</a></li>
+            <ul class = "indexNavBox">
+                <li><a href="<?php echo ($index); ?>">首页</a></li>
+                <li><a href="/index.php/Home/Community/origanizationIndex">组织首页</a></li>
+                <li><a href="/index.php/Home/Origanization/communityIndex">社区首页</a></li>
             </ul>
         </div>
         <div class="right person">
@@ -139,36 +156,31 @@
 
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">
                     <div class="user-img" style="display: inline-block">
-                        <img src="{$user_image}" alt="">
+                        <img src="<?php echo ($user_image); ?>" alt="">
                         <span class="iconfont VIP-icon" style="right: -20px;">&#xe65b;</span>
                     </div>
-                    <span>{$showname}<if condition='$active egt 1'><span class="layui-badge-dot"></span></if>
-                    </span>
+                    <span><?php echo ($showname); if($active >= 1): ?><span class="layui-badge-dot"></span><?php endif; ?>
+                        </span>
                 </a>
                 <ul class="dropdown-menu personalMenu">
                     <li>
-                        <a href="__CONTROLLER__/communityIdentify">认证状态</a>
+                        <a href="/index.php/Home/Community/communityIdentify">认证状态</a>
                     </li>
-                    <if condition='($isidentify eq 1)'>
-                        <li>
-                            <a href="__CONTROLLER__/personInfo">账号设置</a>
-                        </li>
-                    </if>
-                    <if condition='($isidentify eq 1) and ($code gt 0)'>
-                        <li>
-                            <a href="__CONTROLLER__/myCommunity">我的社区</a>
+                    <?php if(($isidentify == 1)): ?><li>
+                            <a href="/index.php/Home/Community/personInfo">账号设置</a>
+                        </li><?php endif; ?>
+                    <?php if(($isidentify == 1) and ($code > 0)): ?><li>
+                            <a href="/index.php/Home/Community/myCommunity">我的社区</a>
                         </li>
                         <li>
-                            <a href="__MODULE__/Project/communityProjectManger">我的项目<if condition='$active egt 1'><span class="layui-badge-dot"></span></if></a>
-                        </li>
-                        <li>
-                            <a class="" href="__MODULE__/Community/send_project">发布项目</a>
-                        </li>
-                    </if>
-
+                            <a href="/index.php/Home/Project/communityProjectManger">我的项目<?php if($active >= 1): ?><span class="layui-badge-dot"></span><?php endif; ?></a>
+                        </li><?php endif; ?>
+                    <li>
+                        <a class = "" href="/index.php/Home/Community/send_project">发布项目</a>
+                    </li>
 
                     <li>
-                        <a href="__CONTROLLER__/logout">注销</a>
+                        <a href="/index.php/Home/Community/logout">注销</a>
                     </li>
                 </ul>
             </div>
@@ -190,9 +202,7 @@
                 <div class="form-group">
                     <label for="name">服务对象</label>
                     <select class="serverArea" name="server_area" lay-verify="" id="">
-                <foreach name="service_object" item="val">
-                    <option value="{$val.sjy_id}">{$val.service_object_name}</option>
-                </foreach>
+                <?php if(is_array($service_object)): foreach($service_object as $key=>$val): ?><option value="<?php echo ($val["sjy_id"]); ?>"><?php echo ($val["service_object_name"]); ?></option><?php endforeach; endif; ?>
                 </select>
                 </div>
                 <div class="form-group">
@@ -304,13 +314,13 @@
         </div>
     </div>
 </body>
-<script src="__PUBLIC__/Home/js/uploadImg20180401sjjsendproject.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Public/Home/js/uploadImg20180401sjjsendproject.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
     imgUpload({
         inputId: 'file1', //input框id
         imgBox: 'imgBox', //图片容器id
         buttonId: 'deliverBtn', //提交按钮id
-        upUrl: '__CONTROLLER__/doSendProject', //提交地址
+        upUrl: '/index.php/Home/Community/doSendProject', //提交地址
         data: 'project_images', //参数名
         num: "5" //上传个数
     })
@@ -351,13 +361,13 @@
         elem: '#test1',
         range: '~' //或 range: '~' 来自定义分割字符
             ,
-        min: '{$nowtimw}'
+        min: '<?php echo ($nowtimw); ?>'
     });
     laydate.render({
         elem: '#test2',
         range: '~' //或 range: '~' 来自定义分割字符
             ,
-        min: '{$nowtimw}'
+        min: '<?php echo ($nowtimw); ?>'
     });
 
 
@@ -457,7 +467,7 @@
 
 
     //     $.ajax({
-    //         url: "__CONTROLLER__/doSendProject",
+    //         url: "/index.php/Home/Community/doSendProject",
     //         type: "POST",
     //         data: {
     //             project_name : project_name,
@@ -477,7 +487,7 @@
     //             if(data.state == 1)
     //             {
     //                 layer.msg("f发布不成功");
-    //                 window.location.href = "__CONTROLLER__/"
+    //                 window.location.href = "/index.php/Home/Community/"
     //             }else{
     //                 layer.msg(data.errorInfo );
     //             }
