@@ -41,7 +41,8 @@
                         <img src="{$user_image}" alt="">
                         <span class="iconfont VIP-icon" style="right: -20px;">&#xe65b;</span>
                     </div>
-                    <span>{$showname}</span>
+                    <span>{$showname}<if condition='$active egt 1'><span class="layui-badge-dot"></span></if>
+                    </span>
                 </a>
                 <if condition='$figure eq 2'>
                     <ul class="dropdown-menu personalMenu">
@@ -55,7 +56,7 @@
                             <a href="__MODULE__/Community/mycommunity">我的社区</a>
                         </li>
                         <li>
-                            <a href="__MODULE__/Project/communityProjectManger">我的项目</a>
+                            <a href="__MODULE__/Project/communityProjectManger">我的项目<if condition='$active egt 1'><span class="layui-badge-dot"></span></if></a>
                         </li>
                         <li>
                             <a href="__MODULE__/Home/displayCommunityHome">社区主页</a>
@@ -79,7 +80,7 @@
                                 <a href="__MODULE__/Origanization/myoriganization">我的机构</a>
                             </li>
                             <li>
-                                <a href="__MODULE__/Project/origanizationProjectManger">我的项目</a>
+                                <a href="__MODULE__/Project/origanizationProjectManger">我的项目<if condition='$active egt 1'><span class="layui-badge-dot"></span></if></a>
                             </li>
                             <li>
                                 <a href="__MODULE__/Home/displayCOriganizationHome">机构主页</a>
@@ -234,33 +235,7 @@
                     </div>
                 </div>
                 <div class="latest-article clearfix">
-                    <h3>最新项目</h3>
-                    <ul class="latest-ulbox clearfix">
-                        <li class="clearfix">
-                            <div class="left left-img"><img src="__PUBLIC__/Home/imgs/shequ3.jpg" alt=""></div>
-                            <div class="left right-detail">
-                                <p class="p1">“志愿青春，成长无虑”如意社区青少年服务项目</p>
-                                <p class="p2">2017-09-13 20:28</p>
-                            </div>
-                        </li>
-                        <li class="clearfix">
-                            <div class="left left-img"><img src="__PUBLIC__/Home/imgs/shequ3.jpg" alt=""></div>
-                            <div class="left right-detail">
-                                <p class="p1">“志愿青春，成长无虑”如意社区青少年服务项目</p>
-                                <p class="p2">2017-09-13 20:28</p>
-                            </div>
-                        </li>
 
-                        <li class="clearfix">
-                            <div class="left left-img"><img src="__PUBLIC__/Home/imgs/shequ3.jpg" alt=""></div>
-                            <div class="left right-detail">
-                                <p class="p1">“志愿青春，成长无虑”如意社区青少年服务项目</p>
-                                <p class="p2">2017-09-13 20:28</p>
-                            </div>
-                        </li>
-
-
-                    </ul>
 
                 </div>
 

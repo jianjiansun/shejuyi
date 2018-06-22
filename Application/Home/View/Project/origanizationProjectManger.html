@@ -63,7 +63,7 @@
                 <img src="__PUBLIC__/Home/imgs/logo.png" alt="">
                 <span>社居易</span>
             </a>
-            <ul class = "indexNavBox">
+            <ul class="indexNavBox">
                 <li><a href="{$index}">首页</a></li>
                 <li><a href="__MODULE__/Community/origanizationIndex">组织首页</a></li>
                 <li><a href="__MODULE__/Origanization/communityIndex">社区首页</a></li>
@@ -99,11 +99,11 @@
 
                     </if>
                     <li>
-                        <a class = "" href="__MODULE__/Home/displayOriganizationHome">机构主页</a>
+                        <a class="" href="__MODULE__/Home/displayOriganizationHome">机构主页</a>
                     </li>
 
                     <li>
-                        <a href="__CONTROLLER__/logout">注销</a>
+                        <a href="__MODULE__/Origanization/logout">注销</a>
                     </li>
                 </ul>
             </div>
@@ -125,7 +125,7 @@
                     <!--<a class="agree-organization" href="javascript:;">上传时间 <span></span></a>-->
                     <!--</div>-->
                     <div class="organize-proposal" style="display: block;">
-                        <p class="proposal-detail">
+                        <!-- <p class="proposal-detail">
                             <span>项目书一</span>
                             <a class="download-btn" href="javascript:;">下载</a>
                         </p>
@@ -136,7 +136,7 @@
                         <p class="proposal-detail">
                             <span>项目书三</span>
                             <a class="download-btn" href="javascript:;">下载</a>
-                        </p>
+                        </p> -->
                     </div>
                 </li>
             </ul>
@@ -616,7 +616,7 @@
                     '<td>' + data[i].project_start_time + '</td>' +
                     '<td>' + data[i].project_apply_end_time + '</td>' +
                     '<td><a class = "see-progress" id = "' + data[i].project_id + '" href="javascript:;">查看进度</a> ' +
-                    '<a  class = "see-detail" href="__CONTROLLER__/displayCommunityProject/id/' + data[i].project_id + '">详情</a> <br>' +
+                    '<a target="_blank"  class = "see-detail" href="__CONTROLLER__/displayCommunityProject/id/' + data[i].project_id + '">详情</a> <br>' +
                     '<a class = "projectBook" id = "' + data[i].project_id + '" href="javascript:;">项目书</a><br>' +
                     '</tr>';
 
@@ -776,7 +776,7 @@
 
                 if (data[i].status >= 10 && data[i].status <= 98) {
                     html4 += '<td><a class = "see-progress" id = "' + data[i].project_id + '" href="javascript:;">查看进度</a> ' +
-                        '<a class = "see-detail"  href="__CONTROLLER__/displayCommunityProject/id/' + data[i].project_id + '">详情</a> <br>' +
+                        '<a class = "see-detail" target="_blank"  href="__CONTROLLER__/displayCommunityProject/id/' + data[i].project_id + '">详情</a> <br>' +
                         '<a class = "addProgress" id = "' + data[i].project_id + '" href="javascript:;">添加进度</a>   ' +
                         '<a class = "projectBook" id = "' + data[i].project_id + '" href="javascript:;">项目书</a><br>' +
                         '<a class = "finishProject" id = "' + data[i].project_id + '"  data_id = "' + data[i].sjy_id + '"  href="javascript:;">结项目</a></td>' +
@@ -784,7 +784,7 @@
 
                 } else {
                     html4 += '<td><a class = "progressStep" id = "' + data[i].project_id + '" href="javascript:;">查看进度</a> ' +
-                        '<a class = "see-detail" href="__CONTROLLER__/displayCommunityProject/id/' + data[i].project_id + '">详情</a> <br>' +
+                        '<a class = "see-detail" target="_blank" href="__CONTROLLER__/displayCommunityProject/id/' + data[i].project_id + '">详情</a> <br>' +
                         '<a class = "projectBook" id = "' + data[i].project_id + '" href="javascript:;">项目书</a>' +
                         '<a class = "finishProject" id = "' + data[i].project_id + '"  data_id = "' + data[i].sjy_id + '"  href="javascript:;">结项目</a></td>' +
                         '</tr>';
@@ -1039,7 +1039,7 @@
                     '<td>' + data[i].project_detail.sjy_community_project_start_time + ' ~<br>' + data[i].project_detail.sjy_community_project_end_time + '</td>' +
                     '<td>' + data[i].community_agreen_project_start_time + '</td>' +
                     '<td><a class = "startProject" sjy_id = "' + data[i].sjy_id + '" id = "' + data[i].project_id + '" href="javascript:;">开始</a> ' +
-                    '<a class="see-detail" href="__CONTROLLER__/displayCommunityProject/id/' + data[i].project_id + '">详情</a><br>' +
+                    '<a class="see-detail" target="_blank" href="__CONTROLLER__/displayCommunityProject/id/' + data[i].project_id + '">详情</a><br>' +
                     '<a class = "projectBook" id = "' + data[i].project_id + '" href="javascript:;">项目书</a></td>' +
                     '</tr>';
             }
@@ -1212,7 +1212,7 @@
                     '<td>' + data.data[i].project_detail.sjy_community_project_service_area + '</td>' +
                     '<td>' + data.data[i].project_detail.sjy_community_project_collect_start_time + ' ~<br>' + data.data[i].project_detail.sjy_community_project_collect_end_time + '</td>' +
                     '<td>' + data.data[i].status_desc + '</td>' +
-                    '<td><a class="see-detail" href="__CONTROLLER__/displayCommunityProject/id/' + data.data[i].project_id + '">详情</a>' +
+                    '<td><a target="_blank" class="see-detail" href="__CONTROLLER__/displayCommunityProject/id/' + data.data[i].project_id + '">详情</a>' +
                     '<a class = "projectBook" id = "' + data.data[i].project_id + '" href="javascript:;">项目书</a></td>' +
                     '</tr>';
             }
@@ -1316,7 +1316,7 @@
                     '<td>' + data[i].status_desc + '</td>' +
                     '<td>' + data[i].project_detail.sjy_community_project_collect_start_time + ' ~<br>' + data[i].project_detail.sjy_community_project_collect_end_time + '</td>' +
                     '<td>' + data[i].invitate_time + '</td>' +
-                    '<td><a class="see-detail" style="width: 68px; text-align: center;"  href="__CONTROLLER__/displayCommunityProject/id/' + data[i].project_id + '">详情</a> ' +
+                    '<td><a target="_blank" class="see-detail" style="width: 68px; text-align: center;"  href="__CONTROLLER__/displayCommunityProject/id/' + data[i].project_id + '">详情</a> ' +
                     '<a id = "agreeOrganization" class = "projectBook" style="width: 68px; text-align: center;"  data-id = "' + data[i].project_id + '" href="javascript:;">同意</a></td>' +
                     '</tr>';
             }
@@ -1426,7 +1426,7 @@
                     '<td>' + data[i].project_info.sjy_community_project_start_time + ' ~<br>' + data[i].project_info.sjy_community_project_end_time + '</td>' +
                     '<td>' + data[i].project_start_time + ' ~<br>' + data[i].project_end_time + '</td>' +
                     '<td><a class = "see-progress" id = "' + data[i].project_id + '" href="javascript:;">查看进度</a> ' +
-                    '<a  class = "see-detail" href="__CONTROLLER__/displayCommunityProject/id/' + data[i].project_id + '">详情</a> <br>' +
+                    '<a target="_blank"  class = "see-detail" href="__CONTROLLER__/displayCommunityProject/id/' + data[i].project_id + '">详情</a> <br>' +
                     '<a class = "projectBook" id = "' + data[i].project_id + '" href="javascript:;">项目书</a><br>' +
                     '</tr>';
             }
