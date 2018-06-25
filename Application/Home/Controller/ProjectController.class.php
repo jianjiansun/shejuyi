@@ -1041,6 +1041,85 @@
             // if ($strInfo['chars1']=='-119' AND $strInfo['chars2']=='80' ) return 'png';
             return $fileType;
         }
+        //下载结项报告书
+        public function reportBook()
+        {
+            $project_id = I('get.project_id');
+            $origanization_id = session('userInfo')['sjy_origanization_user_origanization_code'];
+            //查询该项目的相关信息
+            $origanization_info = M('origanization_base_info')->where(array('sjy_id'=>$origanization_id))->find();
+            $origanization_position_info = M('origanization_position_info')->where(array('sjy_origanization_id'=>$origanization_id))->find();
+            $project_info = M('community_project_info')->where(array('sjy_id'=>$project_id))->find();
+            $project_info_detail = M('project')->where(array('project_id'=>$project_id,'origanization_id'=>$origanization_id))->find();
+            $projectrate = M('projectrate')->where(array('sjy_project_id'=>$project_id,'sjy_origanization_id'=>$origanization_id))->select();
+            $community_info = M('community_base_info')->where(array('sjy_id'=>$project_info['sjy_community_id']))->find();
+            $community_position_info = M('community_position_info')->where(array('sjy_community_id'=>$project_info['sjy_community_id']))->find();
+            echo '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"> 
+            <head> 
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+            <xml><w:WordDocument><w:View>Print</w:View></xml> 
+            <script src="includes/js/ztree/js/jquery-1.4.4.min.js" type="text/javascript"></script> 
+            </head>'; 
+            echo '<body><h1>项目报告书</h1>';
+            echo "<h2>项目信息</h2>";
+            echo '<h3>项目名称:'.$project_info['sjy_community_project_title'].'<h3>';
+            echo '<h3>项目类型:'.$project_info['sjy_community_project_service_area'].'<h3>';
+            echo '<h3>发布时间:'.$project_info['sjy_community_project_send_time'].'<h3>';
+            echo '<h3>征集周期:'.$project_info['sjy_community_project_collect_start_time']."~".$project_info['sjy_community_project_collect_end_time'].'<h3>';
+            echo '<h3>执行周期:'.$project_info['sjy_community_project_start_time'].'~'.$project_info['sjy_community_project_end_time'].'<h3>';
+            echo '<h3>项目介绍:'.$project_info['sjy_community_project_demand'].'<h3>';
+            echo '<hr />';
+            echo '<h2>社区信息</h2>';
+            echo '<h3>社区名称:'.$community_info['sjy_community_name'].'<h3>';
+            echo '<h3>社区地址:'.$community_position_info['sjy_community_province_name'].$community_position_info['sjy_community_city_name'].$community_position_info['sjy_community_area_name'].$community_position_info['sjy_community_street_name'].$community_position_info['sjy_community_address'].'<h3>';
+            echo '<h3>社区联系方式:'.$community_info['sjy_community_phone'].'<h3>';
+            echo '<hr />';
+            echo '<h2>社会组织信息</h2>';
+            echo '<h3>社会组织名称:'.$origanization_info['sjy_origanization_name'].'<h3>';
+            echo '<h3>社会组织地址:'.$origanization_position_info['sjy_origanization_province_name'].$origanization_position_info['sjy_origanization_city_name'].$origanization_position_info['sjy_origanization_area_name'].$origanization_position_info['sjy_origanization_address'].'<h3>';
+            echo '<hr />';
+            echo '<h2>项目进度</h2>';
+            echo '<h3>'.$project_info_detail['send_project_book_time'].'</h3>';
+            echo '<h4>投递项目书，进行投标</h4>';
+            echo '<hr />';
+            echo '<h3>'.$project_info_detail['community_agreen_project_start_time'].'</h3>';
+            echo '<h4>中标</h4>';
+            echo '<hr />';
+           
+            foreach($projectrate as $key=>$value)
+            {
+                echo '<h3>'.$value['create_time'].'</h3>';
+                echo '<h4>'.$value['sjy_projectrate_title'].'</h4>';
+                echo '<p>'.$value['sjy_project_rate_con'].'</p>';
+                echo '<hr />';
+            }
+            echo '<h3>'.$project_info_detail['project_apply_end_time'].'</h3>';
+            echo '<h4>申请结项</h4>';
+            echo '<hr />';
+            
+            echo '<h3>'.$project_info_detail['project_end_time'].'</h3>';
+            echo '<h4>结项</h4>';
+            echo '<p>社区同意结项,项目得分'.$project_info_detail['score'].'</p>';
+            echo '<hr />';
+            
+            
+            echo "</body></html>";
+            ob_start(); //打开缓冲区 
+            header("Cache-Control: public"); 
+            Header("Content-type: application/octet-stream"); 
+            Header("Accept-Ranges: bytes"); 
+            if (strpos($_SERVER["HTTP_USER_AGENT"],'MSIE')) { 
+            header('Content-Disposition: attachment; filename=test.doc'); 
+            }else if (strpos($_SERVER["HTTP_USER_AGENT"],'Firefox')) { 
+            Header('Content-Disposition: attachment; filename=test.doc'); 
+            } else { 
+            header('Content-Disposition: attachment; filename=test.doc'); 
+            } 
+            header("Pragma:no-cache"); 
+            header("Expires:0"); 
+            ob_end_flush();//输出全部内容到浏览器
+        }
+
         
         //base64
         // public function base64()

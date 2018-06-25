@@ -1,26 +1,43 @@
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/iconfont/iconfont.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/region.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/layui.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/page2.css">
-<link rel="stylesheet" href="__PUBLIC__/Home/css/right-tab.css">
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en">
 
-<link rel="stylesheet" href="__PUBLIC__/Home/css/deliver.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>社居易</title>
+    <meta name='description' content='社居易，致力于社区工作简单化' />
+    <link rel="stylesheet" href="/Public/Home/css/bootstrap.css">
+    <link rel="stylesheet" href="/Public/Home/css/common.css">
+    <link rel="stylesheet" href="/Public/Home/css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/Public/Home/css/chooseCity.css">
+    <script src="/Public/Home/js/jquery-1.12.4.js"></script>
+    <script src="/Public/Home/js/bootstrap.js"></script>
+    <script src="/Public/Home/js/autoResizeImage.js"></script>
 
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/webuploader.css">
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/demo.css">
-<link rel="shortcut icon" href="__PUBLIC__/Home/img/easyLife.ico" />
+    <link rel="stylesheet" type="text/css" href="/Public/Home/css/iconfont/iconfont.css">
+<link rel="stylesheet" href="/Public/Home/css/region.css">
+<link rel="stylesheet" href="/Public/Home/css/layui.css">
+<link rel="stylesheet" href="/Public/Home/css/page2.css">
+<link rel="stylesheet" href="/Public/Home/css/right-tab.css">
+
+<link rel="stylesheet" href="/Public/Home/css/deliver.css">
+
+<link rel="stylesheet" type="text/css" href="/Public/Home/css/webuploader.css">
+<link rel="stylesheet" type="text/css" href="/Public/Home/css/demo.css">
+<link rel="shortcut icon" href="/Public/Home/img/easyLife.ico" />
 
 
-<script src="__PUBLIC__/Home/js/layui.js"></script>
-<script src="__PUBLIC__/Home/js/layui.all.js"></script>
+<script src="/Public/Home/js/layui.js"></script>
+<script src="/Public/Home/js/layui.all.js"></script>
 
 
-<script src="__PUBLIC__/Home/js/plugins/cover_js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
-<script src="__PUBLIC__/Home/js/plugins/cover_js/hammer.js" type="text/javascript" charset="utf-8"></script>
-<script src="__PUBLIC__/Home/js/plugins/cover_js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
-<script src="__PUBLIC__/Home/js/plugins/cover_js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Public/Home/js/plugins/cover_js/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Public/Home/js/plugins/cover_js/hammer.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Public/Home/js/plugins/cover_js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
+<script src="/Public/Home/js/plugins/cover_js/jquery.photoClip.min.js" type="text/javascript" charset="utf-8"></script>
 
-<script type="text/javascript" src="__PUBLIC__/Home/js/webuploader.js"></script>
+<script type="text/javascript" src="/Public/Home/js/webuploader.js"></script>
 
 
 </head>
@@ -59,14 +76,14 @@
     <div class="headLogin">
 
         <div class="left changeBan logoPer">
-            <a href='{$index}'>
-                <img src="__PUBLIC__/Home/imgs/logo.png" alt="">
+            <a href='<?php echo ($index); ?>'>
+                <img src="/Public/Home/imgs/logo.png" alt="">
                 <span>社居易</span>
             </a>
             <ul class="indexNavBox">
-                <li><a href="{$index}">首页</a></li>
-                <li><a href="__MODULE__/Community/origanizationIndex">组织首页</a></li>
-                <li><a href="__MODULE__/Origanization/communityIndex">社区首页</a></li>
+                <li><a href="<?php echo ($index); ?>">首页</a></li>
+                <li><a href="/index.php/Home/Community/origanizationIndex">组织首页</a></li>
+                <li><a href="/index.php/Home/Origanization/communityIndex">社区首页</a></li>
             </ul>
         </div>
         <div class="right person">
@@ -74,36 +91,31 @@
 
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">
                     <div class="user-img" style="display: inline-block">
-                        <img src="{$user_image}" alt="">
+                        <img src="<?php echo ($user_image); ?>" alt="">
                         <span class="iconfont VIP-icon" style="right: -20px;">&#xe65b;</span>
                     </div>
-                    <span>{$showname}<if condition='$active egt 1'><span class="layui-badge-dot"></span></if>
+                    <span><?php echo ($showname); if($active >= 1): ?><span class="layui-badge-dot"></span><?php endif; ?>
                     </span>
                 </a>
                 <ul class="dropdown-menu personalMenu">
                     <li>
-                        <a href="__CONTROLLER__/origanizationIdentify">认证状态</a>
+                        <a href="/index.php/Home/Project/origanizationIdentify">认证状态</a>
                     </li>
-                    <if condition='($isidentify eq 1)'>
-                        <li>
-                            <a href="__CONTROLLER__/personInfo">账号设置</a>
-                        </li>
-                    </if>
-                    <if condition='($isidentify eq 1) and ($code gt 0)'>
-                        <li>
-                            <a href="__CONTROLLER__/myOriganization">我的机构</a>
+                    <?php if(($isidentify == 1)): ?><li>
+                            <a href="/index.php/Home/Project/personInfo">账号设置</a>
+                        </li><?php endif; ?>
+                    <?php if(($isidentify == 1) and ($code > 0)): ?><li>
+                            <a href="/index.php/Home/Project/myOriganization">我的机构</a>
                         </li>
                         <li>
-                            <a href="__MODULE__/Project/origanizationProjectManger">我的项目<if condition='$active egt 1'><span class="layui-badge-dot"></span></if></a>
-                        </li>
-
-                    </if>
+                            <a href="/index.php/Home/Project/origanizationProjectManger">我的项目<?php if($active >= 1): ?><span class="layui-badge-dot"></span><?php endif; ?></a>
+                        </li><?php endif; ?>
                     <li>
-                        <a class="" href="__MODULE__/Home/displayOriganizationHome">机构主页</a>
+                        <a class="" href="/index.php/Home/Home/displayOriganizationHome">机构主页</a>
                     </li>
 
                     <li>
-                        <a href="__MODULE__/Origanization/logout">注销</a>
+                        <a href="/index.php/Home/Origanization/logout">注销</a>
                     </li>
                 </ul>
             </div>
@@ -233,7 +245,7 @@
                         <h2>个人信息</h2>
                         <div>
                             <div class="user-img">
-                                <img id="userImg" src="{$user_image}" alt="  ">
+                                <img id="userImg" src="<?php echo ($user_image); ?>" alt="  ">
                                 <span class="iconfont VIP-icon">&#xe65b;</span>
                             </div>
                             <p style="margin-top: 12px;">
@@ -263,43 +275,39 @@
 
                         <ul class="person-ul">
                             <li>
-                                <a href="__MODULE__/Origanization/origanizationIdentify">认证状态</a>
+                                <a href="/index.php/Home/Origanization/origanizationIdentify">认证状态</a>
                             </li>
-                            <if condition='($isidentify eq 1)'>
-                                <li>
-                                    <a href="__MODULE__/Origanization/personInfo">账号设置</a>
-                                </li>
-                            </if>
-                            <if condition='($isidentify eq 1) and ($code gt 0)'>
-                                <li>
-                                    <a href="__MODULE__/Origanization/myOriganization">我的机构</a>
+                            <?php if(($isidentify == 1)): ?><li>
+                                    <a href="/index.php/Home/Origanization/personInfo">账号设置</a>
+                                </li><?php endif; ?>
+                            <?php if(($isidentify == 1) and ($code > 0)): ?><li>
+                                    <a href="/index.php/Home/Origanization/myOriganization">我的机构</a>
                                 </li>
                                 <li>
-                                    <a class="on" href="__MODULE__/Project/origanizationProjectManger">我的项目</a>
+                                    <a class="on" href="/index.php/Home/Project/origanizationProjectManger">我的项目</a>
                                 </li>
                                 <li>
-                                    <a href="__MODULE__/Home/displayOriganizationHome">机构主页</a>
-                                </li>
-                            </if>
+                                    <a href="/index.php/Home/Home/displayOriganizationHome">机构主页</a>
+                                </li><?php endif; ?>
                         </ul>
                     </div>
                     <div class="col-md-10 column perperson-con" style="background: #FFFFFF;">
                         <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
                             <ul class="layui-tab-title">
                                 <li id="inviteMe" class="layui-this" lay-id="a">邀请我
-                                    <if condition='$invitenNum gt 0'><span id='numa' class="layui-badge">{$invitenNum}</span></if>
+                                    <?php if($invitenNum > 0): ?><span id='numa' class="layui-badge"><?php echo ($invitenNum); ?></span><?php endif; ?>
                                 </li>
                                 <li id="biding" lay-id="b">投标中
-                                    <if condition='$sendNum gt 0'><span id='numb' class="layui-badge">{$sendNum}</span></if>
+                                    <?php if($sendNum > 0): ?><span id='numb' class="layui-badge"><?php echo ($sendNum); ?></span><?php endif; ?>
                                 </li>
                                 <li id="starting" lay-id="c">待开始
-                                    <if condition='$waitStatNum gt 0'><span id='numc' class="layui-badge">{$waitStatNum}</span></if>
+                                    <?php if($waitStatNum > 0): ?><span id='numc' class="layui-badge"><?php echo ($waitStatNum); ?></span><?php endif; ?>
                                 </li>
                                 <li id="going" lay-id="d">进行中
-                                    <if condition='$ingNum gt 0'><span id='numd' class="layui-badge">{$ingNum}</span></if>
+                                    <?php if($ingNum > 0): ?><span id='numd' class="layui-badge"><?php echo ($ingNum); ?></span><?php endif; ?>
                                 </li>
                                 <li id="apllyFinishProject" lay-id="e">结项申请
-                                    <if condition='$applyEndNum gt 0'><span id='nume' class="layui-badge">{$applyEndNum}</span></if>
+                                    <?php if($applyEndNum > 0): ?><span id='nume' class="layui-badge"><?php echo ($applyEndNum); ?></span><?php endif; ?>
                                 </li>
                                 <li id="alreadyFinish" lay-id="f">已完成</li>
                             </ul>
@@ -563,7 +571,7 @@
             $("#userImg").attr("src", dataURL);
 
             $.ajax({
-                url: "__MODULE__/Origanization/douploadtouxiang",
+                url: "/index.php/Home/Origanization/douploadtouxiang",
                 type: "POST",
                 data: {
                     img: dataURL
@@ -603,7 +611,7 @@
     /*5 .结项申请中 */
 
     var applyFinishProjectFunc = function() {
-        $.post("__MODULE__/Project/ingcommunityagreenend", function(data) {
+        $.post("/index.php/Home/Project/ingcommunityagreenend", function(data) {
 
             var html5 = '';
 
@@ -616,7 +624,7 @@
                     '<td>' + data[i].project_start_time + '</td>' +
                     '<td>' + data[i].project_apply_end_time + '</td>' +
                     '<td><a class = "see-progress" id = "' + data[i].project_id + '" href="javascript:;">查看进度</a> ' +
-                    '<a target="_blank"  class = "see-detail" href="__CONTROLLER__/displayCommunityProject/id/' + data[i].project_id + '">详情</a> <br>' +
+                    '<a target="_blank"  class = "see-detail" href="/index.php/Home/Project/displayCommunityProject/id/' + data[i].project_id + '">详情</a> <br>' +
                     '<a class = "projectBook" id = "' + data[i].project_id + '" href="javascript:;">项目书</a><br>' +
                     '</tr>';
 
@@ -650,7 +658,7 @@
 
                 var project_id = $(this).attr("id");
 
-                $.get("__MODULE__/Project/projectRate", {
+                $.get("/index.php/Home/Project/projectRate", {
                     "project_id": project_id
                 }, function(data) {
 
@@ -706,7 +714,7 @@
                 var id = $(this).attr("id");
                 console.log(id);
 
-                $.post("__MODULE__/Project/origanizationGetProjectBookList/project_id/" + id, function(data) {
+                $.post("/index.php/Home/Project/origanizationGetProjectBookList/project_id/" + id, function(data) {
 
                     var html = '';
 
@@ -735,7 +743,7 @@
 
                         var book_id = $(this).attr("id");
 
-                        $.get("__MODULE__/Project/downloadProjectBook", {
+                        $.get("/index.php/Home/Project/downloadProjectBook", {
                             "id": book_id
                         }, function(data) {
 
@@ -761,7 +769,7 @@
     /*4. 进行中*/
 
     var goingFunc = function() {
-        $.post("__MODULE__/Project/ingProject", function(data) {
+        $.post("/index.php/Home/Project/ingProject", function(data) {
 
             var html4 = '';
 
@@ -776,7 +784,7 @@
 
                 if (data[i].status >= 10 && data[i].status <= 98) {
                     html4 += '<td><a class = "see-progress" id = "' + data[i].project_id + '" href="javascript:;">查看进度</a> ' +
-                        '<a class = "see-detail" target="_blank"  href="__CONTROLLER__/displayCommunityProject/id/' + data[i].project_id + '">详情</a> <br>' +
+                        '<a class = "see-detail" target="_blank"  href="/index.php/Home/Project/displayCommunityProject/id/' + data[i].project_id + '">详情</a> <br>' +
                         '<a class = "addProgress" id = "' + data[i].project_id + '" href="javascript:;">添加进度</a>   ' +
                         '<a class = "projectBook" id = "' + data[i].project_id + '" href="javascript:;">项目书</a><br>' +
                         '<a class = "finishProject" id = "' + data[i].project_id + '"  data_id = "' + data[i].sjy_id + '"  href="javascript:;">结项目</a></td>' +
@@ -784,7 +792,7 @@
 
                 } else {
                     html4 += '<td><a class = "progressStep" id = "' + data[i].project_id + '" href="javascript:;">查看进度</a> ' +
-                        '<a class = "see-detail" target="_blank" href="__CONTROLLER__/displayCommunityProject/id/' + data[i].project_id + '">详情</a> <br>' +
+                        '<a class = "see-detail" target="_blank" href="/index.php/Home/Project/displayCommunityProject/id/' + data[i].project_id + '">详情</a> <br>' +
                         '<a class = "projectBook" id = "' + data[i].project_id + '" href="javascript:;">项目书</a>' +
                         '<a class = "finishProject" id = "' + data[i].project_id + '"  data_id = "' + data[i].sjy_id + '"  href="javascript:;">结项目</a></td>' +
                         '</tr>';
@@ -818,7 +826,7 @@
 
                 var project_id = $(this).attr("id");
 
-                $.get("__MODULE__/Project/projectRate", {
+                $.get("/index.php/Home/Project/projectRate", {
                     "project_id": project_id
                 }, function(data) {
 
@@ -875,7 +883,7 @@
                 var id = $(this).attr("id");
                 console.log(id);
 
-                $.post("__MODULE__/Project/origanizationGetProjectBookList/project_id/" + id, function(data) {
+                $.post("/index.php/Home/Project/origanizationGetProjectBookList/project_id/" + id, function(data) {
 
                     var html = '';
 
@@ -903,7 +911,7 @@
 
                         var book_id = $(this).attr("id");
 
-                        $.get("__MODULE__/Project/downloadProjectBook", {
+                        $.get("/index.php/Home/Project/downloadProjectBook", {
                             "id": book_id
                         }, function(data) {
 
@@ -959,7 +967,7 @@
 
                         //按钮【按钮一】的回调
 
-                        $.post("__MODULE__/Project/endProjectApply", {
+                        $.post("/index.php/Home/Project/endProjectApply", {
                             "project_id": project_id,
                             "id": sjy_id
                         }, function(data) {
@@ -1028,7 +1036,7 @@
     /*3.待开始*/
 
     var startingFunc = function() {
-        $.post("__MODULE__/Project/waitStart", function(data) {
+        $.post("/index.php/Home/Project/waitStart", function(data) {
             var html3 = '';
 
             for (var i = 0; i < data.length; i++) {
@@ -1039,7 +1047,7 @@
                     '<td>' + data[i].project_detail.sjy_community_project_start_time + ' ~<br>' + data[i].project_detail.sjy_community_project_end_time + '</td>' +
                     '<td>' + data[i].community_agreen_project_start_time + '</td>' +
                     '<td><a class = "startProject" sjy_id = "' + data[i].sjy_id + '" id = "' + data[i].project_id + '" href="javascript:;">开始</a> ' +
-                    '<a class="see-detail" target="_blank" href="__CONTROLLER__/displayCommunityProject/id/' + data[i].project_id + '">详情</a><br>' +
+                    '<a class="see-detail" target="_blank" href="/index.php/Home/Project/displayCommunityProject/id/' + data[i].project_id + '">详情</a><br>' +
                     '<a class = "projectBook" id = "' + data[i].project_id + '" href="javascript:;">项目书</a></td>' +
                     '</tr>';
             }
@@ -1062,7 +1070,7 @@
 
                         //按钮【按钮一】的回调
 
-                        $.post("__MODULE__/Project/origanizationStartProject", {
+                        $.post("/index.php/Home/Project/origanizationStartProject", {
                             "project_id": project_id,
                             "id": sjy_id
                         }, function(data) {
@@ -1146,7 +1154,7 @@
                 var id = $(this).attr("id");
                 console.log(id);
 
-                $.post("__MODULE__/Project/origanizationGetProjectBookList/project_id/" + id, function(data) {
+                $.post("/index.php/Home/Project/origanizationGetProjectBookList/project_id/" + id, function(data) {
 
                     var html = '';
 
@@ -1172,7 +1180,7 @@
 
                         var book_id = $(this).attr("id");
 
-                        $.get("__MODULE__/Project/downloadProjectBook", {
+                        $.get("/index.php/Home/Project/downloadProjectBook", {
                             "id": book_id
                         }, function(data) {
 
@@ -1199,7 +1207,7 @@
 
     var bindingFunc = function() {
 
-        $.post("__MODULE__/Project/alreadySendProject", function(data) {
+        $.post("/index.php/Home/Project/alreadySendProject", function(data) {
             var html2 = '';
 
 
@@ -1212,7 +1220,7 @@
                     '<td>' + data.data[i].project_detail.sjy_community_project_service_area + '</td>' +
                     '<td>' + data.data[i].project_detail.sjy_community_project_collect_start_time + ' ~<br>' + data.data[i].project_detail.sjy_community_project_collect_end_time + '</td>' +
                     '<td>' + data.data[i].status_desc + '</td>' +
-                    '<td><a target="_blank" class="see-detail" href="__CONTROLLER__/displayCommunityProject/id/' + data.data[i].project_id + '">详情</a>' +
+                    '<td><a target="_blank" class="see-detail" href="/index.php/Home/Project/displayCommunityProject/id/' + data.data[i].project_id + '">详情</a>' +
                     '<a class = "projectBook" id = "' + data.data[i].project_id + '" href="javascript:;">项目书</a></td>' +
                     '</tr>';
             }
@@ -1246,7 +1254,7 @@
                 var id = $(this).attr("id");
                 console.log(id);
 
-                $.post("__MODULE__/Project/origanizationGetProjectBookList/project_id/" + id, function(data) {
+                $.post("/index.php/Home/Project/origanizationGetProjectBookList/project_id/" + id, function(data) {
 
                     var html = '';
 
@@ -1273,7 +1281,7 @@
 
                         var book_id = $(this).attr("id");
 
-                        $.get("__MODULE__/Project/downloadProjectBook", {
+                        $.get("/index.php/Home/Project/downloadProjectBook", {
                             "id": book_id
                         }, function(data) {
 
@@ -1300,7 +1308,7 @@
 
     /*1. 邀请我*/
     var inviteMeFunc = function() {
-        $.post("__MODULE__/Project/invite", function(data) {
+        $.post("/index.php/Home/Project/invite", function(data) {
 
             var html1 = '';
 
@@ -1316,7 +1324,7 @@
                     '<td>' + data[i].status_desc + '</td>' +
                     '<td>' + data[i].project_detail.sjy_community_project_collect_start_time + ' ~<br>' + data[i].project_detail.sjy_community_project_collect_end_time + '</td>' +
                     '<td>' + data[i].invitate_time + '</td>' +
-                    '<td><a target="_blank" class="see-detail" style="width: 68px; text-align: center;"  href="__CONTROLLER__/displayCommunityProject/id/' + data[i].project_id + '">详情</a> ' +
+                    '<td><a target="_blank" class="see-detail" style="width: 68px; text-align: center;"  href="/index.php/Home/Project/displayCommunityProject/id/' + data[i].project_id + '">详情</a> ' +
                     '<a id = "agreeOrganization" class = "projectBook" style="width: 68px; text-align: center;"  data-id = "' + data[i].project_id + '" href="javascript:;">同意</a></td>' +
                     '</tr>';
             }
@@ -1348,7 +1356,7 @@
                         elem: '#test1', //绑定元素
                         auto: false,
                         bindAction: '#uploadPDF',
-                        url: "__MODULE__/Project/sendProjectBook/project_id/" + $id,
+                        url: "/index.php/Home/Project/sendProjectBook/project_id/" + $id,
                         exts: 'pdf|doc|docx',
                         done: function(res) {
                             //上传完毕回调
@@ -1414,7 +1422,7 @@
 
     /*6 . 已完成 */
     $("#alreadyFinish").click(function() {
-        $.post("__MODULE__/Project/completeProject", function(data) {
+        $.post("/index.php/Home/Project/completeProject", function(data) {
 
             var html6 = '';
 
@@ -1426,9 +1434,9 @@
                     '<td>' + data[i].project_info.sjy_community_project_start_time + ' ~<br>' + data[i].project_info.sjy_community_project_end_time + '</td>' +
                     '<td>' + data[i].project_start_time + ' ~<br>' + data[i].project_end_time + '</td>' +
                     '<td><a class = "see-progress" id = "' + data[i].project_id + '" href="javascript:;">查看进度</a> ' +
-                    '<a target="_blank"  class = "see-detail" href="__CONTROLLER__/displayCommunityProject/id/' + data[i].project_id + '">详情</a> <br>' +
+                    '<a target="_blank"  class = "see-detail" href="/index.php/Home/Project/displayCommunityProject/id/' + data[i].project_id + '">详情</a> <br>' +
                     '<a class = "projectBook" id = "' + data[i].project_id + '" href="javascript:;">项目书</a>' +
-                    '<a class = "download-btn" id = "' + data[i].project_id + '" href="__MODULE__/Project/reportBook/project_id/' + data[i].project_id + '">报告书</a><br>' +
+                    '<a class = "download-btn" id = "' + data[i].project_id + '" href="/index.php/Home/Project/reportBook/project_id/' + data[i].project_id + '">报告书</a><br>' +
                     '</tr>';
             }
 
@@ -1457,7 +1465,7 @@
 
                 var project_id = $(this).attr("id");
 
-                $.get("__MODULE__/Project/projectRate", {
+                $.get("/index.php/Home/Project/projectRate", {
                     "project_id": project_id
                 }, function(data) {
 
@@ -1507,7 +1515,7 @@
                 var id = $(this).attr("id");
                 console.log(id);
 
-                $.post("__MODULE__/Project/origanizationGetProjectBookList/project_id/" + id, function(data) {
+                $.post("/index.php/Home/Project/origanizationGetProjectBookList/project_id/" + id, function(data) {
 
                     var html = '';
 
@@ -1533,7 +1541,7 @@
 
                         var book_id = $(this).attr("id");
 
-                        $.get("__MODULE__/Project/downloadProjectBook", {
+                        $.get("/index.php/Home/Project/downloadProjectBook", {
                             "id": book_id
                         }, function(data) {
 
@@ -1547,6 +1555,6 @@
     });
 </script>
 
-<script src="__PUBLIC__/Home/js/extend-webuploader.js" type="text/javascript"></script>
+<script src="/Public/Home/js/extend-webuploader.js" type="text/javascript"></script>
 
 </html>
